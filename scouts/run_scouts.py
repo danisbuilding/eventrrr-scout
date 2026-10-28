@@ -108,24 +108,34 @@ def main():
     if args.only:
         scouts = {args.only: scouts[args.only]}
 
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+    jobs = []
     for name, fn in scouts.items():
         key = "OPENAI_API_KEY" if name == "openai" else "GEMINI_API_KEY"
         if not os.getenv(key):
             print(f"skip {name}: {key} not set", file=sys.stderr)
             continue
+        for label, q in questions(args, cats):
+            jobs.append((name, fn, label, q))
+    results = {}
+    with ThreadPoolExecutor(max_workers=int(os.getenv("SCOUT_WORKERS", "8"))) as ex:
+        futs = {ex.submit(fn, q): (name, label) for name, fn, label, q in jobs}
+        for fut in as_completed(futs):
+            name, label = futs[fut]
+            try:
+                results.setdefault(name, []).append((label, fut.result()))
+                print(f"{name}/{label}: ok")
+            except Exception as e:
+                print(f"{name}/{label}: {e}", file=sys.stderr)
+    fetched = dt.datetime.now(dt.timezone.utc).isoformat()
+    for name, outs in results.items():
         out = out_dir / f"llm_scout_{name}.jsonl"
         n = 0
         with out.open("w") as f:
-            for label, q in questions(args, cats):
-                try:
-                    text = fn(q)
-                except Exception as e:
-                    print(f"{name}/{label}: {e}", file=sys.stderr)
-                    continue
-                for it in to_items(name, label, text, dt.datetime.now(dt.timezone.utc).isoformat()):
+            for label, text in outs:
+                for it in to_items(name, label, text, fetched):
                     f.write(json.dumps(it, ensure_ascii=False) + "\n")
                     n += 1
-                print(f"{name}/{label}: ok")
         print(f"{name}: {n} items → {out}")
 
 

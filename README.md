@@ -3,8 +3,9 @@
 Finds public events in a city, scores them, and produces a review dashboard so
 curated calendars for [Eventrrr](https://eventrrr.com) can be built fast.
 
-Run by Claude (cloud session + DP's Mac via the desktop bridge). Python does the
-deterministic parts; Claude does the gathering, extraction and judgment.
+Run by Claude from a cloud session. Python does the deterministic parts; Claude does the
+gathering, extraction and judgment. Review happens at https://scout.eventrrr.com (Google
+login, allow-listed), served from `site/` by GitHub Pages with data in Eventrrr's Supabase.
 
 ## Pipeline
 
@@ -15,8 +16,8 @@ deterministic parts; Claude does the gathering, extraction and judgment.
 | 3 Extract | Raw item → structured event(s) | Claude, using `prompts/extract.md` | `schema/event.json` |
 | 4 Normalize + dedupe | Same event from N sources → one record | Python | `scout/normalize.py` |
 | 5 Score | Highlight score from the rubric | Python + Claude rationale | `scout/score.py`, `prompts/highlight.md` |
-| 6 Dashboard | Tabs per category, Highlights, Family filter, Keep/Skip | Artifact | `scout/render.py` |
-| 7 Learn | Keep/Skip decisions feed the next run's rubric | repo | `decisions/` |
+| 6 Publish | Events → Supabase `scout_events`; review at scout.eventrrr.com | GitHub Actions `publish` workflow | `scout/publish.py`, `site/` |
+| 7 Learn | Keep/Skip decisions pulled from Supabase feed the next run's rubric | `publish` workflow with `pull_decisions=true` | `decisions/` |
 
 ## Layout
 
@@ -26,13 +27,15 @@ taxonomy.yaml           12 Eventrrr categories + definitions, flags, highlight r
 schema/raw_item.json    adapter output contract (every source emits this)
 schema/event.json       normalized event record
 prompts/                extraction + highlight prompts used by Claude
-scout/                  python: normalize, score, render
+scout/                  python: normalize, score, publish (Supabase), render (offline mock)
+site/                   the review app (index.html, app.js, styles.css, config.js) → GitHub Pages
+supabase/schema.sql     tables + RLS for scout_* (run once in the Supabase SQL editor)
 scout/adapters/         one doc per source type: how it's swept, what it emits
 scouts/                 OpenAI / Gemini parallel scouts (GitHub Actions; keys are repo secrets)
 .github/workflows/      sweep (Instagram + scouts) and thumbs workflows
 inbox/<run>/<source>.jsonl   raw items from a sweep
 runs/<run>/events.json       normalized + scored events
-runs/<run>/dashboard.html    review page (also published as an Artifact)
+runs/<run>/dashboard.html    offline/mock render of the same UI (optional)
 decisions/<run>.json         Keep / Skip / notes from review
 ```
 
@@ -46,9 +49,9 @@ A run is named `YYYY-MM-DD[-slug]`, e.g. `2026-10-28-dia-de-muertos`.
    - sweeps the web sources itself into `inbox/<run>/`
    - extracts events with `prompts/extract.md`
    - runs `python scout/normalize.py <run>` then `python scout/score.py <run>`
-   - runs `python scout/render.py <run>` and publishes the dashboard
-3. Review in the dashboard: Keep / Skip, copy links into Eventrrr's capture.
-4. Export decisions to `decisions/<run>.json` (dashboard has an Export button).
+   - triggers `gh workflow run publish.yml -f run=<run> ...` → the run appears at scout.eventrrr.com
+3. Review there: Keep / Skip, notes, tick rows, **Export to Eventrrr** → paste into Eventrrr → Paste text.
+4. Claude pulls decisions (`publish.yml` with `pull_decisions=true`) before the next run and tunes the rubric.
 
 ## Adding a source type later (e.g. WhatsApp)
 
@@ -63,5 +66,7 @@ WhatsApp plan: export from Instinct (or a native chat export) → `whatsapp` ada
 | `APIFY_TOKEN` | Instagram sweep |
 | `OPENAI_API_KEY` | OpenAI scout |
 | `GEMINI_API_KEY` | Gemini scout |
+| `SUPABASE_URL` | publish workflow |
+| `SUPABASE_SERVICE_KEY` | publish workflow (service role; never in site/) |
 
 Nothing else holds keys. `scouts/.env` still works for a local run and is git-ignored.

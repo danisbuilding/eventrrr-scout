@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Eventrrr Scout</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='7' fill='%232e6957'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script src="config.js"></script>
+<script src="categories.js"></script>
+</head>
+<body>
+<header class="hdr">
+  <h1 class="wordmark">Eventrrr Scout</h1>
+  <nav class="nav" aria-label="Sections">
+    <a href="#" aria-current="page">Events</a>
+  </nav>
+  <div class="hdr-right">
+    <label class="sr" for="runsel">Run</label>
+    <select class="select run-select" id="runsel"></select>
+    <div class="account" id="account"></div>
+  </div>
+</header>
+
+<main class="gate" id="gate"><div class="gate-card"><p>Loading…</p></div></main>
+
+<div class="ws" id="app" hidden>
+  <section class="main">
+    <h2 class="title">Event review</h2>
+    <div class="metrics" id="metrics"></div>
+    <div class="toolbar">
+      <div class="search"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5L14 14"/></svg><input class="input" type="search" id="q" placeholder="Search events…" aria-label="Search events"></div>
+      <select class="select" id="cat" aria-label="Category"><option value="">All categories</option></select>
+      <select class="select" id="src" aria-label="Source"><option value="">All sources</option></select>
+      <label class="check"><input class="cb" type="checkbox" id="hi"> Highlights only</label>
+      <label class="check"><input class="cb" type="checkbox" id="fam"> Family-friendly</label>
+      <label class="check"><input class="cb" type="checkbox" id="hideskip" checked> Hide skipped</label>
+    </div>
+    <div class="scroll">
+      <table id="tbl">
+        <thead><tr>
+          <th class="c-check"><input class="cb" type="checkbox" id="selall" aria-label="Select all visible events for export"></th>
+          <th class="c-name">Name</th><th class="c-cat">Category</th><th class="c-date">Date ↓</th><th class="c-src">Source</th><th class="c-status">Status</th><th class="c-chev"><span class="sr">Open</span></th>
+        </tr></thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+    <div class="foot">
+      <div class="foot-group">
+        <button class="btn btn-primary" id="export"><span id="exportlabel">Export to Eventrrr</span></button>
+        <span class="sub" id="selcount">0 events selected</span>
+        <button class="link-btn" id="selkept">Select all kept</button>
+      </div>
+      <div class="foot-group"><span class="sync" id="sync"></span></div>
+    </div>
+  </section>
+  <aside class="insp" id="insp" aria-label="Event details" hidden></aside>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="app.js"></script>
+</body>
+</html>

@@ -224,7 +224,7 @@ async function boot() {
   const cfg = window.SCOUT_CONFIG || {};
   if (!cfg.supabaseUrl || !cfg.supabaseAnonKey || !window.supabase) { showGate(`<div class="gate-card"><h2 class="title">Eventrrr Scout</h2><p>Not configured yet: site/config.js needs the Supabase URL and anon key.</p></div>`); return; }
   const sb = window.supabase.createClient(cfg.supabaseUrl, cfg.supabaseAnonKey);
-  const signIn = () => sb.auth.signInWithOAuth({provider: "google", options: {redirectTo: location.origin + location.pathname}});
+  const signIn = () => sb.auth.signInWithOAuth({provider: "google", options: {redirectTo: "https://scout.eventrrr.com/"}});
   const gateSignIn = () => { showGate(`<div class="gate-card"><h2 class="title">Eventrrr Scout</h2><p>Event review for curated calendars. Sign in to continue.</p><button class="btn btn-secondary btn-google" id="signin">${GOOGLE} Continue with Google</button></div>`); $("#signin").onclick = signIn; };
   const {data: {session}} = await sb.auth.getSession();
   if (!session) { gateSignIn(); sb.auth.onAuthStateChange((_, s) => { if (s) location.reload(); }); return; }

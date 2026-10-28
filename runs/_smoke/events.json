@@ -1,0 +1,54 @@
+[
+ {
+  "title": "Ofrenda monumental en el Zócalo",
+  "starts_at": "2026-10-31T10:00:00-06:00",
+  "all_day": true,
+  "venue": "Zócalo",
+  "neighborhood": "Centro",
+  "price_text": "Entrada libre",
+  "price_min": 0,
+  "url": "https://example.org/ofrenda",
+  "category": "Art & Exhibitions",
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "sources": [
+   "instagram:cdmxsavauge:p9",
+   "web:cartelera:abc123"
+  ],
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "umbrella_anchor": true,
+   "corroborated": true
+  },
+  "highlight_why": "Flagship city ofrenda, free",
+  "key": "monumental-ofrenda-zocalo|2026-10-31",
+  "source_count": 2,
+  "score": 9,
+  "highlight": true
+ },
+ {
+  "title": "DJ night at Yu Yu",
+  "starts_at": "2026-10-31T23:00:00-06:00",
+  "venue": "Yu Yu",
+  "neighborhood": "Juárez",
+  "price_text": "$250",
+  "price_min": 250,
+  "url": "https://example.org/yuyu",
+  "category": "Clubs & Parties",
+  "sources": [
+   "instagram:cdmxsecreta:p1"
+  ],
+  "confidence": 0.8,
+  "signals": {
+   "credible_organizer": true,
+   "recurring_weekly": true,
+   "corroborated": false
+  },
+  "key": "dj-night-yu|2026-10-31",
+  "source_count": 1,
+  "score": 0,
+  "highlight": false
+ }
+]

@@ -1,0 +1,46 @@
+# Mirrors Eventrrr's CATEGORIES constant (src/lib/constants.ts). Keep in sync.
+categories:
+  - name: Music
+    def: Concerts, live bands, gigs, listening sessions, festivals where the music is the draw. A concert with dancing is still Music.
+  - name: Clubs & Parties
+    def: DJ sets, club nights, raves, afters, house parties, fiestas, themed parties. Dancing or the party itself is the point.
+  - name: Art & Exhibitions
+    def: Gallery and museum openings, exhibitions, art walks, studio visits, art fairs.
+  - name: Food & Drink
+    def: Tastings, pop-ups, supper clubs, food festivals, mezcal/wine/coffee events, cooking classes.
+  - name: Creativity & Crafts
+    def: Hands-on making. Ceramics classes, life drawing, drink and draw, printmaking, textiles, writing workshops. A talk about a craft is Talks & Learning; a market selling crafts is Markets & Design.
+  - name: Talks & Learning
+    def: Talks, panels, lectures, book presentations, classes that are not hands-on making.
+  - name: Social & Networking
+    def: Mixers, meetups, community gatherings, language exchanges, run clubs' social side.
+  - name: Film & Performance
+    def: Screenings, theater, dance, comedy, cabaret, performance art.
+  - name: Wellness & Sport
+    def: Yoga, runs, rides, hikes, sports matches, wellness workshops.
+  - name: Markets & Design
+    def: Bazaars, tianguis, design fairs, vintage and craft markets, pop-up shops.
+  - name: Tech
+    def: Tech meetups, demo days, hackathons, AI/startup events.
+  - name: Other
+    def: Anything that fits nowhere above.
+
+flags:
+  family_friendly: Suitable for kids, or explicitly for families. A filter, not a category.
+  umbrella: Name of the larger event this belongs to (e.g. "Día de Muertos 2026"), if any.
+
+# Highlight rubric. Each signal adds to the score; a hard "no" caps it.
+highlight:
+  signals:
+    credible_organizer:  {weight: 3, def: Known venue, institution, or established collective. Not a random promoter.}
+    one_off:             {weight: 3, def: Happens once or rarely. Not a weekly residency, not a chain.}
+    scarcity:            {weight: 2, def: Limited capacity, uncommon format, uncommon neighborhood, something you cannot easily get elsewhere.}
+    corroborated:        {weight: 2, def: Mentioned by two or more independent sources.}
+    low_friction:        {weight: 1, def: Free or cheap, no RSVP wall, easy to just show up.}
+    umbrella_anchor:     {weight: 1, def: A flagship event inside the run's umbrella.}
+  penalties:
+    recurring_weekly:    {weight: -3, def: Same thing every week.}
+    tourist_trap:        {weight: -2, def: Exists mainly for tourists; locals would not go.}
+    sold_out_or_private: {weight: -5, def: Already sold out, invite-only, or members-only.}
+    vague:               {weight: -2, def: Missing date, venue, or link.}
+  threshold: 6   # score >= threshold → highlighted

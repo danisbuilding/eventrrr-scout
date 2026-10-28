@@ -1,0 +1,36 @@
+# Seed sources. `tier: 1` = DP's own picks; `tier: 2` = researched, pending his prune.
+# Every source has an adapter type (see scout/adapters/). Set enabled: false to skip.
+
+defaults:
+  city: Mexico City
+  timezone: America/Mexico_City
+  currency: MXN
+  window_days: 14          # how far ahead a general sweep looks
+  ig_posts_per_account: 30 # Apify resultsLimit per handle
+  ig_newer_than: "21 days" # Apify onlyPostsNewerThan
+
+umbrellas:
+  - name: Día de Muertos 2026
+    slug: dia-de-muertos-2026
+    window: {from: "2026-10-28", to: "2026-11-03"}
+    search_terms: ["Día de Muertos 2026 CDMX", "ofrenda 2026 Ciudad de México", "desfile día de muertos 2026", "catrinas 2026 CDMX", "Mixquic 2026", "Xochimilco día de muertos 2026"]
+
+sites:
+  - {name: The Happening,          url: https://thehappening.com/,          tier: 1, enabled: true}
+  - {name: Local.mx,               url: https://local.mx/,                  tier: 1, enabled: true}
+  - {name: Chilango,               url: https://www.chilango.com/,          tier: 1, enabled: true}
+  - {name: Food and Travel MX,     url: https://foodandtravel.mx/,          tier: 1, enabled: true}
+  - {name: Cartelera CDMX (gov),   url: https://cartelera.cdmx.gob.mx/,     tier: 1, enabled: true}
+
+instagram:
+  - {handle: cdmxsavauge,   tier: 1, enabled: true}
+  - {handle: cdmxsecreta,   tier: 1, enabled: true}
+  - {handle: blaxican_cdmx, tier: 1, enabled: true}
+  - {handle: themovecdmx,   tier: 1, enabled: true}
+  - {handle: jenetorade,    tier: 1, enabled: true}
+
+newsletters: []     # add {name, url_or_archive, tier} when you have them
+
+whatsapp: []        # v2: {group_name, export_path} fed by the whatsapp adapter
+
+# Tier-2 candidates get appended below after research; prune freely.

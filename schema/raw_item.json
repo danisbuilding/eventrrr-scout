@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RawItem",
+  "description": "What every adapter emits: 'someone said something, somewhere, that may describe an event'. One JSON object per line in inbox/<run>/<source>.jsonl.",
+  "type": "object",
+  "required": ["id", "source_type", "source_name", "fetched_at", "text"],
+  "properties": {
+    "id":          {"type": "string", "description": "Stable id: <source_type>:<source_name>:<native id or hash of url+text>"},
+    "source_type": {"type": "string", "enum": ["web", "instagram", "newsletter", "whatsapp", "llm_scout", "search"]},
+    "source_name": {"type": "string", "description": "Site name, IG handle, group name, or scout model name"},
+    "source_url":  {"type": "string", "description": "Permalink to the post/page when one exists"},
+    "author":      {"type": "string"},
+    "posted_at":   {"type": "string", "format": "date-time", "description": "When the source published it, if known"},
+    "fetched_at":  {"type": "string", "format": "date-time"},
+    "text":        {"type": "string", "description": "Caption, page text, message body. Verbatim, trimmed."},
+    "links":       {"type": "array", "items": {"type": "string"}},
+    "media":       {"type": "array", "items": {"type": "string"}, "description": "Image/video URLs (flyers). Not stored, only referenced."},
+    "ocr_text":    {"type": "string", "description": "Text read off a flyer image, when the caption is thin"},
+    "meta":        {"type": "object", "description": "Adapter-specific extras: likes, comments, hashtags, page title"}
+  }
+}

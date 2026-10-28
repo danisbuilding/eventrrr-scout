@@ -218,6 +218,7 @@ function showApp(runs) {
 function showGate(html) { $("#app").hidden = true; const g = $("#gate"); g.hidden = false; g.innerHTML = html; }
 
 async function boot() {
+  if (location.protocol === "http:" && location.hostname !== "localhost") { location.replace("https://" + location.host + location.pathname + location.hash); return; }
   wire();
   if (window.SCOUT_INLINE) { provider = inlineProvider(window.SCOUT_INLINE); showApp(await provider.runs()); return; }
   const cfg = window.SCOUT_CONFIG || {};

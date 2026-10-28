@@ -56,7 +56,7 @@ sites_tier2:
   - {name: Eventbrite CDMX,        url: https://www.eventbrite.com.mx/d/mexico--ciudad-de-mexico/events/, tier: 2, enabled: false, notes: noisy}
   - {name: Fever CDMX,             url: https://feverup.com/es/ciudad-de-mexico,       tier: 2, enabled: false, notes: mostly paid experiences}
   - {name: Bushdrum CDMX,          url: https://bushdrum.com/cdmx,                     tier: 2, enabled: false, notes: aggregator; data quality uneven}
-  - {name: Boletia,                url: https://boletia.com/search?state=CDMX%20y%20Zona%20Metropolitana, tier: 2, enabled: false, notes: JS-loaded}
+  - {name: Boletia,                url: "https://boletia.com/search?state=CDMX%20y%20Zona%20Metropolitana", tier: 2, enabled: false, notes: JS-loaded}
   - {name: OCESA,                  url: https://www.ocesa.com.mx/,                     tier: 2, enabled: false, notes: big-venue shows}
   # media
   - {name: Máspormás qué hacer,    url: https://www.maspormas.com/tag/que-hacer/,      tier: 2, enabled: true}

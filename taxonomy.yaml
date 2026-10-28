@@ -43,4 +43,4 @@ highlight:
     tourist_trap:        {weight: -2, def: Exists mainly for tourists; locals would not go.}
     sold_out_or_private: {weight: -5, def: Already sold out, invite-only, or members-only.}
     vague:               {weight: -2, def: Missing date, venue, or link.}
-  threshold: 6   # score >= threshold → highlighted
+  threshold: 7   # score >= threshold → highlighted (credible + one-off alone is not enough)

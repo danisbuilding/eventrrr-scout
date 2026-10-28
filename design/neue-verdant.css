@@ -1,0 +1,244 @@
+/*
+ * Neue Verdant v1.0 — framework-agnostic starter styles.
+ * Not a complete app. See design-system.md for behavior and font mapping.
+ * Supply properly licensed webfont files separately; no fonts are bundled.
+ */
+:root {
+  color-scheme: light;
+  --nv-canvas: #ffffff;
+  --nv-ink: #172033;
+  --nv-muted: #626d88;
+  --nv-green: #2e6957;
+  --nv-green-top: #377c63;
+  --nv-green-deep: #285e4e;
+  --nv-line: #e2e7ed;
+  --nv-control-line: #d5dce5;
+  --nv-ready: #2f8068;
+  --nv-review: #8a6447;
+  --nv-duplicate: #a77c00;
+  --nv-neutral: #7c8494;
+  --nv-selected-start: rgba(46, 105, 87, .055);
+  --nv-selected-end: rgba(46, 105, 87, .018);
+  --nv-font-ui: "Neue Haas Grotesk Text", "InterVariable", "Inter", Helvetica, Arial, sans-serif;
+  --nv-font-display: "Neue Haas Grotesk Display", "InterVariable", "Inter", Helvetica, Arial, sans-serif;
+  --nv-font-data: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --nv-radius: 4px;
+  --nv-space-1: 4px;
+  --nv-space-2: 8px;
+  --nv-space-3: 12px;
+  --nv-space-4: 16px;
+  --nv-space-5: 20px;
+  --nv-space-6: 24px;
+  --nv-space-8: 32px;
+  --nv-space-10: 40px;
+  --nv-space-12: 48px;
+  --nv-shadow-control: 0 2px 6px rgba(23, 32, 51, .045);
+  --nv-shadow-button: 0 3px 8px rgba(46, 105, 87, .13), inset 0 1px 0 rgba(255, 255, 255, .12);
+  --nv-shadow-inspector: -10px 0 20px -18px rgba(23, 32, 51, .24);
+  --nv-duration: 140ms;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--nv-canvas);
+  color: var(--nv-ink);
+  font-family: var(--nv-font-ui);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.54;
+  font-synthesis: none;
+}
+button, input, select, textarea { font: inherit; }
+a { color: var(--nv-green); text-underline-offset: 3px; }
+:where(button, a, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--nv-green);
+  outline-offset: 2px;
+}
+.nv-wordmark, .nv-title, .nv-event-title {
+  font-family: var(--nv-font-display);
+  font-weight: 300;
+  letter-spacing: -.025em;
+}
+.nv-wordmark { font-size: 28px; line-height: 34px; }
+.nv-title { margin: 0; font-size: 32px; line-height: 40px; }
+.nv-event-title { margin: 0; font-size: 28px; line-height: 36px; letter-spacing: -.02em; }
+.nv-label {
+  font-size: 10px;
+  line-height: 16px;
+  font-weight: 400;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--nv-muted);
+}
+.nv-muted { color: var(--nv-muted); }
+.nv-meta { font-size: 12px; line-height: 18px; color: var(--nv-muted); }
+.nv-data { font-family: var(--nv-font-data); font-size: 12px; line-height: 18px; font-variant-numeric: tabular-nums; }
+.nv-header {
+  min-height: 72px;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  border-bottom: 1px solid var(--nv-line);
+  background: var(--nv-canvas);
+}
+.nv-nav { display: flex; align-items: center; gap: 32px; }
+.nv-nav a { position: relative; padding: 24px 0; color: var(--nv-muted); text-decoration: none; }
+.nv-nav a[aria-current="page"] { color: var(--nv-green); }
+.nv-nav a[aria-current="page"]::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--nv-green);
+}
+.nv-header-actions { margin-left: auto; display: flex; align-items: center; gap: 24px; }
+.nv-workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 400px;
+  align-items: start;
+  gap: 24px;
+  padding: 32px 40px 40px;
+}
+.nv-main { min-width: 0; }
+.nv-metrics { display: flex; flex-wrap: wrap; gap: 16px 0; margin: 8px 0 28px; }
+.nv-metric { display: flex; align-items: baseline; gap: 6px; color: var(--nv-muted); padding: 0 20px; border-left: 1px solid var(--nv-line); }
+.nv-metric:first-child { border-left: 0; padding-left: 0; }
+.nv-metric-value { color: var(--nv-ink); font-size: 16px; font-weight: 400; font-variant-numeric: tabular-nums; }
+.nv-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-bottom: 20px; }
+.nv-input, .nv-select {
+  min-height: 36px;
+  padding: 8px 12px;
+  border: 1px solid var(--nv-control-line);
+  border-radius: var(--nv-radius);
+  background: var(--nv-canvas);
+  color: var(--nv-ink);
+  box-shadow: var(--nv-shadow-control);
+}
+.nv-input::placeholder { color: var(--nv-muted); opacity: 1; }
+.nv-search { width: 320px; max-width: 100%; }
+.nv-select { min-width: 175px; }
+.nv-button {
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 10px 18px;
+  border: 1px solid transparent;
+  border-radius: var(--nv-radius);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  cursor: pointer;
+  transition: background-color var(--nv-duration) ease-out, box-shadow var(--nv-duration) ease-out;
+}
+.nv-button--primary {
+  color: #fff;
+  background-color: var(--nv-green);
+  background-image: linear-gradient(180deg, var(--nv-green-top), var(--nv-green) 60%, var(--nv-green-deep));
+  box-shadow: var(--nv-shadow-button);
+}
+.nv-button--primary:hover:not(:disabled) {
+  background-image: none;
+  background-color: var(--nv-green-deep);
+}
+.nv-button--primary:active:not(:disabled) { box-shadow: inset 0 1px 3px rgba(0, 0, 0, .12); }
+.nv-button--secondary {
+  background: var(--nv-canvas);
+  color: var(--nv-ink);
+  border-color: var(--nv-control-line);
+  box-shadow: var(--nv-shadow-control);
+}
+.nv-button--secondary:hover:not(:disabled) { border-color: var(--nv-muted); }
+.nv-button:disabled { opacity: .5; cursor: not-allowed; box-shadow: none; }
+.nv-table-scroll { overflow-x: auto; }
+.nv-table { width: 100%; min-width: 760px; border-collapse: collapse; text-align: left; }
+.nv-table th {
+  height: 36px;
+  padding: 8px 12px;
+  font-size: 10px;
+  line-height: 16px;
+  font-weight: 400;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--nv-muted);
+  white-space: nowrap;
+}
+.nv-table td { height: 58px; padding: 12px; border-bottom: 1px solid var(--nv-line); vertical-align: middle; }
+.nv-table .nv-check-cell { width: 32px; padding-left: 8px; padding-right: 8px; }
+.nv-table .nv-chevron-cell { width: 24px; }
+.nv-table tr[data-current="true"] {
+  background: linear-gradient(90deg, var(--nv-selected-start), var(--nv-selected-end));
+}
+.nv-table tr[data-current="true"] td:first-child { box-shadow: inset 2px 0 0 var(--nv-green); }
+.nv-checkbox { width: 16px; height: 16px; margin: 0; accent-color: var(--nv-green); }
+.nv-event-link {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--nv-ink);
+  font: inherit;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -.01em;
+  cursor: pointer;
+  text-align: left;
+}
+.nv-event-link:hover { text-decoration: underline; text-underline-offset: 3px; }
+.nv-status { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; }
+.nv-status-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--nv-neutral); flex-shrink: 0; }
+.nv-status-dot--ready { background: var(--nv-ready); }
+.nv-status-dot--review { background: var(--nv-review); }
+.nv-status-dot--duplicate { background: var(--nv-duplicate); }
+.nv-footer { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; margin-top: 24px; }
+.nv-footer-group { display: flex; align-items: center; gap: 20px; }
+.nv-inspector {
+  min-width: 0;
+  padding: 16px 24px 24px 32px;
+  border-left: 1px solid var(--nv-line);
+  background: var(--nv-canvas);
+  box-shadow: var(--nv-shadow-inspector);
+}
+.nv-inspector-section + .nv-inspector-section { border-top: 1px solid var(--nv-line); margin-top: 24px; padding-top: 24px; }
+.nv-fields { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 18px 12px; margin: 0; }
+.nv-fields dt { color: var(--nv-muted); }
+.nv-fields dd { margin: 0; overflow-wrap: anywhere; }
+.nv-actions { display: flex; gap: 12px; }
+.nv-actions .nv-button--primary { flex: 1; }
+.nv-icon { width: 16px; height: 16px; stroke-width: 1.25; flex-shrink: 0; }
+.nv-icon-button { min-width: 32px; min-height: 32px; display: inline-flex; align-items: center; justify-content: center; }
+@media (max-width: 1279px) {
+  .nv-workspace { display: block; padding-inline: 32px; }
+  .nv-header { padding-inline: 32px; gap: 32px; }
+  /* Render the event inspector in a real accessible drawer/dialog.
+     Do not merely hide the user's only detail view without a replacement. */
+  .nv-inspector:not([data-presentation="drawer"]) { display: none; }
+  .nv-inspector[data-presentation="drawer"] {
+    position: fixed;
+    inset: 0 0 0 auto;
+    width: min(440px, 100vw);
+    height: 100dvh;
+    overflow: auto;
+    z-index: 100;
+  }
+}
+@media (max-width: 767px) {
+  .nv-header { padding-inline: 16px; gap: 16px; }
+  .nv-workspace { padding: 24px 16px; }
+  .nv-nav { display: none; } /* App must provide an accessible compact nav menu. */
+  .nv-header-actions { gap: 12px; }
+  .nv-header-actions .nv-freshness { display: none; }
+  .nv-search { width: 100%; }
+  .nv-select { flex: 1; min-width: 140px; }
+  .nv-button, .nv-icon-button { min-height: 44px; }
+  .nv-icon-button { min-width: 44px; }
+  .nv-metric { padding-inline: 12px; }
+  .nv-inspector[data-presentation="drawer"] { width: 100%; padding: 24px 16px; }
+  .nv-title { font-size: 28px; line-height: 36px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: 0ms !important; animation-duration: 0ms !important; }
+}

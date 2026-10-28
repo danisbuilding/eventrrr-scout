@@ -1,0 +1,262 @@
+[
+ {
+  "title": "Ofrenda Monumental en el Zócalo",
+  "starts_at": "2026-10-31T10:00:00-06:00",
+  "all_day": true,
+  "venue": "Zócalo",
+  "address": "Plaza de la Constitución s/n",
+  "neighborhood": "Centro",
+  "price_text": "Entrada libre",
+  "price_min": 0,
+  "url": "https://mexicocity.cdmx.gob.mx/e/dia-de-muertos-en-la-ciudad-de-mexico/",
+  "category": "Art & Exhibitions",
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "organizer": "Gobierno CDMX",
+  "description": "The city's flagship Día de Muertos ofrenda, this year a homage to José Guadalupe Posada with a 32 m catrina.",
+  "sources": [
+   "web:turismo-cdmx:a1"
+  ],
+  "source_links": [
+   {
+    "name": "Turismo CDMX",
+    "url": "https://mexicocity.cdmx.gob.mx/e/dia-de-muertos-en-la-ciudad-de-mexico/"
+   }
+  ],
+  "source_excerpt": "Ofrenda Monumental 2026 en el Zócalo capitalino. Homenaje a José Guadalupe Posada. Del 29 de octubre al 2 de noviembre, entrada libre.",
+  "confidence": 0.95,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "umbrella_anchor": true,
+   "low_friction": true
+  },
+  "highlight_why": "Flagship city ofrenda, free, Oct 29–Nov 2"
+ },
+ {
+  "title": "Gran Desfile de Día de Muertos",
+  "starts_at": "2026-10-31T14:00:00-06:00",
+  "venue": "Paseo de la Reforma",
+  "address": "Diana Cazadora → Zócalo",
+  "neighborhood": "Juárez",
+  "price_text": "Gratis",
+  "price_min": 0,
+  "url": "https://mexicocity.cdmx.gob.mx/e/dia-de-muertos-en-la-ciudad-de-mexico/",
+  "category": "Film & Performance",
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "organizer": "Gobierno CDMX",
+  "sources": [
+   "web:turismo-cdmx:a2",
+   "web:chilango:b7"
+  ],
+  "source_links": [
+   {
+    "name": "Turismo CDMX",
+    "url": "https://mexicocity.cdmx.gob.mx/e/dia-de-muertos-en-la-ciudad-de-mexico/"
+   },
+   {
+    "name": "Chilango",
+    "url": "https://www.chilango.com/que-hacer/actividades-de-dia-de-muertos-2026-en-cdmx-desfile-ofrendas-catrinas-y-mas/"
+   }
+  ],
+  "source_excerpt": "El Gran Desfile de Día de Muertos 2026 saldrá el sábado 31 de octubre a las 14:00 horas de la Diana Cazadora rumbo al Zócalo.",
+  "confidence": 0.95,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "umbrella_anchor": true,
+   "low_friction": true
+  },
+  "highlight_why": "The parade; two sources agree on time and route"
+ },
+ {
+  "title": "Megaofrenda UNAM: 475+ Trayectorias",
+  "starts_at": "2026-10-31T11:00:00-06:00",
+  "ends_at": "2026-10-31T21:00:00-06:00",
+  "venue": "Explanada de Universum, Ciudad Universitaria",
+  "neighborhood": "Coyoacán",
+  "price_text": "Entrada libre",
+  "price_min": 0,
+  "url": "https://megaofrenda.unam.mx",
+  "category": "Art & Exhibitions",
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "organizer": "UNAM",
+  "sources": [
+   "web:megaofrenda:c1",
+   "web:chilango:b9"
+  ],
+  "source_links": [
+   {
+    "name": "Megaofrenda UNAM",
+    "url": "https://megaofrenda.unam.mx"
+   },
+   {
+    "name": "Chilango",
+    "url": "https://www.chilango.com/"
+   }
+  ],
+  "source_excerpt": "Megaofrenda UNAM 2026 '475+ Trayectorias', del 31 de octubre al 2 de noviembre, 11:00 a 21:00 h, explanada de Universum.",
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "umbrella_anchor": true,
+   "low_friction": true
+  },
+  "highlight_why": "UNAM's student-built ofrendas, free, three days"
+ },
+ {
+  "title": "Noche de Muertos en Yu Yu",
+  "starts_at": "2026-10-31T23:00:00-06:00",
+  "venue": "Yu Yu",
+  "address": "Lucerna 51",
+  "neighborhood": "Juárez",
+  "price_text": "$300 MXN",
+  "price_min": 300,
+  "url": "https://ra.co/events/mx/mexicocity",
+  "category": "Clubs & Parties",
+  "organizer": "Yu Yu",
+  "sources": [
+   "instagram:cdmxsecreta:p1"
+  ],
+  "source_links": [
+   {
+    "name": "IG @cdmxsecreta",
+    "url": "https://www.instagram.com/cdmxsecreta/"
+   }
+  ],
+  "source_excerpt": "Noche de Muertos en @yuyu.mx 🖤 sábado 31, 11pm. Cover $300. Disfraz obligatorio.",
+  "confidence": 0.8,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true
+  }
+ },
+ {
+  "title": "Taller de catrinas de cartonería",
+  "starts_at": "2026-11-01T11:00:00-06:00",
+  "ends_at": "2026-11-01T14:00:00-06:00",
+  "venue": "Museo de Arte Popular",
+  "address": "Revillagigedo 11",
+  "neighborhood": "Centro",
+  "price_text": "$150 MXN",
+  "price_min": 150,
+  "url": "https://www.map.cdmx.gob.mx/",
+  "category": "Creativity & Crafts",
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "organizer": "Museo de Arte Popular",
+  "sources": [
+   "web:cartelera-cdmx:d4"
+  ],
+  "source_links": [
+   {
+    "name": "Cartelera CDMX",
+    "url": "https://cartelera.cdmx.gob.mx/"
+   }
+  ],
+  "source_excerpt": "Taller familiar de cartonería: elabora tu propia catrina. Domingo 1 de noviembre, 11:00–14:00 h. Cuota de recuperación $150.",
+  "confidence": 0.85,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": true
+  },
+  "highlight_why": "Hands-on cartonería at MAP, small group"
+ },
+ {
+  "title": "Mezcal y pan de muerto: cata",
+  "starts_at": "2026-11-01T18:00:00-06:00",
+  "venue": "La Clandestina",
+  "neighborhood": "Condesa",
+  "price_text": "$550 MXN",
+  "price_min": 550,
+  "url": "https://www.instagram.com/p/XXXX/",
+  "category": "Food & Drink",
+  "organizer": "La Clandestina",
+  "sources": [
+   "instagram:foodandtravelmx:p3"
+  ],
+  "source_links": [
+   {
+    "name": "IG @foodandtravelmx",
+    "url": "https://www.instagram.com/p/XXXX/"
+   }
+  ],
+  "source_excerpt": "Cata de mezcal con maridaje de pan de muerto 🍞 domingo 1 nov 6pm. Cupo limitado, reserva por DM.",
+  "confidence": 0.7,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": true
+  }
+ },
+ {
+  "title": "Mixquic: La Alumbrada",
+  "starts_at": "2026-11-02T19:00:00-06:00",
+  "venue": "Panteón de San Andrés Mixquic",
+  "neighborhood": "Tláhuac",
+  "price_text": "Gratis",
+  "price_min": 0,
+  "url": "https://www.nmas.com.mx/ciudad-de-mexico/sociedad/que-hacer-en-cdmx-por-dia-de-muertos-cartelera-de-eventos-del-17-al-31-de-octubre-2026/",
+  "category": "Other",
+  "umbrella": "Día de Muertos 2026",
+  "sources": [
+   "web:nmas:e2",
+   "web:cronica:f1",
+   "web:chilango:b3"
+  ],
+  "source_links": [
+   {
+    "name": "N+",
+    "url": "https://www.nmas.com.mx/"
+   },
+   {
+    "name": "Crónica",
+    "url": "https://www.cronica.com.mx/"
+   },
+   {
+    "name": "Chilango",
+    "url": "https://www.chilango.com/"
+   }
+  ],
+  "source_excerpt": "La Alumbrada en Mixquic, la noche del 2 de noviembre: miles de veladoras en el panteón. Llega temprano; el acceso al pueblo se satura.",
+  "confidence": 0.9,
+  "signals": {
+   "one_off": true,
+   "scarcity": true,
+   "umbrella_anchor": true,
+   "low_friction": true
+  },
+  "highlight_why": "The night of candles; three sources"
+ },
+ {
+  "title": "Domingo de jazz en Parker & Lenox",
+  "starts_at": "2026-11-08T20:00:00-06:00",
+  "venue": "Parker & Lenox",
+  "neighborhood": "Juárez",
+  "price_text": "$200 MXN",
+  "price_min": 200,
+  "url": "https://www.instagram.com/parkerlenox/",
+  "category": "Music",
+  "recurring": true,
+  "organizer": "Parker & Lenox",
+  "sources": [
+   "instagram:themovecdmx:p8"
+  ],
+  "source_links": [
+   {
+    "name": "IG @themovecdmx",
+    "url": "https://www.instagram.com/themovecdmx/"
+   }
+  ],
+  "source_excerpt": "Todos los domingos: jazz en vivo en Parker & Lenox, 8pm.",
+  "confidence": 0.8,
+  "signals": {
+   "credible_organizer": true,
+   "recurring_weekly": true
+  }
+ }
+]

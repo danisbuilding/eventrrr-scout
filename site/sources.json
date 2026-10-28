@@ -1,0 +1,307 @@
+{
+ "sites": [
+  {
+   "name": "The Happening",
+   "url": "https://thehappening.com/",
+   "tier": 1,
+   "enabled": true
+  },
+  {
+   "name": "Local.mx",
+   "url": "https://local.mx/",
+   "tier": 1,
+   "enabled": true
+  },
+  {
+   "name": "Chilango",
+   "url": "https://www.chilango.com/",
+   "tier": 1,
+   "enabled": true
+  },
+  {
+   "name": "Food and Travel MX",
+   "url": "https://foodandtravel.mx/",
+   "tier": 1,
+   "enabled": true
+  },
+  {
+   "name": "Cartelera CDMX (gov)",
+   "url": "https://cartelera.cdmx.gob.mx/",
+   "tier": 1,
+   "enabled": true
+  },
+  {
+   "name": "Time Out México",
+   "url": "https://www.timeoutmexico.mx/ciudad-de-mexico/que-hacer/calendario-de-eventos-en-la-ciudad-de-mexico",
+   "tier": 2,
+   "enabled": true,
+   "notes": "monthly roundup pages"
+  },
+  {
+   "name": "Dónde Ir",
+   "url": "https://www.dondeir.com/",
+   "tier": 2,
+   "enabled": true
+  },
+  {
+   "name": "México es Cultura",
+   "url": "https://mexicoescultura.com/estado/9/ciudad-de-mexico",
+   "tier": 2,
+   "enabled": true,
+   "notes": "federal cartelera; dated listings; free filter /buscar/precio/1/gratis"
+  },
+  {
+   "name": "Cultura UNAM",
+   "url": "https://cultura.unam.mx/",
+   "tier": 2,
+   "enabled": true
+  },
+  {
+   "name": "Resident Advisor CDMX",
+   "url": "https://ra.co/events/mx/mexicocity",
+   "tier": 2,
+   "enabled": true,
+   "notes": "best Clubs & Parties feed; Next.js"
+  },
+  {
+   "name": "Songkick CDMX",
+   "url": "https://www.songkick.com/metro-areas/31098-mexico-mexico-city",
+   "tier": 2,
+   "enabled": true,
+   "notes": "Music; static paginated"
+  },
+  {
+   "name": "Indie Rocks agenda",
+   "url": "https://www.indierocks.mx/agenda/",
+   "tier": 2,
+   "enabled": true
+  },
+  {
+   "name": "Me Hace Ruido",
+   "url": "https://www.mehaceruido.com/calendario-de-conciertos/",
+   "tier": 2,
+   "enabled": true
+  },
+  {
+   "name": "Luma CDMX",
+   "url": "https://luma.com/mexico-city",
+   "tier": 2,
+   "enabled": true,
+   "notes": "Tech/Social; dates need per-event page"
+  },
+  {
+   "name": "Eventbrite CDMX",
+   "url": "https://www.eventbrite.com.mx/d/mexico--ciudad-de-mexico/events/",
+   "tier": 2,
+   "enabled": false,
+   "notes": "noisy"
+  },
+  {
+   "name": "Fever CDMX",
+   "url": "https://feverup.com/es/ciudad-de-mexico",
+   "tier": 2,
+   "enabled": false,
+   "notes": "mostly paid experiences"
+  },
+  {
+   "name": "Bushdrum CDMX",
+   "url": "https://bushdrum.com/cdmx",
+   "tier": 2,
+   "enabled": false,
+   "notes": "aggregator; data quality uneven"
+  },
+  {
+   "name": "Boletia",
+   "url": "https://boletia.com/search?state=CDMX%20y%20Zona%20Metropolitana",
+   "tier": 2,
+   "enabled": false,
+   "notes": "JS-loaded"
+  },
+  {
+   "name": "OCESA",
+   "url": "https://www.ocesa.com.mx/",
+   "tier": 2,
+   "enabled": false,
+   "notes": "big-venue shows"
+  },
+  {
+   "name": "Máspormás qué hacer",
+   "url": "https://www.maspormas.com/tag/que-hacer/",
+   "tier": 2,
+   "enabled": true
+  },
+  {
+   "name": "Animal MX estilo de vida",
+   "url": "https://grupoanimal.mx/estilo-de-vida",
+   "tier": 2,
+   "enabled": true
+  },
+  {
+   "name": "Mexico News Daily CDMX",
+   "url": "https://mexiconewsdaily.com/category/mexico-city-plus/",
+   "tier": 2,
+   "enabled": false,
+   "notes": "partly paywalled"
+  },
+  {
+   "name": "Food & Pleasure",
+   "url": "https://foodandpleasure.com/",
+   "tier": 2,
+   "enabled": false,
+   "notes": "articles not agenda"
+  },
+  {
+   "name": "Casa del Lago UNAM",
+   "url": "https://casadellago.unam.mx/nuevo/programacion/programacion-completa",
+   "tier": 2,
+   "enabled": true
+  },
+  {
+   "name": "Museo Tamayo",
+   "url": "https://www.museotamayo.org/agenda",
+   "tier": 2,
+   "enabled": true
+  },
+  {
+   "name": "Museo Jumex",
+   "url": "https://www.fundacionjumex.org/es/programa",
+   "tier": 2,
+   "enabled": true
+  },
+  {
+   "name": "Museo Franz Mayer",
+   "url": "https://franzmayer.org.mx/exposiciones/proximas/",
+   "tier": 2,
+   "enabled": true
+  },
+  {
+   "name": "Cineteca Nacional",
+   "url": "https://www.cinetecanacional.net/cartelera.php",
+   "tier": 2,
+   "enabled": false,
+   "notes": "JS cartelera; monthly PDF instead"
+  },
+  {
+   "name": "Turismo CDMX",
+   "url": "https://mexicocity.cdmx.gob.mx/venues/",
+   "tier": 2,
+   "enabled": false,
+   "notes": "seasonal program pages"
+  }
+ ],
+ "instagram": [
+  {
+   "handle": "cdmxsavauge",
+   "tier": 1,
+   "enabled": true
+  },
+  {
+   "handle": "cdmxsecreta",
+   "tier": 1,
+   "enabled": true
+  },
+  {
+   "handle": "blaxican_cdmx",
+   "tier": 1,
+   "enabled": true
+  },
+  {
+   "handle": "themovecdmx",
+   "tier": 1,
+   "enabled": true
+  },
+  {
+   "handle": "jenetorade",
+   "tier": 1,
+   "enabled": true
+  },
+  {
+   "handle": "timeoutmexico",
+   "tier": 2,
+   "enabled": true
+  },
+  {
+   "handle": "donde_ir",
+   "tier": 2,
+   "enabled": true
+  },
+  {
+   "handle": "culturaciudadmx",
+   "tier": 2,
+   "enabled": true
+  },
+  {
+   "handle": "culturaunam",
+   "tier": 2,
+   "enabled": true
+  },
+  {
+   "handle": "muac_unam",
+   "tier": 2,
+   "enabled": true
+  },
+  {
+   "handle": "foroindierocks",
+   "tier": 2,
+   "enabled": true
+  },
+  {
+   "handle": "bazarfusion",
+   "tier": 2,
+   "enabled": true
+  },
+  {
+   "handle": "ccemx",
+   "tier": 2,
+   "enabled": true
+  },
+  {
+   "handle": "casadellago.unam",
+   "tier": 2,
+   "enabled": false
+  },
+  {
+   "handle": "eneltamayo",
+   "tier": 2,
+   "enabled": false
+  },
+  {
+   "handle": "museojumex",
+   "tier": 2,
+   "enabled": false
+  },
+  {
+   "handle": "museofranzmayer",
+   "tier": 2,
+   "enabled": false
+  },
+  {
+   "handle": "cinetecanacionalmx",
+   "tier": 2,
+   "enabled": false
+  },
+  {
+   "handle": "turismo_cdmx_",
+   "tier": 2,
+   "enabled": false
+  }
+ ],
+ "umbrellas": [
+  {
+   "name": "Día de Muertos 2026",
+   "window": {
+    "from": "2026-10-28",
+    "to": "2026-11-03"
+   },
+   "known_pages": 7
+  }
+ ],
+ "defaults": {
+  "city": "Mexico City",
+  "timezone": "America/Mexico_City",
+  "currency": "MXN",
+  "window_days": 14,
+  "ig_posts_per_account": 30,
+  "ig_newer_than": "21 days"
+ }
+}

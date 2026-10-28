@@ -17,7 +17,9 @@
 <header class="hdr">
   <h1 class="wordmark">Eventrrr Scout</h1>
   <nav class="nav" aria-label="Sections">
-    <a href="#" aria-current="page">Events</a>
+    <a href="#events" data-tab="events" aria-current="page">Events</a>
+    <a href="#sources" data-tab="sources">Sources</a>
+    <a href="#runs" data-tab="runs">Runs</a>
   </nav>
   <div class="hdr-right">
     <label class="sr" for="runsel">Run</label>
@@ -59,6 +61,37 @@
     </div>
   </section>
   <aside class="insp" id="insp" aria-label="Event details" hidden></aside>
+</div>
+
+<div class="ws ws-single" id="panel-sources" hidden>
+  <section class="main">
+    <h2 class="title">Sources</h2>
+    <p class="sub" style="margin:8px 0 24px">What each sweep reads. Edit <a href="https://github.com/danisbuilding/eventrrr-scout/edit/main/sources.yaml" target="_blank" rel="noopener">sources.yaml on GitHub</a> to change it; the next run picks it up.</p>
+    <div id="sources-body"></div>
+  </section>
+</div>
+
+<div class="ws ws-single" id="panel-runs" hidden>
+  <section class="main">
+    <h2 class="title">Runs</h2>
+    <div class="runform" id="runform">
+      <div class="label" style="margin-bottom:12px">New sweep</div>
+      <div class="runform-grid">
+        <label>Weeks ahead<select class="select" id="rf-weeks"><option value="1">1 week</option><option value="2" selected>2 weeks</option><option value="3">3 weeks</option><option value="4">4 weeks</option><option value="6">6 weeks</option><option value="8">8 weeks</option></select></label>
+        <label>From<input class="input" type="date" id="rf-from"></label>
+        <label>To<input class="input" type="date" id="rf-to"></label>
+        <label>Umbrella event <span class="sub">(optional)</span><input class="input" type="text" id="rf-umbrella" placeholder="Día de Muertos 2026"></label>
+        <label>Instagram<select class="select" id="rf-ig"><option value="all">All handles</option><option value="1">Tier 1 only</option><option value="none">Skip</option></select></label>
+        <label>LLM scouts<select class="select" id="rf-scouts"><option value="both">ChatGPT + Gemini</option><option value="openai">ChatGPT only</option><option value="gemini">Gemini only</option><option value="none">Skip</option></select></label>
+      </div>
+      <div class="actions" style="margin-top:16px;align-items:center;gap:16px">
+        <button class="btn btn-primary" id="rf-start" style="flex:0 0 auto">Start sweep</button>
+        <span class="sub" id="rf-status"></span>
+      </div>
+    </div>
+    <div class="label" style="margin:32px 0 12px">Past runs</div>
+    <div id="runs-body"></div>
+  </section>
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script src="app.js"></script>

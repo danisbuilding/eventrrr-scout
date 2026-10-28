@@ -1,0 +1,97 @@
+name: pipeline
+# Full autonomous run: Instagram + LLM scouts + web sweep → LLM extraction → normalize → score → publish.
+# Triggered from the site's "Start sweep" button (repository_dispatch via the scout-trigger edge
+# function) or by hand (workflow_dispatch / Claude).
+on:
+  workflow_dispatch:
+    inputs:
+      run:         {description: "Run name (blank = today's date)", required: false, default: ""}
+      window_from: {description: "YYYY-MM-DD (blank = today)", required: false, default: ""}
+      window_to:   {description: "YYYY-MM-DD (blank = today + 14)", required: false, default: ""}
+      umbrella:    {description: "Umbrella event name", required: false, default: ""}
+      ig_tier:     {description: "Instagram handles: 1, 2, all or none", required: false, default: "all"}
+      scouts:      {description: "LLM scouts: both, openai, gemini, none", required: false, default: "both"}
+  repository_dispatch:
+    types: [sweep]
+
+permissions:
+  contents: write
+
+concurrency: {group: pipeline, cancel-in-progress: false}
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      APIFY_TOKEN: "${{ secrets.APIFY_TOKEN }}"
+      OPENAI_API_KEY: "${{ secrets.OPENAI_API_KEY }}"
+      GEMINI_API_KEY: "${{ secrets.GEMINI_API_KEY }}"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install -r requirements.txt
+      - name: Resolve inputs
+        id: p
+        env:
+          P: "${{ toJSON(github.event.client_payload) }}"
+          I: "${{ toJSON(inputs) }}"
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json, os, datetime as dt, re
+          p = json.loads(os.environ["P"] or "null") or {}
+          i = json.loads(os.environ["I"] or "null") or {}
+          g = lambda k, d="": (p.get(k) or i.get(k) or d)
+          today = dt.date.today()
+          wf = g("window_from") or today.isoformat()
+          wt = g("window_to") or (today + dt.timedelta(days=14)).isoformat()
+          umb = g("umbrella")
+          run = g("run") or (today.isoformat() + ("-" + re.sub(r"[^a-z0-9]+", "-", umb.lower()).strip("-") if umb else ""))
+          print(f"run={run}"); print(f"wf={wf}"); print(f"wt={wt}"); print(f"umb={umb}")
+          print(f"ig={g('ig_tier','all')}"); print(f"scouts={g('scouts','both')}")
+          PY
+      - name: Mark running
+        run: |
+          mkdir -p runs && python - <<'PY'
+          import json, datetime as dt, pathlib
+          p = pathlib.Path("runs/status.json"); s = {"run": "${{ steps.p.outputs.run }}", "state": "running", "started_at": dt.datetime.now(dt.timezone.utc).isoformat(), "workflow_run": "${{ github.run_id }}"}
+          p.write_text(json.dumps(s))
+          PY
+          git config user.name "eventrrr-scout bot"; git config user.email "bot@users.noreply.github.com"
+          git add runs/status.json && git commit -m "status: running ${{ steps.p.outputs.run }}" && git push || true
+      - name: Instagram (Apify)
+        if: ${{ steps.p.outputs.ig != 'none' }}
+        continue-on-error: true
+        run: python scout/instagram_apify.py "${{ steps.p.outputs.run }}" --tier "${{ steps.p.outputs.ig }}"
+      - name: LLM scouts
+        if: ${{ steps.p.outputs.scouts != 'none' }}
+        continue-on-error: true
+        run: |
+          ONLY=""; [ "${{ steps.p.outputs.scouts }}" = "openai" ] && ONLY="--only openai"; [ "${{ steps.p.outputs.scouts }}" = "gemini" ] && ONLY="--only gemini"
+          python scouts/run_scouts.py "${{ steps.p.outputs.run }}" --window-from "${{ steps.p.outputs.wf }}" --window-to "${{ steps.p.outputs.wt }}" --umbrella "${{ steps.p.outputs.umb }}" $ONLY
+      - name: Web sweep
+        continue-on-error: true
+        run: python scout/web_sweep.py "${{ steps.p.outputs.run }}" --umbrella "${{ steps.p.outputs.umb }}"
+      - name: Extract
+        run: python scout/extract.py "${{ steps.p.outputs.run }}" --window-from "${{ steps.p.outputs.wf }}" --window-to "${{ steps.p.outputs.wt }}" --umbrella "${{ steps.p.outputs.umb }}"
+      - name: Normalize, score, thumbs, publish
+        run: |
+          python scout/normalize.py "${{ steps.p.outputs.run }}"
+          python scout/score.py "${{ steps.p.outputs.run }}"
+          python scout/thumbs.py "${{ steps.p.outputs.run }}" || true
+          python scout/publish.py "${{ steps.p.outputs.run }}" --window "${{ steps.p.outputs.wf }} → ${{ steps.p.outputs.wt }}" --umbrella "${{ steps.p.outputs.umb }}"
+          python scout/export_sources.py
+          python - <<'PY'
+          import json, datetime as dt, pathlib
+          pathlib.Path("runs/status.json").write_text(json.dumps({"run": "${{ steps.p.outputs.run }}", "state": "done", "finished_at": dt.datetime.now(dt.timezone.utc).isoformat(), "workflow_run": "${{ github.run_id }}"}))
+          PY
+      - name: Commit
+        if: always()
+        run: |
+          if [ "${{ job.status }}" != "success" ]; then python -c "import json,pathlib,datetime as dt;pathlib.Path('runs/status.json').write_text(json.dumps({'run':'${{ steps.p.outputs.run }}','state':'failed','finished_at':dt.datetime.now(dt.timezone.utc).isoformat(),'workflow_run':'${{ github.run_id }}'}))"; fi
+          git config user.name "eventrrr-scout bot"; git config user.email "bot@users.noreply.github.com"
+          git pull --rebase origin main || true
+          git add inbox/ runs/ site/sources.json
+          git diff --cached --quiet || git commit -m "run: ${{ steps.p.outputs.run }}"
+          git push

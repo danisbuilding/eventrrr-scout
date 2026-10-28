@@ -186,6 +186,9 @@ function wire() {
     if (ev.target.id === "runsel") loadRun(ev.target.value);
   });
   document.addEventListener("input", (ev) => { if (ev.target.id === "note") $("#notecount").textContent = ev.target.value.length; });
+  document.querySelectorAll(".nav a[data-tab]").forEach((a) => a.addEventListener("click", (ev) => { ev.preventDefault(); try { location.hash = a.dataset.tab; } catch {} showTab(a.dataset.tab); }));
+  document.addEventListener("click", (ev) => { const r = ev.target.closest("[data-openrun]"); if (r) { ev.preventDefault(); const sel = $("#runsel"); if (sel) sel.value = r.dataset.openrun; showTab("events"); loadRun(r.dataset.openrun); } });
+  $("#rf-weeks").addEventListener("change", rfDates); $("#rf-from").addEventListener("change", rfDates);
   ["#q", "#cat", "#src", "#hi", "#fam", "#hideskip"].forEach((s) => $(s).addEventListener("input", render));
   $("#selkept").onclick = () => { EVENTS.forEach((e) => { if (decisionOf(e) === "keep") selected.add(e.key); }); saveSel(); render(); };
   const dx = $("#exportdecisions"); if (dx) dx.onclick = () => copyText(JSON.stringify({run: META.run, exported_at: new Date().toISOString(), decisions}, null, 1), "Decisions copied; paste them to Claude for the learning loop");
@@ -197,6 +200,64 @@ function wire() {
   };
 }
 
+// ---------- sources panel
+let SOURCES = null;
+async function renderSources() {
+  const el = $("#sources-body");
+  if (!SOURCES) { try { const r = await fetch("sources.json?t=" + Math.floor(Date.now() / 60000)); SOURCES = await r.json(); } catch (e) { el.innerHTML = `<p class="sub">Couldn't load sources.json</p>`; return; } }
+  const pill = (on) => `<span class="pill ${on ? "on" : ""}">${on ? "On" : "Off"}</span>`;
+  const sites = SOURCES.sites.map((x) => `<tr><td><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.name)}</a></td><td class="sub">tier ${x.tier}</td><td class="sub">${esc(x.notes || "")}</td><td>${pill(x.enabled !== false)}</td></tr>`).join("");
+  const ig = SOURCES.instagram.map((x) => `<tr><td><a href="https://www.instagram.com/${esc(x.handle)}/" target="_blank" rel="noopener">@${esc(x.handle)}</a></td><td class="sub">tier ${x.tier}</td><td></td><td>${pill(x.enabled !== false)}</td></tr>`).join("");
+  const umb = SOURCES.umbrellas.map((u) => `<tr><td>${esc(u.name)}</td><td class="sub">${u.window ? esc(u.window.from + " → " + u.window.to) : ""}</td><td class="sub">${u.known_pages} known pages</td><td></td></tr>`).join("");
+  const tbl = (title, rows) => `<div class="label" style="margin:24px 0 8px">${title}</div><div class="scroll"><table class="list-table"><thead><tr><th>Name</th><th>Tier</th><th>Notes</th><th>Status</th></tr></thead><tbody>${rows || `<tr><td colspan="4" class="sub">None</td></tr>`}</tbody></table></div>`;
+  el.innerHTML = tbl(`Websites · ${SOURCES.sites.length}`, sites) + tbl(`Instagram · ${SOURCES.instagram.length}`, ig) + tbl("Umbrella events", umb) +
+    `<p class="sub" style="margin-top:24px">Defaults: ${SOURCES.defaults.ig_posts_per_account} posts per Instagram account, newer than ${esc(SOURCES.defaults.ig_newer_than)}.</p>`;
+}
+
+// ---------- runs panel + start sweep
+const GH = "https://api.github.com/repos/danisbuilding/eventrrr-scout";
+let runsCache = [], statusCache = null, pollT = null;
+function rfDates() {
+  const weeks = parseInt($("#rf-weeks").value, 10);
+  const from = new Date(); const to = new Date(from.getTime() + weeks * 7 * 86400000);
+  const iso = (d) => d.toISOString().slice(0, 10);
+  if (!$("#rf-from").value) $("#rf-from").value = iso(from);
+  $("#rf-to").value = iso(new Date(new Date($("#rf-from").value).getTime() + weeks * 7 * 86400000));
+}
+async function fetchStatus() {
+  try { const r = await fetch(`${(window.SCOUT_CONFIG.eventsBase || "").replace(/\/$/, "")}/runs/status.json?t=${Date.now()}`, {cache: "no-store"}); statusCache = r.ok ? await r.json() : null; } catch { statusCache = null; }
+  try { const r = await fetch(`${GH}/actions/workflows/pipeline.yml/runs?per_page=5`, {headers: {Accept: "application/vnd.github+json"}}); if (r.ok) { const j = await r.json(); statusCache = Object.assign({}, statusCache || {}, {gh: (j.workflow_runs || []).map((w) => ({id: w.id, status: w.status, conclusion: w.conclusion, created_at: w.created_at, url: w.html_url}))}); } } catch {}
+  return statusCache;
+}
+async function renderRuns() {
+  rfDates();
+  const st = await fetchStatus();
+  const live = (st && st.gh || []).find((w) => w.status !== "completed");
+  const rs = $("#rf-status");
+  if (live) { rs.innerHTML = `<span class="pill run">Running</span> started ${esc(new Date(live.created_at).toLocaleTimeString("en-US", {hour: "numeric", minute: "2-digit"}))} · <a href="${esc(live.url)}" target="_blank" rel="noopener">log</a>`; $("#rf-start").disabled = true; clearTimeout(pollT); pollT = setTimeout(renderRuns, 30000); }
+  else { if (!rs.dataset.msg) rs.textContent = ""; $("#rf-start").disabled = false; }
+  try { const r = await fetch(`${(window.SCOUT_CONFIG.eventsBase || "").replace(/\/$/, "")}/runs/index.json?t=${Math.floor(Date.now() / 60000)}`, {cache: "no-store"}); runsCache = (await r.json()).runs || []; } catch {}
+  const ghById = Object.fromEntries((st && st.gh || []).map((w) => [String(w.id), w]));
+  const rows = runsCache.map((r) => `<tr><td><a href="#${esc(r.run)}" data-openrun="${esc(r.run)}">${esc(r.run)}</a></td><td class="sub">${esc(r.window || "")}</td><td class="sub">${esc(r.umbrella || "")}</td><td class="sub">${r.event_count} events · ${r.highlights} ★</td><td class="sub">${r.published_at ? esc(new Date(r.published_at).toLocaleDateString("en-US", {month: "short", day: "numeric"})) : ""}</td></tr>`).join("");
+  const recent = (st && st.gh || []).filter((w) => w.status === "completed" && w.conclusion !== "success").slice(0, 3).map((w) => `<tr><td><span class="pill fail">Failed</span></td><td class="sub" colspan="3">${esc(new Date(w.created_at).toLocaleString("en-US", {month: "short", day: "numeric", hour: "numeric", minute: "2-digit"}))}</td><td><a href="${esc(w.url)}" target="_blank" rel="noopener">log</a></td></tr>`).join("");
+  $("#runs-body").innerHTML = `<div class="scroll"><table class="list-table"><thead><tr><th>Run</th><th>Window</th><th>Umbrella</th><th>Results</th><th>Published</th></tr></thead><tbody>${rows}${recent}</tbody></table></div>`;
+}
+async function startSweep(sb) {
+  const rs = $("#rf-status"); rs.dataset.msg = "1";
+  const payload = {window_from: $("#rf-from").value, window_to: $("#rf-to").value, umbrella: $("#rf-umbrella").value.trim(), ig_tier: $("#rf-ig").value, scouts: $("#rf-scouts").value};
+  if (!payload.window_from || !payload.window_to || payload.window_to < payload.window_from) { rs.textContent = "Pick a valid date range."; return; }
+  $("#rf-start").disabled = true; rs.textContent = "Starting…";
+  const {data: {session}} = await sb.auth.getSession();
+  try {
+    const r = await fetch(`${window.SCOUT_CONFIG.supabaseUrl}/functions/v1/scout-trigger`, {method: "POST", headers: {"Content-Type": "application/json", Authorization: "Bearer " + session.access_token, apikey: window.SCOUT_CONFIG.supabaseAnonKey}, body: JSON.stringify(payload)});
+    const j = await r.json().catch(() => ({}));
+    if (!r.ok) throw new Error(j.error || j.message || ("HTTP " + r.status));
+    rs.textContent = `Sweep started (${j.run || "run"}). Usually 10–25 minutes; this page updates itself.`;
+    toast("Sweep started");
+    setTimeout(renderRuns, 8000);
+  } catch (e) { rs.textContent = "Couldn't start: " + (e.message || e); $("#rf-start").disabled = false; }
+}
+
 // ---------- boot
 async function loadRun(run) {
   current = null; selected = new Set();
@@ -205,11 +266,21 @@ async function loadRun(run) {
   catch (e) { EVENTS = []; byKey = {}; decisions = {}; fillSelects(); render(); setSync("Couldn't load: " + (e.message || e)); return; }
   byKey = Object.fromEntries(EVENTS.map((e) => [e.key, e]));
   try { selected = new Set(JSON.parse(localStorage.getItem(LS_SEL()) || "[]").filter((k) => byKey[k])); } catch {}
-  try { if (location.hash.slice(1) !== run) history.replaceState(null, "", "#" + run); } catch {}
+  try { if (tab === "events" && location.hash.slice(1) !== run) history.replaceState(null, "", "#" + run); } catch {}
   fillSelects(); render(); setSync(provider.name === "supabase" ? "Synced" : "");
 }
+const TABS = ["events", "sources", "runs"];
+let tab = "events";
+function showTab(name) {
+  tab = TABS.includes(name) ? name : "events";
+  document.querySelectorAll(".nav a[data-tab]").forEach((a) => { if (a.dataset.tab === tab) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
+  $("#app").hidden = tab !== "events"; $("#panel-sources").hidden = tab !== "sources"; $("#panel-runs").hidden = tab !== "runs";
+  if (tab === "sources") renderSources(); if (tab === "runs") renderRuns();
+}
 function showApp(runs) {
-  $("#app").hidden = false; $("#gate").hidden = true;
+  $("#gate").hidden = true;
+  const h = (() => { try { return location.hash.slice(1); } catch { return ""; } })();
+  showTab(TABS.includes(h) ? h : "events");
   const sel = $("#runsel");
   if (sel) sel.innerHTML = runs.map((r) => `<option value="${esc(r.run)}">${esc(r.run)}${r.umbrella ? " · " + esc(r.umbrella) : ""}</option>`).join("");
   const wanted = (() => { try { return location.hash.slice(1); } catch { return ""; } })();
@@ -224,7 +295,7 @@ const withTimeout = (p, ms, what) => Promise.race([p, new Promise((_, rej) => se
 async function boot() {
   if (location.protocol === "http:" && location.hostname !== "localhost") { location.replace("https://" + location.host + location.pathname + location.hash); return; }
   wire();
-  if (window.SCOUT_INLINE) { provider = inlineProvider(window.SCOUT_INLINE); showApp(await provider.runs()); return; }
+  if (window.SCOUT_INLINE) { provider = inlineProvider(window.SCOUT_INLINE); $("#rf-start").disabled = true; showApp(await provider.runs()); return; }
   const cfg = window.SCOUT_CONFIG || {};
   if (!cfg.supabaseUrl || !cfg.supabaseAnonKey || !window.supabase) { showGate(`<div class="gate-card"><h2 class="title">Eventrrr Scout</h2><p>Not configured yet: site/config.js needs the Supabase URL and anon key.</p></div>`); return; }
   const sb = window.supabase.createClient(cfg.supabaseUrl, cfg.supabaseAnonKey);
@@ -242,6 +313,7 @@ async function boot() {
     $("#signout").onclick = async () => { await sb.auth.signOut(); location.reload(); }; return;
   }
   provider = supabaseProvider(sb, user, cfg);
+  $("#rf-start").onclick = () => startSweep(sb);
   const acct = $("#account");
   if (acct) { acct.innerHTML = `${user.user_metadata?.avatar_url ? `<img class="avatar" src="${esc(user.user_metadata.avatar_url)}" alt="">` : ""}<button class="btn btn-secondary" id="signout">Sign out</button>`; $("#signout").onclick = async () => { await sb.auth.signOut(); location.reload(); }; }
   let runs = [];

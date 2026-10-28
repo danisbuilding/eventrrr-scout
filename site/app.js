@@ -35,7 +35,7 @@ function inlineProvider(inline) {
 function supabaseProvider(sb, user, cfg) {
   // Events come from the public repo (runs/index.json + runs/<run>/events.json); decisions live in Supabase.
   const base = (cfg.eventsBase || "").replace(/\/$/, "");
-  const get = async (path) => { const r = await fetch(`${base}/${path}?t=${Date.now()}`, {cache: "no-store"}); if (!r.ok) throw new Error(`${path}: HTTP ${r.status}`); return r.json(); };
+  const get = async (path) => { const r = await fetch(`${base}/${path}?t=${Math.floor(Date.now() / 60000)}`, {cache: "no-store"}); if (!r.ok) throw new Error(`${path}: HTTP ${r.status}`); return r.json(); };
   return {
     name: "supabase", user,
     async runs() { const idx = await get("runs/index.json"); return (idx.runs || []).filter((r) => !r.hidden); },
@@ -200,7 +200,9 @@ function wire() {
 // ---------- boot
 async function loadRun(run) {
   current = null; selected = new Set();
-  decisions = await provider.load(run);
+  setSync("Loading " + run + "…");
+  try { decisions = await withTimeout(provider.load(run), 20000, "Loading run"); }
+  catch (e) { EVENTS = []; byKey = {}; decisions = {}; fillSelects(); render(); setSync("Couldn't load: " + (e.message || e)); return; }
   byKey = Object.fromEntries(EVENTS.map((e) => [e.key, e]));
   try { selected = new Set(JSON.parse(localStorage.getItem(LS_SEL()) || "[]").filter((k) => byKey[k])); } catch {}
   try { if (location.hash.slice(1) !== run) history.replaceState(null, "", "#" + run); } catch {}
@@ -216,6 +218,8 @@ function showApp(runs) {
   if (run) loadRun(run); else render();
 }
 function showGate(html) { $("#app").hidden = true; const g = $("#gate"); g.hidden = false; g.innerHTML = html; }
+const stage = (t) => { const g = $("#gate"); if (!g.hidden) g.innerHTML = `<div class="gate-card"><p>${esc(t)}</p></div>`; };
+const withTimeout = (p, ms, what) => Promise.race([p, new Promise((_, rej) => setTimeout(() => rej(new Error(what + " timed out after " + ms / 1000 + "s")), ms))]);
 
 async function boot() {
   if (location.protocol === "http:" && location.hostname !== "localhost") { location.replace("https://" + location.host + location.pathname + location.hash); return; }
@@ -226,10 +230,13 @@ async function boot() {
   const sb = window.supabase.createClient(cfg.supabaseUrl, cfg.supabaseAnonKey);
   const signIn = () => sb.auth.signInWithOAuth({provider: "google", options: {redirectTo: "https://scout.eventrrr.com/"}});
   const gateSignIn = () => { showGate(`<div class="gate-card"><h2 class="title">Eventrrr Scout</h2><p>Event review for curated calendars. Sign in to continue.</p><button class="btn btn-secondary btn-google" id="signin">${GOOGLE} Continue with Google</button></div>`); $("#signin").onclick = signIn; };
-  const {data: {session}} = await sb.auth.getSession();
+  stage("Checking session…");
+  const {data: {session}} = await withTimeout(sb.auth.getSession(), 15000, "Session check");
   if (!session) { gateSignIn(); sb.auth.onAuthStateChange((_, s) => { if (s) location.reload(); }); return; }
   const user = session.user;
-  const {data: rev} = await sb.from("scout_reviewers").select("email").limit(1);
+  stage("Checking access for " + user.email + "…");
+  const {data: rev, error: revErr} = await withTimeout(sb.from("scout_reviewers").select("email").limit(1), 15000, "Access check");
+  if (revErr) { showGate(`<div class="gate-card"><h2 class="title">Access check failed</h2><p>${esc(revErr.message)}</p></div>`); return; }
   if (!rev || !rev.length) {
     showGate(`<div class="gate-card"><h2 class="title">Not on the list</h2><p>${esc(user.email)} isn't a reviewer for this scout.</p><button class="btn btn-secondary" id="signout">Sign out</button></div>`);
     $("#signout").onclick = async () => { await sb.auth.signOut(); location.reload(); }; return;
@@ -238,7 +245,8 @@ async function boot() {
   const acct = $("#account");
   if (acct) { acct.innerHTML = `${user.user_metadata?.avatar_url ? `<img class="avatar" src="${esc(user.user_metadata.avatar_url)}" alt="">` : ""}<button class="btn btn-secondary" id="signout">Sign out</button>`; $("#signout").onclick = async () => { await sb.auth.signOut(); location.reload(); }; }
   let runs = [];
-  try { runs = await provider.runs(); } catch (e) { showGate(`<div class="gate-card"><h2 class="title">Couldn't load runs</h2><p>${esc(e.message || e)}</p></div>`); return; }
+  stage("Loading runs…");
+  try { runs = await withTimeout(provider.runs(), 15000, "Loading runs"); } catch (e) { showGate(`<div class="gate-card"><h2 class="title">Couldn't load runs</h2><p>${esc(e.message || e)}</p></div>`); return; }
   showApp(runs);
 }
 boot();

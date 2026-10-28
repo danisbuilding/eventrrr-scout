@@ -1,12 +1,12 @@
 {
  "runs": [
   {
-   "run": "_mock",
+   "run": "sample-dia-de-muertos",
    "window": "Oct 28 – Nov 11",
-   "umbrella": "Día de Muertos 2026",
+   "umbrella": "Día de Muertos 2026 (sample data)",
    "event_count": 8,
    "highlights": 6,
-   "published_at": "2026-10-28T21:53:33.497177+00:00",
+   "published_at": "2026-10-28T22:50:00+00:00",
    "hidden": false
   }
  ]

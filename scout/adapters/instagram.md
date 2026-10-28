@@ -10,7 +10,7 @@ Input per sweep:
  "onlyPostsNewerThan": "<defaults.ig_newer_than>",
  "addParentData": true}
 ```
-Run it through the Apify MCP server on DP's Mac (`call-actor`), then `get-dataset-items`.
+Run `scout/instagram_apify.py` (the `sweep` workflow does this with `APIFY_TOKEN`); it calls the actor, waits, and writes RawItems.
 
 Map each post to a RawItem:
 - id `instagram:<ownerUsername>:<shortCode>`

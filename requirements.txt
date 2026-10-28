@@ -1,5 +1,7 @@
 pyyaml>=6
-# scouts only (run on the Mac):
+requests>=2.31
+pillow>=10
+# LLM scouts (GitHub Actions or local):
 openai>=1.50
 google-genai>=1.0
 python-dotenv>=1.0

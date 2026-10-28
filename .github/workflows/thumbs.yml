@@ -1,0 +1,21 @@
+name: thumbs
+# Bakes flyer thumbnails into runs/<run>/events.json after extraction (needs outbound image fetches).
+on:
+  workflow_dispatch:
+    inputs:
+      run: {description: "Run name", required: true}
+permissions:
+  contents: write
+jobs:
+  thumbs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install requests pillow
+      - run: python scout/thumbs.py "${{ inputs.run }}"
+      - run: |
+          git config user.name "eventrrr-scout bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add runs/ && (git diff --cached --quiet || git commit -m "thumbs: ${{ inputs.run }}") && git push

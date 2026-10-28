@@ -245,23 +245,32 @@ function renderPane() {
       ${e.url ? `<button class="b" data-a="copy">Copy link</button>` : ""}
       <button class="b" data-a="copyone">Copy for Eventrrr</button>
     </div>
-    <textarea id="note-${esc(e.key).replace(/[^a-z0-9]/gi, "_")}" placeholder="Note (why keep / skip, calendar it belongs on…)">${esc(d.note || "")}</textarea>`;
+    <textarea id="note-${esc(e.key).replace(/[^a-z0-9]/gi, "_")}" placeholder="Public note (exported with the event; shows on the curated calendar)">${esc(d.note || "")}</textarea>`;
   pane.hidden = false;
   const closeBtn = $("#closepane"); if (closeBtn) closeBtn.onclick = () => { selected = null; render(); renderPane(); pane.hidden = true; };
 }
 function select(key) { selected = key; render(); renderPane(); const el = document.querySelector(`.ev[data-k="${CSS.escape(key)}"]`); if (el && window.innerWidth > 980) el.scrollIntoView({block: "nearest"}); }
 
-// ---- Eventrrr paste block
-function pasteBlock(list) {
-  return list.map((e) => {
-    const lines = [e.title];
-    lines.push(fmtFull(e));
-    const place = [e.venue, e.address, e.neighborhood].filter(Boolean).join(", "); if (place) lines.push(place);
-    if (price(e)) lines.push(price(e));
-    if (e.url) lines.push(e.url);
-    lines.push("Category: " + e.category);
-    return lines.join("\n");
-  }).join("\n\n---\n\n");
+// ---- Eventrrr import payload (contract: docs/eventrrr-import-prompt.md)
+function exportJson(list) {
+  const events = list.map((e) => ({
+    title: e.title,
+    starts_at: e.starts_at,
+    ends_at: e.ends_at || null,
+    all_day: !!e.all_day,
+    timezone: e.timezone || TZ,
+    venue: e.venue || null,
+    address: e.address || null,
+    neighborhood: e.neighborhood || null,
+    price_text: e.price_text || (e.price_min === 0 ? "Free" : null),
+    price_min: e.price_min ?? null,
+    currency: e.currency || "MXN",
+    url: e.url && /^https?:\/\//.test(e.url) ? e.url : null,
+    category: e.category,
+    description: e.description || null,
+    public_note: decisions[e.key]?.note || null,
+  }));
+  return JSON.stringify({eventrrr_import: 1, source: "eventrrr-scout", run: META.run, events}, null, 1);
 }
 function copyText(t, ok) {
   navigator.clipboard.writeText(t).then(() => toast(ok), () => { const r = document.createElement("textarea"); r.value = t; document.body.appendChild(r); r.select(); try { document.execCommand("copy"); toast(ok); } catch { toast("Copy failed"); } r.remove(); });
@@ -271,7 +280,7 @@ function copyText(t, ok) {
 function act(a, key) {
   const e = byKey[key]; if (!e) return;
   if (a === "copy") return copyText(e.url, "Link copied");
-  if (a === "copyone") return copyText(pasteBlock([e]), "Copied. Paste into Eventrrr → Paste text");
+  if (a === "copyone") return copyText(exportJson([e]), "Copied. Paste into Eventrrr → Paste text");
   const cur = decisions[key]?.decision;
   saveDecision(key, {decision: cur === a ? null : a});
   render(); renderPane();
@@ -289,7 +298,8 @@ $("#pane").addEventListener("change", (ev) => { if (ev.target.tagName === "TEXTA
 $("#copykept").onclick = () => {
   const kept = visible().filter((e) => decisions[e.key]?.decision === "keep");
   if (!kept.length) return toast("Nothing kept in this view yet");
-  copyText(pasteBlock(kept), `${kept.length} event${kept.length === 1 ? "" : "s"} copied. Paste into Eventrrr → Paste text${kept.length > 12 ? " (paste in batches of ~12)" : ""}`);
+  if (kept.length > 100) return toast("Eventrrr imports up to 100 at a time; narrow the view");
+  copyText(exportJson(kept), `${kept.length} event${kept.length === 1 ? "" : "s"} copied. Paste into Eventrrr → Paste text`);
 };
 tabs(); render(); renderPane();
 </script>

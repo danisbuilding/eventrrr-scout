@@ -245,7 +245,7 @@ function renderPane() {
       ${e.url ? `<button class="b" data-a="copy">Copy link</button>` : ""}
       <button class="b" data-a="copyone">Copy for Eventrrr</button>
     </div>
-    <textarea id="note-${esc(e.key).replace(/[^a-z0-9]/gi, "_")}" placeholder="Public note (exported with the event; shows on the curated calendar)">${esc(d.note || "")}</textarea>`;
+    <textarea id="note-${esc(e.key).replace(/[^a-z0-9]/gi, "_")}" maxlength="140" placeholder="Public note, 140 chars max (exported; shows on the curated calendar)">${esc(d.note || "")}</textarea>`;
   pane.hidden = false;
   const closeBtn = $("#closepane"); if (closeBtn) closeBtn.onclick = () => { selected = null; render(); renderPane(); pane.hidden = true; };
 }
@@ -268,7 +268,7 @@ function exportJson(list) {
     url: e.url && /^https?:\/\//.test(e.url) ? e.url : null,
     category: e.category,
     description: e.description || null,
-    public_note: decisions[e.key]?.note || null,
+    public_note: (decisions[e.key]?.note || "").slice(0, 140) || null,
   }));
   return JSON.stringify({eventrrr_import: 1, source: "eventrrr-scout", run: META.run, events}, null, 1);
 }

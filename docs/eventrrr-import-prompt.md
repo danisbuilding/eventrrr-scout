@@ -1,5 +1,8 @@
 # Bolt prompt: JSON import on the Paste text tab
 
+Status: ran in Bolt 2026-10-28. Lives in `src/lib/scoutImport.ts`, called from `src/sheets/TextTab.tsx`.
+As built: `public_note` is capped at 140 chars (DB limit), duplicates get the `possible_duplicate` flag.
+
 This is the import contract the scout exports to. Keep `scout/dashboard_template.html`
 (`exportJson`) and this prompt in sync.
 

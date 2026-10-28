@@ -189,6 +189,8 @@ function wire() {
   document.querySelectorAll(".nav a[data-tab]").forEach((a) => a.addEventListener("click", (ev) => { ev.preventDefault(); try { location.hash = a.dataset.tab; } catch {} showTab(a.dataset.tab); }));
   document.addEventListener("click", (ev) => { const r = ev.target.closest("[data-openrun]"); if (r) { ev.preventDefault(); const sel = $("#runsel"); if (sel) sel.value = r.dataset.openrun; showTab("events"); loadRun(r.dataset.openrun); } });
   $("#rf-weeks").addEventListener("change", rfDates); $("#rf-from").addEventListener("change", rfDates);
+  $("#as-kind").addEventListener("change", () => { const ig = $("#as-kind").value === "instagram"; $("#as-valuelabel").textContent = ig ? "Handle" : "Address"; $("#as-value").placeholder = ig ? "@cdmxsecreta" : "https://local.mx/"; $("#as-namewrap").hidden = ig; });
+  $("#as-value").addEventListener("keydown", (ev) => { if (ev.key === "Enter") $("#as-add").click(); });
   ["#q", "#cat", "#src", "#hi", "#fam", "#hideskip"].forEach((s) => $(s).addEventListener("input", render));
   $("#selkept").onclick = () => { EVENTS.forEach((e) => { if (decisionOf(e) === "keep") selected.add(e.key); }); saveSel(); render(); };
   const dx = $("#exportdecisions"); if (dx) dx.onclick = () => copyText(JSON.stringify({run: META.run, exported_at: new Date().toISOString(), decisions}, null, 1), "Decisions copied; paste them to Claude for the learning loop");
@@ -206,12 +208,31 @@ async function renderSources() {
   const el = $("#sources-body");
   if (!SOURCES) { try { const r = await fetch("sources.json?t=" + Math.floor(Date.now() / 60000)); SOURCES = await r.json(); } catch (e) { el.innerHTML = `<p class="sub">Couldn't load sources.json</p>`; return; } }
   const pill = (on) => `<span class="pill ${on ? "on" : ""}">${on ? "On" : "Off"}</span>`;
-  const sites = SOURCES.sites.map((x) => `<tr><td><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.name)}</a></td><td class="sub">tier ${x.tier}</td><td class="sub">${esc(x.notes || "")}</td><td>${pill(x.enabled !== false)}</td></tr>`).join("");
-  const ig = SOURCES.instagram.map((x) => `<tr><td><a href="https://www.instagram.com/${esc(x.handle)}/" target="_blank" rel="noopener">@${esc(x.handle)}</a></td><td class="sub">tier ${x.tier}</td><td></td><td>${pill(x.enabled !== false)}</td></tr>`).join("");
+  const sites = SOURCES.sites.map((x) => `<tr><td><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.name)}</a></td><td class="sub">tier ${x.tier}</td><td class="sub">${esc(x.notes || (x.added_by ? "added " + x.added_at : ""))}</td><td>${pill(x.enabled !== false)}</td></tr>`).join("");
+  const ig = SOURCES.instagram.map((x) => `<tr><td><a href="https://www.instagram.com/${esc(x.handle)}/" target="_blank" rel="noopener">@${esc(x.handle)}</a></td><td class="sub">tier ${x.tier}</td><td class="sub">${x.added_by ? "added " + esc(x.added_at) : ""}</td><td>${pill(x.enabled !== false)}</td></tr>`).join("");
   const umb = SOURCES.umbrellas.map((u) => `<tr><td>${esc(u.name)}</td><td class="sub">${u.window ? esc(u.window.from + " → " + u.window.to) : ""}</td><td class="sub">${u.known_pages} known pages</td><td></td></tr>`).join("");
   const tbl = (title, rows) => `<div class="label" style="margin:24px 0 8px">${title}</div><div class="scroll"><table class="list-table"><thead><tr><th>Name</th><th>Tier</th><th>Notes</th><th>Status</th></tr></thead><tbody>${rows || `<tr><td colspan="4" class="sub">None</td></tr>`}</tbody></table></div>`;
   el.innerHTML = tbl(`Websites · ${SOURCES.sites.length}`, sites) + tbl(`Instagram · ${SOURCES.instagram.length}`, ig) + tbl("Umbrella events", umb) +
     `<p class="sub" style="margin-top:24px">Defaults: ${SOURCES.defaults.ig_posts_per_account} posts per Instagram account, newer than ${esc(SOURCES.defaults.ig_newer_than)}.</p>`;
+}
+
+// ---------- add source
+async function addSource(sb, force) {
+  const st = $("#as-status"), kind = $("#as-kind").value, value = $("#as-value").value.trim(), name = $("#as-name").value.trim();
+  $("#as-force").hidden = true; st.className = "sub";
+  if (!value) { st.textContent = kind === "web" ? "Enter a web address." : "Enter an Instagram handle."; st.className = "sub err"; return; }
+  $("#as-add").disabled = true; st.textContent = force ? "Adding…" : (kind === "web" ? "Checking the site…" : "Checking Instagram…");
+  const {data: {session}} = await sb.auth.getSession();
+  try {
+    const r = await fetch(`${window.SCOUT_CONFIG.supabaseUrl}/functions/v1/scout-trigger`, {method: "POST", headers: {"Content-Type": "application/json", Authorization: "Bearer " + session.access_token, apikey: window.SCOUT_CONFIG.supabaseAnonKey}, body: JSON.stringify({action: "add_source", kind, value, name, force: force ? "1" : "0"})});
+    const j = await r.json().catch(() => ({}));
+    if (r.status === 422) { st.textContent = j.error + " You can still add it unverified."; st.className = "sub err"; $("#as-force").hidden = false; return; }
+    if (!r.ok) throw new Error(j.error || ("HTTP " + r.status));
+    st.textContent = `Added ${j.added}.` + (j.warn ? " " + j.warn : "") + " It appears below after the next deploy (about a minute) and in the next sweep."; st.className = "sub okk";
+    $("#as-value").value = ""; $("#as-name").value = ""; SOURCES = null; toast("Source added");
+    setTimeout(() => { SOURCES = null; renderSources(); }, 90000);
+  } catch (e) { st.textContent = "Couldn't add: " + (e.message || e); st.className = "sub err"; }
+  finally { $("#as-add").disabled = false; }
 }
 
 // ---------- runs panel + start sweep
@@ -295,7 +316,7 @@ const withTimeout = (p, ms, what) => Promise.race([p, new Promise((_, rej) => se
 async function boot() {
   if (location.protocol === "http:" && location.hostname !== "localhost") { location.replace("https://" + location.host + location.pathname + location.hash); return; }
   wire();
-  if (window.SCOUT_INLINE) { provider = inlineProvider(window.SCOUT_INLINE); $("#rf-start").disabled = true; showApp(await provider.runs()); return; }
+  if (window.SCOUT_INLINE) { provider = inlineProvider(window.SCOUT_INLINE); $("#rf-start").disabled = true; $("#as-add").disabled = true; showApp(await provider.runs()); return; }
   const cfg = window.SCOUT_CONFIG || {};
   if (!cfg.supabaseUrl || !cfg.supabaseAnonKey || !window.supabase) { showGate(`<div class="gate-card"><h2 class="title">Eventrrr Scout</h2><p>Not configured yet: site/config.js needs the Supabase URL and anon key.</p></div>`); return; }
   const sb = window.supabase.createClient(cfg.supabaseUrl, cfg.supabaseAnonKey);
@@ -314,6 +335,7 @@ async function boot() {
   }
   provider = supabaseProvider(sb, user, cfg);
   $("#rf-start").onclick = () => startSweep(sb);
+  $("#as-add").onclick = () => addSource(sb, false); $("#as-force").onclick = () => addSource(sb, true);
   const acct = $("#account");
   if (acct) { acct.innerHTML = `${user.user_metadata?.avatar_url ? `<img class="avatar" src="${esc(user.user_metadata.avatar_url)}" alt="">` : ""}<button class="btn btn-secondary" id="signout">Sign out</button>`; $("#signout").onclick = async () => { await sb.auth.signOut(); location.reload(); }; }
   let runs = [];

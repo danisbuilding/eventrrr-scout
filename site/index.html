@@ -66,8 +66,21 @@
 <div class="ws ws-single" id="panel-sources" hidden>
   <section class="main">
     <h2 class="title">Sources</h2>
-    <p class="sub" style="margin:8px 0 24px">What each sweep reads. Edit <a href="https://github.com/danisbuilding/eventrrr-scout/edit/main/sources.yaml" target="_blank" rel="noopener">sources.yaml on GitHub</a> to change it; the next run picks it up.</p>
-    <div id="sources-body"></div>
+    <p class="sub" style="margin:8px 0 20px">What each sweep reads. Add below, or edit <a href="https://github.com/danisbuilding/eventrrr-scout/edit/main/sources.yaml" target="_blank" rel="noopener">sources.yaml on GitHub</a>; the next run picks it up.</p>
+    <div class="runform" id="addsource">
+      <div class="label" style="margin-bottom:12px">Add source</div>
+      <div class="runform-grid">
+        <label>Type<select class="select" id="as-kind"><option value="web">Website</option><option value="instagram">Instagram</option></select></label>
+        <label><span id="as-valuelabel">Address</span><input class="input" type="text" id="as-value" placeholder="https://local.mx/" autocomplete="off"></label>
+        <label id="as-namewrap">Name <span class="sub">(optional)</span><input class="input" type="text" id="as-name" placeholder="Taken from the page if blank"></label>
+      </div>
+      <div class="actions" style="margin-top:16px;align-items:center;gap:16px">
+        <button class="btn btn-primary" id="as-add" style="flex:0 0 auto">Verify and add</button>
+        <button class="btn btn-secondary" id="as-force" style="flex:0 0 auto" hidden>Add anyway</button>
+        <span class="sub" id="as-status" aria-live="polite"></span>
+      </div>
+    </div>
+    <div id="sources-body" style="margin-top:8px"></div>
   </section>
 </div>
 

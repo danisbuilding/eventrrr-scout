@@ -1,91 +1,67 @@
-# Seed sources. `tier: 1` = DP's own picks; `tier: 2` = researched, pending his prune.
-# Every source has an adapter type (see scout/adapters/). Set enabled: false to skip.
-
-defaults:
-  city: Mexico City
-  timezone: America/Mexico_City
-  currency: MXN
-  window_days: 14          # how far ahead a general sweep looks
-  ig_posts_per_account: 30 # Apify resultsLimit per handle
-  ig_newer_than: "21 days" # Apify onlyPostsNewerThan
-
+_notes: [Edited by the Sources tab on scout.eventrrr.com (via the scout-trigger edge function) and by hand. Keep valid YAML., 'tier 1 = DP''s own picks; tier 2 = researched/added later. enabled: false skips
+    a source.', 'Bot-blocked sites (use their Instagram instead): cultura.cdmx.gob.mx, chapultepec, teatros.cultura.cdmx, bellasartes, cenart, ccemx.org, passline, ticketmaster.com.mx', 'Gap: no verified
+    Instagram aggregators yet for nightlife, food, or family.']
+defaults: {city: Mexico City, timezone: America/Mexico_City, currency: MXN, window_days: 14, ig_posts_per_account: 30, ig_newer_than: 21 days}
 umbrellas:
-  - name: Día de Muertos 2026
-    slug: dia-de-muertos-2026
-    window: {from: "2026-10-28", to: "2026-11-03"}
-    search_terms: ["Día de Muertos 2026 CDMX", "ofrenda 2026 Ciudad de México", "desfile día de muertos 2026", "catrinas 2026 CDMX", "Mixquic 2026", "Xochimilco día de muertos 2026"]
-    known_pages:   # aggregator pages already found; scraped first
-      - https://mexicocity.cdmx.gob.mx/e/dia-de-muertos-en-la-ciudad-de-mexico/
-      - https://www.chilango.com/que-hacer/actividades-de-dia-de-muertos-2026-en-cdmx-desfile-ofrendas-catrinas-y-mas/
-      - https://grupoanimal.mx/estilo-de-vida/eventos-desfiles-dia-de-muertos-2026-cdmx
-      - https://www.unotv.com/estados/ciudad-de-mexico/calendario-de-dia-de-muertos-2026-en-cdmx-fechas-del-desfile-ofrenda-monumental-y-actividades-gratis/
-      - https://www.nmas.com.mx/ciudad-de-mexico/sociedad/que-hacer-en-cdmx-por-dia-de-muertos-cartelera-de-eventos-del-17-al-31-de-octubre-2026/
-      - https://www.cronica.com.mx/metropoli/2026/10/17/que-hacer-en-cdmx-por-dia-de-muertos-2026-fechas-horarios-y-mapa-de-actividades/
-      - https://megaofrenda.unam.mx
-
+- name: Día de Muertos 2026
+  slug: dia-de-muertos-2026
+  window: {from: '2026-10-28', to: '2026-11-03'}
+  search_terms: [Día de Muertos 2026 CDMX, ofrenda 2026 Ciudad de México, desfile día de muertos 2026, catrinas 2026 CDMX, Mixquic 2026, Xochimilco día de muertos 2026]
+  known_pages: ['https://mexicocity.cdmx.gob.mx/e/dia-de-muertos-en-la-ciudad-de-mexico/', 'https://www.chilango.com/que-hacer/actividades-de-dia-de-muertos-2026-en-cdmx-desfile-ofrendas-catrinas-y-mas/',
+    'https://grupoanimal.mx/estilo-de-vida/eventos-desfiles-dia-de-muertos-2026-cdmx', 'https://www.unotv.com/estados/ciudad-de-mexico/calendario-de-dia-de-muertos-2026-en-cdmx-fechas-del-desfile-ofrenda-monumental-y-actividades-gratis/',
+    'https://www.nmas.com.mx/ciudad-de-mexico/sociedad/que-hacer-en-cdmx-por-dia-de-muertos-cartelera-de-eventos-del-17-al-31-de-octubre-2026/', 'https://www.cronica.com.mx/metropoli/2026/10/17/que-hacer-en-cdmx-por-dia-de-muertos-2026-fechas-horarios-y-mapa-de-actividades/',
+    'https://megaofrenda.unam.mx']
 sites:
-  - {name: The Happening,          url: https://thehappening.com/,          tier: 1, enabled: true}
-  - {name: Local.mx,               url: https://local.mx/,                  tier: 1, enabled: true}
-  - {name: Chilango,               url: https://www.chilango.com/,          tier: 1, enabled: true}
-  - {name: Food and Travel MX,     url: https://foodandtravel.mx/,          tier: 1, enabled: true}
-  - {name: Cartelera CDMX (gov),   url: https://cartelera.cdmx.gob.mx/,     tier: 1, enabled: true}
-
-instagram:
-  - {handle: cdmxsavauge,   tier: 1, enabled: true}
-  - {handle: cdmxsecreta,   tier: 1, enabled: true}
-  - {handle: blaxican_cdmx, tier: 1, enabled: true}
-  - {handle: themovecdmx,   tier: 1, enabled: true}
-  - {handle: jenetorade,    tier: 1, enabled: true}
-
-newsletters: []     # add {name, url_or_archive, tier} when you have them
-
-whatsapp: []        # v2: {group_name, export_path} fed by the whatsapp adapter
-
-# ---- Tier 2: researched 2026-10-28, pending DP's prune. Flip enabled to true to include.
+- {name: The Happening, url: 'https://thehappening.com/', tier: 1, enabled: true}
+- {name: Local.mx, url: 'https://local.mx/', tier: 1, enabled: true}
+- {name: Chilango, url: 'https://www.chilango.com/', tier: 1, enabled: true}
+- {name: Food and Travel MX, url: 'https://foodandtravel.mx/', tier: 1, enabled: true}
+- {name: Cartelera CDMX (gov), url: 'https://cartelera.cdmx.gob.mx/', tier: 1, enabled: true}
 sites_tier2:
-  # listings / aggregators
-  - {name: Time Out México,        url: https://www.timeoutmexico.mx/ciudad-de-mexico/que-hacer/calendario-de-eventos-en-la-ciudad-de-mexico, tier: 2, enabled: true,  notes: monthly roundup pages}
-  - {name: Dónde Ir,               url: https://www.dondeir.com/,                      tier: 2, enabled: true}
-  - {name: México es Cultura,      url: https://mexicoescultura.com/estado/9/ciudad-de-mexico, tier: 2, enabled: true, notes: federal cartelera; dated listings; free filter /buscar/precio/1/gratis}
-  - {name: Cultura UNAM,           url: https://cultura.unam.mx/,                      tier: 2, enabled: true}
-  - {name: Resident Advisor CDMX,  url: https://ra.co/events/mx/mexicocity,            tier: 2, enabled: true,  notes: best Clubs & Parties feed; Next.js}
-  - {name: Songkick CDMX,          url: https://www.songkick.com/metro-areas/31098-mexico-mexico-city, tier: 2, enabled: true, notes: Music; static paginated}
-  - {name: Indie Rocks agenda,     url: https://www.indierocks.mx/agenda/,             tier: 2, enabled: true}
-  - {name: Me Hace Ruido,          url: https://www.mehaceruido.com/calendario-de-conciertos/, tier: 2, enabled: true}
-  - {name: Luma CDMX,              url: https://luma.com/mexico-city,                  tier: 2, enabled: true,  notes: Tech/Social; dates need per-event page}
-  - {name: Eventbrite CDMX,        url: https://www.eventbrite.com.mx/d/mexico--ciudad-de-mexico/events/, tier: 2, enabled: false, notes: noisy}
-  - {name: Fever CDMX,             url: https://feverup.com/es/ciudad-de-mexico,       tier: 2, enabled: false, notes: mostly paid experiences}
-  - {name: Bushdrum CDMX,          url: https://bushdrum.com/cdmx,                     tier: 2, enabled: false, notes: aggregator; data quality uneven}
-  - {name: Boletia,                url: "https://boletia.com/search?state=CDMX%20y%20Zona%20Metropolitana", tier: 2, enabled: false, notes: JS-loaded}
-  - {name: OCESA,                  url: https://www.ocesa.com.mx/,                     tier: 2, enabled: false, notes: big-venue shows}
-  # media
-  - {name: Máspormás qué hacer,    url: https://www.maspormas.com/tag/que-hacer/,      tier: 2, enabled: true}
-  - {name: Animal MX estilo de vida, url: https://grupoanimal.mx/estilo-de-vida,       tier: 2, enabled: true}
-  - {name: Mexico News Daily CDMX, url: https://mexiconewsdaily.com/category/mexico-city-plus/, tier: 2, enabled: false, notes: partly paywalled}
-  - {name: Food & Pleasure,        url: https://foodandpleasure.com/,                  tier: 2, enabled: false, notes: articles not agenda}
-  # venues / institutions
-  - {name: Casa del Lago UNAM,     url: https://casadellago.unam.mx/nuevo/programacion/programacion-completa, tier: 2, enabled: true}
-  - {name: Museo Tamayo,           url: https://www.museotamayo.org/agenda,            tier: 2, enabled: true}
-  - {name: Museo Jumex,            url: https://www.fundacionjumex.org/es/programa,    tier: 2, enabled: true}
-  - {name: Museo Franz Mayer,      url: https://franzmayer.org.mx/exposiciones/proximas/, tier: 2, enabled: true}
-  - {name: Cineteca Nacional,      url: https://www.cinetecanacional.net/cartelera.php, tier: 2, enabled: false, notes: JS cartelera; monthly PDF instead}
-  - {name: Turismo CDMX,           url: https://mexicocity.cdmx.gob.mx/venues/,         tier: 2, enabled: false, notes: seasonal program pages}
-  # bot-blocked (robots.txt): use their Instagram instead
-  # cultura.cdmx.gob.mx, chapultepec, teatros.cultura.cdmx, bellasartes, cenart, ccemx.org, passline, ticketmaster.com.mx
-
+- {name: Time Out México, url: 'https://www.timeoutmexico.mx/ciudad-de-mexico/que-hacer/calendario-de-eventos-en-la-ciudad-de-mexico', tier: 2, enabled: true, notes: monthly roundup pages}
+- {name: Dónde Ir, url: 'https://www.dondeir.com/', tier: 2, enabled: true}
+- {name: México es Cultura, url: 'https://mexicoescultura.com/estado/9/ciudad-de-mexico', tier: 2, enabled: true, notes: federal cartelera; dated listings; free filter /buscar/precio/1/gratis}
+- {name: Cultura UNAM, url: 'https://cultura.unam.mx/', tier: 2, enabled: true}
+- {name: Resident Advisor CDMX, url: 'https://ra.co/events/mx/mexicocity', tier: 2, enabled: true, notes: best Clubs & Parties feed; Next.js}
+- {name: Songkick CDMX, url: 'https://www.songkick.com/metro-areas/31098-mexico-mexico-city', tier: 2, enabled: true, notes: Music; static paginated}
+- {name: Indie Rocks agenda, url: 'https://www.indierocks.mx/agenda/', tier: 2, enabled: true}
+- {name: Me Hace Ruido, url: 'https://www.mehaceruido.com/calendario-de-conciertos/', tier: 2, enabled: true}
+- {name: Luma CDMX, url: 'https://luma.com/mexico-city', tier: 2, enabled: true, notes: Tech/Social; dates need per-event page}
+- {name: Eventbrite CDMX, url: 'https://www.eventbrite.com.mx/d/mexico--ciudad-de-mexico/events/', tier: 2, enabled: false, notes: noisy}
+- {name: Fever CDMX, url: 'https://feverup.com/es/ciudad-de-mexico', tier: 2, enabled: false, notes: mostly paid experiences}
+- {name: Bushdrum CDMX, url: 'https://bushdrum.com/cdmx', tier: 2, enabled: false, notes: aggregator; data quality uneven}
+- {name: Boletia, url: 'https://boletia.com/search?state=CDMX%20y%20Zona%20Metropolitana', tier: 2, enabled: false, notes: JS-loaded}
+- {name: OCESA, url: 'https://www.ocesa.com.mx/', tier: 2, enabled: false, notes: big-venue shows}
+- {name: Máspormás qué hacer, url: 'https://www.maspormas.com/tag/que-hacer/', tier: 2, enabled: true}
+- {name: Animal MX estilo de vida, url: 'https://grupoanimal.mx/estilo-de-vida', tier: 2, enabled: true}
+- {name: Mexico News Daily CDMX, url: 'https://mexiconewsdaily.com/category/mexico-city-plus/', tier: 2, enabled: false, notes: partly paywalled}
+- {name: Food & Pleasure, url: 'https://foodandpleasure.com/', tier: 2, enabled: false, notes: articles not agenda}
+- {name: Casa del Lago UNAM, url: 'https://casadellago.unam.mx/nuevo/programacion/programacion-completa', tier: 2, enabled: true}
+- {name: Museo Tamayo, url: 'https://www.museotamayo.org/agenda', tier: 2, enabled: true}
+- {name: Museo Jumex, url: 'https://www.fundacionjumex.org/es/programa', tier: 2, enabled: true}
+- {name: Museo Franz Mayer, url: 'https://franzmayer.org.mx/exposiciones/proximas/', tier: 2, enabled: true}
+- {name: Cineteca Nacional, url: 'https://www.cinetecanacional.net/cartelera.php', tier: 2, enabled: false, notes: JS cartelera; monthly PDF instead}
+- {name: Turismo CDMX, url: 'https://mexicocity.cdmx.gob.mx/venues/', tier: 2, enabled: false, notes: seasonal program pages}
+instagram:
+- {handle: cdmxsavauge, tier: 1, enabled: true}
+- {handle: cdmxsecreta, tier: 1, enabled: true}
+- {handle: blaxican_cdmx, tier: 1, enabled: true}
+- {handle: themovecdmx, tier: 1, enabled: true}
+- {handle: jenetorade, tier: 1, enabled: true}
 instagram_tier2:
-  - {handle: timeoutmexico,     tier: 2, enabled: true}
-  - {handle: donde_ir,          tier: 2, enabled: true}
-  - {handle: culturaciudadmx,   tier: 2, enabled: true}
-  - {handle: culturaunam,       tier: 2, enabled: true}
-  - {handle: muac_unam,         tier: 2, enabled: true}
-  - {handle: foroindierocks,    tier: 2, enabled: true}
-  - {handle: bazarfusion,       tier: 2, enabled: true}
-  - {handle: ccemx,             tier: 2, enabled: true}
-  - {handle: casadellago.unam,  tier: 2, enabled: false}
-  - {handle: eneltamayo,        tier: 2, enabled: false}
-  - {handle: museojumex,        tier: 2, enabled: false}
-  - {handle: museofranzmayer,   tier: 2, enabled: false}
-  - {handle: cinetecanacionalmx, tier: 2, enabled: false}
-  - {handle: turismo_cdmx_,     tier: 2, enabled: false}
-  # gaps: no verified IG aggregators for nightlife, food, or family yet. DP: who do you follow for those?
+- {handle: timeoutmexico, tier: 2, enabled: true}
+- {handle: donde_ir, tier: 2, enabled: true}
+- {handle: culturaciudadmx, tier: 2, enabled: true}
+- {handle: culturaunam, tier: 2, enabled: true}
+- {handle: muac_unam, tier: 2, enabled: true}
+- {handle: foroindierocks, tier: 2, enabled: true}
+- {handle: bazarfusion, tier: 2, enabled: true}
+- {handle: ccemx, tier: 2, enabled: true}
+- {handle: casadellago.unam, tier: 2, enabled: false}
+- {handle: eneltamayo, tier: 2, enabled: false}
+- {handle: museojumex, tier: 2, enabled: false}
+- {handle: museofranzmayer, tier: 2, enabled: false}
+- {handle: cinetecanacionalmx, tier: 2, enabled: false}
+- {handle: turismo_cdmx_, tier: 2, enabled: false}
+newsletters: []
+whatsapp: []

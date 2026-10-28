@@ -23,6 +23,16 @@
    "corroborated": true
   },
   "highlight_why": "Flagship city ofrenda, free",
+  "source_links": [
+   {
+    "name": "Cartelera CDMX",
+    "url": "https://cartelera.cdmx.gob.mx/"
+   }
+  ],
+  "source_excerpt": "Ofrenda Monumental en el Zócalo 2026. Homenaje a José Guadalupe Posada. Del 29 de octubre al 2 de noviembre. Entrada libre.",
+  "address": "Plaza de la Constitución s/n",
+  "organizer": "Gobierno CDMX",
+  "description": "The city's flagship Día de Muertos ofrenda, this year a Posada homage with a 32 m catrina.",
   "key": "monumental-ofrenda-zocalo|2026-10-31",
   "source_count": 2,
   "score": 9,
@@ -46,6 +56,13 @@
    "recurring_weekly": true,
    "corroborated": false
   },
+  "source_links": [
+   {
+    "name": "IG @cdmxsecreta",
+    "url": "https://www.instagram.com/p/XXXX/"
+   }
+  ],
+  "source_excerpt": "Este sábado DJ night en Yu Yu 🔥 11pm, cover $250. Nos vemos en la pista.",
   "key": "dj-night-yu|2026-10-31",
   "source_count": 1,
   "score": 0,

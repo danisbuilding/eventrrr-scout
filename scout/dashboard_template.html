@@ -2,88 +2,112 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600&display=swap">
 <style>
-/* Layout: one column of event rows under a sticky tab strip; Eventrrr's stone + orange palette. */
+/* Layout: full-width two-pane review tool. Left: tab strip + dated event list. Right: sticky detail pane for the selected event. Eventrrr stone + orange palette. */
 :root {
-  --bg: #faf6f0; --surface: #ffffff; --ink: #1c1917; --muted: #78716c; --line: #e7e5e4;
+  --bg: #faf6f0; --surface: #ffffff; --ink: #1c1917; --muted: #78716c; --line: #e7e5e4; --line-soft: #f0ece6;
   --accent: #c2410c; --accent-soft: #fff7f2; --accent-line: #f6cdb4;
   --keep: #047857; --keep-soft: #ecfdf5; --skip: #78716c; --skip-soft: #f5f5f4;
   --display: "Inter Tight", "Helvetica Neue", Arial, sans-serif;
   --body: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
-  --bg: #171412; --surface: #211d1a; --ink: #f3efe9; --muted: #a39d95; --line: #35302b;
+  --bg: #171412; --surface: #211d1a; --ink: #f3efe9; --muted: #a39d95; --line: #35302b; --line-soft: #2a2622;
   --accent: #f0703a; --accent-soft: #2d1f17; --accent-line: #5a3524;
   --keep: #34d399; --keep-soft: #0f2a21; --skip: #a39d95; --skip-soft: #2a2622; color-scheme: dark;
 } }
 :root[data-theme="dark"] {
-  --bg: #171412; --surface: #211d1a; --ink: #f3efe9; --muted: #a39d95; --line: #35302b;
+  --bg: #171412; --surface: #211d1a; --ink: #f3efe9; --muted: #a39d95; --line: #35302b; --line-soft: #2a2622;
   --accent: #f0703a; --accent-soft: #2d1f17; --accent-line: #5a3524;
   --keep: #34d399; --keep-soft: #0f2a21; --skip: #a39d95; --skip-soft: #2a2622; color-scheme: dark;
 }
 * { box-sizing: border-box; }
-body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 14px; line-height: 1.45;
-  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 0 48px; }
+html, body { height: 100%; }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 14px; line-height: 1.45; margin: 0;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 0; }
 body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
-.wrap { max-width: 860px; margin: 0 auto; }
-header { padding-block: 22px 12px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; }
-h1 { font-family: var(--display); font-weight: 700; font-size: 22px; margin: 0; letter-spacing: -0.01em; }
+.app { display: grid; grid-template-columns: minmax(0, 1fr) 420px; gap: 0 28px; max-width: 1480px; margin: 0 auto; min-height: 100%; }
+.main { min-width: 0; padding-bottom: 48px; }
+header { display: flex; align-items: center; gap: 14px; padding-block: 18px 10px; }
+h1 { font-family: var(--display); font-weight: 700; font-size: 20px; margin: 0; letter-spacing: -0.01em; }
 h1 .rrr { color: var(--accent); }
-.meta { color: var(--muted); font-size: 13px; }
-.meta b { color: var(--ink); font-weight: 600; }
-.tabs { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); padding-block: 8px 10px; display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; border-bottom: 1px solid var(--line); }
-.tabs::-webkit-scrollbar { display: none; }
-.tab { flex: none; border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 999px; padding: 6px 12px; font: 500 13px var(--body); cursor: pointer; white-space: nowrap; }
+.tabs { display: flex; flex-wrap: wrap; gap: 6px; padding-block: 2px 10px; border-bottom: 1px solid var(--line); }
+.tab { border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 999px; padding: 5px 11px; font: 500 13px var(--body); cursor: pointer; white-space: nowrap; }
 .tab .n { color: var(--muted); margin-left: 4px; font-variant-numeric: tabular-nums; }
 .tab[aria-selected="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
 .tab[aria-selected="true"] .n { color: #fde4d4; }
-.tools { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; padding-block: 12px 4px; font-size: 13px; color: var(--muted); }
+.tools { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; padding-block: 10px 2px; font-size: 13px; color: var(--muted); }
 .tools label { display: inline-flex; align-items: center; gap: 6px; cursor: pointer; }
-.tools input[type="search"] { flex: 1 1 160px; min-width: 0; border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 8px; padding: 7px 10px; font: inherit; }
-.tools .right { margin-left: auto; display: flex; gap: 8px; }
-.day { font-family: var(--display); font-weight: 600; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); padding-block: 18px 6px; position: sticky; top: calc(env(safe-area-inset-top, 0px) + 52px); background: var(--bg); z-index: 4; }
-.ev { display: grid; grid-template-columns: 64px 1fr; gap: 4px 12px; padding-block: 12px; border-bottom: 1px solid var(--line); }
-.ev.hi { background: linear-gradient(90deg, var(--accent-soft), transparent 60%); margin-inline: -8px; padding-inline: 8px; border-radius: 10px; }
-.ev.decided-skip { opacity: .45; }
+.tools input[type="search"] { flex: 1 1 180px; min-width: 0; border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 8px; padding: 7px 10px; font: inherit; }
+.tools .right { margin-left: auto; display: flex; gap: 8px; align-items: center; }
+.day { font-family: var(--display); font-weight: 600; font-size: 12.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); padding-block: 16px 4px; }
+.ev { display: grid; grid-template-columns: 62px 1fr auto; gap: 2px 12px; align-items: start; padding: 10px 10px; margin-inline: -10px; border-bottom: 1px solid var(--line-soft); cursor: pointer; border-radius: 10px; }
+.ev:hover { background: var(--surface); }
+.ev.sel { background: var(--surface); box-shadow: inset 3px 0 0 var(--accent); }
+.ev.hi .title::before { content: "★ "; color: var(--accent); }
+.ev.decided-skip { opacity: .4; }
+.ev.decided-keep .title { color: var(--keep); }
 .time { color: var(--muted); font-variant-numeric: tabular-nums; font-size: 13px; padding-top: 2px; }
-.title { font-family: var(--display); font-weight: 600; font-size: 16px; margin: 0; text-wrap: balance; }
-.title a { color: inherit; text-decoration: none; }
-.title a:hover { text-decoration: underline; }
+.title { font-family: var(--display); font-weight: 600; font-size: 15.5px; margin: 0; text-wrap: balance; }
 .sub { color: var(--muted); font-size: 13px; }
-.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; align-items: center; }
-.chip { font-size: 11.5px; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); }
+.chips { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 3px; align-items: center; }
+.chip { font-size: 11px; padding: 1px 7px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); white-space: nowrap; }
 .chip.cat { background: var(--accent-soft); border-color: var(--accent-line); color: var(--accent); }
-.chip.score { font-variant-numeric: tabular-nums; }
 .chip.fam { border-style: dashed; }
-.why { font-size: 13px; color: var(--ink); margin-top: 4px; }
-.why::before { content: "★ "; color: var(--accent); }
-.desc { font-size: 13px; margin-top: 2px; }
-.act { grid-column: 2; display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; align-items: center; }
-button.b { border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 8px; padding: 6px 11px; font: 500 13px var(--body); cursor: pointer; }
-button.b:focus-visible, .tab:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.act { display: flex; gap: 5px; grid-row: span 2; align-self: center; }
+button.b { border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 8px; padding: 6px 11px; font: 500 13px var(--body); cursor: pointer; white-space: nowrap; }
+button.b:focus-visible, .tab:focus-visible, .ev:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 button.b.keep.on { background: var(--keep-soft); border-color: var(--keep); color: var(--keep); }
 button.b.skip.on { background: var(--skip-soft); border-color: var(--skip); color: var(--skip); }
-.act input { flex: 1 1 140px; min-width: 0; border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 8px; padding: 6px 9px; font: 13px var(--body); }
+button.b.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
 .empty { color: var(--muted); padding-block: 40px; text-align: center; }
-.toast { position: fixed; left: 50%; bottom: calc(24px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); background: var(--ink); color: var(--bg); padding: 8px 14px; border-radius: 999px; font-size: 13px; opacity: 0; transition: opacity .2s; pointer-events: none; }
+/* detail pane */
+.pane { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 12px); align-self: start; max-height: calc(100vh - 24px); overflow-y: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 18px 18px 20px; margin-top: 18px; }
+.pane h2 { font-family: var(--display); font-weight: 700; font-size: 20px; margin: 0 0 4px; line-height: 1.2; text-wrap: balance; }
+.pane .when { font-size: 14px; font-weight: 500; }
+.pane .kv { display: grid; grid-template-columns: 92px 1fr; gap: 4px 10px; font-size: 13px; margin-top: 12px; }
+.pane .kv dt { color: var(--muted); } .pane .kv dd { margin: 0; min-width: 0; overflow-wrap: anywhere; }
+.pane .why { margin-top: 12px; padding: 8px 10px; background: var(--accent-soft); border: 1px solid var(--accent-line); border-radius: 8px; font-size: 13px; }
+.pane .sec { font-size: 11.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin: 16px 0 6px; font-weight: 600; }
+.pane .excerpt { font-size: 13px; white-space: pre-wrap; background: var(--bg); border-radius: 8px; padding: 10px; max-height: 260px; overflow-y: auto; }
+.pane img.thumb { width: 100%; max-width: 100%; border-radius: 10px; margin-top: 10px; }
+.pane .links a, .pane a { color: var(--accent); overflow-wrap: anywhere; }
+.pane .links { display: flex; flex-direction: column; gap: 4px; font-size: 13px; }
+.pane .row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+.pane textarea { width: 100%; min-height: 54px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); border-radius: 8px; padding: 8px; font: 13px var(--body); resize: vertical; margin-top: 8px; }
+.pane .placeholder { color: var(--muted); font-size: 13px; padding-block: 30px; text-align: center; }
+.sig { display: inline-block; font-size: 11px; padding: 1px 7px; border-radius: 999px; margin: 2px 3px 0 0; border: 1px solid var(--line); color: var(--muted); }
+.sig.on { border-color: var(--accent-line); background: var(--accent-soft); color: var(--accent); }
+.sig.neg.on { border-color: var(--line); background: var(--skip-soft); color: var(--skip); text-decoration: line-through; }
+.toast { position: fixed; left: 50%; bottom: calc(24px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); background: var(--ink); color: var(--bg); padding: 8px 14px; border-radius: 999px; font-size: 13px; opacity: 0; transition: opacity .2s; pointer-events: none; z-index: 20; max-width: 90vw; }
 .toast.show { opacity: 1; }
 .status { font-size: 12px; color: var(--muted); }
-@media (max-width: 480px) { .ev { grid-template-columns: 1fr; } .time { font-size: 12px; } .act { grid-column: 1; } }
+.pane .close { display: none; }
+@media (max-width: 980px) {
+  .app { grid-template-columns: 1fr; }
+  .pane { position: fixed; inset: auto 0 0 0; max-height: 78vh; border-radius: 14px 14px 0 0; margin: 0; z-index: 15; padding-bottom: calc(20px + env(safe-area-inset-bottom, 0px)); }
+  .pane[hidden] { display: none; }
+  .pane .close { display: inline-block; float: right; }
+}
+@media (max-width: 560px) { .ev { grid-template-columns: 1fr; } .act { grid-row: auto; margin-top: 6px; } .time { font-size: 12px; } }
 @media (prefers-reduced-motion: reduce) { .toast { transition: none; } }
 </style>
 
-<div class="wrap">
-  <header>
-    <h1>Event<span class="rrr">rrr</span> Scout</h1>
-    <span class="meta" id="meta"></span>
-  </header>
-  <div class="tabs" role="tablist" id="tabs"></div>
-  <div class="tools">
-    <input type="search" id="q" placeholder="Search title, venue, neighborhood" aria-label="Search">
-    <label><input type="checkbox" id="fam"> Family-friendly only</label>
-    <label><input type="checkbox" id="hideskip" checked> Hide skipped</label>
-    <div class="right"><button class="b" id="export">Copy decisions JSON</button><span class="status" id="status"></span></div>
+<div class="app">
+  <div class="main">
+    <header><h1>Event<span class="rrr">rrr</span> Scout</h1></header>
+    <div class="tabs" role="tablist" id="tabs"></div>
+    <div class="tools">
+      <input type="search" id="q" placeholder="Search title, venue, neighborhood" aria-label="Search">
+      <label><input type="checkbox" id="fam"> Family-friendly</label>
+      <label><input type="checkbox" id="hideskip" checked> Hide skipped</label>
+      <div class="right">
+        <button class="b primary" id="copykept">Copy kept for Eventrrr</button>
+        <span class="status" id="status"></span>
+      </div>
+    </div>
+    <div id="list"></div>
   </div>
-  <div id="list"></div>
+  <aside class="pane" id="pane" aria-live="polite"><div class="placeholder">Select an event to see its details and source.</div></aside>
 </div>
 <div class="toast" id="toast" role="status"></div>
 
@@ -93,19 +117,21 @@ const EVENTS = __EVENTS__;
 
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-const fmtTime = (iso, allDay) => { if (allDay) return "All day"; const d = new Date(iso); if (isNaN(d)) return ""; return d.toLocaleTimeString("en-US", {hour: "numeric", minute: "2-digit", timeZone: "America/Mexico_City"}).replace(":00", ""); };
-const fmtDay = (iso) => { const d = new Date(iso); if (isNaN(d)) return "Date unknown"; return d.toLocaleDateString("en-US", {weekday: "short", month: "short", day: "numeric", timeZone: "America/Mexico_City"}); };
+const TZ = "America/Mexico_City";
+const fmtTime = (iso, allDay) => { if (allDay) return "All day"; const d = new Date(iso); if (isNaN(d)) return ""; return d.toLocaleTimeString("en-US", {hour: "numeric", minute: "2-digit", timeZone: TZ}).replace(":00", ""); };
+const fmtDay = (iso) => { const d = new Date(iso); if (isNaN(d)) return "Date unknown"; return d.toLocaleDateString("en-US", {weekday: "short", month: "short", day: "numeric", timeZone: TZ}); };
+const fmtFull = (e) => { const d = new Date(e.starts_at); if (isNaN(d)) return "Date unknown"; let s = d.toLocaleDateString("en-US", {weekday: "long", month: "long", day: "numeric", year: "numeric", timeZone: TZ}); if (!e.all_day) { s += " · " + fmtTime(e.starts_at); if (e.ends_at) s += " – " + fmtTime(e.ends_at); } return s; };
 const price = (e) => e.price_text || (e.price_min === 0 ? "Free" : "");
+const slugTab = (n) => n.replace(/[^A-Za-z0-9]+/g, "-").replace(/^-|-$/g, "");
+const byKey = Object.fromEntries(EVENTS.map((e) => [e.key, e]));
 
-// ---- decisions: db doc "decisions/<run>" when available, localStorage mirror otherwise
+// ---- decisions: db doc "decisions/<run>" when available; localStorage mirror
 let decisions = {};
 let db = null, docRef = null, canWrite = false;
 const LS_KEY = "scout-decisions-" + META.run;
 try { decisions = JSON.parse(localStorage.getItem(LS_KEY) || "{}"); } catch {}
-
 function setStatus(t) { $("#status").textContent = t; }
-let toastT; function toast(t) { const el = $("#toast"); el.textContent = t; el.classList.add("show"); clearTimeout(toastT); toastT = setTimeout(() => el.classList.remove("show"), 1600); }
-
+let toastT; function toast(t) { const el = $("#toast"); el.textContent = t; el.classList.add("show"); clearTimeout(toastT); toastT = setTimeout(() => el.classList.remove("show"), 1800); }
 let writing = Promise.resolve();
 function saveDecision(key, patch) {
   decisions[key] = Object.assign({}, decisions[key] || {}, patch, {at: new Date().toISOString()});
@@ -114,7 +140,6 @@ function saveDecision(key, patch) {
     writing = writing.then(() => docRef.set({run: META.run, decisions})).then(() => setStatus("Saved"), (e) => { setStatus("Saved locally only"); if (e && e.code === "invalid_argument") canWrite = false; });
   } else setStatus("Saved locally");
 }
-
 (async () => {
   const w = window.claude; if (!w || !w.use) return;
   db = await w.use("db"); if (!db) return;
@@ -122,24 +147,26 @@ function saveDecision(key, patch) {
   canWrite = user ? (await user.can("data.write")) !== false : true;
   docRef = db.doc("decisions/" + META.run);
   docRef.onSnapshot((snap) => {
-    if (snap.exists && snap.data().decisions) { decisions = Object.assign({}, decisions, snap.data().decisions); try { localStorage.setItem(LS_KEY, JSON.stringify(decisions)); } catch {} render(); }
+    if (snap.exists && snap.data().decisions) { decisions = Object.assign({}, decisions, snap.data().decisions); try { localStorage.setItem(LS_KEY, JSON.stringify(decisions)); } catch {} render(); renderPane(); }
     setStatus(canWrite ? "Synced" : "Read-only");
   }, () => setStatus("Saved locally"));
 })();
 
 // ---- tabs
+const TAB_NAMES = ["Highlights", ...META.categories, "All"];
 let tab = "Highlights";
-try { tab = location.hash.slice(1).replace(/-/g, " ") || "Highlights"; } catch {}
+try { const h = location.hash.slice(1); const m = TAB_NAMES.find((n) => slugTab(n) === h); if (m) tab = m; } catch {}
 function tabs() {
   const counts = {Highlights: EVENTS.filter((e) => e.highlight).length, All: EVENTS.length};
   META.categories.forEach((c) => counts[c] = EVENTS.filter((e) => e.category === c).length);
-  const names = ["Highlights", ...META.categories.filter((c) => counts[c]), "All"];
-  if (!names.includes(tab)) tab = "Highlights";
+  const names = TAB_NAMES.filter((n) => counts[n] || n === "All");
+  if (!names.includes(tab)) tab = names[0];
   $("#tabs").innerHTML = names.map((n) => `<button class="tab" role="tab" aria-selected="${n === tab}" data-t="${esc(n)}">${esc(n)}<span class="n">${counts[n]}</span></button>`).join("");
-  $("#tabs").querySelectorAll(".tab").forEach((b) => b.onclick = () => { tab = b.dataset.t; try { location.hash = tab.replace(/\s+/g, "-"); } catch {} tabs(); render(); });
+  $("#tabs").querySelectorAll(".tab").forEach((b) => b.onclick = () => { tab = b.dataset.t; try { location.hash = slugTab(tab); } catch {} tabs(); render(); });
 }
 
 // ---- list
+let selected = null;
 function visible() {
   const q = $("#q").value.trim().toLowerCase();
   return EVENTS.filter((e) => {
@@ -153,31 +180,25 @@ function visible() {
 }
 function card(e) {
   const d = decisions[e.key] || {};
-  const link = e.url || "";
   const sub = [e.venue, e.neighborhood, price(e)].filter(Boolean).join(" · ");
-  return `<article class="ev ${e.highlight ? "hi" : ""} ${d.decision === "skip" ? "decided-skip" : ""}" data-k="${esc(e.key)}">
+  return `<div class="ev ${e.highlight ? "hi" : ""} ${d.decision ? "decided-" + d.decision : ""} ${selected === e.key ? "sel" : ""}" data-k="${esc(e.key)}" tabindex="0" role="button">
     <div class="time">${fmtTime(e.starts_at, e.all_day)}</div>
     <div>
-      <h2 class="title">${link ? `<a href="${esc(link)}" target="_blank" rel="noopener">${esc(e.title)}</a>` : esc(e.title)}</h2>
+      <h2 class="title">${esc(e.title)}</h2>
       <div class="sub">${esc(sub)}</div>
-      ${e.description ? `<div class="desc">${esc(e.description)}</div>` : ""}
-      ${e.highlight_why ? `<div class="why">${esc(e.highlight_why)}</div>` : ""}
       <div class="chips">
         <span class="chip cat">${esc(e.category)}</span>
         ${e.family_friendly ? `<span class="chip fam">Family</span>` : ""}
         ${e.umbrella ? `<span class="chip">${esc(e.umbrella)}</span>` : ""}
-        <span class="chip score">score ${e.score ?? 0}</span>
-        <span class="chip">${e.source_count || (e.sources || []).length} source${(e.source_count || 1) === 1 ? "" : "s"}</span>
+        <span class="chip">${e.source_count || (e.sources || []).length} src</span>
         ${e.confidence != null && e.confidence < 0.75 ? `<span class="chip">check date</span>` : ""}
       </div>
     </div>
     <div class="act">
       <button class="b keep ${d.decision === "keep" ? "on" : ""}" data-a="keep">Keep</button>
       <button class="b skip ${d.decision === "skip" ? "on" : ""}" data-a="skip">Skip</button>
-      ${link ? `<button class="b" data-a="copy" data-link="${esc(link)}">Copy link</button>` : ""}
-      <input type="text" id="note-${esc(e.key).replace(/[^a-z0-9]/gi, "_")}" placeholder="Note" value="${esc(d.note || "")}" data-a="note">
     </div>
-  </article>`;
+  </div>`;
 }
 function render() {
   const rows = visible();
@@ -186,27 +207,89 @@ function render() {
   for (const e of rows) { const day = fmtDay(e.starts_at); if (day !== lastDay) { out += `<div class="day">${esc(day)}</div>`; lastDay = day; } out += card(e); }
   $("#list").innerHTML = out;
 }
-$("#list").addEventListener("click", (ev) => {
-  const b = ev.target.closest("button[data-a]"); if (!b) return;
-  const key = b.closest(".ev").dataset.k;
-  if (b.dataset.a === "copy") {
-    const t = b.dataset.link;
-    navigator.clipboard.writeText(t).then(() => toast("Link copied"), () => { const r = document.createElement("textarea"); r.value = t; document.body.appendChild(r); r.select(); try { document.execCommand("copy"); toast("Link copied"); } catch { toast("Select and copy: " + t); } r.remove(); });
-    return;
-  }
+
+// ---- detail pane
+function renderPane() {
+  const pane = $("#pane");
+  const e = byKey[selected];
+  if (!e) { pane.innerHTML = `<div class="placeholder">Select an event to see its details and source.</div>`; return; }
+  const d = decisions[e.key] || {};
+  const sig = e.signals || {};
+  const sigs = Object.entries(sig).map(([k, v]) => `<span class="sig ${v ? "on" : ""} ${/recurring|tourist|sold|vague/.test(k) ? "neg" : ""}">${esc(k.replace(/_/g, " "))}</span>`).join("");
+  const srcLinks = (e.source_links || []).map((s) => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name || s.url)}</a>`).join("");
+  pane.innerHTML = `
+    <button class="b close" id="closepane">Close</button>
+    <h2>${esc(e.title)}</h2>
+    <div class="when">${esc(fmtFull(e))}</div>
+    <dl class="kv">
+      ${e.venue ? `<dt>Venue</dt><dd>${esc(e.venue)}</dd>` : ""}
+      ${e.address ? `<dt>Address</dt><dd>${esc(e.address)}</dd>` : ""}
+      ${e.neighborhood ? `<dt>Colonia</dt><dd>${esc(e.neighborhood)}</dd>` : ""}
+      ${price(e) ? `<dt>Price</dt><dd>${esc(price(e))}</dd>` : ""}
+      ${e.organizer ? `<dt>Organizer</dt><dd>${esc(e.organizer)}</dd>` : ""}
+      <dt>Category</dt><dd>${esc(e.category)}${e.category_alt ? ` <span class="sub">(or ${esc(e.category_alt)})</span>` : ""}</dd>
+      ${e.url ? `<dt>Link</dt><dd><a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.url)}</a></dd>` : ""}
+      <dt>Score</dt><dd>${e.score ?? 0}${e.highlight ? " · highlighted" : ""} · confidence ${Math.round((e.confidence || 0) * 100)}%</dd>
+    </dl>
+    ${e.description ? `<p style="margin:12px 0 0;font-size:13.5px">${esc(e.description)}</p>` : ""}
+    ${e.highlight_why ? `<div class="why">★ ${esc(e.highlight_why)}</div>` : ""}
+    <div class="sec">Signals</div><div>${sigs || '<span class="sub">none</span>'}</div>
+    ${e.thumb ? `<div class="sec">Flyer</div><img class="thumb" src="${e.thumb}" alt="">` : ""}
+    <div class="sec">Source${(e.source_links || []).length > 1 ? "s" : ""}</div>
+    <div class="links">${srcLinks || `<span class="sub">${esc((e.sources || []).join(", "))}</span>`}</div>
+    ${e.source_excerpt ? `<div class="excerpt">${esc(e.source_excerpt)}</div>` : ""}
+    <div class="sec">Review</div>
+    <div class="row">
+      <button class="b keep ${d.decision === "keep" ? "on" : ""}" data-a="keep">Keep</button>
+      <button class="b skip ${d.decision === "skip" ? "on" : ""}" data-a="skip">Skip</button>
+      ${e.url ? `<button class="b" data-a="copy">Copy link</button>` : ""}
+      <button class="b" data-a="copyone">Copy for Eventrrr</button>
+    </div>
+    <textarea id="note-${esc(e.key).replace(/[^a-z0-9]/gi, "_")}" placeholder="Note (why keep / skip, calendar it belongs on…)">${esc(d.note || "")}</textarea>`;
+  pane.hidden = false;
+  const closeBtn = $("#closepane"); if (closeBtn) closeBtn.onclick = () => { selected = null; render(); renderPane(); pane.hidden = true; };
+}
+function select(key) { selected = key; render(); renderPane(); const el = document.querySelector(`.ev[data-k="${CSS.escape(key)}"]`); if (el && window.innerWidth > 980) el.scrollIntoView({block: "nearest"}); }
+
+// ---- Eventrrr paste block
+function pasteBlock(list) {
+  return list.map((e) => {
+    const lines = [e.title];
+    lines.push(fmtFull(e));
+    const place = [e.venue, e.address, e.neighborhood].filter(Boolean).join(", "); if (place) lines.push(place);
+    if (price(e)) lines.push(price(e));
+    if (e.url) lines.push(e.url);
+    lines.push("Category: " + e.category);
+    return lines.join("\n");
+  }).join("\n\n---\n\n");
+}
+function copyText(t, ok) {
+  navigator.clipboard.writeText(t).then(() => toast(ok), () => { const r = document.createElement("textarea"); r.value = t; document.body.appendChild(r); r.select(); try { document.execCommand("copy"); toast(ok); } catch { toast("Copy failed"); } r.remove(); });
+}
+
+// ---- events
+function act(a, key) {
+  const e = byKey[key]; if (!e) return;
+  if (a === "copy") return copyText(e.url, "Link copied");
+  if (a === "copyone") return copyText(pasteBlock([e]), "Copied. Paste into Eventrrr → Paste text");
   const cur = decisions[key]?.decision;
-  saveDecision(key, {decision: cur === b.dataset.a ? null : b.dataset.a});
-  render();
+  saveDecision(key, {decision: cur === a ? null : a});
+  render(); renderPane();
+}
+$("#list").addEventListener("click", (ev) => {
+  const b = ev.target.closest("button[data-a]");
+  const row = ev.target.closest(".ev"); if (!row) return;
+  if (b) return act(b.dataset.a, row.dataset.k);
+  select(row.dataset.k);
 });
-$("#list").addEventListener("change", (ev) => {
-  const i = ev.target.closest("input[data-a='note']"); if (!i) return;
-  saveDecision(i.closest(".ev").dataset.k, {note: i.value});
-});
+$("#list").addEventListener("keydown", (ev) => { const row = ev.target.closest(".ev"); if (row && (ev.key === "Enter" || ev.key === " ")) { ev.preventDefault(); select(row.dataset.k); } });
+$("#pane").addEventListener("click", (ev) => { const b = ev.target.closest("button[data-a]"); if (b && selected) act(b.dataset.a, selected); });
+$("#pane").addEventListener("change", (ev) => { if (ev.target.tagName === "TEXTAREA" && selected) saveDecision(selected, {note: ev.target.value}); });
 ["#q", "#fam", "#hideskip"].forEach((s) => $(s).addEventListener("input", render));
-$("#export").onclick = () => {
-  const t = JSON.stringify({run: META.run, exported_at: new Date().toISOString(), decisions}, null, 1);
-  navigator.clipboard.writeText(t).then(() => toast("Decisions copied"), () => toast("Copy failed; use the db"));
+$("#copykept").onclick = () => {
+  const kept = visible().filter((e) => decisions[e.key]?.decision === "keep");
+  if (!kept.length) return toast("Nothing kept in this view yet");
+  copyText(pasteBlock(kept), `${kept.length} event${kept.length === 1 ? "" : "s"} copied. Paste into Eventrrr → Paste text${kept.length > 12 ? " (paste in batches of ~12)" : ""}`);
 };
-$("#meta").innerHTML = [META.window && `<b>${esc(META.window)}</b>`, META.umbrella && esc(META.umbrella), `${META.counts.events} events`, `${META.counts.highlights} highlights`].filter(Boolean).join(" · ");
-tabs(); render();
+tabs(); render(); renderPane();
 </script>

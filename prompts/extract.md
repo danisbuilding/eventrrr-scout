@@ -30,7 +30,11 @@ distinct, dated, real-world event you find, emit one event object. Rules:
     `penalties`, set true/false based on what the text supports. Do not guess
     `corroborated`; normalize.py sets it from source counts.
 12. **sources.** The RawItem id(s) you read this from.
-13. **confidence.** 0.9+ when date, venue and link are all explicit; 0.6 when one is
+13. **source_links / source_excerpt / image_url.** `source_links` = one `{name, url}` per
+    RawItem it came from (name like "IG @cdmxsecreta" or "Chilango"); `source_excerpt` = the
+    most relevant ~600 chars of the original text, verbatim; `image_url` = the flyer/image
+    URL from the RawItem's `media`, if any.
+14. **confidence.** 0.9+ when date, venue and link are all explicit; 0.6 when one is
     inferred; below 0.5 drop it.
 
 Output: a JSON array. No prose.

@@ -3,34 +3,184 @@
   "title": "Event",
   "description": "Normalized event. Field names track Eventrrr's events table so a future bulk import is a straight map.",
   "type": "object",
-  "required": ["key", "title", "starts_at", "category", "sources"],
+  "required": [
+    "key",
+    "title",
+    "starts_at",
+    "category",
+    "sources"
+  ],
   "properties": {
-    "key":          {"type": "string", "description": "Dedupe key: slug(title) + date. Set by normalize.py"},
-    "title":        {"type": "string", "description": "As published; do not translate"},
-    "description":  {"type": "string", "description": "1–2 sentence English summary"},
-    "starts_at":    {"type": "string", "description": "ISO 8601 with offset"},
-    "ends_at":      {"type": ["string", "null"]},
-    "all_day":      {"type": "boolean", "default": false},
-    "timezone":     {"type": "string", "default": "America/Mexico_City"},
-    "venue":        {"type": ["string", "null"]},
-    "address":      {"type": ["string", "null"]},
-    "neighborhood": {"type": ["string", "null"], "description": "Colonia. Infer from venue/address if not printed"},
-    "city":         {"type": "string", "default": "Mexico City"},
-    "price_text":   {"type": ["string", "null"], "description": "As published, e.g. '$350 MXN', 'Entrada libre'"},
-    "price_min":    {"type": ["number", "null"], "description": "0 for free"},
-    "currency":     {"type": "string", "default": "MXN"},
-    "url":          {"type": ["string", "null"], "description": "Best link: tickets > organizer page > source post"},
-    "category":     {"type": "string", "description": "One of taxonomy.yaml categories"},
-    "category_alt": {"type": ["string", "null"], "description": "Second-best category, if genuinely ambiguous"},
-    "family_friendly": {"type": "boolean", "default": false},
-    "umbrella":     {"type": ["string", "null"]},
-    "organizer":    {"type": ["string", "null"]},
-    "recurring":    {"type": "boolean", "default": false},
-    "sources":      {"type": "array", "items": {"type": "string"}, "description": "RawItem ids that mention this event"},
-    "confidence":   {"type": "number", "minimum": 0, "maximum": 1, "description": "Extractor's confidence in date+venue"},
-    "signals":      {"type": "object", "description": "taxonomy.highlight signal name → true/false, set by Claude at extraction"},
-    "score":        {"type": "number", "description": "Set by score.py"},
-    "highlight":    {"type": "boolean", "description": "score >= threshold"},
-    "highlight_why":{"type": "string", "description": "One line, for the dashboard"}
+    "key": {
+      "type": "string",
+      "description": "Dedupe key: slug(title) + date. Set by normalize.py"
+    },
+    "title": {
+      "type": "string",
+      "description": "As published; do not translate"
+    },
+    "description": {
+      "type": "string",
+      "description": "1–2 sentence English summary"
+    },
+    "starts_at": {
+      "type": "string",
+      "description": "ISO 8601 with offset"
+    },
+    "ends_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "all_day": {
+      "type": "boolean",
+      "default": false
+    },
+    "timezone": {
+      "type": "string",
+      "default": "America/Mexico_City"
+    },
+    "venue": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "address": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "neighborhood": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Colonia. Infer from venue/address if not printed"
+    },
+    "city": {
+      "type": "string",
+      "default": "Mexico City"
+    },
+    "price_text": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "As published, e.g. '$350 MXN', 'Entrada libre'"
+    },
+    "price_min": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "0 for free"
+    },
+    "currency": {
+      "type": "string",
+      "default": "MXN"
+    },
+    "url": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Best link: tickets > organizer page > source post"
+    },
+    "category": {
+      "type": "string",
+      "description": "One of taxonomy.yaml categories"
+    },
+    "category_alt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Second-best category, if genuinely ambiguous"
+    },
+    "family_friendly": {
+      "type": "boolean",
+      "default": false
+    },
+    "umbrella": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "organizer": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "recurring": {
+      "type": "boolean",
+      "default": false
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "RawItem ids that mention this event"
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Extractor's confidence in date+venue"
+    },
+    "signals": {
+      "type": "object",
+      "description": "taxonomy.highlight signal name → true/false, set by Claude at extraction"
+    },
+    "score": {
+      "type": "number",
+      "description": "Set by score.py"
+    },
+    "highlight": {
+      "type": "boolean",
+      "description": "score >= threshold"
+    },
+    "highlight_why": {
+      "type": "string",
+      "description": "One line, for the dashboard"
+    },
+    "source_links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          }
+        }
+      },
+      "description": "Where it was seen: [{name: 'IG @cdmxsecreta', url: post permalink}]. Shown in the dashboard's detail pane."
+    },
+    "source_excerpt": {
+      "type": "string",
+      "description": "Up to ~600 chars of the original caption/listing text, verbatim, for review."
+    },
+    "image_url": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Flyer/image URL from the source, if any"
+    },
+    "thumb": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "data: URI thumbnail of image_url. Set by scout/thumbs.py (runs on the Mac)."
+    }
   }
 }

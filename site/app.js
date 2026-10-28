@@ -32,16 +32,18 @@ function inlineProvider(inline) {
     user: null,
   };
 }
-function supabaseProvider(sb, user) {
+function supabaseProvider(sb, user, cfg) {
+  // Events come from the public repo (runs/index.json + runs/<run>/events.json); decisions live in Supabase.
+  const base = (cfg.eventsBase || "").replace(/\/$/, "");
+  const get = async (path) => { const r = await fetch(`${base}/${path}?t=${Date.now()}`, {cache: "no-store"}); if (!r.ok) throw new Error(`${path}: HTTP ${r.status}`); return r.json(); };
   return {
     name: "supabase", user,
-    async runs() { const {data, error} = await sb.from("scout_runs").select("run,umbrella,window_from,window_to,event_count").order("created_at", {ascending: false}); if (error) throw error; return data || []; },
+    async runs() { const idx = await get("runs/index.json"); return (idx.runs || []).filter((r) => !r.hidden); },
     async load(run) {
-      const r = (await sb.from("scout_runs").select("*").eq("run", run).single()).data || {run};
-      const {data: ev, error} = await sb.from("scout_events").select("data").eq("run", run).order("starts_at").limit(2000); if (error) throw error;
-      EVENTS = (ev || []).map((x) => x.data);
-      META = {run, umbrella: r.umbrella, window: r.window_from && r.window_to ? `${r.window_from} → ${r.window_to}` : "", categories: window.SCOUT_CATEGORIES || [...new Set(EVENTS.map((e) => e.category))]};
-      const {data: ds} = await sb.from("scout_decisions").select("*").eq("run", run);
+      const idx = await get("runs/index.json"); const r = (idx.runs || []).find((x) => x.run === run) || {run};
+      EVENTS = await get(`runs/${run}/events.json`);
+      META = {run, umbrella: r.umbrella, window: r.window || "", categories: window.SCOUT_CATEGORIES || [...new Set(EVENTS.map((e) => e.category))]};
+      const {data: ds, error} = await sb.from("scout_decisions").select("*").eq("run", run); if (error) throw error;
       const d = {}; (ds || []).forEach((x) => { d[x.key] = {decision: x.decision, note: x.note, at: x.updated_at}; });
       return d;
     },
@@ -186,6 +188,7 @@ function wire() {
   document.addEventListener("input", (ev) => { if (ev.target.id === "note") $("#notecount").textContent = ev.target.value.length; });
   ["#q", "#cat", "#src", "#hi", "#fam", "#hideskip"].forEach((s) => $(s).addEventListener("input", render));
   $("#selkept").onclick = () => { EVENTS.forEach((e) => { if (decisionOf(e) === "keep") selected.add(e.key); }); saveSel(); render(); };
+  const dx = $("#exportdecisions"); if (dx) dx.onclick = () => copyText(JSON.stringify({run: META.run, exported_at: new Date().toISOString(), decisions}, null, 1), "Decisions copied; paste them to Claude for the learning loop");
   $("#export").onclick = () => {
     const list = EVENTS.filter((e) => selected.has(e.key));
     if (!list.length) return toast("Select events first");
@@ -230,7 +233,7 @@ async function boot() {
     showGate(`<div class="gate-card"><h2 class="title">Not on the list</h2><p>${esc(user.email)} isn't a reviewer for this scout.</p><button class="btn btn-secondary" id="signout">Sign out</button></div>`);
     $("#signout").onclick = async () => { await sb.auth.signOut(); location.reload(); }; return;
   }
-  provider = supabaseProvider(sb, user);
+  provider = supabaseProvider(sb, user, cfg);
   const acct = $("#account");
   if (acct) { acct.innerHTML = `${user.user_metadata?.avatar_url ? `<img class="avatar" src="${esc(user.user_metadata.avatar_url)}" alt="">` : ""}<button class="btn btn-secondary" id="signout">Sign out</button>`; $("#signout").onclick = async () => { await sb.auth.signOut(); location.reload(); }; }
   let runs = [];

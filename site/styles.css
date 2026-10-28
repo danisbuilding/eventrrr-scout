@@ -160,3 +160,5 @@ textarea.input { width: 100%; min-height: 64px; resize: vertical; margin-top: 8p
 .pill.on { border-color: var(--nv-ready); color: var(--nv-ready); }
 .pill.run { border-color: var(--nv-duplicate); color: var(--nv-duplicate); }
 .pill.fail { border-color: #b42318; color: #b42318; }
+.rf-sources { display: flex; flex-wrap: wrap; gap: 10px 28px; }
+.rf-sources .check { color: var(--nv-ink); }

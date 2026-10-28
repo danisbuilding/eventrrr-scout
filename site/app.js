@@ -244,7 +244,7 @@ async function renderRuns() {
 }
 async function startSweep(sb) {
   const rs = $("#rf-status"); rs.dataset.msg = "1";
-  const payload = {window_from: $("#rf-from").value, window_to: $("#rf-to").value, umbrella: $("#rf-umbrella").value.trim(), ig_tier: $("#rf-ig").value, scouts: $("#rf-scouts").value};
+  const payload = {window_from: $("#rf-from").value, window_to: $("#rf-to").value, umbrella: $("#rf-umbrella").value.trim(), ig_tier: $("#rf-ig").checked ? "all" : "none", scouts: $("#rf-openai").checked && $("#rf-gemini").checked ? "both" : $("#rf-openai").checked ? "openai" : $("#rf-gemini").checked ? "gemini" : "none"};
   if (!payload.window_from || !payload.window_to || payload.window_to < payload.window_from) { rs.textContent = "Pick a valid date range."; return; }
   $("#rf-start").disabled = true; rs.textContent = "Starting…";
   const {data: {session}} = await sb.auth.getSession();

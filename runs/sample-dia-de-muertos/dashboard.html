@@ -164,6 +164,8 @@ textarea.input { width: 100%; min-height: 64px; resize: vertical; margin-top: 8p
 .pill.on { border-color: var(--nv-ready); color: var(--nv-ready); }
 .pill.run { border-color: var(--nv-duplicate); color: var(--nv-duplicate); }
 .pill.fail { border-color: #b42318; color: #b42318; }
+.rf-sources { display: flex; flex-wrap: wrap; gap: 10px 28px; }
+.rf-sources .check { color: var(--nv-ink); }
 
 </style>
 
@@ -234,8 +236,13 @@ textarea.input { width: 100%; min-height: 64px; resize: vertical; margin-top: 8p
         <label>From<input class="input" type="date" id="rf-from"></label>
         <label>To<input class="input" type="date" id="rf-to"></label>
         <label>Umbrella event <span class="sub">(optional)</span><input class="input" type="text" id="rf-umbrella" placeholder="Día de Muertos 2026"></label>
-        <label>Instagram<select class="select" id="rf-ig"><option value="all">All handles</option><option value="1">Tier 1 only</option><option value="none">Skip</option></select></label>
-        <label>LLM scouts<select class="select" id="rf-scouts"><option value="both">ChatGPT + Gemini</option><option value="openai">ChatGPT only</option><option value="gemini">Gemini only</option><option value="none">Skip</option></select></label>
+      </div>
+      <div class="label" style="margin:20px 0 10px">Sources</div>
+      <div class="rf-sources">
+        <label class="check"><input class="cb" type="checkbox" checked disabled> Websites <span class="sub">(always)</span></label>
+        <label class="check"><input class="cb" type="checkbox" id="rf-ig" checked> Instagram</label>
+        <label class="check"><input class="cb" type="checkbox" id="rf-openai"> ChatGPT <span class="sub">(extra, slower)</span></label>
+        <label class="check"><input class="cb" type="checkbox" id="rf-gemini"> Gemini <span class="sub">(extra, slower)</span></label>
       </div>
       <div class="actions" style="margin-top:16px;align-items:center;gap:16px">
         <button class="btn btn-primary" id="rf-start" style="flex:0 0 auto">Start sweep</button>
@@ -497,7 +504,7 @@ async function renderRuns() {
 }
 async function startSweep(sb) {
   const rs = $("#rf-status"); rs.dataset.msg = "1";
-  const payload = {window_from: $("#rf-from").value, window_to: $("#rf-to").value, umbrella: $("#rf-umbrella").value.trim(), ig_tier: $("#rf-ig").value, scouts: $("#rf-scouts").value};
+  const payload = {window_from: $("#rf-from").value, window_to: $("#rf-to").value, umbrella: $("#rf-umbrella").value.trim(), ig_tier: $("#rf-ig").checked ? "all" : "none", scouts: $("#rf-openai").checked && $("#rf-gemini").checked ? "both" : $("#rf-openai").checked ? "openai" : $("#rf-gemini").checked ? "gemini" : "none"};
   if (!payload.window_from || !payload.window_to || payload.window_to < payload.window_from) { rs.textContent = "Pick a valid date range."; return; }
   $("#rf-start").disabled = true; rs.textContent = "Starting…";
   const {data: {session}} = await sb.auth.getSession();

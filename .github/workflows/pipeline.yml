@@ -10,7 +10,7 @@ on:
       window_to:   {description: "YYYY-MM-DD (blank = today + 14)", required: false, default: ""}
       umbrella:    {description: "Umbrella event name", required: false, default: ""}
       ig_tier:     {description: "Instagram handles: 1, 2, all or none", required: false, default: "all"}
-      scouts:      {description: "LLM scouts: both, openai, gemini, none", required: false, default: "both"}
+      scouts:      {description: "LLM scouts: both, openai, gemini, none", required: false, default: "none"}
   repository_dispatch:
     types: [sweep]
 
@@ -49,7 +49,7 @@ jobs:
           umb = g("umbrella")
           run = g("run") or (today.isoformat() + ("-" + re.sub(r"[^a-z0-9]+", "-", umb.lower()).strip("-") if umb else ""))
           print(f"run={run}"); print(f"wf={wf}"); print(f"wt={wt}"); print(f"umb={umb}")
-          print(f"ig={g('ig_tier','all')}"); print(f"scouts={g('scouts','both')}")
+          print(f"ig={g('ig_tier','all')}"); print(f"scouts={g('scouts','none')}")
           PY
       - name: Mark running
         run: |

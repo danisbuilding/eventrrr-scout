@@ -16,6 +16,7 @@
   --nv-duration: 140ms;
 }
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html, body { height: 100%; }
 body { margin: 0; background: var(--nv-canvas); color: var(--nv-ink); font-family: var(--nv-font-ui); font-size: 13px; font-weight: 400; line-height: 20px; font-synthesis: none;
   padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 0; }

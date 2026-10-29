@@ -18,6 +18,7 @@
   <h1 class="wordmark">Eventrrr Scout</h1>
   <nav class="nav" aria-label="Sections">
     <a href="#events" data-tab="events" aria-current="page">Events</a>
+    <a href="#sort" data-tab="sort">Sort</a>
     <a href="#sources" data-tab="sources">Sources</a>
     <a href="#runs" data-tab="runs">Runs</a>
   </nav>
@@ -61,6 +62,31 @@
     </div>
   </section>
   <aside class="insp" id="insp" aria-label="Event details" hidden></aside>
+</div>
+
+<div class="ws" id="panel-sort" hidden>
+  <section class="main">
+    <h2 class="title">Sort into profiles</h2>
+    <div class="metrics" id="sort-metrics"></div>
+    <div class="toolbar">
+      <div class="search"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5L14 14"/></svg><input class="input" type="search" id="sq" placeholder="Search events…" aria-label="Search events to sort"></div>
+      <select class="select" id="sstate" aria-label="Sorted state"><option value="unsorted">Unsorted</option><option value="sorted">Sorted</option><option value="all">All</option></select>
+      <select class="select" id="sprofile" aria-label="Profile"><option value="">Any profile</option></select>
+      <select class="select" id="srun" aria-label="Run"><option value="">All runs</option></select>
+      <label class="check"><input class="cb" type="checkbox" id="shidepast" checked> Hide past</label>
+      <button class="btn btn-secondary sort-profiles-btn" id="sprofiles-btn" style="min-height:40px">Profiles</button>
+    </div>
+    <div class="scroll">
+      <table id="stbl">
+        <thead><tr><th class="c-date">Date</th><th>Name</th><th class="c-cat">Category</th><th>Profiles</th></tr></thead>
+        <tbody id="srows"></tbody>
+      </table>
+    </div>
+    <div class="foot">
+      <div class="foot-group"><button class="btn btn-secondary" id="copysession">Copy session</button><span class="sub" id="ssync"></span></div>
+    </div>
+  </section>
+  <aside class="insp" id="pinsp" aria-label="Profiles"></aside>
 </div>
 
 <div class="ws ws-single" id="panel-sources" hidden>

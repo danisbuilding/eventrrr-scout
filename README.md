@@ -30,6 +30,8 @@ prompts/                extraction + highlight prompts used by Claude
 scout/                  python: normalize, score, publish (runs index), render (offline mock)
 site/                   the review app (index.html, app.js, styles.css, config.js) → GitHub Pages
 supabase/schema.sql     tables + RLS for scout_* (applied via Bolt; only scout_decisions is used by the site)
+supabase/profiles.sql   scout_profiles + scout_assignments (the Sort tab; applied via Bolt)
+profiles/<slug>.md      one charter per simulated curator: persona, what I think DP is doing, surprises
 scout/adapters/         one doc per source type: how it's swept, what it emits
 scouts/                 OpenAI / Gemini parallel scouts (GitHub Actions; keys are repo secrets)
 .github/workflows/      sweep (Instagram + scouts) and thumbs workflows
@@ -40,6 +42,14 @@ decisions/<run>.json         Keep / Skip / notes from review
 ```
 
 A run is named `YYYY-MM-DD[-slug]`, e.g. `2026-10-28-dia-de-muertos`.
+
+## Profiles (the Sort tab)
+
+Every event from every run lands in one pool on the Sort tab. DP taps profile chips (an event can belong to
+several, or to None); assignments live in `scout_assignments`. Each profile is a separate Eventrrr account, so
+"Export to Eventrrr (n)" on a profile copies that profile's upcoming events as one import JSON. "Copy session"
+copies all assignments as JSON to paste to Claude, who updates `profiles/<slug>.md`. After ~5–6 sessions a
+first-pass sorter in the pipeline proposes assignments (`source: suggested`, dashed chips) for DP to confirm.
 
 ## Running a sweep (v1, on demand)
 

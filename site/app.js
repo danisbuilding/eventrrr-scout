@@ -30,8 +30,17 @@ function inlineProvider(inline) {
     async load(run) { META = inline.meta; EVENTS = inline.events; let d = {}; try { d = JSON.parse(localStorage.getItem(LS()) || "{}"); } catch {} return d; },
     async save(run, key, row) { decisions[key] = row; try { localStorage.setItem(LS(), JSON.stringify(decisions)); } catch {} setSync("Saved on this device"); },
     user: null,
+    async profiles() { try { return JSON.parse(localStorage.getItem("scout-profiles") || "null") || DEFAULT_PROFILES; } catch { return DEFAULT_PROFILES; } },
+    async saveProfile(p) { const ps = (await this.profiles()).filter((x) => x.slug !== p.slug).concat([p]); try { localStorage.setItem("scout-profiles", JSON.stringify(ps)); } catch {} },
+    async assignments() { try { return JSON.parse(localStorage.getItem("scout-assignments") || "[]"); } catch { return []; } },
+    async assign(run, key, profile, on) { let as = await this.assignments(); as = as.filter((x) => !(x.run === run && x.key === key && x.profile === profile)); if (on) as.push({run, key, profile, source: "manual", updated_at: new Date().toISOString()}); try { localStorage.setItem("scout-assignments", JSON.stringify(as)); } catch {} },
+    async allEvents() { return (inline.events || []).map((e) => Object.assign({run: inline.meta.run}, e)); },
   };
 }
+const DEFAULT_PROFILES = [
+  {slug: "foodie", name: "Food & Drink", sort_order: 10, active: true}, {slug: "cultural", name: "Arts & Culture", sort_order: 20, active: true},
+  {slug: "nightlife", name: "Nightlife & Bars", sort_order: 30, active: true}, {slug: "music", name: "Live Music", sort_order: 40, active: true}, {slug: "active", name: "Sports & Movement", sort_order: 50, active: true},
+];
 function supabaseProvider(sb, user, cfg) {
   // Events come from the public repo (runs/index.json + runs/<run>/events.json); decisions live in Supabase.
   const base = (cfg.eventsBase || "").replace(/\/$/, "");
@@ -51,6 +60,20 @@ function supabaseProvider(sb, user, cfg) {
       decisions[key] = row; setSync("Saving…");
       const {error} = await sb.from("scout_decisions").upsert({run, key, decision: row.decision || null, note: row.note || null, updated_at: new Date().toISOString(), updated_by: user.email}, {onConflict: "run,key"});
       setSync(error ? "Save failed: " + error.message : "Saved");
+    },
+    async profiles() { const {data, error} = await sb.from("scout_profiles").select("*").order("sort_order"); if (error) throw error; return data || []; },
+    async saveProfile(p) { const {error} = await sb.from("scout_profiles").upsert(Object.assign({}, p, {updated_at: new Date().toISOString()}), {onConflict: "slug"}); if (error) throw error; },
+    async assignments() { const {data, error} = await sb.from("scout_assignments").select("*").limit(5000); if (error) throw error; return data || []; },
+    async assign(run, key, profile, on) {
+      if (on) { const {error} = await sb.from("scout_assignments").upsert({run, key, profile, source: "manual", updated_by: user.email, updated_at: new Date().toISOString()}, {onConflict: "run,key,profile"}); if (error) throw error; }
+      else { const {error} = await sb.from("scout_assignments").delete().match({run, key, profile}); if (error) throw error; }
+    },
+    async allEvents() {
+      const idx = await get("runs/index.json"); const out = [];
+      for (const r of (idx.runs || []).filter((x) => !x.hidden && !x.run.startsWith("sample"))) {
+        try { (await get(`runs/${r.run}/events.json`)).forEach((e) => out.push(Object.assign({run: r.run}, e))); } catch {}
+      }
+      return out;
     },
   };
 }
@@ -192,6 +215,10 @@ function wire() {
   $("#as-kind").addEventListener("change", () => { const ig = $("#as-kind").value === "instagram"; $("#as-valuelabel").textContent = ig ? "Handle" : "Address"; $("#as-value").placeholder = ig ? "@cdmxsecreta" : "https://local.mx/"; $("#as-namewrap").hidden = ig; });
   $("#as-value").addEventListener("keydown", (ev) => { if (ev.key === "Enter") $("#as-add").click(); });
   ["#q", "#cat", "#src", "#hi", "#fam", "#hideskip"].forEach((s) => $(s).addEventListener("input", render));
+  ["#sq", "#sstate", "#sprofile", "#srun", "#shidepast"].forEach((s) => $(s).addEventListener("input", () => { if (s === "#sstate") touched.clear(); renderSort(); }));
+  document.addEventListener("click", (ev) => { const c = ev.target.closest("[data-pa]"); if (c) toggleAssign(c.closest("tr").dataset.ak, c.dataset.pa); });
+  $("#copysession").onclick = copySession;
+  $("#sprofiles-btn").onclick = () => { $("#pinsp").hidden = false; };
   $("#selkept").onclick = () => { EVENTS.forEach((e) => { if (decisionOf(e) === "keep") selected.add(e.key); }); saveSel(); render(); };
   const dx = $("#exportdecisions"); if (dx) dx.onclick = () => copyText(JSON.stringify({run: META.run, exported_at: new Date().toISOString(), decisions}, null, 1), "Decisions copied; paste them to Claude for the learning loop");
   $("#export").onclick = () => {
@@ -279,6 +306,113 @@ async function startSweep(sb) {
   } catch (e) { rs.textContent = "Couldn't start: " + (e.message || e); $("#rf-start").disabled = false; }
 }
 
+// ---------- sort tab (profiles)
+let PROFILES = [], POOL = [], ASSIGN = {}, pcur = null, sortLoaded = false, CHARTERS = {}, touched = new Set();
+const akey = (e) => e.run + "|" + e.key;
+const profilesOf = (e) => Object.keys(ASSIGN[akey(e)] || {});
+const isSorted = (e) => profilesOf(e).length > 0;
+async function loadSort() {
+  const st = $("#ssync"); st.textContent = "Loading…";
+  try {
+    PROFILES = (await provider.profiles()).filter((p) => p.active !== false).sort((a, b) => (a.sort_order || 0) - (b.sort_order || 0));
+    POOL = await provider.allEvents();
+    ASSIGN = {}; (await provider.assignments()).forEach((x) => { (ASSIGN[x.run + "|" + x.key] ||= {})[x.profile] = x; });
+    $("#sprofile").innerHTML = `<option value="">Any profile</option>` + PROFILES.map((p) => `<option value="${esc(p.slug)}">${esc(p.name)}</option>`).join("") + `<option value="none">None</option>`;
+    $("#srun").innerHTML = `<option value="">All runs</option>` + [...new Set(POOL.map((e) => e.run))].map((r) => `<option>${esc(r)}</option>`).join("");
+    sortLoaded = true; st.textContent = provider.name === "supabase" ? "Synced" : "This device only";
+  } catch (e) { st.textContent = "Couldn't load: " + (e.message || e); }
+  renderSort(); renderProfiles();
+}
+function sortVisible() {
+  const q = $("#sq").value.trim().toLowerCase(), state = $("#sstate").value, pf = $("#sprofile").value, run = $("#srun").value, today = new Date().toISOString().slice(0, 10);
+  return POOL.filter((e) =>
+    (!run || e.run === run) && (!$("#shidepast").checked || !e.starts_at || (e.ends_at || e.starts_at).slice(0, 10) >= today) &&
+    (state === "all" || (state === "unsorted" && touched.has(akey(e))) || (state === "sorted") === isSorted(e)) && (!pf || profilesOf(e).includes(pf)) &&
+    (!q || `${e.title} ${e.venue} ${e.neighborhood}`.toLowerCase().includes(q))
+  ).sort((a, b) => (a.starts_at || "").localeCompare(b.starts_at || ""));
+}
+function renderSort() {
+  const unsorted = POOL.filter((e) => !isSorted(e)).length;
+  $("#sort-metrics").innerHTML = [[POOL.length, "in pool"], [POOL.length - unsorted, "sorted"], [unsorted, "unsorted"]].map(([n, l]) => `<div class="metric"><b>${n}</b> ${l}</div>`).join("");
+  const rows = sortVisible();
+  $("#srows").innerHTML = rows.length ? rows.map((e) => {
+    const on = ASSIGN[akey(e)] || {};
+    const chips = PROFILES.map((p) => `<button class="pchip ${on[p.slug] ? "on" : ""} ${on[p.slug]?.source === "suggested" ? "sugg" : ""}" data-pa="${esc(p.slug)}" title="${esc(on[p.slug]?.reason || p.name)}">${esc(p.name)}</button>`).join("") +
+      `<button class="pchip none ${on.none ? "on" : ""}" data-pa="none">None</button>`;
+    return `<tr data-ak="${esc(akey(e))}"><td class="c-date"><div class="date-main">${esc(fmtDate(e.starts_at))}</div><div class="data">${esc(fmtRange(e))}</div></td>
+      <td><div>${e.highlight ? `<span class="star">★</span>` : ""}${e.url ? `<a class="name-btn" href="${esc(e.url)}" target="_blank" rel="noopener" style="color:var(--nv-ink)">${esc(e.title)}</a>` : esc(e.title)}</div><div class="sub">${esc([e.venue, e.neighborhood, price(e)].filter(Boolean).join(" · "))}</div>${e.highlight_why ? `<div class="sub">${esc(e.highlight_why)}</div>` : ""}</td>
+      <td class="c-cat"><span class="sub">${esc(e.category)}</span><div class="sub">${esc(e.run)}</div></td>
+      <td><div class="pchips">${chips}</div></td></tr>`;
+  }).join("") : `<tr><td colspan="4" class="empty">${POOL.length ? "Nothing matches these filters." : "No events yet; run a sweep."}</td></tr>`;
+}
+async function toggleAssign(ak, profile) {
+  const [run, key] = ak.split("|"); const cur = ASSIGN[ak] || {}; const on = !cur[profile]; touched.add(ak);
+  if (on && profile === "none") Object.keys(cur).forEach((p) => { if (p !== "none") delete cur[p]; });
+  if (on && profile !== "none") delete cur.none;
+  if (on) cur[profile] = {run, key, profile, source: "manual", updated_at: new Date().toISOString()}; else delete cur[profile];
+  ASSIGN[ak] = cur; renderSort(); renderProfiles();
+  $("#ssync").textContent = "Saving…";
+  try {
+    await provider.assign(run, key, profile, on);
+    if (on && profile === "none") for (const p of PROFILES) await provider.assign(run, key, p.slug, false);
+    if (on && profile !== "none") await provider.assign(run, key, "none", false);
+    $("#ssync").textContent = "Saved";
+  } catch (e) { $("#ssync").textContent = "Save failed: " + (e.message || e); }
+}
+async function charterFor(slug) {
+  if (CHARTERS[slug] !== undefined) return CHARTERS[slug];
+  try { const r = await fetch(`${(window.SCOUT_CONFIG?.eventsBase || "").replace(/\/$/, "")}/profiles/${slug}.md?t=${Math.floor(Date.now() / 60000)}`); CHARTERS[slug] = r.ok ? (await r.text()).replace(/^---[\s\S]*?---\n/, "") : ""; } catch { CHARTERS[slug] = ""; }
+  return CHARTERS[slug];
+}
+async function renderProfiles() {
+  const el = $("#pinsp"); if (el.dataset.inited !== "1") { el.dataset.inited = "1"; el.hidden = window.innerWidth < 1280; }
+  const counts = {}; Object.values(ASSIGN).forEach((m) => Object.keys(m).forEach((p) => counts[p] = (counts[p] || 0) + 1));
+  const list = PROFILES.map((p) => `<div class="prow ${pcur === p.slug ? "sel" : ""}" data-pp="${esc(p.slug)}"><b>${esc(p.name)}</b><span class="sub">${counts[p.slug] || 0}</span></div>`).join("") +
+    `<div class="prow ${pcur === "none" ? "sel" : ""}" data-pp="none"><b class="sub">None</b><span class="sub">${counts.none || 0}</span></div>`;
+  const p = PROFILES.find((x) => x.slug === pcur);
+  let detail = "";
+  if (p) {
+    const ch = await charterFor(p.slug);
+    detail = `<div class="sec"><h2 class="ev-title" style="font-size:22px;line-height:28px">${esc(p.name)}</h2><div class="sub">@${esc(p.handle || "handle not set")} · ${counts[p.slug] || 0} events</div>
+      <div class="pform">
+        <label>Persona<textarea class="input" id="pp-persona" rows="4">${esc(p.persona || "")}</textarea></label>
+        <label>Eventrrr handle<input class="input" id="pp-handle" value="${esc(p.handle || "")}" placeholder="foodie_cdmx"></label>
+        <div class="actions" style="margin-top:12px"><button class="btn btn-primary" id="pp-save" style="flex:0 0 auto">Save</button><button class="btn btn-secondary" id="pp-export" style="flex:0 0 auto">Export to Eventrrr (${counts[p.slug] || 0})</button><button class="btn btn-secondary" id="pp-archive" style="flex:0 0 auto">Archive</button></div>
+      </div></div>
+      <div class="sec"><div class="label" style="margin-bottom:10px">Charter &amp; notes <a class="sub" href="https://github.com/danisbuilding/eventrrr-scout/blob/main/profiles/${esc(p.slug)}.md" target="_blank" rel="noopener">(edit on GitHub)</a></div><div class="charter">${esc(ch || "No charter yet. It gets written after your first sorting session.")}</div></div>`;
+  } else if (pcur === "new") {
+    detail = `<div class="sec"><div class="label">New profile</div><div class="pform">
+      <label>Short id (slug)<input class="input" id="pp-slug" placeholder="family" pattern="[a-z0-9-]+"></label>
+      <label>Name<input class="input" id="pp-name" placeholder="Family"></label>
+      <label>Persona<textarea class="input" id="pp-persona" rows="4" placeholder="Who this curator is, what they show up for, what they'd never feature."></textarea></label>
+      <label>Eventrrr handle<input class="input" id="pp-handle" placeholder="family_cdmx"></label>
+      <div class="actions" style="margin-top:12px"><button class="btn btn-primary" id="pp-create" style="flex:0 0 auto">Create</button></div></div></div>`;
+  }
+  el.innerHTML = `<div class="insp-head"><span class="label">Profiles</span><span style="display:flex;gap:8px"><button class="btn btn-secondary" id="pp-new" style="min-height:32px;padding:6px 12px">+ New</button><button class="icon-btn btn btn-secondary close" id="pp-close" aria-label="Close profiles"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13"/></svg></button></span></div><div class="plist">${list}</div>${detail}`;
+  $("#pp-new").onclick = () => { pcur = "new"; renderProfiles(); };
+  $("#pp-close").onclick = () => { el.hidden = true; };
+  el.querySelectorAll("[data-pp]").forEach((r) => r.onclick = () => { pcur = r.dataset.pp; $("#sprofile").value = pcur; $("#sstate").value = "all"; renderSort(); renderProfiles(); });
+  const save = $("#pp-save"); if (save) save.onclick = async () => { try { await provider.saveProfile(Object.assign({}, p, {persona: $("#pp-persona").value.trim(), handle: $("#pp-handle").value.trim().replace(/^@/, "") || null})); toast("Profile saved"); PROFILES = (await provider.profiles()).filter((x) => x.active !== false); renderProfiles(); } catch (e) { toast("Save failed: " + (e.message || e)); } };
+  const arch = $("#pp-archive"); if (arch) arch.onclick = async () => { if (!arch.dataset.sure) { arch.textContent = "Archive? Click again"; arch.dataset.sure = "1"; return; } try { await provider.saveProfile(Object.assign({}, p, {active: false})); pcur = null; await loadSort(); toast("Profile archived; its assignments are kept"); } catch (e) { toast("Failed: " + (e.message || e)); } };
+  const exp = $("#pp-export"); if (exp) exp.onclick = () => {
+    const list = POOL.filter((e) => (ASSIGN[akey(e)] || {})[p.slug] && (!$("#shidepast").checked || !e.starts_at || (e.ends_at || e.starts_at).slice(0, 10) >= new Date().toISOString().slice(0, 10)));
+    if (!list.length) return toast("No upcoming events on this profile");
+    if (list.length > 100) return toast("Eventrrr imports up to 100 at a time");
+    const saveRun = META.run; META.run = "profile:" + p.slug; copyText(exportJson(list), `${list.length} events copied for @${p.handle || p.slug}. Paste into that account → Paste text.`); META.run = saveRun;
+  };
+  const create = $("#pp-create"); if (create) create.onclick = async () => {
+    const slug = $("#pp-slug").value.trim().toLowerCase(), name = $("#pp-name").value.trim();
+    if (!/^[a-z0-9-]{2,30}$/.test(slug)) return toast("Slug: 2–30 lowercase letters, digits or dashes");
+    if (!name) return toast("Give it a name");
+    try { await provider.saveProfile({slug, name, persona: $("#pp-persona").value.trim(), handle: $("#pp-handle").value.trim().replace(/^@/, "") || null, active: true, sort_order: 100 + PROFILES.length}); pcur = slug; await loadSort(); toast("Profile created"); } catch (e) { toast("Create failed: " + (e.message || e)); }
+  };
+}
+function copySession() {
+  const rows = []; Object.entries(ASSIGN).forEach(([ak, m]) => { const [run, key] = ak.split("|"); const e = POOL.find((x) => akey(x) === ak); Object.values(m).forEach((x) => rows.push({run, key, profile: x.profile, source: x.source || "manual", note: x.note || null, updated_at: x.updated_at, title: e?.title, category: e?.category, venue: e?.venue, neighborhood: e?.neighborhood, price_text: e?.price_text, starts_at: e?.starts_at, highlight: !!e?.highlight, url: e?.url, source_excerpt: (e?.source_excerpt || "").slice(0, 300)})); });
+  const unsorted = POOL.filter((e) => !isSorted(e)).map((e) => ({run: e.run, key: e.key, title: e.title, category: e.category}));
+  copyText(JSON.stringify({session: new Date().toISOString().slice(0, 10), profiles: PROFILES.map((p) => ({slug: p.slug, name: p.name, persona: p.persona})), assignments: rows, unsorted_count: unsorted.length}, null, 1), "Session copied; paste it to Claude to update the charters");
+}
+
 // ---------- boot
 async function loadRun(run) {
   current = null; selected = new Set();
@@ -290,13 +424,13 @@ async function loadRun(run) {
   try { if (tab === "events" && location.hash.slice(1) !== run) history.replaceState(null, "", "#" + run); } catch {}
   fillSelects(); render(); setSync(provider.name === "supabase" ? "Synced" : "");
 }
-const TABS = ["events", "sources", "runs"];
+const TABS = ["events", "sort", "sources", "runs"];
 let tab = "events";
 function showTab(name) {
   tab = TABS.includes(name) ? name : "events";
   document.querySelectorAll(".nav a[data-tab]").forEach((a) => { if (a.dataset.tab === tab) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
-  $("#app").hidden = tab !== "events"; $("#panel-sources").hidden = tab !== "sources"; $("#panel-runs").hidden = tab !== "runs";
-  if (tab === "sources") renderSources(); if (tab === "runs") renderRuns();
+  $("#app").hidden = tab !== "events"; $("#panel-sort").hidden = tab !== "sort"; $("#panel-sources").hidden = tab !== "sources"; $("#panel-runs").hidden = tab !== "runs";
+  if (tab === "sources") renderSources(); if (tab === "runs") renderRuns(); if (tab === "sort" && !sortLoaded) loadSort();
 }
 function showApp(runs) {
   $("#gate").hidden = true;

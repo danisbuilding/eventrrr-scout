@@ -13,7 +13,7 @@ Openings, not just exhibitions; knows the museum calendar; the small gallery in 
 
 ## Would never feature
 Tourist packages, generic "cultural" listings, anything whose only hook is the venue's fame.
-- Street light-sculpture spectacle with no author or institution behind it (El Camino on Reforma, all three listings → None).
+- A spread-out installation along a corridor with nothing else nearby (El Camino on Reforma, all three listings → None). DP: Reforma is a long, cold corporate corridor; the Zócalo is a place you stand and see everything, and a hub to go on from.
 - A "programa" row that only lists other events (Festival de Día de Muertos — Casa del Risco *(programa)* → None, while the ofrendas inside it were featured).
 - A listing with no venue (La ilusión por el retorno — inauguración → None).
 
@@ -24,6 +24,7 @@ Tourist packages, generic "cultural" listings, anything whose only hook is the v
 - Performance, dance, video art and talks go here, not to music, when the frame is art or scholarship: Cuerpo al Descubierto, SINESTESIA ACTIVADA, FEAR OF THE OBJECT, Fandango del inframundo (staged son jarocho), Didi-Huberman.
 - A museum family workshop can qualify when tied to a featured show (¡Punto extra! → Manifesto). Hypothesis; see Surprises.
 - Blockbusters are fine when the institution is the hook (Richard Prince at Jumex, Manifesto at MUAC); nothing in session 1 showed "small over big."
+- The visit has to work as a visit: one spot where you take it all in, or a cluster you can walk between (Zócalo ofrenda + lighting + Centro). A long walk to see spaced-out pieces fails even when the content is fine (El Camino). Confirmed by DP, session 1.
 
 ## Worked examples
 | Title | Call | Why |
@@ -31,17 +32,16 @@ Tourist packages, generic "cultural" listings, anything whose only hook is the v
 | Richard Prince: Cuéntamelo todo — Jumex | cultural | Major museum show; institution is the hook |
 | Altar de Día de Muertos en Casa Onora | cultural | Ofrenda by named amate artisans |
 | Ofrendas comunitarias (12 sedes) | cultural | Institutional programme, neighbourhood ofrendas |
-| El Camino — figuras iluminadas en Reforma | none | City light spectacle; photo-op, no author |
+| El Camino — figuras iluminadas en Reforma | none | Spread along a long cold corridor with nothing else to do; the visit doesn't work |
 | Festival de Día de Muertos — Casa del Risco (programa) | none | Listing of events, not an event |
 | Geometrías para una fiesta — Museo Tamayo | none | Free family workshop by a named artist, not taken (contrast ¡Punto extra! at MUAC) |
 
 ## What I think you're doing
-- You take anything an art institution puts on, from a 140-work retrospective to a family workshop, and skip anything whose only author is the city government, unless it's an ofrenda. The Zócalo ofrenda and Zócalo lighting are in; the Reforma lights are out.
+- You take anything an art institution puts on, from a 140-work retrospective to a family workshop. City-run things are judged on the visit, not the author: Zócalo (stand in one place, see everything, go on to Centro) is in; Reforma (long, cold, corporate, nothing else nearby) is out. Confirmed.
 - You feature the thing, not the wrapper: Ofrendas del Risco and its inauguration are in, the Risco "programa" row is out. The exception is the Chapultepec festival, which you took twice — I think because both rows describe concrete content (altars, drones), not a schedule.
 - "Cultural" absorbs performance and talks: nothing staged or scholarly went to music, even Fandango del inframundo, which is a son jarocho show.
 - Mega Ofrenda "Entre Flores y Agaves" (ArsTelier, $650, mezcal, Guerrero producers) went only here, not to foodie. I think the art-space framing won, but the foodie persona would also claim it.
 
 ## Surprises
 - ¡Punto extra! (MUAC, kids 6–11, registration) → cultural, but Geometrías para una fiesta (Tamayo, kids 7+, free, named artist) → none. Same shape of event. Is the difference the link to a featured exhibition, or was one of these a slip?
-- Iluminación del Zócalo → cultural vs El Camino (Reforma) → none. Both are city lighting with no author. Is it that the Zócalo one sits inside the ofrenda circuit, or do you want neither?
 - Festival Flores de Cempasúchil (140 producers, Reforma) → none. Not cultural, I agree; but see foodie — is a producers' market ever an event for any profile?

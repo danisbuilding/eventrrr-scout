@@ -24,7 +24,7 @@ Cover bands, arena nostalgia tours, a venue's generic "live music nightly".
 - Arena and stadium shows are out regardless of the act.
 - Dance-floor music (techno festivals, EDM headliners, club nights) goes to nightlife, not here.
 - Staged shows framed as theatre or dance go to cultural (Fandango del inframundo).
-- Foro Indie Rocks shows: two listed, both → None (Mary in the Junkyard; Headache World). Not yet a rule; see Surprises.
+- Venue comfort × act familiarity. Foro Indie Rocks is a good venue only when the band is known or the genre is cool; it isn't pleasant enough to send someone to for an act they don't know (Mary in the Junkyard, Headache World → None). Pleasant rooms pass even with unknown acts: Parker & Lenox, Casa Franca, Jazzatlán. Confirmed by DP, session 1.
 
 ## Worked examples
 | Title | Call | Why |
@@ -33,15 +33,13 @@ Cover bands, arena nostalgia tours, a venue's generic "live music nightly".
 | Cumbia Ciudad — Teatro de la Ciudad | music | Named genre crossover in a mid venue |
 | KID A MNESIA Motion Picture House | music | Radiohead installation; the music is the hook |
 | Maldita Vecindad — Arena CDMX | none | Arena, nostalgia |
-| Mary in the Junkyard — Foro Indie Rocks | none | Small venue, first Mexico show, free with registration — not taken |
+| Mary in the Junkyard — Foro Indie Rocks | none | Unknown band in an uncomfortable venue; wouldn't send a friend cold |
 
 ## What I think you're doing
 - "Music" for you means listening, and "nightlife" means dancing: Calvin Harris and Time Warp went to nightlife, jazz and cumbia came here.
-- You're skipping Foro Indie Rocks even though the persona names it. Mary in the Junkyard is the persona's ideal event (small venue, act with a sound, free); I think the registration having opened Oct 1 (likely full) is why, but it could be the venue or the band.
+- You imagine sending someone who doesn't know the act. An unknown band in a rough room is a bad night for them; the same band at Casa Franca would be fine, and a known band at Foro Indie Rocks would be fine. Confirmed.
 - Big is fine when it's free and civic (Reactor at Monumento a la Revolución, several bands) but not when it's ticketed and arena-sized.
 
 ## Surprises
-- Mary in the Junkyard → none. Was it registration-closed, or would you skip it anyway?
-- Headache World (deep house, Foro Indie Rocks) → none rather than nightlife. Genre says nightlife; venue says music; you said neither. Why?
 - Fenómeno Fuzz at Centro Cultural de España (free, 19:00) → nightlife, not music. A fuzz/garage show at 7pm reads as music to me. Intentional?
-- Unsorted for next time: Lewis OfMan and Mad Professor (both Foro Indie Rocks), Saramalacara at Orbe, OFCM symphonic, Cool Quartet at Tamayo. These will settle the Foro Indie Rocks question.
+- Unsorted for next time: Mad Professor (Foro Indie Rocks, known name, dub) → predicted yes; Lewis OfMan (Foro Indie Rocks) → depends whether you count him as known; Saramalacara at Orbe, OFCM, Cool Quartet at Tamayo → predicted yes (pleasant rooms).

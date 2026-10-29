@@ -15,7 +15,7 @@ const fmtRange = (e) => e.all_day ? "All day" : fmtTime(e.starts_at) + (e.ends_a
 const fmtLong = (e) => { const d = new Date(e.starts_at); if (isNaN(d)) return "Date unknown"; return d.toLocaleDateString("en-US", {weekday: "long", month: "long", day: "numeric", year: "numeric", timeZone: TZ}) + ", " + fmtRange(e); };
 const price = (e) => e.price_text ? e.price_text : (e.price_min === 0 ? "Free" : (e.price_min != null ? `${e.price_min} ${e.currency || "MXN"}` : "Not listed"));
 const srcName = (e) => (e.source_links && e.source_links[0] && e.source_links[0].name) || ((e.sources || [])[0] || "").split(":")[1] || "Unknown";
-let toastT; const toast = (t) => { const el = $("#toast"); el.textContent = t; el.classList.add("show"); clearTimeout(toastT); toastT = setTimeout(() => el.classList.remove("show"), 2200); };
+let toastT; const toast = (t, ms = 2200) => { const el = $("#toast"); el.textContent = t; el.classList.add("show"); clearTimeout(toastT); toastT = setTimeout(() => el.classList.remove("show"), ms); };
 const setSync = (t) => { const el = $("#sync"); if (el) el.textContent = t; };
 
 // ---------- state
@@ -31,7 +31,7 @@ function inlineProvider(inline) {
     async save(run, key, row) { decisions[key] = row; try { localStorage.setItem(LS(), JSON.stringify(decisions)); } catch {} setSync("Saved on this device"); },
     user: null,
     async profiles() { try { return JSON.parse(localStorage.getItem("scout-profiles") || "null") || DEFAULT_PROFILES; } catch { return DEFAULT_PROFILES; } },
-    async saveProfile(p) { const ps = (await this.profiles()).filter((x) => x.slug !== p.slug).concat([p]); try { localStorage.setItem("scout-profiles", JSON.stringify(ps)); } catch {} },
+    async saveProfile(p, _isNew) { const ps = (await this.profiles()).filter((x) => x.slug !== p.slug).concat([p]); try { localStorage.setItem("scout-profiles", JSON.stringify(ps)); } catch {} },
     async assignments() { try { return JSON.parse(localStorage.getItem("scout-assignments") || "[]"); } catch { return []; } },
     async assign(run, key, profile, on) { let as = await this.assignments(); as = as.filter((x) => !(x.run === run && x.key === key && x.profile === profile)); if (on) as.push({run, key, profile, source: "manual", updated_at: new Date().toISOString()}); try { localStorage.setItem("scout-assignments", JSON.stringify(as)); } catch {} },
     async allEvents() { return (inline.events || []).map((e) => Object.assign({run: inline.meta.run}, e)); },
@@ -62,7 +62,15 @@ function supabaseProvider(sb, user, cfg) {
       setSync(error ? "Save failed: " + error.message : "Saved");
     },
     async profiles() { const {data, error} = await sb.from("scout_profiles").select("*").order("sort_order"); if (error) throw error; return data || []; },
-    async saveProfile(p) { const {error} = await sb.from("scout_profiles").upsert(Object.assign({}, p, {updated_at: new Date().toISOString()}), {onConflict: "slug"}); if (error) throw error; },
+    async saveProfile(p, isNew) {
+      const row = Object.assign({}, p, {updated_at: new Date().toISOString()});
+      const {error} = isNew ? await sb.from("scout_profiles").insert(row) : await sb.from("scout_profiles").update(row).eq("slug", p.slug);
+      if (error) {
+        let extra = [error.code, error.details, error.hint].filter(Boolean).join(" · ");
+        try { const {data: ok, error: e2} = await sb.rpc("scout_is_reviewer"); extra += ` · reviewer check: ${e2 ? e2.message : ok}`; } catch {}
+        throw new Error(error.message + (extra ? ` (${extra})` : ""));
+      }
+    },
     async assignments() { const {data, error} = await sb.from("scout_assignments").select("*").limit(5000); if (error) throw error; return data || []; },
     async assign(run, key, profile, on) {
       if (on) { const {error} = await sb.from("scout_assignments").upsert({run, key, profile, source: "manual", updated_by: user.email, updated_at: new Date().toISOString()}, {onConflict: "run,key,profile"}); if (error) throw error; }
@@ -413,11 +421,12 @@ async function renderProfiles() {
       </div></div>
       <div class="sec"><div class="label" style="margin-bottom:10px">Charter &amp; notes <a class="sub" href="https://github.com/danisbuilding/eventrrr-scout/blob/main/profiles/${esc(p.slug)}.md" target="_blank" rel="noopener">(edit on GitHub)</a></div><div class="charter">${esc(ch || "No charter yet. It gets written after your first sorting session.")}</div></div>`;
   } else if (pcur === "new") {
+    let draft = {}; try { draft = JSON.parse(sessionStorage.getItem("scout-profile-draft") || "{}"); } catch {}
     detail = `<div class="sec"><div class="label">New profile</div><div class="pform">
-      <label>Short id (slug)<input class="input" id="pp-slug" placeholder="family" pattern="[a-z0-9-]+"></label>
-      <label>Name<input class="input" id="pp-name" placeholder="Family"></label>
-      <label>Persona<textarea class="input" id="pp-persona" rows="4" placeholder="Who this curator is, what they show up for, what they'd never feature."></textarea></label>
-      <label>Eventrrr handle<input class="input" id="pp-handle" placeholder="family_cdmx"></label>
+      <label>Short id (slug)<input class="input" id="pp-slug" placeholder="family" pattern="[a-z0-9-]+" value="${esc(draft.slug || "")}"></label>
+      <label>Name<input class="input" id="pp-name" placeholder="Family" value="${esc(draft.name || "")}"></label>
+      <label>Persona<textarea class="input" id="pp-persona" rows="4" placeholder="Who this curator is, what they show up for, what they'd never feature.">${esc(draft.persona || "")}</textarea></label>
+      <label>Eventrrr handle<input class="input" id="pp-handle" placeholder="family_cdmx" value="${esc(draft.handle || "")}"></label>
       <div class="actions" style="margin-top:12px"><button class="btn btn-primary" id="pp-create" style="flex:0 0 auto">Create</button></div></div></div>`;
   }
   el.innerHTML = `<div class="insp-head"><span class="label">Profiles</span><span style="display:flex;gap:8px"><button class="btn btn-secondary" id="pp-new" style="min-height:32px;padding:6px 12px">+ New</button><button class="icon-btn btn btn-secondary close" id="pp-close" aria-label="Close profiles"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13"/></svg></button></span></div><div class="plist">${list}</div>${detail}`;
@@ -436,7 +445,9 @@ async function renderProfiles() {
     const slug = $("#pp-slug").value.trim().toLowerCase(), name = $("#pp-name").value.trim();
     if (!/^[a-z0-9-]{2,30}$/.test(slug)) return toast("Slug: 2–30 lowercase letters, digits or dashes");
     if (!name) return toast("Give it a name");
-    try { await provider.saveProfile({slug, name, persona: $("#pp-persona").value.trim(), handle: $("#pp-handle").value.trim().replace(/^@/, "") || null, active: true, sort_order: 100 + PROFILES.length}); pcur = slug; await loadSort(); toast("Profile created"); } catch (e) { toast("Create failed: " + (e.message || e)); }
+    const draft = {slug, name, persona: $("#pp-persona").value.trim(), handle: $("#pp-handle").value.trim().replace(/^@/, "") || null, active: true, sort_order: 100 + PROFILES.length};
+    try { await provider.saveProfile(draft, true); try { sessionStorage.removeItem("scout-profile-draft"); } catch {} pcur = slug; await loadSort(); toast("Profile created"); }
+    catch (e) { try { sessionStorage.setItem("scout-profile-draft", JSON.stringify(draft)); } catch {} console.error("create profile", e); toast("Create failed: " + (e.message || e), 12000); }
   };
 }
 function copySession() {

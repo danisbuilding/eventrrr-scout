@@ -319,6 +319,7 @@ async function startSweep(sb) {
 // ---------- sort tab (profiles)
 let PROFILES = [], POOL = [], ASSIGN = {}, pcur = null, scur = null, sortLoaded = false, CHARTERS = {}, touched = new Set();
 const akey = (e) => e.run + "|" + e.key;
+const splitAk = (ak) => { const i = ak.indexOf("|"); return [ak.slice(0, i), ak.slice(i + 1)]; }; // key itself contains "|date"
 const profilesOf = (e) => Object.keys(ASSIGN[akey(e)] || {});
 const isSorted = (e) => profilesOf(e).length > 0;
 async function loadSort() {
@@ -326,7 +327,15 @@ async function loadSort() {
   try {
     PROFILES = (await provider.profiles()).filter((p) => p.active !== false).sort((a, b) => (a.sort_order || 0) - (b.sort_order || 0));
     POOL = await provider.allEvents();
-    ASSIGN = {}; (await provider.assignments()).forEach((x) => { (ASSIGN[x.run + "|" + x.key] ||= {})[x.profile] = x; });
+    ASSIGN = {}; const legacy = [];
+    (await provider.assignments()).forEach((x) => {
+      if (x.key.includes("|")) { (ASSIGN[x.run + "|" + x.key] ||= {})[x.profile] = x; return; }
+      // Rows saved before 2026-10-29 lost the "|date" suffix; resolve them against the pool by slug and rewrite.
+      const matches = POOL.filter((e) => e.run === x.run && e.key.split("|")[0] === x.key);
+      matches.forEach((e) => { (ASSIGN[akey(e)] ||= {})[x.profile] = Object.assign({}, x, {key: e.key}); });
+      if (matches.length) legacy.push({x, keys: matches.map((e) => e.key)});
+    });
+    if (legacy.length) { st.textContent = `Migrating ${legacy.length} rows…`; for (const {x, keys} of legacy) { for (const k of keys) await provider.assign(x.run, k, x.profile, true); await provider.assign(x.run, x.key, x.profile, false); } }
     $("#sprofile").innerHTML = `<option value="">Any profile</option>` + PROFILES.map((p) => `<option value="${esc(p.slug)}">${esc(p.name)}</option>`).join("") + `<option value="none">None</option>`;
     $("#srun").innerHTML = `<option value="">All runs</option>` + [...new Set(POOL.map((e) => e.run))].map((r) => `<option>${esc(r)}</option>`).join("");
     sortLoaded = true; st.textContent = provider.name === "supabase" ? "Synced" : "This device only";
@@ -357,7 +366,7 @@ function renderSort() {
   }).join("") : `<tr><td colspan="4" class="empty">${POOL.length ? "Nothing matches these filters." : "No events yet; run a sweep."}</td></tr>`;
 }
 async function toggleAssign(ak, profile) {
-  const [run, key] = ak.split("|"); const cur = ASSIGN[ak] || {}; const on = !cur[profile]; touched.add(ak);
+  const [run, key] = splitAk(ak); const cur = ASSIGN[ak] || {}; const on = !cur[profile]; touched.add(ak);
   if (on && profile === "none") Object.keys(cur).forEach((p) => { if (p !== "none") delete cur[p]; });
   if (on && profile !== "none") delete cur.none;
   if (on) cur[profile] = {run, key, profile, source: "manual", updated_at: new Date().toISOString()}; else delete cur[profile];
@@ -431,7 +440,7 @@ async function renderProfiles() {
   };
 }
 function copySession() {
-  const rows = []; Object.entries(ASSIGN).forEach(([ak, m]) => { const [run, key] = ak.split("|"); const e = POOL.find((x) => akey(x) === ak); Object.values(m).forEach((x) => rows.push({run, key, profile: x.profile, source: x.source || "manual", note: x.note || null, updated_at: x.updated_at, title: e?.title, category: e?.category, venue: e?.venue, neighborhood: e?.neighborhood, price_text: e?.price_text, starts_at: e?.starts_at, highlight: !!e?.highlight, url: e?.url, source_excerpt: (e?.source_excerpt || "").slice(0, 300)})); });
+  const rows = []; Object.entries(ASSIGN).forEach(([ak, m]) => { const [run, key] = splitAk(ak); const e = POOL.find((x) => akey(x) === ak); Object.values(m).forEach((x) => rows.push({run, key, profile: x.profile, source: x.source || "manual", note: x.note || null, updated_at: x.updated_at, title: e?.title, category: e?.category, venue: e?.venue, neighborhood: e?.neighborhood, price_text: e?.price_text, starts_at: e?.starts_at, highlight: !!e?.highlight, url: e?.url, source_excerpt: (e?.source_excerpt || "").slice(0, 300)})); });
   const unsorted = POOL.filter((e) => !isSorted(e)).map((e) => ({run: e.run, key: e.key, title: e.title, category: e.category}));
   copyText(JSON.stringify({session: new Date().toISOString().slice(0, 10), profiles: PROFILES.map((p) => ({slug: p.slug, name: p.name, persona: p.persona})), assignments: rows, unsorted_count: unsorted.length}, null, 1), "Session copied; paste it to Claude to update the charters");
 }

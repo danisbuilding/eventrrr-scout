@@ -453,16 +453,19 @@ async function boot() {
   if (window.SCOUT_INLINE) { provider = inlineProvider(window.SCOUT_INLINE); $("#rf-start").disabled = true; $("#as-add").disabled = true; showApp(await provider.runs()); return; }
   const cfg = window.SCOUT_CONFIG || {};
   if (!cfg.supabaseUrl || !cfg.supabaseAnonKey || !window.supabase) { showGate(`<div class="gate-card"><h2 class="title">Eventrrr Scout</h2><p>Not configured yet: site/config.js needs the Supabase URL and anon key.</p></div>`); return; }
-  const sb = window.supabase.createClient(cfg.supabaseUrl, cfg.supabaseAnonKey);
+  // No cross-tab Web Lock: a suspended mobile tab can hold it forever and getSession() never resolves.
+  const sb = window.supabase.createClient(cfg.supabaseUrl, cfg.supabaseAnonKey, {auth: {lock: (_name, _timeout, fn) => fn()}});
   const signIn = () => sb.auth.signInWithOAuth({provider: "google", options: {redirectTo: "https://scout.eventrrr.com/"}});
   const gateSignIn = () => { showGate(`<div class="gate-card"><h2 class="title">Eventrrr Scout</h2><p>Event review for curated calendars. Sign in to continue.</p><button class="btn btn-secondary btn-google" id="signin">${GOOGLE} Continue with Google</button></div>`); $("#signin").onclick = signIn; };
   stage("Checking session…");
-  const {data: {session}} = await withTimeout(sb.auth.getSession(), 15000, "Session check");
+  let session = null;
+  try { ({data: {session}} = await withTimeout(sb.auth.getSession(), 12000, "Session check")); }
+  catch (e) { showGate(`<div class="gate-card"><h2 class="title">Slow to load</h2><p>${esc(e.message || e)}. Close other Scout tabs and retry.</p><button class="btn btn-secondary" id="retry">Retry</button> <button class="link-btn" id="signout">Sign out</button></div>`); $("#retry").onclick = () => location.reload(); $("#signout").onclick = async () => { try { localStorage.clear(); } catch {} location.reload(); }; return; }
   if (!session) { gateSignIn(); sb.auth.onAuthStateChange((_, s) => { if (s) location.reload(); }); return; }
   const user = session.user;
   stage("Checking access for " + user.email + "…");
-  const {data: rev, error: revErr} = await withTimeout(sb.from("scout_reviewers").select("email").limit(1), 15000, "Access check");
-  if (revErr) { showGate(`<div class="gate-card"><h2 class="title">Access check failed</h2><p>${esc(revErr.message)}</p></div>`); return; }
+  const {data: rev, error: revErr} = await withTimeout(sb.from("scout_reviewers").select("email").limit(1), 15000, "Access check").catch((e) => ({data: null, error: e}));
+  if (revErr) { showGate(`<div class="gate-card"><h2 class="title">Access check failed</h2><p>${esc(revErr.message)}</p><button class="btn btn-secondary" id="retry">Retry</button></div>`); $("#retry").onclick = () => location.reload(); return; }
   if (!rev || !rev.length) {
     showGate(`<div class="gate-card"><h2 class="title">Not on the list</h2><p>${esc(user.email)} isn't a reviewer for this scout.</p><button class="btn btn-secondary" id="signout">Sign out</button></div>`);
     $("#signout").onclick = async () => { await sb.auth.signOut(); location.reload(); }; return;
@@ -474,7 +477,7 @@ async function boot() {
   if (acct) { acct.innerHTML = `${user.user_metadata?.avatar_url ? `<img class="avatar" src="${esc(user.user_metadata.avatar_url)}" alt="">` : ""}<button class="btn btn-secondary" id="signout">Sign out</button>`; $("#signout").onclick = async () => { await sb.auth.signOut(); location.reload(); }; }
   let runs = [];
   stage("Loading runs…");
-  try { runs = await withTimeout(provider.runs(), 15000, "Loading runs"); } catch (e) { showGate(`<div class="gate-card"><h2 class="title">Couldn't load runs</h2><p>${esc(e.message || e)}</p></div>`); return; }
+  try { runs = await withTimeout(provider.runs(), 15000, "Loading runs"); } catch (e) { showGate(`<div class="gate-card"><h2 class="title">Couldn't load runs</h2><p>${esc(e.message || e)}</p><button class="btn btn-secondary" id="retry">Retry</button></div>`); $("#retry").onclick = () => location.reload(); return; }
   showApp(runs);
 }
 boot();

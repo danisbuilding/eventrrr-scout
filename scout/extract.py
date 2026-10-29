@@ -59,13 +59,57 @@ def call_gemini(system, user):
     return r.text
 
 
+ALIASES = {"url": ["link", "event_url", "ticket_url", "website"], "venue": ["venue_name", "location", "place"],
+           "address": ["venue_address", "street_address"], "starts_at": ["start_datetime", "start_at", "datetime_start"],
+           "ends_at": ["end_datetime", "end_at", "datetime_end"], "description": ["summary"], "organizer": ["organiser", "host"]}
+DATE_KEYS = [("start_date", "start_time"), ("date_start", "time_start"), ("date", "time"), ("start", None)]
+END_KEYS = [("end_date", "end_time"), ("date_end", "time_end"), ("end", None)]
+TZ = "-06:00"
+
+
+def _dt(date, time):
+    if not date:
+        return None
+    date = str(date)
+    if "T" in date:
+        return date if ("+" in date[10:] or "-" in date[10:] or date.endswith("Z")) else date + TZ
+    if time:
+        time = str(time)[:5]
+        if len(time) == 4:
+            time = "0" + time
+        return f"{date}T{time}:00{TZ}"
+    return f"{date}T00:00:00{TZ}"
+
+
+def normalize_fields(e):
+    """Map stray field names onto the schema so a creative model can't break downstream."""
+    for canon, alts in ALIASES.items():
+        if e.get(canon) in (None, "") :
+            for a in alts:
+                if e.get(a) not in (None, ""):
+                    e[canon] = e[a]; break
+    if not e.get("starts_at"):
+        for dk, tk in DATE_KEYS:
+            if e.get(dk):
+                e["starts_at"] = _dt(e[dk], e.get(tk) if tk else None)
+                if tk and not e.get(tk) and "T" not in str(e[dk]):
+                    e.setdefault("all_day", True)
+                break
+    if not e.get("ends_at"):
+        for dk, tk in END_KEYS:
+            if e.get(dk):
+                e["ends_at"] = _dt(e[dk], e.get(tk) if tk else None); break
+    return e
+
+
 def parse(text):
     try:
         obj = json.loads(text)
     except Exception:
         s, e = text.find("{"), text.rfind("}")
         obj = json.loads(text[s:e + 1])
-    return obj.get("events", obj if isinstance(obj, list) else [])
+    evs = obj.get("events", obj if isinstance(obj, list) else [])
+    return [normalize_fields(x) for x in evs if isinstance(x, dict)]
 
 
 def main():

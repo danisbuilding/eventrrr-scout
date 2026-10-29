@@ -81,6 +81,8 @@ def main(run: str) -> None:
     for f in sorted(src.glob("*.json")):
         for ev in json.loads(f.read_text()):
             n_in += 1
+            if not ev.get("starts_at") or not ev.get("title"):
+                continue
             k = find_match(ev, by_key) or event_key(ev)
             ev["key"] = k
             by_key[k] = merge(by_key[k], ev) if k in by_key else ev

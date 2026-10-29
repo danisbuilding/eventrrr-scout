@@ -11,6 +11,7 @@ on:
       umbrella:    {description: "Umbrella event name", required: false, default: ""}
       ig_tier:     {description: "Instagram handles: 1, 2, all or none", required: false, default: "all"}
       scouts:      {description: "LLM scouts: both, openai, gemini, none", required: false, default: "none"}
+      reuse_inbox: {description: "Skip gathering; re-extract the committed inbox/<run>", required: false, default: "false"}
   repository_dispatch:
     types: [sweep]
 
@@ -49,7 +50,7 @@ jobs:
           umb = g("umbrella")
           run = g("run") or (today.isoformat() + ("-" + re.sub(r"[^a-z0-9]+", "-", umb.lower()).strip("-") if umb else ""))
           print(f"run={run}"); print(f"wf={wf}"); print(f"wt={wt}"); print(f"umb={umb}")
-          print(f"ig={g('ig_tier','all')}"); print(f"scouts={g('scouts','none')}")
+          print(f"ig={g('ig_tier','all')}"); print(f"scouts={g('scouts','none')}"); print(f"reuse={g('reuse_inbox','false')}")
           PY
       - name: Mark running
         run: |
@@ -61,16 +62,17 @@ jobs:
           git config user.name "eventrrr-scout bot"; git config user.email "bot@users.noreply.github.com"
           git add runs/status.json && git commit -m "status: running ${{ steps.p.outputs.run }}" && git push || true
       - name: Instagram (Apify)
-        if: ${{ steps.p.outputs.ig != 'none' }}
+        if: ${{ steps.p.outputs.ig != 'none' && steps.p.outputs.reuse != 'true' }}
         continue-on-error: true
         run: python scout/instagram_apify.py "${{ steps.p.outputs.run }}" --tier "${{ steps.p.outputs.ig }}"
       - name: LLM scouts
-        if: ${{ steps.p.outputs.scouts != 'none' }}
+        if: ${{ steps.p.outputs.scouts != 'none' && steps.p.outputs.reuse != 'true' }}
         continue-on-error: true
         run: |
           ONLY=""; [ "${{ steps.p.outputs.scouts }}" = "openai" ] && ONLY="--only openai"; [ "${{ steps.p.outputs.scouts }}" = "gemini" ] && ONLY="--only gemini"
           python scouts/run_scouts.py "${{ steps.p.outputs.run }}" --window-from "${{ steps.p.outputs.wf }}" --window-to "${{ steps.p.outputs.wt }}" --umbrella "${{ steps.p.outputs.umb }}" $ONLY
       - name: Web sweep
+        if: ${{ steps.p.outputs.reuse != 'true' }}
         continue-on-error: true
         run: python scout/web_sweep.py "${{ steps.p.outputs.run }}" --umbrella "${{ steps.p.outputs.umb }}"
       - name: Extract

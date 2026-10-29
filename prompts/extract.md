@@ -37,4 +37,12 @@ distinct, dated, real-world event you find, emit one event object. Rules:
 14. **confidence.** 0.9+ when date, venue and link are all explicit; 0.6 when one is
     inferred; below 0.5 drop it.
 
+## Output fields (use these exact names; no others)
+
+`title`, `description`, `starts_at` (ISO 8601 with offset, e.g. 2026-10-31T14:00:00-06:00), `ends_at` (or null),
+`all_day`, `timezone`, `venue`, `address`, `neighborhood`, `price_text`, `price_min`, `currency`, `url`,
+`category`, `category_alt`, `family_friendly`, `umbrella`, `organizer`, `recurring`, `sources`, `source_links`,
+`source_excerpt`, `image_url`, `confidence`, `signals`, `highlight_why`.
+Multi-day events: `starts_at` = first day, `ends_at` = last day, `all_day: true` unless a daily time is given.
+
 Output: a JSON array. No prose.

@@ -164,3 +164,4 @@ textarea.input { width: 100%; min-height: 64px; resize: vertical; margin-top: 8p
 .rf-sources .check { color: var(--nv-ink); }
 .err { color: #b42318; }
 .okk { color: var(--nv-ready); }
+.nowrap { white-space: nowrap; }

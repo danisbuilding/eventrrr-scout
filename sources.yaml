@@ -1,7 +1,7 @@
 _notes: [Edited by the Sources tab on scout.eventrrr.com (via the scout-trigger edge function) and by hand. Keep valid YAML., 'tier 1 = DP''s own picks; tier 2 = researched/added later. enabled: false skips
     a source.', 'Bot-blocked sites (use their Instagram instead): cultura.cdmx.gob.mx, chapultepec, teatros.cultura.cdmx, bellasartes, cenart, ccemx.org, passline, ticketmaster.com.mx', 'Gap: no verified
     Instagram aggregators yet for nightlife, food, or family.']
-defaults: {city: Mexico City, timezone: America/Mexico_City, currency: MXN, window_days: 14, ig_posts_per_account: 30, ig_newer_than: 21 days}
+defaults: {city: Mexico City, timezone: America/Mexico_City, currency: MXN, window_days: 14, ig_posts_per_account: 18, ig_newer_than: 21 days}
 umbrellas:
 - name: Día de Muertos 2026
   slug: dia-de-muertos-2026

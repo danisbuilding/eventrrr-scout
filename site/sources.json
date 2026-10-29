@@ -301,7 +301,7 @@
   "timezone": "America/Mexico_City",
   "currency": "MXN",
   "window_days": 14,
-  "ig_posts_per_account": 30,
+  "ig_posts_per_account": 18,
   "ig_newer_than": "21 days"
  }
 }

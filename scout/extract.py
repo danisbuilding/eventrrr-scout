@@ -39,11 +39,14 @@ Return a JSON object: {{"events": [ ...Event objects... ]}}. Nothing else."""
 def call_openai(system, user):
     from openai import OpenAI
     client = OpenAI()
-    r = client.chat.completions.create(
-        model=os.getenv("OPENAI_EXTRACT_MODEL", "gpt-5"),
-        messages=[{"role": "system", "content": system}, {"role": "user", "content": user}],
-        response_format={"type": "json_object"},
-    )
+    model = os.getenv("OPENAI_EXTRACT_MODEL", "gpt-5-mini")
+    kw = dict(model=model, messages=[{"role": "system", "content": system}, {"role": "user", "content": user}], response_format={"type": "json_object"})
+    try:
+        r = client.chat.completions.create(**kw, reasoning_effort=os.getenv("OPENAI_EXTRACT_EFFORT", "low"))
+    except Exception as e:  # model without reasoning_effort
+        if "reasoning" not in str(e).lower():
+            raise
+        r = client.chat.completions.create(**kw)
     return r.choices[0].message.content
 
 
@@ -78,32 +81,40 @@ def main():
     inbox = ROOT / "inbox" / a.run
     out_dir = ROOT / "runs" / a.run / "extracted"
     out_dir.mkdir(parents=True, exist_ok=True)
-    total = 0
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+    jobs = []  # (source stem, batch index, batch)
     for jl in sorted(inbox.glob("*.jsonl")):
         items = [json.loads(l) for l in jl.read_text().splitlines() if l.strip()]
-        batches, cur, size = [], [], 0
+        cur, size, bi = [], 0, 0
         for it in items:
             slim = {k: it.get(k) for k in ("id", "source_name", "source_url", "author", "posted_at", "text", "links", "media")}
             slim["text"] = (slim.get("text") or "")[:9000]
             if size + len(slim["text"]) > BATCH_CHARS and cur:
-                batches.append(cur); cur, size = [], 0
+                jobs.append((jl.stem, bi, cur)); cur, size, bi = [], 0, bi + 1
             cur.append(slim); size += len(slim["text"])
         if cur:
-            batches.append(cur)
-        events = []
-        for i, b in enumerate(batches):
-            user = "Raw items (JSON). Extract every dated event:\n" + json.dumps(b, ensure_ascii=False)
+            jobs.append((jl.stem, bi, cur))
+    print(f"{len(jobs)} batches across {len(set(j[0] for j in jobs))} sources")
+    results = {}
+    def work(stem, bi, b):
+        user = "Raw items (JSON). Extract every dated event:\n" + json.dumps(b, ensure_ascii=False)
+        evs = parse(call(system, user))
+        for e in evs:
+            e.setdefault("sources", [x["id"] for x in b][:1])
+            e.setdefault("source_links", [{"name": b[0].get("source_name"), "url": b[0].get("source_url")}])
+        return evs
+    with ThreadPoolExecutor(max_workers=int(os.getenv("EXTRACT_WORKERS", "8"))) as ex:
+        futs = {ex.submit(work, *j): j for j in jobs}
+        for fut in as_completed(futs):
+            stem, bi, b = futs[fut]
             try:
-                evs = parse(call(system, user))
-                for e in evs:
-                    e.setdefault("sources", [x["id"] for x in b][:1])
-                    e.setdefault("source_links", [{"name": b[0].get("source_name"), "url": b[0].get("source_url")}])
-                events.extend(evs)
-                print(f"{jl.name} batch {i + 1}/{len(batches)}: {len(evs)} events")
+                evs = fut.result(); results.setdefault(stem, []).extend(evs)
+                print(f"{stem} batch {bi + 1}: {len(evs)} events")
             except Exception as e:
-                print(f"{jl.name} batch {i + 1}: {e}", file=sys.stderr)
-        (out_dir / f"{jl.stem}.json").write_text(json.dumps(events, ensure_ascii=False, indent=1))
-        total += len(events)
+                print(f"{stem} batch {bi + 1}: {e}", file=sys.stderr)
+    total = 0
+    for stem, events in results.items():
+        (out_dir / f"{stem}.json").write_text(json.dumps(events, ensure_ascii=False, indent=1)); total += len(events)
     print(f"{total} events extracted → {out_dir}")
 
 

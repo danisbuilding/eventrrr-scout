@@ -1,0 +1,4546 @@
+[
+ {
+  "title": "Día de Muertos 2026: a quién se recuerda cada día (del 27 de octubre al 3 de noviembre)",
+  "start_date": "2026-10-27",
+  "end_date": "2026-11-03",
+  "all_day": true,
+  "venue": null,
+  "neighborhood": null,
+  "price_text": "Entrada libre",
+  "price_min": 0,
+  "link": "https://thehappening.com/dia-de-muertos-2026-a-quien-se-recuerda-cada-dia-del-27-de-octubre-al-2-de-noviembre/",
+  "category": "Other",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": false,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Es la guía de calendario más extendida para las distintas fechas de recuerdo dentro de la celebración de Día de Muertos (27 oct–3 nov), útil para planear ofrendas y visitas familiares.",
+  "sources": [
+   "web:the-happening:5797d08c4e8d"
+  ],
+  "source_links": [
+   {
+    "name": "The Happening",
+    "url": "https://thehappening.com/dia-de-muertos-2026-a-quien-se-recuerda-cada-dia-del-27-de-octubre-al-2-de-noviembre/"
+   }
+  ],
+  "source_excerpt": "Día de Muertos no empieza necesariamente el 1 de noviembre. En muchas familias, desde el 27 de octubre comienzan a encenderse veladoras y preparar ofrendas para distintas ánimas: mascotas, personas que murieron de forma trágica, niños y adultos. Y aunque no todas se celebran igual en todo México, sí hay un calendario bastante extendido que ayuda a entender qué se recuerda cada día.\nQuién regresa cada día en Día de Muertos\n27 de octubre: las mascotas\nEl 27 de octubre se ha popularizado como la fecha para recordar a perros, gatos y otros animales de compañía que ya murieron. Ese día muchas personas preparan pequeñas ofrendas con su fotografía, agua, comida, juguetes, collar y flores de cempasúchil.\n28 de octubre: quienes murieron de manera trágica\nEl 28 de octubre se dedica, dentro de una tradición bastante extendida, a las personas que murieron de manera inesperada o violenta, por ejemplo, a causa de accidentes. Desde esta fecha comienzan en algunos lugares las visitas simbólicas de las ánimas, empezando precisamente por quienes tuvieron una muerte trágica.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Obra de teatro El Exorcista",
+  "description": "Obra basada en la novela de William Peter Blatty protagonizada por Bruno Bichir y Ana Claudia Talancón; a partir del 28 de octubre en el Teatro México, Centro Cultural Manolo Fábregas.",
+  "start_date": "2026-10-28",
+  "end_date": null,
+  "all_day": true,
+  "time": null,
+  "venue_name": "Teatro México, Centro Cultural Manolo Fábregas",
+  "address": null,
+  "neighborhood": "Centro",
+  "price_text": "desde $600 MXN",
+  "price_min": 600,
+  "currency": "MXN",
+  "link": "https://www.ticketmaster.com.mx",
+  "category": "Film & Performance",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Teatro con elenco conocido (Bruno Bichir y Ana Claudia Talancón) que adapta un clásico del terror, ideal para la temporada de Halloween/Día de Muertos.",
+  "sources": [
+   "web:food-and-travel-mx:13a5987abd8f"
+  ],
+  "source_links": [
+   {
+    "name": "Food and Travel MX",
+    "url": "https://foodandtravel.mx/viajes/que-hacer-en-cdmx-los-mejores-planes-y-eventos-de-esta-semana/"
+   }
+  ],
+  "source_excerpt": "Obra de teatro El Exorcista\n\nLos eventos en CDMX también se tornan tenebrosos. Para aprovechar la temporada, puedes revivir un clásico del cine, ahora desde la cercanía del teatro. Esta puesta en escena, basada en la novela de William Peter Blatty, seguro dará de qué hablar y te provocará varios gritos de angustia. Está protagonizada por Bruno Bichir y Ana Claudia Talancón, y sigue la historia que ya conocemos muy bien: Regan, una niña de 12 años, comienza a experimentar actitudes inquietantes y paranormales, así que su madre decide pedir ayuda religiosa. Los encargados de esta labor son el padre Damien y el padre Merrin, quienes pronto descubrirán que un demonio ha tomado posesión de Regan.\n\n¿Te la vas a perder? Dónde: Teatro México, Centro Cultural Manolo Fabregas. Cuándo: a partir del 28 de octubre. Costo: desde $600 MXN. ticketmaster.com.mx",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Checo Pérez en Reforma",
+  "description": "Exhibición con el monoplaza de Sergio “Checo” Pérez sobre Paseo de la Reforma como parte del Show Run previo al Gran Premio de la Ciudad de México.",
+  "start_date": "2026-10-28",
+  "end_date": null,
+  "all_day": false,
+  "time": "10:00",
+  "venue_name": "Paseo de la Reforma (del Ángel de la Independencia a la Diana Cazadora)",
+  "address": null,
+  "neighborhood": null,
+  "price_text": "Entrada libre",
+  "price_min": 0,
+  "currency": "MXN",
+  "link": "https://foodandtravel.mx/viajes/que-hacer-en-cdmx-los-mejores-planes-y-eventos-de-esta-semana/",
+  "category": "Other",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": null,
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Una exhibición pública y gratuita en Reforma que permite ver de cerca a Checo Pérez y su monoplaza, ideal para familias y aficionados a la F1.",
+  "sources": [
+   "web:food-and-travel-mx:13a5987abd8f"
+  ],
+  "source_links": [
+   {
+    "name": "Food and Travel MX",
+    "url": "https://foodandtravel.mx/viajes/que-hacer-en-cdmx-los-mejores-planes-y-eventos-de-esta-semana/"
+   }
+  ],
+  "source_excerpt": "Checo Pérez en Reforma\n\nPrevio al Gran Premio de México, el piloto Sergio “Checo” Pérez dará una exhibición en su monoplaza para ir calentando los motores de la gran carrera. El recorrido forma parte del Show Run que presenta Cadillac Formula 1 Team —escudería a la que pertenece Pérez — y el Gran Premio de la Ciudad de México. El circuito será sobre Paseo de la Reforma, del Ángel de la Independencia a la Diana Cazadora, y permitirá a los espectadores vivir de cerca la adrenalina de los motores.\n\nLa ocasión será doblemente especial porque representa el regreso de Checo en una exhibición más cercana a la gente, luego de cinco años de ausencia. ¿Te encanta la velocidad? Entonces ya sabes qué hacer en CDMX. Dónde: Paseo de la Reforma. Cuándo: 28 de octubre, a partir de las 10:00 horas. Entrada libre. IG: @schecoperez",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Festival Cacao para todos",
+  "description": "16ª edición del Festival Cacao para todos con 60 expositores, expo-venta de chocolates artesanales, bebidas tradicionales y talleres; en el Museo Diego Rivera Anahuacalli.",
+  "start_date": "2026-10-29",
+  "end_date": "2026-11-02",
+  "all_day": true,
+  "time": null,
+  "venue_name": "Museo Diego Rivera Anahuacalli",
+  "address": null,
+  "neighborhood": null,
+  "price_text": "Entrada libre",
+  "price_min": 0,
+  "currency": "MXN",
+  "link": "https://museoanahuacalli.org.mx",
+  "category": "Food & Drink",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": null,
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Festival gratuito y apto para todas las edades que reúne productores y talleres para conocer el cacao y las tradiciones mexicanas alrededor del chocolate.",
+  "sources": [
+   "web:food-and-travel-mx:13a5987abd8f"
+  ],
+  "source_links": [
+   {
+    "name": "Food and Travel MX",
+    "url": "https://foodandtravel.mx/viajes/que-hacer-en-cdmx-los-mejores-planes-y-eventos-de-esta-semana/"
+   }
+  ],
+  "source_excerpt": "Festival Cacao para todos\n\n¿Más ideas de qué hacer en CDMX? Sumérgete en el mundo del cacao mexicano en la edición 16 de este festival que reúne a 60 expositores de todo el país para hablar, probar y compartir una tradición milenaria. Este festival es organizado por Artefacto México y Nawal Cacao, y durante cinco días podrás visitar stands de expo-venta de chocolates artesanales; saborear bebidas tradicionales como el pozol, el téjate, el chilate y el tascalate, y participar en talleres y experiencias sensoriales para todas las edades.\n\nAnótalo entre los eventos en CDMX para explorar desde el cultivo a las preparaciones de este patrimonio gastronómico que se ha preservado por generaciones y hoy es un orgullo nacional. Dónde: Museo Diego Rivera Anahuacalli. Cuándo: del 29 de octubre al 2 de noviembre. Entrada libre. museoanahuacalli.org.mx",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Ofrenda Monumental del Zócalo",
+  "start_date": "2026-10-29",
+  "end_date": "2026-11-02",
+  "all_day": true,
+  "venue_name": "Plancha del Zócalo",
+  "venue_address": "Plaza de la Constitución (Zócalo), Centro Histórico",
+  "colonia": "Centro Histórico",
+  "borough": "Cuauhtémoc",
+  "price_text": "Entrada libre",
+  "price_min": 0,
+  "link": "https://cartelera.cdmx.gob.mx",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": true,
+   "recurring_weekly": false,
+   "tourist_trap": true,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "La ofrenda monumental del Zócalo es una de las instalaciones más grandes y vistosas de la temporada (32 m de cartonería) y entrada libre, ideal para visitantes y fotógrafos.",
+  "sources": [
+   "web:food-and-travel-mx:b166ebd7e133"
+  ],
+  "source_links": [
+   {
+    "name": "Food and Travel MX",
+    "url": "https://foodandtravel.mx/viajes/donde-ver-altares-y-ofrendas-de-dia-de-muertos-en-cdmx-este-2026/"
+   }
+  ],
+  "source_excerpt": "Ofrenda Monumental del Zócalo\nAprovecha estos días para descubrir cómo se transforma el Zócalo durante el Día de Muertos. Ahí estará la ofrenda monumental de 2026, dedicada a La Catrina, la figura creada por el grabador mexicano José Guadalupe Posada. El montaje tendrá una escultura de cartonería de 32 metros de altura, acompañada de tapetes de aserrín y flores de cempasúchil. Será uno de los puntos más llamativos para tus planes de temporada.\nLa entrada a la plaza es libre, así que puedes recorrer la ofrenda y, a la vez, caminar por las calles del Centro Histórico. Revisa los anuncios oficiales para confirmar los horarios de acceso al montaje. Cuándo: del 29 de octubre al 2 de noviembre. Dónde: Plancha del Zócalo. Entrada libre. cartelera.cdmx.gob.mx",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Megaofrenda de la UNAM",
+  "start_date": "2026-10-31",
+  "end_date": "2026-11-02",
+  "all_day": true,
+  "venue_name": "Explanada del Museo Universum",
+  "venue_address": "Museo Universum, Ciudad Universitaria, UNAM",
+  "colonia": null,
+  "borough": "Coyoacán",
+  "price_text": "Entrada libre",
+  "price_min": 0,
+  "link": "https://megaofrendaunam.mx",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "La Megaofrenda de la UNAM reúne altares de la comunidad universitaria y actividades culturales gratuitas en la explanada del Museo Universum.",
+  "sources": [
+   "web:food-and-travel-mx:b166ebd7e133"
+  ],
+  "source_links": [
+   {
+    "name": "Food and Travel MX",
+    "url": "https://foodandtravel.mx/viajes/donde-ver-altares-y-ofrendas-de-dia-de-muertos-en-cdmx-este-2026/"
+   }
+  ],
+  "source_excerpt": "Megaofrenda de la UNAM\nSi te gusta descubrir cómo distintas personas interpretan una misma tradición, date una vuelta por la Megaofrenda de la UNAM. Este año, tendrá como tema 475+ Trayectorias que nos sustentan, en referencia a la historia de la universidad y a quienes han contribuido a construir su legado. Las ofrendas reunirán propuestas de la comunidad universitaria en la explanada del Museo Universum. La idea es recordar los sucesos, personajes y conocimientos de su legado.\nAdemás de recorrer los altares, puedes aprovechar para disfrutar las actividades culturales que acompañan al festival este Día de Muertos. Consulta la programación oficial para conocer los detalles de esta edición. Cuándo: del 31 de octubre al 2 de noviembre. Dónde: Explanada del Museo Universum. Entrada libre. megaofrendaunam.mx",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Ofrendas comunitarias (12 sedes en la CDMX)",
+  "start_date": "2026-10-29",
+  "end_date": "2026-11-02",
+  "all_day": true,
+  "venue_name": "Varias sedes (Plaza de las Tres Culturas, Utopías y más)",
+  "venue_address": "Diversas alcaldías (consultar sedes locales)",
+  "colonia": null,
+  "borough": null,
+  "price_text": "Entrada libre",
+  "price_min": 0,
+  "link": "https://www.instagram.com/culturaciudadmx",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Las ofrendas comunitarias permiten explorar altares de barrio en 12 sedes distintas, una buena opción para conocer tradiciones locales y evitar los circuitos más concurridos.",
+  "sources": [
+   "web:food-and-travel-mx:b166ebd7e133"
+  ],
+  "source_links": [
+   {
+    "name": "Food and Travel MX",
+    "url": "https://foodandtravel.mx/viajes/donde-ver-altares-y-ofrendas-de-dia-de-muertos-en-cdmx-este-2026/"
+   }
+  ],
+  "source_excerpt": "Ofrendas comunitarias\nSi prefieres salir de los circuitos concurridos, las ofrendas comunitarias de Día de Muertos pueden ser una alternativa para tus planes. Este año se anunciaron 12 sedes en distintos puntos de la capital, entre ellas la Plaza de las Tres Culturas, en Tlatelolco, además de espacios públicos y Utopías. La programación abarca alcaldías como Azcapotzalco, Coyoacán, Gustavo A. Madero, Iztacalco, Iztapalapa, Milpa Alta y Tlalpan, entre otras. Así, la celebración también llegará a diferentes barrios y espacios de convivencia.\nPuedes aprovechar para conocer una zona de la ciudad que no suelas visitar y sumar otra parada a tus planes de Día de Muertos. Consulta el listado de sedes y confirma las ubicaciones y los horarios. Cuándo: del 29 de octubre el 2 de noviembre. Dónde: Diversas alcaldías. Entrada libre. IG: @culturaciudadmx",
+  "image_url": null,
+  "confidence": 0.6
+ },
+ {
+  "title": "Volver a la Tierra — altar de Día de Muertos (Proyectos Públicos) — General Prim",
+  "start_date": "2026-10-30",
+  "end_date": "2026-11-02",
+  "all_day": false,
+  "start_time": "12:00",
+  "end_time": "00:00",
+  "venue_name": "General Prim 30",
+  "venue_address": "General Prim 30, Juárez",
+  "colonia": "Juárez",
+  "borough": "Cuauhtémoc",
+  "price_text": "Entrada gratuita, pero requiere registro previo",
+  "price_min": 0,
+  "link": null,
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": true,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Proyectos Públicos presenta una ofrenda con elementos artísticos y talleres; entrada gratuita pero con registro, ideal para quienes buscan una experiencia curada y actividades complementarias.",
+  "sources": [
+   "web:food-and-travel-mx:b166ebd7e133"
+  ],
+  "source_links": [
+   {
+    "name": "Food and Travel MX",
+    "url": "https://foodandtravel.mx/viajes/donde-ver-altares-y-ofrendas-de-dia-de-muertos-en-cdmx-este-2026/"
+   }
+  ],
+  "source_excerpt": "General Prim\nSi buscas ofrendas y altares en CDMX con una propuesta artística, visita Volver a la Tierra, la sexta edición del altar de Día de Muertos de Proyectos Públicos. Este año, la instalación toma como inspiración el Altiplano Central y su relación con la tierra, la milpa y el maguey. En el montaje encontrarás elementos como flores de cempasúchil, fibras de ixtle, maíces de colores, textiles, copal y velas. La propuesta también reconoce los oficios y conocimientos que pasan de una generación a otra.\nAdemás de recorrer la ofrenda, podrás disfrutar de talleres, narraciones, conversaciones y actividades culturales para distintas edades. Cuándo: del 30 de octubre al 2 de noviembre, de 12:00 a 00:00 horas. Dónde: General Prim 30, Juárez. Entrada gratuita, pero requiere registro previo.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "La Puerta entre dos mundos — Festival de Día de Muertos en Chapultepec (La Puerta entre dos mundos / El Sendero del Cempasúchil)",
+  "start_date": "2026-10-29",
+  "end_date": "2026-11-04",
+  "all_day": true,
+  "venue_name": "Segunda Sección del Bosque de Chapultepec",
+  "venue_address": "Bosque de Chapultepec, Segunda Sección",
+  "colonia": null,
+  "borough": "Miguel Hidalgo",
+  "price_text": "Entrada libre",
+  "price_min": 0,
+  "link": "https://festivaldiademuertos.com",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": true,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Festival al aire libre en Chapultepec con instalaciones, altares, música, danza y espectáculo nocturno con drones, ideal para dedicar una tarde entera al ambiente de temporada.",
+  "sources": [
+   "web:food-and-travel-mx:b166ebd7e133"
+  ],
+  "source_links": [
+   {
+    "name": "Food and Travel MX",
+    "url": "https://foodandtravel.mx/viajes/donde-ver-altares-y-ofrendas-de-dia-de-muertos-en-cdmx-este-2026/"
+   }
+  ],
+  "source_excerpt": "Festival de Día de Muertos en Chapultepec\n¿Te gustaría combinar las ofrendas de Día de Muertos con un paseo por Chapultepec? En la Segunda Sección del bosque se celebrará La Puerta entre dos mundos, un festival que tendrá como concepto El Sendero del Cempasúchil. La propuesta reunirá instalaciones, altares, música, danza y opciones gastronómicas, además de espectáculo nocturno con drones. Entre los espacios contemplados están el Paseo de los Compositores y el Lago Mayor.\nEs un plan para dedicarle tiempo a distintas actividades y disfrutar el ambiente de la temporada al aire libre. Revisa los horarios y detalles de acceso para saber qué propuestas estarán disponibles durante tu visita. Cuándo: del 29 al 4 de noviembre. Dónde: Segunda Sección del Bosque de Chapultepecl. Entrada libre. festivaldiademuertos.com",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Ofrenda monumental — Casa Fuerte de Emilio ‘El Indio’ Fernández",
+  "start_date": "2026-10-17",
+  "end_date": "2026-11-15",
+  "all_day": true,
+  "venue_name": "Casa Fuerte de Emilio ‘El Indio’ Fernández",
+  "venue_address": "Ignacio Zaragoza 51, Santa Catarina",
+  "colonia": "Santa Catarina",
+  "borough": "Coyoacán",
+  "price_text": "$200 MXN general; niños estudiantes y personas con INAPAM, $100 MXN",
+  "price_min": 200,
+  "link": "https://casafuertedeemilioelindiofernandez.com",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Una ofrenda con 40 años de tradición en un espacio histórico que mezcla cine y cultura; entrada pagada pero con tarifas reducidas para niños, estudiantes e INAPAM.",
+  "sources": [
+   "web:food-and-travel-mx:b166ebd7e133"
+  ],
+  "source_links": [
+   {
+    "name": "Food and Travel MX",
+    "url": "https://foodandtravel.mx/viajes/donde-ver-altares-y-ofrendas-de-dia-de-muertos-en-cdmx-este-2026/"
+   }
+  ],
+  "source_excerpt": "Casa Fuerte de Emilio ‘El Indio’ Fernández\nDescubre la Casa Fuerte de Emilio ‘El Indio’ Fernández esta temporada. El recinto recibe al público con una ofrenda monumental que en 2026 celebra 40 años de tradición. La edición también conmemora el aniversario luctuoso número 40 del cineasta y los 80 años de la casa. Durante el recorrido encontrarás altares, flores de cempasúchil, veladoras y elementos relacionados con la historia del cine, el arte y la cultura mexicana.\nEsta es una de las opciones para conocer ofrendas de Día de Muertos en CDMX dentro de un espacio con historia propia. Cuándo: del 17 de octubre al 15 de noviembre. Dónde: Ignacio Zaragoza 51, Santa Catarina, Coyoacán. Costo: $200 MXN general; niños estudiantes y personas con INAPAM, $100 MXN. casafuertedeemilioelindiofernandez.com",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Un Sendero — instalación de Día de Muertos en The St. Regis Mexico City",
+  "start_date": "2026-10-29",
+  "end_date": "2026-11-02",
+  "all_day": true,
+  "venue_name": "The St. Regis Mexico City",
+  "venue_address": "Av. Paseo de la Reforma 439",
+  "colonia": "Cuauhtémoc",
+  "borough": "Cuauhtémoc",
+  "price_text": "Entrada libre",
+  "price_min": 0,
+  "link": "https://www.instagram.com/stregismexicocity",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Instalación floral y altar en un hotel de lujo que ofrece un recorrido visualmente llamativo (flores, alfeñique, pan de muerto) con entrada libre, buena opción para quien busca propuestas céntricas y fotogénicas.",
+  "sources": [
+   "web:food-and-travel-mx:b166ebd7e133"
+  ],
+  "source_links": [
+   {
+    "name": "Food and Travel MX",
+    "url": "https://foodandtravel.mx/viajes/donde-ver-altares-y-ofrendas-de-dia-de-muertos-en-cdmx-este-2026/"
+   }
+  ],
+  "source_excerpt": "The St. Regis Mexico City\nUn campo de flores naranjas en medio de la ciudad y un altar al final del camino: así es Un Sendero, la instalación de Día de Muertos que podrás visitar en The St. Regis Mexico City. Creada en colaboración con el diseñador floral Luis Rojas, conocido como San Jacinto, la propuesta transforma los espacios del hotel con flores, guirnaldas, frutas, calaveras de azúcar, piezas de alfeñique y pan de muerto de distintas regiones de México.\nEl recorrido termina frente a una ofrenda tradicional con velas, fotografías, objetos personales y flores de cempasúchil. La instalación toma como inspiración el pericón, una flor naranja asociada con el cambio de estación. Cuándo: durante la temporada de Día de Muertos de 2026. Dónde: Av. Paseo de la Reforma 439, Col. Cuauhtémoc. Entrada libre. IG: @stregismexicocity",
+  "image_url": null,
+  "confidence": 0.6
+ },
+ {
+  "title": "José Alfredo, en el último trago — ofrenda en el Claustro de Sor Juana",
+  "start_date": "2026-10-29",
+  "end_date": "2026-11-09",
+  "all_day": true,
+  "venue_name": "Auditorio Divino Narciso, Universidad del Claustro de Sor Juana",
+  "venue_address": "Izazaga 92, Centro Histórico",
+  "colonia": "Centro Histórico",
+  "borough": "Cuauhtémoc",
+  "price_text": "Entrada libre",
+  "price_min": 0,
+  "link": null,
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Ofrenda dedicada a José Alfredo Jiménez en el Claustro de Sor Juana con una ambientación tipo cantina y elementos artesanales; entrada libre y temática cultural clara.",
+  "sources": [
+   "web:food-and-travel-mx:b166ebd7e133"
+  ],
+  "source_links": [
+   {
+    "name": "Food and Travel MX",
+    "url": "https://foodandtravel.mx/viajes/donde-ver-altares-y-ofrendas-de-dia-de-muertos-en-cdmx-este-2026/"
+   }
+  ],
+  "source_excerpt": "José Alfredo, en el último trago – Claustro de Sor Juana\nSi te gustan las ofrendas que rinden homenaje a figuras de la cultura mexicana, date una vuelta por el Claustro de Sor Juana. Este año, su altar está dedicado a José Alfredo Jiménez, en el marco del centenario de su nacimiento. La instalación, titulada José Alfredo, en el último trago, recrea una cantina tradicional donde el cantautor se reúne simbólicamente con grandes figuras de la música mexicana, como Pedro Infante, Lola Beltrán, Lucha Villa y Chavela Vargas.\nEntre sus elementos destacan un sombrero de charro y sarapes elaborados con miles de flores de papel. Cuándo: hasta 9 de noviembre. Dónde: Auditorio Divino Narciso de la Universidad del Claustro de Sor Juana, Izazaga 92, Centro Histórico. Costo: entrada libre.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Festival de Día de Muertos en el Museo Casa del Risco",
+  "start_date": "2026-10-30",
+  "end_date": "2026-11-02",
+  "all_day": false,
+  "start_time": "11:00",
+  "end_time": "16:00",
+  "venue_name": "Centro Cultural Isidro Fabela Casa del Risco",
+  "address": null,
+  "neighborhood": null,
+  "price_text": "Entrada libre con aportación voluntaria en beneficio de los programas del museo (algunas actividades tienen cuota de recuperación y cupo limitado)",
+  "price_min": 0,
+  "link": "https://mexicoescultura.com/actividad/340726/festival-de-dia-de-muertos-en-el-museo-casa-del-risco.html",
+  "category": "Creativity & Crafts",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": true,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Actividades familiares y talleres diarios sobre Día de Muertos con entrada libre y algunas actividades con cuota y cupo limitado — buena opción para familias y quien quiera talleres tradicionales.",
+  "sources": [
+   "web:m-xico-es-cultura:a690cc9d6279"
+  ],
+  "source_links": [
+   {
+    "name": "México es Cultura",
+    "url": "https://mexicoescultura.com/actividad/340726/festival-de-dia-de-muertos-en-el-museo-casa-del-risco.html"
+   }
+  ],
+  "source_excerpt": "Festival de Día de Muertos en el Museo Casa del Risco\nEl Museo Casa del Risco te invita a celebrar nuestras tradiciones con actividades llenas de color, creatividad, arte y sabor.\nDisfruta con:\n- Calaveras de amaranto: cuota de recuperación, $50 y $100.\n- Calaveritas de azúcar: cuota de recuperación, $45.\n- Maquillaje artístico: viernes 30 y sábado 31 de octubre; cuota de recuperación, según el diseño a elegir.\n- CATRINA: flores, color y tradición: sábado 31 de octubre, 11:00 y 13:00 hrs.; cuota de recuperación, $450 (registro previo, en Instagram: @creati.cora)\n- Concierto del Ensamble de la Sinfónica de Minería: lunes 2 de noviembre, 18:00 hrs.; boleto general, $200 (venta: en la librería-tienda del museo).\n- Tradición entre puntadas: trabajo de La Mercería.\n- Pan de muerto, con Pan Verde.\n¡Y muchas sorpresas más!\n                        del 30 de octubre al 02 de noviembre de 2026\nlunes, viernes, sábado y domingo, 11:00 a 16:00 hrs.\nEntrada libre con aportación voluntaria en beneficio de los programas del museo (algunas actividades tienen cuota de recuperación y cupo limitado)",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Ofrendas del Risco",
+  "start_date": "2026-10-23",
+  "end_date": "2026-11-15",
+  "all_day": false,
+  "start_time": "10:00",
+  "end_time": "17:00",
+  "venue_name": "Centro Cultural Isidro Fabela Casa del Risco",
+  "address": null,
+  "neighborhood": null,
+  "price_text": "Entrada libre con aportación voluntaria en beneficio de los programas del museo",
+  "price_min": 0,
+  "link": "https://mexicoescultura.com/actividad/340725/ofrendas-del-risco.html",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Exposición de ofrendas e instalaciones monumentales en Casa del Risco, ideal para recorrer durante la temporada de Día de Muertos con acceso gratuito.",
+  "sources": [
+   "web:m-xico-es-cultura:59c9b11c6ff6"
+  ],
+  "source_links": [
+   {
+    "name": "México es Cultura",
+    "url": "https://mexicoescultura.com/actividad/340725/ofrendas-del-risco.html"
+   }
+  ],
+  "source_excerpt": "¡Vive la tradición del Día de Muertos en el Museo Casa del Risco!\nEste año, te invita a recorrer sus ofrendas e instalaciones especiales, donde la historia, el arte y el recuerdo se unen para honrar a quienes ya no están.\nVe a descubrir sus exposiciones de la temporada:\n- El espíritu de San Ángel: ofrenda monumental\n- El alma de un cuadro: ofrenda e instalación\n- El alma de los objetos: ofrenda e instalación\n                        del 23 de octubre al 15 de noviembre de 2026\nDe martes a domingo , 10:00 a 17:00 hrs.\n02 de noviembre de 2026\nlunes, 10:00 a 17:00 hrs.\nHorario especial\nEntrada libre con aportación voluntaria en beneficio de los programas del museo",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Entre vivos y muertos Un pueblo que permanece Altar de difuntos del Pueblo de los Reyes Hueytlilac, Coyoacán",
+  "start_date": "2026-10-29",
+  "end_date": "2026-10-29",
+  "all_day": false,
+  "start_time": "16:00",
+  "end_time": "17:00",
+  "venue_name": "Pueblo de los Reyes Hueytlilac, Coyoacán",
+  "address": null,
+  "neighborhood": "Coyoacán",
+  "price_text": "Entrada libre",
+  "price_min": 0,
+  "link": "https://mexicoescultura.com/actividad/340719/entre-vivos-y-muertos-un-pueblo-que-permanece-altar-de-difuntos-del-pueblo-de-los-reyes-hueytlilac-coyoacan.html",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": false,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Inauguración pública de una ofrenda comunitaria en Coyoacán — experiencia local y cultural gratuita durante la temporada.",
+  "sources": [
+   "web:m-xico-es-cultura:320032924e69"
+  ],
+  "source_links": [
+   {
+    "name": "México es Cultura",
+    "url": "https://mexicoescultura.com/actividad/340719/entre-vivos-y-muertos-un-pueblo-que-permanece-altar-de-difuntos-del-pueblo-de-los-reyes-hueytlilac-coyoacan.html"
+   }
+  ],
+  "source_excerpt": "Entre vivos y muertos Un pueblo que permanece Altar de difuntos del Pueblo de los Reyes Hueytlilac, Coyoacán \nConoce la ofrenda “Entre vivos y muertos. Un pueblo que permanece”, dedicada al altar de difuntos del Pueblo de los Reyes Hueytlilac, Coyoacán.\nAcompáñanos a celebrar las tradiciones y la memoria de nuestros pueblos en esta temporada de Día de Muertos.\nInauguración\n                        29 de octubre de 2026\njueves, 16:00 a 17:00 hrs.\nEntrada libre",
+  "image_url": null,
+  "confidence": 0.6
+ },
+ {
+  "title": "Memorias Orgánicas Oaxaca",
+  "start_date": "2026-08-21",
+  "end_date": "2026-11-29",
+  "all_day": false,
+  "start_time": "10:00",
+  "end_time": "17:00",
+  "venue_name": "Galería Manuel Felguérez del Centro Multimedia",
+  "address": null,
+  "neighborhood": null,
+  "price_text": "Actividad gratuita, presencial. Entrada Libre, Exhibición",
+  "price_min": 0,
+  "link": "https://mexicoescultura.com/actividad/340713/muestra-memorias-organicas-oaxaca.html",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": null,
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Instalación audiovisual inmersiva abierta hasta finales de noviembre en el Centro Multimedia; entrada gratuita y horarios amplios.",
+  "sources": [
+   "web:m-xico-es-cultura:9afbeadc9ca1"
+  ],
+  "source_links": [
+   {
+    "name": "México es Cultura",
+    "url": "https://mexicoescultura.com/actividad/340713/muestra-memorias-organicas-oaxaca.html"
+   }
+  ],
+  "source_excerpt": "Memorias Orgánicas Oaxaca es un proyecto audiovisual e inmersivo ... Exhibiéndose: de martes a domingo de 10 a 17 h, hasta el domingo 29 de noviembre\nLugar: Galería Manuel Felguérez del Centro Multimedia\nActividad gratuita, presencial.\nDe martes a domingo , 10:00 a 17:00 hrs.\nEntrada Libre, Exhibición",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Ofrenda Monumental del Zócalo 2026",
+  "start_date": "2026-10-29",
+  "end_date": "2026-11-02",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue_name": "Plaza de la Constitución (Zócalo)",
+  "address": "Plaza de la Constitución, Centro Histórico",
+  "neighborhood": "Centro Histórico",
+  "price_text": "Entrada libre",
+  "price_min": 0,
+  "link": "https://grupoanimal.mx/estilo-de-vida/mega-ofrenda-dia-muertos-zocalo-2026",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": true,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Una ofrenda monumental con una Catrina de 32 m, tapetes de aserrín y 100 mil plantas de cempasúchil en la plancha del Zócalo, abierta gratis del 29 de octubre al 2 de noviembre.",
+  "sources": [
+   "web:animal-mx-estilo-de-vida:5f8a573734ab",
+   "web:animal-mx-estilo-de-vida:8398d0969bbc"
+  ],
+  "source_links": [
+   {
+    "name": "Animal MX estilo de vida",
+    "url": "https://grupoanimal.mx/estilo-de-vida/mega-ofrenda-dia-muertos-zocalo-2026"
+   },
+   {
+    "name": "Animal MX estilo de vida",
+    "url": "https://grupoanimal.mx/estilo-de-vida/ofrenda-monumental-zocalo-cdmx-2026"
+   }
+  ],
+  "source_excerpt": "El Día de Muertos 2026 está cada vez más cerca y como parte de las celebraciones que se llevan a cabo en la CDMX se realiza la exposición de la mega ofrenda que se coloca en la explanada del Zócalo. ... Como cada año, serán pocos los días en que se podrá visitar la ofrenda monumental, en este caso, quienes quieran disfrutar de la exhibición deberán acudir a la Plaza de la Constitución del jueves 29 de octubre al lunes 2 de noviembre. ... Además de la Catrina monumental, la ofrenda contará con un campo de aproximadamente 100 mil plantas de cempasúchil, procedentes de productores del suelo de conservación de la capital, entre ellos los de Xochimilco.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Fandango del inframundo",
+  "start_date": "2026-11-08",
+  "end_date": "2026-11-08",
+  "all_day": false,
+  "time": "13:00",
+  "timezone": "America/Mexico_City",
+  "venue_name": "Centro Cultural del Bosque — Ciclo especial (Paseo de la Reforma y Campo Marte)",
+  "address": "Paseo de la Reforma y Campo Marte s/n, Col. Chapultepec Polanco, Alc. Miguel Hidalgo, C.P. 11560, Ciudad de México",
+  "neighborhood": "Chapultepec Polanco",
+  "price_text": "$80 por función",
+  "price_min": 80,
+  "link": "https://grupoanimal.mx/estilo-de-vida/cartelera-centro-cultural-del-bosque-obras-boletos-promociones",
+  "category": "Film & Performance",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": null,
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Función única dentro del ciclo especial del CCB: travesía al son jarocho a las 13:00 el 8 de noviembre, con boleto a precio accesible.",
+  "sources": [
+   "web:animal-mx-estilo-de-vida:f3ae91c74ec2"
+  ],
+  "source_links": [
+   {
+    "name": "Animal MX estilo de vida",
+    "url": "https://grupoanimal.mx/estilo-de-vida/cartelera-centro-cultural-del-bosque-obras-boletos-promociones"
+   }
+  ],
+  "source_excerpt": "Un ciclo especial de domingo a las 13:00 h diseñado para todas las edades con un costo único de $80 por función: - 8 de noviembre: Fandango del inframundo — Una travesía al son jarocho para recuperar los sonidos de la naturaleza tras la pérdida de la abuela. Ubicación: Paseo de la Reforma y Campo Marte s/n, Col. Chapultepec Polanco, Alc. Miguel Hidalgo, C.P. 11560, Ciudad de México (detrás del Auditorio Nacional). Venta en línea: teatro.inba.gob.mx",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Festival Día de Muertos 100. José Alfredo en el último trago",
+  "start": "2026-10-28T17:00:00-06:00",
+  "end": null,
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue_name": "Auditorio Divino Narciso (Universidad del Claustro de Sor Juana)",
+  "address": "José María Izazaga 92, Centro Histórico, Cuauhtémoc, 06080 Ciudad de México, CDMX",
+  "neighborhood": "Centro Histórico",
+  "price_text": "Entrada libre",
+  "price_min": 0,
+  "link": "https://www.dondeir.com/cultura/noche-de-museos-de-octubre-2026-festeja-dia-de-muertos-y-halloween-en-estos-eventos-en-cdmx/2026/10/",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": true,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Evento gratuito y temático dentro de la Noche de Museos con altar monumental y música en vivo; ideal para quienes buscan una celebración pública y cultural del centenario de José Alfredo Jiménez.",
+  "sources": [
+   "web:d-nde-ir:118501401463"
+  ],
+  "source_links": [
+   {
+    "name": "Dónde Ir",
+    "url": "https://www.dondeir.com/cultura/noche-de-museos-de-octubre-2026-festeja-dia-de-muertos-y-halloween-en-estos-eventos-en-cdmx/2026/10/"
+   }
+  ],
+  "source_excerpt": "Como parte de la edición de octubre de la Noche de Museos, la institución presenta el “Festival Día de Muertos 100. José Alfredo en el último trago“. Una fiesta en el corazón del Centro Histórico para conmemorar el centenario de José Alfredo Jiménez que incluirá un altar monumental, bazar, presentaciones de teatro, visitas guiadas y mariachi en vivo.\nLa entrada es totalmente gratuita y el espacio cuenta con un aforo para 400 personas. Se hace el llamado a llegar temprano para disfrutar de todas las actividades.\n- ¿Dónde? Auditorio Divino Narciso (Universidad del Claustro de Sor Juana). José María Izazaga 92, Centro Histórico, Cuauhtémoc, 06080 Ciudad de México, CDMX.\n- ¿Cuándo? Miércoles 28 de octubre | 17:00 hrs.\n- ¿Cuánto cuesta? Entrada libre.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Noche de Halloween y Taller | MUTEM",
+  "start": "2026-10-28T19:00:00-06:00",
+  "end": null,
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue_name": "Museo del Tequila y el Mezcal (MUTEM)",
+  "address": "Plaza Garibaldi s/n, Centro Histórico, Cuauhtémoc, 06010 Ciudad de México, CDMX",
+  "neighborhood": "Centro Histórico",
+  "price_text": "Noche de Halloween: $120 MXN (incluye drink) | Taller de máscaras: $150 MXN (registro previo vía código QR).",
+  "price_min": 120,
+  "link": "https://www.dondeir.com/cultura/noche-de-museos-de-octubre-2026-festeja-dia-de-muertos-y-halloween-en-estos-eventos-en-cdmx/2026/10/",
+  "category": "Creativity & Crafts",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": true,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Fiesta nocturna con concurso de disfraces y taller práctico en la terraza del MUTEM; cupo limitado y actividad pagada que combina fiesta y creatividad.",
+  "sources": [
+   "web:d-nde-ir:118501401463"
+  ],
+  "source_links": [
+   {
+    "name": "Dónde Ir",
+    "url": "https://www.dondeir.com/cultura/noche-de-museos-de-octubre-2026-festeja-dia-de-muertos-y-halloween-en-estos-eventos-en-cdmx/2026/10/"
+   }
+  ],
+  "source_excerpt": "El Museo del Tequila y el Mezcal (MUTEM) se prepara para una velada llena de terror, diversión y ambiente festivo en su terraza. Como parte de la Noche de Museos, el inmueble ofrecerá una Noche de Halloween con concurso de disfraces,calaveritas literarias, trivia de películas de terror y un Skoopy Drink de bienvenida. Además, podrás poner a prueba tu creatividad en su Taller de Máscaras de Calabaza.\nToma en cuenta que los cupos son limitados: la fiesta en la terraza tiene capacidad para 80 personas, mientras que el taller está reducido a 50 participantes.\n- ¿Dónde? Museo del Tequila y el Mezcal (MUTEM). Plaza Garibaldi s/n, Centro Histórico, Cuauhtémoc, 06010 Ciudad de México, CDMX.\n- ¿Cuándo? Miércoles 28 de octubre | 19:00 hrs.\n- ¿Cuánto cuesta? Noche de Halloween: $120 MXN (incluye drink) | Taller de máscaras: $150 MXN (registro previo vía código QR).",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Leyendas Tradicionales | Museo Casa Estudio Diego Rivera y Frida Kahlo",
+  "start": "2026-10-28T18:30:00-06:00",
+  "end": null,
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue_name": "Museo Casa Estudio Diego Rivera y Frida Kahlo",
+  "address": "Diego Rivera 2, San Ángel Inn, Álvaro Obregón, 01060 Ciudad de México, CDMX",
+  "neighborhood": "San Ángel",
+  "price_text": "Entrada libre",
+  "price_min": 0,
+  "link": "https://www.dondeir.com/cultura/noche-de-museos-de-octubre-2026-festeja-dia-de-muertos-y-halloween-en-estos-eventos-en-cdmx/2026/10/",
+  "category": "Film & Performance",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": true,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Narraciones orales por estudiantes de teatro en un espacio íntimo y gratuito; cupo pequeño por lo que conviene llegar con anticipación.",
+  "sources": [
+   "web:d-nde-ir:118501401463"
+  ],
+  "source_links": [
+   {
+    "name": "Dónde Ir",
+    "url": "https://www.dondeir.com/cultura/noche-de-museos-de-octubre-2026-festeja-dia-de-muertos-y-halloween-en-estos-eventos-en-cdmx/2026/10/"
+   }
+  ],
+  "source_excerpt": "Esta Noche de Museos de octubre, el Museo Casa Estudio Diego Rivera y Frida Kahlo ofrece un encuentro íntimo con las narraciones orales que han tejido la historia mítica y popular de nuestra cultura. Estudiantes de la Escuela Nacional de Teatro presentarán una función especial de Leyendas Tradicionales, donde revivirán los ecos de las historias populares más emblemáticas en un espacio rodeado de arte y tradición.\nEl evento es gratuito y no requiere registro previo, pero el cupo está limitado a 60 personas, por lo que se recomienda llegar con anticipación para asegurar tu lugar.\n- ¿Dónde? Museo Casa Estudio Diego Rivera y Frida Kahlo. Diego Rivera 2, San Ángel Inn, Álvaro Obregón, 01060 Ciudad de México, CDMX.\n- ¿Cuándo? Miércoles 28 de octubre | 18:30 hrs.\n- ¿Cuánto cuesta? Entrada libre.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Performance y Arte Gráfico | Museo Casa de la Cultura Postal",
+  "start": "2026-10-28T17:00:00-06:00",
+  "end": "2026-10-28T20:00:00-06:00",
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue_name": "Museo Casa de la Cultura Postal",
+  "address": "Valentín Gómez Farías 52, San Rafael, Cuauhtémoc, 06470 Ciudad de México, CDMX",
+  "neighborhood": "San Rafael",
+  "price_text": "Entrada libre (el taller de linograbado tiene una cuota de recuperación de $20 a $50 pesos).",
+  "price_min": 0,
+  "link": "https://www.dondeir.com/cultura/noche-de-museos-de-octubre-2026-festeja-dia-de-muertos-y-halloween-en-estos-eventos-en-cdmx/2026/10/",
+  "category": "Creativity & Crafts",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": true,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Combina talleres de linograbado, feria de impresiones y performance en un museo céntrico; ideal para quienes buscan actividades prácticas y gratuitas durante la Noche de Museos.",
+  "sources": [
+   "web:d-nde-ir:118501401463"
+  ],
+  "source_links": [
+   {
+    "name": "Dónde Ir",
+    "url": "https://www.dondeir.com/cultura/noche-de-museos-de-octubre-2026-festeja-dia-de-muertos-y-halloween-en-estos-eventos-en-cdmx/2026/10/"
+   }
+  ],
+  "source_excerpt": "El Museo Casa de la Cultura Postal tendrá un evento imperdible que combina historia, performance y arte gráfico. En esta edición de la Noche de Museos, podrás disfrutar de recorridos libres por sus instalaciones, una feria de impresiones de linograbado, una exposición de arte correo y un conversatorio. Además, la jornada contará con un performance temático con las intervenciones de Benzoato de Sodio, La Prieta Mire, Mine Ante y Mayte Toji.\nEl evento tiene un aforo máximo de 100 personas. Las actividades arrancan a las 17:00 hrs con el taller de linograbado,seguido del performance a las 17:30 hrs y el conversatorio a las 18:30 hrs.\n- ¿Dónde? Museo Casa de la Cultura Postal. Valentín Gómez Farías 52, San Rafael, Cuauhtémoc, 06470 Ciudad de México, CDMX.\n- ¿Cuándo? Miércoles 28 de octubre | 17:00 a 20:00 hrs.\n- ¿Cuánto cuesta? Entrada libre (el taller de linograbado tiene una cuota de recuperación de $20 a $50 pesos).",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "El viaje de Monsieur Kakahuatl al Mictlán | Museo Kaluz",
+  "start": "2026-10-28T18:00:00-06:00",
+  "end": null,
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue_name": "Museo Kaluz",
+  "address": "Av. Hidalgo 85, Centro Histórico, Guerrero, Cuauhtémoc, 06300 Ciudad de México, CDMX",
+  "neighborhood": "Centro Histórico",
+  "price_text": "$150 pesos",
+  "price_min": 150,
+  "link": "https://www.dondeir.com/cultura/noche-de-museos-de-octubre-2026-festeja-dia-de-muertos-y-halloween-en-estos-eventos-en-cdmx/2026/10/",
+  "category": "Film & Performance",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": true,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Espectáculo escénico que mezcla teatro, danza y folclore sobre el origen del chocolate; recomendado para quienes buscan una propuesta performática ligada a las tradiciones.",
+  "sources": [
+   "web:d-nde-ir:118501401463"
+  ],
+  "source_links": [
+   {
+    "name": "Dónde Ir",
+    "url": "https://www.dondeir.com/cultura/noche-de-museos-de-octubre-2026-festeja-dia-de-muertos-y-halloween-en-estos-eventos-en-cdmx/2026/10/"
+   }
+  ],
+  "source_excerpt": "El Museo Kaluz propone una experiencia donde la estética europea y las tradiciones mexicanas se encuentran. Esta Noche de Museos podrás presenciar El viaje de Monsieur Kakahuatl al Mictlán, un espectáculo escénico a cargo de la compañía Nadieshda Colectivo Teatral —bajo la dirección de Miguel Ángel Vaylon— que combina teatro, danza contemporánea y folclore para explorar el origen del chocolate y el culto a los muertos.\nAdemás, en la actividad “Elegancia de Ultratumba“, podrás diseñar tu propia calaverita con el estilo orgánico y sinuoso del Art Nouveau.\nLa jornada iniciará a las 18:00 hrs con recorridos por las salas de exposición, seguida de la actividad de calaveritas (18:00 a 19:00 hrs) y la función teatral a las 19:00 hrs. El cupo está limitado a 300 personas y el servicio de cafetería cerrará a las 21:30 hrs.\n- ¿Dónde? Museo Kaluz. Av. Hidalgo 85, Centro Histórico, Guerrero, Cuauhtémoc, 06300 Ciudad de México,CDMX.\n- ¿Cuándo? Miércoles 28 de octubre | 18:00 hrs.\n- ¿Cuánto cuesta? $150 pesos.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Dioses del Inframundo | Museo de la Inquisición",
+  "start": "2026-10-28T19:00:00-06:00",
+  "end": "2026-10-28T20:30:00-06:00",
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue_name": "Museo de la Inquisición (Palacio de la Escuela de Medicina)",
+  "address": "Brasil 33, Centro Histórico, Cuauhtémoc, 06010 Ciudad de México, CDMX",
+  "neighborhood": "Centro Histórico",
+  "price_text": "$410 MXN general | $380 MXN (estudiantes, maestros, INAPAM y adolescentes de 10 a 14 años). Reservaciones vía WhatsApp al 56 4643 6259 o 55 6198 1223.",
+  "price_min": 380,
+  "link": "https://www.dondeir.com/cultura/noche-de-museos-de-octubre-2026-festeja-dia-de-muertos-y-halloween-en-estos-eventos-en-cdmx/2026/10/",
+  "category": "Film & Performance",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": true,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Recorrido inmersivo y espectáculo multidisciplinario con cupo reducido a 40 personas por función; recomendable reservar por WhatsApp.",
+  "sources": [
+   "web:d-nde-ir:118501401463"
+  ],
+  "source_links": [
+   {
+    "name": "Dónde Ir",
+    "url": "https://www.dondeir.com/cultura/noche-de-museos-de-octubre-2026-festeja-dia-de-muertos-y-halloween-en-estos-eventos-en-cdmx/2026/10/"
+   }
+  ],
+  "source_excerpt": "El Museo de la Inquisición trae Dioses del Inframundo: Deidades de nuestro pasado, un recorrido con experiencia inmersiva y espectáculo multidisciplinario que explora las visiones ancestrales de la muerte. La propuesta combina escenografía, representación artística e historia para adentrar a los asistentes en las creencias sobre el inframundo precolombino.\nPara ese evento se habilitarán dos funciones a las 19:00 y 20:30 hrs. El aforo está estrictamente reducido a 40 personas por función, por lo que es indispensable realizar reservación previa por WhatsApp.\n- ¿Dónde? Museo de la Inquisición (Palacio de la Escuela de Medicina). Brasil 33, Centro Histórico, Cuauhtémoc,06010 Ciudad de México, CDMX.\n- ¿Cuándo? Miércoles 28 de octubre | 19:00 y 20:30 hrs.\n- ¿Cuánto cuesta? $410 MXN general | $380 MXN (estudiantes, maestros, INAPAM y adolescentes de 10 a 14 años). Reservaciones vía WhatsApp al 56 4643 6259 o 55 6198 1223.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "El Camino — instalación de figuras iluminadas en Paseo de la Reforma",
+  "start": "2026-10-23T19:00:00-06:00",
+  "end": "2026-11-08T23:00:00-06:00",
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue_name": "Paseo de la Reforma (del Ángel de la Independencia a la Puerta de los Leones)",
+  "address": "Tramo: Del Ángel de la Independencia a la Puerta de los Leones, C. Río Sena 110, Cuauhtémoc, 06500 Ciudad de México, CDMX",
+  "neighborhood": "Juárez / Bosque de Chapultepec",
+  "price_text": "Entrada libre",
+  "price_min": 0,
+  "link": "https://www.dondeir.com/cultura/figuras-iluminadas-en-reforma-por-dia-de-muertos-hasta-cuando-estaran/2026/10/",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": true,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Gran instalación nocturna gratuita en Paseo de la Reforma con esculturas iluminadas y mapping; es una de las atracciones principales del Día de Muertos en la ciudad.",
+  "sources": [
+   "web:d-nde-ir:cda3f2ac331f"
+  ],
+  "source_links": [
+   {
+    "name": "Dónde Ir",
+    "url": "https://www.dondeir.com/cultura/figuras-iluminadas-en-reforma-por-dia-de-muertos-hasta-cuando-estaran/2026/10/"
+   }
+  ],
+  "source_excerpt": "Como parte de las actividades organizadas por el gobierno de la CDMX en el marco del Día de Muertos, el Paseo de la Reforma se iluminará con “El Camino“, una instalación de figuras monumentales que podrás visitar totalmente gratis a partir del 23 de octubre. Fotos: SECTUR CDMX y Shutterstock.\n @carloscervantesgodoy ✨ ¡Paseo de la Reforma se ilumina por Día de Muertos! 💀🕯️ Disfruta de la exposición de arte lumínico -El Camino-, con esculturas monumentales a lo largo de la avenida. 📍 Tramo: Del Ángel de la Independencia a la Puerta de los Leones 📅 Del 23 de octubre al 8 de noviembre ⏰ Estarán encendidas de lasb19 a las 23 horas 🎟️ Acceso: Gratuito #ParaTi #DóndeIr #DiaDeMuertos #PaseoDeLaReforma #eventosgratiscdmx",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Palacio de Bellas Artes — actividad",
+  "start": "2026-10-31T00:00:00-06:00",
+  "end": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue_name": "Palacio de Bellas Artes",
+  "address": null,
+  "neighborhood": null,
+  "price_text": null,
+  "price_min": null,
+  "link": "https://mexicoescultura.com/estado/9/ciudad-de-mexico",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": null,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": false,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Listado oficial registra actividad en Bellas Artes el 31 de octubre; es un punto cultural relevante dentro de la programación de otoño.",
+  "sources": [
+   "web:m-xico-es-cultura:e1cebab113c8"
+  ],
+  "source_links": [
+   {
+    "name": "México es Cultura",
+    "url": "https://mexicoescultura.com/estado/9/ciudad-de-mexico"
+   }
+  ],
+  "source_excerpt": "Ciudad de México - Palacio de Bellas Artes\n31 de octubre de 2026",
+  "image_url": null,
+  "confidence": 0.6
+ },
+ {
+  "title": "Radio Educación — actividad",
+  "start": "2026-10-28T00:00:00-06:00",
+  "end": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue_name": "Radio Educación",
+  "address": null,
+  "neighborhood": null,
+  "price_text": null,
+  "price_min": null,
+  "link": "https://mexicoescultura.com/estado/9/ciudad-de-mexico",
+  "category": "Talks & Learning",
+  "category_alt": null,
+  "family_friendly": null,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": false,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Registro de actividad en Radio Educación para el 28 de octubre dentro de la programación cultural; útil para quienes buscan eventos mediáticos o transmisiones especiales.",
+  "sources": [
+   "web:m-xico-es-cultura:e1cebab113c8"
+  ],
+  "source_links": [
+   {
+    "name": "México es Cultura",
+    "url": "https://mexicoescultura.com/estado/9/ciudad-de-mexico"
+   }
+  ],
+  "source_excerpt": "Ciudad de México - Radio Educación\n28 de octubre de 2026",
+  "image_url": null,
+  "confidence": 0.6
+ },
+ {
+  "title": "Biblioteca de México — actividad",
+  "start": "2026-10-29T00:00:00-06:00",
+  "end": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue_name": "Biblioteca de México",
+  "address": null,
+  "neighborhood": null,
+  "price_text": null,
+  "price_min": null,
+  "link": "https://mexicoescultura.com/estado/9/ciudad-de-mexico",
+  "category": "Talks & Learning",
+  "category_alt": null,
+  "family_friendly": null,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": false,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Biblioteca de México aparece listada con actividades el 29 de octubre en la programación regional; interesante para público cultural y educativo.",
+  "sources": [
+   "web:m-xico-es-cultura:e1cebab113c8"
+  ],
+  "source_links": [
+   {
+    "name": "México es Cultura",
+    "url": "https://mexicoescultura.com/estado/9/ciudad-de-mexico"
+   }
+  ],
+  "source_excerpt": "Ciudad de México - Biblioteca de México\n29 de octubre de 2026",
+  "image_url": null,
+  "confidence": 0.6
+ },
+ {
+  "title": "En el taller del filósofo — Georges Didi-Huberman (FR)",
+  "start": "2026-10-29T18:00:00-06:00",
+  "end": null,
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue_name": "Casa del Lago UNAM",
+  "address": "Bosque de Chapultepec, Primera Sección S/N, San Miguel Chapultepec, 11850, Ciudad de México",
+  "neighborhood": "San Miguel Chapultepec",
+  "price_text": null,
+  "price_min": null,
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "description": "Exhibición: En el taller del filósofo — Georges Didi-Huberman (FR).",
+  "family_friendly": false,
+  "umbrella": null,
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Exhibition with the renowned scholar Georges Didi-Huberman at Casa del Lago, a respected cultural venue in Chapultepec.",
+  "sources": [
+   "web:casa-del-lago-unam:b1259d90c385"
+  ],
+  "source_links": [
+   {
+    "name": "Casa del Lago UNAM",
+    "url": "https://casadellago.unam.mx/nuevo/wp-content/themes/casa-lago-2022-ver18/programacion/programacion-completa?artes_visuales=artes+visuales"
+   }
+  ],
+  "source_excerpt": "SINESTESIA ACTIVADA 4\nAura Arreola (MX), Guillermo Santamarina (MX), Manuel Trujillo “Morris” y Lucía Ortiz Saúco (MX) y Diana J. Torres (ES)\nCuraduría: Iván Edeza y Giovanna Enríquez (MX)\nnoviembre 7 | 12:00 pm\nConferencia magistral\nIr a ver\nGeorges Didi-Huberman (FR)\noctubre 29 | 6:00 pm\nExhibición\nEn el taller del filósofo\nGeorges Didi-Huberman (FR)\nCuraduría por Lucía Montes Sánchez (ES) y Eliza Mizrahi Balas (MX)",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Conferencia magistral — Georges Didi-Huberman (FR)",
+  "start": "2026-11-07T12:00:00-06:00",
+  "end": null,
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue_name": "Casa del Lago UNAM",
+  "address": "Bosque de Chapultepec, Primera Sección S/N, San Miguel Chapultepec, 11850, Ciudad de México",
+  "neighborhood": "San Miguel Chapultepec",
+  "price_text": null,
+  "price_min": null,
+  "category": "Talks & Learning",
+  "category_alt": null,
+  "description": "Conferencia magistral por Georges Didi-Huberman (FR) dentro de la programación SINESTESIA ACTIVADA 4.",
+  "family_friendly": false,
+  "umbrella": null,
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "A public lecture by internationally recognized art historian Georges Didi-Huberman at Casa del Lago.",
+  "sources": [
+   "web:casa-del-lago-unam:b1259d90c385"
+  ],
+  "source_links": [
+   {
+    "name": "Casa del Lago UNAM",
+    "url": "https://casadellago.unam.mx/nuevo/wp-content/themes/casa-lago-2022-ver18/programacion/programacion-completa?artes_visuales=artes+visuales"
+   }
+  ],
+  "source_excerpt": "SINESTESIA ACTIVADA 4\nAura Arreola (MX), Guillermo Santamarina (MX), Manuel Trujillo “Morris” y Lucía Ortiz Saúco (MX) y Diana J. Torres (ES)\nCuraduría: Iván Edeza y Giovanna Enríquez (MX)\nnoviembre 7 | 12:00 pm\nConferencia magistral\nIr a ver\nGeorges Didi-Huberman (FR)\noctubre 29 | 6:00 pm\nExhibición\nEn el taller del filósofo\nGeorges Didi-Huberman (FR)\nCuraduría por Lucía Montes Sánchez (ES) y Eliza Mizrahi Balas (MX)",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "FEAR OF THE OBJECT — Video performance",
+  "start": "2026-11-05T18:00:00-06:00",
+  "end": null,
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue_name": "Casa del Lago UNAM",
+  "address": "Bosque de Chapultepec, Primera Sección S/N, San Miguel Chapultepec, 11850, Ciudad de México",
+  "neighborhood": "San Miguel Chapultepec",
+  "price_text": null,
+  "price_min": null,
+  "category": "Film & Performance",
+  "category_alt": null,
+  "description": "Video performance FEAR OF THE OBJECT with Kjell Bjørgeengen, Aimée Theriot, Ingar Zach, Chris Cogburn, Alessandra Rombolà and Iván Naranjo.",
+  "family_friendly": false,
+  "umbrella": null,
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "A multidisciplinary video-performance program featuring national and international artists at Casa del Lago.",
+  "sources": [
+   "web:casa-del-lago-unam:7923f4c278e7"
+  ],
+  "source_links": [
+   {
+    "name": "Casa del Lago UNAM",
+    "url": "https://casadellago.unam.mx/nuevo/wp-content/themes/casa-lago-2022-ver18/programacion/programacion-completa?artes_digitales=artes+digitales"
+   }
+  ],
+  "source_excerpt": "Video performance\nFEAR OF THE OBJECT\nKjell Bjørgeengen (NO), Aimée Theriot (MX/NL), Ingar Zach (NO), Chris Cogburn (US/MX), Alessandra Rombolà (NO) e Iván Naranjo (MX)\nnoviembre 5 | 6:00 pm",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Andrew Bird",
+  "start": "2026-10-28",
+  "end": "2026-10-28",
+  "all_day": true,
+  "venue_name": "Teatro de la Ciudad",
+  "venue_address": null,
+  "neighborhood": "Centro",
+  "price_text": "$880 a $2,990",
+  "price_min": 880,
+  "link": "http://www.mehaceruido.com/calendario-de-conciertos/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Andrew Bird is a high-profile indie/folk artist playing the historic Teatro de la Ciudad — a solid pick for fans of melodic songwriting and violin-driven arrangements.",
+  "sources": [
+   "web:me-hace-ruido:34c3043c7e5f",
+   "web:me-hace-ruido:7b050a35e94a"
+  ],
+  "source_links": [
+   {
+    "name": "Me Hace Ruido",
+    "url": "https://www.mehaceruido.com/calendario-de-conciertos/"
+   },
+   {
+    "name": "Me Hace Ruido (mirror)",
+    "url": "http://www.mehaceruido.com/calendario-de-conciertos/"
+   }
+  ],
+  "source_excerpt": "Calendario de conciertos CDMX\nOctubre 28\nAndrew Bird /// Teatro de la Ciudad /// $880 a $2,990\nAustin TV: MA Tour /// Poliforum Siqueiros /// $1,118\nOmar Courtz /// Palacio de los Deportes /// $850 a $4,080\nBurning Caravan /// Foro La Paz /// $350\nOctubre 29\nTIMØ /// Pepsi Center /// $680 a $990\n...",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Jazz en las Rocas",
+  "start": "2026-10-29",
+  "end": "2026-10-29",
+  "all_day": false,
+  "time": "16:00",
+  "venue_name": "PARCUR",
+  "venue_address": null,
+  "neighborhood": null,
+  "price_text": "Gratis 4PM",
+  "price_min": 0,
+  "link": "http://www.mehaceruido.com/calendario-de-conciertos/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": null,
+  "recurring": false,
+  "signals": {
+   "credible_organizer": false,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "A free 4PM jazz event — good low-cost daytime option for families and casual listeners.",
+  "sources": [
+   "web:me-hace-ruido:34c3043c7e5f",
+   "web:me-hace-ruido:7b050a35e94a"
+  ],
+  "source_links": [
+   {
+    "name": "Me Hace Ruido",
+    "url": "https://www.mehaceruido.com/calendario-de-conciertos/"
+   }
+  ],
+  "source_excerpt": "Octubre 29\nTIMØ /// Pepsi Center /// $680 a $990\nAustin TV: MA Tour /// Poliforum Siqueiros /// $1,118\nJazz en las Rocas /// PARCUR /// Gratis 4PM\nJeanette /// Auditorio BB /// $600 a $1,200\nOmar Courtz /// Palacio de los Deportes /// $850 a $4,080\n...",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "TIMØ",
+  "start": "2026-10-29",
+  "end": "2026-10-29",
+  "all_day": true,
+  "venue_name": "Pepsi Center",
+  "venue_address": null,
+  "neighborhood": null,
+  "price_text": "$680 a $990",
+  "price_min": 680,
+  "link": "http://www.mehaceruido.com/calendario-de-conciertos/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "TIMØ at a large arena-style venue — suited for fans seeking an energetic big-room show.",
+  "sources": [
+   "web:me-hace-ruido:34c3043c7e5f",
+   "web:me-hace-ruido:7b050a35e94a"
+  ],
+  "source_links": [
+   {
+    "name": "Me Hace Ruido",
+    "url": "https://www.mehaceruido.com/calendario-de-conciertos/"
+   }
+  ],
+  "source_excerpt": "Octubre 29\nTIMØ /// Pepsi Center /// $680 a $990\nAustin TV: MA Tour /// Poliforum Siqueiros /// $1,118\nJazz en las Rocas /// PARCUR /// Gratis 4PM\nJeanette /// Auditorio BB /// $600 a $1,200\n...",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Maldita Vecindad 40 años",
+  "start": "2026-10-30",
+  "end": "2026-10-30",
+  "all_day": true,
+  "venue_name": "Arena CDMX",
+  "venue_address": null,
+  "neighborhood": "Granjas México / Magdalena Mixhuca",
+  "price_text": "$377 a $1,695",
+  "price_min": 377,
+  "link": "http://www.mehaceruido.com/calendario-de-conciertos/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Celebratory 40-year show by an iconic Mexican rock/ska band at a major arena — notable for longtime fans and larger audiences.",
+  "sources": [
+   "web:me-hace-ruido:34c3043c7e5f",
+   "web:me-hace-ruido:7b050a35e94a"
+  ],
+  "source_links": [
+   {
+    "name": "Me Hace Ruido",
+    "url": "https://www.mehaceruido.com/calendario-de-conciertos/"
+   }
+  ],
+  "source_excerpt": "Octubre 30\nMaldita Vecindad 40 años /// Arena CDMX /// $377 a $1,695\nLNG/SHT /// Pepsi Center /// $650 y $750\nAustin TV: MA Tour /// Poliforum Siqueiros /// $1,118\nLas Eras /// Multiforo Alicia /// $600\n...",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Austin TV: MA Tour",
+  "start": "2026-11-01",
+  "end": "2026-11-01",
+  "all_day": true,
+  "venue_name": "Poliforum Siqueiros",
+  "venue_address": null,
+  "neighborhood": null,
+  "price_text": "$1,118",
+  "price_min": 1118,
+  "link": "http://www.mehaceruido.com/calendario-de-conciertos/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "recurring": true,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": false,
+   "scarcity": false,
+   "corroborated": true,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Austin TV brings an intimate, concept-driven show (MA) to the Polyforum — recommended for listeners interested in cinematic, atmospheric rock; multiple dates are listed for this tour.",
+  "sources": [
+   "web:me-hace-ruido:34c3043c7e5f",
+   "web:me-hace-ruido:7b050a35e94a",
+   "web:m-sporm-s-qu-hacer:f4270279a5fa"
+  ],
+  "source_links": [
+   {
+    "name": "Me Hace Ruido",
+    "url": "https://www.mehaceruido.com/calendario-de-conciertos/"
+   },
+   {
+    "name": "Me Hace Ruido (mirror)",
+    "url": "http://www.mehaceruido.com/calendario-de-conciertos/"
+   },
+   {
+    "name": "Máspormás qué hacer",
+    "url": "https://www.maspormas.com/ciudad/la-diaria/austin-tv-cdmx-asi-seran-los-conciertos-en-polyforum-siqueiros/"
+   }
+  ],
+  "source_excerpt": "Calendario de conciertos CDMX\n...\nOctubre 28\nAndrew Bird /// Teatro de la Ciudad /// $880 a $2,990\nAustin TV: MA Tour /// Poliforum Siqueiros /// $1,118\n...\nNoviembre 1º\nLos Askis /// Arena CDMX /// $314 a $2,008\nLila Downs /// Auditorio Nacional /// $350 a $2,800\nAustin TV: MA Tour /// Poliforum Siqueiros /// $1,118\n...\nÍntimos, cercanos y con un escenario 360: Así serán los shows de Austin TV en CDMX\nAustin TV presenta en vivo MA, un disco sobre el duelo y la pausa, con una experiencia íntima y muy especial en el Polyforum Siqueiros.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Noche de Museos",
+  "start": "2026-10-28T18:00:00-06:00",
+  "end": "2026-10-28T20:00:00-06:00",
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue_name": "Museo Tamayo",
+  "venue_address": "Museo Tamayo, Paseo de la Reforma (Bosque de Chapultepec)",
+  "neighborhood": "San Miguel Chapultepec",
+  "price_text": "Entrada libre al museo de 18 a 20 h",
+  "price_min": 0,
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Gratis y con acceso nocturno a las salas; buena opción para ver exposiciones fuera del horario habitual.",
+  "sources": [
+   "web:museo-tamayo:5b5d253a087c",
+   "web:museo-tamayo:2b9f731b56a3",
+   "web:museo-tamayo:c22a30a3957e"
+  ],
+  "source_links": [
+   {
+    "name": "Museo Tamayo (agenda)",
+    "url": "https://www.museotamayo.org/agenda"
+   },
+   {
+    "name": "Museo Tamayo – Noche de Museos",
+    "url": "https://www.museotamayo.org/agenda/noche-de-museos"
+   }
+  ],
+  "source_excerpt": "Recorridos libres\n28\nOct\n2026\n|\n18:00\nh\n→\n20:00\nNoche de Museos\nRecorrido libre por las exposiciones | 18 → 20 h\nEntrada libre al museo de 18 a 20 h\nÚltimo acceso al museo: 19:45 h\nComo parte de Noche de Museos, el Museo Tamayo invita a hacer un recorrido libre por las salas entre las 18 y las 19:45 h. El acceso es gratuito para todo el público visitante.",
+  "image_url": null,
+  "confidence": 0.9,
+  "sources_raw": [
+   "web:museo-tamayo:5b5d253a087c",
+   "web:museo-tamayo:2b9f731b56a3",
+   "web:museo-tamayo:c22a30a3957e"
+  ]
+ },
+ {
+  "title": "Noches de Jazz — Cool Quartet",
+  "start": "2026-10-28T21:00:00-06:00",
+  "end": null,
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue_name": "Museo Tamayo (Auditorio)",
+  "venue_address": "Museo Tamayo, Paseo de la Reforma (Bosque de Chapultepec)",
+  "neighborhood": "San Miguel Chapultepec",
+  "price_text": "Boleto: $250 pesos",
+  "price_min": 250,
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Concierto de jazz íntimo con ensamble local y entrada de precio moderado; atractivo para quienes buscan programación musical dentro de un museo.",
+  "sources": [
+   "web:museo-tamayo:5b5d253a087c",
+   "web:museo-tamayo:0713c2146a3e",
+   "web:museo-tamayo:c22a30a3957e"
+  ],
+  "source_links": [
+   {
+    "name": "Museo Tamayo (agenda)",
+    "url": "https://www.museotamayo.org/agenda"
+   },
+   {
+    "name": "Noches de Jazz — Cool Quartet",
+    "url": "https://www.museotamayo.org/agenda/noches-de-jazz-presenta-cool-quartet"
+   }
+  ],
+  "source_excerpt": "Noches de jazz presenta: Cool Quartet\nNoches de Jazz\n...\nNoches de Jazz es un programa con más de 20 años de trayectoria dedicado a la promoción y difusión del jazz en la Ciudad de México.\nHorarios del evento:\n18:00 h Acceso a exposiciones y bebida de cortesía\n19:45 h Cierre de barra (no se permite la entrada al museo con la bebida)\n19:50 h Apertura del auditorio\n20:00 h Cierre de exposiciones\n20:15 h Último acceso al concierto\nCool Quartet... Ticket: $250 MXN",
+  "image_url": null,
+  "confidence": 0.9,
+  "sources_raw": [
+   "web:museo-tamayo:5b5d253a087c",
+   "web:museo-tamayo:0713c2146a3e",
+   "web:museo-tamayo:c22a30a3957e"
+  ]
+ },
+ {
+  "title": "CARTER LOGAN — Umbral Expandido (Archivos sonoros, FICUNAM16)",
+  "start": "2026-11-05T14:30:00-06:00",
+  "end": null,
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue_name": "Casa del Lago UNAM",
+  "venue_address": "Bosque de Chapultepec, Primera Sección S/N",
+  "neighborhood": "San Miguel Chapultepec",
+  "price_text": null,
+  "price_min": 0,
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Presentación de archivos sonoros dentro de la programación de Casa del Lago — interesante para público de música experimental y sonido expandido.",
+  "sources": [
+   "web:casa-del-lago-unam:d202ef6c9423"
+  ],
+  "source_links": [
+   {
+    "name": "Casa del Lago UNAM (programación)",
+    "url": "https://casadellago.unam.mx/nuevo/wp-content/themes/casa-lago-2022-ver18/programacion/programacion-completa?musica_y_sonoridades=música%0D%0A%C2%A0%C2%A0%C2%A0+y+sonoridades"
+   }
+  ],
+  "source_excerpt": "Archivos sonoros\nFICUNAM16:\nTEOCALI\nUmbral Expandido en Bosque Resonante\nnoviembre 7 | 2:30 pm\nPerformance, cine expandido y acciones sonoras\nSINESTESIA ACTIVADA 4\n...\nArchivos sonoros\nFICUNAM16: CARTER LOGAN\nUmbral Expandido en Bosque Resonante\nnoviembre 5 | 2:30 pm",
+  "image_url": null,
+  "confidence": 0.9,
+  "sources_raw": [
+   "web:casa-del-lago-unam:d202ef6c9423"
+  ]
+ },
+ {
+  "title": "FEAR OF THE OBJECT — Video performance (FICUNAM16)",
+  "start": "2026-11-05T18:00:00-06:00",
+  "end": null,
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue_name": "Casa del Lago UNAM",
+  "venue_address": "Bosque de Chapultepec, Primera Sección S/N",
+  "neighborhood": "San Miguel Chapultepec",
+  "price_text": null,
+  "price_min": 0,
+  "category": "Film & Performance",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Proyección/performance de video incluida en la programación de FICUNAM16 en Casa del Lago; recomendable para quienes siguen cine expandido y performance sonoro.",
+  "sources": [
+   "web:casa-del-lago-unam:d202ef6c9423"
+  ],
+  "source_links": [
+   {
+    "name": "Casa del Lago UNAM (programación)",
+    "url": "https://casadellago.unam.mx/nuevo/wp-content/themes/casa-lago-2022-ver18/programacion/programacion-completa?musica_y_sonoridades=música%0D%0A%C2%A0%C2%A0%C2%A0+y+sonoridades"
+   }
+  ],
+  "source_excerpt": "Video performance\nFEAR OF THE OBJECT\nKjell Bjørgeengen (NO), Aimée Theriot (MX/NL), Ingar Zach (NO), Chris Cogburn (US/MX), Alessandra Rombolà (NO) e Iván Naranjo (MX)\nnoviembre 5 | 6:00 pm\nArchivos sonoros\nFICUNAM16: CARTER LOGAN\nUmbral Expandido en Bosque Resonante\nnoviembre 5 | 2:30 pm",
+  "image_url": null,
+  "confidence": 0.9,
+  "sources_raw": [
+   "web:casa-del-lago-unam:d202ef6c9423"
+  ]
+ },
+ {
+  "title": "SINESTESIA ACTIVADA 4 — Performance, cine expandido y acciones sonoras",
+  "start": "2026-11-07T12:00:00-06:00",
+  "end": null,
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue_name": "Casa del Lago UNAM",
+  "venue_address": "Bosque de Chapultepec, Primera Sección S/N",
+  "neighborhood": "San Miguel Chapultepec",
+  "price_text": null,
+  "price_min": 0,
+  "category": "Film & Performance",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Sesión matinal de cine expandido y performance curada por Casa del Lago; buena oportunidad para ver propuestas experimentales de sonido y performance.",
+  "sources": [
+   "web:casa-del-lago-unam:d202ef6c9423"
+  ],
+  "source_links": [
+   {
+    "name": "Casa del Lago UNAM (programación)",
+    "url": "https://casadellago.unam.mx/nuevo/wp-content/themes/casa-lago-2022-ver18/programacion/programacion-completa?musica_y_sonoridades=música%0D%0A%C2%A0%C2%A0%C2%A0+y+sonoridades"
+   }
+  ],
+  "source_excerpt": "Performance, cine expandido y acciones sonoras\nSINESTESIA ACTIVADA 4\nAura Arreola (MX), Guillermo Santamarina (MX), Manuel Trujillo “Morris” y Lucía Ortiz Saúco (MX) y Diana J. Torres (ES)\nCuraduría: Iván Edeza y Giovanna Enríquez (MX)\nnoviembre 7 | 12:00 pm",
+  "image_url": null,
+  "confidence": 0.9,
+  "sources_raw": [
+   "web:casa-del-lago-unam:d202ef6c9423"
+  ]
+ },
+ {
+  "title": "Conferencia magistral: Luciérnagas y luces sobrias (política de las alegorías) - Georges Didi-Huberman",
+  "start_date": "2026-10-30",
+  "end_date": "2026-10-30",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue_name": "CCU, Sala Miguel Covarrubias",
+  "address": null,
+  "neighborhood": "Coyoacán",
+  "city": "Ciudad de México",
+  "state": "CDMX",
+  "country": "México",
+  "price_text": null,
+  "price_min": null,
+  "link": "https://cultura.unam.mx/",
+  "category": "Talks & Learning",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Magistral a cargo del historiador Georges Didi-Huberman en la Sala Miguel Covarrubias de la UNAM; recomendable para público interesado en teoría y artes visuales.",
+  "sources": [
+   "web:cultura-unam:454474f96698"
+  ],
+  "source_links": [
+   {
+    "name": "Cultura UNAM",
+    "url": "https://cultura.unam.mx/"
+   }
+  ],
+  "source_excerpt": "Conferencia magistral: Luciérnagas y luces sobrias (política de las alegorías) - Georges Didi-Huberman\nCCU, Sala Miguel Covarrubias\n30\noctubre\n2026",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Exhibición: En el taller del filósofo - Georges Didi-Huberman",
+  "start_date": "2026-10-29",
+  "end_date": "2027-02-28",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue_name": "Casa del Lago, Sala 4",
+  "address": null,
+  "neighborhood": null,
+  "city": "Ciudad de México",
+  "state": "CDMX",
+  "country": "México",
+  "price_text": null,
+  "price_min": null,
+  "link": "https://cultura.unam.mx/",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": null,
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Exhibición prolongada con obra de Georges Didi‑Huberman en Casa del Lago; buena opción para quienes siguen la crítica y el arte contemporáneo.",
+  "sources": [
+   "web:cultura-unam:454474f96698"
+  ],
+  "source_links": [
+   {
+    "name": "Cultura UNAM",
+    "url": "https://cultura.unam.mx/"
+   }
+  ],
+  "source_excerpt": "Exhibición: En el taller del filósofo - Georges Didi-Huberman\nCasa del Lago, Sala 4\n29\noctubre\n2026\n28\nfebrero\n2027",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Recital de violonchelo y piano | Música de cámara",
+  "start_date": "2026-10-31",
+  "end_date": "2026-10-31",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue_name": "CCU, Sala Carlos Chávez",
+  "address": null,
+  "neighborhood": "Coyoacán",
+  "city": "Ciudad de México",
+  "state": "CDMX",
+  "country": "México",
+  "price_text": null,
+  "price_min": null,
+  "link": "https://cultura.unam.mx/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": null,
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Concierto de música de cámara en la Sala Carlos Chávez; ideal para público de música clásica y recitales íntimos.",
+  "sources": [
+   "web:cultura-unam:454474f96698"
+  ],
+  "source_links": [
+   {
+    "name": "Cultura UNAM",
+    "url": "https://cultura.unam.mx/"
+   }
+  ],
+  "source_excerpt": "Música\nRecital de violonchelo y piano | Música de cámara\nCCU, Sala Carlos Chávez\n31\noctubre\n2026",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Festival Cuerpo al Descubierto",
+  "start_date": "2026-10-29",
+  "end_date": "2026-10-31",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue_name": "CCU, Salón de Danza",
+  "address": null,
+  "neighborhood": "Coyoacán",
+  "city": "Ciudad de México",
+  "state": "CDMX",
+  "country": "México",
+  "price_text": null,
+  "price_min": null,
+  "link": "https://cultura.unam.mx/",
+  "category": "Film & Performance",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Festival de danza y movimiento en espacios del CCU; interesante para quienes siguen programación contemporánea de danza.",
+  "sources": [
+   "web:cultura-unam:454474f96698",
+   "web:cultura-unam:a55ed1abe73b"
+  ],
+  "source_links": [
+   {
+    "name": "Cultura UNAM",
+    "url": "https://cultura.unam.mx/"
+   },
+   {
+    "name": "Cultura UNAM (Danza)",
+    "url": "https://cultura.unam.mx/actividades/Danza"
+   }
+  ],
+  "source_excerpt": "Danza\nFestival Cuerpo al Descubierto\nCCU, Salón de Danza\n29\noctubre\n2026\n31\noctubre\n2026",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "¡Latinoamérica Viva! 2026 | Ponce Project II",
+  "start_date": "2026-10-29",
+  "end_date": "2026-10-29",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue_name": "CCU, Sala Carlos Chávez",
+  "address": null,
+  "neighborhood": "Coyoacán",
+  "city": "Ciudad de México",
+  "state": "CDMX",
+  "country": "México",
+  "price_text": null,
+  "price_min": null,
+  "link": "https://cultura.unam.mx/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": null,
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Concierto dentro del ciclo ¡Latinoamérica Viva! en la Sala Carlos Chávez; destaca por programación de música latinoamericana.",
+  "sources": [
+   "web:cultura-unam:454474f96698"
+  ],
+  "source_links": [
+   {
+    "name": "Cultura UNAM",
+    "url": "https://cultura.unam.mx/"
+   }
+  ],
+  "source_excerpt": "Música\n¡Latinoamérica Viva! 2026 | Ponce Project II |...\nCCU, Sala Carlos Chávez\n29\noctubre\n2026",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Pensar Futuros Ciudades, territorios y posibles...",
+  "start_date": "2026-10-28",
+  "end_date": "2026-10-28",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue_name": "Colegio de San Ildefonso, Sala José Clemente Orozco",
+  "address": null,
+  "neighborhood": "Centro (Centro Histórico)",
+  "city": "Ciudad de México",
+  "state": "CDMX",
+  "country": "México",
+  "price_text": null,
+  "price_min": null,
+  "link": "https://cultura.unam.mx/",
+  "category": "Talks & Learning",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Diálogo/ponencia sobre futuros urbanos en el Colegio de San Ildefonso; apto para público académico y profesional.",
+  "sources": [
+   "web:cultura-unam:3f4cd3ad0c1b"
+  ],
+  "source_links": [
+   {
+    "name": "Cultura UNAM",
+    "url": "https://cultura.unam.mx/actividades/Conferencias-y-presentaciones"
+   }
+  ],
+  "source_excerpt": "Pensar Futuros Ciudades, territorios y posibles...\nColegio de San Ildefonso, Sala José Clemente Orozco\n28\noctubre\n2026",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Diálogo Reimaginando los futuros posibles del...",
+  "start_date": "2026-10-31",
+  "end_date": "2026-10-31",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue_name": "Colegio de San Ildefonso, Sala José Clemente Orozco",
+  "address": null,
+  "neighborhood": "Centro (Centro Histórico)",
+  "city": "Ciudad de México",
+  "state": "CDMX",
+  "country": "México",
+  "price_text": null,
+  "price_min": null,
+  "link": "https://cultura.unam.mx/actividades/Conferencias-y-presentaciones",
+  "category": "Talks & Learning",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Conversación en San Ildefonso sobre futuros posibles; interés para quienes siguen pensamiento crítico y políticas culturales.",
+  "sources": [
+   "web:cultura-unam:3f4cd3ad0c1b"
+  ],
+  "source_links": [
+   {
+    "name": "Cultura UNAM",
+    "url": "https://cultura.unam.mx/actividades/Conferencias-y-presentaciones"
+   }
+  ],
+  "source_excerpt": "Conferencias y presentaciones\nDiálogo Reimaginando los futuros posibles del...\nColegio de San Ildefonso, Sala José Clemente Orozco\n31\noctubre\n2026",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Mary in the Junkyard se presentará en el Foro Indie Rocks!",
+  "start_date": "2026-10-29",
+  "end_date": "2026-10-29",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue_name": "Foro Indie Rocks! (Sala A)",
+  "address": "Zacatecas 43",
+  "neighborhood": "Roma Norte",
+  "city": "Ciudad de México",
+  "state": "CDMX",
+  "country": "México",
+  "price_text": "Entrada con registro",
+  "price_min": 0,
+  "link": "https://www.indierocks.mx/agenda/mary-in-the-junkyard-se-presentara-en-el-foro-indie-rocks/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": true,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Debut en México del trío londinense Mary in the Junkyard en Foro Indie Rocks!; registro previo necesario y formato sala íntima.",
+  "sources": [
+   "web:indie-rocks-agenda:67b57e5bdefb",
+   "web:indie-rocks-agenda:da445999d467"
+  ],
+  "source_links": [
+   {
+    "name": "Indie Rocks agenda",
+    "url": "https://www.indierocks.mx/agenda/mary-in-the-junkyard-se-presentara-en-el-foro-indie-rocks/"
+   },
+   {
+    "name": "Indie Rocks agenda (agenda index)",
+    "url": "https://www.indierocks.mx/agenda/"
+   }
+  ],
+  "source_excerpt": "Fecha\n29 Octubre 2026\nLugar\nForo Indie Rocks!\nMexico City, Mexico\nPrecio\nEntrada con registro\nArtista(s)\nPara celebrar el XXIII Aniversario de Ibero 90.9, el trío londinense Mary in the Junkyard se presentará por primera vez en México el 29 de octubre en la Sala (A) del Foro Indie Rocks!. La banda mexicana Petite Amie también participará en esta noche especial.\nEl registro para el ingreso iniciará el 1 de octubre a las 18:00 H, a través de las historias de Instagram del Foro Indie Rocks!",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Live at Fray Nano (festival)",
+  "start_date": "2026-10-29",
+  "end_date": "2026-10-31",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue_name": "Estadio Fray Nano",
+  "address": null,
+  "neighborhood": null,
+  "city": "Ciudad de México",
+  "state": "CDMX",
+  "country": "México",
+  "price_text": "Precios variable (listado de entradas en nota)",
+  "price_min": null,
+  "link": "https://www.indierocks.mx/agenda/live-at-fray-nano-anuncia-a-sus-primeros-confirmados/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": true,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Festival de tres días con artistas internacionales (Calvin Harris, Sean Paul, etc.) en Estadio Fray Nano; importante para fans de grandes carteles.",
+  "sources": [
+   "web:indie-rocks-agenda:c17a3c8d2438",
+   "web:indie-rocks-agenda:da445999d467"
+  ],
+  "source_links": [
+   {
+    "name": "Indie Rocks agenda",
+    "url": "https://www.indierocks.mx/agenda/live-at-fray-nano-anuncia-a-sus-primeros-confirmados/"
+   },
+   {
+    "name": "Indie Rocks agenda (agenda index)",
+    "url": "https://www.indierocks.mx/agenda/"
+   }
+  ],
+  "source_excerpt": "Fecha\n293031 Octubre 2026\nLugar\nEstadio Fray Nano\nMexico City, Mexico\nPrecio\nSEAN PAUL + DEORRO GA $1,112.40 MXN – $2,101.20 MXN VIP PIT $2,842.80 MXN – $4,326.00 MXN ON STAGE VIP $5,932.80 MXN – $7,168.80 MXN CALVIN HARRIS GA $1,545.00 MXN – $3,337.20 MXN VIP PIT $3,955.20 MXN – $5,314.80 MXN ON STAGE VIP $6,798.00 MXN – $8,034.00 MXN\nArtista(s)\nEste mes de octubre, la Ciudad de México será sede de una experiencia única con Live at Fray Nano, un festival presentado por NPU Live que convoca a las figuras más destacadas de la música del 29 al 31 de octubre en el Estadio Fray Nano.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Maldita Vecindad celebrará 40 años en la Arena CDMX",
+  "start_date": "2026-10-30",
+  "end_date": "2026-10-30",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue_name": "Arena Ciudad de México",
+  "address": null,
+  "neighborhood": null,
+  "city": "Ciudad de México",
+  "state": "CDMX",
+  "country": "México",
+  "price_text": "Boing / Pepsi / Amarillo / Elektra / Toyota $1,695.00 MXN",
+  "price_min": 1695,
+  "link": "https://www.indierocks.mx/agenda/precios-maldita-vecindad-celebrara-40-anos-en-la-arena-cdmx/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": true,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Concierto de celebración por 40 años de Maldita Vecindad en Arena CDMX; gran evento masivo para seguidores del rock mestizo y ska.",
+  "sources": [
+   "web:indie-rocks-agenda:5b92b75f7e88",
+   "web:indie-rocks-agenda:da445999d467"
+  ],
+  "source_links": [
+   {
+    "name": "Indie Rocks agenda",
+    "url": "https://www.indierocks.mx/agenda/precios-maldita-vecindad-celebrara-40-anos-en-la-arena-cdmx/"
+   },
+   {
+    "name": "Indie Rocks agenda (agenda index)",
+    "url": "https://www.indierocks.mx/agenda/"
+   }
+  ],
+  "source_excerpt": "Fecha\n30 Octubre 2026\nLugar\nArena Ciudad de México\nMexico City, Mexico\nPrecio\nBoing $1,695.00 MXN Pepsi $1,695.00 MXN Amarillo $1,695.00 MXN Elektra $1,695.00 MXN Toyota $1,695.00 MXN\nArtista(s)\nMaldita Vecindad y los Hijos del Quinto Patio se prepara para un evento monumental: la celebración de su 40 aniversario.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Lng/SHT en Pepsi Center WTC",
+  "start_date": "2026-10-30",
+  "end_date": "2026-10-30",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue_name": "Pepsi Center WTC",
+  "address": null,
+  "neighborhood": "Nápoles",
+  "city": "Ciudad de México",
+  "state": "CDMX",
+  "country": "México",
+  "price_text": "$806.00 MXN, $1,054.00 MXN, $930.00 MXN y $1,860.00 MXN",
+  "price_min": 806,
+  "link": "https://www.indierocks.mx/agenda/precios-lng-sht-llegara-al-pepsi-center/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": true,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Presentación de Lng/SHT en Pepsi Center WTC como parte de su conmemoración; concierto para público joven y de rap/ punk crossover.",
+  "sources": [
+   "web:indie-rocks-agenda:a0928a93fef7",
+   "web:indie-rocks-agenda:da445999d467"
+  ],
+  "source_links": [
+   {
+    "name": "Indie Rocks agenda",
+    "url": "https://www.indierocks.mx/agenda/precios-lng-sht-llegara-al-pepsi-center/"
+   },
+   {
+    "name": "Indie Rocks agenda (agenda index)",
+    "url": "https://www.indierocks.mx/agenda/"
+   }
+  ],
+  "source_excerpt": "Fecha\n30 Octubre 2026\nLugar\nPepsi Center WTC\nMexico City, Mexico\nPrecio\n$806.00 MXN, $1,054.00 MXN, $930.00 MXN y $1,860.00 MXN.\nArtista(s)\nLng/SHT celebra sus 40 años de vida con una única y espectacular presentación en el Pepsi Center de la Ciudad de México. La cita es el próximo 30 de octubre.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Saramalacara en Orbe",
+  "start_date": "2026-10-30",
+  "end_date": "2026-10-30",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue_name": "Orbe",
+  "address": null,
+  "neighborhood": null,
+  "city": "Ciudad de México",
+  "state": "CDMX",
+  "country": "México",
+  "price_text": "General: $700.00 MXN",
+  "price_min": 700,
+  "link": "https://www.indierocks.mx/agenda/precios-saramalacara-se-presentara-en-orbe/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": true,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Show de Saramalacara en Orbe que mezcla trap, electrónica y estética oscura; recomendable para fans de electrónica y hip hop alternativo.",
+  "sources": [
+   "web:indie-rocks-agenda:a95ba01b5f5c",
+   "web:indie-rocks-agenda:da445999d467"
+  ],
+  "source_links": [
+   {
+    "name": "Indie Rocks agenda",
+    "url": "https://www.indierocks.mx/agenda/precios-saramalacara-se-presentara-en-orbe/"
+   },
+   {
+    "name": "Indie Rocks agenda (agenda index)",
+    "url": "https://www.indierocks.mx/agenda/"
+   }
+  ],
+  "source_excerpt": "Saramalacara se presentará en Orbe este 30 de octubre. La artista argentina ofrecerá un show intenso e inmersivo...\nGeneral: $700.00 MXN",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Ofrenda del MUNAL",
+  "start_date": "2026-10-28",
+  "end_date": "2026-11-01",
+  "all_day": true,
+  "venue_name": "Museo Nacional de Arte (MUNAL)",
+  "address": null,
+  "neighborhood": "Centro",
+  "price_text": null,
+  "price_min": null,
+  "link": "https://thehappening.com/las-ofrendas-mas-bonitas-en-cdmx-para-visitar-este-dia-de-muertos/",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Una ofrenda institucional en el Museo Nacional de Arte que combina arte y tradición enfocada en mascotas, ideal para quienes buscan una ofrenda museográfica en el Centro.",
+  "sources": [
+   "web:the-happening:2f063e8c2f3c"
+  ],
+  "source_links": [
+   {
+    "name": "The Happening",
+    "url": "https://thehappening.com/las-ofrendas-mas-bonitas-en-cdmx-para-visitar-este-dia-de-muertos/"
+   }
+  ],
+  "source_excerpt": "Ofrenda del MUNAL\n📍 Museo Nacional de Arte\n📆 Del 28 de octubre al 1 de noviembre\nEste año, el MUNAL dedica su ofrenda a nuestros animales de compañía. Inspirado en El circo, de Nahui Olin, el altar recuerda el lugar que perros y otros animales han ocupado tanto en nuestra vida cotidiana como en el arte.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Mega Ofrenda “Entre Flores y Agaves”",
+  "start_date": "2026-10-29",
+  "end_date": "2026-11-01",
+  "all_day": true,
+  "venue_name": "ArsTélier (Tabasco 242)",
+  "address": "Tabasco 242",
+  "neighborhood": "Roma Norte",
+  "price_text": "$650",
+  "price_min": 650,
+  "link": "https://thehappening.com/las-ofrendas-mas-bonitas-en-cdmx-para-visitar-este-dia-de-muertos/",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": true,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Una experiencia temática que mezcla arte, mezcal y gastronomía con cupo limitado; buena opción para quienes buscan una experiencia de ofrenda con enfoque gastronómico.",
+  "sources": [
+   "web:the-happening:2f063e8c2f3c"
+  ],
+  "source_links": [
+   {
+    "name": "The Happening",
+    "url": "https://thehappening.com/las-ofrendas-mas-bonitas-en-cdmx-para-visitar-este-dia-de-muertos/"
+   }
+  ],
+  "source_excerpt": "Mega Ofrenda “Entre Flores y Agaves”\n📍 Tabasco 242, Roma Norte\n📆 Del 29 de octubre al 1 de noviembre\nArsTelier reúne arte, mezcal y gastronomía guerrerense en Entre Flores y Agaves, ... La experiencia tiene un costo de $650 y cupo limitado. Reservaciones al: 56-2003-8197.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Altar de Día de Muertos en Casa Onora",
+  "start_date": "2026-10-01",
+  "end_date": "2026-10-31",
+  "all_day": true,
+  "venue_name": "Casa Onora",
+  "address": "Gobernador Ignacio Esteva 12",
+  "neighborhood": "San Miguel Chapultepec",
+  "price_text": null,
+  "price_min": null,
+  "link": "https://thehappening.com/las-ofrendas-mas-bonitas-en-cdmx-para-visitar-este-dia-de-muertos/",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Una ofrenda basada en la tradición otomí y el trabajo del papel amate, ideal para quienes buscan artesanía y detalle en un espacio de diseño.",
+  "sources": [
+   "web:the-happening:2f063e8c2f3c"
+  ],
+  "source_links": [
+   {
+    "name": "The Happening",
+    "url": "https://thehappening.com/las-ofrendas-mas-bonitas-en-cdmx-para-visitar-este-dia-de-muertos/"
+   }
+  ],
+  "source_excerpt": "Altar de Día de Muertos en Casa Onora\n📍 Gobernador Ignacio Esteva 12, San Miguel Chapultepec\n📆 Hasta el 31 de octubre\nCasa Onora lleva al showroom una ofrenda creada bajo la tradición otomí de San Pablito, Pahuatlán, Puebla. ... Las visitas son bajo cita previa.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Ofrenda Monumental en el Zócalo",
+  "start_date": "2026-10-24",
+  "end_date": "2026-11-02",
+  "all_day": true,
+  "venue_name": "Zócalo de la Ciudad de México",
+  "address": null,
+  "neighborhood": "Centro",
+  "price_text": null,
+  "price_min": null,
+  "link": "https://thehappening.com/las-ofrendas-mas-bonitas-en-cdmx-para-visitar-este-dia-de-muertos/",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": true,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "La ofrenda más grande de la ciudad con una figura monumental de 32 metros: un clásico imprescindible para vivir Día de Muertos en su versión pública y masiva.",
+  "sources": [
+   "web:the-happening:2f063e8c2f3c"
+  ],
+  "source_links": [
+   {
+    "name": "The Happening",
+    "url": "https://thehappening.com/las-ofrendas-mas-bonitas-en-cdmx-para-visitar-este-dia-de-muertos/"
+   }
+  ],
+  "source_excerpt": "Ofrenda Monumental en el Zócalo\n📍 Zócalo de la Ciudad de México\n📆 Hasta el 2 de noviembre\nLa ofrenda más grande de la ciudad vuelve al Zócalo ... incluye una figura monumental de cartonería de 32 metros, tapetes de aserrín y miles de flores de cempasúchil.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Altar 2026 x Proyectos Públicos — Volver a la Tierra",
+  "start_date": "2026-10-30",
+  "end_date": "2026-11-02",
+  "all_day": true,
+  "venue_name": "Proyectos Públicos (General Prim 30)",
+  "address": "General Prim 30",
+  "neighborhood": "Juárez",
+  "price_text": "La entrada es gratuita con registro previo.",
+  "price_min": 0,
+  "link": "https://thehappening.com/las-ofrendas-mas-bonitas-en-cdmx-para-visitar-este-dia-de-muertos/",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Una ofrenda curada que integra paisaje, oficios y comunidades; entrada gratuita con registro, buena para quienes buscan una propuesta contemporánea y reflexiva.",
+  "sources": [
+   "web:the-happening:2f063e8c2f3c"
+  ],
+  "source_links": [
+   {
+    "name": "The Happening",
+    "url": "https://thehappening.com/las-ofrendas-mas-bonitas-en-cdmx-para-visitar-este-dia-de-muertos/"
+   }
+  ],
+  "source_excerpt": "Altar 2026 x Proyectos Públicos\n📍 General Prim 30, Juárez\n📆 Del 30 de octubre al 2 de noviembre\n... Volver a la Tierra ... La entrada es gratuita con registro previo.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Megaofrenda de la UNAM (Explanada de Universum)",
+  "start_date": "2026-10-31",
+  "end_date": "2026-11-02",
+  "all_day": true,
+  "venue_name": "Explanada de Universum (UNAM)",
+  "address": null,
+  "neighborhood": "Coyoacán",
+  "price_text": null,
+  "price_min": null,
+  "link": "https://thehappening.com/las-ofrendas-mas-bonitas-en-cdmx-para-visitar-este-dia-de-muertos/",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": true,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "La megaofrenda universitaria que celebra los 475 años de la UNAM; montaje colectivo y gratuito que suele reunir a muchas personas.",
+  "sources": [
+   "web:the-happening:2f063e8c2f3c"
+  ],
+  "source_links": [
+   {
+    "name": "The Happening",
+    "url": "https://thehappening.com/las-ofrendas-mas-bonitas-en-cdmx-para-visitar-este-dia-de-muertos/"
+   }
+  ],
+  "source_excerpt": "Megaofrenda de la UNAM\n📍 Explanada de Universum\n📆 Del 31 de octubre al 2 de noviembre\nLa Megaofrenda universitaria celebra este año los 475 años de historia de la UNAM.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Open House CDMX — Edición Día de Muertos",
+  "start_date": "2026-10-30",
+  "end_date": "2026-11-03",
+  "all_day": true,
+  "venue_name": "Varias ubicaciones (Open House CDMX)",
+  "address": null,
+  "neighborhood": null,
+  "price_text": null,
+  "price_min": null,
+  "link": "https://thehappening.com/las-ofrendas-mas-bonitas-en-cdmx-para-visitar-este-dia-de-muertos/",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Open House trae recorridos, talleres y ofrendas contemporáneas en espacios arquitectónicos: buena opción para quien busca combinar arquitectura y tradición.",
+  "sources": [
+   "web:the-happening:2f063e8c2f3c"
+  ],
+  "source_links": [
+   {
+    "name": "The Happening",
+    "url": "https://thehappening.com/las-ofrendas-mas-bonitas-en-cdmx-para-visitar-este-dia-de-muertos/"
+   }
+  ],
+  "source_excerpt": "Open House CDMX Día de Muertos\n📍 Varias ubicaciones\n📆 Del 30 de octubre al 3 de noviembre\nOpen House CDMX regresa con su edición especial de Día de Muertos... incluirá recorridos, talleres y activaciones.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Pan de ánimas: altar de muertos — Palacio de Iturbide",
+  "start_date": "2026-10-24",
+  "end_date": "2026-11-05",
+  "all_day": true,
+  "venue_name": "Palacio de Cultura Banamex – Palacio de Iturbide",
+  "address": null,
+  "neighborhood": "Centro",
+  "price_text": null,
+  "price_min": null,
+  "link": "https://thehappening.com/las-ofrendas-mas-bonitas-en-cdmx-para-visitar-este-dia-de-muertos/",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Instalación en el Palacio de Iturbide con la participación de la diseñadora Carla Fernández: recomendable para quien busca diseño aplicado a la tradición.",
+  "sources": [
+   "web:the-happening:2f063e8c2f3c"
+  ],
+  "source_links": [
+   {
+    "name": "The Happening",
+    "url": "https://thehappening.com/las-ofrendas-mas-bonitas-en-cdmx-para-visitar-este-dia-de-muertos/"
+   }
+  ],
+  "source_excerpt": "Pan de ánimas: altar de muertos\n📍 Palacio de Cultura Banamex – Palacio de Iturbide\n📆 Hasta el 5 de noviembre\nEl Palacio de Iturbide presenta Pan de ánimas, un altar realizado con la participación de la diseñadora Carla Fernández.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Ofrenda en el Museo Casa Estudio Diego Rivera y Frida Kahlo",
+  "start_date": "2026-10-24",
+  "end_date": "2026-11-08",
+  "all_day": true,
+  "venue_name": "Museo Casa Estudio Diego Rivera y Frida Kahlo",
+  "address": "Diego Rivera s/n",
+  "neighborhood": "San Ángel",
+  "price_text": null,
+  "price_min": null,
+  "link": "https://thehappening.com/las-ofrendas-mas-bonitas-en-cdmx-para-visitar-este-dia-de-muertos/",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Ofrenda que dialoga con la cartonería y los judas, ideal para quienes buscan la intersección entre arte popular y tradición en San Ángel.",
+  "sources": [
+   "web:the-happening:2f063e8c2f3c"
+  ],
+  "source_links": [
+   {
+    "name": "The Happening",
+    "url": "https://thehappening.com/las-ofrendas-mas-bonitas-en-cdmx-para-visitar-este-dia-de-muertos/"
+   }
+  ],
+  "source_excerpt": "Ofrenda en el Museo Casa Estudio Diego Rivera y Frida Kahlo\n📍 Diego Rivera s/n, San Ángel Inn\n📆 Hasta el 8 de noviembre\nDiego Rivera y sus famosos judas son el punto de partida de la ofrenda del Museo Casa Estudio.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Kuepa — Museo de la Cancillería",
+  "start_date": "2026-10-16",
+  "end_date": "2026-11-27",
+  "all_day": true,
+  "venue_name": "Museo de la Cancillería",
+  "address": null,
+  "neighborhood": "Centro",
+  "price_text": null,
+  "price_min": null,
+  "link": "https://thehappening.com/exposiciones-que-estan-en-nuestra-bucket-list-este-noviembre-2026/",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": null,
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Muestra colectiva de la Colección Pago en Especie 2026 con obras que exploran transformación y huella; buena para quienes siguen la escena contemporánea.",
+  "sources": [
+   "web:the-happening:25fe0ff6af51"
+  ],
+  "source_links": [
+   {
+    "name": "The Happening",
+    "url": "https://thehappening.com/exposiciones-que-estan-en-nuestra-bucket-list-este-noviembre-2026/"
+   }
+  ],
+  "source_excerpt": "Kuepa\n📍Museo de la Cancillería\n📆 Del 16 de octubre al 27 de noviembre de 2026\nKuepa —que puede traducirse como volverse, darse la vuelta o transformarse— reúne piezas de la Colección Pago en Especie 2026 bajo la curaduría de Mariana Lagunes.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Álvaro Urbano: Helen — Museo Jumex",
+  "start_date": "2026-10-16",
+  "end_date": "2027-02-07",
+  "all_day": true,
+  "venue_name": "Museo Jumex",
+  "address": null,
+  "neighborhood": "Polanco",
+  "price_text": null,
+  "price_min": null,
+  "link": "https://thehappening.com/exposiciones-que-estan-en-nuestra-bucket-list-este-noviembre-2026/",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": null,
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Exposición que recupera la figura de Helen Fowler O’Gorman para hablar de arquitectura, botánica y memoria; imprescindible para seguidores de Jumex.",
+  "sources": [
+   "web:the-happening:25fe0ff6af51"
+  ],
+  "source_links": [
+   {
+    "name": "The Happening",
+    "url": "https://thehappening.com/exposiciones-que-estan-en-nuestra-bucket-list-este-noviembre-2026/"
+   }
+  ],
+  "source_excerpt": "Álvaro Urbano: Helen\n📍Museo Jumex\n📆 Del 16 de octubre de 2026 al 7 de febrero de 2027\nÁlvaro Urbano recupera la historia de Helen Fowler O’Gorman ... para construir una exposición alrededor de la arquitectura, la botánica y la memoria.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "The Pressure of Time — BODEGA (Doctores)",
+  "start_date": "2026-10-22",
+  "end_date": "2026-12-18",
+  "all_day": true,
+  "venue_name": "BODEGA",
+  "address": "Dr. Andrade 41",
+  "neighborhood": "Doctores",
+  "price_text": "Entrada libre",
+  "price_min": 0,
+  "link": "https://thehappening.com/exposiciones-que-estan-en-nuestra-bucket-list-este-noviembre-2026/",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": null,
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Primera exposición del artista Leonel Salguero en BODEGA; entrada libre y recomendable para quienes gustan del trabajo pictórico que juega con la repetición y lo cotidiano.",
+  "sources": [
+   "web:the-happening:25fe0ff6af51"
+  ],
+  "source_links": [
+   {
+    "name": "The Happening",
+    "url": "https://thehappening.com/exposiciones-que-estan-en-nuestra-bucket-list-este-noviembre-2026/"
+   }
+  ],
+  "source_excerpt": "The Pressure of Time\n📍Dr. Andrade 41, Doctores\n📆 Del 22 de octubre al 18 de diciembre de 2026\nBODEGA presenta la primera exposición de Leonel Salguero en el espacio. ... La entrada es libre.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "El eterno retorno — Museo de Arte Carrillo Gil",
+  "start_date": "2026-10-24",
+  "end_date": null,
+  "all_day": true,
+  "venue_name": "Museo de Arte Carrillo Gil",
+  "address": null,
+  "neighborhood": "San Ángel",
+  "price_text": null,
+  "price_min": null,
+  "link": "https://thehappening.com/exposiciones-que-estan-en-nuestra-bucket-list-este-noviembre-2026/",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": null,
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Exposición dedicada a Manuel Rocha Iturbide que recorre su trabajo en arte sonoro; indicada para quienes quieran escuchar tanto como mirar.",
+  "sources": [
+   "web:the-happening:25fe0ff6af51"
+  ],
+  "source_links": [
+   {
+    "name": "The Happening",
+    "url": "https://thehappening.com/exposiciones-que-estan-en-nuestra-bucket-list-este-noviembre-2026/"
+   }
+  ],
+  "source_excerpt": "El eterno retorno\n📍Museo de Arte Carrillo Gil\n📆 A partir del 24 de octubre\nEl Museo de Arte Carrillo Gil dedica una exposición a Manuel Rocha Iturbide, uno de los referentes del arte sonoro en México.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Muertos de Egipto y México — Museo Nacional de las Culturas del Mundo",
+  "start_date": "2026-10-28",
+  "end_date": null,
+  "all_day": true,
+  "venue_name": "Museo Nacional de las Culturas del Mundo",
+  "address": null,
+  "neighborhood": "Centro",
+  "price_text": null,
+  "price_min": null,
+  "link": "https://thehappening.com/exposiciones-que-estan-en-nuestra-bucket-list-este-noviembre-2026/",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": null,
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Encuentro entre imaginarios egipcios y mexicanos sobre la muerte con obra de diez artistas; buena para quien busca diálogo cultural y museográfico.",
+  "sources": [
+   "web:the-happening:25fe0ff6af51"
+  ],
+  "source_links": [
+   {
+    "name": "The Happening",
+    "url": "https://thehappening.com/exposiciones-que-estan-en-nuestra-bucket-list-este-noviembre-2026/"
+   }
+  ],
+  "source_excerpt": "Muertos de Egipto y México\n📍Museo Nacional de las Culturas del Mundo\n📆 A partir del 28 de octubre\nDos culturas con una relación muy particular con la muerte se encuentran en esta exposición dentro de la Sala de Egipto faraónico.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "El Arte Nuevo. Simbolismo y Art nouveau en México — Museo Kaluz",
+  "start_date": "2026-10-30",
+  "end_date": "2027-03-08",
+  "all_day": true,
+  "venue_name": "Museo Kaluz",
+  "address": null,
+  "neighborhood": "Polanco",
+  "price_text": null,
+  "price_min": null,
+  "link": "https://thehappening.com/exposiciones-que-estan-en-nuestra-bucket-list-este-noviembre-2026/",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": null,
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Exposición que reúne simbolismo y Art Nouveau en México con obras de figuras clásicas; ideal para aficionados a historia del arte.",
+  "sources": [
+   "web:the-happening:25fe0ff6af51"
+  ],
+  "source_links": [
+   {
+    "name": "The Happening",
+    "url": "https://thehappening.com/exposiciones-que-estan-en-nuestra-bucket-list-este-noviembre-2026/"
+   }
+  ],
+  "source_excerpt": "El Arte Nuevo. Simbolismo y Art nouveau en México\n📍Museo Kaluz\n📆 Del 30 de octubre de 2026 al 8 de marzo de 2027\nEl Museo Kaluz mira hacia finales del siglo XIX y principios del XX para explorar cómo el simbolismo y el Art nouveau llegaron a México.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Carlos Amorales: Anteparaíso — kurimanzutto",
+  "start_date": "2026-11-05",
+  "end_date": "2026-12-16",
+  "all_day": true,
+  "venue_name": "kurimanzutto",
+  "address": null,
+  "neighborhood": "Roma Norte",
+  "price_text": null,
+  "price_min": null,
+  "link": "https://thehappening.com/exposiciones-que-estan-en-nuestra-bucket-list-este-noviembre-2026/",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": null,
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Nueva muestra de Carlos Amorales que explora figuras imaginarias y AI; recomendable para quienes siguen la escena contemporánea nacional.",
+  "sources": [
+   "web:the-happening:25fe0ff6af51"
+  ],
+  "source_links": [
+   {
+    "name": "The Happening",
+    "url": "https://thehappening.com/exposiciones-que-estan-en-nuestra-bucket-list-este-noviembre-2026/"
+   }
+  ],
+  "source_excerpt": "Carlos Amorales: Anteparaíso\n📍kurimanzutto\n📆 Del 5 de noviembre al 16 de diciembre de 2026\nCarlos Amorales construye un universo poblado por criaturas imaginarias para hablar de... inteligencia artificial.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Cena de Día de Muertos — Taberna del León",
+  "start_date": "2026-10-29",
+  "end_date": "2026-10-29",
+  "all_day": false,
+  "time": "19:00",
+  "venue_name": "Taberna del León (Plaza Loreto)",
+  "address": "Plaza Loreto",
+  "neighborhood": "Tizapán San Ángel",
+  "price_text": "$2,250 por persona (servicio incluido)",
+  "price_min": 2250,
+  "link": "https://thehappening.com/cenas-de-dia-de-muertos-en-cdmx-para-celebrar-alrededor-de-la-mesa/",
+  "category": "Food & Drink",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Cena con marimba, antojitos y tequila por Mónica Patiño: buena opción para una noche festiva y tradicional en San Ángel.",
+  "sources": [
+   "web:the-happening:90dfe137ec94"
+  ],
+  "source_links": [
+   {
+    "name": "The Happening",
+    "url": "https://thehappening.com/cenas-de-dia-de-muertos-en-cdmx-para-celebrar-alrededor-de-la-mesa/"
+   }
+  ],
+  "source_excerpt": "Taberna del León\n📍Plaza Loreto, Tizapán San Ángel\n📅  29 de octubre a las 19:00 hrs\nMónica Patiño celebra Día de Muertos con una cena especial en Taberna del León. ... El costo es de $2,250 por persona, con servicio incluido, y puedes reservar al 55-5616-2110.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Cena de Día de Muertos — Migrante",
+  "start_date": "2026-10-30",
+  "end_date": "2026-10-30",
+  "all_day": false,
+  "time": "19:00",
+  "venue_name": "Migrante",
+  "address": "Chiapas 186",
+  "neighborhood": "Roma Norte",
+  "price_text": "$2,250 por persona",
+  "price_min": 2250,
+  "link": "https://thehappening.com/cenas-de-dia-de-muertos-en-cdmx-para-celebrar-alrededor-de-la-mesa/",
+  "category": "Food & Drink",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Cena de seis tiempos inspirada en Michoacán en un restaurante de Roma Norte; reservaciones vía OpenTable.",
+  "sources": [
+   "web:the-happening:90dfe137ec94"
+  ],
+  "source_links": [
+   {
+    "name": "The Happening",
+    "url": "https://thehappening.com/cenas-de-dia-de-muertos-en-cdmx-para-celebrar-alrededor-de-la-mesa/"
+   }
+  ],
+  "source_excerpt": "Migrante\n📍Chiapas 186, Roma Norte\n📆30 de octubre a las 19:00 horas\nMigrante dedica su cena de Día de Muertos a Michoacán ... El costo es de $2,250 por persona y las reservaciones están disponibles vía OpenTable.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Cenas de Día de Muertos — Fónico (noches especiales)",
+  "start_date": "2026-10-30",
+  "end_date": "2026-10-31",
+  "all_day": false,
+  "venue_name": "Fónico",
+  "address": "Salamanca 85",
+  "neighborhood": "Roma Norte",
+  "price_text": "$1,450 por persona",
+  "price_min": 1450,
+  "link": "https://thehappening.com/cenas-de-dia-de-muertos-en-cdmx-para-celebrar-alrededor-de-la-mesa/",
+  "category": "Food & Drink",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Cenas con cocineras tradicionales de Guanajuato servidas family style; opción más íntima y gastronómica en Roma Norte.",
+  "sources": [
+   "web:the-happening:90dfe137ec94"
+  ],
+  "source_links": [
+   {
+    "name": "The Happening",
+    "url": "https://thehappening.com/cenas-de-dia-de-muertos-en-cdmx-para-celebrar-alrededor-de-la-mesa/"
+   }
+  ],
+  "source_excerpt": "Fónico\n📍Salamanca 85, Roma Norte\n📆 30 y 31 de octubre\nFónico recibe a cocineras tradicionales de Guanajuato para una cena especial de tres tiempos servida en formato family style. ... El costo es de $1,450 por persona.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Ofrenda Viva — Arca Tierra × Domingo (Chinampa del Sol)",
+  "start_date": "2026-10-31",
+  "end_date": "2026-10-31",
+  "all_day": false,
+  "time": "12:00",
+  "venue_name": "Chinampa del Sol",
+  "address": null,
+  "neighborhood": "Xochimilco",
+  "price_text": null,
+  "price_min": null,
+  "link": "https://thehappening.com/cenas-de-dia-de-muertos-en-cdmx-para-celebrar-alrededor-de-la-mesa/",
+  "category": "Food & Drink",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Comida en chinampa entre flores y productos de temporada: uno de los planes más especiales y singulares para Día de Muertos.",
+  "sources": [
+   "web:the-happening:90dfe137ec94"
+  ],
+  "source_links": [
+   {
+    "name": "The Happening",
+    "url": "https://thehappening.com/cenas-de-dia-de-muertos-en-cdmx-para-celebrar-alrededor-de-la-mesa/"
+   }
+  ],
+  "source_excerpt": "Arca Tierra × Domingo\n📍Chinampa del Sol, Xochimilco\n📆31 de octubre a las 12:00 horas\n... Arca Tierra y Domingo se encuentran en Chinampa del Sol para Ofrenda Viva, una comida entre flores, productos de temporada ... Aparta tu lugar en este link.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Cantina Filomeno — Celebración de Día de Muertos",
+  "start_date": "2026-10-31",
+  "end_date": "2026-10-31",
+  "all_day": true,
+  "venue_name": "Cantina Filomeno",
+  "address": "Durango 93",
+  "neighborhood": "Roma Norte",
+  "price_text": null,
+  "price_min": null,
+  "link": "https://thehappening.com/cenas-de-dia-de-muertos-en-cdmx-para-celebrar-alrededor-de-la-mesa/",
+  "category": "Food & Drink",
+  "category_alt": "Clubs & Parties",
+  "family_friendly": false,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Cena y fiesta con desfile de catrinas y música en vivo: ideal si buscas comenzar con cena y seguir la noche con ambiente festivo.",
+  "sources": [
+   "web:the-happening:90dfe137ec94"
+  ],
+  "source_links": [
+   {
+    "name": "The Happening",
+    "url": "https://thehappening.com/cenas-de-dia-de-muertos-en-cdmx-para-celebrar-alrededor-de-la-mesa/"
+   }
+  ],
+  "source_excerpt": "Cantina Filomeno\n📍Durango 93, Roma Norte\n📆31 de octubre\nCantina Filomeno transforma la noche del 31 de octubre con una celebración que va más allá de la cena. Habrá desfile de catrinas, música en vivo y experiencias especiales alrededor de Día de Muertos.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "La Tavola della Memoria — Cena maridaje en Fiamma Reforma",
+  "start_date": "2026-11-01",
+  "end_date": "2026-11-01",
+  "all_day": false,
+  "time": "20:00",
+  "venue_name": "Fiamma Reforma",
+  "address": "Av. P.º de la Reforma 390",
+  "neighborhood": "Juárez",
+  "price_text": "$1,650 por persona",
+  "price_min": 1650,
+  "link": "https://thehappening.com/cenas-de-dia-de-muertos-en-cdmx-para-celebrar-alrededor-de-la-mesa/",
+  "category": "Food & Drink",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Cena maridaje que combina tradición mexicana e italiana en un formato íntimo; buena opción para cenas de conmemoración.",
+  "sources": [
+   "web:the-happening:90dfe137ec94"
+  ],
+  "source_links": [
+   {
+    "name": "The Happening",
+    "url": "https://thehappening.com/cenas-de-dia-de-muertos-en-cdmx-para-celebrar-alrededor-de-la-mesa/"
+   }
+  ],
+  "source_excerpt": "Fiamma Reforma\n📍Av. P.º de la Reforma 390, Juárez\n📆1 de noviembre a las 20:00 horas\nMéxico e Italia se encuentran alrededor de una misma mesa en La Tavola della Memoria, una cena maridaje de cinco tiempos ... El menú tiene un costo de $1,650 por persona.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Cena de Día de Muertos — Marta",
+  "start_date": "2026-11-01",
+  "end_date": "2026-11-02",
+  "all_day": true,
+  "venue_name": "Marta",
+  "address": "Río Lerma 297",
+  "neighborhood": "Cuauhtémoc",
+  "price_text": "$1,600 por persona o $2,800 con maridaje",
+  "price_min": 1600,
+  "link": "https://thehappening.com/cenas-de-dia-de-muertos-en-cdmx-para-celebrar-alrededor-de-la-mesa/",
+  "category": "Food & Drink",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Cena de ocho tiempos que incorpora elementos de la ofrenda; ideal para una experiencia gastronómica simbólica en Reforma/Cuauhtémoc.",
+  "sources": [
+   "web:the-happening:90dfe137ec94"
+  ],
+  "source_links": [
+   {
+    "name": "The Happening",
+    "url": "https://thehappening.com/cenas-de-dia-de-muertos-en-cdmx-para-celebrar-alrededor-de-la-mesa/"
+   }
+  ],
+  "source_excerpt": "Marta\n📍Río Lerma 297, Cuauhtémoc\n📆 1 y 2 de noviembre\nMarta construye su cena de Día de Muertos alrededor de los elementos de una ofrenda. El menú de ocho tiempos ... cuesta $1,600 por persona o $2,800 con maridaje, e incluye un coctel de cortesía.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "ÁLVARO URBANO: HELEN",
+  "start_date": "2026-10-16",
+  "end_date": "2027-02-07",
+  "all_day": true,
+  "venue_name": "Museo Jumex",
+  "address": "Miguel de Cervantes Saavedra 303, Colonia Granada, 11520 Ciudad de México",
+  "neighborhood": "Granada",
+  "price_text": null,
+  "price_min": null,
+  "link": "https://www.fundacionjumex.org/es/exposiciones/822-alvaro-urbano-helen",
+  "category": "Art & Exhibitions",
+  "family_friendly": false,
+  "umbrella": null,
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Exposición individual reciente que reconstruye atmósferas y relatos en torno a la Casa Cueva; recomendable para quien siga la escena de arte contemporáneo internacional en CDMX.",
+  "sources": [
+   "web:museo-jumex:a25179d776a4"
+  ],
+  "source_links": [
+   {
+    "name": "Museo Jumex",
+    "url": "https://www.fundacionjumex.org/es/exposiciones/822-alvaro-urbano-helen"
+   }
+  ],
+  "source_excerpt": "16.OCT.2026 - 07.FEB.2027\nÁLVARO URBANO: HELEN\nLa exposición Helen del artista Álvaro Urbano (Madrid,1983) es un homenaje al trabajo y la práctica de Helen Fowler O'Gorman, que destaca su sensibilidad y fascinación por la diversidad botánica del altiplano central de México. En ella convergen tiempos y memorias en torno a la Casa Cueva, una de las obras más emblemáticas de la arquitectura mexicana. Construida a mediados del siglo pasado en el Pedregal de San Ángel, este sitio reúne la historia de la artista y su esposo el arquitecto Juan O'Gorman, quienes diseñaron, construyeron y habitaron esta casa y su jardín.\nUrbano imagina la Casa Cueva como un testigo silencioso que conserva los estratos del tiempo acumulado, manifestados tanto en la materia arquitectónica como en la dimensión vegetal.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "RAÚL SILVA: GATEWAY",
+  "start_date": "2026-10-16",
+  "end_date": "2027-02-07",
+  "all_day": true,
+  "venue_name": "Museo Jumex",
+  "address": "Miguel de Cervantes Saavedra 303, Colonia Granada, 11520 Ciudad de México",
+  "neighborhood": "Granada",
+  "price_text": null,
+  "price_min": null,
+  "link": "https://www.fundacionjumex.org/es/exposiciones/756-raul-silva-gateway",
+  "category": "Art & Exhibitions",
+  "family_friendly": false,
+  "umbrella": null,
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Primera muestra individual en México del artista Raúl Silva que explora telecomunicaciones y territorio; interesante para quienes siguen arte contemporáneo y medios.",
+  "sources": [
+   "web:museo-jumex:e75714fc6b6c"
+  ],
+  "source_links": [
+   {
+    "name": "Museo Jumex",
+    "url": "https://www.fundacionjumex.org/es/exposiciones/756-raul-silva-gateway"
+   }
+  ],
+  "source_excerpt": "16.OCT.2026 - 07.FEB.2027\nRAÚL SILVA: GATEWAY \nEl artista Raúl Silva (Lima, 1991) presenta su primera exposición individual en México, una continuación de su investigación en torno a las dimensiones materiales e inmateriales de las telecomunicaciones, concebida como una suerte de arqueología de los medios..Gateway —término utilizado en informática para describir un punto de conexión entre distintas redes y flujos de información— opera aquí como una metáfora para pensar el Caribe mexicano como un umbral de acceso al desarrollo tecnológico y a las infraestructuras que lo hacen posible.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Richard Prince: Cuéntamelo todo",
+  "start_date": "2026-09-26",
+  "end_date": "2027-02-07",
+  "all_day": true,
+  "venue_name": "Museo Jumex",
+  "address": "Miguel de Cervantes Saavedra 303, Colonia Granada, 11520 Ciudad de México",
+  "neighborhood": "Granada",
+  "price_text": null,
+  "price_min": null,
+  "link": "https://www.fundacionjumex.org/es/exposiciones/789-richard-prince-cuentamelo-todo",
+  "category": "Art & Exhibitions",
+  "family_friendly": false,
+  "umbrella": null,
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Gran muestra del artista estadounidense —más de 140 obras—, una cita importante para público interesado en historia reciente del arte contemporáneo.",
+  "sources": [
+   "web:museo-jumex:8b7b82d30320"
+  ],
+  "source_links": [
+   {
+    "name": "Museo Jumex",
+    "url": "https://www.fundacionjumex.org/es/exposiciones/789-richard-prince-cuentamelo-todo"
+   }
+  ],
+  "source_excerpt": "26.SEP.2026 - 07.FEB.2027\nRichard Prince: Cuéntamelo todo\nLa primera gran exposición del artista en Latinoamérica, Richard Prince: Cuéntamelo todo se articula en torno a un análisis en profundidad de las series más emblemáticas del artista —Cowboys [Vaqueros], Girlfriends [Novias], Jokes [Chistes] y Cartoons [Dibujos animados]—, que han estado presentes a lo largo de los más de 40 años de carrera de Prince. Estas líneas principales se contextualizan en el marco más amplio de la obra del artista con piezas seleccionadas de sus primeras refotografías; sus exploraciones de la pintura en los lienzos de Nurses [Enfermeras], de Koonings y High Times; así como su serie Hoods [Capós] y otras esculturas.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Festival Flores de Cempasúchil",
+  "start_date": "2026-10-18",
+  "end_date": "2026-11-01",
+  "all_day": true,
+  "venue_name": "Avenida Paseo de la Reforma (tramo Ángel de la Independencia - Ahuehuete)",
+  "address": "Paseo de la Reforma, entre Ángel de la Independencia y Ahuehuete, Ciudad de México",
+  "neighborhood": null,
+  "price_text": "Entrada libre (expo-venta)",
+  "price_min": 0,
+  "link": "https://mexicocity.cdmx.gob.mx/e/dia-de-muertos-en-la-ciudad-de-mexico/",
+  "category": "Markets & Design",
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": true,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": false,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Expo-venta con 140 floricultores que acerca flores y productos agroecológicos; buena opción familiar para comprar cempasúchil y piezas tradicionales.",
+  "sources": [
+   "web:d-a-de-muertos-2026-page:d8de6ee42352"
+  ],
+  "source_links": [
+   {
+    "name": "Día de Muertos 2026 page",
+    "url": "https://mexicocity.cdmx.gob.mx/e/dia-de-muertos-en-la-ciudad-de-mexico/"
+   }
+  ],
+  "source_excerpt": "Festival Flores de Cempasúchil\n- Fechas: Del 18 de octubre al 1 de noviembre\n- Ubicación: Avenida Paseo de la Reforma, en el tramo comprendido entre el Ángel de la Independencia y el Ahuehuete. \nExpo-venta que busca acercar la riqueza del suelo rural a la vida urbana de la capital. En el evento participan 140 floricultores y productores agroecológicos provenientes de los suelos de conservación de las alcaldías Tláhuac, Milpa Alta y Xochimilco.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "“El Camino” Iluminación en Reforma",
+  "start_date": "2026-10-23",
+  "end_date": "2026-11-08",
+  "all_day": true,
+  "venue_name": "Avenida Paseo de la Reforma (Ángel de la Independencia - Puerta de los Leones)",
+  "address": "Paseo de la Reforma, tramo Ángel de la Independencia a Puerta de los Leones, Ciudad de México",
+  "neighborhood": null,
+  "price_text": "Entrada libre",
+  "price_min": 0,
+  "link": "https://mexicocity.cdmx.gob.mx/e/dia-de-muertos-en-la-ciudad-de-mexico/",
+  "category": "Art & Exhibitions",
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": true,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": false,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": true,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Instalación monumental de luz y figuración tradicional que ofrece un recorrido inmersivo por símbolos del Día de Muertos en una de las avenidas más céntricas de la ciudad.",
+  "sources": [
+   "web:d-a-de-muertos-2026-page:d8de6ee42352"
+  ],
+  "source_links": [
+   {
+    "name": "Día de Muertos 2026 page",
+    "url": "https://mexicocity.cdmx.gob.mx/e/dia-de-muertos-en-la-ciudad-de-mexico/"
+   }
+  ],
+  "source_excerpt": "“El Camino” Iluminación en Reforma\n- Fechas: Del 23 de octubre al 8 de noviembre. \n- Ubicación: Del Ángel de la Independencia a la Puerta de los Leones. \nSe trata de una instalación monumental de luz y color que ofrece una experiencia inmersiva por el universo simbólico del Día de Muertos. El recorrido recrea un viaje entre el mundo de los vivos y los muertos, acompañado por figuras de xoloitzcuintles, catrinas, altares, papel picado y flores de cempasúchil.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Ofrenda Monumental en el Zócalo",
+  "start_date": "2026-10-29",
+  "end_date": "2026-11-02",
+  "all_day": true,
+  "venue_name": "Zócalo (Plaza de la Constitución)",
+  "address": "Plaza de la Constitución, Centro Histórico, Ciudad de México",
+  "neighborhood": "Centro Histórico",
+  "price_text": "Entrada libre",
+  "price_min": 0,
+  "link": "https://mexicocity.cdmx.gob.mx/e/dia-de-muertos-en-la-ciudad-de-mexico/",
+  "category": "Art & Exhibitions",
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": true,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": false,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": true,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "El altar masivo en el Zócalo —con una escultura de cartonería de 32 m y miles de flores— es la pieza central oficial de la celebración y ofrece conciertos y actividades culturales gratuitas.",
+  "sources": [
+   "web:d-a-de-muertos-2026-page:d8de6ee42352"
+  ],
+  "source_links": [
+   {
+    "name": "Día de Muertos 2026 page",
+    "url": "https://mexicocity.cdmx.gob.mx/e/dia-de-muertos-en-la-ciudad-de-mexico/"
+   }
+  ],
+  "source_excerpt": "Ofrenda Monumental en el Zócalo\n- Fechas: Del 29 de octubre al 2 de noviembre. \n- Ubicación: Zócalo capitalino. \nEl corazón de la celebración cívica con su característico altar de escala masiva que suele rendir honor a figuras históricas o regiones del país, acompañado de una sólida cartelera de conciertos gratuitos y eventos culturales. Este año, el homenaje central será a la Catrina de José Guadalupe Posada, destacando una escultura de cartonería de 32 metros de altura, tapetes de aserrín y miles de flores de cempasúchil.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Iluminación del Zócalo",
+  "start_date": "2026-10-29",
+  "end_date": "2026-11-04",
+  "all_day": true,
+  "venue_name": "Fachadas del Zócalo y primer cuadro del Centro Histórico",
+  "address": "Zócalo y alrededores, Centro Histórico, Ciudad de México",
+  "neighborhood": "Centro Histórico",
+  "price_text": "Entrada libre",
+  "price_min": 0,
+  "link": "https://mexicocity.cdmx.gob.mx/e/dia-de-muertos-en-la-ciudad-de-mexico/",
+  "category": "Art & Exhibitions",
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": true,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": false,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Decoración luminosa en las fachadas del Zócalo que acompaña la ofrenda central; buena visita nocturna gratuita en el Centro Histórico.",
+  "sources": [
+   "web:d-a-de-muertos-2026-page:d8de6ee42352"
+  ],
+  "source_links": [
+   {
+    "name": "Día de Muertos 2026 page",
+    "url": "https://mexicocity.cdmx.gob.mx/e/dia-de-muertos-en-la-ciudad-de-mexico/"
+   }
+  ],
+  "source_excerpt": "Iluminación del Zócalo\n- Fechas: Del 29 de octubre al 4 de noviembre. \n- Ubicación: Fachadas de los edificios de Gobierno y del primer cuadro del centro histórico. \nEl personal de la Secretaría de Obras y Servicios adorna el perímetro de la plaza mayor con un alumbrado decorativo que ilustra elementos como la calavera garbancera, colibríes esqueléticos, xoloitzcuintles y naturaleza vibrante.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Festival de Día de Muertos en Chapultepec: “La Puerta entre dos mundos”",
+  "start_date": "2026-10-29",
+  "end_date": "2026-11-04",
+  "all_day": true,
+  "venue_name": "Bosque de Chapultepec, Segunda Sección (Paseo de los Compositores y Lago Mayor)",
+  "address": "Paseo de los Compositores y Lago Mayor, Segunda Sección, Bosque de Chapultepec, Ciudad de México",
+  "neighborhood": "Bosque de Chapultepec / Polanco (inmediaciones)",
+  "price_text": "Entrada libre (actividad pública)",
+  "price_min": 0,
+  "link": "https://mexicocity.cdmx.gob.mx/e/dia-de-muertos-en-la-ciudad-de-mexico/",
+  "category": "Art & Exhibitions",
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": true,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": false,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": true,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Gran programación en Chapultepec con altares, música, gastronomía y un show nocturno de drones; ideal para familias y público general.",
+  "sources": [
+   "web:d-a-de-muertos-2026-page:d8de6ee42352"
+  ],
+  "source_links": [
+   {
+    "name": "Día de Muertos 2026 page",
+    "url": "https://mexicocity.cdmx.gob.mx/e/dia-de-muertos-en-la-ciudad-de-mexico/"
+   }
+  ],
+  "source_excerpt": "Festival de Día de Muertos en Chapultepec: “La Puerta entre dos mundos”\n- Fechas: Del 29 de octubre al 4 de noviembre. \n- Ubicación: Paseo de los Compositores y Lago Mayor, en la Segunda Sección del Bosque de Chapultepec. \nBajo el concepto “El Sendero del Cempasúchil”, el público puede disfrutar de una experiencia inmersiva de gran formato que integra expresiones artísticas, música, danza, gastronomía, altares y un espectáculo nocturno con drones.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Gran Desfile de Día de Muertos",
+  "start_date": "2026-10-31",
+  "end_date": "2026-10-31",
+  "all_day": false,
+  "start_time": "14:00",
+  "venue_name": "Avenida Paseo de la Reforma (ruta hasta el Zócalo)",
+  "address": "Paseo de la Reforma hacia el Zócalo, Ciudad de México",
+  "neighborhood": null,
+  "price_text": "Entrada libre (evento público)",
+  "price_min": 0,
+  "link": "https://mexicocity.cdmx.gob.mx/e/dia-de-muertos-en-la-ciudad-de-mexico/",
+  "category": "Film & Performance",
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": true,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": false,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": true,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Desfile monumental con bandas, danzantes y carros alegóricos que concentra lo más festivo y escénico de la celebración; una de las actividades centrales para público local y visitantes.",
+  "sources": [
+   "web:d-a-de-muertos-2026-page:d8de6ee42352"
+  ],
+  "source_links": [
+   {
+    "name": "Día de Muertos 2026 page",
+    "url": "https://mexicocity.cdmx.gob.mx/e/dia-de-muertos-en-la-ciudad-de-mexico/"
+   }
+  ],
+  "source_excerpt": "Gran Desfile de Día de Muertos\n- Fecha: Sábado 31 de octubre a las 14:00 horas. \n- Ruta: Avenida Paseo de la Reforma, hasta llegar al Zócalo. \nEl desfile monumental que celebra las diversas facetas de la cultura mexicana y el viaje de las almas al Mictlán, fusionando la tradición con el espectáculo. El recorrido avanza con bandas de música, danzantes, mojigangas y decenas de enormes carros alegóricos.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Mixquic (celebración en San Andrés Mixquic)",
+  "start_date": "2026-10-31",
+  "end_date": "2026-11-02",
+  "all_day": true,
+  "venue_name": "San Andrés Mixquic, Alcaldía Tláhuac",
+  "address": "San Andrés Mixquic, Tláhuac, Ciudad de México",
+  "neighborhood": "Mixquic (Tláhuac)",
+  "price_text": "Entrada libre (festividad pública; se recomienda llegar con anticipación)",
+  "price_min": 0,
+  "link": "https://mexicocity.cdmx.gob.mx/e/dia-de-muertos-en-la-ciudad-de-mexico/",
+  "category": "Other",
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": true,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": false,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "La celebración tradicional de Mixquic mantiene rituales centenarios (El Susurro de los Angelitos, La Alumbrada) y es la experiencia más ritual y comunitaria del Día de Muertos en la ciudad.",
+  "sources": [
+   "web:d-a-de-muertos-2026-page:d8de6ee42352"
+  ],
+  "source_links": [
+   {
+    "name": "Día de Muertos 2026 page",
+    "url": "https://mexicocity.cdmx.gob.mx/e/dia-de-muertos-en-la-ciudad-de-mexico/"
+   }
+  ],
+  "source_excerpt": "Mixquic\n- Fechas: Del 31 de octubre al 2 de noviembre. \n- Ubicación: San Andrés Mixquic, Alcaldía Tláhuac. \nConsiderada la fiesta de muertos más tradicional de la ciudad, este pueblo conserva una cosmovisión con más de 500 años de historia. El ciclo ritual inicia el 29 de septiembre con el “Llamado a las Ánimas”, fecha en la que las familias limpian las tumbas. El 31 de octubre se recibe a las almas infantiles en “El Susurro de los Angelitos” empleando pétalos blancos y dulces, mientras que el 1 de noviembre ocurre “El gran reencuentro” con los adultos, guiados por sus platillos favoritos y pétalos de cempasúchil, flor que en los poemas náhuatl representa los soles que bajan a la tierra para iluminar a los difuntos.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Ofrendas Comunitarias (12 sedes)",
+  "start_date": "2026-10-29",
+  "end_date": "2026-11-02",
+  "all_day": true,
+  "venue_name": "Varias sedes comunitarias (Plaza de las Tres Culturas, Lomas de la Era, Utopías en diversas alcaldías)",
+  "address": null,
+  "neighborhood": null,
+  "price_text": "Entrada libre",
+  "price_min": 0,
+  "link": "https://mexicocity.cdmx.gob.mx/e/dia-de-muertos-en-la-ciudad-de-mexico/",
+  "category": "Art & Exhibitions",
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": true,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": false,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Red de ofrendas comunitarias distribuidas por la ciudad que permiten acercarse a rituales locales y altares de barrio; ideal para quien busque experiencias más íntimas y tradicionales.",
+  "sources": [
+   "web:d-a-de-muertos-2026-page:d8de6ee42352"
+  ],
+  "source_links": [
+   {
+    "name": "Día de Muertos 2026 page",
+    "url": "https://mexicocity.cdmx.gob.mx/e/dia-de-muertos-en-la-ciudad-de-mexico/"
+   }
+  ],
+  "source_excerpt": "Ofrendas Comunitarias \n- Fechas: Del 29 de octubre al 2 de noviembre. \n- Ubicaciones: 12 sedes en la ciudad, incluyendo la Plaza de las Tres Culturas en Tlatelolco, Lomas de la Era y diversas Utopías en alcaldías como Azcapotzalco, Coyoacán, Gustavo A. Madero, Iztacalco, Iztapalapa, Magdalena Contreras, Milpa Alta, Tláhuac, Tlalpan y Venustiano Carranza.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "El Camino / Camino a la Luz",
+  "date_start": "2026-10-23",
+  "date_end": "2026-11-08",
+  "all_day": false,
+  "time_start": "19:00",
+  "time_end": "23:00",
+  "venue_name": "Paseo de la Reforma (del Ángel de la Independencia a la Puerta de los Leones)",
+  "venue_address": null,
+  "neighborhood": null,
+  "price_text": "Entrada libre",
+  "price_min": 0,
+  "link": "https://www.chilango.com/que-hacer/dia-de-muertos-en-cdmx-exposicion-el-camino-esculturas-luminosas-paseo-reforma/",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": true,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Grandes esculturas lumínicas instaladas a lo largo de Reforma ofrecen una experiencia visual nocturna gratuita y fotogénica.",
+  "sources": [
+   "web:d-a-de-muertos-2026-page:5cdb1b0c00d3",
+   "web:d-a-de-muertos-2026-page:50f7f1f558ad",
+   "web:d-a-de-muertos-2026-page:97c80a2ec082"
+  ],
+  "source_links": [
+   {
+    "name": "Chilango",
+    "url": "https://www.chilango.com/que-hacer/dia-de-muertos-en-cdmx-exposicion-el-camino-esculturas-luminosas-paseo-reforma/"
+   },
+   {
+    "name": "Animal MX",
+    "url": "https://grupoanimal.mx/estilo-de-vida/eventos-desfiles-dia-de-muertos-2026-cdmx"
+   },
+   {
+    "name": "N+",
+    "url": "https://www.nmas.com.mx/ciudad-de-mexico/sociedad/que-hacer-en-cdmx-por-dia-de-muertos-cartelera-de-eventos-del-17-al-31-de-octubre-2026/"
+   }
+  ],
+  "source_excerpt": "Paseo de la Reforma albergará una de las actividades más llamativas de esta temporada de Día de Muertos en CDMX. Se trata de la exposición Camino a la Luz, que estará integrada por 22 esculturas lumínicas de gran formato... Las esculturas podrán visitarse para tomarse fotos del 23 de octubre al 8 de noviembre en un horario de 19:00 a 23:00 horas.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Rodada Ciclista de Día de Muertos / Paseo Nocturno temático",
+  "date_start": "2026-10-24",
+  "date_end": "2026-10-24",
+  "all_day": false,
+  "time_start": "18:00",
+  "time_end": null,
+  "venue_name": "Glorieta del Ahuehuete / Paseo de la Reforma",
+  "venue_address": null,
+  "neighborhood": null,
+  "price_text": "Entrada libre",
+  "price_min": 0,
+  "link": "https://www.chilango.com/que-hacer/rodada-hasta-chapultepec-paseo-nocturno-dia-de-muertos-2026-cdmx-ruta-fecha/",
+  "category": "Wellness & Sport",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": true,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Actividad pública y gratuita para toda la familia que combina paseo nocturno, concurso de disfraces y programación en Reforma.",
+  "sources": [
+   "web:d-a-de-muertos-2026-page:5cdb1b0c00d3",
+   "web:d-a-de-muertos-2026-page:50f7f1f558ad",
+   "web:d-a-de-muertos-2026-page:97c80a2ec082",
+   "web:d-a-de-muertos-2026-page:d7260e7c7c22"
+  ],
+  "source_links": [
+   {
+    "name": "Chilango",
+    "url": "https://www.chilango.com/que-hacer/rodada-hasta-chapultepec-paseo-nocturno-dia-de-muertos-2026-cdmx-ruta-fecha/"
+   },
+   {
+    "name": "Animal MX",
+    "url": "https://grupoanimal.mx/estilo-de-vida/eventos-desfiles-dia-de-muertos-2026-cdmx"
+   },
+   {
+    "name": "N+",
+    "url": "https://www.nmas.com.mx/ciudad-de-mexico/sociedad/que-hacer-en-cdmx-por-dia-de-muertos-cartelera-de-eventos-del-17-al-31-de-octubre-2026/"
+   },
+   {
+    "name": "Crónica",
+    "url": "https://www.cronica.com.mx/metropoli/2026/10/17/que-hacer-en-cdmx-por-dia-de-muertos-2026-fechas-horarios-y-mapa-de-actividades/"
+   }
+  ],
+  "source_excerpt": "El Paseo Nocturno Muévete en Bici tendrá una edición especial con actividades de Día de Muertos... Se llevará a cabo el sábado 24 de octubre, a partir de las 18:00 horas, con una ruta de 13 kilómetros. Partirá de la Glorieta del Ahuhuete, pasando por Reforma, hasta llegar al Bosque de Chapultepec...",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Calaveras Gigantes en Tláhuac (Jaén Cartonería)",
+  "date_start": "2026-10-24",
+  "date_end": "2026-11-07",
+  "all_day": true,
+  "time_start": null,
+  "time_end": null,
+  "venue_name": "Calle Francisco Santiago Borraz, colonia Santa Cecilia, alcaldía Tláhuac",
+  "venue_address": "Calle Francisco Santiago Borraz, Col. Santa Cecilia, Tláhuac",
+  "neighborhood": "Santa Cecilia",
+  "price_text": "Entrada libre",
+  "price_min": 0,
+  "link": "https://www.chilango.com/que-hacer/",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": true,
+  "signals": {
+   "credible_organizer": false,
+   "one_off": false,
+   "scarcity": false,
+   "corroborated": true,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Exposición de piezas monumentales de cartonería (hasta 4.5 m) organizada localmente y abierta al público en Tláhuac.",
+  "sources": [
+   "web:d-a-de-muertos-2026-page:5cdb1b0c00d3"
+  ],
+  "source_links": [
+   {
+    "name": "Chilango",
+    "url": "https://www.chilango.com/que-hacer/"
+   }
+  ],
+  "source_excerpt": "Del 24 de octubre al 7 de noviembre habrá una exposición de 10 piezas monumentales de cartonería. El evento es organizado por Jaén Cartonería... La cita es en la calle Francisco Santiago Borraz, colonia Santa Cecilia, alcaldía Tláhuac.",
+  "image_url": null,
+  "confidence": 0.6
+ },
+ {
+  "title": "Mega Procesión de Catrinas",
+  "date_start": "2026-10-25",
+  "date_end": "2026-10-25",
+  "all_day": false,
+  "time_start": "18:00",
+  "time_end": null,
+  "venue_name": "Ángel de la Independencia → Zócalo (Paseo de la Reforma / Av. Juárez / 5 de Mayo)",
+  "venue_address": null,
+  "neighborhood": null,
+  "price_text": "Entrada libre",
+  "price_min": 0,
+  "link": "https://www.chilango.com/que-hacer/arte-y-cultura/cuando-es-la-mega-procesion-de-catrinas-2026-en-cdmx-asi-puedes-participar/",
+  "category": "Art & Exhibitions",
+  "category_alt": "Performance",
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": true,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Desfile masivo y ciudadano de catrinas que recorre Reforma hasta el Centro Histórico; es una de las celebraciones más vistosas y participativas.",
+  "sources": [
+   "web:d-a-de-muertos-2026-page:5cdb1b0c00d3",
+   "web:d-a-de-muertos-2026-page:50f7f1f558ad",
+   "web:d-a-de-muertos-2026-page:90e5269ab22e",
+   "web:d-a-de-muertos-2026-page:97c80a2ec082"
+  ],
+  "source_links": [
+   {
+    "name": "Chilango",
+    "url": "https://www.chilango.com/que-hacer/arte-y-cultura/cuando-es-la-mega-procesion-de-catrinas-2026-en-cdmx-asi-puedes-participar/"
+   },
+   {
+    "name": "Animal MX",
+    "url": "https://grupoanimal.mx/estilo-de-vida/eventos-desfiles-dia-de-muertos-2026-cdmx"
+   },
+   {
+    "name": "Uno TV",
+    "url": "https://www.unotv.com/estados/ciudad-de-mexico/calendario-de-dia-de-muertos-2026-en-cdmx-fechas-del-desfile-ofrenda-monumental-y-actividades-gratis/"
+   },
+   {
+    "name": "N+",
+    "url": "https://www.nmas.com.mx/ciudad-de-mexico/sociedad/que-hacer-en-cdmx-por-dia-de-muertos-cartelera-de-eventos-del-17-al-31-de-octubre-2026/"
+   }
+  ],
+  "source_excerpt": "Miles de personas rendirán homenaje a una de las creaciones artísticas emblemáticas... El domingo 25 de octubre se llevará a cabo la Mega Procesión de Catrinas, que partirá del Ángel de la Independencia hacia el Zócalo de CDMX. El banderazo de salida será a las 18:00 horas.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Festival de Café, Chocolate y Pan de Muerto (Tecnológico de Monterrey Campus CDMX)",
+  "date_start": "2026-10-24",
+  "date_end": "2026-10-25",
+  "all_day": false,
+  "time_start": "10:00",
+  "time_end": "19:00",
+  "venue_name": "Tecnológico de Monterrey Campus CDMX",
+  "venue_address": null,
+  "neighborhood": null,
+  "price_text": "Entrada libre",
+  "price_min": 0,
+  "link": "https://www.chilango.com/que-hacer/festival-de-cafe-chocolate-pan-muerto-2026-cdmx/",
+  "category": "Food & Drink",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": true,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Mercado gastronómico con más de 100 propuestas para probar diferentes panes de muerto, chocolates y cafés; gratuito y con música en vivo.",
+  "sources": [
+   "web:d-a-de-muertos-2026-page:5cdb1b0c00d3"
+  ],
+  "source_links": [
+   {
+    "name": "Chilango",
+    "url": "https://www.chilango.com/que-hacer/festival-de-cafe-chocolate-pan-muerto-2026-cdmx/"
+   }
+  ],
+  "source_excerpt": "Los días 24 y 25 de octubre, de 10:00 a 19:00 horas, el Tecnológico de Monterrey Campus CDMX será sede del Festival de Café, Chocolate y Pan de Muerto. El evento reunirá más 100 propuestas gastronómicas...",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Primer Festival del Perro Xoloitzcuintle — \"Campo de Xolos: Bienvenidos a Itzcuintlán\"",
+  "date_start": "2026-10-27",
+  "date_end": "2026-11-01",
+  "all_day": true,
+  "time_start": null,
+  "time_end": null,
+  "venue_name": "Centro Cultural El Rule, Atrio de San Francisco y Plaza Seminario (Centro Histórico)",
+  "venue_address": null,
+  "neighborhood": "Centro Histórico",
+  "price_text": "Entrada libre",
+  "price_min": 0,
+  "link": "https://www.chilango.com/que-hacer/festival-perro-xoloitzcuintle-cdmx-arte-conciertos-y-caminata-de-xolos-fechas-y-sedes/",
+  "category": "Art & Exhibitions",
+  "category_alt": "Markets & Design",
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": true,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Festival temático en honor al xoloitzcuintle con caminata de perros, conciertos y tianguis; una propuesta original ligada a la tradición.",
+  "sources": [
+   "web:d-a-de-muertos-2026-page:5cdb1b0c00d3"
+  ],
+  "source_links": [
+   {
+    "name": "Chilango",
+    "url": "https://www.chilango.com/que-hacer/festival-perro-xoloitzcuintle-cdmx-arte-conciertos-y-caminata-de-xolos-fechas-y-sedes/"
+   }
+  ],
+  "source_excerpt": "Del 27 de octubre al 1 de noviembre se llevará a cabo “Campo de Xolos: Bienvenidos a Itzcuintlán”, el Primer Festival del Perro Mexicano Xoloitzcuintle. En el Centro Cultural el Rule, el Atrio de San Francisco y la Plaza Seminario del Centro Histórico...",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Festival Cacao para Todos / Festival Cacao",
+  "date_start": "2026-10-29",
+  "date_end": "2026-11-02",
+  "all_day": false,
+  "time_start": "10:00",
+  "time_end": "19:00",
+  "venue_name": "Museo Diego Rivera Anahuacalli",
+  "venue_address": null,
+  "neighborhood": null,
+  "price_text": "Entrada libre",
+  "price_min": 0,
+  "link": "https://www.chilango.com/que-hacer/festival-cacao-cdmx-2026-entrada-gratis-pan-de-muerto/",
+  "category": "Food & Drink",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": true,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Oportunidad de probar bebidas tradicionales y repostería con entrada gratuita en un museo icónico de la ciudad.",
+  "sources": [
+   "web:d-a-de-muertos-2026-page:5cdb1b0c00d3"
+  ],
+  "source_links": [
+   {
+    "name": "Chilango",
+    "url": "https://www.chilango.com/que-hacer/festival-cacao-cdmx-2026-entrada-gratis-pan-de-muerto/"
+   }
+  ],
+  "source_excerpt": "Del 29 de octubre al 1 de noviembre, el recinto albergará el Festival Cacao para Todos... se podrán probar bebidas tradicionales, como chocolate artesanal, tejate, tescalate, pozol o chilate. Además... gastronomía y repostería, incluyendo pan de muerto.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Ofrenda Monumental de Día de Muertos en el Zócalo (Catrina de ~32 m)",
+  "date_start": "2026-10-29",
+  "date_end": "2026-11-02",
+  "all_day": true,
+  "time_start": null,
+  "time_end": null,
+  "venue_name": "Plaza de la Constitución (Zócalo)",
+  "venue_address": null,
+  "neighborhood": "Centro Histórico",
+  "price_text": "Entrada libre",
+  "price_min": 0,
+  "link": "https://www.chilango.com/que-hacer/ofrenda-monumental-zocalo-2026-record-catrina-mas-alta-del-mundo/",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": true,
+   "low_friction": true,
+   "umbrella_anchor": true,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "La ofrenda central de la ciudad con una catrina monumental y 100 mil flores: imprescindible para quien visite la CDMX en estas fechas.",
+  "sources": [
+   "web:d-a-de-muertos-2026-page:5cdb1b0c00d3",
+   "web:d-a-de-muertos-2026-page:50f7f1f558ad",
+   "web:d-a-de-muertos-2026-page:90e5269ab22e",
+   "web:d-a-de-muertos-2026-page:97c80a2ec082",
+   "web:d-a-de-muertos-2026-page:d7260e7c7c22"
+  ],
+  "source_links": [
+   {
+    "name": "Chilango",
+    "url": "https://www.chilango.com/que-hacer/ofrenda-monumental-zocalo-2026-record-catrina-mas-alta-del-mundo/"
+   },
+   {
+    "name": "Animal MX",
+    "url": "https://grupoanimal.mx/estilo-de-vida/eventos-desfiles-dia-de-muertos-2026-cdmx"
+   },
+   {
+    "name": "Uno TV",
+    "url": "https://www.unotv.com/estados/ciudad-de-mexico/calendario-de-dia-de-muertos-2026-en-cdmx-fechas-del-desfile-ofrenda-monumental-y-actividades-gratis/"
+   },
+   {
+    "name": "N+",
+    "url": "https://www.nmas.com.mx/ciudad-de-mexico/sociedad/que-hacer-en-cdmx-por-dia-de-muertos-cartelera-de-eventos-del-17-al-31-de-octubre-2026/"
+   },
+   {
+    "name": "Crónica",
+    "url": "https://www.cronica.com.mx/metropoli/2026/10/17/que-hacer-en-cdmx-por-dia-de-muertos-2026-fechas-horarios-y-mapa-de-actividades/"
+   }
+  ],
+  "source_excerpt": "La Ofrenda Monumental que se instalará en el Zócalo... contará con una catrina de más de 30 metros de altura que buscará romper un récord Guinness... Del 29 de octubre al 2 de noviembre.",
+  "image_url": null,
+  "confidence": 0.95
+ },
+ {
+  "title": "Sendero del Cempasúchil / Festival en Chapultepec",
+  "date_start": "2026-10-30",
+  "date_end": "2026-11-01",
+  "all_day": false,
+  "time_start": "14:00",
+  "time_end": "22:00",
+  "venue_name": "Paseo de los Compositores y Lago Mayor, Bosque de Chapultepec (Segunda Sección)",
+  "venue_address": null,
+  "neighborhood": "Bosque de Chapultepec",
+  "price_text": "Entrada libre (actividad de linternas tiene costo de $400)",
+  "price_min": 0,
+  "link": "https://www.chilango.com/que-hacer/chapultepec-tendra-festival-de-dia-de-muertos-con-show-de-drones-altares-cempasuchil-y-mas-cuando/",
+  "category": "Art & Exhibitions",
+  "category_alt": "Food & Drink",
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": true,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Instalaciones, altares, zona gastronómica y espectáculo de drones en Chapultepec; ideal para familias y fotografía diurna/nocturna.",
+  "sources": [
+   "web:d-a-de-muertos-2026-page:5cdb1b0c00d3",
+   "web:d-a-de-muertos-2026-page:50f7f1f558ad",
+   "web:d-a-de-muertos-2026-page:97c80a2ec082"
+  ],
+  "source_links": [
+   {
+    "name": "Chilango",
+    "url": "https://www.chilango.com/que-hacer/chapultepec-tendra-festival-de-dia-de-muertos-con-show-de-drones-altares-cempasuchil-y-mas-cuando/"
+   },
+   {
+    "name": "Animal MX",
+    "url": "https://grupoanimal.mx/estilo-de-vida/eventos-desfiles-dia-de-muertos-2026-cdmx"
+   },
+   {
+    "name": "N+",
+    "url": "https://www.nmas.com.mx/ciudad-de-mexico/sociedad/que-hacer-en-cdmx-por-dia-de-muertos-cartelera-de-eventos-del-17-al-31-de-octubre-2026/"
+   }
+  ],
+  "source_excerpt": "El Sendero del Cempasúchil se llevará a cabo en el Paseo de los Compositores y el Lago Mayor, donde habrá exposiciones de ofrendas, una zona gastronómica y un espectáculo de drones... de 30 de octubre al 1 de noviembre. Accesos de 14:00 a 22:00.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Gran Desfile de Día de Muertos 2026",
+  "date_start": "2026-10-31",
+  "date_end": "2026-10-31",
+  "all_day": false,
+  "time_start": "14:00",
+  "time_end": null,
+  "venue_name": "Paseo de la Reforma → Zócalo",
+  "venue_address": null,
+  "neighborhood": null,
+  "price_text": "Entrada libre",
+  "price_min": 0,
+  "link": "https://www.nmas.com.mx/ciudad-de-mexico/sociedad/que-hacer-en-cdmx-por-dia-de-muertos-cartelera-de-eventos-del-17-al-31-de-octubre-2026/",
+  "category": "Performance",
+  "category_alt": "Festivals",
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": true,
+   "low_friction": true,
+   "umbrella_anchor": true,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "El desfile más grande y emblemático del periodo, con miles de participantes, carros alegóricos y homenajes culturales; cita central para la celebración.",
+  "sources": [
+   "web:d-a-de-muertos-2026-page:5cdb1b0c00d3",
+   "web:d-a-de-muertos-2026-page:50f7f1f558ad",
+   "web:d-a-de-muertos-2026-page:90e5269ab22e",
+   "web:d-a-de-muertos-2026-page:97c80a2ec082",
+   "web:d-a-de-muertos-2026-page:d7260e7c7c22"
+  ],
+  "source_links": [
+   {
+    "name": "Chilango",
+    "url": "https://www.chilango.com/que-hacer/gran-desfile-de-dia-de-muertos-2026-en-cdmx-fecha-hora-y-que-habra/"
+   },
+   {
+    "name": "Animal MX",
+    "url": "https://grupoanimal.mx/estilo-de-vida/eventos-desfiles-dia-de-muertos-2026-cdmx"
+   },
+   {
+    "name": "Uno TV",
+    "url": "https://www.unotv.com/estados/ciudad-de-mexico/calendario-de-dia-de-muertos-2026-en-cdmx-fechas-del-desfile-ofrenda-monumental-y-actividades-gratis/"
+   },
+   {
+    "name": "N+",
+    "url": "https://www.nmas.com.mx/ciudad-de-mexico/sociedad/que-hacer-en-cdmx-por-dia-de-muertos-cartelera-de-eventos-del-17-al-31-de-octubre-2026/"
+   },
+   {
+    "name": "Crónica",
+    "url": "https://www.cronica.com.mx/metropoli/2026/10/17/que-hacer-en-cdmx-por-dia-de-muertos-2026-fechas-horarios-y-mapa-de-actividades/"
+   }
+  ],
+  "source_excerpt": "El Gran Desfile de Día de Muertos será el sábado 31 de octubre... La cita es el 31 de octubre, a partir de las 14:00 horas. El recorrido iniciará en la Glorieta de la Diana, sobre Paseo de la Reforma, y el desfile llegará hasta el Zócalo capitalino.",
+  "image_url": null,
+  "confidence": 0.95
+ },
+ {
+  "title": "Feria de las Calacas (CENART)",
+  "date_start": "2026-10-31",
+  "date_end": "2026-11-01",
+  "all_day": true,
+  "time_start": null,
+  "time_end": null,
+  "venue_name": "Centro Nacional de las Artes (CENART)",
+  "venue_address": null,
+  "neighborhood": null,
+  "price_text": "Entrada libre",
+  "price_min": 0,
+  "link": "https://www.chilango.com/que-hacer/ferias/la-feria-de-las-calacas-cenart-y-chapultepec-2026-conoce-las-actividades/",
+  "category": "Family-friendly",
+  "category_alt": "Art & Exhibitions",
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": true,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": false,
+   "scarcity": false,
+   "corroborated": true,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Programa especialmente orientado a niñas, niños y adolescentes con cientos de actividades y talleres gratuitos.",
+  "sources": [
+   "web:d-a-de-muertos-2026-page:5cdb1b0c00d3"
+  ],
+  "source_links": [
+   {
+    "name": "Chilango",
+    "url": "https://www.chilango.com/que-hacer/ferias/la-feria-de-las-calacas-cenart-y-chapultepec-2026-conoce-las-actividades/"
+   }
+  ],
+  "source_excerpt": "El sábado 31 de octubre y domingo 1 de noviembre, el Centro Nacional de las Artes (Cenart) será sede de la Feria de las Calacas. El evento contará con más de 380 actividades para toda la familia...",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "Mega Ofrenda de la UNAM (Explanada del Museo UNIVERSUM)",
+  "date_start": "2026-10-31",
+  "date_end": "2026-11-02",
+  "all_day": false,
+  "time_start": "11:00",
+  "time_end": "21:00",
+  "venue_name": "Explanada del Museo UNIVERSUM, Ciudad Universitaria",
+  "venue_address": "Circuito Cultural, Ciudad Universitaria, Coyoacán",
+  "neighborhood": "Coyoacán",
+  "price_text": "Entrada libre",
+  "price_min": 0,
+  "link": "https://www.chilango.com/que-hacer/asi-sera-la-megaofrenda-de-la-unam-2026-ya-hay-fecha-sede-horarios-y-tematica/",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": true,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": false,
+   "scarcity": false,
+   "corroborated": true,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Una de las ofrendas universitarias más grandes con montaje artístico y amplio horario; perfecto para visitar en día y noche.",
+  "sources": [
+   "web:d-a-de-muertos-2026-page:5cdb1b0c00d3",
+   "web:d-a-de-muertos-2026-page:50f7f1f558ad",
+   "web:d-a-de-muertos-2026-page:97c80a2ec082"
+  ],
+  "source_links": [
+   {
+    "name": "Chilango",
+    "url": "https://www.chilango.com/que-hacer/asi-sera-la-megaofrenda-de-la-unam-2026-ya-hay-fecha-sede-horarios-y-tematica/"
+   },
+   {
+    "name": "Animal MX",
+    "url": "https://grupoanimal.mx/estilo-de-vida/eventos-desfiles-dia-de-muertos-2026-cdmx"
+   },
+   {
+    "name": "N+",
+    "url": "https://www.nmas.com.mx/ciudad-de-mexico/sociedad/que-hacer-en-cdmx-por-dia-de-muertos-cartelera-de-eventos-del-17-al-31-de-octubre-2026/"
+   }
+  ],
+  "source_excerpt": "Para la edición de 2026, la instalación será en la explanada del Museo Universum. La exposición será del 31 de octubre al 2 de noviembre, de 11:00 a 21:00 horas.",
+  "image_url": null,
+  "confidence": 0.9
+ },
+ {
+  "title": "18.º Desfile de Alebrijes Monumentales",
+  "date_start": "2026-10-17",
+  "date_end": "2026-10-17",
+  "all_day": false,
+  "time_start": "12:00",
+  "time_end": null,
+  "venue_name": "Zócalo → Paseo de la Reforma",
+  "venue_address": null,
+  "neighborhood": "Centro Histórico",
+  "price_text": "Entrada libre",
+  "price_min": 0,
+  "link": "https://grupoanimal.mx/estilo-de-vida/eventos-desfiles-dia-de-muertos-2026-cdmx",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": true,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": false,
+   "scarcity": false,
+   "corroborated": true,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Desfile tradicional de alebrijes que deja las figuras monumentales a lo largo de Reforma para ser visitadas durante semanas.",
+  "sources": [
+   "web:d-a-de-muertos-2026-page:50f7f1f558ad",
+   "web:d-a-de-muertos-2026-page:97c80a2ec082"
+  ],
+  "source_links": [
+   {
+    "name": "Animal MX",
+    "url": "https://grupoanimal.mx/estilo-de-vida/eventos-desfiles-dia-de-muertos-2026-cdmx"
+   },
+   {
+    "name": "N+",
+    "url": "https://www.nmas.com.mx/ciudad-de-mexico/sociedad/que-hacer-en-cdmx-por-dia-de-muertos-cartelera-de-eventos-del-17-al-31-de-octubre-2026/"
+   }
+  ],
+  "source_excerpt": "Uno de los desfiles por Día de Muertos 2026 es el de Alebrijes Monumentales... Este año se realizará el sábado 17 de octubre y empezará en punto de las 12:00 en el Zócalo.",
+  "image_url": null,
+  "confidence": 0.6
+ },
+ {
+  "title": "Festival Flores de Cempasúchil (Expo-venta en Reforma)",
+  "date_start": "2026-10-18",
+  "date_end": "2026-11-01",
+  "all_day": true,
+  "time_start": null,
+  "time_end": null,
+  "venue_name": "Paseo de la Reforma (entre Ángel y Ahuehuete)",
+  "venue_address": null,
+  "neighborhood": null,
+  "price_text": "Entrada libre",
+  "price_min": 0,
+  "link": "https://www.nmas.com.mx/ciudad-de-mexico/sociedad/que-hacer-en-cdmx-por-dia-de-muertos-cartelera-de-eventos-del-17-al-31-de-octubre-2026/",
+  "category": "Markets & Design",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": "Día de Muertos 2026",
+  "recurring": false,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": true,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Expo-venta con productores agroecológicos que facilita conseguir flores de cempasúchil y ver la oferta local en Reforma.",
+  "sources": [
+   "web:d-a-de-muertos-2026-page:97c80a2ec082"
+  ],
+  "source_links": [
+   {
+    "name": "N+",
+    "url": "https://www.nmas.com.mx/ciudad-de-mexico/sociedad/que-hacer-en-cdmx-por-dia-de-muertos-cartelera-de-eventos-del-17-al-31-de-octubre-2026/"
+   }
+  ],
+  "source_excerpt": "Festival Flores de Cempasúchil — Fechas: Del 18 de octubre al 1 de noviembre. Ubicación: Paseo de la Reforma, entre el Ángel de la Independencia y el Ahuehuete.",
+  "image_url": null,
+  "confidence": 0.6
+ }
+]

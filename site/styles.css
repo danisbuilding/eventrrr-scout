@@ -179,7 +179,9 @@ textarea.input { width: 100%; min-height: 64px; resize: vertical; margin-top: 8p
 .pchip.on { background: var(--nv-green); border-color: var(--nv-green); color: #fff; }
 .pchip.none.on { background: var(--nv-neutral); border-color: var(--nv-neutral); }
 .pchip.sugg { border-style: dashed; }
-#stbl td { height: auto; padding: 10px 12px; }
+#stbl td { height: auto; padding: 10px 12px; vertical-align: top; }
+#stbl .c-name { width: 34%; } #stbl .c-cat { width: 16%; } #stbl .c-prof { width: auto; }
+#stbl .name-btn { text-align: left; }
 #stbl .name-btn { font-size: 14px; }
 .plist { display: flex; flex-direction: column; gap: 2px; }
 .prow { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 10px; border-radius: var(--nv-radius); cursor: pointer; }
@@ -203,9 +205,9 @@ textarea.input { width: 100%; min-height: 64px; resize: vertical; margin-top: 8p
   #stbl tr { display: block; padding: 14px 0; border-bottom: 1px solid var(--nv-line); }
   #stbl tr:last-child { border-bottom: 0; }
   #stbl td { display: block; width: auto; padding: 0; border: 0; height: auto; }
-  #stbl td.c-date { display: flex; gap: 10px; align-items: baseline; margin-bottom: 4px; }
+  #stbl tr { position: relative; }
+  #stbl td.c-name { padding-right: 40px; }
   #stbl td.c-cat { margin: 4px 0 8px; }
-  #stbl td.c-cat .sub { display: inline; }
-  #stbl td.c-cat div.sub::before { content: " · "; }
+  #stbl td.c-chev { position: absolute; right: 0; top: 14px; }
   .pchip { padding: 6px 12px; font-size: 13px; }
 }

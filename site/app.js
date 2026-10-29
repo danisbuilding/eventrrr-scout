@@ -134,17 +134,8 @@ function render() {
   $("#export").disabled = selected.size === 0;
   renderInspector();
 }
-function renderInspector() {
-  const el = $("#insp"), e = byKey[current];
-  if (!e) { el.hidden = true; el.innerHTML = ""; return; }
-  const s = statusOf(e), d = decisions[e.key] || {};
-  const links = (e.source_links || []).map((l) => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.name || l.url)}${EXT}</a>`).join("<br>");
-  el.hidden = false;
-  el.innerHTML = `
-    <div class="insp-head"><span class="label">Event details</span><button class="icon-btn btn btn-secondary close" id="closeinsp" aria-label="Close details"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13"/></svg></button></div>
-    <h2 class="ev-title">${esc(e.title)}</h2>
-    <span class="status"><span class="dot ${s.cls}"></span>${s.text}${e.highlight ? " · Highlight" : ""}</span>
-    <dl class="fields">
+function detailFields(e) {
+  return `<dl class="fields">
       <dt>Date &amp; time</dt><dd class="data" style="color:var(--nv-ink)">${esc(fmtLong(e))}</dd>
       <dt>Category</dt><dd>${esc(e.category)}${e.category_alt ? ` <span class="sub">(or ${esc(e.category_alt)})</span>` : ""}${e.family_friendly ? `<div class="sub">Family-friendly</div>` : ""}</dd>
       ${e.umbrella ? `<dt>Part of</dt><dd>${esc(e.umbrella)}</dd>` : ""}
@@ -155,7 +146,30 @@ function renderInspector() {
       <dt>Score</dt><dd>${e.score ?? 0}${e.highlight_why ? `<div class="sub">${esc(e.highlight_why)}</div>` : ""}</dd>
       <dt>Confidence</dt><dd>${e.confidence != null ? Math.round(e.confidence * 100) + "%" : "Unavailable"}</dd>
     </dl>
-    ${e.description ? `<p class="sec" style="margin:24px 0 0">${esc(e.description)}</p>` : ""}
+    ${e.description ? `<p class="sec" style="margin:24px 0 0">${esc(e.description)}</p>` : ""}`;
+}
+function detailSources(e) {
+  const links = (e.source_links || []).map((l) => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.name || l.url)}${EXT}</a>`).join("<br>");
+  return `    <div class="sec">
+      <div class="label" style="margin-bottom:16px">Source information</div>
+      <dl class="fields" style="border:0;padding:0">
+        <dt>Seen in</dt><dd>${links || esc((e.sources || []).join(", ")) || "Unknown"}</dd>
+        <dt>Mentions</dt><dd>${e.source_count || (e.sources || []).length}</dd>
+      </dl>
+      ${e.thumb ? `<img class="thumb" src="${e.thumb}" alt="Flyer">` : ""}
+      ${e.source_excerpt ? `<div class="excerpt">${esc(e.source_excerpt)}</div>` : ""}
+    </div>`;
+}
+function renderInspector() {
+  const el = $("#insp"), e = byKey[current];
+  if (!e) { el.hidden = true; el.innerHTML = ""; return; }
+  const s = statusOf(e), d = decisions[e.key] || {};
+  el.hidden = false;
+  el.innerHTML = `
+    <div class="insp-head"><span class="label">Event details</span><button class="icon-btn btn btn-secondary close" id="closeinsp" aria-label="Close details"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13"/></svg></button></div>
+    <h2 class="ev-title">${esc(e.title)}</h2>
+    <span class="status"><span class="dot ${s.cls}"></span>${s.text}${e.highlight ? " · Highlight" : ""}</span>
+    ${detailFields(e)}
     <div class="sec">
       <div class="actions">
         <button class="btn btn-primary" data-act="keep" ${d.decision === "keep" ? 'aria-pressed="true"' : ""}>${d.decision === "keep" ? "Kept" : "Keep"}<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
@@ -165,15 +179,8 @@ function renderInspector() {
       <textarea class="input" id="note" maxlength="140" placeholder="Public note (shows on the curated calendar)">${esc(d.note || "")}</textarea>
       <div class="counter"><span id="notecount">${(d.note || "").length}</span> / 140</div>
     </div>
-    <div class="sec">
-      <div class="label" style="margin-bottom:16px">Source information</div>
-      <dl class="fields" style="border:0;padding:0">
-        <dt>Seen in</dt><dd>${links || esc((e.sources || []).join(", ")) || "Unknown"}</dd>
-        <dt>Mentions</dt><dd>${e.source_count || (e.sources || []).length}</dd>
-      </dl>
-      ${e.thumb ? `<img class="thumb" src="${e.thumb}" alt="Flyer">` : ""}
-      ${e.source_excerpt ? `<div class="excerpt">${esc(e.source_excerpt)}</div>` : ""}
-    </div>`;
+    ${detailSources(e)}
+`;
   const c = $("#closeinsp"); if (c) c.onclick = () => { current = null; render(); };
 }
 
@@ -216,7 +223,10 @@ function wire() {
   $("#as-value").addEventListener("keydown", (ev) => { if (ev.key === "Enter") $("#as-add").click(); });
   ["#q", "#cat", "#src", "#hi", "#fam", "#hideskip"].forEach((s) => $(s).addEventListener("input", render));
   ["#sq", "#sstate", "#sprofile", "#srun", "#shidepast"].forEach((s) => $(s).addEventListener("input", () => { if (s === "#sstate") touched.clear(); renderSort(); }));
-  document.addEventListener("click", (ev) => { const c = ev.target.closest("[data-pa]"); if (c) toggleAssign(c.closest("tr").dataset.ak, c.dataset.pa); });
+  document.addEventListener("click", (ev) => {
+    const o = ev.target.closest("[data-sopen]"); if (o) { scur = o.dataset.sopen; $("#pinsp").hidden = false; renderSort(); renderProfiles(); return; }
+    const c = ev.target.closest("[data-pa]"); if (c) toggleAssign(c.closest("[data-ak]").dataset.ak, c.dataset.pa);
+  });
   $("#copysession").onclick = copySession;
   $("#sprofiles-btn").onclick = () => { $("#pinsp").hidden = false; };
   $("#selkept").onclick = () => { EVENTS.forEach((e) => { if (decisionOf(e) === "keep") selected.add(e.key); }); saveSel(); render(); };
@@ -307,7 +317,7 @@ async function startSweep(sb) {
 }
 
 // ---------- sort tab (profiles)
-let PROFILES = [], POOL = [], ASSIGN = {}, pcur = null, sortLoaded = false, CHARTERS = {}, touched = new Set();
+let PROFILES = [], POOL = [], ASSIGN = {}, pcur = null, scur = null, sortLoaded = false, CHARTERS = {}, touched = new Set();
 const akey = (e) => e.run + "|" + e.key;
 const profilesOf = (e) => Object.keys(ASSIGN[akey(e)] || {});
 const isSorted = (e) => profilesOf(e).length > 0;
@@ -339,10 +349,11 @@ function renderSort() {
     const on = ASSIGN[akey(e)] || {};
     const chips = PROFILES.map((p) => `<button class="pchip ${on[p.slug] ? "on" : ""} ${on[p.slug]?.source === "suggested" ? "sugg" : ""}" data-pa="${esc(p.slug)}" title="${esc(on[p.slug]?.reason || p.name)}">${esc(p.name)}</button>`).join("") +
       `<button class="pchip none ${on.none ? "on" : ""}" data-pa="none">None</button>`;
-    return `<tr data-ak="${esc(akey(e))}"><td class="c-date"><div class="date-main">${esc(fmtDate(e.starts_at))}</div><div class="data">${esc(fmtRange(e))}</div></td>
-      <td><div>${e.highlight ? `<span class="star">★</span>` : ""}${e.url ? `<a class="name-btn" href="${esc(e.url)}" target="_blank" rel="noopener" style="color:var(--nv-ink)">${esc(e.title)}</a>` : esc(e.title)}</div><div class="sub">${esc([e.venue, e.neighborhood, price(e)].filter(Boolean).join(" · "))}</div>${e.highlight_why ? `<div class="sub">${esc(e.highlight_why)}</div>` : ""}</td>
-      <td class="c-cat"><span class="sub">${esc(e.category)}</span><div class="sub">${esc(e.run)}</div></td>
-      <td><div class="pchips">${chips}</div></td></tr>`;
+    return `<tr data-ak="${esc(akey(e))}" data-current="${scur === akey(e)}">
+      <td class="c-name"><button class="name-btn" data-sopen="${esc(akey(e))}">${e.highlight ? `<span class="star" aria-label="Highlight">★</span>` : ""}${esc(e.title)}</button><div class="sub">${esc([fmtDate(e.starts_at), e.venue || e.neighborhood].filter(Boolean).join(" · "))}</div></td>
+      <td class="c-cat"><span class="sub">${esc(e.category)}</span></td>
+      <td class="c-prof"><div class="pchips">${chips}</div></td>
+      <td class="c-chev"><button class="icon-btn name-btn" data-sopen="${esc(akey(e))}" aria-label="Open ${esc(e.title)}">${CHEV}</button></td></tr>`;
   }).join("") : `<tr><td colspan="4" class="empty">${POOL.length ? "Nothing matches these filters." : "No events yet; run a sweep."}</td></tr>`;
 }
 async function toggleAssign(ak, profile) {
@@ -364,8 +375,20 @@ async function charterFor(slug) {
   try { const r = await fetch(`${(window.SCOUT_CONFIG?.eventsBase || "").replace(/\/$/, "")}/profiles/${slug}.md?t=${Math.floor(Date.now() / 60000)}`); CHARTERS[slug] = r.ok ? (await r.text()).replace(/^---[\s\S]*?---\n/, "") : ""; } catch { CHARTERS[slug] = ""; }
   return CHARTERS[slug];
 }
+function renderSortDetails(el, e) {
+  const on = ASSIGN[akey(e)] || {};
+  const chips = PROFILES.map((p) => `<button class="pchip ${on[p.slug] ? "on" : ""}" data-pa="${esc(p.slug)}">${esc(p.name)}</button>`).join("") + `<button class="pchip none ${on.none ? "on" : ""}" data-pa="none">None</button>`;
+  el.innerHTML = `<div class="insp-head"><span class="label">Event details</span><button class="icon-btn btn btn-secondary" id="sd-close" aria-label="Back to profiles"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13"/></svg></button></div>
+    <h2 class="ev-title">${esc(e.title)}</h2>
+    <div class="sub">${esc(e.run)}${e.highlight ? " · Highlight" : ""}</div>
+    <div class="sec" style="margin-top:16px"><div class="label" style="margin-bottom:10px">Profiles</div><div class="pchips" data-ak="${esc(akey(e))}">${chips}</div></div>
+    ${detailFields(e)}
+    ${detailSources(e)}`;
+  $("#sd-close").onclick = () => { scur = null; if (window.innerWidth < 1280) el.hidden = true; renderSort(); renderProfiles(); };
+}
 async function renderProfiles() {
   const el = $("#pinsp"); if (el.dataset.inited !== "1") { el.dataset.inited = "1"; el.hidden = window.innerWidth < 1280; }
+  if (scur) { const e = POOL.find((x) => akey(x) === scur); if (e) { renderSortDetails(el, e); return; } scur = null; }
   const counts = {}; Object.values(ASSIGN).forEach((m) => Object.keys(m).forEach((p) => counts[p] = (counts[p] || 0) + 1));
   const list = PROFILES.map((p) => `<div class="prow ${pcur === p.slug ? "sel" : ""}" data-pp="${esc(p.slug)}"><b>${esc(p.name)}</b><span class="sub">${counts[p.slug] || 0}</span></div>`).join("") +
     `<div class="prow ${pcur === "none" ? "sel" : ""}" data-pp="none"><b class="sub">None</b><span class="sub">${counts.none || 0}</span></div>`;

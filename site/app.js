@@ -203,7 +203,7 @@ function renderInspector() {
 
 // ---------- export (contract: docs/eventrrr-import-prompt.md)
 function exportJson(list, cal) {
-  return JSON.stringify(Object.assign({eventrrr_import: 1, source: "eventrrr-scout", run: cal ? "calendar:" + cal.slug : META.run}, cal ? {calendar: {slug: cal.slug, name: cal.name}} : {}, {events: list.map((e) => Object.assign({
+  return JSON.stringify(Object.assign({eventrrr_import: 1, source: "eventrrr-scout", run: cal ? "calendar:" + cal.slug : META.run}, cal ? {calendar: {slug: cal.slug, name: cal.name, eventrrr_name: cal.handle || null}} : {}, {events: list.map((e) => Object.assign({
     title: e.title, starts_at: e.starts_at, ends_at: e.ends_at || null, all_day: !!e.all_day, timezone: e.timezone || TZ,
     venue: e.venue || null, address: e.address || null, neighborhood: e.neighborhood || null,
     price_text: e.price_text || (e.price_min === 0 ? "Free" : null), price_min: e.price_min ?? null, currency: e.currency || "MXN",
@@ -447,11 +447,11 @@ async function renderProfiles() {
     const ch = await charterFor(p.slug);
     const newN = pending(p).length, allN = POOL.filter((e) => (ASSIGN[akey(e)] || {})[p.slug] && !isPast(e)).length;
     const lastBatch = Object.entries(EXPORTED).filter(([k]) => k.startsWith(p.slug + "|")).map(([, b]) => b).sort().pop();
-    detail = `<div class="sec"><h2 class="ev-title" style="font-size:22px;line-height:28px">${esc(p.name)}</h2><div class="sub">@${esc(p.handle || "handle not set")} · ${counts[p.slug] || 0} events · ${allN} upcoming · ${newN} not yet exported</div>
+    detail = `<div class="sec"><h2 class="ev-title" style="font-size:22px;line-height:28px">${esc(p.name)}</h2><div class="sub">${esc(p.handle ? "Eventrrr: " + p.handle : "Eventrrr calendar not set")} · ${counts[p.slug] || 0} events · ${allN} upcoming · ${newN} not yet exported</div>
       <div class="actions" style="margin-top:16px"><button class="btn btn-primary" id="pp-export" style="flex:0 0 auto" ${newN ? "" : "disabled"}>Export to Eventrrr (${newN} new)</button>${allN > newN ? `<button class="link-btn" id="pp-export-all">Re-export all ${allN}</button>` : ""}${lastBatch ? `<button class="link-btn" id="pp-undo">Undo last export</button>` : ""}</div>
       <div class="pform">
         <label>Persona<textarea class="input" id="pp-persona" rows="4">${esc(p.persona || "")}</textarea></label>
-        <label>Eventrrr handle<input class="input" id="pp-handle" value="${esc(p.handle || "")}" placeholder="foodie_cdmx"></label>
+        <label>Eventrrr calendar <span class="sub">(its name in Eventrrr)</span><input class="input" id="pp-handle" value="${esc(p.handle || "")}" placeholder="Food & Drink"></label>
         <label>Type<select class="select" id="pp-kind"><option value="ongoing" ${p.kind !== "oneoff" ? "selected" : ""}>Ongoing calendar (trains the sorter)</option><option value="oneoff" ${p.kind === "oneoff" ? "selected" : ""}>One-off calendar</option></select></label>
         <label>Ends on <span class="sub">(one-off only; hides after)</span><input class="input" type="date" id="pp-ends" value="${esc(p.ends_on || "")}"></label>
         <div class="actions" style="margin-top:12px"><button class="btn btn-primary" id="pp-save" style="flex:0 0 auto">Save</button><button class="btn btn-secondary" id="pp-archive" style="flex:0 0 auto">Archive</button></div>
@@ -465,19 +465,19 @@ async function renderProfiles() {
       <label>Type<select class="select" id="pp-kind"><option value="ongoing" ${draft.kind !== "oneoff" ? "selected" : ""}>Ongoing calendar (trains the sorter)</option><option value="oneoff" ${draft.kind === "oneoff" ? "selected" : ""}>One-off calendar</option></select></label>
       <label>Ends on <span class="sub">(one-off only; hides after)</span><input class="input" type="date" id="pp-ends" value="${esc(draft.ends_on || "")}"></label>
       <label>Persona<textarea class="input" id="pp-persona" rows="4" placeholder="Who this curator is, what they show up for, what they'd never feature.">${esc(draft.persona || "")}</textarea></label>
-      <label>Eventrrr handle<input class="input" id="pp-handle" placeholder="family_cdmx" value="${esc(draft.handle || "")}"></label>
+      <label>Eventrrr calendar <span class="sub">(its name in Eventrrr)</span><input class="input" id="pp-handle" placeholder="Family" value="${esc(draft.handle || "")}"></label>
       <div class="actions" style="margin-top:12px"><button class="btn btn-primary" id="pp-create" style="flex:0 0 auto">Create</button></div></div></div>`;
   }
   el.innerHTML = `<div class="insp-head"><span class="label">Calendars</span><span style="display:flex;gap:8px"><button class="btn btn-secondary" id="pp-new" style="min-height:32px;padding:6px 12px">+ New</button><button class="icon-btn btn btn-secondary close" id="pp-close" aria-label="Close profiles"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13"/></svg></button></span></div><div class="plist">${list}</div>${detail}`;
   $("#pp-new").onclick = () => { pcur = "new"; renderProfiles(); };
   $("#pp-close").onclick = () => { el.hidden = true; };
   el.querySelectorAll("[data-pp]").forEach((r) => r.onclick = () => { pcur = r.dataset.pp; $("#sprofile").value = pcur; $("#sstate").value = "all"; renderSort(); renderProfiles(); });
-  const save = $("#pp-save"); if (save) save.onclick = async () => { try { await provider.saveProfile(Object.assign({}, p, {persona: $("#pp-persona").value.trim(), handle: $("#pp-handle").value.trim().replace(/^@/, "") || null, kind: $("#pp-kind").value, ends_on: $("#pp-ends").value || null})); toast("Calendar saved"); PROFILES = (await provider.profiles()).filter(isLive); renderSort(); renderProfiles(); } catch (e) { toast("Save failed: " + (e.message || e)); } };
+  const save = $("#pp-save"); if (save) save.onclick = async () => { try { await provider.saveProfile(Object.assign({}, p, {persona: $("#pp-persona").value.trim(), handle: $("#pp-handle").value.trim()|| null, kind: $("#pp-kind").value, ends_on: $("#pp-ends").value || null})); toast("Calendar saved"); PROFILES = (await provider.profiles()).filter(isLive); renderSort(); renderProfiles(); } catch (e) { toast("Save failed: " + (e.message || e)); } };
   const arch = $("#pp-archive"); if (arch) arch.onclick = async () => { if (!arch.dataset.sure) { arch.textContent = "Archive? Click again"; arch.dataset.sure = "1"; return; } try { await provider.saveProfile(Object.assign({}, p, {active: false})); pcur = null; await loadSort(); toast("Profile archived; its assignments are kept"); } catch (e) { toast("Failed: " + (e.message || e)); } };
   const doExport = async (list) => {
     if (!list.length) return toast("Nothing to export");
     if (list.length > 100) return toast("Eventrrr imports up to 100 at a time; narrow with the run filter");
-    const ok = await copyText(exportJson(list, p), `${list.length} events copied for @${p.handle || p.slug}. Paste into that account → Paste text.`);
+    const ok = await copyText(exportJson(list, p), `${list.length} events copied, tagged ${p.slug}. Paste into Eventrrr → Paste text.`);
     if (!ok) return;
     const batch = new Date().toISOString();
     try { await provider.markExported(list.map((e) => ({profile: p.slug, run: e.run, key: e.key, batch}))); list.forEach((e) => { EXPORTED[expKey(p.slug, e)] = batch; }); renderProfiles(); }
@@ -494,7 +494,7 @@ async function renderProfiles() {
     const slug = $("#pp-slug").value.trim().toLowerCase(), name = $("#pp-name").value.trim();
     if (!/^[a-z0-9-]{2,30}$/.test(slug)) return toast("Slug: 2–30 lowercase letters, digits or dashes");
     if (!name) return toast("Give it a name");
-    const draft = {slug, name, persona: $("#pp-persona").value.trim(), handle: $("#pp-handle").value.trim().replace(/^@/, "") || null, active: true, sort_order: 100 + PROFILES.length, kind: $("#pp-kind").value, ends_on: $("#pp-ends").value || null};
+    const draft = {slug, name, persona: $("#pp-persona").value.trim(), handle: $("#pp-handle").value.trim()|| null, active: true, sort_order: 100 + PROFILES.length, kind: $("#pp-kind").value, ends_on: $("#pp-ends").value || null};
     try { await provider.saveProfile(draft, true); try { sessionStorage.removeItem("scout-profile-draft"); } catch {} pcur = slug; await loadSort(); toast("Calendar created"); }
     catch (e) { try { sessionStorage.setItem("scout-profile-draft", JSON.stringify(draft)); } catch {} console.error("create profile", e); toast("Create failed: " + (e.message || e), 12000); }
   };

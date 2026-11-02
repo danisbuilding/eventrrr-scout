@@ -24,7 +24,7 @@ Tourist packages, generic "cultural" listings, anything whose only hook is the v
 - Performance, dance, video art and talks go here, not to music, when the frame is art or scholarship: Cuerpo al Descubierto, SINESTESIA ACTIVADA, FEAR OF THE OBJECT, Fandango del inframundo (staged son jarocho), Didi-Huberman.
 - A museum family workshop can qualify when tied to a featured show (¡Punto extra! → Manifesto). Hypothesis; see Surprises.
 - Blockbusters are fine when the institution is the hook (Richard Prince at Jumex, Manifesto at MUAC); nothing in session 1 showed "small over big."
-- A canonical tradition site counts without an institution: Mixquic (Tláhuac, Oct 31–Nov 2) → cultural. I read it as the same test as the Zócalo: you go, stand in it, see everything. Session 2, hypothesis.
+- City-scale tradition passes without an author when the visit works: Mixquic, the Mega Procesión de Catrinas and the Gran Desfile are all in (DP, session 2; the two parades aren't tagged in the app yet). Same test as the Zócalo: one place, you see it all.
 - A named collective's altar in a gallery passes, registration and all (Volver a la Tierra — Proyectos Públicos). Session 2, as predicted.
 - The visit has to work as a visit: one spot where you take it all in, or a cluster you can walk between (Zócalo ofrenda + lighting + Centro). A long walk to see spaced-out pieces fails even when the content is fine (El Camino). Confirmed by DP, session 1.
 
@@ -38,6 +38,7 @@ Tourist packages, generic "cultural" listings, anything whose only hook is the v
 | Festival de Día de Muertos — Casa del Risco (programa) | none | Listing of events, not an event |
 | Geometrías para una fiesta — Museo Tamayo | none | Free family workshop by a named artist, not taken (contrast ¡Punto extra! at MUAC) |
 | Mixquic — Celebración de Día de Muertos | cultural | The tradition itself; no author, but the visit works |
+| Gran Desfile / Mega Procesión de Catrinas | cultural (DP, not yet tagged) | City parade; you stand in one spot and see it all |
 | Megaofrenda UNAM (three listings) | cultural | Institution; DP tagged all three duplicate rows |
 
 ## What I think you're doing
@@ -47,7 +48,7 @@ Tourist packages, generic "cultural" listings, anything whose only hook is the v
 - Mega Ofrenda "Entre Flores y Agaves" (ArsTelier, $650, mezcal, Guerrero producers) went only here, not to foodie. I think the art-space framing won, but the foodie persona would also claim it.
 
 ## Surprises
-- Mixquic → cultural but Mega Procesión de Catrinas and Gran Desfile stayed untouched. If that's deliberate, the line is "a place you go to" vs "a thing that passes by"; if they're untouched only because they'd gone past, say so.
+- Mega Procesión de Catrinas and Gran Desfile: DP says both belong in cultural and thought they were tagged; they aren't in the data (untouched, now hidden as past). Treat them as cultural. So the city's parades pass; what failed El Camino was the walk, not the spectacle.
 - You tagged all three Megaofrenda UNAM rows. They're one event the pipeline failed to merge; exporting cultural would send it three times. Pipeline fix pending; nothing for you to do.
 - ¡Punto extra! (MUAC, kids 6–11, registration) → cultural, but Geometrías para una fiesta (Tamayo, kids 7+, free, named artist) → none. Same shape of event. Is the difference the link to a featured exhibition, or was one of these a slip?
 - Festival Flores de Cempasúchil (140 producers, Reforma) → none. Not cultural, I agree; but see foodie — is a producers' market ever an event for any profile?

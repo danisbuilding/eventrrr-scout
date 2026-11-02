@@ -12,3 +12,9 @@ an unknown band at an uncomfortable venue fails but passes at a pleasant one (mu
 however good the club (nightlife), why a special menu that runs for weeks isn't an event (foodie), and why a long
 cold walk along Reforma fails where standing in the Zócalo passes (cultural). Category and author are necessary;
 the imagined visit decides.
+
+## Tagging a second profile (DP, session 2)
+
+An event gets a second profile when it is at least *good* for that profile, not merely possible. Very good as a
+club night and mediocre as a date → nightlife only. A film festival that is very good as culture and good as a
+date → both. Price can decide: a $1,300-a-head dinner is foodie, not a general date suggestion.

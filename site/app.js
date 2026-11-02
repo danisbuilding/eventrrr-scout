@@ -12,6 +12,11 @@ const GOOGLE = `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4"
 const fmtTime = (iso) => { const d = new Date(iso); return isNaN(d) ? "" : d.toLocaleTimeString("en-US", {hour: "numeric", minute: "2-digit", timeZone: TZ}); };
 const fmtDate = (iso) => { const d = new Date(iso); return isNaN(d) ? "Date unknown" : d.toLocaleDateString("en-US", {month: "short", day: "numeric", year: "numeric", timeZone: TZ}); };
 const fmtRange = (e) => e.all_day ? "All day" : fmtTime(e.starts_at) + (e.ends_at ? " – " + fmtTime(e.ends_at) : "");
+const fmtShort = (iso) => { const d = new Date(iso); return isNaN(d) ? "" : d.toLocaleDateString("en-US", {month: "short", day: "numeric", timeZone: TZ}); };
+const isMultiDay = (e) => !!e.ends_at && e.ends_at.slice(0, 10) > (e.starts_at || "").slice(0, 10);
+// "Sep 26 – Feb 7 · until Feb 7" for runs; the start date otherwise
+const fmtSpan = (e) => isMultiDay(e) ? `${fmtShort(e.starts_at)} – ${fmtShort(e.ends_at)}` : fmtDate(e.starts_at);
+const fmtSub = (e) => isMultiDay(e) ? (e.ends_at.slice(0, 10) < todayLocal() ? "Ended" : e.starts_at.slice(0, 10) > todayLocal() ? "Opens " + fmtShort(e.starts_at) : "On now · until " + fmtShort(e.ends_at)) : fmtRange(e);
 const fmtLong = (e) => { const d = new Date(e.starts_at); if (isNaN(d)) return "Date unknown"; return d.toLocaleDateString("en-US", {weekday: "long", month: "long", day: "numeric", year: "numeric", timeZone: TZ}) + ", " + fmtRange(e); };
 const price = (e) => e.price_text ? e.price_text : (e.price_min === 0 ? "Free" : (e.price_min != null ? `${e.price_min} ${e.currency || "MXN"}` : "Not listed"));
 const srcName = (e) => (e.source_links && e.source_links[0] && e.source_links[0].name) || ((e.sources || [])[0] || "").split(":")[1] || "Unknown";
@@ -138,7 +143,7 @@ function render() {
       <td class="c-check"><input class="cb" type="checkbox" data-sel="${esc(e.key)}" ${selected.has(e.key) ? "checked" : ""} aria-label="Select ${esc(e.title)} for export"></td>
       <td class="c-name"><button class="name-btn" data-open="${esc(e.key)}">${e.highlight ? `<span class="star" aria-label="Highlight">★</span>` : ""}${esc(e.title)}</button></td>
       <td class="c-cat"><span class="sub">${esc(e.category)}</span>${e.family_friendly ? `<div class="sub">Family-friendly</div>` : ""}</td>
-      <td class="c-date"><div class="date-main">${esc(fmtDate(e.starts_at))}</div><div class="data">${esc(fmtRange(e))}</div></td>
+      <td class="c-date"><div class="date-main">${esc(fmtSpan(e))}</div><div class="data">${esc(fmtSub(e))}</div></td>
       <td class="c-src"><span class="sub">${esc(srcName(e))}${(e.source_count || 1) > 1 ? ` +${e.source_count - 1}` : ""}</span></td>
       <td class="c-status"><span class="status"><span class="dot ${s.cls}"></span>${s.text}</span></td>
       <td class="c-chev"><button class="icon-btn name-btn" data-open="${esc(e.key)}" aria-label="Open ${esc(e.title)}">${CHEV}</button></td>
@@ -399,7 +404,7 @@ function renderSort() {
     const chips = PROFILES.map((p) => `<button class="pchip ${on[p.slug] ? "on" : ""} ${on[p.slug]?.source === "suggested" ? "sugg" : ""}" data-pa="${esc(p.slug)}" title="${esc(on[p.slug]?.reason || p.name)}">${esc(p.name)}</button>`).join("") +
       `<button class="pchip none ${on.none ? "on" : ""}" data-pa="none">None</button>`;
     return `<tr data-ak="${esc(akey(e))}" data-current="${scur === akey(e)}">
-      <td class="c-name"><button class="name-btn" data-sopen="${esc(akey(e))}">${e.highlight ? `<span class="star" aria-label="Highlight">★</span>` : ""}${esc(e.title)}</button><div class="sub">${esc([fmtDate(e.starts_at), e.venue || e.neighborhood].filter(Boolean).join(" · "))}</div></td>
+      <td class="c-name"><button class="name-btn" data-sopen="${esc(akey(e))}">${e.highlight ? `<span class="star" aria-label="Highlight">★</span>` : ""}${esc(e.title)}</button><div class="sub">${esc([isMultiDay(e) ? fmtSub(e) : fmtDate(e.starts_at), e.venue || e.neighborhood].filter(Boolean).join(" · "))}</div></td>
       <td class="c-cat"><span class="sub">${esc(e.category)}</span></td>
       <td class="c-prof"><div class="pchips">${chips}</div></td>
       <td class="c-chev"><button class="icon-btn name-btn" data-sopen="${esc(akey(e))}" aria-label="Open ${esc(e.title)}">${CHEV}</button></td></tr>`;

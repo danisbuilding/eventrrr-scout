@@ -43,13 +43,15 @@ decisions/<run>.json         Keep / Skip / notes from review
 
 A run is named `YYYY-MM-DD[-slug]`, e.g. `2026-10-28-dia-de-muertos`.
 
-## Profiles (the Sort tab)
+## Calendars (the Review tab)
 
-Every event from every run lands in one pool on the Sort tab. DP taps profile chips (an event can belong to
-several, or to None); assignments live in `scout_assignments`. Each profile is a separate Eventrrr account, so
-"Export to Eventrrr (n)" on a profile copies that profile's upcoming events as one import JSON. "Copy session"
-copies all assignments as JSON to paste to Claude, who updates `profiles/<slug>.md`. After ~5–6 sessions a
-first-pass sorter in the pipeline proposes assignments (`source: suggested`, dashed chips) for DP to confirm.
+Every event from every run lands in one pool on the Review tab. DP taps calendar chips (an event can belong to
+several, or to None); assignments live in `scout_assignments`. A calendar (`scout_profiles` row) is ongoing
+(trains the sorter) or one-off (has an end date, hides after it); each maps to an Eventrrr account.
+"Export to Eventrrr (n new)" copies the calendar's upcoming, not-yet-exported events as one import JSON tagged
+with the calendar slug; the ledger is `scout_exports` (`supabase/exports.sql`), with "Undo last export".
+"Copy session" copies all assignments as JSON to paste to Claude, who updates `profiles/<slug>.md`. After ~5–6
+sessions a first-pass sorter in the pipeline proposes assignments (`source: suggested`, dashed chips).
 
 ## Running a sweep
 

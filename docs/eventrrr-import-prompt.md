@@ -86,3 +86,14 @@ On success, close the sheet and show the existing toast style: "{N} events added
 7. Paste malformed JSON that starts with `{`: goes through the extractor as before (it isn't a valid import).
 8. Tell me the file where the detection and validation live.
 ```
+
+## Addendum (2026-11-02): calendar tag on exports
+
+Exports from a Scout calendar now carry two extra fields, which Eventrrr's whitelist drops today:
+
+- top level: `"calendar": {"slug": "dates", "name": "Date Night"}`
+- per event: `"tags": ["dates"]`
+
+Planned Eventrrr change (not yet requested): on import, when `calendar.slug` is present and unmapped for this
+account, show a one-time confirmation "Put these in calendar X?" and remember it (`scout_bucket_map`: slug →
+calendar id, per account); later imports route themselves. Events still land in "To review".

@@ -211,3 +211,5 @@ textarea.input { width: 100%; min-height: 64px; resize: vertical; margin-top: 8p
   #stbl td.c-chev { position: absolute; right: 0; top: 14px; }
   .pchip { padding: 6px 12px; font-size: 13px; }
 }
+.actions .link-btn { white-space: nowrap; }
+.actions { flex-wrap: wrap; row-gap: 8px; }

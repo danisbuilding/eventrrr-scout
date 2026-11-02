@@ -37,6 +37,9 @@ function inlineProvider(inline) {
     async assignments() { try { return JSON.parse(localStorage.getItem("scout-assignments") || "[]"); } catch { return []; } },
     async assign(run, key, profile, on) { let as = await this.assignments(); as = as.filter((x) => !(x.run === run && x.key === key && x.profile === profile)); if (on) as.push({run, key, profile, source: "manual", updated_at: new Date().toISOString()}); try { localStorage.setItem("scout-assignments", JSON.stringify(as)); } catch {} },
     async allEvents() { return (inline.events || []).map((e) => Object.assign({run: inline.meta.run}, e)); },
+    async exports() { try { return JSON.parse(localStorage.getItem("scout-exports") || "[]"); } catch { return []; } },
+    async markExported(rows) { const ex = (await this.exports()).concat(rows); try { localStorage.setItem("scout-exports", JSON.stringify(ex)); } catch {} },
+    async undoExport(profile, batch) { const ex = (await this.exports()).filter((x) => !(x.profile === profile && x.batch === batch)); try { localStorage.setItem("scout-exports", JSON.stringify(ex)); } catch {} },
   };
 }
 const DEFAULT_PROFILES = [
@@ -78,6 +81,9 @@ function supabaseProvider(sb, user, cfg) {
       if (on) { const {error} = await sb.from("scout_assignments").upsert({run, key, profile, source: "manual", updated_by: user.email, updated_at: new Date().toISOString()}, {onConflict: "run,key,profile"}); if (error) throw error; }
       else { const {error} = await sb.from("scout_assignments").delete().match({run, key, profile}); if (error) throw error; }
     },
+    async exports() { const {data, error} = await sb.from("scout_exports").select("profile,run,key,batch").limit(10000); if (error) throw error; return data || []; },
+    async markExported(rows) { const {error} = await sb.from("scout_exports").upsert(rows.map((r) => Object.assign({exported_by: user.email}, r)), {onConflict: "profile,run,key"}); if (error) throw error; },
+    async undoExport(profile, batch) { const {error} = await sb.from("scout_exports").delete().match({profile, batch}); if (error) throw error; },
     async allEvents() {
       const idx = await get("runs/index.json"); const out = [];
       for (const r of (idx.runs || []).filter((x) => !x.hidden && !x.run.startsWith("sample"))) {
@@ -196,17 +202,17 @@ function renderInspector() {
 }
 
 // ---------- export (contract: docs/eventrrr-import-prompt.md)
-function exportJson(list) {
-  return JSON.stringify({eventrrr_import: 1, source: "eventrrr-scout", run: META.run, events: list.map((e) => ({
+function exportJson(list, cal) {
+  return JSON.stringify(Object.assign({eventrrr_import: 1, source: "eventrrr-scout", run: cal ? "calendar:" + cal.slug : META.run}, cal ? {calendar: {slug: cal.slug, name: cal.name}} : {}, {events: list.map((e) => Object.assign({
     title: e.title, starts_at: e.starts_at, ends_at: e.ends_at || null, all_day: !!e.all_day, timezone: e.timezone || TZ,
     venue: e.venue || null, address: e.address || null, neighborhood: e.neighborhood || null,
     price_text: e.price_text || (e.price_min === 0 ? "Free" : null), price_min: e.price_min ?? null, currency: e.currency || "MXN",
     url: e.url && /^https?:\/\//.test(e.url) ? e.url : null, category: e.category, description: e.description || null,
     public_note: (decisions[e.key]?.note || "").slice(0, 140) || null,
-  }))}, null, 1);
+  }, cal ? {tags: [cal.slug]} : {}))}), null, 1);
 }
 function copyText(t, ok) {
-  navigator.clipboard.writeText(t).then(() => toast(ok), () => { const r = document.createElement("textarea"); r.value = t; document.body.appendChild(r); r.select(); try { document.execCommand("copy"); toast(ok); } catch { toast("Copy failed"); } r.remove(); });
+  return navigator.clipboard.writeText(t).then(() => { toast(ok); return true; }, () => { const r = document.createElement("textarea"); r.value = t; document.body.appendChild(r); r.select(); let done = false; try { done = document.execCommand("copy"); toast(done ? ok : "Copy failed"); } catch { toast("Copy failed"); } r.remove(); return done; });
 }
 
 // ---------- events
@@ -346,7 +352,11 @@ async function startSweep(sb) {
 }
 
 // ---------- sort tab (profiles)
-let PROFILES = [], POOL = [], ASSIGN = {}, pcur = null, scur = null, sortLoaded = false, CHARTERS = {}, touched = new Set();
+let PROFILES = [], POOL = [], ASSIGN = {}, EXPORTED = {}, pcur = null, scur = null, sortLoaded = false, CHARTERS = {}, touched = new Set();
+const expKey = (profile, e) => profile + "|" + akey(e);
+const isLive = (p) => p.active !== false && !(p.kind === "oneoff" && p.ends_on && p.ends_on < todayLocal());
+// events on a calendar that are upcoming and not yet exported to it
+const pending = (p) => POOL.filter((e) => (ASSIGN[akey(e)] || {})[p.slug] && !isPast(e) && !EXPORTED[expKey(p.slug, e)]);
 const akey = (e) => e.run + "|" + e.key;
 const splitAk = (ak) => { const i = ak.indexOf("|"); return [ak.slice(0, i), ak.slice(i + 1)]; }; // key itself contains "|date"
 const profilesOf = (e) => Object.keys(ASSIGN[akey(e)] || {});
@@ -354,8 +364,9 @@ const isSorted = (e) => profilesOf(e).length > 0;
 async function loadSort() {
   const st = $("#ssync"); st.textContent = "Loading…";
   try {
-    PROFILES = (await provider.profiles()).filter((p) => p.active !== false).sort((a, b) => (a.sort_order || 0) - (b.sort_order || 0));
+    PROFILES = (await provider.profiles()).filter(isLive).sort((a, b) => (a.sort_order || 0) - (b.sort_order || 0));
     POOL = await provider.allEvents();
+    EXPORTED = {}; try { (await provider.exports()).forEach((x) => { EXPORTED[x.profile + "|" + x.run + "|" + x.key] = x.batch; }); } catch (e) { console.warn("exports ledger", e.message || e); }
     ASSIGN = {}; const legacy = [];
     (await provider.assignments()).forEach((x) => {
       if (x.key.includes("|")) { (ASSIGN[x.run + "|" + x.key] ||= {})[x.profile] = x; return; }
@@ -365,7 +376,7 @@ async function loadSort() {
       if (matches.length) legacy.push({x, keys: matches.map((e) => e.key)});
     });
     if (legacy.length) { st.textContent = `Migrating ${legacy.length} rows…`; for (const {x, keys} of legacy) { for (const k of keys) await provider.assign(x.run, k, x.profile, true); await provider.assign(x.run, x.key, x.profile, false); } }
-    $("#sprofile").innerHTML = `<option value="">Any profile</option>` + PROFILES.map((p) => `<option value="${esc(p.slug)}">${esc(p.name)}</option>`).join("") + `<option value="none">None</option>`;
+    $("#sprofile").innerHTML = `<option value="">Any calendar</option>` + PROFILES.map((p) => `<option value="${esc(p.slug)}">${esc(p.name)}</option>`).join("") + `<option value="none">None</option>`;
     $("#srun").innerHTML = `<option value="">All runs</option>` + [...new Set(POOL.map((e) => e.run))].map((r) => `<option>${esc(r)}</option>`).join("");
     sortLoaded = true; st.textContent = provider.name === "supabase" ? "Synced" : "This device only";
   } catch (e) { st.textContent = "Couldn't load: " + (e.message || e); }
@@ -381,7 +392,7 @@ function sortVisible() {
 }
 function renderSort() {
   const unsorted = POOL.filter((e) => !isSorted(e)).length;
-  $("#sort-metrics").innerHTML = [[POOL.length, "in pool"], [POOL.length - unsorted, "sorted"], [unsorted, "unsorted"]].map(([n, l]) => `<div class="metric"><b>${n}</b> ${l}</div>`).join("");
+  $("#sort-metrics").innerHTML = [[POOL.length, "in pool"], [POOL.length - unsorted, "reviewed"], [unsorted, "to review"]].map(([n, l]) => `<div class="metric"><b>${n}</b> ${l}</div>`).join("");
   const rows = sortVisible();
   $("#srows").innerHTML = rows.length ? rows.map((e) => {
     const on = ASSIGN[akey(e)] || {};
@@ -428,46 +439,63 @@ async function renderProfiles() {
   const el = $("#pinsp"); if (el.dataset.inited !== "1") { el.dataset.inited = "1"; el.hidden = window.innerWidth < 1280; }
   if (scur) { const e = POOL.find((x) => akey(x) === scur); if (e) { renderSortDetails(el, e); return; } scur = null; }
   const counts = {}; Object.values(ASSIGN).forEach((m) => Object.keys(m).forEach((p) => counts[p] = (counts[p] || 0) + 1));
-  const list = PROFILES.map((p) => `<div class="prow ${pcur === p.slug ? "sel" : ""}" data-pp="${esc(p.slug)}"><b>${esc(p.name)}</b><span class="sub">${counts[p.slug] || 0}</span></div>`).join("") +
+  const list = PROFILES.map((p) => { const n = pending(p).length; return `<div class="prow ${pcur === p.slug ? "sel" : ""}" data-pp="${esc(p.slug)}"><b>${esc(p.name)}${p.kind === "oneoff" ? ` <span class="sub">one-off</span>` : ""}</b><span class="sub">${n ? `<span class="pill run" title="Not yet exported">${n} new</span> ` : ""}${counts[p.slug] || 0}</span></div>`; }).join("") +
     `<div class="prow ${pcur === "none" ? "sel" : ""}" data-pp="none"><b class="sub">None</b><span class="sub">${counts.none || 0}</span></div>`;
   const p = PROFILES.find((x) => x.slug === pcur);
   let detail = "";
   if (p) {
     const ch = await charterFor(p.slug);
-    detail = `<div class="sec"><h2 class="ev-title" style="font-size:22px;line-height:28px">${esc(p.name)}</h2><div class="sub">@${esc(p.handle || "handle not set")} · ${counts[p.slug] || 0} events</div>
+    const newN = pending(p).length, allN = POOL.filter((e) => (ASSIGN[akey(e)] || {})[p.slug] && !isPast(e)).length;
+    const lastBatch = Object.entries(EXPORTED).filter(([k]) => k.startsWith(p.slug + "|")).map(([, b]) => b).sort().pop();
+    detail = `<div class="sec"><h2 class="ev-title" style="font-size:22px;line-height:28px">${esc(p.name)}</h2><div class="sub">@${esc(p.handle || "handle not set")} · ${counts[p.slug] || 0} events · ${allN} upcoming · ${newN} not yet exported</div>
+      <div class="actions" style="margin-top:16px"><button class="btn btn-primary" id="pp-export" style="flex:0 0 auto" ${newN ? "" : "disabled"}>Export to Eventrrr (${newN} new)</button>${allN > newN ? `<button class="link-btn" id="pp-export-all">Re-export all ${allN}</button>` : ""}${lastBatch ? `<button class="link-btn" id="pp-undo">Undo last export</button>` : ""}</div>
       <div class="pform">
         <label>Persona<textarea class="input" id="pp-persona" rows="4">${esc(p.persona || "")}</textarea></label>
         <label>Eventrrr handle<input class="input" id="pp-handle" value="${esc(p.handle || "")}" placeholder="foodie_cdmx"></label>
-        <div class="actions" style="margin-top:12px"><button class="btn btn-primary" id="pp-save" style="flex:0 0 auto">Save</button><button class="btn btn-secondary" id="pp-export" style="flex:0 0 auto">Export to Eventrrr (${counts[p.slug] || 0})</button><button class="btn btn-secondary" id="pp-archive" style="flex:0 0 auto">Archive</button></div>
+        <label>Type<select class="select" id="pp-kind"><option value="ongoing" ${p.kind !== "oneoff" ? "selected" : ""}>Ongoing calendar (trains the sorter)</option><option value="oneoff" ${p.kind === "oneoff" ? "selected" : ""}>One-off calendar</option></select></label>
+        <label>Ends on <span class="sub">(one-off only; hides after)</span><input class="input" type="date" id="pp-ends" value="${esc(p.ends_on || "")}"></label>
+        <div class="actions" style="margin-top:12px"><button class="btn btn-primary" id="pp-save" style="flex:0 0 auto">Save</button><button class="btn btn-secondary" id="pp-archive" style="flex:0 0 auto">Archive</button></div>
       </div></div>
       <div class="sec"><div class="label" style="margin-bottom:10px">Charter &amp; notes <a class="sub" href="https://github.com/danisbuilding/eventrrr-scout/blob/main/profiles/${esc(p.slug)}.md" target="_blank" rel="noopener">(edit on GitHub)</a></div><div class="charter">${esc(ch || "No charter yet. It gets written after your first sorting session.")}</div></div>`;
   } else if (pcur === "new") {
     let draft = {}; try { draft = JSON.parse(sessionStorage.getItem("scout-profile-draft") || "{}"); } catch {}
-    detail = `<div class="sec"><div class="label">New profile</div><div class="pform">
+    detail = `<div class="sec"><div class="label">New calendar</div><div class="pform">
       <label>Short id (slug)<input class="input" id="pp-slug" placeholder="family" pattern="[a-z0-9-]+" value="${esc(draft.slug || "")}"></label>
       <label>Name<input class="input" id="pp-name" placeholder="Family" value="${esc(draft.name || "")}"></label>
+      <label>Type<select class="select" id="pp-kind"><option value="ongoing" ${draft.kind !== "oneoff" ? "selected" : ""}>Ongoing calendar (trains the sorter)</option><option value="oneoff" ${draft.kind === "oneoff" ? "selected" : ""}>One-off calendar</option></select></label>
+      <label>Ends on <span class="sub">(one-off only; hides after)</span><input class="input" type="date" id="pp-ends" value="${esc(draft.ends_on || "")}"></label>
       <label>Persona<textarea class="input" id="pp-persona" rows="4" placeholder="Who this curator is, what they show up for, what they'd never feature.">${esc(draft.persona || "")}</textarea></label>
       <label>Eventrrr handle<input class="input" id="pp-handle" placeholder="family_cdmx" value="${esc(draft.handle || "")}"></label>
       <div class="actions" style="margin-top:12px"><button class="btn btn-primary" id="pp-create" style="flex:0 0 auto">Create</button></div></div></div>`;
   }
-  el.innerHTML = `<div class="insp-head"><span class="label">Profiles</span><span style="display:flex;gap:8px"><button class="btn btn-secondary" id="pp-new" style="min-height:32px;padding:6px 12px">+ New</button><button class="icon-btn btn btn-secondary close" id="pp-close" aria-label="Close profiles"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13"/></svg></button></span></div><div class="plist">${list}</div>${detail}`;
+  el.innerHTML = `<div class="insp-head"><span class="label">Calendars</span><span style="display:flex;gap:8px"><button class="btn btn-secondary" id="pp-new" style="min-height:32px;padding:6px 12px">+ New</button><button class="icon-btn btn btn-secondary close" id="pp-close" aria-label="Close profiles"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13"/></svg></button></span></div><div class="plist">${list}</div>${detail}`;
   $("#pp-new").onclick = () => { pcur = "new"; renderProfiles(); };
   $("#pp-close").onclick = () => { el.hidden = true; };
   el.querySelectorAll("[data-pp]").forEach((r) => r.onclick = () => { pcur = r.dataset.pp; $("#sprofile").value = pcur; $("#sstate").value = "all"; renderSort(); renderProfiles(); });
-  const save = $("#pp-save"); if (save) save.onclick = async () => { try { await provider.saveProfile(Object.assign({}, p, {persona: $("#pp-persona").value.trim(), handle: $("#pp-handle").value.trim().replace(/^@/, "") || null})); toast("Profile saved"); PROFILES = (await provider.profiles()).filter((x) => x.active !== false); renderProfiles(); } catch (e) { toast("Save failed: " + (e.message || e)); } };
+  const save = $("#pp-save"); if (save) save.onclick = async () => { try { await provider.saveProfile(Object.assign({}, p, {persona: $("#pp-persona").value.trim(), handle: $("#pp-handle").value.trim().replace(/^@/, "") || null, kind: $("#pp-kind").value, ends_on: $("#pp-ends").value || null})); toast("Calendar saved"); PROFILES = (await provider.profiles()).filter(isLive); renderSort(); renderProfiles(); } catch (e) { toast("Save failed: " + (e.message || e)); } };
   const arch = $("#pp-archive"); if (arch) arch.onclick = async () => { if (!arch.dataset.sure) { arch.textContent = "Archive? Click again"; arch.dataset.sure = "1"; return; } try { await provider.saveProfile(Object.assign({}, p, {active: false})); pcur = null; await loadSort(); toast("Profile archived; its assignments are kept"); } catch (e) { toast("Failed: " + (e.message || e)); } };
-  const exp = $("#pp-export"); if (exp) exp.onclick = () => {
-    const list = POOL.filter((e) => (ASSIGN[akey(e)] || {})[p.slug] && (!$("#shidepast").checked || !isPast(e)));
-    if (!list.length) return toast("No upcoming events on this profile");
-    if (list.length > 100) return toast("Eventrrr imports up to 100 at a time");
-    const saveRun = META.run; META.run = "profile:" + p.slug; copyText(exportJson(list), `${list.length} events copied for @${p.handle || p.slug}. Paste into that account → Paste text.`); META.run = saveRun;
+  const doExport = async (list) => {
+    if (!list.length) return toast("Nothing to export");
+    if (list.length > 100) return toast("Eventrrr imports up to 100 at a time; narrow with the run filter");
+    const ok = await copyText(exportJson(list, p), `${list.length} events copied for @${p.handle || p.slug}. Paste into that account → Paste text.`);
+    if (!ok) return;
+    const batch = new Date().toISOString();
+    try { await provider.markExported(list.map((e) => ({profile: p.slug, run: e.run, key: e.key, batch}))); list.forEach((e) => { EXPORTED[expKey(p.slug, e)] = batch; }); renderProfiles(); }
+    catch (e) { toast("Copied, but couldn't record the export: " + (e.message || e), 8000); }
+  };
+  const exp = $("#pp-export"); if (exp) exp.onclick = () => doExport(pending(p));
+  const expAll = $("#pp-export-all"); if (expAll) expAll.onclick = () => doExport(POOL.filter((e) => (ASSIGN[akey(e)] || {})[p.slug] && !isPast(e)));
+  const undo = $("#pp-undo"); if (undo) undo.onclick = async () => {
+    const lastBatch = Object.entries(EXPORTED).filter(([k]) => k.startsWith(p.slug + "|")).map(([, b]) => b).sort().pop();
+    try { await provider.undoExport(p.slug, lastBatch); Object.keys(EXPORTED).forEach((k) => { if (k.startsWith(p.slug + "|") && EXPORTED[k] === lastBatch) delete EXPORTED[k]; }); toast("Last export undone; those events count as new again"); renderProfiles(); }
+    catch (e) { toast("Couldn't undo: " + (e.message || e)); }
   };
   const create = $("#pp-create"); if (create) create.onclick = async () => {
     const slug = $("#pp-slug").value.trim().toLowerCase(), name = $("#pp-name").value.trim();
     if (!/^[a-z0-9-]{2,30}$/.test(slug)) return toast("Slug: 2–30 lowercase letters, digits or dashes");
     if (!name) return toast("Give it a name");
-    const draft = {slug, name, persona: $("#pp-persona").value.trim(), handle: $("#pp-handle").value.trim().replace(/^@/, "") || null, active: true, sort_order: 100 + PROFILES.length};
-    try { await provider.saveProfile(draft, true); try { sessionStorage.removeItem("scout-profile-draft"); } catch {} pcur = slug; await loadSort(); toast("Profile created"); }
+    const draft = {slug, name, persona: $("#pp-persona").value.trim(), handle: $("#pp-handle").value.trim().replace(/^@/, "") || null, active: true, sort_order: 100 + PROFILES.length, kind: $("#pp-kind").value, ends_on: $("#pp-ends").value || null};
+    try { await provider.saveProfile(draft, true); try { sessionStorage.removeItem("scout-profile-draft"); } catch {} pcur = slug; await loadSort(); toast("Calendar created"); }
     catch (e) { try { sessionStorage.setItem("scout-profile-draft", JSON.stringify(draft)); } catch {} console.error("create profile", e); toast("Create failed: " + (e.message || e), 12000); }
   };
 }

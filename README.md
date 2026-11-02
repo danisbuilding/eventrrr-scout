@@ -51,17 +51,12 @@ several, or to None); assignments live in `scout_assignments`. Each profile is a
 copies all assignments as JSON to paste to Claude, who updates `profiles/<slug>.md`. After ~5–6 sessions a
 first-pass sorter in the pipeline proposes assignments (`source: suggested`, dashed chips) for DP to confirm.
 
-## Running a sweep (v1, on demand)
+## Running a sweep
 
-1. Edit `sources.yaml` if needed (add handles, set the `window` and `umbrella`).
-2. Tell Claude: "run the scout for <window/umbrella>". Claude:
-   - triggers `gh workflow run sweep.yml` (Instagram via Apify + OpenAI/Gemini scouts → `inbox/<run>/`, committed by the bot)
-   - sweeps the web sources itself into `inbox/<run>/`
-   - extracts events with `prompts/extract.md`
-   - runs `python scout/normalize.py <run>` then `python scout/score.py <run>`
-   - runs `python scout/publish.py <run>` and pushes → the run appears at scout.eventrrr.com
-3. Review there: Keep / Skip, notes, tick rows, **Export to Eventrrr** → paste into Eventrrr → Paste text.
-4. Before the next run, press **Copy decisions** and paste to Claude; the rubric gets tuned from them.
+Runs tab on scout.eventrrr.com → **Start sweep**. The edge function `scout-trigger` dispatches
+`.github/workflows/pipeline.yml`, which gathers (Apify Instagram, web sweep, optional LLM scouts), extracts
+(gpt-5-mini), normalizes, scores, publishes and commits. The run appears in the Events and Sort tabs when done.
+Handover docs: `docs/handover-scout.md` (build), `docs/handover-sorting.md` (profiles and charters).
 
 ## Adding a source type later (e.g. WhatsApp)
 

@@ -108,6 +108,21 @@ still feed the next charter update.
 **Also pending, unrelated to sorting:** the highlight rubric in `taxonomy.yaml` is too generous (55/102
 highlighted on the first run); tune it from DP's Keep/Skip decisions once he has made some.
 
+## Status (2026-11-02)
+
+- Two sessions processed, archived under `profiles/sessions/` with a `-notes.md` each. Charters exist for all
+  eight profiles: foodie, cultural, nightlife, music, active, dates, familykids, familybabies.
+- Cross-cutting rules confirmed by DP live in `profiles/README.md`: "would I send a friend there cold", and the
+  second-profile rule (tag it when the event is at least *good* for that profile).
+- `key` in the session JSON includes the `|date` suffix since 2026-10-29; split on the first `|` only.
+- "Hide past" is on by default in the Sort tab, so untouched events vanish once past; treat untouched-and-past
+  as no signal, and suggest unticking it when the leftovers hold tests the rules need.
+- Duplicate rows (dedupe misses) get tagged by DP more than once; don't read duplicates as separate decisions.
+  The build chat owns the fix (`docs/handover-scout.md`).
+- Step 2 (pipeline sorter) is the build chat's to implement once this chat says the charters are ready and
+  writes the sorter prompt. Hand it: which profiles are active, the charter files to read, and the output shape
+  `{key, profile, reason}`.
+
 ## Constraints to keep
 
 - Never ask for or paste secrets. API keys live only in GitHub Actions secrets; the Supabase anon key in

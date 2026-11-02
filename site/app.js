@@ -24,6 +24,7 @@ let toastT; const toast = (t, ms = 2200) => { const el = $("#toast"); el.textCon
 const setSync = (t) => { const el = $("#sync"); if (el) el.textContent = t; };
 const todayLocal = () => new Date().toLocaleDateString("en-CA", {timeZone: TZ});
 const isPast = (e) => !!e.starts_at && (e.ends_at || e.starts_at).slice(0, 10) < todayLocal();
+const startedBefore = (e, days) => { if (!e.starts_at) return false; const d = new Date(todayLocal()); d.setDate(d.getDate() - days); return e.starts_at.slice(0, 10) < d.toISOString().slice(0, 10); };
 
 // ---------- state
 let META = {run: "", categories: []}, EVENTS = [], byKey = {}, decisions = {}, selected = new Set(), current = null, provider = null;
@@ -114,7 +115,7 @@ function visible() {
     (!cat || e.category === cat) && (!src || srcName(e) === src) &&
     (!$("#hi").checked || e.highlight) && (!$("#fam").checked || e.family_friendly) &&
     (!$("#hideskip").checked || decisionOf(e) !== "skip") &&
-    (!$("#hidepast").checked || !isPast(e)) &&
+    (!$("#hidepast").checked || !isPast(e)) && (!$("#hideold").checked || !startedBefore(e, 7)) &&
     (!q || `${e.title} ${e.venue} ${e.neighborhood} ${e.organizer}`.toLowerCase().includes(q))
   ).sort((a, b) => (a.starts_at || "").localeCompare(b.starts_at || ""));
 }
@@ -243,8 +244,8 @@ function wire() {
   $("#rf-weeks").addEventListener("change", rfDates); $("#rf-from").addEventListener("change", rfDates);
   $("#as-kind").addEventListener("change", () => { const ig = $("#as-kind").value === "instagram"; $("#as-valuelabel").textContent = ig ? "Handle" : "Address"; $("#as-value").placeholder = ig ? "@cdmxsecreta" : "https://local.mx/"; $("#as-namewrap").hidden = ig; });
   $("#as-value").addEventListener("keydown", (ev) => { if (ev.key === "Enter") $("#as-add").click(); });
-  ["#q", "#cat", "#src", "#hi", "#fam", "#hideskip", "#hidepast"].forEach((s) => $(s).addEventListener("input", render));
-  ["#sq", "#sstate", "#sprofile", "#srun", "#shidepast"].forEach((s) => $(s).addEventListener("input", () => { if (s === "#sstate") touched.clear(); renderSort(); }));
+  ["#q", "#cat", "#src", "#hi", "#fam", "#hideskip", "#hidepast", "#hideold"].forEach((s) => $(s).addEventListener("input", render));
+  ["#sq", "#sstate", "#sprofile", "#srun", "#shidepast", "#shideold"].forEach((s) => $(s).addEventListener("input", () => { if (s === "#sstate") touched.clear(); renderSort(); }));
   document.addEventListener("click", (ev) => {
     const o = ev.target.closest("[data-sopen]"); if (o) { scur = o.dataset.sopen; $("#pinsp").hidden = false; renderSort(); renderProfiles(); return; }
     const c = ev.target.closest("[data-pa]"); if (c) toggleAssign(c.closest("[data-ak]").dataset.ak, c.dataset.pa);
@@ -390,7 +391,7 @@ async function loadSort() {
 function sortVisible() {
   const q = $("#sq").value.trim().toLowerCase(), state = $("#sstate").value, pf = $("#sprofile").value, run = $("#srun").value;
   return POOL.filter((e) =>
-    (!run || e.run === run) && (!$("#shidepast").checked || !isPast(e)) &&
+    (!run || e.run === run) && (!$("#shidepast").checked || !isPast(e)) && (!$("#shideold").checked || !startedBefore(e, 7)) &&
     (state === "all" || (state === "unsorted" && touched.has(akey(e))) || (state === "sorted") === isSorted(e)) && (!pf || profilesOf(e).includes(pf)) &&
     (!q || `${e.title} ${e.venue} ${e.neighborhood}`.toLowerCase().includes(q))
   ).sort((a, b) => (a.starts_at || "").localeCompare(b.starts_at || ""));

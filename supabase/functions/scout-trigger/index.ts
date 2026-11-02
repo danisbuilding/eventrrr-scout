@@ -1,7 +1,8 @@
-// scout-trigger v2: reviewer-only actions for scout.eventrrr.com.
+// scout-trigger v3: reviewer-only actions for scout.eventrrr.com.
 //   {action:"sweep", ...}       → GitHub repository_dispatch "sweep" on danisbuilding/eventrrr-scout
 //   {action:"add_source", ...}  → verify a website / Instagram handle, append it to sources.yaml, commit
-// Secrets: GITHUB_SCOUT_TOKEN (fine-grained PAT; Contents: read+write on that repo).
+//   {action:"cancel", run_id}   → cancel a running pipeline workflow run
+// Secrets: GITHUB_SCOUT_TOKEN (fine-grained PAT; Contents: read+write and Actions: read+write on that repo).
 import { createClient } from "npm:@supabase/supabase-js@2";
 import YAML from "npm:yaml@2.5.1";
 
@@ -40,6 +41,18 @@ async function sweep(body: Record<string, string>, email: string) {
   const r = await gh("/dispatches", { method: "POST", body: JSON.stringify({ event_type: "sweep", client_payload: { run, window_from, window_to, umbrella, ig_tier, scouts, by: email } }) });
   if (r.status !== 204) return json(502, { error: `GitHub said ${r.status}: ${(await r.text()).slice(0, 200)}` });
   return json(200, { run, window_from, window_to });
+}
+
+async function cancel(body: Record<string, string>) {
+  const id = String(body.run_id ?? "");
+  if (!/^\d{1,20}$/.test(id)) return json(400, { error: "run_id required" });
+  const info = await gh(`/actions/runs/${id}`);
+  if (!info.ok) return json(404, { error: `Run not found (${info.status})` });
+  const run = await info.json();
+  if (run.status === "completed") return json(409, { error: "That run already finished" });
+  const r = await gh(`/actions/runs/${id}/cancel`, { method: "POST" });
+  if (r.status !== 202) return json(502, { error: `GitHub said ${r.status}: ${(await r.text()).slice(0, 200)}` });
+  return json(200, { cancelled: id });
 }
 
 async function verifySite(url: string): Promise<{ ok: boolean; title?: string; error?: string; warn?: string }> {
@@ -132,5 +145,6 @@ Deno.serve(async (req) => {
   let body: Record<string, string> = {};
   try { body = await req.json(); } catch { /* empty */ }
   if (body.action === "add_source") return addSource(body, user.email ?? "");
+  if (body.action === "cancel") return cancel(body);
   return sweep(body, user.email ?? "");
 });

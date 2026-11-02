@@ -128,7 +128,8 @@ def main():
     from concurrent.futures import ThreadPoolExecutor, as_completed
     jobs = []  # (source stem, batch index, batch)
     for jl in sorted(inbox.glob("*.jsonl")):
-        items = [json.loads(l) for l in jl.read_text().splitlines() if l.strip()]
+        # split on "\n" only: splitlines() also breaks on U+2028/U+0085, which appear inside Instagram captions
+        items = [json.loads(l) for l in jl.read_text(encoding="utf-8").split("\n") if l.strip()]
         cur, size, bi = [], 0, 0
         for it in items:
             slim = {k: it.get(k) for k in ("id", "source_name", "source_url", "author", "posted_at", "text", "links", "media")}

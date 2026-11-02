@@ -303,7 +303,11 @@ async function renderRuns() {
   const st = await fetchStatus();
   const live = (st && st.gh || []).find((w) => w.status !== "completed");
   const rs = $("#rf-status");
-  if (live) { rs.innerHTML = `<span class="pill run">Running</span> started ${esc(new Date(live.created_at).toLocaleTimeString("en-US", {hour: "numeric", minute: "2-digit"}))} · <a href="${esc(live.url)}" target="_blank" rel="noopener">log</a>`; $("#rf-start").disabled = true; clearTimeout(pollT); pollT = setTimeout(renderRuns, 30000); }
+  if (live) {
+    rs.innerHTML = `<span class="pill run">Running</span> started ${esc(new Date(live.created_at).toLocaleTimeString("en-US", {hour: "numeric", minute: "2-digit"}))} · <a href="${esc(live.url)}" target="_blank" rel="noopener">log</a> <button class="btn btn-secondary" id="rf-stop" style="min-height:32px;padding:6px 12px;margin-left:8px">Stop sweep</button>`;
+    $("#rf-start").disabled = true; clearTimeout(pollT); pollT = setTimeout(renderRuns, 30000);
+    const stop = $("#rf-stop"); if (stop) stop.onclick = () => stopSweep(live.id);
+  }
   else { if (!rs.dataset.msg) rs.textContent = ""; $("#rf-start").disabled = false; }
   try { const r = await fetch(`${(window.SCOUT_CONFIG.eventsBase || "").replace(/\/$/, "")}/runs/index.json?t=${Math.floor(Date.now() / 60000)}`, {cache: "no-store"}); runsCache = (await r.json()).runs || []; } catch {}
   const ghById = Object.fromEntries((st && st.gh || []).map((w) => [String(w.id), w]));
@@ -311,7 +315,21 @@ async function renderRuns() {
   const recent = (st && st.gh || []).filter((w) => w.status === "completed" && w.conclusion !== "success").slice(0, 3).map((w) => `<tr><td><span class="pill fail">Failed</span></td><td class="sub" colspan="3">${esc(new Date(w.created_at).toLocaleString("en-US", {month: "short", day: "numeric", hour: "numeric", minute: "2-digit"}))}</td><td><a href="${esc(w.url)}" target="_blank" rel="noopener">log</a></td></tr>`).join("");
   $("#runs-body").innerHTML = `<div class="scroll"><table class="list-table"><thead><tr><th>Run</th><th>Window</th><th>Umbrella</th><th>Results</th><th>Published</th></tr></thead><tbody>${rows}${recent}</tbody></table></div>`;
 }
+let sbRef = null;
+async function stopSweep(runId) {
+  const b = $("#rf-stop"); if (!b) return;
+  if (!b.dataset.sure) { b.textContent = "Stop? Click again"; b.dataset.sure = "1"; setTimeout(() => { if (b.isConnected) { b.textContent = "Stop sweep"; delete b.dataset.sure; } }, 4000); return; }
+  b.disabled = true; b.textContent = "Stopping…";
+  try {
+    const {data: {session}} = await sbRef.auth.getSession();
+    const r = await fetch(`${window.SCOUT_CONFIG.supabaseUrl}/functions/v1/scout-trigger`, {method: "POST", headers: {"Content-Type": "application/json", Authorization: "Bearer " + session.access_token, apikey: window.SCOUT_CONFIG.supabaseAnonKey}, body: JSON.stringify({action: "cancel", run_id: String(runId)})});
+    const j = await r.json().catch(() => ({}));
+    if (!r.ok) throw new Error(j.error || j.message || ("HTTP " + r.status));
+    toast("Sweep stopped"); $("#rf-status").dataset.msg = ""; setTimeout(renderRuns, 5000);
+  } catch (e) { toast("Couldn't stop: " + (e.message || e), 6000); b.disabled = false; b.textContent = "Stop sweep"; }
+}
 async function startSweep(sb) {
+  sbRef = sb;
   const rs = $("#rf-status"); rs.dataset.msg = "1";
   const payload = {window_from: $("#rf-from").value, window_to: $("#rf-to").value, umbrella: $("#rf-umbrella").value.trim(), ig_tier: $("#rf-ig").checked ? "all" : "none", scouts: $("#rf-openai").checked && $("#rf-gemini").checked ? "both" : $("#rf-openai").checked ? "openai" : $("#rf-gemini").checked ? "gemini" : "none"};
   if (!payload.window_from || !payload.window_to || payload.window_to < payload.window_from) { rs.textContent = "Pick a valid date range."; return; }
@@ -517,7 +535,7 @@ async function boot() {
     $("#signout").onclick = async () => { await sb.auth.signOut(); location.reload(); }; return;
   }
   provider = supabaseProvider(sb, user, cfg);
-  $("#rf-start").onclick = () => startSweep(sb);
+  sbRef = sb; $("#rf-start").onclick = () => startSweep(sb);
   $("#as-add").onclick = () => addSource(sb, false); $("#as-force").onclick = () => addSource(sb, true);
   const acct = $("#account");
   if (acct) { acct.innerHTML = `${user.user_metadata?.avatar_url ? `<img class="avatar" src="${esc(user.user_metadata.avatar_url)}" alt="">` : ""}<button class="btn btn-secondary" id="signout">Sign out</button>`; $("#signout").onclick = async () => { await sb.auth.signOut(); location.reload(); }; }

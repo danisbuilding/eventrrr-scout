@@ -56,7 +56,7 @@ first-pass sorter in the pipeline proposes assignments (`source: suggested`, das
 Runs tab on scout.eventrrr.com → **Start sweep**. The edge function `scout-trigger` dispatches
 `.github/workflows/pipeline.yml`, which gathers (Apify Instagram, web sweep, optional LLM scouts), extracts
 (gpt-5-mini), normalizes, scores, publishes and commits. The run appears in the Events and Sort tabs when done.
-Handover docs: `docs/handover-scout.md` (build), `docs/handover-sorting.md` (profiles and charters).
+Handover docs (Claude docs; pointers in `docs/`): build → `docs/handover-scout.md`, sorting → `docs/handover-sorting.md`.
 
 ## Adding a source type later (e.g. WhatsApp)
 

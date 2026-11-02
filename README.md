@@ -14,7 +14,7 @@ login, allow-listed), served from `site/` by GitHub Pages; events read from this
 | 1 Sources | Seed list of sites, IG handles, umbrella events | repo | `sources.yaml` |
 | 2 Sweep | Fetch each source → raw items | Web: Claude tools (search, Firecrawl). Instagram + LLM scouts: GitHub Actions `sweep` workflow | `scout/adapters/`, `scouts/`, `.github/workflows/` |
 | 3 Extract | Raw item → structured event(s) | Claude, using `prompts/extract.md` | `schema/event.json` |
-| 4 Normalize + dedupe | Same event from N sources → one record | Python | `scout/normalize.py` |
+| 4 Normalize + dedupe | Same event from N sources → one record; past events and events already published in an earlier run are dropped (`runs/<run>/dropped.json` says why) | Python | `scout/normalize.py` |
 | 5 Score | Highlight score from the rubric | Python + Claude rationale | `scout/score.py`, `prompts/highlight.md` |
 | 6 Publish | `runs/index.json` + `runs/<run>/events.json` pushed to the repo; review at scout.eventrrr.com | `scout/publish.py` + git push | `site/` |
 | 7 Learn | Keep/Skip decisions (Supabase `scout_decisions`) feed the next run's rubric | DP presses "Copy decisions" and pastes to Claude | `decisions/` |

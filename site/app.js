@@ -17,6 +17,8 @@ const price = (e) => e.price_text ? e.price_text : (e.price_min === 0 ? "Free" :
 const srcName = (e) => (e.source_links && e.source_links[0] && e.source_links[0].name) || ((e.sources || [])[0] || "").split(":")[1] || "Unknown";
 let toastT; const toast = (t, ms = 2200) => { const el = $("#toast"); el.textContent = t; el.classList.add("show"); clearTimeout(toastT); toastT = setTimeout(() => el.classList.remove("show"), ms); };
 const setSync = (t) => { const el = $("#sync"); if (el) el.textContent = t; };
+const todayLocal = () => new Date().toLocaleDateString("en-CA", {timeZone: TZ});
+const isPast = (e) => !!e.starts_at && (e.ends_at || e.starts_at).slice(0, 10) < todayLocal();
 
 // ---------- state
 let META = {run: "", categories: []}, EVENTS = [], byKey = {}, decisions = {}, selected = new Set(), current = null, provider = null;
@@ -101,6 +103,7 @@ function visible() {
     (!cat || e.category === cat) && (!src || srcName(e) === src) &&
     (!$("#hi").checked || e.highlight) && (!$("#fam").checked || e.family_friendly) &&
     (!$("#hideskip").checked || decisionOf(e) !== "skip") &&
+    (!$("#hidepast").checked || !isPast(e)) &&
     (!q || `${e.title} ${e.venue} ${e.neighborhood} ${e.organizer}`.toLowerCase().includes(q))
   ).sort((a, b) => (a.starts_at || "").localeCompare(b.starts_at || ""));
 }
@@ -229,7 +232,7 @@ function wire() {
   $("#rf-weeks").addEventListener("change", rfDates); $("#rf-from").addEventListener("change", rfDates);
   $("#as-kind").addEventListener("change", () => { const ig = $("#as-kind").value === "instagram"; $("#as-valuelabel").textContent = ig ? "Handle" : "Address"; $("#as-value").placeholder = ig ? "@cdmxsecreta" : "https://local.mx/"; $("#as-namewrap").hidden = ig; });
   $("#as-value").addEventListener("keydown", (ev) => { if (ev.key === "Enter") $("#as-add").click(); });
-  ["#q", "#cat", "#src", "#hi", "#fam", "#hideskip"].forEach((s) => $(s).addEventListener("input", render));
+  ["#q", "#cat", "#src", "#hi", "#fam", "#hideskip", "#hidepast"].forEach((s) => $(s).addEventListener("input", render));
   ["#sq", "#sstate", "#sprofile", "#srun", "#shidepast"].forEach((s) => $(s).addEventListener("input", () => { if (s === "#sstate") touched.clear(); renderSort(); }));
   document.addEventListener("click", (ev) => {
     const o = ev.target.closest("[data-sopen]"); if (o) { scur = o.dataset.sopen; $("#pinsp").hidden = false; renderSort(); renderProfiles(); return; }
@@ -351,9 +354,9 @@ async function loadSort() {
   renderSort(); renderProfiles();
 }
 function sortVisible() {
-  const q = $("#sq").value.trim().toLowerCase(), state = $("#sstate").value, pf = $("#sprofile").value, run = $("#srun").value, today = new Date().toISOString().slice(0, 10);
+  const q = $("#sq").value.trim().toLowerCase(), state = $("#sstate").value, pf = $("#sprofile").value, run = $("#srun").value;
   return POOL.filter((e) =>
-    (!run || e.run === run) && (!$("#shidepast").checked || !e.starts_at || (e.ends_at || e.starts_at).slice(0, 10) >= today) &&
+    (!run || e.run === run) && (!$("#shidepast").checked || !isPast(e)) &&
     (state === "all" || (state === "unsorted" && touched.has(akey(e))) || (state === "sorted") === isSorted(e)) && (!pf || profilesOf(e).includes(pf)) &&
     (!q || `${e.title} ${e.venue} ${e.neighborhood}`.toLowerCase().includes(q))
   ).sort((a, b) => (a.starts_at || "").localeCompare(b.starts_at || ""));
@@ -436,7 +439,7 @@ async function renderProfiles() {
   const save = $("#pp-save"); if (save) save.onclick = async () => { try { await provider.saveProfile(Object.assign({}, p, {persona: $("#pp-persona").value.trim(), handle: $("#pp-handle").value.trim().replace(/^@/, "") || null})); toast("Profile saved"); PROFILES = (await provider.profiles()).filter((x) => x.active !== false); renderProfiles(); } catch (e) { toast("Save failed: " + (e.message || e)); } };
   const arch = $("#pp-archive"); if (arch) arch.onclick = async () => { if (!arch.dataset.sure) { arch.textContent = "Archive? Click again"; arch.dataset.sure = "1"; return; } try { await provider.saveProfile(Object.assign({}, p, {active: false})); pcur = null; await loadSort(); toast("Profile archived; its assignments are kept"); } catch (e) { toast("Failed: " + (e.message || e)); } };
   const exp = $("#pp-export"); if (exp) exp.onclick = () => {
-    const list = POOL.filter((e) => (ASSIGN[akey(e)] || {})[p.slug] && (!$("#shidepast").checked || !e.starts_at || (e.ends_at || e.starts_at).slice(0, 10) >= new Date().toISOString().slice(0, 10)));
+    const list = POOL.filter((e) => (ASSIGN[akey(e)] || {})[p.slug] && (!$("#shidepast").checked || !isPast(e)));
     if (!list.length) return toast("No upcoming events on this profile");
     if (list.length > 100) return toast("Eventrrr imports up to 100 at a time");
     const saveRun = META.run; META.run = "profile:" + p.slug; copyText(exportJson(list), `${list.length} events copied for @${p.handle || p.slug}. Paste into that account → Paste text.`); META.run = saveRun;

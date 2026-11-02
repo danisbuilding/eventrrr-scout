@@ -79,7 +79,7 @@ jobs:
         run: python scout/extract.py "${{ steps.p.outputs.run }}" --window-from "${{ steps.p.outputs.wf }}" --window-to "${{ steps.p.outputs.wt }}" --umbrella "${{ steps.p.outputs.umb }}"
       - name: Normalize, score, thumbs, publish
         run: |
-          python scout/normalize.py "${{ steps.p.outputs.run }}"
+          python scout/normalize.py "${{ steps.p.outputs.run }}" --window-from "${{ steps.p.outputs.wf }}"
           python scout/score.py "${{ steps.p.outputs.run }}"
           python scout/thumbs.py "${{ steps.p.outputs.run }}" || true
           python scout/publish.py "${{ steps.p.outputs.run }}" --window "${{ steps.p.outputs.wf }} → ${{ steps.p.outputs.wt }}" --umbrella "${{ steps.p.outputs.umb }}"

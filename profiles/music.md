@@ -3,7 +3,7 @@ slug: music
 name: Live Music
 handle:            # Eventrrr @handle this profile exports to
 status: learning   # learning → assisted → auto
-sessions: 1
+sessions: 2
 ---
 
 # Live Music (`music`)
@@ -24,6 +24,7 @@ Cover bands, arena nostalgia tours, a venue's generic "live music nightly".
 - Arena and stadium shows are out regardless of the act.
 - Dance-floor music (techno festivals, EDM headliners, club nights) goes to nightlife, not here.
 - Staged shows framed as theatre or dance go to cultural (Fandango del inframundo).
+- Classical chamber music in a museum passes: Ensamble de la Sinfónica de Minería at Casa del Risco ($200) → music. Named ensemble, pleasant room. Session 2.
 - Venue comfort × act familiarity. Foro Indie Rocks is a good venue only when the band is known or the genre is cool; it isn't pleasant enough to send someone to for an act they don't know (Mary in the Junkyard, Headache World → None). Pleasant rooms pass even with unknown acts: Parker & Lenox, Casa Franca, Jazzatlán. Confirmed by DP, session 1.
 
 ## Worked examples
@@ -34,6 +35,7 @@ Cover bands, arena nostalgia tours, a venue's generic "live music nightly".
 | KID A MNESIA Motion Picture House | music | Radiohead installation; the music is the hook |
 | Maldita Vecindad — Arena CDMX | none | Arena, nostalgia |
 | Mary in the Junkyard — Foro Indie Rocks | none | Unknown band in an uncomfortable venue; wouldn't send a friend cold |
+| Ensamble de la Sinfónica de Minería — Casa del Risco | music (+ dates) | Classical in a museum; the first event with two profiles |
 
 ## What I think you're doing
 - "Music" for you means listening, and "nightlife" means dancing: Calvin Harris and Time Warp went to nightlife, jazz and cumbia came here.
@@ -42,4 +44,4 @@ Cover bands, arena nostalgia tours, a venue's generic "live music nightly".
 
 ## Surprises
 - Fenómeno Fuzz at Centro Cultural de España (free, 19:00) → nightlife, not music. A fuzz/garage show at 7pm reads as music to me. Intentional?
-- Unsorted for next time: Mad Professor (Foro Indie Rocks, known name, dub) → predicted yes; Lewis OfMan (Foro Indie Rocks) → depends whether you count him as known; Saramalacara at Orbe, OFCM, Cool Quartet at Tamayo → predicted yes (pleasant rooms).
+- The Foro Indie Rocks test never got run: Mad Professor and Lewis OfMan stayed untouched and are now past. Same for Saramalacara (Orbe), OFCM, Cool Quartet (Tamayo), the cello/piano recital and Caminos Sonoros (Foro UC). Untick "Hide past" once if you want those seven on record; they test the venue × familiarity rule directly.

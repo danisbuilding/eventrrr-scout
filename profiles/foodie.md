@@ -3,7 +3,7 @@ slug: foodie
 name: Food & Drink
 handle:            # Eventrrr @handle this profile exports to
 status: learning   # learning → assisted → auto
-sessions: 1
+sessions: 2
 ---
 
 # Food & Drink (`foodie`)
@@ -22,6 +22,7 @@ A generic restaurant promo, a chain's "taco night", a brunch special with no rea
 - A producers' fair qualifies when the product is food or drink (cacao, chocolate, pozol, tejate); a flower growers' fair did not (Festival Flores de Cempasúchil → None).
 - Price is not a filter: $2,250/person was featured.
 - A chain or multi-location promo is out even in season.
+- Two fixed nights still count as a night: Marta (Nov 1–2, eight courses built on an ofrenda, $1,600) → foodie. Session 2.
 
 ## Worked examples
 | Title | Call | Why |
@@ -30,6 +31,7 @@ A generic restaurant promo, a chain's "taco night", a brunch special with no rea
 | Taberna del León — Cena de Día de Muertos | foodie | Named chef (Mónica Patiño), one-night menu |
 | Fónico — Cenas con cocineras tradicionales | none | Special menu running several nights, not a one-off |
 | Menú de temporada en Madero Restaurante | none | Chain seasonal promo |
+| Marta — Cena de Día de Muertos | foodie | Two fixed nights, named restaurant, menu with an idea |
 
 ## What I think you're doing
 - You ask "is this a night, or a menu?" Patiño's dinner is a night; Fónico's cocineras and Madero's season are menus. Confirmed.
@@ -37,4 +39,6 @@ A generic restaurant promo, a chain's "taco night", a brunch special with no rea
 
 ## Surprises
 - Mega Ofrenda "Entre Flores y Agaves" (ArsTelier) → cultural only. Should foodie also carry it?
-- Unsorted but relevant for next time: Arca Tierra × Domingo — Ofrenda Viva (one date, chinampa) → predicted yes. Marta (Nov 1–2), Migrante, Fiamma Reforma dinners: the night-vs-menu rule says yes if they're one or two fixed nights, no if they run the season. Marta is two nights, so borderline; your call settles where "one-off" ends.
+- Marta settled the "where does one-off end" question at two nights. Migrante and Fiamma Reforma were never touched, so the upper bound is still open.
+- Marta went to foodie only, not to dates, even though an eight-course Día de Muertos dinner is the most date-shaped thing in the run. See dates.
+- Still untouched (now past): Arca Tierra × Domingo — Ofrenda Viva (predicted yes), Cantina Filomeno (predicted none).

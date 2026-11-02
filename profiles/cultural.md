@@ -3,7 +3,7 @@ slug: cultural
 name: Arts & Culture
 handle:            # Eventrrr @handle this profile exports to
 status: learning   # learning → assisted → auto
-sessions: 1
+sessions: 2
 ---
 
 # Arts & Culture (`cultural`)
@@ -24,6 +24,8 @@ Tourist packages, generic "cultural" listings, anything whose only hook is the v
 - Performance, dance, video art and talks go here, not to music, when the frame is art or scholarship: Cuerpo al Descubierto, SINESTESIA ACTIVADA, FEAR OF THE OBJECT, Fandango del inframundo (staged son jarocho), Didi-Huberman.
 - A museum family workshop can qualify when tied to a featured show (¡Punto extra! → Manifesto). Hypothesis; see Surprises.
 - Blockbusters are fine when the institution is the hook (Richard Prince at Jumex, Manifesto at MUAC); nothing in session 1 showed "small over big."
+- A canonical tradition site counts without an institution: Mixquic (Tláhuac, Oct 31–Nov 2) → cultural. I read it as the same test as the Zócalo: you go, stand in it, see everything. Session 2, hypothesis.
+- A named collective's altar in a gallery passes, registration and all (Volver a la Tierra — Proyectos Públicos). Session 2, as predicted.
 - The visit has to work as a visit: one spot where you take it all in, or a cluster you can walk between (Zócalo ofrenda + lighting + Centro). A long walk to see spaced-out pieces fails even when the content is fine (El Camino). Confirmed by DP, session 1.
 
 ## Worked examples
@@ -35,6 +37,8 @@ Tourist packages, generic "cultural" listings, anything whose only hook is the v
 | El Camino — figuras iluminadas en Reforma | none | Spread along a long cold corridor with nothing else to do; the visit doesn't work |
 | Festival de Día de Muertos — Casa del Risco (programa) | none | Listing of events, not an event |
 | Geometrías para una fiesta — Museo Tamayo | none | Free family workshop by a named artist, not taken (contrast ¡Punto extra! at MUAC) |
+| Mixquic — Celebración de Día de Muertos | cultural | The tradition itself; no author, but the visit works |
+| Megaofrenda UNAM (three listings) | cultural | Institution; DP tagged all three duplicate rows |
 
 ## What I think you're doing
 - You take anything an art institution puts on, from a 140-work retrospective to a family workshop. City-run things are judged on the visit, not the author: Zócalo (stand in one place, see everything, go on to Centro) is in; Reforma (long, cold, corporate, nothing else nearby) is out. Confirmed.
@@ -43,5 +47,7 @@ Tourist packages, generic "cultural" listings, anything whose only hook is the v
 - Mega Ofrenda "Entre Flores y Agaves" (ArsTelier, $650, mezcal, Guerrero producers) went only here, not to foodie. I think the art-space framing won, but the foodie persona would also claim it.
 
 ## Surprises
+- Mixquic → cultural but Mega Procesión de Catrinas and Gran Desfile stayed untouched. If that's deliberate, the line is "a place you go to" vs "a thing that passes by"; if they're untouched only because they'd gone past, say so.
+- You tagged all three Megaofrenda UNAM rows. They're one event the pipeline failed to merge; exporting cultural would send it three times. Pipeline fix pending; nothing for you to do.
 - ¡Punto extra! (MUAC, kids 6–11, registration) → cultural, but Geometrías para una fiesta (Tamayo, kids 7+, free, named artist) → none. Same shape of event. Is the difference the link to a featured exhibition, or was one of these a slip?
 - Festival Flores de Cempasúchil (140 producers, Reforma) → none. Not cultural, I agree; but see foodie — is a producers' market ever an event for any profile?

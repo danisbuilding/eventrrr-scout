@@ -5,7 +5,7 @@ persona/handle/active flag (editable from the Sort tab), these files hold the le
 DP's sorting, and the surprises. Sessions are committed under `sessions/` by the Sort tab's "Copy session" →
 Claude, and later by an analysis workflow.
 
-## The one principle under all five (confirmed by DP after session 1)
+## The one principle under all of them (confirmed by DP after session 1)
 
 The reader doesn't know the act, the chef or the scene. Ask: **would I send a friend there cold?** That is why
 an unknown band at an uncomfortable venue fails but passes at a pleasant one (music), why intense niche genres fail

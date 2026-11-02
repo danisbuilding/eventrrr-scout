@@ -3,7 +3,7 @@ slug: nightlife
 name: Nightlife & Bars
 handle:            # Eventrrr @handle this profile exports to
 status: learning   # learning → assisted → auto
-sessions: 1
+sessions: 2
 ---
 
 # Nightlife & Bars (`nightlife`)
@@ -20,7 +20,8 @@ A bar that is simply open; a seated show; a "ladies night" with no lineup.
 - The bar is "would this curator feature it," not "is it in the category." Category match is necessary, not sufficient.
 - Yes for a dance-music event with named headliners, whatever the size: Live at Fray Nano (Calvin Harris, Sean Paul, Deorro, stadium), Time Warp (international techno, Expo Santa Fe, both days).
 - Sound accessibility is the test, not the lineup. Hip hop, R&B, house, broad electronic: someone who doesn't know the DJs can still have a night. Tribal/jungle/ghettotech: only if you already like it, so not for a general feed. Confirmed by DP, session 1 (replaces my named-lineup hypothesis).
-- Price is not a filter ($1,250–$8,000 tickets featured).
+- Price is not a filter ($150–$8,000 tickets featured).
+- A rooftop with throwback hip hop / R&B / dancehall passes (Brown Sugar Rewind, Revo Rooftop, $150). Session 2, as predicted by the accessibility rule.
 - Listening music (jazz, cumbia, indie shows) goes to music, not here.
 
 ## Worked examples
@@ -31,6 +32,7 @@ A bar that is simply open; a seated show; a "ladies night" with no lineup.
 | PARASOMNIA — Chico, Roma Norte | none | Niche, intense genres; wouldn't send someone who doesn't already love them |
 | Festival Hipnosis — Fray Nano | none | "Múltiples actos", nothing named |
 | Fenómeno Fuzz — Centro Cultural de España | nightlife | Free 19:00 concert; doesn't fit the persona (see Surprises) |
+| Brown Sugar Rewind — Revo Rooftop | nightlife | Accessible sound, rooftop, cheap |
 
 ## What I think you're doing
 - You're picking nights a reader can walk into cold and enjoy. Big festivals with broad-appeal headliners pass; a Roma Norte club night with a very specific sound doesn't, however right the venue and hour. Broad appeal isn't the goal in itself, but the sound has to be one people can fall into. Confirmed.
@@ -38,4 +40,6 @@ A bar that is simply open; a seated show; a "ladies night" with no lineup.
 
 ## Surprises
 - Fenómeno Fuzz → nightlife instead of music. Mis-tap, or is a garage/fuzz show a "night out" by definition?
-- Unsorted for next time: Brown Sugar Rewind (Revo Rooftop, throwback hip hop / R&B / dancehall / afrobeats; two rows) → predicted yes under the accessibility rule; F1 Weekend at Casa de Afro (no sound described) → unsure.
+- Brown Sugar Rewind confirmed the accessibility rule. Only one of its two duplicate rows was tagged (fine; dedupe fix pending).
+- Brown Sugar didn't get dates. A cheap rooftop party with a sound anyone can dance to seems date-shaped; see dates.
+- F1 Weekend at Casa de Afro stayed untouched (now past).

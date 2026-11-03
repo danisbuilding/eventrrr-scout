@@ -1,0 +1,3476 @@
+[
+ {
+  "title": "Festival Internacional de Danza Cuerpo Al Descubierto",
+  "description": "Festival internacional de danza dirigido por Maribel Michel con obras y coreografías de Marina Acevedo, Paola Álvarez, César Cortés, Daniel Hernández, Zaira Hernández, Jhoanna Herrera, Maribel Michel, Maya Padilla, Valeria Pérez y Kevin Rivera.",
+  "starts_at": "2026-11-03T00:00:00-06:00",
+  "ends_at": "2026-11-24T23:59:59-06:00",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": null,
+  "address": null,
+  "neighborhood": null,
+  "price_text": "Entrada libre",
+  "price_min": 0,
+  "currency": "MXN",
+  "url": "https://mexicoescultura.com/actividad/340735/festival-internacional-de-danza-cuerpo-al-descubierto-2026.html",
+  "category": "Film & Performance",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": null,
+  "recurring": false,
+  "sources": [
+   "web:m-xico-es-cultura:6c55bfc70632"
+  ],
+  "source_links": [
+   {
+    "name": "México es Cultura",
+    "url": "https://mexicoescultura.com/actividad/340735/festival-internacional-de-danza-cuerpo-al-descubierto-2026.html"
+   }
+  ],
+  "source_excerpt": "Festival Internacional de Danza Cuerpo Al Descubierto, directora Maribel Michel. Un referente en la danza de nuestro país, por su incesante búsqueda de nuevos lenguajes coreográficos en la danza contemporánea mexicana. Participan Marina Acevedo, Paola Álvarez, César Cortés, Daniel Hernández, Zaira Hernández, Jhoanna Herrera, Maribel Michel, Maya Padilla, Valeria Pérez y Kevin Rivera.\n                        del 03 al 24 de noviembre de 2026\nmartes, 08:00 a 09:00 hrs.\nEntrada libre",
+  "image_url": null,
+  "confidence": 0.6,
+  "signals": {
+   "credible_organizer": false,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Un festival de danza contemporánea con programación extensa y entrada libre que reúne coreógrafos relevantes del país."
+ },
+ {
+  "title": "Recital de piano | Casa de Tabasco en México “Carlos Pellicer”",
+  "description": "Recital de piano con repertorio que incluye Beethoven, Rachmaninov, Manuel M. Ponce y un trío de Mozart. Intérpretes: Farizat Tchibirova (maestra titular), Uriel Ricardo Tabares Hernández (pianista), con participación de Iván Leos Rosales (viola) y Cristian Alejandro Velázquez Montaño (clarinete).",
+  "starts_at": "2026-11-04T18:00:00-06:00",
+  "ends_at": "2026-11-04T19:30:00-06:00",
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": {
+   "name": "Casa de Tabasco en México “Carlos Pellicer”"
+  },
+  "address": null,
+  "neighborhood": null,
+  "price_text": "Entrada libre",
+  "price_min": 0,
+  "currency": "MXN",
+  "url": "https://mexicoescultura.com/actividad/340730/recital-de-piano-casa-de-tabasco-en-mexico-carlos-pellicer.html",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Sistema Nacional de Fomento Musical",
+  "recurring": false,
+  "sources": [
+   "web:m-xico-es-cultura:770a5ff9d6b9"
+  ],
+  "source_links": [
+   {
+    "name": "México es Cultura",
+    "url": "https://mexicoescultura.com/actividad/340730/recital-de-piano-casa-de-tabasco-en-mexico-carlos-pellicer.html"
+   }
+  ],
+  "source_excerpt": "Programa\nFarizat Tchibirova, maestra titular de la cátedra de piano\nUriel Ricardo Tabares Hernández, pianista\nIván Leos Rosales, viola\nCristian Alejandro Velázquez Montaño, clarinete\nLudwig van Beethoven: (1770-1827)\nSonata 16 op. 31 no. 1 en Sol Mayor\nI. Allegro Vivace\nII. Adagio Grazioso\nIII. Rondo: Allegretto - Presto\nSergei Rachmaninov: (1873-1943)\nEstudio Tableaux op. 39 no°3\nManuel M. Ponce: (1882-1948)\nEstrellita, metamorfosis de concierto\nW.A. Mozart (1756-1791)\nTrío en mi bemol mayor K. 498 para piano Clarinete y Viola\nAUTOR\nSistema Nacional de Fomento Musical\n                        04 de noviembre de 2026\nmiércoles, 18:00 a 19:30 hrs.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Recital clásico de entrada libre en la Casa de Tabasco con un programa variado y músicos invitados."
+ },
+ {
+  "title": "Gran Finale, concierto de titulación de violín | Casa de Tabasco en México “Carlos Pellicer”",
+  "description": "Concierto de titulación de violín con Oleg Gouk como maestro titular, pianista acompañante Eduardo de Santiago Sandoval; programa incluye el Concierto para violín en la menor, op.82 de Aleksandr Glazunov.",
+  "starts_at": "2026-11-10T18:00:00-06:00",
+  "ends_at": "2026-11-10T19:00:00-06:00",
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": {
+   "name": "Casa de Tabasco en México “Carlos Pellicer”"
+  },
+  "address": null,
+  "neighborhood": null,
+  "price_text": "Entrada Libre",
+  "price_min": 0,
+  "currency": "MXN",
+  "url": "https://mexicoescultura.com/actividad/340733/gran-finale-concierto-de-titulacion-de-violin-casa-de-tabasco-en-mexico-carlos-pellicer.html",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Sistema Nacional de Fomento Musical",
+  "recurring": false,
+  "sources": [
+   "web:m-xico-es-cultura:6eff8cf20238"
+  ],
+  "source_links": [
+   {
+    "name": "México es Cultura",
+    "url": "https://mexicoescultura.com/actividad/340733/gran-finale-concierto-de-titulacion-de-violin-casa-de-tabasco-en-mexico-carlos-pellicer.html"
+   }
+  ],
+  "source_excerpt": "Música          \n        Entrada Libre \n        \n        \n         Gran Finale, concierto de titulación de violín | Casa de Tabasco en México “Carlos Pellicer” \nPrograma\nOleg Gouk, maestro titular\nEduardo de Santiago Sandoval, pianista acompañante\nAleksandr Glazunov\nConcierto para violín en la menor, op.82\nAUTOR\nSistema Nacional de Fomento Musical\n                        10 de noviembre de 2026\nmartes, 18:00 a 17:00 hrs.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Concierto de titulación con entrada libre en la Casa de Tabasco que presenta repertorio solista y jóvenes intérpretes."
+ },
+ {
+  "title": "Experiencia Bosque Prohibido de Harry Potter",
+  "description": "Recorrido inmersivo con criaturas fantásticas, iluminación, música y efectos especiales que recrean el Bosque Prohibido; duración aproximada 60–90 minutos. Del 1 al 29 de noviembre en Parque Naucalli, Naucalpan de Juárez.",
+  "starts_at": "2026-11-01T00:00:00-06:00",
+  "ends_at": "2026-11-29T23:59:59-06:00",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Parque Naucalli",
+  "address": "Periférico Boulevard Manuel Ávila Camacho, Naucalpan de Juárez",
+  "neighborhood": "Naucalpan de Juárez",
+  "price_text": "desde $376 MXN",
+  "price_min": 376,
+  "currency": "MXN",
+  "url": "https://foodandtravel.mx/viajes/que-hacer-en-cdmx-los-mejores-planes-y-eventos-de-esta-semana/",
+  "category": "Film & Performance",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": null,
+  "organizer": null,
+  "recurring": false,
+  "sources": [
+   "web:food-and-travel-mx:13a5987abd8f"
+  ],
+  "source_links": [
+   {
+    "name": "Food and Travel MX",
+    "url": "https://foodandtravel.mx/viajes/que-hacer-en-cdmx-los-mejores-planes-y-eventos-de-esta-semana/"
+   }
+  ],
+  "source_excerpt": "Experiencia Bosque Prohibido de Harry Potter\n¿Te imaginas encontrarte cara a cara con un hipogrifo o descubrir un unicornio entre los árboles del Bosque Prohibido? Esta experiencia inmersiva te invita a entrar en uno de los escenarios más misteriosos del universo de Harry Potter, a través de un recorrido lleno de iluminación, música y efectos especiales que recrean la atmósfera de las películas. ... Dónde: Parque Naucalli, Periférico Boulevard Manuel Ávila Camacho, Naucalpan de Juárez. Cuándo: Del 1 al 29 de noviembre. Costo: desde $376 MXN. AQUÍ puedes comprar tu boleto.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Es una experiencia inmersiva con recorrido y efecto visual pensado para familias y fans de Harry Potter, con venta de boletos anticipados."
+ },
+ {
+  "title": "Advertising Week LATAM",
+  "description": "Conferencias, paneles y encuentros sobre publicidad, tecnología, entretenimiento y nuevas formas de consumir contenido. Reúne a especialistas y creativos para conversar sobre el futuro de medios y marketing en Latinoamérica.",
+  "starts_at": "2026-11-03T00:00:00-06:00",
+  "ends_at": "2026-11-05T23:59:59-06:00",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Papalote Museo del Niño",
+  "address": "Av. de los Compositores 710, Ampliación Daniel Garza, Bosque de Chapultepec II Secc, Miguel Hidalgo",
+  "neighborhood": "Miguel Hidalgo",
+  "price_text": "desde $2,399 MXN",
+  "price_min": 2399,
+  "currency": "MXN",
+  "url": "https://foodandtravel.mx/viajes/que-hacer-en-cdmx-los-mejores-planes-y-eventos-de-esta-semana/",
+  "category": "Talks & Learning",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": null,
+  "recurring": false,
+  "sources": [
+   "web:food-and-travel-mx:13a5987abd8f"
+  ],
+  "source_links": [
+   {
+    "name": "Food and Travel MX",
+    "url": "https://foodandtravel.mx/viajes/que-hacer-en-cdmx-los-mejores-planes-y-eventos-de-esta-semana/"
+   }
+  ],
+  "source_excerpt": "Advertising Week LATAM\n¿Qué tienen en común la publicidad, la tecnología, el entretenimiento y las nuevas formas de consumir contenido? ... Dónde: Papalote Museo del Niño, Av. de los Compositores 710, Ampliación Daniel Garza, Bosque de Chapultepec II Secc, Miguel Hidalgo. Cuándo: Del 3 al 5 de noviembre. Costo: desde $2,399 MXN. AQUÍ puedes comprar tu boleto.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Evento profesional con programación de conferencias en un museo reconocido; útil para gente del sector creativo y de medios."
+ },
+ {
+  "title": "Mes de Japón: talleres gratuitos",
+  "description": "Programa con talleres gratuitos que incluye origami, shodō (caligrafía japonesa), demostración de ikebana, ceremonia del té y presentación de wadaiko (tambores tradicionales).",
+  "starts_at": "2026-11-05T00:00:00-06:00",
+  "ends_at": "2026-11-27T23:59:59-06:00",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Museo Nacional de Antropología",
+  "address": "Paseo de la Reforma s/n, Polanco, Miguel Hidalgo",
+  "neighborhood": "Polanco",
+  "price_text": "Entrada libre",
+  "price_min": 0,
+  "currency": "MXN",
+  "url": "https://foodandtravel.mx/viajes/que-hacer-en-cdmx-los-mejores-planes-y-eventos-de-esta-semana/",
+  "category": "Talks & Learning",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": null,
+  "organizer": null,
+  "recurring": false,
+  "sources": [
+   "web:food-and-travel-mx:13a5987abd8f"
+  ],
+  "source_links": [
+   {
+    "name": "Food and Travel MX",
+    "url": "https://foodandtravel.mx/viajes/que-hacer-en-cdmx-los-mejores-planes-y-eventos-de-esta-semana/"
+   }
+  ],
+  "source_excerpt": "Mes de Japón: talleres gratuitos\n¿Te gustaría aprender a escribir con pincel como en Japón o descubrir el ritual que hay detrás de una taza de té? ... Dónde: Museo Nacional de Antropología, Paseo de la Reforma s/n, Polanco, Miguel Hidalgo. Cuándo: del 5 al 27 de noviembre. Entrada libre. AQUÍ puedes ver su programa.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Ofrece talleres gratuitos y actividades familiares en un museo emblemático; buena opción cultural accesible."
+ },
+ {
+  "title": "Feria del Libro COMESTIBLE",
+  "description": "Segunda edición de la feria que reúne publicaciones sobre alimentación (libros, revistas, fanzines, recetarios) con conversatorios y talleres bajo el tema 'Conservar / Preservar'.",
+  "starts_at": "2026-11-06T00:00:00-06:00",
+  "ends_at": "2026-11-08T23:59:59-06:00",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Jardín Gallina de Guinea",
+  "address": "General Aureliano Rivera 4, San Ángel, Álvaro Obregón",
+  "neighborhood": "San Ángel",
+  "price_text": "Entrada libre",
+  "price_min": 0,
+  "currency": "MXN",
+  "url": "https://foodandtravel.mx/viajes/que-hacer-en-cdmx-los-mejores-planes-y-eventos-de-esta-semana/",
+  "category": "Markets & Design",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": null,
+  "organizer": null,
+  "recurring": false,
+  "sources": [
+   "web:food-and-travel-mx:13a5987abd8f"
+  ],
+  "source_links": [
+   {
+    "name": "Food and Travel MX",
+    "url": "https://foodandtravel.mx/viajes/que-hacer-en-cdmx-los-mejores-planes-y-eventos-de-esta-semana/"
+   }
+  ],
+  "source_excerpt": "Feria del Libro COMESTIBLE\nLa Feria del Libro COMESTIBLE parte de esa idea para reunir publicaciones que exploran la alimentación desde la historia, la investigación, la cultura y la creatividad. ... Dónde: Jardín Gallina de Guinea, General Aureliano Rivera 4, San Ángel, Álvaro Obregón Cuándo: Del 6 al 8 de noviembre. Entrada libre. IG: @librocomestible",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": false,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Mercado editorial especializado en comida que combina ventas con conversatorios y talleres; entrada libre."
+ },
+ {
+  "title": "Banquete Vikingo (clase de cocina)",
+  "description": "Clase de cocina temática para preparar un banquete inspirado en festines vikingos: menú que incluye tomahawk marinado, verduras asadas, pan Lembas y postre; se enseña el proceso de cada receta.",
+  "starts_at": "2026-11-07T00:00:00-06:00",
+  "ends_at": "2026-11-07T23:59:59-06:00",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Cocina de Centro",
+  "address": "Prado Norte 420, local 8, Lomas de Chapultepec, Miguel Hidalgo",
+  "neighborhood": "Lomas de Chapultepec",
+  "price_text": "$1,950 MXN por persona",
+  "price_min": 1950,
+  "currency": "MXN",
+  "url": "https://foodandtravel.mx/viajes/que-hacer-en-cdmx-los-mejores-planes-y-eventos-de-esta-semana/",
+  "category": "Food & Drink",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": null,
+  "recurring": false,
+  "sources": [
+   "web:food-and-travel-mx:13a5987abd8f"
+  ],
+  "source_links": [
+   {
+    "name": "Food and Travel MX",
+    "url": "https://foodandtravel.mx/viajes/que-hacer-en-cdmx-los-mejores-planes-y-eventos-de-esta-semana/"
+   }
+  ],
+  "source_excerpt": "Banquete Vikingo\n¿Te gustaría aprender a preparar un banquete inspirado en los festines vikingos? ... Dónde: Cocina de Centro, Prado Norte 420, local 8, Lomas de Chapultepec, Miguel Hidalgo. Cuándo: 7 de noviembre. Costo: $1,950 MXN por persona. AQUÍ puedes comprar tus boletos.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": false,
+   "one_off": true,
+   "scarcity": true,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Clase gastronómica con menú temático y cupo limitado; ideal para quienes buscan una experiencia culinaria práctica y original."
+ },
+ {
+  "title": "Expo Las Manos del Mundo",
+  "description": "Feria de artesanía y diseño que reúne a expositores con textiles, accesorios y objetos decorativos; oportunidad para conocer a los creadores y sus técnicas.",
+  "starts_at": "2026-11-06T00:00:00-06:00",
+  "ends_at": "2026-11-08T23:59:59-06:00",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Expo Reforma",
+  "address": "Morelos 67, Juárez, Cuauhtémoc",
+  "neighborhood": "Juárez",
+  "price_text": "$50 MXN",
+  "price_min": 50,
+  "currency": "MXN",
+  "url": "https://foodandtravel.mx/viajes/que-hacer-en-cdmx-los-mejores-planes-y-eventos-de-esta-semana/",
+  "category": "Markets & Design",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": null,
+  "organizer": null,
+  "recurring": false,
+  "sources": [
+   "web:food-and-travel-mx:13a5987abd8f"
+  ],
+  "source_links": [
+   {
+    "name": "Food and Travel MX",
+    "url": "https://foodandtravel.mx/viajes/que-hacer-en-cdmx-los-mejores-planes-y-eventos-de-esta-semana/"
+   }
+  ],
+  "source_excerpt": "Expo Las Manos del Mundo\n¿Te ha pasado que encuentras una pieza hecha a mano y quieres saber quién la creó o de dónde viene? ... Dónde: Expo Reforma, Morelos 67, Juárez, Cuauhtémoc. Cuándo: Del 6 al 8 de noviembre. Costo: $50 MXN. lasmanosdelmundo.com",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Feria de artesanías que permite comprar directamente a creadores; buena para regalos y para conocer técnicas manuales."
+ },
+ {
+  "title": "Exposición de Piñatas (20.º Concurso de Piñatas Mexicanas)",
+  "description": "Muestra con las piezas finalistas del 20.º Concurso de Piñatas Mexicanas, inspiradas en la conmemoración de los 200 años de relaciones México-Francia; piezas sobre ollas de barro decoradas con papel de china y otros materiales.",
+  "starts_at": "2026-11-07T00:00:00-06:00",
+  "ends_at": "2026-12-13T23:59:59-06:00",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Museo de Arte Popular",
+  "address": "Revillagigedo 11, Centro, Cuauhtémoc",
+  "neighborhood": "Centro",
+  "price_text": "$60 MXN",
+  "price_min": 60,
+  "currency": "MXN",
+  "url": "https://foodandtravel.mx/viajes/que-hacer-en-cdmx-los-mejores-planes-y-eventos-de-esta-semana/",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": null,
+  "organizer": null,
+  "recurring": false,
+  "sources": [
+   "web:food-and-travel-mx:13a5987abd8f"
+  ],
+  "source_links": [
+   {
+    "name": "Food and Travel MX",
+    "url": "https://foodandtravel.mx/viajes/que-hacer-en-cdmx-los-mejores-planes-y-eventos-de-esta-semana/"
+   }
+  ],
+  "source_excerpt": "Exposición de Piñatas\nMonumentos, personajes y mucha creatividad se encuentran en esta exposición. La muestra reúne las piezas del 20.º Concurso de Piñatas Mexicanas, ... Dónde: Museo de Arte Popular, Revillagigedo 11, Centro, Cuauhtémoc. Cuándo: Del 7 de noviembre al 13 de diciembre. Costo: $60 MXN. map.cdmx.gob.mx",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Exhibición oficial en el Museo de Arte Popular con piezas del concurso nacional; visualmente atractiva y apta para familias."
+ },
+ {
+  "title": "Exposición individual de Michel François",
+  "description": "Michel François llega a Galería Mascota con una muestra centrada en su trabajo fotográfico. Aunque su práctica suele moverse entre escultura, instalación y video, esta exposición permite descubrir cómo sus obsesiones por el equilibrio, la materia, el espacio y la fragilidad también aparecen detrás de la cámara.",
+  "starts_at": "2026-10-28T00:00:00-06:00",
+  "ends_at": "2026-12-15T23:59:00-06:00",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Galería Mascota",
+  "address": "Calle Valladolid 33",
+  "neighborhood": "Roma Norte",
+  "price_text": null,
+  "price_min": null,
+  "currency": null,
+  "url": "https://thehappening.com/whats-happening-del-2-al-6-de-noviembre-en-cdmx/",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Galería Mascota",
+  "recurring": false,
+  "sources": [
+   "web:the-happening:0d64954ab75e"
+  ],
+  "source_links": [
+   {
+    "name": "The Happening",
+    "url": "https://thehappening.com/whats-happening-del-2-al-6-de-noviembre-en-cdmx/"
+   }
+  ],
+  "source_excerpt": "Exposición individual de Michel François\n📍Calle Valladolid 33, Roma Norte\n📅 Del 28 de octubre al 15 de diciembre de 2026\nMichel François llega a Galería Mascota con una muestra centrada en su trabajo fotográfico. Aunque su práctica suele moverse entre escultura, instalación y video, esta exposición permite descubrir cómo sus obsesiones por el equilibrio, la materia, el espacio y la fragilidad también aparecen detrás de la cámara.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Exposición individual de un artista contemporáneo en Galería Mascota; buena opción para quienes siguen fotografía y práctica multidisciplinaria."
+ },
+ {
+  "title": "Panadería GALA x Ren&Nata (temporada)",
+  "description": "Colaboración entre Panadería GALA y Ren&Nata con dos creaciones especiales: pan de muerto de GALA relleno de tarta original de Ren&Nata y una tarta de queso sabor pan de muerto. Disponible en ubicaciones de GALA y Ren&Nata en Polanco y Lomas.",
+  "starts_at": "2026-10-30T00:00:00-06:00",
+  "ends_at": "2026-11-08T23:59:00-06:00",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Panadería GALA / Ren&Nata (varias sucursales)",
+  "address": null,
+  "neighborhood": null,
+  "price_text": null,
+  "price_min": null,
+  "currency": null,
+  "url": "https://thehappening.com/whats-happening-del-2-al-6-de-noviembre-en-cdmx/",
+  "category": "Food & Drink",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Panadería GALA x Ren&Nata",
+  "recurring": false,
+  "sources": [
+   "web:the-happening:0d64954ab75e"
+  ],
+  "source_links": [
+   {
+    "name": "The Happening",
+    "url": "https://thehappening.com/whats-happening-del-2-al-6-de-noviembre-en-cdmx/"
+   }
+  ],
+  "source_excerpt": "Panadería GALA x Ren&Nata\n📍Disponibles en Panadería GALA, Ren&Nata Polanco y Lomas\n📅 Del 30 de octubre al 8 de noviembre de 2026\nAntes de despedir por completo la temporada de pan de muerto, GALA y Ren&Nata se unen en una colaboración que nos encanta. Hay dos creaciones especiales: un pan de muerto de GALA relleno de tarta original de Ren&Nata y una tarta de queso sabor pan de muerto.",
+  "image_url": null,
+  "confidence": 0.6,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Colaboración gastronómica de temporada entre dos panaderías reconocidas; ideal para quienes buscan productos especiales de pan de muerto."
+ },
+ {
+  "title": "Misterios del Cacao x Lula Martín del Campo y Gaby Ruiz",
+  "description": "Cena especial en la serie Noches de libertad creativa: Lula Martín del Campo recibe a Gaby Ruiz (Carmela y Sal) para presentar un menú de varios tiempos que explora la riqueza y versatilidad del cacao mexicano.",
+  "starts_at": "2026-11-04T19:00:00-06:00",
+  "ends_at": null,
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Frontón México (3er Piso)",
+  "address": null,
+  "neighborhood": null,
+  "price_text": null,
+  "price_min": null,
+  "currency": null,
+  "url": "https://thehappening.com/whats-happening-del-2-al-6-de-noviembre-en-cdmx/",
+  "category": "Food & Drink",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Noches de libertad creativa / Frontón México",
+  "recurring": false,
+  "sources": [
+   "web:the-happening:0d64954ab75e"
+  ],
+  "source_links": [
+   {
+    "name": "The Happening",
+    "url": "https://thehappening.com/whats-happening-del-2-al-6-de-noviembre-en-cdmx/"
+   }
+  ],
+  "source_excerpt": "“Misterios del Cacao” x Lula Martín del Campo y Gaby Ruiz\n📍3er Piso, Frontón México\n📅 4 de noviembre a las 19:00 hrs\nLas noches de libertad creativa regresan con una tercera edición. Esta vez, Lula Martín del Campo recibe a Gaby Ruiz, de Carmela y Sal, para presentar Misterios del Cacao. La cena explorará la riqueza y versatilidad del cacao mexicano a través de un menú de varios tiempos creado especialmente para la ocasión.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": true,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Cena de autor que reúne a dos chefs reconocidas para explorar el cacao mexicano; limitado y de interés para foodies."
+ },
+ {
+  "title": "Proyecto Moonshot: Can Can Press x NSW – Practice",
+  "description": "Can Can Press y Nike Streetwear presentan Practice, una experiencia creativa inspirada en Nike Moonshoe donde los asistentes pueden experimentar con herramientas y materiales para intervenir su propio póster siguiendo un proceso de impresión.",
+  "starts_at": "2026-11-04T00:00:00-06:00",
+  "ends_at": "2026-11-05T23:59:00-06:00",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Maison Celeste CDMX",
+  "address": null,
+  "neighborhood": null,
+  "price_text": null,
+  "price_min": null,
+  "currency": null,
+  "url": "https://thehappening.com/whats-happening-del-2-al-6-de-noviembre-en-cdmx/",
+  "category": "Creativity & Crafts",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Can Can Press x NSW",
+  "recurring": false,
+  "sources": [
+   "web:the-happening:0d64954ab75e"
+  ],
+  "source_links": [
+   {
+    "name": "The Happening",
+    "url": "https://thehappening.com/whats-happening-del-2-al-6-de-noviembre-en-cdmx/"
+   }
+  ],
+  "source_excerpt": "Proyecto Moonshot: Can Can Press x NSW\n📍Maison Celeste CDMX\n📅 4 y 5 de noviembre\nCan Can Press y Nike Streetwear presentan Practice, una experiencia creativa inspirada en Nike Moonshoe y en la idea de que todo gran resultado empieza con práctica. Los asistentes podrán experimentar con distintas herramientas y materiales para intervenir su propio póster siguiendo un proceso inspirado en la manera de trabajar de Can Can Press.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Taller práctico de prensa y diseño en Maison Celeste; ideal para quienes quieren hacer su propio póster con técnicas de impresión."
+ },
+ {
+  "title": "Mes de Japón en el Museo de Antropología",
+  "description": "Programación especial organizada junto con la Embajada del Japón: conferencias, demostraciones, talleres y presentaciones culturales durante todo noviembre en el Museo Nacional de Antropología.",
+  "starts_at": "2026-11-05T00:00:00-06:00",
+  "ends_at": "2026-11-30T23:59:00-06:00",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Museo Nacional de Antropología",
+  "address": null,
+  "neighborhood": null,
+  "price_text": null,
+  "price_min": null,
+  "currency": null,
+  "url": "https://thehappening.com/whats-happening-del-2-al-6-de-noviembre-en-cdmx/",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": null,
+  "organizer": "Museo Nacional de Antropología / Embajada del Japón",
+  "recurring": false,
+  "sources": [
+   "web:the-happening:0d64954ab75e"
+  ],
+  "source_links": [
+   {
+    "name": "The Happening",
+    "url": "https://thehappening.com/whats-happening-del-2-al-6-de-noviembre-en-cdmx/"
+   }
+  ],
+  "source_excerpt": "Mes de Japón en el Museo de Antropología\n📍Museo Nacional de Antropología\n📅 A partir del 5 de noviembre\nJapón toma el Museo Nacional de Antropología durante noviembre con una programación especial organizada junto con la Embajada del Japón. Habrá conferencias, demostraciones, talleres y presentaciones culturales para acercarse a distintas expresiones de la cultura japonesa sin salir de la ciudad.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Programación cultural amplia en un museo nacional con actividades familiares; buen plan para conocer expresiones japonesas en CDMX."
+ },
+ {
+  "title": "FICUNAM 16",
+  "description": "Festival Internacional de Cine UNAM — 158 títulos y más de 250 funciones entre cine mexicano e internacional, encuentros con cineastas, homenajes y retrospectivas. Edición 16 con invitados como Julie Delpy, Kiyoshi Kurosawa y Ryūsuke Hamaguchi.",
+  "starts_at": "2026-11-05T00:00:00-06:00",
+  "ends_at": "2026-11-15T23:59:00-06:00",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Varias sedes (FICUNAM)",
+  "address": null,
+  "neighborhood": null,
+  "price_text": null,
+  "price_min": null,
+  "currency": null,
+  "url": "https://thehappening.com/whats-happening-del-2-al-6-de-noviembre-en-cdmx/",
+  "category": "Film & Performance",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "FICUNAM / UNAM",
+  "recurring": false,
+  "sources": [
+   "web:the-happening:0d64954ab75e"
+  ],
+  "source_links": [
+   {
+    "name": "The Happening",
+    "url": "https://thehappening.com/whats-happening-del-2-al-6-de-noviembre-en-cdmx/"
+   }
+  ],
+  "source_excerpt": "FICUNAM 16\n📍Varias sedes\n📅 Del 5 al 15 de noviembre\nFICUNAM cambia de fechas y llega por primera vez en noviembre con 158 títulos y más de 250 funciones. La edición 16 tendrá cine mexicano e internacional, encuentros con cineastas, homenajes y retrospectivas. Entre los invitados destacan Julie Delpy, Kiyoshi Kurosawa y Ryūsuke Hamaguchi, quienes recibirán la Medalla Filmoteca UNAM.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Importante festival de cine con amplia programación y invitados internacionales; imprescindible para cinéfilos."
+ },
+ {
+  "title": "Feria del libro comestible (COMESTIBLE)",
+  "description": "Segunda edición de COMESTIBLE, feria independiente dedicada a publicaciones sobre cocina, gastronomía y cultura alimentaria: editorial, librerías, autores y proyectos especializados en el jardín de Gallina de Guinea. Entrada libre.",
+  "starts_at": "2026-11-06T00:00:00-06:00",
+  "ends_at": "2026-11-08T23:59:00-06:00",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Jardín de Gallina de Guinea",
+  "address": "General Aureliano Rivera 4",
+  "neighborhood": "San Ángel",
+  "price_text": "La entrada es libre",
+  "price_min": 0,
+  "currency": "MXN",
+  "url": "https://thehappening.com/whats-happening-del-2-al-6-de-noviembre-en-cdmx/",
+  "category": "Markets & Design",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": null,
+  "organizer": "COMESTIBLE (feria independiente)",
+  "recurring": false,
+  "sources": [
+   "web:the-happening:0d64954ab75e"
+  ],
+  "source_links": [
+   {
+    "name": "The Happening",
+    "url": "https://thehappening.com/whats-happening-del-2-al-6-de-noviembre-en-cdmx/"
+   }
+  ],
+  "source_excerpt": "Feria del libro comestible\n📍General Aureliano Rivera 4, San Ángel\n📅 Del 6 al 8 de noviembre\nLibros y comida se encuentran en la segunda edición de COMESTIBLE, una feria independiente dedicada a publicaciones sobre cocina, gastronomía y cultura alimentaria. Editoriales, librerías, autores y proyectos especializados se reunirán durante tres días en el jardín de Gallina de Guinea. La entrada es libre.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": false,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Feria especializada en libros de comida con entrada libre; excelente y de bajo costo para foodies y lectores."
+ },
+ {
+  "title": "Gran Salón México 2026",
+  "description": "Feria anual dedicada a la ilustración contemporánea que conecta ilustradores con editoriales, marcas y proyectos creativos; incluye obra gráfica, muralismo, diseño y cultura visual.",
+  "starts_at": "2026-11-06T00:00:00-06:00",
+  "ends_at": "2026-11-08T23:59:00-06:00",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Gran Salón México (sede)",
+  "address": "Dr. Lucio 181",
+  "neighborhood": "Doctores",
+  "price_text": null,
+  "price_min": null,
+  "currency": null,
+  "url": "https://thehappening.com/whats-happening-del-2-al-6-de-noviembre-en-cdmx/",
+  "category": "Markets & Design",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Gran Salón México",
+  "recurring": true,
+  "sources": [
+   "web:the-happening:0d64954ab75e"
+  ],
+  "source_links": [
+   {
+    "name": "The Happening",
+    "url": "https://thehappening.com/whats-happening-del-2-al-6-de-noviembre-en-cdmx/"
+   }
+  ],
+  "source_excerpt": "Gran Salón México 2026\n📍Dr. Lucio 181, Doctores\n📅 Del 6 al 8 de noviembre\nGran Salón México vuelve con su feria anual dedicada a la ilustración contemporánea. Desde hace más de una década, el proyecto conecta ilustradores con editoriales, marcas y proyectos creativos, así que aquí puedes esperar desde obra gráfica hasta propuestas que cruzan muralismo, diseño, packaging y cultura visual.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": false,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Feria anual de ilustración consolidada; útil para profesionales creativos y compradores de obra gráfica."
+ },
+ {
+  "title": "Mitotiani. Ciclo de danza butoh mexicano",
+  "description": "Mitotiani. Ciclo de danza butoh mexicano — función en el Museo Universitario del Chopo.",
+  "starts_at": "2026-11-04T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Museo Universitario del Chopo, Cafetería",
+  "address": null,
+  "neighborhood": null,
+  "price_text": null,
+  "price_min": null,
+  "currency": null,
+  "url": "https://cultura.unam.mx/actividades/Danza",
+  "category": "Film & Performance",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Cultura UNAM / Museo Universitario del Chopo",
+  "recurring": false,
+  "sources": [
+   "web:cultura-unam:a55ed1abe73b"
+  ],
+  "source_links": [
+   {
+    "name": "Cultura UNAM",
+    "url": "https://cultura.unam.mx/actividades/Danza"
+   }
+  ],
+  "source_excerpt": "CCU, Explanada Espiga\nRadio UNAM, Sala Julián Carrillo\nMuseo Universitario del Chopo, Cafetería\nMuseo Universitario del Chopo, Foro del Dinosaurio Juan José Gurrola\nRadio UNAM, Sala Julián Carrillo\nCCU, Salón de Danza\nRadio UNAM, Sala Julián Carrillo\nCCU, Salón de Danza\nCCU, Salón de Danza\nCCU, Salón de Danza\nBuscador de eventos\nPor fecha\nPor fecha",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Una función de butoh dentro del ciclo Mitotiani en el Museo del Chopo, interesante para quienes buscan danza contemporánea y performance en CDMX."
+ },
+ {
+  "title": "OFUNAM 90 años | Gala de aniversario | Tercera...",
+  "description": "Gala de aniversario OFUNAM 90 años en la Sala Nezahualcóyotl (Cultura UNAM).",
+  "starts_at": "2026-11-08T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "CCU, Sala Nezahualcóyotl",
+  "address": "Ciudad Universitaria, Coyoacán, CDMX",
+  "neighborhood": "Ciudad Universitaria",
+  "price_text": null,
+  "price_min": null,
+  "currency": null,
+  "url": "https://cultura.unam.mx/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Cultura UNAM / Sala Nezahualcóyotl",
+  "recurring": false,
+  "sources": [
+   "web:cultura-unam:454474f96698"
+  ],
+  "source_links": [
+   {
+    "name": "Cultura UNAM",
+    "url": "https://cultura.unam.mx/"
+   }
+  ],
+  "source_excerpt": "Música\nOFUNAM 90 años | Gala de aniversario | Tercera...\nCCU, Sala Nezahualcóyotl\n08\nnoviembre\n2026",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Concierto de gala por los 90 años de OFUNAM en la Sala Nezahualcóyotl — relevante para aficionados a la música clásica y la escena orquestal universitaria."
+ },
+ {
+  "title": "OJUEM | Tercera Temporada 2026 | Programa 2 |...",
+  "description": "Presentación de la Orquesta Juvenil de la Universidad en la Sala Nezahualcóyotl (Cultura UNAM).",
+  "starts_at": "2026-11-08T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "CCU, Sala Nezahualcóyotl",
+  "address": "Ciudad Universitaria, Coyoacán, CDMX",
+  "neighborhood": "Ciudad Universitaria",
+  "price_text": null,
+  "price_min": null,
+  "currency": null,
+  "url": "https://cultura.unam.mx/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Cultura UNAM / CCU",
+  "recurring": false,
+  "sources": [
+   "web:cultura-unam:454474f96698"
+  ],
+  "source_links": [
+   {
+    "name": "Cultura UNAM",
+    "url": "https://cultura.unam.mx/"
+   }
+  ],
+  "source_excerpt": "Música\nOJUEM | Tercera Temporada 2026 | Programa 2 |...\nCCU, Sala Nezahualcóyotl\n08\nnoviembre\n2026",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Concierto de la OJUEM en la Sala Nezahualcóyotl, de interés para seguidores de las orquestas juveniles y la música sinfónica en la UNAM."
+ },
+ {
+  "title": "ZZ Top llegará al Auditorio Nacional",
+  "description": "Concierto de ZZ Top en el Auditorio Nacional, Ciudad de México.",
+  "starts_at": "2026-11-11T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Auditorio Nacional",
+  "address": null,
+  "neighborhood": null,
+  "price_text": null,
+  "price_min": null,
+  "currency": null,
+  "url": "https://www.indierocks.mx/agenda/precios-zz-top-llegara-al-auditorio-nacional/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Auditorio Nacional / promoter",
+  "recurring": false,
+  "sources": [
+   "web:indie-rocks-agenda:da445999d467"
+  ],
+  "source_links": [
+   {
+    "name": "Indie Rocks agenda",
+    "url": "https://www.indierocks.mx/agenda/precios-zz-top-llegara-al-auditorio-nacional/"
+   }
+  ],
+  "source_excerpt": "PRECIOS: ZZ Top llegará al Auditorio Nacional\nAuditorio Nacional\nCDMX\nNoviembre\n11",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Concierto internacional de ZZ Top en un recinto clásico de la ciudad; recomendable para fans del rock y blues."
+ },
+ {
+  "title": "Opeth llegará a la Arena CDMX",
+  "description": "Concierto de Opeth en la Arena CDMX.",
+  "starts_at": "2026-11-11T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Arena Ciudad de México",
+  "address": null,
+  "neighborhood": null,
+  "price_text": null,
+  "price_min": null,
+  "currency": null,
+  "url": "https://www.indierocks.mx/agenda/precios-opeth-llegara-a-la-arena-cdmx/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Arena Ciudad de México / promoter",
+  "recurring": false,
+  "sources": [
+   "web:indie-rocks-agenda:da445999d467"
+  ],
+  "source_links": [
+   {
+    "name": "Indie Rocks agenda",
+    "url": "https://www.indierocks.mx/agenda/precios-opeth-llegara-a-la-arena-cdmx/"
+   }
+  ],
+  "source_excerpt": "PRECIOS: Opeth llegará a la Arena CDMX\nArena Ciudad de México\nCDMX\nNoviembre\n11",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Presentación de Opeth en la Arena CDMX, importante para el público metal/progresivo de la ciudad."
+ },
+ {
+  "title": "Garbage se presentará en el Zócalo de la CDMX",
+  "description": "Concierto de Garbage en el Zócalo de la Ciudad de México.",
+  "starts_at": "2026-11-15T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Zócalo CDMX",
+  "address": "Plaza de la Constitución, Centro Histórico, CDMX",
+  "neighborhood": "Centro Histórico",
+  "price_text": null,
+  "price_min": null,
+  "currency": null,
+  "url": "https://www.indierocks.mx/agenda/garbage-se-presentara-en-el-zocalo-de-la-cdmx/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "City / promoter",
+  "recurring": false,
+  "sources": [
+   "web:indie-rocks-agenda:da445999d467"
+  ],
+  "source_links": [
+   {
+    "name": "Indie Rocks agenda",
+    "url": "https://www.indierocks.mx/agenda/garbage-se-presentara-en-el-zocalo-de-la-cdmx/"
+   }
+  ],
+  "source_excerpt": "Garbage se presentará en el Zócalo de la CDMX\nZócalo CDMX\nCDMX\nNoviembre\n15",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Concierto gratuito/masivo (sujeto a confirmación de entrada) de Garbage en el Zócalo, atractivo por su escala y acceso para el público general."
+ },
+ {
+  "title": "Fiesta de Culturas Comunitarias: Voces vivas, salvando al fuego",
+  "description": "Espectáculo monumental protagonizado por niñas, niños y adolescentes de 183 Semilleros Creativos de 141 municipios y 28 estados; entrelaza danza, teatro y música tradicional para visibilizar 17 lenguas originarias en una narrativa centrada en la migración, la paz y la resistencia comunitaria. Dirección escénica: Jesusa Rodríguez. Música y coro con la Orquesta de Música Tradicional Mexicana y el Coro Nacional Comunitario.",
+  "starts_at": "2026-11-07T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Plaza de la Constitución (Zócalo)",
+  "address": "Plaza de la Constitución, Centro, Ciudad de México",
+  "neighborhood": "Centro",
+  "price_text": "Acceso libre",
+  "price_min": 0,
+  "currency": "MXN",
+  "url": "https://grupoanimal.mx/estilo-de-vida/voces-vivas-salvando-al-fuego-semilleros-creativos-zocalo-lenguas-indigenas",
+  "category": "Film & Performance",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": null,
+  "organizer": "Secretaría de Cultura federal / Dirección General de Vinculación Cultural y Sistema Nacional de Fomento Musical (SNFM)",
+  "recurring": false,
+  "sources": [
+   "web:animal-mx-estilo-de-vida:6f1835410940"
+  ],
+  "source_links": [
+   {
+    "name": "Animal MX estilo de vida",
+    "url": "https://grupoanimal.mx/estilo-de-vida/voces-vivas-salvando-al-fuego-semilleros-creativos-zocalo-lenguas-indigenas"
+   }
+  ],
+  "source_excerpt": "Animal MX · 1 de noviembre de 2026\nEl corazón palpitante del país se prepara para recibir una de las mayores manifestaciones de diversidad cultural e identidad colectiva. El próximo sábado 7 de noviembre de 2026, la Plaza de la Constitución de la Ciudad de México se transformará en el escenario de la “Fiesta de Culturas Comunitarias: Voces vivas, salvando al fuego”, un espectáculo monumental protagonizado por niñas, niños y adolescentes de 183 Semilleros Creativos, provenientes de 141 municipios y 28 estados de la República.\nOrganizado por la Secretaría de Cultura federal, a través de la Dirección General de Vinculación Cultural y el Sistema Nacional de Fomento Musical (SNFM), el montaje entrelaza danza, teatro y música tradicional para visibilizar 17 lenguas originarias —entre ellas náhuatl, purépecha, tsotsil, chontales, otomí, mazahua, wixárika, mixteca, tarahumara y chichimeca— en una narrativa centrada en la migración, la paz y la resistencia comunitaria.\n",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Un gran montaje público y gratuito con niñas, niños y adolescentes de 183 Semilleros Creativos que muestra 17 lenguas originarias y una propuesta escénica amplia; vale la pena por su alcance cultural y visual."
+ },
+ {
+  "title": "CURSOS Y TALLERES – PERÍODO 2 | 2026",
+  "description": "Oferta cuatrimestral de cursos y talleres (presencial o virtual) en Casa del Lago UNAM dirigida a personas mayores de 16 años. Período del cuatrimestre con inscripciones y proceso de pago descritos en la convocatoria; cada curso tiene cupo máximo de 15 y mínimo de 8 participantes; se ofrecen descuentos para adultos mayores, estudiantes y personal UNAM.",
+  "starts_at": "2026-08-25T00:00:00-06:00",
+  "ends_at": "2026-12-05T23:59:59-06:00",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Casa del Lago UNAM",
+  "address": "Bosque de Chapultepec, Primera Sección S/N, San Miguel Chapultepec, 11850 Ciudad de México",
+  "neighborhood": "San Miguel Chapultepec",
+  "price_text": "Costos y cupo varían por curso; consultar ficha del curso en el sitio de Casa del Lago UNAM",
+  "price_min": null,
+  "currency": null,
+  "url": "https://casadellago.unam.mx/nuevo/cursos-y-talleres/cursos-y-talleres",
+  "category": "Talks & Learning",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Casa del Lago UNAM",
+  "recurring": false,
+  "sources": [
+   "web:casa-del-lago-unam:11463be12e19"
+  ],
+  "source_links": [
+   {
+    "name": "Casa del Lago UNAM",
+    "url": "https://casadellago.unam.mx/nuevo/cursos-y-talleres/cursos-y-talleres"
+   }
+  ],
+  "source_excerpt": "CURSOS Y TALLERES – PERÍODO 2 | 2026\nCUATRIMESTRAL PRESENCIAL O VIRTUAL\nDEL 25 DE AGOSTO AL 5 DE DICIEMBRE 2026\nCASA DEL LAGO UNAM\nLos Cursos y Talleres de Casa del Lago UNAM, adscritos a la Red de Educación Continua de la UNAM, son dirigidos específicamente a adolescentes mayores de 16 años, adultos y adultos mayores.\nLa plantilla ofertada abarca cursos y talleres de iniciación artística en las siguientes disciplinas: artes visuales, cine, danza, fotografía, humanidades, literatura, música y arte con medios electrónicos. Asimismo, se ofertan cursos y talleres complementarios y recreativos sobre medioambiente, yoga, entre otros. Esta oferta cuatrimestral se llevará a cabo en las modalidades presencial o virtual.\nINSCRIPCIONES EN LÍNEA\nIMPORTANTE: No se puede inscribir a menores de 16 años; si se detecta inscrita a una persona menor a la edad señalada, automáticamente se cancelará la inscripción.\nHorarios de inscripción en línea:\nMartes 28 de julio al sábado 1 de agosto de 2026 | 10:00 a 18:00\nMartes 4 de agosto al sábado 8 de agosto de 2026 | 10:00 a 18:00\nLa oferta y los detalles (costos, horarios, cupo) se consultan en la ficha de cada curso.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": true,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Oferta amplia de cursos presenciales y virtuales en Casa del Lago UNAM durante el cuatrimestre (25 ago–5 dic 2026), con cupo limitado por curso y procedimiento de inscripción claro, ideal para quien busque formación artística especializada."
+ },
+ {
+  "title": "Mes de Japón en el Museo de Antropología",
+  "description": "Programación especial organizada junto con la Embajada del Japón: conferencias, demostraciones, talleres y presentaciones culturales durante noviembre en el Museo Nacional de Antropología.",
+  "starts_at": "2026-11-05T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Museo Nacional de Antropología",
+  "address": "Museo Nacional de Antropología, Ciudad de México",
+  "neighborhood": null,
+  "price_text": null,
+  "price_min": null,
+  "currency": null,
+  "url": "https://thehappening.com/eventos-de-noviembre-2026-que-tienes-que-tener-en-tu-calendario/",
+  "category": "Talks & Learning",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Museo Nacional de Antropología / Embajada del Japón",
+  "recurring": false,
+  "sources": [
+   "web:the-happening:73d3ad4f01af"
+  ],
+  "source_links": [
+   {
+    "name": "The Happening",
+    "url": "https://thehappening.com/eventos-de-noviembre-2026-que-tienes-que-tener-en-tu-calendario/"
+   }
+  ],
+  "source_excerpt": "Mes de Japón en el Museo de Antropología\n📍Museo Nacional de Antropología\n📅 A partir del 5 de noviembre\n\nJapón toma el Museo Nacional de Antropología durante noviembre con una programación especial organizada junto con la Embajada del Japón. Habrá conferencias, demostraciones, talleres y presentaciones culturales para acercarse a distintas expresiones de la cultura japonesa sin salir de la ciudad.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Una oportunidad para experimentar programación cultural japonesa en un museo icónico; buena para quienes buscan actividades culturales y educativas."
+ },
+ {
+  "title": "FICUNAM 16",
+  "description": "Festival Internacional de Cine UNAM: 158 títulos, más de 250 funciones, encuentros con cineastas, homenajes y retrospectivas; invitados destacados y programación en varias sedes de la ciudad.",
+  "starts_at": "2026-11-05T00:00:00-06:00",
+  "ends_at": "2026-11-15T23:59:00-06:00",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Varias sedes (FICUNAM)",
+  "address": null,
+  "neighborhood": null,
+  "price_text": null,
+  "price_min": null,
+  "currency": null,
+  "url": "https://thehappening.com/eventos-de-noviembre-2026-que-tienes-que-tener-en-tu-calendario/",
+  "category": "Film & Performance",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "FICUNAM / UNAM",
+  "recurring": false,
+  "sources": [
+   "web:the-happening:73d3ad4f01af"
+  ],
+  "source_links": [
+   {
+    "name": "The Happening",
+    "url": "https://thehappening.com/eventos-de-noviembre-2026-que-tienes-que-tener-en-tu-calendario/"
+   }
+  ],
+  "source_excerpt": "FICUNAM 16\n📍Varias sedes\n📅 Del 5 al 15 de noviembre\n\nFICUNAM cambia de fechas y llega por primera vez en noviembre con 158 títulos y más de 250 funciones. La edición 16 tendrá cine mexicano e internacional, encuentros con cineastas, homenajes y retrospectivas. Entre los invitados destacan Julie Delpy, Kiyoshi Kurosawa y Ryūsuke Hamaguchi, quienes recibirán la Medalla Filmoteca UNAM.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Gran festival de cine con programación extensa y invitados internacionales; imprescindible para cinéfilos y quien busque retrospectivas y encuentros con autores."
+ },
+ {
+  "title": "Expo: Anteparaíso de Carlos Amorales",
+  "description": "Exposición de Carlos Amorales en kurimanzutto: dibujos, animación e instalaciones que exploran la tensión entre tecnología e inteligencia artificial.",
+  "starts_at": "2026-11-05T00:00:00-06:00",
+  "ends_at": "2026-12-16T23:59:00-06:00",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "kurimanzutto",
+  "address": "Calle Valladolid 33, Roma Norte",
+  "neighborhood": "Roma Norte",
+  "price_text": null,
+  "price_min": null,
+  "currency": null,
+  "url": "https://thehappening.com/eventos-de-noviembre-2026-que-tienes-que-tener-en-tu-calendario/",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "kurimanzutto",
+  "recurring": false,
+  "sources": [
+   "web:the-happening:73d3ad4f01af"
+  ],
+  "source_links": [
+   {
+    "name": "The Happening",
+    "url": "https://thehappening.com/eventos-de-noviembre-2026-que-tienes-que-tener-en-tu-calendario/"
+   }
+  ],
+  "source_excerpt": "Expo: Anteparaíso de Carlos Amorales\n📍kurimanzutto\n📅 Del 5 de noviembre al 16 de diciembre de 2026\n\nCarlos Amorales construye un universo poblado por criaturas imaginarias para hablar de uno de los temas que más nos obsesionan actualmente: la inteligencia artificial. En Anteparaíso, dibujos, animación e instalaciones exploran la tensión entre la promesa casi utópica de la tecnología y los futuros mucho más oscuros que también imaginamos alrededor de ella.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Muestra en una galería relevante que cruza arte contemporáneo y temas actuales como la IA; atractiva para público interesado en arte crítico y instalación."
+ },
+ {
+  "title": "Nota Tavern × Bar Chenin (dos noches)",
+  "description": "Dos noches colaborativas de cocina y vinos: Nota Tavern recibe a Bar Chenin para una cena de menú compartido durante 6 y 7 de noviembre.",
+  "starts_at": "2026-11-06T00:00:00-06:00",
+  "ends_at": "2026-11-07T23:59:00-06:00",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Nota Tavern",
+  "address": "Cerrada de La Paz 15, Escandón",
+  "neighborhood": "Escandón",
+  "price_text": null,
+  "price_min": null,
+  "currency": null,
+  "url": "https://thehappening.com/eventos-de-noviembre-2026-que-tienes-que-tener-en-tu-calendario/",
+  "category": "Food & Drink",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Nota Tavern / Bar Chenin",
+  "recurring": false,
+  "sources": [
+   "web:the-happening:73d3ad4f01af"
+  ],
+  "source_links": [
+   {
+    "name": "The Happening",
+    "url": "https://thehappening.com/eventos-de-noviembre-2026-que-tienes-que-tener-en-tu-calendario/"
+   }
+  ],
+  "source_excerpt": "Nota Tavern × Bar Chenin\n📍Cerrada de La Paz 15, Escandón\n📅 6 y 7 de noviembre\n\nDos proyectos se encuentran alrededor de una misma mesa. Nota Tavern recibe a Bar Chenin para dos noches de cocina, vinos y una colaboración que promete poner el foco en lo que mejor saben hacer ambos lugares.",
+  "image_url": null,
+  "confidence": 0.8,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Cena colaborativa entre dos propuestas gastronómicas interesantes; buena para quienes buscan experiencias culinarias especiales."
+ },
+ {
+  "title": "Feria del libro comestible (COMESTIBLE)",
+  "description": "Segunda edición de COMESTIBLE: feria independiente de publicaciones sobre cocina, gastronomía y cultura alimentaria con editoriales, autores y proyectos especializados.",
+  "starts_at": "2026-11-06T00:00:00-06:00",
+  "ends_at": "2026-11-08T23:59:00-06:00",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Gallina de Guinea (jardín)",
+  "address": "General Aureliano Rivera 4, San Ángel",
+  "neighborhood": "San Ángel",
+  "price_text": "Entrada libre",
+  "price_min": 0,
+  "currency": "MXN",
+  "url": "https://thehappening.com/eventos-de-noviembre-2026-que-tienes-que-tener-en-tu-calendario/",
+  "category": "Markets & Design",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "COMESTIBLE / organizadores independientes",
+  "recurring": false,
+  "sources": [
+   "web:the-happening:73d3ad4f01af"
+  ],
+  "source_links": [
+   {
+    "name": "The Happening",
+    "url": "https://thehappening.com/eventos-de-noviembre-2026-que-tienes-que-tener-en-tu-calendario/"
+   }
+  ],
+  "source_excerpt": "Feria del libro comestible\n📍General Aureliano Rivera 4, San Ángel\n📅 Del 6 al 8 de noviembre\n\nLibros y comida se encuentran en la segunda edición de COMESTIBLE, una feria independiente dedicada a publicaciones sobre cocina, gastronomía y cultura alimentaria. Editoriales, librerías, autores y proyectos especializados se reunirán durante tres días en el jardín de Gallina de Guinea. La entrada es libre.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": false,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Feria nicho que cruza libros y gastronomía; ideal para aficionados a la cultura alimentaria y editoriales especializadas."
+ },
+ {
+  "title": "Gran Salón México 2026",
+  "description": "Feria anual dedicada a la ilustración contemporánea que reúne ilustradores, editoriales y proyectos creativos en una edición de tres días.",
+  "starts_at": "2026-11-06T00:00:00-06:00",
+  "ends_at": "2026-11-08T23:59:00-06:00",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Dr. Lucio 181 (espacio del Gran Salón)",
+  "address": "Dr. Lucio 181, Doctores",
+  "neighborhood": "Doctores",
+  "price_text": null,
+  "price_min": null,
+  "currency": null,
+  "url": "https://thehappening.com/eventos-de-noviembre-2026-que-tienes-que-tener-en-tu-calendario/",
+  "category": "Markets & Design",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Gran Salón México",
+  "recurring": false,
+  "sources": [
+   "web:the-happening:73d3ad4f01af"
+  ],
+  "source_links": [
+   {
+    "name": "The Happening",
+    "url": "https://thehappening.com/eventos-de-noviembre-2026-que-tienes-que-tener-en-tu-calendario/"
+   }
+  ],
+  "source_excerpt": "Gran Salón México 2026\n📍Dr. Lucio 181, Doctores\n📅 Del 6 al 8 de noviembre\n\nGran Salón México vuelve con su feria anual dedicada a la ilustración contemporánea. Desde hace más de una década, el proyecto conecta ilustradores con editoriales, marcas y proyectos creativos, así que aquí puedes esperar desde obra gráfica hasta propuestas que cruzan muralismo, diseño, packaging y cultura visual.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Feria consolidada para ilustradores y compradores del mundo creativo; buen lugar para descubrir obra gráfica y proyectos editoriales."
+ },
+ {
+  "title": "Festival del Cactus",
+  "description": "Segunda edición del festival: talleres, actividades para niños, conversatorios, documentales y exposición de cactáceas y suculentas en Casa Estudio Diego Rivera y Frida Kahlo.",
+  "starts_at": "2026-11-07T00:00:00-06:00",
+  "ends_at": "2026-11-08T23:59:00-06:00",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Casa Estudio Diego Rivera y Frida Kahlo",
+  "address": "Diego Rivera s/n, San Ángel Inn",
+  "neighborhood": "San Ángel",
+  "price_text": null,
+  "price_min": null,
+  "currency": null,
+  "url": "https://thehappening.com/eventos-de-noviembre-2026-que-tienes-que-tener-en-tu-calendario/",
+  "category": "Markets & Design",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": null,
+  "organizer": "Casa Estudio Diego Rivera y Frida Kahlo",
+  "recurring": false,
+  "sources": [
+   "web:the-happening:73d3ad4f01af"
+  ],
+  "source_links": [
+   {
+    "name": "The Happening",
+    "url": "https://thehappening.com/eventos-de-noviembre-2026-que-tienes-que-tener-en-tu-calendario/"
+   }
+  ],
+  "source_excerpt": "Festival del Cactus\n📍Casa Estudio Diego Rivera y Frida Kahlo\n📅 7 y 8 de noviembre\n\nEl cactus también merece su propio festival. La segunda edición reúne talleres, actividades para niños, conversatorios, documentales y una exposición de cactáceas y suculentas. Además de hablar de su importancia dentro del patrimonio natural de México, el festival también explora la relación de estas plantas con la arquitectura y los jardines del propio museo.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Festival pequeño y familiar sobre cactáceas en un museo patrimonial; recomendable para familias y aficionados a la botánica."
+ },
+ {
+  "title": "Vitae Fest 2026",
+  "description": "Festival gratuito en el Zócalo con presentaciones musicales (Enjambre, Banda Los Recoditos, Mau y Ricky, Alexander Acha) y actividades artísticas y comunitarias.",
+  "starts_at": "2026-11-08T17:00:00-06:00",
+  "ends_at": null,
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Zócalo de la Ciudad de México",
+  "address": "Zócalo, Centro Histórico, Ciudad de México",
+  "neighborhood": "Centro Histórico",
+  "price_text": "Gratuito",
+  "price_min": 0,
+  "currency": "MXN",
+  "url": "https://thehappening.com/eventos-de-noviembre-2026-que-tienes-que-tener-en-tu-calendario/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": null,
+  "organizer": "Vitae Fest",
+  "recurring": false,
+  "sources": [
+   "web:the-happening:73d3ad4f01af"
+  ],
+  "source_links": [
+   {
+    "name": "The Happening",
+    "url": "https://thehappening.com/eventos-de-noviembre-2026-que-tienes-que-tener-en-tu-calendario/"
+   }
+  ],
+  "source_excerpt": "Vitae Fest 2026\n📍Zócalo de la Ciudad de México\n📅 8 de noviembre a las 17:00 hrs\n\nEnjambre, Banda Los Recoditos, Mau y Ricky y Alexander Acha llegan al Zócalo para la segunda edición de Vitae Fest. El festival mezcla distintos géneros musicales en una jornada gratuita pensada alrededor de la música, el arte y la comunidad.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Concierto gratuito en el Zócalo con cartel comercial y variedad de géneros; buena opción para público amplio que busca música en espacio público."
+ },
+ {
+  "title": "Obra de teatro: Algodón de azúcar",
+  "description": "Producción escrita y dirigida por Gabriela Ochoa que explora la infancia sin nostalgia; funciones en el Teatro Helénico de lunes a miércoles a las 20:00 hrs del 9 de noviembre al 16 de diciembre.",
+  "starts_at": "2026-11-09T20:00:00-06:00",
+  "ends_at": "2026-12-16T21:30:00-06:00",
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Teatro Helénico",
+  "address": "Teatro Helénico, Ciudad de México",
+  "neighborhood": null,
+  "price_text": null,
+  "price_min": null,
+  "currency": null,
+  "url": "https://thehappening.com/eventos-de-noviembre-2026-que-tienes-que-tener-en-tu-calendario/",
+  "category": "Film & Performance",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Producción teatral (Gabriela Ochoa) / Teatro Helénico",
+  "recurring": true,
+  "sources": [
+   "web:the-happening:73d3ad4f01af"
+  ],
+  "source_links": [
+   {
+    "name": "The Happening",
+    "url": "https://thehappening.com/eventos-de-noviembre-2026-que-tienes-que-tener-en-tu-calendario/"
+   }
+  ],
+  "source_excerpt": "Obra de teatro: Algodón de azúcar\n📍Teatro Helénico\n📅 Del 9 de noviembre al 16 de diciembre de 2026\n\n¿Qué pasa cuando volteas a ver tu infancia sin nostalgia ni filtros? Esa es la pregunta detrás de Algodón de azúcar, obra escrita y dirigida por Gabriela Ochoa. Después de presentarse en distintos escenarios internacionales, la producción llega al Teatro Helénico con funciones de lunes a miércoles a las 20:00 hrs.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": true,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Estreno con temporada extendida en un teatro reconocido; interesante para quienes siguen teatro contemporáneo y montajes nacionales."
+ },
+ {
+  "title": "Ciudad de México: Ciudad Creativa del Diseño (El Rule)",
+  "description": "Encuentro de tres días en El Rule con voces de arquitectura, diseño, arte y disciplinas creativas: conferencias, conversatorios, talleres y exposiciones.",
+  "starts_at": "2026-11-11T00:00:00-06:00",
+  "ends_at": "2026-11-13T23:59:00-06:00",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Centro Cultural El Rule",
+  "address": "Centro Cultural El Rule, Ciudad de México",
+  "neighborhood": null,
+  "price_text": null,
+  "price_min": null,
+  "currency": null,
+  "url": "https://thehappening.com/eventos-de-noviembre-2026-que-tienes-que-tener-en-tu-calendario/",
+  "category": "Talks & Learning",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Centro Cultural El Rule",
+  "recurring": false,
+  "sources": [
+   "web:the-happening:73d3ad4f01af"
+  ],
+  "source_links": [
+   {
+    "name": "The Happening",
+    "url": "https://thehappening.com/eventos-de-noviembre-2026-que-tienes-que-tener-en-tu-calendario/"
+   }
+  ],
+  "source_excerpt": "Ciudad de México: Ciudad Creativa del Diseño\n📍Centro Cultural El Rule\n📅 Del 11 al 13 de noviembre\n\nDurante tres días, El Rule reúne voces de la arquitectura, el diseño, el arte y otras disciplinas creativas bajo la idea de innovar desde nuestras raíces. Habrá conferencias, conversatorios, talleres y exposiciones para pensar cómo el diseño puede conectar pasado, presente y futuro.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Encuentro de diseño con enfoque local y multidisciplinario en un centro cultural conocido; útil para profesionales y estudiantes del diseño."
+ },
+ {
+  "title": "Original: Encuentro de arte textil, decorativo y utilitario",
+  "description": "Cuatro días en Complejo Cultural Los Pinos dedicados al trabajo artesanal y textil de México: talleres, narraciones orales, encuentros con profesionales, música y recorridos.",
+  "starts_at": "2026-11-12T00:00:00-06:00",
+  "ends_at": "2026-11-15T23:59:00-06:00",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Complejo Cultural Los Pinos",
+  "address": "Complejo Cultural los Pinos, Ciudad de México",
+  "neighborhood": null,
+  "price_text": "Entrada libre",
+  "price_min": 0,
+  "currency": "MXN",
+  "url": "https://thehappening.com/eventos-de-noviembre-2026-que-tienes-que-tener-en-tu-calendario/",
+  "category": "Creativity & Crafts",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": null,
+  "organizer": "Original / Complejo Cultural Los Pinos",
+  "recurring": false,
+  "sources": [
+   "web:the-happening:73d3ad4f01af"
+  ],
+  "source_links": [
+   {
+    "name": "The Happening",
+    "url": "https://thehappening.com/eventos-de-noviembre-2026-que-tienes-que-tener-en-tu-calendario/"
+   }
+  ],
+  "source_excerpt": "Original: Encuentro de arte textil, decorativo y utilitario\n📍Complejo Cultural los Pinos\n📅 Del 12 al 15 de noviembre\n\nOriginal vuelve a Los Pinos con cuatro días dedicados al trabajo artesanal y textil de México. El programa reúne 84 actividades entre talleres, narraciones orales, encuentros con profesionales, música y recorridos por distintos territorios artesanales del país. La entrada es libre.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Encuentro amplio sobre oficios textiles y decorativos con acceso gratuito; excelente para quienes buscan talleres y contacto con artesanía mexicana."
+ },
+ {
+  "title": "Taller de Pan de Muerto (Museo del Pulque y las Pulquerías)",
+  "description": "Taller práctico de elaboración de pan de muerto en el Museo del Pulque y las Pulquerías; función/actividad programada para el 16 de noviembre a las 13:00 hrs.",
+  "starts_at": "2026-11-16T13:00:00-06:00",
+  "ends_at": null,
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Museo del Pulque y las Pulquerías",
+  "address": null,
+  "neighborhood": null,
+  "price_text": null,
+  "price_min": null,
+  "currency": null,
+  "url": "https://thehappening.com/nuestra-guia-de-dia-de-muertos-2026-en-cdmx-desfiles-ofrendas-y-mas/",
+  "category": "Creativity & Crafts",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Museo del Pulque y las Pulquerías",
+  "recurring": false,
+  "sources": [
+   "web:the-happening:82745252ffaf"
+  ],
+  "source_links": [
+   {
+    "name": "The Happening",
+    "url": "https://thehappening.com/nuestra-guia-de-dia-de-muertos-2026-en-cdmx-desfiles-ofrendas-y-mas/"
+   }
+  ],
+  "source_excerpt": "Taller de Pan de Muerto\n📍Museo del Pulque y las Pulquerías\n📆16 de noviembre a las 13:00 hrs\n\nTaller de Pan de Muerto",
+  "image_url": null,
+  "confidence": 0.8,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Clase práctica en un museo temático; buena para quienes quieran aprender la técnica tradicional del pan de muerto."
+ },
+ {
+  "title": "Bestiario fantástico",
+  "description": "Taller abierto para niñas y niños: inventar animales y otros seres inspirados en las obras de la exposición Tamayo, Nieto, Toledo. Los años en París; ejercicios de dibujo y técnicas pictóricas para formar un bestiario colectivo. Dirigido por el equipo de Mediación del museo.",
+  "starts_at": "2026-11-15T12:00:00-06:00",
+  "ends_at": "2026-11-15T15:00:00-06:00",
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Museo Tamayo",
+  "address": null,
+  "neighborhood": null,
+  "price_text": null,
+  "price_min": null,
+  "currency": null,
+  "url": "https://www.museotamayo.org/agenda/bestiario-fantastico",
+  "category": "Creativity & Crafts",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": null,
+  "organizer": "Museo Tamayo",
+  "recurring": true,
+  "sources": [
+   "web:museo-tamayo:d31f27bdc8d6"
+  ],
+  "source_links": [
+   {
+    "name": "Museo Tamayo",
+    "url": "https://www.museotamayo.org/agenda/bestiario-fantastico"
+   }
+  ],
+  "source_excerpt": "Domingos 15, 22 y 29 de noviembre | 12 – 15 h\nEl Museo Tamayo invita a niñas y niños a inventar animales y otros seres inspirados en las obras de la exposición Tamayo, Nieto, Toledo. Los años en París. Los participantes realizarán diversos ejercicios de dibujo y técnicas pictóricas, trabajarán con materiales para probar combinaciones inesperadas de animales y formarán un gran bestiario colectivo.\nTaller abierto es un programa de sesiones guiadas por el equipo de Mediación del museo, dirigido a niñas y niños, en el cual crean, juegan y experimentan con materiales y con las posibilidades del arte.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": false,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": true,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Un taller familiar dirigido por el equipo de Mediación del Museo Tamayo que ofrece actividades prácticas (dibujo y técnicas pictóricas) para niñas y niños, ideal para familias que buscan ocio creativo."
+ },
+ {
+  "title": "Recorrido en LSM por las exposiciones (Visita guiada)",
+  "description": "Visita guiada accesible en Lengua de Señas Mexicana (LSM) dirigida a personas sordas y al público interesado; recorrido participativo por las exposiciones para promover el diálogo y el encuentro con el arte contemporáneo. Actividad gratuita con registro previo.",
+  "starts_at": "2026-11-07T16:00:00-06:00",
+  "ends_at": null,
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Museo Jumex",
+  "address": "Miguel de Cervantes Saavedra 303",
+  "neighborhood": "Granada",
+  "price_text": "Actividad gratuita con registro previo",
+  "price_min": 0,
+  "currency": "MXN",
+  "url": "https://www.fundacionjumex.org/es/programa",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Fundación Jumex / Museo Jumex",
+  "recurring": false,
+  "sources": [
+   "web:museo-jumex:9af5bfc07566",
+   "web:museo-jumex:9b71aba58ba6"
+  ],
+  "source_links": [
+   {
+    "name": "Museo Jumex - Programa",
+    "url": "https://www.fundacionjumex.org/es/programa"
+   }
+  ],
+  "source_excerpt": "Actividad gratuita  \n07.NOV.2026 | 4PM  \n\nVisita guiada\n\nEste recorrido en LSM está dirigido a personas sordas y al público interesado. A través de una experiencia participativa, la visita invita a explorar las obras desde distintas perspectivas para promover el diálogo, la reflexión y el encuentro con el arte contemporáneo en un entorno accesible e inclusivo.\n\nActividad gratuita con registro previo",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": true,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Una visita guiada accesible en LSM ofrecida por Museo Jumex que facilita el acceso a exposiciones para personas sordas y público general; gratuita con registro."
+ },
+ {
+  "title": "MINI DOMINGO: LO QUE CRECE ENTRE LAS VÍAS, VESTIGIOS DE UN JARDÍN",
+  "description": "Actividad familiar / taller Mini Domingo en Museo Jumex: actividades creativas para niñas y niños inspiradas en las exposiciones del museo (parte del ciclo Mini Domingo).",
+  "starts_at": "2026-11-08T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Museo Jumex",
+  "address": "Miguel de Cervantes Saavedra 303",
+  "neighborhood": "Granada",
+  "price_text": "Actividad gratuita",
+  "price_min": 0,
+  "currency": "MXN",
+  "url": "https://www.fundacionjumex.org/es/programa",
+  "category": "Creativity & Crafts",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": null,
+  "organizer": "Fundación Jumex / Museo Jumex",
+  "recurring": false,
+  "sources": [
+   "web:museo-jumex:9b71aba58ba6",
+   "web:museo-jumex:9af5bfc07566"
+  ],
+  "source_links": [
+   {
+    "name": "Museo Jumex - Programa",
+    "url": "https://www.fundacionjumex.org/es/programa"
+   }
+  ],
+  "source_excerpt": "MINI DOMINGO: LO QUE CRECE ENTRE LAS VÍAS, VESTIGIOS DE UN JARDÍN\n08.NOV.2026\n\nMuseo en familia / Mini Domingo",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": true,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Actividad gratuita y familiar de Museo Jumex pensada para que niñas y niños exploren las exposiciones mediante juegos y talleres creativos."
+ },
+ {
+  "title": "MINI DOMINGO: DESTINOS IMPOSIBLES",
+  "description": "Actividad Mini Domingo para familias en Museo Jumex: taller y actividades creativas para niñas y niños vinculadas a las exposiciones del museo.",
+  "starts_at": "2026-11-15T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Museo Jumex",
+  "address": "Miguel de Cervantes Saavedra 303",
+  "neighborhood": "Granada",
+  "price_text": "Actividad gratuita",
+  "price_min": 0,
+  "currency": "MXN",
+  "url": "https://www.fundacionjumex.org/es/programa",
+  "category": "Creativity & Crafts",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": null,
+  "organizer": "Fundación Jumex / Museo Jumex",
+  "recurring": false,
+  "sources": [
+   "web:museo-jumex:9b71aba58ba6",
+   "web:museo-jumex:9af5bfc07566"
+  ],
+  "source_links": [
+   {
+    "name": "Museo Jumex - Programa",
+    "url": "https://www.fundacionjumex.org/es/programa"
+   }
+  ],
+  "source_excerpt": "MINI DOMINGO: DESTINOS IMPOSIBLES\n15.NOV.2026\n\nMini Domingo",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": true,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Un Mini Domingo gratuito de Museo Jumex que ofrece actividades creativas para que las familias exploren el museo y las exposiciones."
+ },
+ {
+  "title": "MINI DOMINGO: HACIENDO MI PROPIO INTERNET",
+  "description": "Taller Mini Domingo en Museo Jumex orientado a niñas y niños; actividades creativas relacionadas con tecnología e imaginación en diálogo con las exposiciones del museo.",
+  "starts_at": "2026-11-15T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Museo Jumex",
+  "address": "Miguel de Cervantes Saavedra 303",
+  "neighborhood": "Granada",
+  "price_text": "Actividad gratuita",
+  "price_min": 0,
+  "currency": "MXN",
+  "url": "https://www.fundacionjumex.org/es/programa",
+  "category": "Creativity & Crafts",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": null,
+  "organizer": "Fundación Jumex / Museo Jumex",
+  "recurring": false,
+  "sources": [
+   "web:museo-jumex:9b71aba58ba6",
+   "web:museo-jumex:9af5bfc07566"
+  ],
+  "source_links": [
+   {
+    "name": "Museo Jumex - Programa",
+    "url": "https://www.fundacionjumex.org/es/programa"
+   }
+  ],
+  "source_excerpt": "MINI DOMINGO: HACIENDO MI PROPIO INTERNET\n15.NOV.2026\n\nMini Domingo",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": true,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Taller gratuito de Museo Jumex pensado para niñas y niños que vincula actividades creativas con temas de tecnología e imaginación."
+ },
+ {
+  "title": "Geometrías para una fiesta",
+  "description": "Taller para familias. De 13:00 a 14:30 h. Dirigido a niñas y niños a partir de 7 años; impartido por la artista Fátima Rodrigo y el equipo de Mediación del Museo Tamayo. Taller gratuito. En sala educativa.",
+  "starts_at": "2026-11-07T13:00:00-06:00",
+  "ends_at": "2026-11-08T14:30:00-06:00",
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Museo Tamayo",
+  "address": null,
+  "neighborhood": null,
+  "price_text": "Taller gratuito",
+  "price_min": 0,
+  "currency": "MXN",
+  "url": "https://www.museotamayo.org/agenda/geometrias-para-una-fiesta",
+  "category": "Creativity & Crafts",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": null,
+  "organizer": "Museo Tamayo",
+  "recurring": false,
+  "sources": [
+   "web:museo-tamayo:c728be35af98",
+   "web:museo-tamayo:5b5d253a087c",
+   "web:museo-tamayo:c22a30a3957e"
+  ],
+  "source_links": [
+   {
+    "name": "Museo Tamayo — Geometrías para una fiesta",
+    "url": "https://www.museotamayo.org/agenda/geometrias-para-una-fiesta"
+   },
+   {
+    "name": "Museo Tamayo — agenda (es)",
+    "url": "https://www.museotamayo.org/agenda"
+   }
+  ],
+  "source_excerpt": "Geometrías para una fiesta\nTaller para familias\nNo items found.\n07\nNov\n2026\n13:00\nh\n→ \n08\n14:30\nSala educativa\nDe 13 – 14:30 h\nTaller gratuito\nDirigido a niñas y niños a partir de 7 años de edad\nEl Museo Tamayo invita a todos los integrantes de la familia a participar en este taller impartido por la artista Fátima Rodrigo, quien presentó la exposición Con todo y mi tristeza de junio a septiembre de 2026 en el patio central del museo.\nEn el taller los participantes explorarán cómo, a partir de formas geométricas y abstractas, es posible transformar los materiales para crear objetos, accesorios y escenografías.\nA lo largo de la sesión, las familias conocerán la relación de la geometría con el arte, la ropa, la televisión y las fiestas populares, y experimentarán con diversos materiales para elaborar composiciones abstractas, objetos y vestuarios que interactúan con el cuerpo y el movimiento.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": true,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Un taller familiar gratuito en Museo Tamayo que propone crear objetos y vestuarios a partir de formas geométricas; ideal para familias con niños a partir de 7 años."
+ },
+ {
+  "title": "Inauguración\nExposición | 36ª Bienal de São Paulo",
+  "description": "Inauguración de la muestra: una selección de obras de la más reciente edición de la Bienal de São Paulo, presentada en el Museo Tamayo; primera vez que esta Bienal viaja a México.",
+  "starts_at": "2026-11-14T19:00:00-06:00",
+  "ends_at": "2026-11-14T21:00:00-06:00",
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Museo Tamayo",
+  "address": null,
+  "neighborhood": null,
+  "price_text": null,
+  "price_min": null,
+  "currency": null,
+  "url": "https://www.museotamayo.org/agenda/exposicion-36a-bienal-de-sao-paulo",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Museo Tamayo",
+  "recurring": false,
+  "sources": [
+   "web:museo-tamayo:5b5d253a087c",
+   "web:museo-tamayo:c22a30a3957e",
+   "web:museo-tamayo:4090953ef955"
+  ],
+  "source_links": [
+   {
+    "name": "Museo Tamayo — Exposición 36ª Bienal de São Paulo",
+    "url": "https://www.museotamayo.org/agenda/exposicion-36a-bienal-de-sao-paulo"
+   },
+   {
+    "name": "Museo Tamayo — agenda",
+    "url": "https://www.museotamayo.org/agenda"
+   }
+  ],
+  "source_excerpt": "Inauguración\n14\n19:00\n21:00\nExposición | 36ª Bienal de São Paulo \nUna selección de obras de la más reciente edición de la Bienal de São Paulo se presentará en el Museo Tamayo, lo cual constituye la primera ocasión en que esa importante exposición de arte contemporáneo internacional viajará a México.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": true,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Inauguración de una exposición internacional relevante: la selección de la 36ª Bienal de São Paulo, presentada por primera vez en México en Museo Tamayo."
+ },
+ {
+  "title": "Bestiario fantástico",
+  "description": "Taller abierto para niñas y niños basado en obras de la exposición Tamayo, Nieto, Toledo. Los años en París; niñxs inventarán animales y otros seres para armar un compendio colectivo de entidades fantásticas. Sesión del 15 de noviembre a las 12:00.",
+  "starts_at": "2026-11-15T12:00:00-06:00",
+  "ends_at": "2026-11-15T15:00:00-06:00",
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Museo Tamayo",
+  "address": null,
+  "neighborhood": null,
+  "price_text": null,
+  "price_min": null,
+  "currency": null,
+  "url": "https://www.museotamayo.org/agenda/bestiario-fantastico",
+  "category": "Creativity & Crafts",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": null,
+  "organizer": "Museo Tamayo",
+  "recurring": false,
+  "sources": [
+   "web:museo-tamayo:5b5d253a087c",
+   "web:museo-tamayo:c22a30a3957e"
+  ],
+  "source_links": [
+   {
+    "name": "Museo Tamayo — Bestiario fantástico",
+    "url": "https://www.museotamayo.org/agenda/bestiario-fantastico"
+   },
+   {
+    "name": "Museo Tamayo — agenda (en)",
+    "url": "https://www.museotamayo.org/en/agenda"
+   }
+  ],
+  "source_excerpt": "taller abierto\n15\n12:00\n29\n15:00\nBestiario fantástico\nA partir de obras de la exposición Tamayo, Nieto, Toledo. Los años en París, niñas y niños inventarán animales y otros seres para armar un compendio colectivo de entidades fantásticas.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": true,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Actividad participativa para infancia ligada a la exposición Tamayo, Nieto, Toledo; una buena opción familiar para crear personajes fantásticos inspirados en la muestra."
+ },
+ {
+  "title": "El evento de un hilo",
+  "description": "Exhibición — Narrativas globales en los textiles. Exposición en curso en Museo Tamayo (25 sep 2026 – 3 ene 2027).",
+  "starts_at": "2026-09-25T00:00:00-06:00",
+  "ends_at": "2027-01-03T23:59:59-06:00",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Museo Tamayo",
+  "address": null,
+  "neighborhood": null,
+  "price_text": null,
+  "price_min": null,
+  "currency": null,
+  "url": "https://www.museotamayo.org/exposiciones-actuales",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Museo Tamayo",
+  "recurring": false,
+  "sources": [
+   "web:museo-tamayo:4090953ef955"
+  ],
+  "source_links": [
+   {
+    "name": "Museo Tamayo — Exposiciones actuales",
+    "url": "https://www.museotamayo.org/exposiciones-actuales"
+   }
+  ],
+  "source_excerpt": "25\nSep\n2026\n-\n03\nJan\n2027\nEl evento de un hilo\nNarrativas globales en los textiles",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Una exposición temporal sobre narrativas textiles con fechas largas, conveniente para visitas durante las próximas semanas."
+ },
+ {
+  "title": "Tamayo, Nieto, Toledo — Los años en París",
+  "description": "Exhibición en curso (20 ago 2026 – 15 feb 2027). Muestra en Museo Tamayo que reúne obras de Tamayo, Nieto y Toledo, presente en la programación actual del museo.",
+  "starts_at": "2026-08-20T00:00:00-06:00",
+  "ends_at": "2027-02-15T23:59:59-06:00",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Museo Tamayo",
+  "address": null,
+  "neighborhood": null,
+  "price_text": null,
+  "price_min": null,
+  "currency": null,
+  "url": "https://www.museotamayo.org/exposiciones-actuales",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Museo Tamayo",
+  "recurring": false,
+  "sources": [
+   "web:museo-tamayo:4090953ef955"
+  ],
+  "source_links": [
+   {
+    "name": "Museo Tamayo — Exposiciones actuales",
+    "url": "https://www.museotamayo.org/exposiciones-actuales"
+   }
+  ],
+  "source_excerpt": "20\nAug\n2026\n-\n15\nFeb\n2027\nTamayo, Nieto, Toledo\nLos años en París",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Exposición principal en Museo Tamayo que reúne obra histórica de Tamayo, Nieto y Toledo; relevante para quienes visitan las actuales muestras del museo."
+ },
+ {
+  "title": "Museo Tamayo — Arquitectura y cosmotécnica",
+  "description": "Exhibición en curso (23 jul 2026 – 28 feb 2027). Proyecto expositivo del Museo Tamayo sobre arquitectura y cosmotécnica.",
+  "starts_at": "2026-07-23T00:00:00-06:00",
+  "ends_at": "2027-02-28T23:59:59-06:00",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Museo Tamayo",
+  "address": null,
+  "neighborhood": null,
+  "price_text": null,
+  "price_min": null,
+  "currency": null,
+  "url": "https://www.museotamayo.org/exposiciones-actuales",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Museo Tamayo",
+  "recurring": false,
+  "sources": [
+   "web:museo-tamayo:4090953ef955"
+  ],
+  "source_links": [
+   {
+    "name": "Museo Tamayo — Exposiciones actuales",
+    "url": "https://www.museotamayo.org/exposiciones-actuales"
+   }
+  ],
+  "source_excerpt": "23\nJul\n2026\n-\n28\nFeb\n2027\nMuseo Tamayo\nArquitectura y cosmotécnica",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Exposición temática del museo que explora arquitectura y cosmotécnica, disponible durante varios meses para visita."
+ },
+ {
+  "title": "“El Camino”: iluminación en Reforma",
+  "description": "Experiencia inmersiva con luces, catrinas, xoloitzcuintles, altares, papel picado y flores de cempasúchil sobre Paseo de la Reforma; las luces se encenderán diariamente de 19:00 a 23:00.",
+  "starts_at": "2026-10-23T19:00:00-06:00",
+  "ends_at": "2026-11-08T23:00:00-06:00",
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Paseo de la Reforma (del Ángel de la Independencia a la Puerta de los Leones)",
+  "address": null,
+  "neighborhood": null,
+  "price_text": "Gratis",
+  "price_min": 0,
+  "currency": "MXN",
+  "url": "https://www.nmas.com.mx/ciudad-de-mexico/sociedad/que-hacer-en-cdmx-por-dia-de-muertos-cartelera-de-eventos-del-17-al-31-de-octubre-2026/",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": null,
+  "organizer": null,
+  "recurring": false,
+  "sources": [
+   "web:d-a-de-muertos-2026-page:97c80a2ec082",
+   "web:d-a-de-muertos-2026-page:50f7f1f558ad",
+   "web:d-a-de-muertos-2026-page:90e5269ab22e"
+  ],
+  "source_links": [
+   {
+    "name": "Día de Muertos 2026 page",
+    "url": "https://grupoanimal.mx/estilo-de-vida/eventos-desfiles-dia-de-muertos-2026-cdmx"
+   },
+   {
+    "name": "Día de Muertos 2026 page",
+    "url": "https://www.nmas.com.mx/ciudad-de-mexico/sociedad/que-hacer-en-cdmx-por-dia-de-muertos-cartelera-de-eventos-del-17-al-31-de-octubre-2026/"
+   },
+   {
+    "name": "Día de Muertos 2026 page",
+    "url": "https://www.unotv.com/estados/ciudad-de-mexico/calendario-de-dia-de-muertos-2026-en-cdmx-fechas-del-desfile-ofrenda-monumental-y-actividades-gratis/"
+   }
+  ],
+  "source_excerpt": "“El Camino” se podrá visitar desde el viernes 23 de octubre hasta el domingo 8 de noviembre. Las luces se encenderán todos los días a partir de las 19:00 y hasta las 23:00. Este evento se hará sobre Paseo de la Reforma, desde el Ángel de la Independencia hasta la entrada del Bosque de Chapultepec (Puerta de los Leones). En N+ te tenemos la guía definitiva de todas las actividades que impulsará el Gobierno de la Ciudad de México en esta temporada... “El Camino”: iluminación en Reforma - Fechas: Del 23 de octubre al 8 de noviembre. Ubicación: Del Ángel de la Independencia a la Puerta de los Leones. Descripción: Experiencia inmersiva con luces, catrinas, xoloitzcuintles, altares, papel picado y flores de cempasúchil.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": true,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Instalación lumínica pública y gratuita en Paseo de la Reforma, ideal para visitas nocturnas y fotos durante la temporada de Día de Muertos."
+ },
+ {
+  "title": "Exposición de alebrijes monumentales en Paseo de la Reforma",
+  "description": "Recorrido y exhibición de alebrijes monumentales instalados en las aceras norte y sur de Paseo de la Reforma, entre la glorieta de la Columna de la Independencia y la Estela de Luz.",
+  "starts_at": "2026-10-17T00:00:00-06:00",
+  "ends_at": "2026-11-08T23:59:00-06:00",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Paseo de la Reforma (aceras entre la Columna de la Independencia y la Estela de Luz)",
+  "address": null,
+  "neighborhood": null,
+  "price_text": "Gratis",
+  "price_min": 0,
+  "currency": "MXN",
+  "url": "https://grupoanimal.mx/estilo-de-vida/eventos-desfiles-dia-de-muertos-2026-cdmx",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": null,
+  "organizer": null,
+  "recurring": false,
+  "sources": [
+   "web:d-a-de-muertos-2026-page:50f7f1f558ad",
+   "web:d-a-de-muertos-2026-page:90e5269ab22e",
+   "web:d-a-de-muertos-2026-page:97c80a2ec082"
+  ],
+  "source_links": [
+   {
+    "name": "Día de Muertos 2026 page",
+    "url": "https://grupoanimal.mx/estilo-de-vida/eventos-desfiles-dia-de-muertos-2026-cdmx"
+   },
+   {
+    "name": "Día de Muertos 2026 page",
+    "url": "https://www.unotv.com/estados/ciudad-de-mexico/calendario-de-dia-de-muertos-2026-en-cdmx-fechas-del-desfile-ofrenda-monumental-y-actividades-gratis/"
+   },
+   {
+    "name": "Día de Muertos 2026 page",
+    "url": "https://www.nmas.com.mx/ciudad-de-mexico/sociedad/que-hacer-en-cdmx-por-dia-de-muertos-cartelera-de-eventos-del-17-al-31-de-octubre-2026/"
+   }
+  ],
+  "source_excerpt": "Uno de los desfiles por Día de Muertos 2026 es el de Alebrijes Monumentales que llega anualmente a Reforma y organizado por el Museo de Arte Popular. Este año se realizará el sábado 17 de octubre y empezará en punto de las 12:00 en el Zócalo. Recuerda que si no llegas al Desfile de Alebrijes Monumentales 2026, ¡no te preocupes! Estas figuras se quedarán en las aceras norte y sur de Reforma, entre la glorieta de la Columna de la Independencia y la Estela de Luz, desde el mismo 17 de octubre y hasta el domingo 8 de noviembre.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": true,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Las alebrijes monumentales son una exhibición pública y fotogénica en Reforma que permanece montada hasta el 8 de noviembre, accesible y gratuita."
+ },
+ {
+  "title": "Camino a la Luz, expo de esculturas luminosas en Reforma",
+  "description": "Exposición de 22 esculturas lumínicas de gran formato —catrinas, calaveras, túneles luminosos y figuras como xoloitzcuintles y ajolotes— a lo largo de Paseo de la Reforma, del Ángel de la Independencia hasta la entrada al Bosque de Chapultepec. Horario nocturno.",
+  "starts_at": "2026-10-23T19:00:00-06:00",
+  "ends_at": "2026-11-08T23:00:00-06:00",
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Paseo de la Reforma (tramo entre Ángel de la Independencia y Puerta de los Leones)",
+  "address": "Avenida Paseo de la Reforma, tramo Ángel de la Independencia — Puerta de los Leones, Ciudad de México",
+  "neighborhood": "Juárez / Bosque de Chapultepec",
+  "price_text": "Entrada libre",
+  "price_min": 0,
+  "currency": "MXN",
+  "url": "https://mexicocity.cdmx.gob.mx/e/dia-de-muertos-en-la-ciudad-de-mexico/",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": "none",
+  "organizer": "Gobierno de la Ciudad de México",
+  "recurring": false,
+  "sources": [
+   "web:d-a-de-muertos-2026-page:d8de6ee42352",
+   "web:d-a-de-muertos-2026-page:5cdb1b0c00d3"
+  ],
+  "source_links": [
+   {
+    "name": "Día de Muertos 2026 page",
+    "url": "https://mexicocity.cdmx.gob.mx/e/dia-de-muertos-en-la-ciudad-de-mexico/"
+   },
+   {
+    "name": "Chilango",
+    "url": "https://www.chilango.com/que-hacer/actividades-de-dia-de-muertos-2026-en-cdmx-desfile-ofrendas-catrinas-y-mas/"
+   }
+  ],
+  "source_excerpt": "“El Camino” Iluminación en Reforma\n- Fechas: Del 23 de octubre al 8 de noviembre. \n- Ubicación: Del Ángel de la Independencia a la Puerta de los Leones. \nSe trata de una instalación monumental de luz y color que ofrece una experiencia inmersiva por el universo simbólico del Día de Muertos. El recorrido recrea un viaje entre el mundo de los vivos y los muertos, acompañado por figuras de xoloitzcuintles, catrinas, altares, papel picado y flores de cempasúchil.\n\n1. Camino a la Luz, expo de esculturas luminosas en Reforma | 23 de octubre al 8 de noviembre\nPaseo de la Reforma albergará una de las actividades más llamativas de esta temporada de Día de Muertos en CDMX. Se trata de la exposición Camino a la Luz, que estará integrada por 22 esculturas lumínicas de gran formato, incluidas catrinas, calaveras y túneles luminosos. ... Las esculturas podrán visitarse para tomarse fotos del 23 de octubre al 8 de noviembre en un horario de 19:00 a 23:00 horas.",
+  "image_url": null,
+  "confidence": 0.6,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": false,
+   "scarcity": false,
+   "corroborated": true,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Gran instalación lumínica en Paseo de la Reforma que funciona bien como plan nocturno gratuito y visualmente atractivo para visitantes y familias."
+ },
+ {
+  "title": "Iluminación del Zócalo",
+  "description": "Alumbrado decorativo y esculturas luminosas en fachadas y plaza mayor con motivos de Día de Muertos (calavera garbancera, xoloitzcuintles, colibríes esqueléticos) que decoran el primer cuadro del Centro Histórico.",
+  "starts_at": "2026-10-29T00:00:00-06:00",
+  "ends_at": "2026-11-04T23:59:00-06:00",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Zócalo, Centro Histórico",
+  "address": "Plaza de la Constitución, Centro Histórico, Ciudad de México",
+  "neighborhood": "Centro Histórico",
+  "price_text": "Entrada libre",
+  "price_min": 0,
+  "currency": "MXN",
+  "url": "https://mexicocity.cdmx.gob.mx/e/dia-de-muertos-en-la-ciudad-de-mexico/",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": "none",
+  "organizer": "Gobierno de la Ciudad de México",
+  "recurring": false,
+  "sources": [
+   "web:d-a-de-muertos-2026-page:d8de6ee42352",
+   "web:d-a-de-muertos-2026-page:5cdb1b0c00d3"
+  ],
+  "source_links": [
+   {
+    "name": "Día de Muertos 2026 page",
+    "url": "https://mexicocity.cdmx.gob.mx/e/dia-de-muertos-en-la-ciudad-de-mexico/"
+   },
+   {
+    "name": "Chilango",
+    "url": "https://www.chilango.com/que-hacer/actividades-de-dia-de-muertos-2026-en-cdmx-desfile-ofrendas-catrinas-y-mas/"
+   }
+  ],
+  "source_excerpt": "Iluminación del Zócalo\n- Fechas: Del 29 de octubre al 4 de noviembre. \n- Ubicación: Fachadas de los edificios de Gobierno y del primer cuadro del centro histórico. \nEl personal de la Secretaría de Obras y Servicios adorna el perímetro de la plaza mayor con un alumbrado decorativo que ilustra elementos como la calavera garbancera, colibríes esqueléticos, xoloitzcuintles y naturaleza vibrante.",
+  "image_url": null,
+  "confidence": 0.6,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": false,
+   "scarcity": false,
+   "corroborated": true,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Una de las intervenciones cívicas más vistosas del calendario de Día de Muertos, ideal para visitas nocturnas gratuitas en el Centro Histórico."
+ },
+ {
+  "title": "Festival de Día de Muertos en Chapultepec: “La Puerta entre dos mundos”",
+  "description": "Festival en la Segunda Sección del Bosque de Chapultepec con el concepto 'El Sendero del Cempasúchil': altares, música, danza, gastronomía y un espectáculo nocturno con drones en Paseo de los Compositores y Lago Mayor.",
+  "starts_at": "2026-10-29T00:00:00-06:00",
+  "ends_at": "2026-11-04T23:59:00-06:00",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Bosque de Chapultepec — Paseo de los Compositores y Lago Mayor",
+  "address": "Segunda Sección del Bosque de Chapultepec, Paseo de los Compositores y Lago Mayor, Ciudad de México",
+  "neighborhood": "Chapultepec",
+  "price_text": "Entrada libre (algunas actividades con costo, por ejemplo linternas en lago $400)",
+  "price_min": 0,
+  "currency": "MXN",
+  "url": "https://mexicocity.cdmx.gob.mx/e/dia-de-muertos-en-la-ciudad-de-mexico/",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": "none",
+  "organizer": "Gobierno de la Ciudad de México / Secretaría de Cultura",
+  "recurring": false,
+  "sources": [
+   "web:d-a-de-muertos-2026-page:d8de6ee42352",
+   "web:d-a-de-muertos-2026-page:5cdb1b0c00d3"
+  ],
+  "source_links": [
+   {
+    "name": "Día de Muertos 2026 page",
+    "url": "https://mexicocity.cdmx.gob.mx/e/dia-de-muertos-en-la-ciudad-de-mexico/"
+   },
+   {
+    "name": "Chilango",
+    "url": "https://www.chilango.com/que-hacer/actividades-de-dia-de-muertos-2026-en-cdmx-desfile-ofrendas-catrinas-y-mas/"
+   }
+  ],
+  "source_excerpt": "Festival de Día de Muertos en Chapultepec: “La Puerta entre dos mundos”\n- Fechas: Del 29 de octubre al 4 de noviembre. \n- Ubicación: Paseo de los Compositores y Lago Mayor, en la Segunda Sección del Bosque de Chapultepec. \nBajo el concepto “El Sendero del Cempasúchil”, el público puede disfrutar de una experiencia inmersiva de gran formato que integra expresiones artísticas, música, danza, gastronomía, altares y un espectáculo nocturno con drones.",
+  "image_url": null,
+  "confidence": 0.6,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": false,
+   "scarcity": false,
+   "corroborated": true,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Un festival familiar y gratuito en Chapultepec que combina altares, comida y un espectáculo nocturno de drones; buena opción para familias y visitantes nocturnos."
+ },
+ {
+  "title": "Calaveras Gigantes en Tláhuac",
+  "description": "Exposición pública de piezas monumentales de cartonería (calaveras, catrinas y figuras) de hasta 4.5 metros de altura organizada por Jaén Cartonería en la calle Francisco Santiago Borraz, Colonia Santa Cecilia, con actividades y un vals el 1 de noviembre.",
+  "starts_at": "2026-10-24T00:00:00-06:00",
+  "ends_at": "2026-11-07T23:59:00-06:00",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Calle Francisco Santiago Borraz, Colonia Santa Cecilia",
+  "address": "Calle Francisco Santiago Borraz, Col. Santa Cecilia, Alcaldía Tláhuac, Ciudad de México",
+  "neighborhood": "Santa Cecilia (Tláhuac)",
+  "price_text": "Entrada libre",
+  "price_min": 0,
+  "currency": "MXN",
+  "url": "https://www.chilango.com/que-hacer/actividades-de-dia-de-muertos-2026-en-cdmx-desfile-ofrendas-catrinas-y-mas/",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": "none",
+  "organizer": "Jaén Cartonería / Alcaldía Tláhuac",
+  "recurring": true,
+  "sources": [
+   "web:d-a-de-muertos-2026-page:5cdb1b0c00d3"
+  ],
+  "source_links": [
+   {
+    "name": "Chilango",
+    "url": "https://www.chilango.com/que-hacer/actividades-de-dia-de-muertos-2026-en-cdmx-desfile-ofrendas-catrinas-y-mas/"
+   }
+  ],
+  "source_excerpt": "3. Calaveras Gigantes en Tláhuac | 24 de octubre al 8 de noviembre\nLa alcaldía Tláhuac de CDMX también tendrá actividades de Día de Muertos. Del 24 de octubre al 7 de noviembre habrá una exposición de 10 piezas monumentales de cartonería. El evento es organizado por Jaén Cartonería, colectivo que desde hace 15 años aprovecha el espacio público para crear calaveras, catrinas y más figuras inspiradas en la cultura de Día de Muertos de hasta 4.5 metros de altura. Además, en esta edición, el 1 de noviembre habrá un vals para celebrar los XV años de esta tradición. La cita es en la calle Francisco Santiago Borraz, colonia Santa Cecilia, alcaldía Tláhuac.",
+  "image_url": null,
+  "confidence": 0.6,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": false,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Exposición de cartonería monumental en una alcaldía tradicionalmente vinculada a esta artesanía; gratuita y muy fotogénica para familias y público local."
+ },
+ {
+  "title": "Liana Flores /// Lunario Del Auditorio Nacional",
+  "description": "Concierto de Liana Flores en su primer show en México según calendario de conciertos.",
+  "starts_at": "2026-11-03T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Lunario Del Auditorio Nacional",
+  "address": null,
+  "neighborhood": null,
+  "price_text": "$780 a $1,240",
+  "price_min": 780,
+  "currency": "MXN",
+  "url": "https://www.mehaceruido.com/calendario-de-conciertos/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": null,
+  "recurring": false,
+  "sources": [
+   "web:me-hace-ruido:34c3043c7e5f"
+  ],
+  "source_links": [
+   {
+    "name": "Me Hace Ruido",
+    "url": "https://www.mehaceruido.com/calendario-de-conciertos/"
+   }
+  ],
+  "source_excerpt": "Noviembre 3\nLiana Flores /// Lunario Del Auditorio Nacional /// $780 a $1,240\nOmar Courtz /// Palacio de los Deportes /// $850 a $4,080",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Primer concierto en México de la artista emergente Liana Flores en un recinto conocido, relevante para fans de pop/indie."
+ },
+ {
+  "title": "Omar Courtz /// Palacio de los Deportes",
+  "description": "Concierto de Omar Courtz anunciado en el calendario de conciertos.",
+  "starts_at": "2026-11-03T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Palacio de los Deportes",
+  "address": null,
+  "neighborhood": null,
+  "price_text": "$850 a $4,080",
+  "price_min": 850,
+  "currency": "MXN",
+  "url": "https://www.mehaceruido.com/calendario-de-conciertos/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": null,
+  "recurring": false,
+  "sources": [
+   "web:me-hace-ruido:34c3043c7e5f"
+  ],
+  "source_links": [
+   {
+    "name": "Me Hace Ruido",
+    "url": "https://www.mehaceruido.com/calendario-de-conciertos/"
+   }
+  ],
+  "source_excerpt": "Noviembre 3\nLiana Flores /// Lunario Del Auditorio Nacional /// $780 a $1,240\nOmar Courtz /// Palacio de los Deportes /// $850 a $4,080",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Concierto en un recinto grande (Palacio de los Deportes) con entradas en varios rangos, importante para público masivo."
+ },
+ {
+  "title": "Headache /// Foro Indie Rocks",
+  "description": "Concierto de Headache anunciado en el calendario de conciertos.",
+  "starts_at": "2026-11-04T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Foro Indie Rocks",
+  "address": null,
+  "neighborhood": null,
+  "price_text": "$570",
+  "price_min": 570,
+  "currency": "MXN",
+  "url": "https://www.mehaceruido.com/calendario-de-conciertos/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": null,
+  "recurring": false,
+  "sources": [
+   "web:me-hace-ruido:34c3043c7e5f"
+  ],
+  "source_links": [
+   {
+    "name": "Me Hace Ruido",
+    "url": "https://www.mehaceruido.com/calendario-de-conciertos/"
+   }
+  ],
+  "source_excerpt": "Noviembre 4\nHeadache /// Foro Indie Rocks /// $570",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Show en Foro Indie Rocks, recomendable para quienes siguen la escena indie/alternativa local."
+ },
+ {
+  "title": "Mac DeMarco — Hipnosis presenta /// Quarry Studios",
+  "description": "Concierto de Mac DeMarco presentado por Hipnosis en Quarry Studios (nuevo venue anunciado).",
+  "starts_at": "2026-11-06T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Quarry Studios",
+  "address": null,
+  "neighborhood": null,
+  "price_text": "$1,450 y $2,250",
+  "price_min": 1450,
+  "currency": "MXN",
+  "url": "https://www.mehaceruido.com/calendario-de-conciertos/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Hipnosis",
+  "recurring": false,
+  "sources": [
+   "web:me-hace-ruido:34c3043c7e5f"
+  ],
+  "source_links": [
+   {
+    "name": "Me Hace Ruido",
+    "url": "https://www.mehaceruido.com/calendario-de-conciertos/"
+   }
+  ],
+  "source_excerpt": "Noviembre 6\nHipnosis presenta: Mac DeMarco /// Quarry Studios /// $1,450 y $2,250 NUEVO VENUE",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": false,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Artista internacional en un nuevo venue — relevante para fans de indie/rock y seguidores de Hipnosis."
+ },
+ {
+  "title": "MUTEK MX: Nocturne /// Estudios Maravilla",
+  "description": "Evento Nocturne de MUTEK MX en Estudios Maravilla, parte de la programación del festival MUTEK.",
+  "starts_at": "2026-11-06T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Estudios Maravilla",
+  "address": null,
+  "neighborhood": null,
+  "price_text": "$1,590",
+  "price_min": 1590,
+  "currency": "MXN",
+  "url": "https://www.mehaceruido.com/calendario-de-conciertos/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "MUTEK MX",
+  "recurring": false,
+  "sources": [
+   "web:me-hace-ruido:34c3043c7e5f",
+   "web:me-hace-ruido:7b050a35e94a"
+  ],
+  "source_links": [
+   {
+    "name": "Me Hace Ruido",
+    "url": "https://www.mehaceruido.com/calendario-de-conciertos/"
+   },
+   {
+    "name": "Me Hace Ruido",
+    "url": "http://www.mehaceruido.com/calendario-de-conciertos/"
+   }
+  ],
+  "source_excerpt": "Noviembre 6\nMUTEK MX: Nocturne /// Estudios Maravilla /// $1,590",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": true,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Noche de música electrónica como parte de MUTEK MX en un recinto conocido; importante para seguidores de electrónica avanzada."
+ },
+ {
+  "title": "Festival Núcleo 01 /// Monumento a la Revolución",
+  "description": "Festival Núcleo 01 en Monumento a la Revolución — entrada libre según el calendario.",
+  "starts_at": "2026-11-06T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Monumento a la Revolución",
+  "address": null,
+  "neighborhood": null,
+  "price_text": "Entrada libre",
+  "price_min": 0,
+  "currency": "MXN",
+  "url": "https://www.mehaceruido.com/calendario-de-conciertos/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": null,
+  "organizer": null,
+  "recurring": false,
+  "sources": [
+   "web:me-hace-ruido:34c3043c7e5f"
+  ],
+  "source_links": [
+   {
+    "name": "Me Hace Ruido",
+    "url": "https://www.mehaceruido.com/calendario-de-conciertos/"
+   }
+  ],
+  "source_excerpt": "Noviembre 6\nFestival Núcleo 01 /// Monumento a la Revolución /// Entrada libre",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Evento al aire libre y de entrada libre en un ícono de la ciudad, buena opción gratuita para públicos amplios."
+ },
+ {
+  "title": "Festival Hipnosis 2026 /// Estadio Fray Nano",
+  "description": "Festival Hipnosis 2026 anunciado en Estadio Fray Nano con precios publicados en el calendario.",
+  "starts_at": "2026-11-07T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Estadio Fray Nano",
+  "address": null,
+  "neighborhood": null,
+  "price_text": "$1,600 y $2,400",
+  "price_min": 1600,
+  "currency": "MXN",
+  "url": "https://www.mehaceruido.com/calendario-de-conciertos/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Hipnosis",
+  "recurring": false,
+  "sources": [
+   "web:me-hace-ruido:34c3043c7e5f"
+  ],
+  "source_links": [
+   {
+    "name": "Me Hace Ruido",
+    "url": "https://www.mehaceruido.com/calendario-de-conciertos/"
+   }
+  ],
+  "source_excerpt": "Noviembre 7\nFestival Hipnosis 2026 /// Estadio Fray Nano /// $1,600 y $2,400, más info aquí",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": true,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Festival de electrónica de renombre en un estadio; atractivo para públicos de música electrónica y fiestas masivas."
+ },
+ {
+  "title": "Denzel Curry /// Foro Teambro (Velódromo)",
+  "description": "Concierto de Denzel Curry en Foro Teambro (Velódromo) según el calendario.",
+  "starts_at": "2026-11-08T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Foro Teambro (Velódromo)",
+  "address": null,
+  "neighborhood": null,
+  "price_text": "$700 y $1,200",
+  "price_min": 700,
+  "currency": "MXN",
+  "url": "https://www.mehaceruido.com/calendario-de-conciertos/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": null,
+  "recurring": false,
+  "sources": [
+   "web:me-hace-ruido:34c3043c7e5f"
+  ],
+  "source_links": [
+   {
+    "name": "Me Hace Ruido",
+    "url": "https://www.mehaceruido.com/calendario-de-conciertos/"
+   }
+  ],
+  "source_excerpt": "Noviembre 8\nDenzel Curry /// Foro Teambro (Velódromo) /// $700 y $1,200",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Show de rap en un recinto tipo velódromo/foro, relevante para fans del género urbano/hip-hop."
+ },
+ {
+  "title": "Opeth /// Arena CDMX",
+  "description": "Concierto de Opeth anunciado en Arena CDMX dentro del calendario de conciertos.",
+  "starts_at": "2026-11-11T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Arena CDMX",
+  "address": null,
+  "neighborhood": null,
+  "price_text": "$502 a $2,008",
+  "price_min": 502,
+  "currency": "MXN",
+  "url": "https://www.mehaceruido.com/calendario-de-conciertos/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": null,
+  "recurring": false,
+  "sources": [
+   "web:me-hace-ruido:34c3043c7e5f"
+  ],
+  "source_links": [
+   {
+    "name": "Me Hace Ruido",
+    "url": "https://www.mehaceruido.com/calendario-de-conciertos/"
+   }
+  ],
+  "source_excerpt": "Noviembre 11\nOpeth /// Arena CDMX /// $502 a $2,008",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Banda internacional de metal/prog en un gran recinto; destacado para seguidores del género."
+ },
+ {
+  "title": "Karol G: Viajando por el mundo /// Estadio GNP",
+  "description": "Concierto de Karol G dentro de su gira 'Viajando por el mundo' anunciado en el calendario.",
+  "starts_at": "2026-11-13T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Estadio GNP",
+  "address": null,
+  "neighborhood": null,
+  "price_text": "$1,848 a $12,264",
+  "price_min": 1848,
+  "currency": "MXN",
+  "url": "https://www.mehaceruido.com/calendario-de-conciertos/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": null,
+  "recurring": false,
+  "sources": [
+   "web:me-hace-ruido:34c3043c7e5f"
+  ],
+  "source_links": [
+   {
+    "name": "Me Hace Ruido",
+    "url": "https://www.mehaceruido.com/calendario-de-conciertos/"
+   }
+  ],
+  "source_excerpt": "Noviembre 13\nKarol G: Viajando por el mundo /// Estadio GNP /// $1,848 a $12,264",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Concierto masivo de una estrella del reguetón en un estadio; entrada destacada por escala y producción."
+ },
+ {
+  "title": "Garbage /// Zócalo Capitalino",
+  "description": "Concierto de Garbage anunciado con entrada libre en el Zócalo Capitalino.",
+  "starts_at": "2026-11-14T20:00:00-06:00",
+  "ends_at": null,
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Zócalo Capitalino",
+  "address": null,
+  "neighborhood": "Centro Histórico",
+  "price_text": "Entrada libre 8PM",
+  "price_min": 0,
+  "currency": "MXN",
+  "url": "https://www.mehaceruido.com/calendario-de-conciertos/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": null,
+  "organizer": null,
+  "recurring": false,
+  "sources": [
+   "web:me-hace-ruido:34c3043c7e5f",
+   "web:me-hace-ruido:7b050a35e94a"
+  ],
+  "source_links": [
+   {
+    "name": "Me Hace Ruido",
+    "url": "https://www.mehaceruido.com/calendario-de-conciertos/"
+   },
+   {
+    "name": "Me Hace Ruido",
+    "url": "http://www.mehaceruido.com/calendario-de-conciertos/"
+   }
+  ],
+  "source_excerpt": "Noviembre 14\nGarbage /// Zócalo Capitalino /// Entrada libre 8PM",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": true,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Concierto gratuito de una banda internacional en la plaza central de la ciudad: alto impacto y accesible para todos."
+ },
+ {
+  "title": "8TURN /// La Maraka",
+  "description": "Concierto de 8TURN en La Maraka anunciado en el calendario.",
+  "starts_at": "2026-11-16T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "La Maraka",
+  "address": null,
+  "neighborhood": null,
+  "price_text": "$890 a $5,990",
+  "price_min": 890,
+  "currency": "MXN",
+  "url": "https://www.mehaceruido.com/calendario-de-conciertos/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": null,
+  "recurring": false,
+  "sources": [
+   "web:me-hace-ruido:34c3043c7e5f"
+  ],
+  "source_links": [
+   {
+    "name": "Me Hace Ruido",
+    "url": "https://www.mehaceruido.com/calendario-de-conciertos/"
+   }
+  ],
+  "source_excerpt": "Noviembre 16\n8TURN /// La Maraka /// $890 a $5,990",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Concierto en La Maraka con un rango amplio de precios; interesante para aficionados a sonidos alternativos."
+ },
+ {
+  "title": "Maskatesta /// House Of Vans",
+  "description": "Concierto de Maskatesta en House Of Vans según el calendario.",
+  "starts_at": "2026-11-17T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "House Of Vans",
+  "address": null,
+  "neighborhood": null,
+  "price_text": "$600",
+  "price_min": 600,
+  "currency": "MXN",
+  "url": "https://www.mehaceruido.com/calendario-de-conciertos/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": null,
+  "recurring": false,
+  "sources": [
+   "web:me-hace-ruido:34c3043c7e5f"
+  ],
+  "source_links": [
+   {
+    "name": "Me Hace Ruido",
+    "url": "https://www.mehaceruido.com/calendario-de-conciertos/"
+   }
+  ],
+  "source_excerpt": "Noviembre 17\nMaskatesta /// House Of Vans /// $600",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Concierto en un espacio cultural conocido por música emergente y skater culture; buena opción para públicos jóvenes."
+ },
+ {
+  "title": "MUSICMEX 2026",
+  "description": "MUSICMEX celebrará su segunda edición los días 4, 5 y 6 de noviembre en Laguna, Bajo Circuito, Chico y Cinco Pies. Encuentro para networking y el intercambio de conocimientos en la industria musical, con conferencias, paneles, pitching y showcases; boletos en Passline. Early Bird $1,800. Pase para los 3 días (Gafete de Delegadx) $2,900 MXN.",
+  "starts_at": "2026-11-04T00:00:00-06:00",
+  "ends_at": "2026-11-06T00:00:00-06:00",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Laguna / Bajo Circuito / Chico / Cinco Pies (varios)",
+  "address": null,
+  "neighborhood": null,
+  "price_text": "Early Bird $1,800.00 MXN. Pase para los 3 días (Gafete de Delegadx) $2,900.00 MXN",
+  "price_min": 1800,
+  "currency": "MXN",
+  "url": "https://www.indierocks.mx/agenda/musicmex-2026-anuncia-a-sus-primeros-panelistas/",
+  "category": "Talks & Learning",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "MUSICMEX",
+  "recurring": false,
+  "sources": [
+   "web:indie-rocks-agenda:36db97a6b107"
+  ],
+  "source_links": [
+   {
+    "name": "Indie Rocks agenda",
+    "url": "https://www.indierocks.mx/agenda/musicmex-2026-anuncia-a-sus-primeros-panelistas/"
+   }
+  ],
+  "source_excerpt": "Fecha\n040506 Noviembre 2026\nPrecio\nEarly Bird $1,800.00 MXN\nMUSICMEX celebrará su segunda edición los días 4, 5 y 6 de noviembre en Laguna, Bajo Circuito, Chico y Cinco Pies Este encuentro es una plataforma clave para el networking y el intercambio de conocimientos, reuniendo a figuras destacadas de la industria musical de México e internacional (ejecutivos, promotores, agentes, prensa).\nAdemás del componente de negocios, MUSICMEX 2026 presentará showcases con artistas emergentes prometedores. La combinación de conferencias, paneles, pitching y actuaciones en vivo busca impulsar el desarrollo e internacionalización de la música contemporánea.\nEste primer anuncio destaca algunos de los nombres más importantes de la industria mexicana e internacional en pláticas diseñadas para profesionales de todo el mundo como Santiago Hernández, Caballeros | Sofía Arévalo, Tour & Personal Manager | Ariela Urzúa, Tour Manager: Hello Seahorse! / Dorado Music Group | Miriam Sánchez, Tour & Road Manager | Alejandra Rubalcaba, Warner Music México | Marla Bernal, BAM Music | Alina Gutierrez, Codiscos | Armando Calvillo, OCESA | Oscar Flores, Apodaca Group y más.\nLos boletos estarán disponibles a través de Passline. Este es el precio:\nPase para los 3 días (Gafete de Delegadx) / 3 day pass (Delegate Badge) $2,900.00 MXN\nCon tu pre-registro gratuito tendrás acceso a todas las conferencias gratuitas y a todos los showcases.\nCon tu gafete de delegadx tendrás acceso a todas las actividades gratuitas, conferencias privadas, networkings privados y acceso prioritario a todos los showcases.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": false,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Importante encuentro profesional para la industria musical con conferencias y showcases que facilitan networking y internacionalización."
+ },
+ {
+  "title": "Headache en Foro Indie Rocks!",
+  "description": "La Sala (B) del Foro Indie Rocks! recibirá a Headache en una noche de trip hop y electrónica downtempo; boletos a la venta en Fever y taquilla (Tienda Foro Indie Rocks!, Zacatecas 43, Roma Norte). Precio general $570 MXN.",
+  "starts_at": "2026-11-04T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Foro Indie Rocks!",
+  "address": "Zacatecas 43 (taquilla), Roma Norte, Mexico City",
+  "neighborhood": "Roma Norte",
+  "price_text": "General $570.00 MXN",
+  "price_min": 570,
+  "currency": "MXN",
+  "url": "https://www.indierocks.mx/agenda/precios-headache-se-presentara-en-el-foro-indie-rocks/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Foro Indie Rocks!",
+  "recurring": false,
+  "sources": [
+   "web:indie-rocks-agenda:785e71f7a480"
+  ],
+  "source_links": [
+   {
+    "name": "Indie Rocks agenda",
+    "url": "https://www.indierocks.mx/agenda/precios-headache-se-presentara-en-el-foro-indie-rocks/"
+   }
+  ],
+  "source_excerpt": "Fecha\n04 Noviembre 2026\nLugar\nForo Indie Rocks!\nMexico City, Mexico\nPrecio\nGeneral $570.00 MXN\nArtista(s)\nEste 4 de noviembre, la Sala (B) del Foro Indie Rocks! recibirá a Headache, un concierto ideal para dejarse llevar por el baile lento y sumergirse en ritmos relajados que invitan a soñar o desaparecer.\nLos boletos ya están disponibles a través de Fever y en taquillas: Tienda Foro Indie Rocks!, ubicada en Zacatecas 43, Roma Norte. De miércoles a domingo en horario de 14:00 H a 21:00 H. Estos son los precios:\nLa reciente entrega discográfica de Headache, Thank You For Almost Everything, representa una nueva alianza entre el productor Joseph Thornalley (Vegyn) y el escritor Francis Hornsby Clark. Este trabajo llega como continuación de su exitoso debut, The Head Hurts But The Heart Knows The Truth (2023), el cual sumó de manera orgánica más de 19.4 millones de reproducciones en Spotify y superó las 8,000 copias físicas vendidas, logrando consolidar una leal comunidad internacional. Conservando sus raíces de trip hop y electrónica downtempo, la producción sobresale por su propuesta de spoken word. En esta ocasión, Headache deja atrás la monotonía británica para volcarse hacia horizontes más luminosos, valiéndose de vivencias personales para reflexionar sobre la experiencia de estar vivo.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Concierto íntimo en un foro conocido; buena opción para seguidores de electrónica downtempo y trip hop."
+ },
+ {
+  "title": "León Benavente en el Foro Indie Rocks!",
+  "description": "León Benavente regresa para un concierto el 5 de noviembre en la Sala (A) del Foro Indie Rocks!. Boletos en Fever y taquilla (Tienda Foro Indie Rocks!, Zacatecas 43, Roma Norte). Precios: General $800 MXN; Balcón $1,200 MXN.",
+  "starts_at": "2026-11-05T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Foro Indie Rocks!",
+  "address": "Zacatecas 43 (taquilla), Roma Norte, Mexico City",
+  "neighborhood": "Roma Norte",
+  "price_text": "General $800.00 MXN Balcón $1,200.00 MXN",
+  "price_min": 800,
+  "currency": "MXN",
+  "url": "https://www.indierocks.mx/agenda/precios-leon-benavente-se-presentara-en-el-foro-indie-rocks/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Foro Indie Rocks!",
+  "recurring": false,
+  "sources": [
+   "web:indie-rocks-agenda:d52b5bd68209"
+  ],
+  "source_links": [
+   {
+    "name": "Indie Rocks agenda",
+    "url": "https://www.indierocks.mx/agenda/precios-leon-benavente-se-presentara-en-el-foro-indie-rocks/"
+   }
+  ],
+  "source_excerpt": "Fecha\n05 Noviembre 2026\nLugar\nForo Indie Rocks!\nMexico City, Mexico\nPrecio\nGeneral $800.00 MXN Balcón $1,200.00 MXN\nArtista(s)\nLeón Benavente regresa a México para un esperado concierto el 5 de noviembre en la Sala (A) del Foro Indie Rocks!. La aclamada banda española ofrecerá una noche intensa y memorable con su característicos ritmos frenéticos y sintetizadores, destacando su energía en vivo.\nLos boletos ya están disponibles a través de Fever y en taquillas: Tienda Foro Indie Rocks!, ubicada en Zacatecas 43, Roma Norte. De miércoles a domingo en horario de 14:00 H a 21:00 H. Estos son los precios:\nGeneral $800.00 MXN\nBalcón $1,200.00 MXN\nLeón Benavente se formó en 2012 con Abraham Boba (voz/teclados), Eduardo Baos (bajo/sintes), Luis Rodríguez (guitarra) y César Verdú (batería). Sus temas, poderosos, bailables, hedonistas y reflexivos, representan un nuevo ciclo donde la velocidad es clave ante la incógnita.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Banda española con fuerte energía en vivo; entrada de precio medio en un foro conocido."
+ },
+ {
+  "title": "Peces Raros en Auditorio Blackberry",
+  "description": "Peces Raros llegará el 5 de noviembre al Auditorio BB como parte de su MX Tour, presentando su mezcla de música electrónica y rock. Boletos en Ticketmaster y taquilla; precios: $1,091.25, $1,225.50, $930.00 MXN.",
+  "starts_at": "2026-11-05T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Auditorio Blackberry",
+  "address": null,
+  "neighborhood": null,
+  "price_text": "$1,091.25 MXN, $1,225.50 MXN, $930.00 MXN.",
+  "price_min": 930,
+  "currency": "MXN",
+  "url": "https://www.indierocks.mx/agenda/precios-peces-raros-llegara-al-auditorio-bb/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Peces Raros / Auditorio Blackberry",
+  "recurring": false,
+  "sources": [
+   "web:indie-rocks-agenda:2587fa90c113"
+  ],
+  "source_links": [
+   {
+    "name": "Indie Rocks agenda",
+    "url": "https://www.indierocks.mx/agenda/precios-peces-raros-llegara-al-auditorio-bb/"
+   }
+  ],
+  "source_excerpt": "Fecha\n05 Noviembre 2026\nLugar\nAuditorio Blackberry\nMexico City, Mexico\nPrecio\n$1,091.25 MXN, $1,225.50 MXN, $930.00 MXN.\nArtista(s)\nComo parte de su MX Tour, el próximo 5 de noviembre el Auditorio BB recibirá a Peces Raros. Prepárate para vivir una noche inolvidable junto a esta propuesta de música electrónica habitada por el rock, la cual fusiona de manera única el lenguaje de las máquinas.\nLos boletos estarán disponibles a través de Ticketmaster y en las taquillas del inmueble. La preventa Banamex será el 16 de julio y la venta general el 17 de julio. Estos son los precios: $1,091.25 MXN, $1,225.50 MXN, $930.00 MXN.\nFundada en Argentina en 2014 por Lucio Consolo y Marco Viera, Peces Raros fusiona la música electrónica y el rock. Con la presentación de su álbum Artificial (2024), el dúo realizó una gira por escenarios emblemáticos como Mandarine Park, Luna Park y el Estadio Obras, además de Estados Unidos y Europa. Tras 11 años de trayectoria, la banda consolida su audiencia global y experimenta un vertiginoso ascenso internacional con su nuevo sencillo \"Circular\".",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Electrónica con toques de rock en un auditorio grande; entradas disponibles por Ticketmaster."
+ },
+ {
+  "title": "Puma Blue en el Teatro Metropólitan",
+  "description": "Puma Blue se presentará el 5 de noviembre en el Teatro Metropólitan en una noche de atmósfera hipnótica y sonido íntimo; boletos en Ticketmaster y taquilla. Precios desde $719.25 MXN hasta $1,140.75 MXN.",
+  "starts_at": "2026-11-05T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Teatro Metropólitan",
+  "address": null,
+  "neighborhood": null,
+  "price_text": "$719.25 MXN, $855.50 MXN, $1,016.75 MXN, $967.25 MXN, $1,066.50 MXN, $1,140.75 MXN.",
+  "price_min": 719.25,
+  "currency": "MXN",
+  "url": "https://www.indierocks.mx/agenda/precios-puma-blue-anuncia-show-en-el-teatro-metropolitan/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Teatro Metropólitan",
+  "recurring": false,
+  "sources": [
+   "web:indie-rocks-agenda:ee059809b7cc"
+  ],
+  "source_links": [
+   {
+    "name": "Indie Rocks agenda",
+    "url": "https://www.indierocks.mx/agenda/precios-puma-blue-anuncia-show-en-el-teatro-metropolitan/"
+   }
+  ],
+  "source_excerpt": "Fecha\n05 Noviembre 2026\nLugar\nTeatro Metropólitan\nMexico City, Mexico\nPrecio\n$719.25 MXN, $855.50 MXN, $1,016.75 MXN, $967.25 MXN, $1,066.50 MXN, $1,140.75 MXN.\nArtista(s)\nEl próximo 5 noviembre, el Teatro Metropólitan recibirá a Puma Blue en una presentación única en la CDMX; será una noche caracterizada por una atmósfera hipnótica y de ensueño.\nLos boletos estarán disponibles a través de Ticketmaster y en las taquillas del inmueble. La preventa Banamex será el 4 de junio y la venta general el 5 de junio. Estos son los precios: $719.25 MXN, $855.50 MXN, $1,016.75 MXN, $967.25 MXN, $1,066.50 MXN, $1,140.75 MXN.\nPuma Blue es el proyecto del productor y poeta Jacob Allen. Surgido en el sur de Londres, destaca por su voz en falsete y una atmósfera nocturna que mezcla jazz e intimidad lo-fi. Tras ganar notoriedad con sus primeros EP en 2017 y 2018, lanzó su debut en 2021 y un segundo álbum sobre el duelo en 2023. En 2025 publicó dos trabajos ambientales sorpresa, seguidos en febrero de 2026 por el álbum Croak Dream. Además de actuar con su banda, Jacob publica poemas, compone como Ruby Bliels y crea cortometrajes.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Show íntimo de un proyecto británico con fuerte propuesta sonora, en un teatro tradicional de la ciudad."
+ },
+ {
+  "title": "Dillom — LA GIRA VIOLENTA en Foro Puebla",
+  "description": "Dillom presenta LA GIRA VIOLENTA los días 5, 6 y 7 de noviembre en Foro Puebla, con precios en Ticketmaster: $1,227.50 MXN y $1,835.25 MXN. Tour que mezcla electrónica industrial, rock y post punk, presentado tras el lanzamiento de La Nueva Violencia.",
+  "starts_at": "2026-11-05T00:00:00-06:00",
+  "ends_at": "2026-11-07T00:00:00-06:00",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Foro Puebla",
+  "address": null,
+  "neighborhood": null,
+  "price_text": "$1,227.50 MXN, $1,835.25 MXN.",
+  "price_min": 1227.5,
+  "currency": "MXN",
+  "url": "https://www.indierocks.mx/agenda/nueva-fecha-dillom-se-presentara-en-el-foro-puebla/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Dillom / Foro Puebla",
+  "recurring": false,
+  "sources": [
+   "web:indie-rocks-agenda:4cf96ea9b672"
+  ],
+  "source_links": [
+   {
+    "name": "Indie Rocks agenda",
+    "url": "https://www.indierocks.mx/agenda/nueva-fecha-dillom-se-presentara-en-el-foro-puebla/"
+   }
+  ],
+  "source_excerpt": "Fecha\n050607 Noviembre 2026\nLugar\nForo Puebla\nMexico City, Mexico\nPrecio\n$1,227.50 MXN, $1,835.25 MXN.\nArtista(s)\nEl rapero argentino Dillom está de vuelta en México con LA GIRA VIOLENTA, un tour pensado para vivir de cerca LA NUEVA VIOLENCIA, su producción discográfica lanzada este mes de agosto mediante Bohemian Groove. La cita es el 5, 6 y 7 de noviembre (nueva fecha) en el Foro Puebla.\nLos boletos estarán disponibles a través de Ticketmaster y en las taquillas del inmueble. Estos son los precios: $1,227.50 MXN, $1,835.25 MXN.\nCon una potente producción que fusiona electrónica industrial, rock and roll y post punk, La Nueva Violencia se posiciona como su álbum más confrontativo y audaz hasta la fecha. Esta obra recupera la esencia de las grandes producciones concebidas para sonar con fuerza e incluye, además, colaboraciones secretas junto a destacados referentes de la escena internacional y argentina.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Tour destacado del artista argentino con fechas consecutivas; interesante para seguidores del rap y fusiones agresivas."
+ }
+]

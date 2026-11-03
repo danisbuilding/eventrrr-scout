@@ -1,0 +1,21 @@
+name: iq-backfill
+# Write existing runs into Scout IQ (no sweep). Oldest run first, so later runs' cross-run merges find their events.
+on:
+  workflow_dispatch:
+    inputs:
+      runs: {description: "Run names, comma-separated, oldest first", required: true, default: "2026-10-28-dia-de-muertos,2026-11-03"}
+
+jobs:
+  write:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      SCOUT_IQ_DB_URL: "${{ secrets.SCOUT_IQ_DB_URL }}"
+      OPENAI_EXTRACT_MODEL: "${{ vars.OPENAI_EXTRACT_MODEL }}"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install -r requirements.txt
+      - run: |
+          for r in $(echo "${{ inputs.runs }}" | tr ',' ' '); do python scout/iq_write.py "$r"; done

@@ -29,6 +29,7 @@ jobs:
       OPENAI_API_KEY: "${{ secrets.OPENAI_API_KEY }}"
       GEMINI_API_KEY: "${{ secrets.GEMINI_API_KEY }}"
       GOOGLE_PLACES_API_KEY: "${{ secrets.GOOGLE_PLACES_API_KEY }}"
+      SCOUT_IQ_DB_URL: "${{ secrets.SCOUT_IQ_DB_URL }}"
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -85,6 +86,7 @@ jobs:
           python scout/score.py "${{ steps.p.outputs.run }}"
           python scout/thumbs.py "${{ steps.p.outputs.run }}" || true
           python scout/publish.py "${{ steps.p.outputs.run }}" --window "${{ steps.p.outputs.wf }} → ${{ steps.p.outputs.wt }}" --umbrella "${{ steps.p.outputs.umb }}"
+          python scout/iq_write.py "${{ steps.p.outputs.run }}" || echo "::warning::Scout IQ dual-write failed; the run is still published"
           python scout/export_sources.py
           python - <<'PY'
           import json, datetime as dt, pathlib

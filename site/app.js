@@ -153,7 +153,7 @@ function render() {
   const vis = rows.filter((e) => selected.has(e.key)).length;
   const all = $("#selall"); all.checked = rows.length > 0 && vis === rows.length; all.indeterminate = vis > 0 && vis < rows.length;
   $("#selcount").textContent = `${selected.size} event${selected.size === 1 ? "" : "s"} selected`;
-  $("#skipsel").hidden = $("#keepsel").hidden = selected.size === 0;
+  $("#selbar").hidden = selected.size === 0; $("#selbar-count").textContent = `${selected.size} selected`;
   $("#exportlabel").textContent = selected.size ? `Export to Eventrrr (${selected.size})` : "Export to Eventrrr";
   $("#export").disabled = selected.size === 0;
   renderInspector();
@@ -256,6 +256,8 @@ function wire() {
   $("#selkept").onclick = () => { EVENTS.forEach((e) => { if (decisionOf(e) === "keep") selected.add(e.key); }); saveSel(); render(); };
   const bulk = (decision) => { const keys = [...selected]; if (!keys.length) return; keys.forEach((k) => saveDecision(k, {decision})); selected.clear(); saveSel(); render(); toast(`${keys.length} event${keys.length === 1 ? "" : "s"} ${decision === "skip" ? "skipped" : "kept"}`); };
   $("#skipsel").onclick = () => bulk("skip"); $("#keepsel").onclick = () => bulk("keep");
+  $("#clearsel").onclick = () => { selected.clear(); saveSel(); render(); };
+  $("#exportsel").onclick = () => $("#export").click();
   const dx = $("#exportdecisions"); if (dx) dx.onclick = () => copyText(JSON.stringify({run: META.run, exported_at: new Date().toISOString(), decisions}, null, 1), "Decisions copied; paste them to Claude for the learning loop");
   $("#export").onclick = () => {
     const list = EVENTS.filter((e) => selected.has(e.key));

@@ -45,6 +45,7 @@
       <label class="check"><input class="cb" type="checkbox" id="hidepast" checked> Hide past</label>
       <label class="check"><input class="cb" type="checkbox" id="hideold"> Hide started 7+ days ago</label>
     </div>
+    <div class="selbar" id="selbar" hidden><span id="selbar-count"></span><button class="btn btn-secondary" id="skipsel">Skip selected</button><button class="btn btn-secondary" id="keepsel">Keep selected</button><button class="btn btn-primary" id="exportsel">Export to Eventrrr</button><button class="link-btn" id="clearsel">Clear</button></div>
     <div class="scroll">
       <table id="tbl">
         <thead><tr>
@@ -59,8 +60,7 @@
         <button class="btn btn-primary" id="export"><span id="exportlabel">Export to Eventrrr</span></button>
         <span class="sub" id="selcount">0 events selected</span>
         <button class="link-btn" id="selkept">Select all kept</button>
-        <button class="link-btn" id="skipsel" hidden>Skip selected</button>
-        <button class="link-btn" id="keepsel" hidden>Keep selected</button>
+
       </div>
       <div class="foot-group"><button class="link-btn" id="exportdecisions">Copy decisions</button><span class="sync" id="sync"></span></div>
     </div>

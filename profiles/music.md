@@ -3,8 +3,8 @@ slug: music
 name: Live Music
 handle:            # Eventrrr @handle this profile exports to
 status: learning   # learning → assisted → auto
-charter_version: 1
-sessions: 2
+charter_version: 2
+sessions: 3
 ---
 
 # Live Music (`music`)
@@ -12,37 +12,33 @@ sessions: 2
 ## Persona
 Small and mid-size venues, acts with a sound, the Foro Indie Rocks / Casa del Lago circuit; a free concert in a park over an arena show.
 
-## Would never feature
-Cover bands, arena nostalgia tours, a venue's generic "live music nightly".
-- Arena anniversary shows (Maldita Vecindad 40 años — Arena CDMX; Lng/SHT — Pepsi Center → None).
-- A bare calendar row with no lineup (Festival Hipnosis "múltiples actos" → None).
-- An umbrella row when the concert inside it is already listed (Festival Núcleo 01 → None; Reactor 22 años concert → music).
+## How DP scores it (session 3; 13 scored rows)
+- **5 — singular.** KID A MNESIA Motion Picture House (Radiohead immersive, Maravilla Studios). A music-centred installation is music, and a rare one is a 5.
+- **3 — good.** A named act or genre in a room under arena size, or a big free civic show: Cumbia Ciudad at Teatro de la Ciudad; Núcleo 01 / Reactor's 22-year concert at Monumento a la Revolución (free); Time Warp, both days (techno festival, $1,250).
+- **2 — fine.** Arena nostalgia (Maldita Vecindad, $1,695), a niche club night (PARASOMNIA at Chico), a free 7pm garage show (Fenómeno Fuzz at CCEMx), the Minería ensemble at Risco ($200), Festival Hipnosis (lineup unnamed).
+- **1 — mediocre.** An unknown act at Foro Indie Rocks (Headache World); a corporate-venue pop show (Lng/SHT at Pepsi Center).
+- **No score yet.** Jazz en las Rocas (music row from session 1; scored 3 on nightlife and dates instead); Liana Flores at Lunario and Omar Courtz at Palacio de los Deportes (run 2026-11-03).
 
-## Charter
-- The bar is "would this curator feature it," not "is it in the category." Category match is necessary, not sufficient.
-- Yes for a concert with a genre you can name and a venue under arena size: jazz in a park (Jazz en las Rocas, free), cumbia with orchestra at Teatro de la Ciudad, Reactor's free multi-band anniversary at Monumento a la Revolución.
-- A music-centred installation counts (KID A MNESIA / Radiohead immersive → music, not cultural).
-- Arena and stadium shows are out regardless of the act.
-- Dance-floor music (techno festivals, EDM headliners, club nights) goes to nightlife, not here.
-- Staged shows framed as theatre or dance go to cultural (Fandango del inframundo).
-- Classical chamber music in a museum passes: Ensamble de la Sinfónica de Minería at Casa del Risco ($200) → music. Named ensemble, pleasant room. Session 2.
-- Venue comfort × act familiarity. Foro Indie Rocks is a good venue only when the band is known or the genre is cool; it isn't pleasant enough to send someone to for an act they don't know (Mary in the Junkyard, Headache World → None). Pleasant rooms pass even with unknown acts: Parker & Lenox, Casa Franca, Jazzatlán. Confirmed by DP, session 1.
+## Would never feature
+- Cover bands, a venue's generic "live music nightly".
+- A bare festival row with no lineup: 2 at best (Hipnosis).
 
 ## Worked examples
-| Title | Call | Why |
+| Title | Score | Why |
 |---|---|---|
-| Jazz en las Rocas — PARCUR | music | Free jazz, afternoon, park |
-| Cumbia Ciudad — Teatro de la Ciudad | music | Named genre crossover in a mid venue |
-| KID A MNESIA Motion Picture House | music | Radiohead installation; the music is the hook |
-| Maldita Vecindad — Arena CDMX | none | Arena, nostalgia |
-| Mary in the Junkyard — Foro Indie Rocks | none | Unknown band in an uncomfortable venue; wouldn't send a friend cold |
-| Ensamble de la Sinfónica de Minería — Casa del Risco | music (+ dates) | Classical in a museum; the first event with two profiles |
+| KID A MNESIA Motion Picture House | 5 | Radiohead installation; rare, the music is the hook |
+| Cumbia Ciudad — Teatro de la Ciudad | 3 | Named genre crossover, mid-size historic room |
+| Time Warp México — Día 1 | 3 | International techno lineup; scored higher here than on nightlife |
+| Maldita Vecindad — Arena CDMX | 2 | Arena nostalgia; fine on a thin night, never a plan |
+| Headache World — Foro Indie Rocks | 1 | Unknown band in an uncomfortable room; wouldn't send a friend cold |
 
 ## What I think you're doing
-- "Music" for you means listening, and "nightlife" means dancing: Calvin Harris and Time Warp went to nightlife, jazz and cumbia came here.
-- You imagine sending someone who doesn't know the act. An unknown band in a rough room is a bad night for them; the same band at Casa Franca would be fine, and a known band at Foro Indie Rocks would be fine. Confirmed.
-- Big is fine when it's free and civic (Reactor at Monumento a la Revolución, several bands) but not when it's ticketed and arena-sized.
+- The Foro Indie Rocks test ran and confirmed: an unknown act there is a 1 (Headache World here, Mary in the Junkyard on nightlife). The venue-comfort × act-familiarity rule from session 1 holds.
+- Arena shows are no longer "never": Maldita Vecindad is a 2. The scale let you keep it as a fallback instead of rejecting it.
+- Dance music isn't exclusively nightlife any more: Time Warp is music 3, nightlife 2; Hipnosis 2 and 2. The techno festival reads as a concert to you first.
+- Fenómeno Fuzz is settled: music 2, not nightlife (its old nightlife row has no score). The session-2 surprise was a mis-tag.
 
 ## Surprises
-- Fenómeno Fuzz at Centro Cultural de España (free, 19:00) → nightlife, not music. A fuzz/garage show at 7pm reads as music to me. Intentional?
-- The Foro Indie Rocks test never got run: Mad Professor and Lewis OfMan stayed untouched and are now past. Same for Saramalacara (Orbe), OFCM, Cool Quartet (Tamayo), the cello/piano recital and Caminos Sonoros (Foro UC). Untick "Hide past" once if you want those seven on record; they test the venue × familiarity rule directly.
+- Jazz en las Rocas: 3 on nightlife and dates, 2 on kids, nothing on music. A free 4pm jazz set is the most "music" thing in the run by the persona. Slip, or do you mean it?
+- Liana Flores (Lunario) and Omar Courtz (Palacio de los Deportes) are tagged with no score. By the rules above: Lunario is a pleasant mid room → 3 if the act is known to you; Palacio is arena → 2.
+- Time Warp 3 here vs 2 on nightlife: is that "techno festival = concert", or just that nightlife's bar is higher?

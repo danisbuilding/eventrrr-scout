@@ -3,8 +3,8 @@ slug: cultural
 name: Arts & Culture
 handle:            # Eventrrr @handle this profile exports to
 status: learning   # learning → assisted → auto
-charter_version: 2
-sessions: 2
+charter_version: 3
+sessions: 3
 ---
 
 # Arts & Culture (`cultural`)
@@ -12,51 +12,48 @@ sessions: 2
 ## Persona
 Openings, not just exhibitions; knows the museum calendar; the small gallery in Roma over the blockbuster. A talk if the speaker is worth it.
 
+## How DP scores it (session 3, first pass with the 1–5 scale; 41 scored rows)
+The institution sets the floor; the moment lifts it. A show that runs for months at a major museum is a 3. The same museum's opening night, performance night or once-a-year piece is a 4. The city's single biggest spectacle is a 5.
+
+- **5 — singular.** The thing the whole city goes to see, once a year, free, in one spot: Ofrenda Monumental en el Zócalo; Iluminación del Zócalo. Nothing else reached 5.
+- **4 — great.** A one-off or once-a-year event with a maker or an institution behind it, where the visit works: a named artisan's altar (Casa Onora), a special site with a real program (Cacao para todos at Anahuacalli), the Chapultepec festival, the 12-sede community ofrendas, Open House CDMX, Proyectos Públicos' altar, Megaofrenda UNAM, Mixquic, a performance night at Casa del Lago (SINESTESIA ACTIVADA 4), an opening at MUAC (Marboeuf).
+- **3 — good.** An exhibition on its run at a serious institution: MUAC (RedSkyFalls, Alida Vázquez), Jumex (Urbano), Cancillería, BODEGA, kurimanzutto (Amorales). Also the MUNAL and Casa Estudio ofrendas, ArsTelier's $650 mega ofrenda, Cuerpo al Descubierto, Didi-Huberman's lecture, FEAR OF THE OBJECT. Floor confirmed: no institution run scored below 3 except the blockbusters below.
+- **2 — fine.** Legitimate but nothing you'd change plans for: blockbusters months into their run (Manifesto, Richard Prince, Raúl Silva at Jumex), a paid ofrenda (Casa Fuerte $200), everything at Casa del Risco (ofrendas, inauguración, festival), Kaluz's Art Nouveau show, Pan de ánimas at Iturbide, El Camino on Reforma, a kids' workshop (¡Punto extra!), a staged son jarocho show (Fandango del inframundo).
+- **1 — mediocre.** Reforma corridor spectacles with no reason to go: Festival Flores de Cempasúchil; El Camino (one of its duplicates).
+- **None.** A course listing (Casa del Lago cursos), a trade conference (Advertising Week), an opening with no venue in the listing (La ilusión por el retorno), Calaveras Gigantes in Tláhuac, Geometrías para una fiesta (Tamayo workshop).
+
+## Venue and organizer floors (DP, 2026-11-03, stated while scoring)
+- MUNAL is a well-known, famous museum: its ofrenda ranks highly on name alone. (Scored 3 this session; see Surprises.)
+- Anahuacalli is an incredibly special location; the Cacao festival offering there was robust. (4.)
+- Proyectos Públicos is well established and hosts interesting events at key times of year. Rarely life-changing, usually worth the time, an easy sell for a group. (4.)
+- kurimanzutto is a beautiful space; anything there is at least a 3 for the space alone. (3.)
+
 ## Would never feature
-Tourist packages, generic "cultural" listings, anything whose only hook is the venue's fame.
-- A spread-out installation along a corridor with nothing else nearby (El Camino on Reforma, all three listings → None). DP: Reforma is a long, cold corporate corridor; the Zócalo is a place you stand and see everything, and a hub to go on from.
-- A "programa" row that only lists other events (Festival de Día de Muertos — Casa del Risco *(programa)* → None, while the ofrendas inside it were featured).
-- A listing with no venue (La ilusión por el retorno — inauguración → None).
-
-## Charter
-- The bar is "would this curator feature it," not "is it in the category." Category match is necessary, not sufficient.
-- Yes if an art institution, gallery or cultural centre is the organizer: MUAC, Jumex, Casa del Lago, Kaluz, MUNAL, Cancillería, kurimanzutto, BODEGA, CCU, Centro Cultural del Bosque, Casa del Risco. In session 1 every such listing was taken, big or small, paid or free.
-- Ofrendas count as exhibitions when they have a maker or an institution: a named artisan/designer (Casa Onora, Pan de ánimas/Carla Fernández), a museum (MUNAL, Casa Estudio, Risco), the city's monumental one, or the community circuit (12 sedes). Paid entry doesn't disqualify (Casa Fuerte $200, ArsTelier $650).
-- Performance, dance, video art and talks go here, not to music, when the frame is art or scholarship: Cuerpo al Descubierto, SINESTESIA ACTIVADA, FEAR OF THE OBJECT, Fandango del inframundo (staged son jarocho), Didi-Huberman.
-- A museum family workshop can qualify when tied to a featured show (¡Punto extra! → Manifesto). Hypothesis; see Surprises.
-- Blockbusters are fine when the institution is the hook (Richard Prince at Jumex, Manifesto at MUAC); nothing in session 1 showed "small over big."
-- City-scale tradition passes without an author when the visit works: Mixquic, the Mega Procesión de Catrinas and the Gran Desfile are all in (DP, session 2; the two parades aren't tagged in the app yet). Same test as the Zócalo: one place, you see it all.
-- A named collective's altar in a gallery passes, registration and all (Volver a la Tierra — Proyectos Públicos). Session 2, as predicted.
-- The visit has to work as a visit: one spot where you take it all in, or a cluster you can walk between (Zócalo ofrenda + lighting + Centro). A long walk to see spaced-out pieces fails even when the content is fine (El Camino). Confirmed by DP, session 1.
-
-## Venue and organizer floors (DP, 2026-11-03, stated while re-scoring)
-- MUNAL is a well-known, famous museum: its ofrenda ranks highly on name alone.
-- Anahuacalli is an incredibly special location; the Cacao festival offering there was robust.
-- Proyectos Públicos is a well-established arts and culture organization that hosts interesting events at key times of the year. Rarely life-changing, usually worth the time, and an especially easy sell for a group outing. Hypothesis: floor of 3, often 4.
-- Kurimanzutto is a beautiful space; attending anything there is exciting for the space alone, so typically at least a 3.
-- Hypothesis to test next session: the institution sets a floor (a named museum or major gallery → at least 3) and the specific show or night moves it up to 4 or 5.
+- Listings and wrappers: a course catalogue, a festival "programa" row when the events inside are listed.
+- Trade and industry events in a museum (Advertising Week at Papalote).
+- A long, cold corridor of spaced-out pieces with nothing else to do (El Camino, Flores de Cempasúchil): 1 at best.
 
 ## Worked examples
-| Title | Call | Why |
+| Title | Score | Why |
 |---|---|---|
-| Richard Prince: Cuéntamelo todo — Jumex | cultural | Major museum show; institution is the hook |
-| Altar de Día de Muertos en Casa Onora | cultural | Ofrenda by named amate artisans |
-| Ofrendas comunitarias (12 sedes) | cultural | Institutional programme, neighbourhood ofrendas |
-| El Camino — figuras iluminadas en Reforma | none | Spread along a long cold corridor with nothing else to do; the visit doesn't work |
-| Festival de Día de Muertos — Casa del Risco (programa) | none | Listing of events, not an event |
-| Geometrías para una fiesta — Museo Tamayo | none | Free family workshop by a named artist, not taken (contrast ¡Punto extra! at MUAC) |
-| Mixquic — Celebración de Día de Muertos | cultural | The tradition itself; no author, but the visit works |
-| Gran Desfile / Mega Procesión de Catrinas | cultural (DP, not yet tagged) | City parade; you stand in one spot and see it all |
-| Megaofrenda UNAM (three listings) | cultural | Institution; DP tagged all three duplicate rows |
+| Ofrenda Monumental en el Zócalo | 5 | The city's spectacle; once a year, free, one spot |
+| Apertura: El otro color del oro — MUAC | 4 | Opening night at a major museum; the run would be a 3 |
+| Altar de Día de Muertos en Casa Onora | 4 | Named amate artisans, once a year |
+| Carlos Amorales: Anteparaíso — kurimanzutto | 3 | Gallery floor; the space alone is worth the visit |
+| Julian Rosefeldt — Manifesto (MUAC) | 2 | Blockbuster three months into its run; fine on a thin day |
+| Festival Flores de Cempasúchil — Reforma | 1 | Corridor spectacle, nothing to do once you're there |
+| CURSOS Y TALLERES — Casa del Lago | none | A catalogue, not an event |
 
 ## What I think you're doing
-- You take anything an art institution puts on, from a 140-work retrospective to a family workshop. City-run things are judged on the visit, not the author: Zócalo (stand in one place, see everything, go on to Centro) is in; Reforma (long, cold, corporate, nothing else nearby) is out. Confirmed.
-- You feature the thing, not the wrapper: Ofrendas del Risco and its inauguration are in, the Risco "programa" row is out. The exception is the Chapultepec festival, which you took twice — I think because both rows describe concrete content (altars, drones), not a schedule.
-- "Cultural" absorbs performance and talks: nothing staged or scholarly went to music, even Fandango del inframundo, which is a son jarocho show.
-- Mega Ofrenda "Entre Flores y Agaves" (ArsTelier, $650, mezcal, Guerrero producers) went only here, not to foodie. I think the art-space framing won, but the foodie persona would also claim it.
+- You score scarcity first: an opening or a one-night performance beats the exhibition it belongs to, and a once-a-year ofrenda beats a show you can see any week until February. The old "institution is the hook" rule survives only as the floor.
+- Big and famous no longer helps on its own: Manifesto and Richard Prince dropped to 2 while smaller shows at the same museums sit at 3. I read that as "months left to see it" pulling the score down, not the size.
+- A paid or stately-home ofrenda (Casa Fuerte, Risco, Iturbide) is a 2; a free civic or artisan one is a 4. Price and institution-type both matter here, unlike session 1.
+- Universal spectacles get scored on several calendars (Zócalo: cultural 5, dates 3, kids 3, babies 2). That is allowed; the second-profile rule is "at least a 3 there", and a 2 on babies says you know it's a stretch.
 
 ## Surprises
-- Mega Procesión de Catrinas and Gran Desfile: DP says both belong in cultural and thought they were tagged; they aren't in the data (untouched, now hidden as past). Treat them as cultural. So the city's parades pass; what failed El Camino was the walk, not the spectacle.
-- You tagged all three Megaofrenda UNAM rows. They're one event the pipeline failed to merge; exporting cultural would send it three times. Pipeline fix pending; nothing for you to do.
-- ¡Punto extra! (MUAC, kids 6–11, registration) → cultural, but Geometrías para una fiesta (Tamayo, kids 7+, free, named artist) → none. Same shape of event. Is the difference the link to a featured exhibition, or was one of these a slip?
-- Festival Flores de Cempasúchil (140 producers, Reforma) → none. Not cultural, I agree; but see foodie — is a producers' market ever an event for any profile?
+- MUNAL ofrenda scored 3, but you said MUNAL ranks highly on name alone. Is 3 right (short run, seen late), or should MUNAL's ofrenda be a 4 every year?
+- Zócalo ofrenda has two rows: one is cultural 5, the other is foodie 5 with no cultural score. Mis-tap on the duplicate?
+- El Camino's three duplicates scored 2, 1 and None. Which is the call?
+- Eight rows from the 2026-11-03 run are tagged cultural with no score (Tamayo ×3, Galería Mascota, Casa del Lago exposición, Museo Archivo de la Fotografía, Cuerpo al Descubierto, alebrijes on Reforma). Tagged by the old chip before the strip deployed? Score them when you sort that run.
+- Geometrías para una fiesta (Tamayo, free, named artist) is still None while ¡Punto extra! (MUAC) is 2 here and 4 on kids. Same shape of event; is the Tamayo one a slip?
+- Calaveras Gigantes en Tláhuac → None while Mixquic (also Tláhuac) is a 4. Distance, or not enough in the listing? If the latter, that's a "Can't tell".

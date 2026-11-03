@@ -3,8 +3,8 @@ slug: dates
 name: Date Night
 handle:            # Eventrrr @handle this profile exports to
 status: learning   # learning → assisted → auto
-charter_version: 1
-sessions: 1
+charter_version: 2
+sessions: 2
 ---
 
 # Date Night (`dates`)
@@ -12,27 +12,32 @@ sessions: 1
 ## Persona
 Interesting, engaging places to go on a date: fun, novelty, and something to tell a story about. Cross-cutting: draws from every category.
 
-## Would never feature
-- A club night: not intimate, not built for 1:1 (Brown Sugar Rewind → nightlife only). DP, session 2.
-- An expensive specialist dinner: at ~$1,300+ a head it's a foodie experience, not a general date recommendation (Marta → foodie only). DP, session 2.
+## How DP scores it (session 3; 20 scored rows, 12 threes, 8 twos, no 4 or 5)
+A date 3 is somewhere free to wander and talk with something to look at. A fixed-time seated thing, or anything with a real ticket price, is a 2. Nothing in a Día de Muertos week was a 4.
 
-## Charter
-- The bar is "would this curator feature it," not "is it in the category." For this profile the category is irrelevant; the evening is what's judged.
-- The test is intimacy: good for two people talking, not a crowd. Fun, novelty, a story to tell afterwards. DP, session 2.
-- Price matters here, unlike the other profiles: a big-ticket dinner is a foodie event, not a date suggestion. Free and $200 were both fine.
-- Multiple membership rule (applies to every profile): tag a second profile when the event is at least *good* for it, not when it's merely possible. Very good as a club night and mediocre as a date → nightlife only; a film festival that is very good as culture and good as a date → both. DP, session 2.
-- Two picks so far share: a fixed time, a cultural setting, cheap, a built-in topic (an artists' altar you register for; a chamber ensemble in a museum at 18:00).
+- **3 — good.** Free, outdoors or walk-through, visual, a built-in topic: Zócalo ofrenda and lighting, Chapultepec festival and the Sendero del Cempasúchil, the 12 community ofrendas, Cacao para todos at Anahuacalli, El Camino on Reforma, Proyectos Públicos' altar (free, registration), ArsTelier's ofrenda ($650 is the one paid 3), Jazz en las Rocas (free, 4pm), KID A MNESIA (immersive, novelty).
+- **2 — fine.** Seated, ticketed or far: Marta's $1,600 dinner, the Minería ensemble ($200), Casa Fuerte ($200), FEAR OF THE OBJECT, the MUAC sound piece, Megaofrenda UNAM, Flores de Cempasúchil, El Camino's other duplicate.
+- **No row.** Club nights (Brown Sugar), exhibitions on their run at museums, workshops.
+
+## Would never feature
+- A club night: not intimate, not built for two (Brown Sugar → no row). DP, session 2.
+- A workshop or a kids' event.
 
 ## Worked examples
-| Title | Call | Why |
+| Title | Score | Why |
 |---|---|---|
-| Volver a la Tierra — altar de Proyectos Públicos | dates (+ cultural) | Artistic altar in a gallery, free with registration |
-| Ensamble de la Sinfónica de Minería — Casa del Risco | dates (+ music) | $200 concert in a museum, early evening |
+| Volver a la Tierra — Proyectos Públicos | 3 | Free altar in a gallery, registration, a topic for the evening |
+| El Camino — Reforma | 3 | A free walk with something to look at; a 2 on cultural, higher here |
+| KID A MNESIA Motion Picture House | 3 | Novelty, immersive, a story to tell |
+| Marta — Cena de Día de Muertos | 2 | The most date-shaped dinner in the run, but $1,600 a head |
+| Ensamble de la Sinfónica de Minería — Casa del Risco | 2 | Seated, $200, early; fine, not a plan |
 
 ## What I think you're doing
-- You're choosing "an evening with a shape": a start time, a place with character, a built-in topic. Exhibitions you can visit any afternoon didn't get it, even the ones you love for cultural.
-- Price points down, not up: confirmed, a $1,300+ dinner is out of range for a general date. Confirmed by DP, session 2.
+- Price lowers, it no longer excludes: Marta moved from "never" (session 2) to a 2. A $1,300+ dinner is a foodie event first, a date fallback second.
+- Walkable beats seated. The Minería concert was a top date pick in session 2 and is a 2 now; the free walk-throughs are all 3s. The persona's "story to tell" seems to need movement, not a chair.
+- Nothing hit 4. Hypothesis: a date 4 needs intimacy that mass spectacles lack: a small venue, a dinner-plus-something, a night with a shape and a table. The sweep had none, so the ceiling is untested.
 
 ## Surprises
-- Marta and Brown Sugar: answered (price; not intimate). Both now in Would never feature.
-- Casa Onora altar, Jumex, MUAC → cultural only. Confirms "visit any time" ≠ date, if intentional.
+- What would a date 4 or 5 look like in your head? One example, even hypothetical, would anchor the top of this scale; everything so far caps at 3.
+- Experiencia Bosque Prohibido de Harry Potter (Parque Naucalli, from $376) is tagged dates with no score. Score or remove?
+- Jazz en las Rocas is a 3 here, 3 on nightlife, 2 on kids, and its music row has no score. Is a free 4pm jazz set really nightlife?

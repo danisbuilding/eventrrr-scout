@@ -18,3 +18,12 @@ the imagined visit decides.
 An event gets a second profile when it is at least *good* for that profile, not merely possible. Very good as a
 club night and mediocre as a date → nightlife only. A film festival that is very good as culture and good as a
 date → both. Price can decide: a $1,300-a-head dinner is foodie, not a general date suggestion.
+
+## Scoring (from 2026-11-03)
+
+Sorting is a 1–5 score per (event, profile), not a yes/no tag; `SCORING.md` is the scale DP sees in the app.
+No row on a profile = not on that calendar. **None** = looked at, fits no calendar; **unclear** = looked at,
+the listing didn't say enough. A 1 or 2 is a rank, not a rejection: the 13 events that were None in sessions 1–2
+all came back as 1s and 2s once a scale existed, so read pre-scoring Nones as "wouldn't feature", not "doesn't belong".
+Each charter now describes what makes a 5, 4, 3, 2 and 1 for that calendar; the second-profile rule is "at least a 3
+there". Frontmatter `charter_version` bumps on every change; the app stamps it on each new score.

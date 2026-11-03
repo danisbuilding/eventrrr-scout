@@ -41,7 +41,7 @@ function inlineProvider(inline) {
     async profiles() { try { return JSON.parse(localStorage.getItem("scout-profiles") || "null") || DEFAULT_PROFILES; } catch { return DEFAULT_PROFILES; } },
     async saveProfile(p, _isNew) { const ps = (await this.profiles()).filter((x) => x.slug !== p.slug).concat([p]); try { localStorage.setItem("scout-profiles", JSON.stringify(ps)); } catch {} },
     async assignments() { try { return JSON.parse(localStorage.getItem("scout-assignments") || "[]"); } catch { return []; } },
-    async assign(run, key, profile, on) { let as = await this.assignments(); as = as.filter((x) => !(x.run === run && x.key === key && x.profile === profile)); if (on) as.push({run, key, profile, source: "manual", updated_at: new Date().toISOString()}); try { localStorage.setItem("scout-assignments", JSON.stringify(as)); } catch {} },
+    async assign(run, key, profile, row) { let as = await this.assignments(); as = as.filter((x) => !(x.run === run && x.key === key && x.profile === profile)); if (row) as.push(Object.assign({run, key, profile, source: "manual", updated_at: new Date().toISOString()}, row)); try { localStorage.setItem("scout-assignments", JSON.stringify(as)); } catch {} },
     async allEvents() { return (inline.events || []).map((e) => Object.assign({run: inline.meta.run}, e)); },
     async exports() { try { return JSON.parse(localStorage.getItem("scout-exports") || "[]"); } catch { return []; } },
     async markExported(rows) { const ex = (await this.exports()).concat(rows); try { localStorage.setItem("scout-exports", JSON.stringify(ex)); } catch {} },
@@ -83,8 +83,9 @@ function supabaseProvider(sb, user, cfg) {
       }
     },
     async assignments() { const {data, error} = await sb.from("scout_assignments").select("*").limit(5000); if (error) throw error; return data || []; },
-    async assign(run, key, profile, on) {
-      if (on) { const {error} = await sb.from("scout_assignments").upsert({run, key, profile, source: "manual", updated_by: user.email, updated_at: new Date().toISOString()}, {onConflict: "run,key,profile"}); if (error) throw error; }
+    // row = {score, score_actor, charter_version, source} to set; null to remove the (run, key, profile) row
+    async assign(run, key, profile, row) {
+      if (row) { const {error} = await sb.from("scout_assignments").upsert(Object.assign({run, key, profile, source: "manual", updated_by: user.email, updated_at: new Date().toISOString()}, row), {onConflict: "run,key,profile"}); if (error) throw error; }
       else { const {error} = await sb.from("scout_assignments").delete().match({run, key, profile}); if (error) throw error; }
     },
     async exports() { const {data, error} = await sb.from("scout_exports").select("profile,run,key,batch").limit(10000); if (error) throw error; return data || []; },
@@ -167,7 +168,7 @@ function detailFields(e) {
       <dt>Price</dt><dd>${esc(price(e))}</dd>
       ${e.organizer ? `<dt>Organizer</dt><dd>${esc(e.organizer)}</dd>` : ""}
       <dt>Event link</dt><dd>${e.url ? `<a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.url.replace(/^https?:\/\/(www\.)?/, "").slice(0, 48))}${EXT}</a>` : "None found"}</dd>
-      <dt>Score</dt><dd>${e.score ?? 0}${e.highlight_why ? `<div class="sub">${esc(e.highlight_why)}</div>` : ""}</dd>
+      <dt>Rubric</dt><dd>${e.score ?? 0}${e.highlight_why ? `<div class="sub">${esc(e.highlight_why)}</div>` : ""}</dd>
       <dt>Confidence</dt><dd>${e.confidence != null ? Math.round(e.confidence * 100) + "%" : "Unavailable"}</dd>
     </dl>
     ${e.description ? `<p class="sec" style="margin:24px 0 0">${esc(e.description)}</p>` : ""}`;
@@ -249,7 +250,8 @@ function wire() {
   ["#sq", "#sstate", "#sprofile", "#srun", "#shidepast", "#shideold"].forEach((s) => $(s).addEventListener("input", () => { if (s === "#sstate") touched.clear(); renderSort(); }));
   document.addEventListener("click", (ev) => {
     const o = ev.target.closest("[data-sopen]"); if (o) { scur = o.dataset.sopen; $("#pinsp").hidden = false; renderSort(); renderProfiles(); return; }
-    const c = ev.target.closest("[data-pa]"); if (c) toggleAssign(c.closest("[data-ak]").dataset.ak, c.dataset.pa);
+    const n = ev.target.closest("[data-ps]"); if (n) { const g = n.closest("[data-pstrip]"); setScore(g.closest("[data-ak]").dataset.ak, g.dataset.pstrip, n.dataset.ps === "x" ? null : parseInt(n.dataset.ps, 10)); return; }
+    const c = ev.target.closest("[data-pa]"); if (c) { const ak = c.closest("[data-ak]").dataset.ak; if (c.dataset.pa === "none") toggleNone(ak); else { openStrip = openStrip === ak + "|" + c.dataset.pa ? null : ak + "|" + c.dataset.pa; renderSort(); } }
   });
   $("#copysession").onclick = copySession;
   $("#sprofiles-btn").onclick = () => { $("#pinsp").hidden = false; };
@@ -380,11 +382,14 @@ async function startSweep(sb) {
 }
 
 // ---------- sort tab (profiles)
-let PROFILES = [], POOL = [], ASSIGN = {}, EXPORTED = {}, pcur = null, scur = null, sortLoaded = false, CHARTERS = {}, touched = new Set();
+let PROFILES = [], POOL = [], ASSIGN = {}, EXPORTED = {}, pcur = null, scur = null, sortLoaded = false, CHARTERS = {}, CHARTER_META = {}, touched = new Set(), openStrip = null;
 const expKey = (profile, e) => profile + "|" + akey(e);
 const isLive = (p) => p.active !== false && !(p.kind === "oneoff" && p.ends_on && p.ends_on < todayLocal());
+// Scores (1–5): 5 singular, 4 great, 3 good, 2 fine, 1 mediocre. 1s and 2s stay in the pool and never export.
+const SCORE_WORDS = {5: "Singular. Not to be missed.", 4: "Great. Prioritize over other things.", 3: "Good. Worth going if you're free.", 2: "Fine. Maybe go or not.", 1: "Mediocre. Lean toward skipping."};
+const exportable = (a) => a && (a.score == null || a.score >= 3); // legacy (unscored) rows still export until re-scored
 // events on a calendar that are upcoming and not yet exported to it
-const pending = (p) => POOL.filter((e) => (ASSIGN[akey(e)] || {})[p.slug] && !isPast(e) && !EXPORTED[expKey(p.slug, e)]);
+const pending = (p) => POOL.filter((e) => exportable((ASSIGN[akey(e)] || {})[p.slug]) && !isPast(e) && !EXPORTED[expKey(p.slug, e)]);
 const akey = (e) => e.run + "|" + e.key;
 const splitAk = (ak) => { const i = ak.indexOf("|"); return [ak.slice(0, i), ak.slice(i + 1)]; }; // key itself contains "|date"
 const profilesOf = (e) => Object.keys(ASSIGN[akey(e)] || {});
@@ -403,7 +408,8 @@ async function loadSort() {
       matches.forEach((e) => { (ASSIGN[akey(e)] ||= {})[x.profile] = Object.assign({}, x, {key: e.key}); });
       if (matches.length) legacy.push({x, keys: matches.map((e) => e.key)});
     });
-    if (legacy.length) { st.textContent = `Migrating ${legacy.length} rows…`; for (const {x, keys} of legacy) { for (const k of keys) await provider.assign(x.run, k, x.profile, true); await provider.assign(x.run, x.key, x.profile, false); } }
+    if (legacy.length) { st.textContent = `Migrating ${legacy.length} rows…`; for (const {x, keys} of legacy) { for (const k of keys) await provider.assign(x.run, k, x.profile, {source: x.source || "manual", note: x.note || null}); await provider.assign(x.run, x.key, x.profile, null); } }
+    await Promise.all(PROFILES.map((p) => charterFor(p.slug)));
     $("#sprofile").innerHTML = `<option value="">Any calendar</option>` + PROFILES.map((p) => `<option value="${esc(p.slug)}">${esc(p.name)}</option>`).join("") + `<option value="none">None</option>`;
     $("#srun").innerHTML = `<option value="">All runs</option>` + [...new Set(POOL.map((e) => e.run))].map((r) => `<option>${esc(r)}</option>`).join("");
     sortLoaded = true; st.textContent = provider.name === "supabase" ? "Synced" : "This device only";
@@ -433,42 +439,70 @@ function renderSort() {
   $("#sort-metrics").innerHTML = [[POOL.length, "in pool"], [POOL.length - unsorted, "reviewed"], [unsorted, "to review"]].map(([n, l]) => `<div class="metric"><b>${n}</b> ${l}</div>`).join("");
   const rows = sortVisible();
   $("#srows").innerHTML = rows.length ? rows.map((e) => {
-    const on = ASSIGN[akey(e)] || {};
-    const chips = PROFILES.map((p) => `<button class="pchip ${on[p.slug] ? "on" : ""} ${on[p.slug]?.source === "suggested" ? "sugg" : ""}" data-pa="${esc(p.slug)}" title="${esc(on[p.slug]?.reason || p.name)}">${esc(p.name)}</button>`).join("") +
+    const ak = akey(e), on = ASSIGN[ak] || {};
+    const chips = PROFILES.map((p) => openStrip === ak + "|" + p.slug ? scoreStrip(p, on[p.slug], true) : profileChip(p, on[p.slug])).join("") +
       `<button class="pchip none ${on.none ? "on" : ""}" data-pa="none">None</button>`;
-    return `<tr data-ak="${esc(akey(e))}" data-current="${scur === akey(e)}">
-      <td class="c-name"><button class="name-btn" data-sopen="${esc(akey(e))}">${e.highlight ? `<span class="star" aria-label="Highlight">★</span>` : ""}${esc(e.title)}</button><div class="sub">${esc([isMultiDay(e) ? fmtSub(e) : fmtDate(e.starts_at), e.venue || e.neighborhood].filter(Boolean).join(" · "))}</div></td>
+    return `<tr data-ak="${esc(ak)}" data-current="${scur === ak}">
+      <td class="c-name"><button class="name-btn" data-sopen="${esc(ak)}">${e.highlight ? `<span class="star" aria-label="Highlight">★</span>` : ""}${esc(e.title)}</button><div class="sub">${esc([isMultiDay(e) ? fmtSub(e) : fmtDate(e.starts_at), e.venue || e.neighborhood].filter(Boolean).join(" · "))}</div></td>
       <td class="c-cat"><span class="sub">${esc(e.category)}</span></td>
       <td class="c-prof"><div class="pchips">${chips}</div></td>
-      <td class="c-chev"><button class="icon-btn name-btn" data-sopen="${esc(akey(e))}" aria-label="Open ${esc(e.title)}">${CHEV}</button></td></tr>`;
+      <td class="c-chev"><button class="icon-btn name-btn" data-sopen="${esc(ak)}" aria-label="Open ${esc(e.title)}">${CHEV}</button></td></tr>`;
   }).join("") : `<tr><td colspan="4" class="empty">${emptyWhy()}</td></tr>`;
 }
-async function toggleAssign(ak, profile) {
-  const [run, key] = splitAk(ak); const cur = ASSIGN[ak] || {}; const on = !cur[profile]; touched.add(ak);
-  if (on && profile === "none") Object.keys(cur).forEach((p) => { if (p !== "none") delete cur[p]; });
-  if (on && profile !== "none") delete cur.none;
-  if (on) cur[profile] = {run, key, profile, source: "manual", updated_at: new Date().toISOString()}; else delete cur[profile];
+// A profile chip: "Name · 4" once scored; "Name ·" for a legacy row tagged before scores existed; dashed when the score came from the sorter.
+function profileChip(p, a) {
+  const sugg = a && a.score_actor === "sorter";
+  const n = a ? (a.score != null ? ` <b class="n">${a.score}</b>` : ` <b class="n legacy" title="Tagged before scoring; pick a score">·</b>`) : "";
+  return `<button class="pchip ${a ? "on" : ""} ${sugg ? "sugg" : ""}" data-pa="${esc(p.slug)}" title="${esc(sugg && a.reason ? "Sorter: " + a.reason : (a && a.score ? SCORE_WORDS[a.score] : p.name))}">${esc(p.name)}${n}</button>`;
+}
+// The 1–5 strip for one profile. Inline (in a row) it replaces the chip until a number is picked; in the detail pane every profile shows one.
+function scoreStrip(p, a, inline) {
+  const cur = a ? a.score : null;
+  const btns = [1, 2, 3, 4, 5].map((s) => `<button class="ps ${cur === s ? "on" : ""}" data-ps="${s}" title="${SCORE_WORDS[s]}" aria-label="${esc(p.name)}: ${s}" aria-pressed="${cur === s}">${s}</button>`).join("") +
+    (a ? `<button class="ps x" data-ps="x" title="Remove from ${esc(p.name)}" aria-label="Remove from ${esc(p.name)}">×</button>` : "");
+  return `<span class="pstrip ${inline ? "inline" : ""}" data-pstrip="${esc(p.slug)}"><span class="pname">${esc(p.name)}</span>${btns}</span>`;
+}
+async function setScore(ak, profile, score) {
+  const [run, key] = splitAk(ak); const cur = ASSIGN[ak] || {}; touched.add(ak); openStrip = null;
+  const row = score == null ? null : {run, key, profile, score, score_actor: "human", charter_version: CHARTER_META[profile]?.charter_version || null, source: cur[profile]?.score_actor === "sorter" ? "confirmed" : "manual", note: cur[profile]?.note || null, updated_at: new Date().toISOString()};
+  if (row) { cur[profile] = row; delete cur.none; } else delete cur[profile];
   ASSIGN[ak] = cur; renderSort(); renderProfiles();
   $("#ssync").textContent = "Saving…";
   try {
-    await provider.assign(run, key, profile, on);
-    if (on && profile === "none") for (const p of PROFILES) await provider.assign(run, key, p.slug, false);
-    if (on && profile !== "none") await provider.assign(run, key, "none", false);
+    await provider.assign(run, key, profile, row ? {score: row.score, score_actor: row.score_actor, charter_version: row.charter_version, source: row.source, note: row.note} : null);
+    if (row) await provider.assign(run, key, "none", null);
+    $("#ssync").textContent = "Saved";
+  } catch (e) { $("#ssync").textContent = "Save failed: " + (e.message || e); }
+}
+async function toggleNone(ak) {
+  const [run, key] = splitAk(ak); const cur = ASSIGN[ak] || {}; const on = !cur.none; touched.add(ak); openStrip = null;
+  if (on) { Object.keys(cur).forEach((p) => delete cur[p]); cur.none = {run, key, profile: "none", source: "manual", updated_at: new Date().toISOString()}; } else delete cur.none;
+  ASSIGN[ak] = cur; renderSort(); renderProfiles();
+  $("#ssync").textContent = "Saving…";
+  try {
+    await provider.assign(run, key, "none", on ? {source: "manual"} : null);
+    if (on) for (const p of PROFILES) await provider.assign(run, key, p.slug, null);
     $("#ssync").textContent = "Saved";
   } catch (e) { $("#ssync").textContent = "Save failed: " + (e.message || e); }
 }
 async function charterFor(slug) {
   if (CHARTERS[slug] !== undefined) return CHARTERS[slug];
-  try { const r = await fetch(`${(window.SCOUT_CONFIG?.eventsBase || "").replace(/\/$/, "")}/profiles/${slug}.md?t=${Math.floor(Date.now() / 60000)}`); CHARTERS[slug] = r.ok ? (await r.text()).replace(/^---[\s\S]*?---\n/, "") : ""; } catch { CHARTERS[slug] = ""; }
+  try {
+    const r = await fetch(`${(window.SCOUT_CONFIG?.eventsBase || "").replace(/\/$/, "")}/profiles/${slug}.md?t=${Math.floor(Date.now() / 60000)}`);
+    const text = r.ok ? await r.text() : "";
+    const fm = /^---\n([\s\S]*?)\n---\n/.exec(text); const meta = {};
+    if (fm) fm[1].split("\n").forEach((l) => { const m = /^([a-z_]+):\s*(.*?)\s*(#.*)?$/.exec(l); if (m) meta[m[1]] = m[2]; });
+    CHARTER_META[slug] = meta; CHARTERS[slug] = text.replace(/^---[\s\S]*?---\n/, "");
+  } catch { CHARTERS[slug] = ""; CHARTER_META[slug] = {}; }
   return CHARTERS[slug];
 }
 function renderSortDetails(el, e) {
   const on = ASSIGN[akey(e)] || {};
-  const chips = PROFILES.map((p) => `<button class="pchip ${on[p.slug] ? "on" : ""}" data-pa="${esc(p.slug)}">${esc(p.name)}</button>`).join("") + `<button class="pchip none ${on.none ? "on" : ""}" data-pa="none">None</button>`;
+  const strips = PROFILES.map((p) => scoreStrip(p, on[p.slug], false)).join("") + `<div style="margin-top:8px"><button class="pchip none ${on.none ? "on" : ""}" data-pa="none">None of these</button></div>`;
   el.innerHTML = `<div class="insp-head"><span class="label">Event details</span><button class="icon-btn btn btn-secondary" id="sd-close" aria-label="Back to profiles"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13"/></svg></button></div>
     <h2 class="ev-title">${esc(e.title)}</h2>
     <div class="sub">${esc(e.run)}${e.highlight ? " · Highlight" : ""}</div>
-    <div class="sec" style="margin-top:16px"><div class="label" style="margin-bottom:10px">Profiles</div><div class="pchips" data-ak="${esc(akey(e))}">${chips}</div></div>
+    <div class="sec" style="margin-top:16px"><div class="label" style="margin-bottom:10px">Score per calendar <span class="sub" title="5 singular · 4 great · 3 good · 2 fine · 1 mediocre">(5 singular … 1 mediocre)</span></div><div class="pstrips" data-ak="${esc(akey(e))}">${strips}</div></div>
     ${detailFields(e)}
     ${detailSources(e)}`;
   $("#sd-close").onclick = () => { scur = null; if (window.innerWidth < 1280) el.hidden = true; renderSort(); renderProfiles(); };
@@ -538,9 +572,9 @@ async function renderProfiles() {
   };
 }
 function copySession() {
-  const rows = []; Object.entries(ASSIGN).forEach(([ak, m]) => { const [run, key] = splitAk(ak); const e = POOL.find((x) => akey(x) === ak); Object.values(m).forEach((x) => rows.push({run, key, profile: x.profile, source: x.source || "manual", note: x.note || null, updated_at: x.updated_at, title: e?.title, category: e?.category, venue: e?.venue, neighborhood: e?.neighborhood, price_text: e?.price_text, starts_at: e?.starts_at, highlight: !!e?.highlight, url: e?.url, source_excerpt: (e?.source_excerpt || "").slice(0, 300)})); });
+  const rows = []; Object.entries(ASSIGN).forEach(([ak, m]) => { const [run, key] = splitAk(ak); const e = POOL.find((x) => akey(x) === ak); Object.values(m).forEach((x) => rows.push({run, key, profile: x.profile, score: x.score ?? null, score_actor: x.score != null ? (x.score_actor || "human") : null, charter_version: x.charter_version || null, source: x.source || "manual", note: x.note || null, updated_at: x.updated_at, title: e?.title, category: e?.category, venue: e?.venue, neighborhood: e?.neighborhood, price_text: e?.price_text, starts_at: e?.starts_at, ends_at: e?.ends_at || null, all_day: !!e?.all_day, highlight: !!e?.highlight, url: e?.url, source_excerpt: (e?.source_excerpt || "").slice(0, 300)})); });
   const unsorted = POOL.filter((e) => !isSorted(e)).map((e) => ({run: e.run, key: e.key, title: e.title, category: e.category}));
-  copyText(JSON.stringify({session: new Date().toISOString().slice(0, 10), profiles: PROFILES.map((p) => ({slug: p.slug, name: p.name, persona: p.persona})), assignments: rows, unsorted_count: unsorted.length}, null, 1), "Session copied; paste it to Claude to update the charters");
+  copyText(JSON.stringify({session: new Date().toISOString().slice(0, 10), scale: SCORE_WORDS, profiles: PROFILES.map((p) => ({slug: p.slug, name: p.name, persona: p.persona, charter_version: CHARTER_META[p.slug]?.charter_version || null})), assignments: rows, unsorted_count: unsorted.length}, null, 1), "Session copied; paste it to Claude to update the charters");
 }
 
 // ---------- boot

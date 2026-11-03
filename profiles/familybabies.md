@@ -3,6 +3,7 @@ slug: familybabies
 name: Families with Babies
 handle:            # Eventrrr @handle this profile exports to
 status: learning   # learning → assisted → auto
+charter_version: 1
 sessions: 1
 ---
 

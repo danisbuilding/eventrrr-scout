@@ -181,6 +181,19 @@ textarea.input { width: 100%; min-height: 64px; resize: vertical; margin-top: 8p
 .pchip.on { background: var(--nv-green); border-color: var(--nv-green); color: #fff; }
 .pchip.none.on { background: var(--nv-neutral); border-color: var(--nv-neutral); }
 .pchip.sugg { border-style: dashed; }
+.pchip .n { font-weight: 500; font-variant-numeric: tabular-nums; }
+.pchip .n.legacy { opacity: .7; }
+/* 1–5 score strip: one per profile in the detail pane; inline in a row it takes the chip's place until a number is picked */
+.pstrips { display: flex; flex-direction: column; gap: 8px; }
+.pstrip { display: inline-flex; align-items: center; gap: 4px; }
+.pstrip .pname { font-size: 13px; color: var(--nv-ink); min-width: 132px; }
+.pstrip.inline { border: 1px solid var(--nv-green); border-radius: 999px; padding: 1px 4px 1px 10px; background: var(--nv-canvas); }
+.pstrip.inline .pname { font-size: 12px; min-width: 0; margin-right: 4px; color: var(--nv-muted); }
+.ps { width: 26px; height: 26px; border-radius: 999px; border: 1px solid var(--nv-control-line); background: var(--nv-canvas); color: var(--nv-ink); font-size: 12px; line-height: 1; font-variant-numeric: tabular-nums; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; transition: background-color var(--nv-duration) ease-out, border-color var(--nv-duration) ease-out, color var(--nv-duration) ease-out; }
+.ps:hover { border-color: var(--nv-muted); }
+.ps.on { background: var(--nv-green); border-color: var(--nv-green); color: #fff; }
+.ps.x { color: var(--nv-muted); border-color: transparent; }
+.ps.x:hover { color: var(--nv-ink); border-color: var(--nv-control-line); }
 #stbl td { height: auto; padding: 10px 12px; vertical-align: top; }
 #stbl .c-name { width: 34%; } #stbl .c-cat { width: 16%; } #stbl .c-prof { width: auto; }
 #stbl .name-btn { text-align: left; }
@@ -206,12 +219,14 @@ textarea.input { width: 100%; min-height: 64px; resize: vertical; margin-top: 8p
   #stbl thead { display: none; }
   #stbl tr { display: block; padding: 14px 0; border-bottom: 1px solid var(--nv-line); }
   #stbl tr:last-child { border-bottom: 0; }
-  #stbl td { display: block; width: auto; padding: 0; border: 0; height: auto; }
+  #stbl td, #stbl td.c-name, #stbl td.c-cat, #stbl td.c-prof { display: block; width: auto; padding: 0; border: 0; height: auto; }
   #stbl tr { position: relative; }
   #stbl td.c-name { padding-right: 40px; }
   #stbl td.c-cat { margin: 4px 0 8px; }
   #stbl td.c-chev { position: absolute; right: 0; top: 14px; }
   .pchip { padding: 6px 12px; font-size: 13px; }
+  .ps { width: 34px; height: 34px; font-size: 14px; }
+  .pstrip.inline { padding: 2px 6px 2px 12px; }
 }
 .actions .link-btn { white-space: nowrap; }
 .actions { flex-wrap: wrap; row-gap: 8px; }

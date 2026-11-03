@@ -1,6 +1,15 @@
 {
  "runs": [
   {
+   "run": "2026-11-03",
+   "window": "2026-11-03 → 2026-11-17",
+   "umbrella": "Día de Muertos 2026",
+   "event_count": 77,
+   "highlights": 28,
+   "published_at": "2026-11-03T00:54:44.628772+00:00",
+   "hidden": false
+  },
+  {
    "run": "2026-10-28-dia-de-muertos",
    "window": "2026-10-28 → 2026-11-11",
    "umbrella": "Día de Muertos 2026",

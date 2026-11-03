@@ -17,6 +17,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
+      - name: Stamp asset URLs so browsers fetch new code after each deploy
+        run: |
+          v="${GITHUB_SHA::8}"
+          sed -i -E "s#(href|src)=\"(styles\.css|config\.js|categories\.js|app\.js)\"#\1=\"\2?v=$v\"#g" site/index.html
+          grep -c "?v=$v" site/index.html
       - uses: actions/upload-pages-artifact@v3
         with: {path: site}
       - id: deployment

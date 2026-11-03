@@ -1,0 +1,79 @@
+[
+ {
+  "title": "¡Punto extra!",
+  "starts_at": "2026-11-08T12:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-10-28-dia-de-muertos",
+  "key": "betza-condez-extra-familiar-punto-taller|2026-11-08"
+ },
+ {
+  "title": "El otro color del oro",
+  "starts_at": "2026-11-07T00:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-10-28-dia-de-muertos",
+  "key": "apertura-color-marboeuf-muac-olivier-oro|2026-11-07"
+ },
+ {
+  "title": "Julian Rosefeldt. Manifesto",
+  "starts_at": "2026-09-05T00:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-10-28-dia-de-muertos",
+  "key": "exhibicion-julian-manifesto-muac-rosefeldt|2026-09-05"
+ },
+ {
+  "title": "Expo: Anteparaíso de Carlos Amorales",
+  "starts_at": "2026-11-05T00:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-10-28-dia-de-muertos",
+  "key": "amorales-anteparaiso-carlos-kurimanzutto|2026-11-05"
+ },
+ {
+  "title": "Geometrías para una fiesta",
+  "starts_at": "2026-11-07T13:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-10-28-dia-de-muertos",
+  "key": "familias-fiesta-geometrias-taller|2026-11-07"
+ },
+ {
+  "title": "“El Camino”: iluminación en Reforma",
+  "starts_at": "2026-10-23T19:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-10-28-dia-de-muertos",
+  "key": "camino-iluminacion-reforma|2026-10-23"
+ },
+ {
+  "title": "Camino a la Luz, expo de esculturas luminosas en Reforma",
+  "starts_at": "2026-10-23T19:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-10-28-dia-de-muertos",
+  "key": "camino-luz|2026-10-23"
+ },
+ {
+  "title": "Iluminación del Zócalo",
+  "starts_at": "2026-10-29T00:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-10-28-dia-de-muertos",
+  "key": "iluminacion-zocalo|2026-10-29"
+ },
+ {
+  "title": "Festival de Día de Muertos en Chapultepec: “La Puerta entre dos mundos”",
+  "starts_at": "2026-10-29T00:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-10-28-dia-de-muertos",
+  "key": "chapultepec-dia-dos-entre-festival-muertos|2026-10-29"
+ },
+ {
+  "title": "Festival Núcleo 01 /// Monumento a la Revolución",
+  "starts_at": "2026-11-06T00:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-10-28-dia-de-muertos",
+  "key": "01-festival-nucleo|2026-11-06"
+ },
+ {
+  "title": "Festival Hipnosis 2026 /// Estadio Fray Nano",
+  "starts_at": "2026-11-07T00:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-10-28-dia-de-muertos",
+  "key": "estadio-festival-fray-hipnosis-nano|2026-11-07"
+ }
+]

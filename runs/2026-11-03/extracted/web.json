@@ -52,9 +52,7 @@
   "ends_at": "2026-11-04T19:30:00-06:00",
   "all_day": false,
   "timezone": "America/Mexico_City",
-  "venue": {
-   "name": "Casa de Tabasco en México “Carlos Pellicer”"
-  },
+  "venue": "Casa de Tabasco en México “Carlos Pellicer”",
   "address": null,
   "neighborhood": null,
   "price_text": "Entrada libre",
@@ -100,9 +98,7 @@
   "ends_at": "2026-11-10T19:00:00-06:00",
   "all_day": false,
   "timezone": "America/Mexico_City",
-  "venue": {
-   "name": "Casa de Tabasco en México “Carlos Pellicer”"
-  },
+  "venue": "Casa de Tabasco en México “Carlos Pellicer”",
   "address": null,
   "neighborhood": null,
   "price_text": "Entrada Libre",

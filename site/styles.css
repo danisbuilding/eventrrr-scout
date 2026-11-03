@@ -87,6 +87,8 @@ tr[data-skip="true"] .name-btn, tr[data-skip="true"] td { color: var(--nv-muted)
 .btn-secondary { background: var(--nv-canvas); color: var(--nv-ink); border-color: var(--nv-control-line); box-shadow: var(--nv-shadow-control); }
 .btn-secondary:hover:not(:disabled) { border-color: var(--nv-muted); }
 .btn-secondary[aria-pressed="true"] { border-color: var(--nv-green); color: var(--nv-green); }
+.btn-outline { background: transparent; color: var(--nv-green); border-color: var(--nv-green); }
+.btn-outline:hover:not(:disabled) { background: var(--nv-selected-end); }
 .btn:disabled { opacity: .5; cursor: not-allowed; box-shadow: none; }
 .btn svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.25; }
 .icon-btn { min-width: 32px; min-height: 32px; padding: 0; display: inline-flex; align-items: center; justify-content: center; }

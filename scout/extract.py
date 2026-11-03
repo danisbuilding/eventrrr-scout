@@ -81,8 +81,27 @@ def _dt(date, time):
     return f"{date}T00:00:00{TZ}"
 
 
+STR_FIELDS = ("title", "description", "venue", "address", "neighborhood", "price_text", "currency", "url", "category",
+              "category_alt", "umbrella", "organizer", "image_url", "highlight_why", "source_excerpt", "timezone")
+
+
+def _as_text(v):
+    if v is None or isinstance(v, str):
+        return v
+    if isinstance(v, dict):
+        return _as_text(v.get("name") or v.get("title") or v.get("text") or v.get("url") or next((x for x in v.values() if isinstance(x, str)), None))
+    if isinstance(v, list):
+        return ", ".join(t for t in (_as_text(x) for x in v) if t) or None
+    return str(v)
+
+
 def normalize_fields(e):
     """Map stray field names onto the schema so a creative model can't break downstream."""
+    if isinstance(e.get("venue"), dict) and not e.get("address") and e["venue"].get("address"):
+        e["address"] = e["venue"]["address"]
+    for k in STR_FIELDS:
+        if k in e:
+            e[k] = _as_text(e[k])
     for canon, alts in ALIASES.items():
         if e.get(canon) in (None, "") :
             for a in alts:

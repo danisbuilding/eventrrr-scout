@@ -336,12 +336,13 @@ async function renderRuns() {
   const st = await fetchStatus();
   const live = liveRun(st);
   const rs = $("#rf-status");
+  const stop = $("#rf-stop");
   if (live) {
-    rs.innerHTML = `<span class="pill run">Running</span> started ${esc(new Date(live.created_at).toLocaleTimeString("en-US", {hour: "numeric", minute: "2-digit"}))} · <a href="${esc(live.url)}" target="_blank" rel="noopener">log</a> <button class="btn btn-secondary" id="rf-stop" style="min-height:32px;padding:6px 12px;margin-left:8px">Stop sweep</button>`;
+    rs.innerHTML = `<span class="pill run">Running</span> started ${esc(new Date(live.created_at).toLocaleTimeString("en-US", {hour: "numeric", minute: "2-digit"}))} · <a href="${esc(live.url)}" target="_blank" rel="noopener">log</a>`;
     $("#rf-start").disabled = true; clearTimeout(pollT); pollT = setTimeout(renderRuns, 30000);
-    const stop = $("#rf-stop"); if (stop) stop.onclick = () => stopSweep(live.id);
+    stop.hidden = false; if (!stop.dataset.sure) { stop.disabled = false; stop.textContent = "Stop sweep"; } stop.onclick = () => stopSweep(live.id);
   }
-  else { if (!rs.dataset.msg) rs.textContent = ""; $("#rf-start").disabled = false; }
+  else { if (!rs.dataset.msg) rs.textContent = ""; $("#rf-start").disabled = false; stop.hidden = true; delete stop.dataset.sure; }
   try { const r = await fetch(`${(window.SCOUT_CONFIG.eventsBase || "").replace(/\/$/, "")}/runs/index.json?t=${Math.floor(Date.now() / 60000)}`, {cache: "no-store"}); runsCache = (await r.json()).runs || []; } catch {}
   const ghById = Object.fromEntries((st && st.gh || []).map((w) => [String(w.id), w]));
   const rows = runsCache.map((r) => `<tr><td><a href="#${esc(r.run)}" data-openrun="${esc(r.run)}">${esc(r.run)}</a></td><td class="sub">${esc(r.window || "")}</td><td class="sub">${esc(r.umbrella || "")}</td><td class="sub">${r.event_count} events · ${r.highlights} ★</td><td class="sub">${r.published_at ? esc(new Date(r.published_at).toLocaleDateString("en-US", {month: "short", day: "numeric"})) : ""}</td></tr>`).join("");
@@ -417,6 +418,16 @@ function sortVisible() {
     (!q || `${e.title} ${e.venue} ${e.neighborhood}`.toLowerCase().includes(q))
   ).sort((a, b) => (a.starts_at || "").localeCompare(b.starts_at || ""));
 }
+function emptyWhy() {
+  if (!POOL.length) return "No events yet; run a sweep.";
+  const state = $("#sstate").value, pf = $("#sprofile").value;
+  const base = POOL.filter((e) => (state === "all" || (state === "sorted") === isSorted(e)) && (!pf || profilesOf(e).includes(pf)));
+  const hiddenPast = $("#shidepast").checked ? base.filter(isPast).length : 0;
+  const hiddenOld = $("#shideold").checked ? base.filter((e) => !isPast(e) && startedBefore(e, 7)).length : 0;
+  if (state === "unsorted" && !base.length) return "Everything is reviewed.";
+  if (hiddenPast || hiddenOld) return `Nothing here right now: ${[hiddenPast ? `${hiddenPast} past` : "", hiddenOld ? `${hiddenOld} started over a week ago` : ""].filter(Boolean).join(", ")} hidden by the filters above.`;
+  return "Nothing matches these filters.";
+}
 function renderSort() {
   const unsorted = POOL.filter((e) => !isSorted(e)).length;
   $("#sort-metrics").innerHTML = [[POOL.length, "in pool"], [POOL.length - unsorted, "reviewed"], [unsorted, "to review"]].map(([n, l]) => `<div class="metric"><b>${n}</b> ${l}</div>`).join("");
@@ -430,7 +441,7 @@ function renderSort() {
       <td class="c-cat"><span class="sub">${esc(e.category)}</span></td>
       <td class="c-prof"><div class="pchips">${chips}</div></td>
       <td class="c-chev"><button class="icon-btn name-btn" data-sopen="${esc(akey(e))}" aria-label="Open ${esc(e.title)}">${CHEV}</button></td></tr>`;
-  }).join("") : `<tr><td colspan="4" class="empty">${POOL.length ? "Nothing matches these filters." : "No events yet; run a sweep."}</td></tr>`;
+  }).join("") : `<tr><td colspan="4" class="empty">${emptyWhy()}</td></tr>`;
 }
 async function toggleAssign(ak, profile) {
   const [run, key] = splitAk(ak); const cur = ASSIGN[ak] || {}; const on = !cur[profile]; touched.add(ak);

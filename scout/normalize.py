@@ -16,8 +16,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def slug(s: str) -> str:
-    s = unicodedata.normalize("NFKD", s or "").encode("ascii", "ignore").decode()
+def slug(s) -> str:
+    if isinstance(s, dict):
+        s = s.get("name") or s.get("title") or ""
+    elif isinstance(s, list):
+        s = " ".join(str(x) for x in s)
+    s = unicodedata.normalize("NFKD", str(s or "")).encode("ascii", "ignore").decode()
     s = re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
     return s
 

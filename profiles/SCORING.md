@@ -25,7 +25,8 @@ How to use it
 - Duplicate: same event as another row. Removes this row from the pool; its scores stay recorded.
 
 What the curated calendar does with it (DP, 2026-11-03)
-- The score exists to settle competition for the slots: 3 to 4 events per day, 4 to 5 ongoing events per week. Highest scores take the slots; the rest of the 2s to 5s go in the collapsed "N more".
+- The score exists to settle competition for the slots: 3 to 4 events per day, 4 to 5 ongoing events per week. Highest scores take the slots.
+- "N more" holds only strong picks that lost the slot race: 3s and up. A 2 that didn't get a slot stays in the pool.
 - 1 is the only score that excludes. A 1 never reaches a curated calendar; it's not something the brand should be associated with.
-- Everything from 2 up is for the reader to judge. A 2 on a quiet day is on the calendar.
+- A 2 reaches the calendar only when a day or week has a free slot. Everything from 2 up is for the reader to judge.
 - Ongoing events sit at the top of each week (weeks start Monday), ordered by closing date.

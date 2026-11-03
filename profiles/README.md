@@ -23,7 +23,7 @@ date → both. Price can decide: a $1,300-a-head dinner is foodie, not a general
 
 Sorting is a 1–5 score per (event, profile), not a yes/no tag; `SCORING.md` is the scale DP sees in the app.
 No row on a profile = not on that calendar. **None** = looked at, fits no calendar; **unclear** = looked at,
-the listing didn't say enough. The score settles competition for the slots (3–4 per day, 4–5 ongoing per week); only a 1 excludes. A 1 or 2 is a rank, not a rejection: the 13 events that were None in sessions 1–2
+the listing didn't say enough. The score settles competition for the slots (3–4 per day, 4–5 ongoing per week); only a 1 excludes; "N more" carries only 3+ events that lost a slot, 2s never overflow. A 1 or 2 is a rank, not a rejection: the 13 events that were None in sessions 1–2
 all came back as 1s and 2s once a scale existed, so read pre-scoring Nones as "wouldn't feature", not "doesn't belong".
 Calibration: the average event is a 1 or 2 (an okay event); 3 is a high score; 4 rare; 5 exceptional (DP, 2026-11-03).
 Duplicates scored inconsistently: the first score to appear (by `updated_at`) is the call (DP, 2026-11-03).

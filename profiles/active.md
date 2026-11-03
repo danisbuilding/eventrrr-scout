@@ -3,7 +3,7 @@ slug: active
 name: Sports & Movement
 handle:            # Eventrrr @handle this profile exports to
 status: learning   # learning → assisted → auto
-charter_version: 2
+charter_version: 3
 sessions: 3
 ---
 
@@ -17,6 +17,9 @@ Wellness retreats, anything indoors-and-still, gym promos.
 
 ## How DP scores it
 No scored rows after three sessions. One row is tagged with no score: Festival Internacional de Danza Cuerpo Al Descubierto (run 2026-11-03), which is a dance festival to watch, not to move at.
+
+## What a 4 is (DP, 2026-11-03)
+An interesting themed run.
 
 ## Worked examples
 (None yet.)

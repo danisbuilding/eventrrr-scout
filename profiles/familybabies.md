@@ -3,7 +3,7 @@ slug: familybabies
 name: Families with Babies
 handle:            # Eventrrr @handle this profile exports to
 status: learning   # learning → assisted → auto
-charter_version: 2
+charter_version: 3
 sessions: 2
 ---
 
@@ -28,5 +28,5 @@ Everything scored here is a free outdoor spectacle you can carry a baby through:
 - You're using this calendar as "places a baby won't ruin", and nothing in the sweep was built for a baby. The scale is flat because the supply is: a 3 or 4 here needs a children's show, a train or boat ride, a picnic with music, and the Día de Muertos sources didn't carry one.
 
 ## Surprises
-- What would a 4 be? Name one, real or hypothetical, so the sorter has a top. Candidates in the city: the Chapultepec train, a puppet show at a cultural centre, a morning concert for kids at the CCU.
+- DP (2026-11-03) still doesn't know what a 4 is here. Leave the top open; score what comes.
 - With everything at 2, this calendar would only ever show on thin days. Fine for now, or should the sources change (parenting accounts, Papalote, Chapultepec's kids program)?

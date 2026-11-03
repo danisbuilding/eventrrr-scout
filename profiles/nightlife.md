@@ -3,7 +3,7 @@ slug: nightlife
 name: Nightlife & Bars
 handle:            # Eventrrr @handle this profile exports to
 status: learning   # learning → assisted → auto
-charter_version: 2
+charter_version: 3
 sessions: 3
 ---
 
@@ -19,6 +19,9 @@ The sources barely cover clubs, so this calendar's top is a 3 so far. A reader c
 - **2 — fine.** Festivals that read as concerts first: Time Warp (both days), Festival Hipnosis.
 - **1 — mediocre.** Mary in the Junkyard at Foro Indie Rocks (unknown act, uncomfortable room).
 - **No row.** PARASOMNIA at Chico (niche sounds; it's a music 2 now, not nightlife), Fenómeno Fuzz (moved to music).
+
+## What a 4 is (DP, 2026-11-03)
+Shimza at LooLoo: a super famous, well-regarded DJ who isn't too commercial; a reasonably sized venue, not huge; close to the central areas and easy to get to; a short lineup, so you don't sit through four openers before the headliner. Four tests: name, room size, location, lineup length.
 
 ## Would never feature
 - A bar that is simply open; a seated show; a "ladies night" with no lineup.
@@ -37,6 +40,5 @@ The sources barely cover clubs, so this calendar's top is a 3 so far. A reader c
 - You haven't found a 4 or 5 because the sweep hasn't shown you a real club night with a lineup. Coverage problem, not a taste problem: the Instagram handles are culture and food heavy.
 
 ## Surprises
-- Jazz en las Rocas as nightlife 3: a free 4pm set in a park doesn't fit "out after 11". Intentional?
-- Name two nights from your own life that would be a nightlife 4 and a 5. Without an anchor the sorter will keep capping this calendar at 3.
+- Resolved: Jazz en las Rocas is intentionally a nightlife 3 (and a music 3), so "out after 11" is a persona line, not a rule. The 4 is anchored above; a 5 is still unnamed.
 - Sources to add for this calendar: a few club and promoter handles. Tell the build chat which ones.

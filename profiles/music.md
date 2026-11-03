@@ -3,7 +3,7 @@ slug: music
 name: Live Music
 handle:            # Eventrrr @handle this profile exports to
 status: learning   # learning → assisted → auto
-charter_version: 2
+charter_version: 3
 sessions: 3
 ---
 
@@ -17,7 +17,8 @@ Small and mid-size venues, acts with a sound, the Foro Indie Rocks / Casa del La
 - **3 — good.** A named act or genre in a room under arena size, or a big free civic show: Cumbia Ciudad at Teatro de la Ciudad; Núcleo 01 / Reactor's 22-year concert at Monumento a la Revolución (free); Time Warp, both days (techno festival, $1,250).
 - **2 — fine.** Arena nostalgia (Maldita Vecindad, $1,695), a niche club night (PARASOMNIA at Chico), a free 7pm garage show (Fenómeno Fuzz at CCEMx), the Minería ensemble at Risco ($200), Festival Hipnosis (lineup unnamed).
 - **1 — mediocre.** An unknown act at Foro Indie Rocks (Headache World); a corporate-venue pop show (Lng/SHT at Pepsi Center).
-- **No score yet.** Jazz en las Rocas (music row from session 1; scored 3 on nightlife and dates instead); Liana Flores at Lunario and Omar Courtz at Palacio de los Deportes (run 2026-11-03).
+- **3 — Jazz en las Rocas** (DP: a 3 on music and on nightlife; the music row still needs the tap).
+- **No score yet.** Liana Flores at Lunario and Omar Courtz at Palacio de los Deportes (run 2026-11-03).
 
 ## Would never feature
 - Cover bands, a venue's generic "live music nightly".
@@ -39,6 +40,7 @@ Small and mid-size venues, acts with a sound, the Foro Indie Rocks / Casa del La
 - Fenómeno Fuzz is settled: music 2, not nightlife (its old nightlife row has no score). The session-2 surprise was a mis-tag.
 
 ## Surprises
-- Jazz en las Rocas: 3 on nightlife and dates, 2 on kids, nothing on music. A free 4pm jazz set is the most "music" thing in the run by the persona. Slip, or do you mean it?
+- Resolved: Jazz en las Rocas is a music 3.
+- Calibration (DP): 3 is a high score; the average event is a 1–2.
 - Liana Flores (Lunario) and Omar Courtz (Palacio de los Deportes) are tagged with no score. By the rules above: Lunario is a pleasant mid room → 3 if the act is known to you; Palacio is arena → 2.
 - Time Warp 3 here vs 2 on nightlife: is that "techno festival = concert", or just that nightlife's bar is higher?

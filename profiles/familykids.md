@@ -3,7 +3,7 @@ slug: familykids
 name: Family with Kids (8 to 14)
 handle:            # Eventrrr @handle this profile exports to
 status: learning   # learning → assisted → auto
-charter_version: 2
+charter_version: 3
 sessions: 2
 ---
 
@@ -37,6 +37,7 @@ Something to do beats something to see, which beats somewhere to stroll.
 - No 5 yet; a 5 would probably be a full day built for them (a festival with workshops, a museum day), which the sweep hasn't produced.
 
 ## Surprises
+- DP, 2026-11-03: the read above is about right.
 - Harry Potter's Bosque Prohibido (Naucalli, paid, immersive) reads like a kids 4 by the rule above and has no score. Score it?
 - Casa del Risco's festival was the only pick last session and is unscored now. Still a pick? By the rule it would be a 4 (workshops all day).
 - Geometrías para una fiesta at Tamayo (free workshop, kids 7+) is None on cultural and has no kids row at all. Same shape as ¡Punto extra!.

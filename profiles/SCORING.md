@@ -12,6 +12,8 @@ One score per calendar, 1 to 5. It ranks events against each other so busy days 
 2  Fine experience. Maybe go or not.
 1  Mediocre experience. Lean toward skipping unless something about it is compelling.
 
+Calibration (DP, 2026-11-03): most events are 1s and 2s; that is the score for an okay event. A 3 is already a high score. 4s are rare, 5s exceptional.
+
 How to use it
 - No score on a calendar = not on that calendar. You never have to say no; only score what belongs.
 - × clears a score you set by mistake.

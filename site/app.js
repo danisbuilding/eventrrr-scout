@@ -323,6 +323,8 @@ async function fetchStatus() {
 function liveRun(st) {
   const gh = (st && st.gh || []).find((w) => w.status !== "completed");
   if (gh) return gh;
+  // GitHub says that run is already over: trust it over a stale status.json
+  if (st && st.gh && st.gh.some((w) => String(w.id) === String(st.workflow_run) && w.status === "completed")) return null;
   // status.json says running and it started less than 2 hours ago (the pipeline has a 90-minute cap)
   if (st && st.state === "running" && st.started_at && Date.now() - new Date(st.started_at).getTime() < 7200000) {
     return {id: st.workflow_run, created_at: st.started_at, url: `https://github.com/danisbuilding/eventrrr-scout/actions/runs/${st.workflow_run}`, status: "in_progress"};

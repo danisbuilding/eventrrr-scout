@@ -93,7 +93,10 @@ jobs:
         run: |
           if [ "${{ job.status }}" != "success" ]; then python -c "import json,pathlib,datetime as dt;pathlib.Path('runs/status.json').write_text(json.dumps({'run':'${{ steps.p.outputs.run }}','state':'failed','finished_at':dt.datetime.now(dt.timezone.utc).isoformat(),'workflow_run':'${{ github.run_id }}'}))"; fi
           git config user.name "eventrrr-scout bot"; git config user.email "bot@users.noreply.github.com"
-          git pull --rebase origin main || true
           git add inbox/ runs/ site/sources.json
           git diff --cached --quiet || git commit -m "run: ${{ steps.p.outputs.run }}"
-          git push
+          # someone may have pushed during the run: rebase our commit on top and retry the push a few times
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main && git push && break
+            echo "push attempt $i failed; retrying"; sleep $((i * 5))
+          done

@@ -72,10 +72,24 @@ def plausible(query: str, place: dict) -> bool:
     word with the query; a short acronym (MUAC, CCU, MUNAL) may appear in either."""
     name, addr = place.get("displayName", {}).get("text", ""), place.get("formattedAddress", "")
     qw, nw = words(query), words(name) | words(addr)
+    if not qw:  # 'Museo de la Ciudad de México' is all generic words: compare them anyway
+        allw = lambda s: {w for w in re.split(r"[^a-z0-9]+", fold(s)) if len(w) > 2}
+        qw, nw = allw(query), allw(name) | allw(addr)
     if qw & nw:
+        return True
+    compact = lambda s: re.sub(r"[^a-z0-9]", "", fold(s))
+    cq, cn = compact(query), compact(name)
+    if len(cq) >= 5 and (cq in cn or cn in cq):  # 'Relinkdata' vs 'Relink:Data'
         return True
     acronyms = {w.lower() for w in re.findall(r"\b[A-Z]{3,6}\b", query)}
     return bool(acronyms and acronyms & {w.lower() for w in re.findall(r"\b[A-Za-z]{3,6}\b", name + " " + addr)})
+
+
+def rematch(entry: dict) -> dict:
+    """Re-judge a cached entry with the current `plausible` (rules change; lookups should not repeat)."""
+    if entry.get("status") == 200 and entry.get("name"):
+        entry["matched"] = plausible(entry["query"], {"displayName": {"text": entry["name"]}, "formattedAddress": entry.get("address") or ""})
+    return entry
 
 
 def lookup(query: str, key: str, session: requests.Session) -> dict:
@@ -131,6 +145,7 @@ def main() -> None:
     p = ROOT / "runs" / a.run / "events.json"
     events = json.loads(p.read_text())
     cache: dict[str, dict] = json.loads(CACHE.read_text()) if CACHE.exists() else {}
+    cache = {k: rematch(v) for k, v in cache.items()}
 
     queries = {}
     for ev in events:

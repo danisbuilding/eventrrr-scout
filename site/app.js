@@ -403,11 +403,31 @@ const akey = (e) => e.run + "|" + e.key;
 const splitAk = (ak) => { const i = ak.indexOf("|"); return [ak.slice(0, i), ak.slice(i + 1)]; }; // key itself contains "|date"
 const profilesOf = (e) => Object.keys(ASSIGN[akey(e)] || {});
 const isSorted = (e) => profilesOf(e).length > 0;
+// A later run can re-sight an event whose earlier copy had ended (normalize.py keeps it with `continues: {run, key}`).
+// The pool shows it once, on the original run/key, with the new sighting folded in: later end date, fresher excerpt,
+// blanks filled; so scores stay on one key and Copy session reads the merged row.
+function foldContinues(pool) {
+  const byAk = {}; pool.forEach((e) => { byAk[akey(e)] = e; });
+  const folded = new Set();
+  pool.forEach((e) => {
+    const c = e.continues; if (!c) return;
+    const o = byAk[c.run + "|" + c.key]; if (!o || o === e) return;
+    if (e.ends_at && (!o.ends_at || e.ends_at > o.ends_at)) o.ends_at = e.ends_at;
+    if (e.starts_at && o.starts_at && e.starts_at < o.starts_at) o.starts_at = e.starts_at;
+    if (e.source_excerpt) o.source_excerpt = e.source_excerpt;
+    ["venue", "address", "neighborhood", "url", "price_text", "description", "category", "image_url"].forEach((k) => { if (!o[k] && e[k]) o[k] = e[k]; });
+    o.highlight = !!(o.highlight || e.highlight); o.all_day = !!(o.all_day && e.all_day);
+    o.sources = [...new Set([...(o.sources || []), ...(e.sources || [])])];
+    (o.seen_in ||= []).push({run: e.run, key: e.key});
+    folded.add(akey(e));
+  });
+  return pool.filter((e) => !folded.has(akey(e)));
+}
 async function loadSort() {
   const st = $("#ssync"); st.textContent = "Loading…";
   try {
     PROFILES = (await provider.profiles()).filter(isLive).sort((a, b) => (a.sort_order || 0) - (b.sort_order || 0));
-    POOL = await provider.allEvents();
+    POOL = foldContinues(await provider.allEvents());
     DECIDED = {}; try { DECIDED = await provider.allDecisions(); } catch (e) { console.warn("decisions", e.message || e); }
     POOL = POOL.filter((e) => !isDup(e)); // rows marked "Duplicate" in the detail pane leave the pool
     EXPORTED = {}; try { (await provider.exports()).forEach((x) => { EXPORTED[x.profile + "|" + x.run + "|" + x.key] = x.batch; }); } catch (e) { console.warn("exports ledger", e.message || e); }
@@ -533,7 +553,7 @@ function renderSortDetails(el, e) {
     `<div class="pchips" style="margin-top:8px"><button class="pchip none ${on.none ? "on" : ""}" data-pa="none">None of these</button><button class="pchip none ${on.unclear ? "on" : ""}" data-pa="unclear" title="The listing doesn't say enough to score it">Can't tell</button><button class="pchip none" id="sd-dup" title="Same event as another row; removes this one from the pool">Duplicate</button></div>`;
   el.innerHTML = `<div class="insp-head"><span class="label">Event details</span><button class="icon-btn btn btn-secondary" id="sd-close" aria-label="Back to profiles"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13"/></svg></button></div>
     <h2 class="ev-title">${esc(e.title)}</h2>
-    <div class="sub">${esc(e.run)}${e.highlight ? " · Highlight" : ""}</div>
+    <div class="sub">${esc(e.run)}${(e.seen_in || []).length ? " · also in " + esc(e.seen_in.map((s) => s.run).join(", ")) : ""}${e.highlight ? " · Highlight" : ""}</div>
     <div class="sec" style="margin-top:16px"><div style="margin-bottom:10px">Score per calendar (1 – 5) · <a href="#guide" data-guide>Ratings guide</a></div><div class="pstrips" data-ak="${esc(akey(e))}">${strips}</div></div>
     ${detailFields(e)}
     ${detailSources(e)}`;

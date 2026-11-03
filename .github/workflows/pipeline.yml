@@ -28,6 +28,7 @@ jobs:
       APIFY_TOKEN: "${{ secrets.APIFY_TOKEN }}"
       OPENAI_API_KEY: "${{ secrets.OPENAI_API_KEY }}"
       GEMINI_API_KEY: "${{ secrets.GEMINI_API_KEY }}"
+      GOOGLE_PLACES_API_KEY: "${{ secrets.GOOGLE_PLACES_API_KEY }}"
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -80,6 +81,7 @@ jobs:
       - name: Normalize, score, thumbs, publish
         run: |
           python scout/normalize.py "${{ steps.p.outputs.run }}" --window-from "${{ steps.p.outputs.wf }}"
+          python scout/venues.py "${{ steps.p.outputs.run }}" || true
           python scout/score.py "${{ steps.p.outputs.run }}"
           python scout/thumbs.py "${{ steps.p.outputs.run }}" || true
           python scout/publish.py "${{ steps.p.outputs.run }}" --window "${{ steps.p.outputs.wf }} → ${{ steps.p.outputs.wt }}" --umbrella "${{ steps.p.outputs.umb }}"
@@ -93,7 +95,7 @@ jobs:
         run: |
           if [ "${{ job.status }}" != "success" ]; then python -c "import json,pathlib,datetime as dt;pathlib.Path('runs/status.json').write_text(json.dumps({'run':'${{ steps.p.outputs.run }}','state':'failed','finished_at':dt.datetime.now(dt.timezone.utc).isoformat(),'workflow_run':'${{ github.run_id }}'}))"; fi
           git config user.name "eventrrr-scout bot"; git config user.email "bot@users.noreply.github.com"
-          git add inbox/ runs/ site/sources.json
+          git add inbox/ runs/ data/ site/sources.json
           git diff --cached --quiet || git commit -m "run: ${{ steps.p.outputs.run }}"
           # someone may have pushed during the run: rebase our commit on top and retry the push a few times
           for i in 1 2 3 4 5; do

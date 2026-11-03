@@ -19,6 +19,7 @@ def main(run: str) -> None:
     rub = tax["highlight"]
     weights = {k: v["weight"] for k, v in rub["signals"].items()}
     weights.update({k: v["weight"] for k, v in rub["penalties"].items()})
+    weights.update({k: v["weight"] for k, v in rub.get("computed", {}).items()})  # venue_rated etc., set by the pipeline
     thr = rub["threshold"]
 
     p = ROOT / "runs" / run / "events.json"

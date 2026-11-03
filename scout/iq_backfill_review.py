@@ -3,8 +3,9 @@
 
 Usage: python scout/iq_backfill_review.py profiles/sessions/<snapshot>.json [--dry-run]
 The snapshot is a JSON dump of the old tables, pulled from the signed-in Scout app:
-  {"scout_profiles": [...], "scout_assignments": [...], "scout_decisions": [...], "scout_exports": [...],
-   "scout_reviewers": [...]}
+  {"scout_profiles": [...], "scout_assignments": [...], "scout_decisions": [...], "scout_exports": [...]}
+with no emails in it (the repo is public): --reviewer EMAIL says who the human rows belong to; it is added to
+`reviewers` if missing. Without it, the first active reviewer in the table is used.
 Writes through SCOUT_IQ_DB_URL (scout_pipeline role), after scout_iq_review.sql has run and iq_write.py has
 written every run the rows refer to. Idempotent: a row is skipped when an identical one (same occurrence,
 profile, score/withdrawn, created_at) already exists.
@@ -41,6 +42,7 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("snapshot")
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--reviewer", default=os.environ.get("SCOUT_IQ_REVIEWER_EMAIL", ""), help="email the migrated human rows belong to")
     a = ap.parse_args()
     snap = json.loads(Path(a.snapshot).read_text())
     profiles = snap.get("scout_profiles") or []
@@ -56,12 +58,19 @@ def main() -> None:
         return
 
     import psycopg
-    default_email = (reviewers[0]["email"] if reviewers else "accounts@danielstringer.com").lower()
     with psycopg.connect(url) as conn, conn.cursor() as cur:
         rev_ids = {}
-        for r in reviewers:
+        for r in reviewers + ([{"email": a.reviewer}] if a.reviewer else []):
             cur.execute("insert into reviewers (email) values (%s) on conflict (email) do update set active = true returning id", (r["email"].lower(),))
             rev_ids[r["email"].lower()] = cur.fetchone()[0]
+        if a.reviewer:
+            default_email = a.reviewer.lower()
+        else:
+            cur.execute("select email from reviewers where active order by created_at limit 1")
+            row = cur.fetchone()
+            if not row:
+                sys.exit("no reviewer: pass --reviewer EMAIL")
+            default_email = row[0]
         def reviewer(email):
             e = (email or default_email).lower()
             if e not in rev_ids:

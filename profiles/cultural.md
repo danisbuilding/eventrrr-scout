@@ -3,7 +3,7 @@ slug: cultural
 name: Arts & Culture
 handle:            # Eventrrr @handle this profile exports to
 status: learning   # learning → assisted → auto
-charter_version: 1
+charter_version: 2
 sessions: 2
 ---
 
@@ -28,6 +28,13 @@ Tourist packages, generic "cultural" listings, anything whose only hook is the v
 - City-scale tradition passes without an author when the visit works: Mixquic, the Mega Procesión de Catrinas and the Gran Desfile are all in (DP, session 2; the two parades aren't tagged in the app yet). Same test as the Zócalo: one place, you see it all.
 - A named collective's altar in a gallery passes, registration and all (Volver a la Tierra — Proyectos Públicos). Session 2, as predicted.
 - The visit has to work as a visit: one spot where you take it all in, or a cluster you can walk between (Zócalo ofrenda + lighting + Centro). A long walk to see spaced-out pieces fails even when the content is fine (El Camino). Confirmed by DP, session 1.
+
+## Venue and organizer floors (DP, 2026-11-03, stated while re-scoring)
+- MUNAL is a well-known, famous museum: its ofrenda ranks highly on name alone.
+- Anahuacalli is an incredibly special location; the Cacao festival offering there was robust.
+- Proyectos Públicos is a well-established arts and culture organization that hosts interesting events at key times of the year. Rarely life-changing, usually worth the time, and an especially easy sell for a group outing. Hypothesis: floor of 3, often 4.
+- Kurimanzutto is a beautiful space; attending anything there is exciting for the space alone, so typically at least a 3.
+- Hypothesis to test next session: the institution sets a floor (a named museum or major gallery → at least 3) and the specific show or night moves it up to 4 or 5.
 
 ## Worked examples
 | Title | Call | Why |

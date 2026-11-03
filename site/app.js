@@ -37,6 +37,8 @@ function inlineProvider(inline) {
     async runs() { return [{run: inline.meta.run, umbrella: inline.meta.umbrella}]; },
     async load(run) { META = inline.meta; EVENTS = inline.events; let d = {}; try { d = JSON.parse(localStorage.getItem(LS()) || "{}"); } catch {} return d; },
     async save(run, key, row) { decisions[key] = row; try { localStorage.setItem(LS(), JSON.stringify(decisions)); } catch {} setSync("Saved on this device"); },
+    async decide(run, key, row) { let d = {}; try { d = JSON.parse(localStorage.getItem("scout-decisions-" + run) || "{}"); } catch {} d[key] = row; try { localStorage.setItem("scout-decisions-" + run, JSON.stringify(d)); } catch {} if (run === META.run) decisions = d; },
+    async allDecisions() { const out = {}; for (const r of [inline.meta.run]) { let d = {}; try { d = JSON.parse(localStorage.getItem("scout-decisions-" + r) || "{}"); } catch {} Object.entries(d).forEach(([k, v]) => { out[r + "|" + k] = v; }); } return out; },
     user: null,
     async profiles() { try { return JSON.parse(localStorage.getItem("scout-profiles") || "null") || DEFAULT_PROFILES; } catch { return DEFAULT_PROFILES; } },
     async saveProfile(p, _isNew) { const ps = (await this.profiles()).filter((x) => x.slug !== p.slug).concat([p]); try { localStorage.setItem("scout-profiles", JSON.stringify(ps)); } catch {} },
@@ -72,6 +74,9 @@ function supabaseProvider(sb, user, cfg) {
       const {error} = await sb.from("scout_decisions").upsert({run, key, decision: row.decision || null, note: row.note || null, updated_at: new Date().toISOString(), updated_by: user.email}, {onConflict: "run,key"});
       setSync(error ? "Save failed: " + error.message : "Saved");
     },
+    // decisions for any run (the Sort tab spans runs); the Events tab's `decisions` map is per run and loaded by load()
+    async decide(run, key, row) { const {error} = await sb.from("scout_decisions").upsert({run, key, decision: row.decision || null, note: row.note || null, updated_at: new Date().toISOString(), updated_by: user.email}, {onConflict: "run,key"}); if (error) throw error; if (run === META.run) decisions[key] = row; },
+    async allDecisions() { const {data, error} = await sb.from("scout_decisions").select("run,key,decision,note").limit(10000); if (error) throw error; const out = {}; (data || []).forEach((x) => { out[x.run + "|" + x.key] = {decision: x.decision, note: x.note}; }); return out; },
     async profiles() { const {data, error} = await sb.from("scout_profiles").select("*").order("sort_order"); if (error) throw error; return data || []; },
     async saveProfile(p, isNew) {
       const row = Object.assign({}, p, {updated_at: new Date().toISOString()});
@@ -251,7 +256,9 @@ function wire() {
   document.addEventListener("click", (ev) => {
     const o = ev.target.closest("[data-sopen]"); if (o) { scur = o.dataset.sopen; $("#pinsp").hidden = false; renderSort(); renderProfiles(); return; }
     const n = ev.target.closest("[data-ps]"); if (n) { const g = n.closest("[data-pstrip]"); setScore(g.closest("[data-ak]").dataset.ak, g.dataset.pstrip, n.dataset.ps === "x" ? null : parseInt(n.dataset.ps, 10)); return; }
-    const c = ev.target.closest("[data-pa]"); if (c) { const ak = c.closest("[data-ak]").dataset.ak; if (c.dataset.pa === "none") toggleNone(ak); else { openStrip = openStrip === ak + "|" + c.dataset.pa ? null : ak + "|" + c.dataset.pa; renderSort(); } }
+    const c = ev.target.closest("[data-pa]"); if (c) { const ak = c.closest("[data-ak]").dataset.ak; if (c.dataset.pa === "none") toggleNone(ak); else if (c.dataset.pa === "unclear") toggleUnclear(ak); else { openStrip = openStrip === ak + "|" + c.dataset.pa ? null : ak + "|" + c.dataset.pa; renderSort(); } return; }
+    const g = ev.target.closest("[data-guide]"); if (g) { ev.preventDefault(); pcur = "guide"; scur = null; $("#pinsp").hidden = false; renderProfiles(); return; }
+    const dup = ev.target.closest("#sd-dup"); if (dup && scur) markDuplicate(scur);
   });
   $("#copysession").onclick = copySession;
   $("#sprofiles-btn").onclick = () => { $("#pinsp").hidden = false; };
@@ -385,9 +392,11 @@ async function startSweep(sb) {
 let PROFILES = [], POOL = [], ASSIGN = {}, EXPORTED = {}, pcur = null, scur = null, sortLoaded = false, CHARTERS = {}, CHARTER_META = {}, touched = new Set(), openStrip = null;
 const expKey = (profile, e) => profile + "|" + akey(e);
 const isLive = (p) => p.active !== false && !(p.kind === "oneoff" && p.ends_on && p.ends_on < todayLocal());
-// Scores (1–5): 5 singular, 4 great, 3 good, 2 fine, 1 mediocre. 1s and 2s stay in the pool and never export.
+// Scores (1–5): 5 singular, 4 great, 3 good, 2 fine, 1 mediocre. The score ranks events against each other on busy days; only 1s never export.
 const SCORE_WORDS = {5: "Singular. Not to be missed.", 4: "Great. Prioritize over other things.", 3: "Good. Worth going if you're free.", 2: "Fine. Maybe go or not.", 1: "Mediocre. Lean toward skipping."};
-const exportable = (a) => a && (a.score == null || a.score >= 3); // legacy (unscored) rows still export until re-scored
+const exportable = (a) => a && (a.score == null || a.score >= 2); // legacy (unscored) rows still export until re-scored
+const isDup = (e) => { const d = DECIDED[akey(e)]; return !!d && d.decision === "skip" && /^duplicate/i.test(d.note || ""); };
+let DECIDED = {};
 // events on a calendar that are upcoming and not yet exported to it
 const pending = (p) => POOL.filter((e) => exportable((ASSIGN[akey(e)] || {})[p.slug]) && !isPast(e) && !EXPORTED[expKey(p.slug, e)]);
 const akey = (e) => e.run + "|" + e.key;
@@ -399,6 +408,8 @@ async function loadSort() {
   try {
     PROFILES = (await provider.profiles()).filter(isLive).sort((a, b) => (a.sort_order || 0) - (b.sort_order || 0));
     POOL = await provider.allEvents();
+    DECIDED = {}; try { DECIDED = await provider.allDecisions(); } catch (e) { console.warn("decisions", e.message || e); }
+    POOL = POOL.filter((e) => !isDup(e)); // rows marked "Duplicate" in the detail pane leave the pool
     EXPORTED = {}; try { (await provider.exports()).forEach((x) => { EXPORTED[x.profile + "|" + x.run + "|" + x.key] = x.batch; }); } catch (e) { console.warn("exports ledger", e.message || e); }
     ASSIGN = {}; const legacy = [];
     (await provider.assignments()).forEach((x) => {
@@ -441,7 +452,7 @@ function renderSort() {
   $("#srows").innerHTML = rows.length ? rows.map((e) => {
     const ak = akey(e), on = ASSIGN[ak] || {};
     const chips = PROFILES.map((p) => openStrip === ak + "|" + p.slug ? scoreStrip(p, on[p.slug], true) : profileChip(p, on[p.slug])).join("") +
-      `<button class="pchip none ${on.none ? "on" : ""}" data-pa="none">None</button>`;
+      `<button class="pchip none ${on.none ? "on" : ""}" data-pa="none">None</button>` + (on.unclear ? `<button class="pchip none on" data-pa="unclear">Can't tell</button>` : "");
     return `<tr data-ak="${esc(ak)}" data-current="${scur === ak}">
       <td class="c-name"><button class="name-btn" data-sopen="${esc(ak)}">${e.highlight ? `<span class="star" aria-label="Highlight">★</span>` : ""}${esc(e.title)}</button><div class="sub">${esc([isMultiDay(e) ? fmtSub(e) : fmtDate(e.starts_at), e.venue || e.neighborhood].filter(Boolean).join(" · "))}</div></td>
       <td class="c-cat"><span class="sub">${esc(e.category)}</span></td>
@@ -485,6 +496,26 @@ async function toggleNone(ak) {
     $("#ssync").textContent = "Saved";
   } catch (e) { $("#ssync").textContent = "Save failed: " + (e.message || e); }
 }
+// "Can't tell": looked at it, the listing didn't say enough to score it. Kept apart from None so the extraction gap is visible.
+async function toggleUnclear(ak) {
+  const [run, key] = splitAk(ak); const cur = ASSIGN[ak] || {}; const on = !cur.unclear; touched.add(ak); openStrip = null;
+  if (on) { delete cur.none; cur.unclear = {run, key, profile: "unclear", source: "manual", updated_at: new Date().toISOString()}; } else delete cur.unclear;
+  ASSIGN[ak] = cur; renderSort(); renderProfiles();
+  $("#ssync").textContent = "Saving…";
+  try { await provider.assign(run, key, "unclear", on ? {source: "manual"} : null); if (on) await provider.assign(run, key, "none", null); $("#ssync").textContent = "Saved"; }
+  catch (e) { $("#ssync").textContent = "Save failed: " + (e.message || e); }
+}
+// Duplicate: a skip decision with the note "duplicate"; the event leaves the pool and the build chat reads these to tune dedupe.
+async function markDuplicate(ak) {
+  const [run, key] = splitAk(ak); const e = POOL.find((x) => akey(x) === ak); if (!e) return;
+  const b = $("#sd-dup"); if (b && !b.dataset.sure) { b.textContent = "Remove as duplicate? Click again"; b.dataset.sure = "1"; setTimeout(() => { if (b.isConnected) { b.textContent = "Duplicate"; delete b.dataset.sure; } }, 4000); return; }
+  $("#ssync").textContent = "Saving…";
+  try {
+    await provider.decide(run, key, {decision: "skip", note: "duplicate", at: new Date().toISOString()});
+    DECIDED[ak] = {decision: "skip", note: "duplicate"}; POOL = POOL.filter((x) => akey(x) !== ak); scur = null;
+    $("#ssync").textContent = "Saved"; toast("Removed as a duplicate; its scores stay recorded"); renderSort(); renderProfiles();
+  } catch (e) { $("#ssync").textContent = "Save failed: " + (e.message || e); }
+}
 async function charterFor(slug) {
   if (CHARTERS[slug] !== undefined) return CHARTERS[slug];
   try {
@@ -498,11 +529,12 @@ async function charterFor(slug) {
 }
 function renderSortDetails(el, e) {
   const on = ASSIGN[akey(e)] || {};
-  const strips = PROFILES.map((p) => scoreStrip(p, on[p.slug], false)).join("") + `<div style="margin-top:8px"><button class="pchip none ${on.none ? "on" : ""}" data-pa="none">None of these</button></div>`;
+  const strips = PROFILES.map((p) => scoreStrip(p, on[p.slug], false)).join("") +
+    `<div class="pchips" style="margin-top:8px"><button class="pchip none ${on.none ? "on" : ""}" data-pa="none">None of these</button><button class="pchip none ${on.unclear ? "on" : ""}" data-pa="unclear" title="The listing doesn't say enough to score it">Can't tell</button><button class="pchip none" id="sd-dup" title="Same event as another row; removes this one from the pool">Duplicate</button></div>`;
   el.innerHTML = `<div class="insp-head"><span class="label">Event details</span><button class="icon-btn btn btn-secondary" id="sd-close" aria-label="Back to profiles"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13"/></svg></button></div>
     <h2 class="ev-title">${esc(e.title)}</h2>
     <div class="sub">${esc(e.run)}${e.highlight ? " · Highlight" : ""}</div>
-    <div class="sec" style="margin-top:16px"><div class="label" style="margin-bottom:10px">Score per calendar <span class="sub" title="5 singular · 4 great · 3 good · 2 fine · 1 mediocre">(5 singular … 1 mediocre)</span></div><div class="pstrips" data-ak="${esc(akey(e))}">${strips}</div></div>
+    <div class="sec" style="margin-top:16px"><div style="margin-bottom:10px">Score per calendar (1 – 5) · <a href="#guide" data-guide>Ratings guide</a></div><div class="pstrips" data-ak="${esc(akey(e))}">${strips}</div></div>
     ${detailFields(e)}
     ${detailSources(e)}`;
   $("#sd-close").onclick = () => { scur = null; if (window.innerWidth < 1280) el.hidden = true; renderSort(); renderProfiles(); };
@@ -512,10 +544,15 @@ async function renderProfiles() {
   if (scur) { const e = POOL.find((x) => akey(x) === scur); if (e) { renderSortDetails(el, e); return; } scur = null; }
   const counts = {}; Object.values(ASSIGN).forEach((m) => Object.keys(m).forEach((p) => counts[p] = (counts[p] || 0) + 1));
   const list = PROFILES.map((p) => { const n = pending(p).length; return `<div class="prow ${pcur === p.slug ? "sel" : ""}" data-pp="${esc(p.slug)}"><b>${esc(p.name)}${p.kind === "oneoff" ? ` <span class="sub">one-off</span>` : ""}</b><span class="sub">${n ? `<span class="pill run" title="Not yet exported">${n} new</span> ` : ""}${counts[p.slug] || 0}</span></div>`; }).join("") +
-    `<div class="prow ${pcur === "none" ? "sel" : ""}" data-pp="none"><b class="sub">None</b><span class="sub">${counts.none || 0}</span></div>`;
+    `<div class="prow ${pcur === "none" ? "sel" : ""}" data-pp="none"><b class="sub">None</b><span class="sub">${counts.none || 0}</span></div>` +
+    `<div class="prow ${pcur === "unclear" ? "sel" : ""}" data-pp="unclear"><b class="sub">Can't tell</b><span class="sub">${counts.unclear || 0}</span></div>` +
+    `<div class="prow ${pcur === "guide" ? "sel" : ""}" data-pp="guide"><b class="sub">Ratings guide</b><span class="sub">1 – 5</span></div>`;
   const p = PROFILES.find((x) => x.slug === pcur);
   let detail = "";
-  if (p) {
+  if (pcur === "guide") {
+    const g = await charterFor("SCORING");
+    detail = `<div class="sec"><div class="charter">${esc(g || "profiles/SCORING.md is missing.")}</div><div class="sub" style="margin-top:12px"><a href="https://github.com/danisbuilding/eventrrr-scout/blob/main/profiles/SCORING.md" target="_blank" rel="noopener">Edit on GitHub</a></div></div>`;
+  } else if (p) {
     const ch = await charterFor(p.slug);
     const newN = pending(p).length, allN = POOL.filter((e) => (ASSIGN[akey(e)] || {})[p.slug] && !isPast(e)).length;
     const lastBatch = Object.entries(EXPORTED).filter(([k]) => k.startsWith(p.slug + "|")).map(([, b]) => b).sort().pop();
@@ -543,7 +580,7 @@ async function renderProfiles() {
   el.innerHTML = `<div class="insp-head"><span class="label">Calendars</span><span style="display:flex;gap:8px"><button class="btn btn-secondary" id="pp-new" style="min-height:32px;padding:6px 12px">+ New</button><button class="icon-btn btn btn-secondary close" id="pp-close" aria-label="Close profiles"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13"/></svg></button></span></div><div class="plist">${list}</div>${detail}`;
   $("#pp-new").onclick = () => { pcur = "new"; renderProfiles(); };
   $("#pp-close").onclick = () => { el.hidden = true; };
-  el.querySelectorAll("[data-pp]").forEach((r) => r.onclick = () => { pcur = r.dataset.pp; $("#sprofile").value = pcur; $("#sstate").value = "all"; renderSort(); renderProfiles(); });
+  el.querySelectorAll("[data-pp]").forEach((r) => r.onclick = () => { pcur = r.dataset.pp; if (pcur !== "guide") { $("#sprofile").value = pcur; $("#sstate").value = "all"; renderSort(); } renderProfiles(); });
   const save = $("#pp-save"); if (save) save.onclick = async () => { try { await provider.saveProfile(Object.assign({}, p, {persona: $("#pp-persona").value.trim(), handle: $("#pp-handle").value.trim()|| null, kind: $("#pp-kind").value, ends_on: $("#pp-ends").value || null})); toast("Calendar saved"); PROFILES = (await provider.profiles()).filter(isLive); renderSort(); renderProfiles(); } catch (e) { toast("Save failed: " + (e.message || e)); } };
   const arch = $("#pp-archive"); if (arch) arch.onclick = async () => { if (!arch.dataset.sure) { arch.textContent = "Archive? Click again"; arch.dataset.sure = "1"; return; } try { await provider.saveProfile(Object.assign({}, p, {active: false})); pcur = null; await loadSort(); toast("Profile archived; its assignments are kept"); } catch (e) { toast("Failed: " + (e.message || e)); } };
   const doExport = async (list) => {
@@ -572,7 +609,7 @@ async function renderProfiles() {
   };
 }
 function copySession() {
-  const rows = []; Object.entries(ASSIGN).forEach(([ak, m]) => { const [run, key] = splitAk(ak); const e = POOL.find((x) => akey(x) === ak); Object.values(m).forEach((x) => rows.push({run, key, profile: x.profile, score: x.score ?? null, score_actor: x.score != null ? (x.score_actor || "human") : null, charter_version: x.charter_version || null, source: x.source || "manual", note: x.note || null, updated_at: x.updated_at, title: e?.title, category: e?.category, venue: e?.venue, neighborhood: e?.neighborhood, price_text: e?.price_text, starts_at: e?.starts_at, ends_at: e?.ends_at || null, all_day: !!e?.all_day, highlight: !!e?.highlight, url: e?.url, source_excerpt: (e?.source_excerpt || "").slice(0, 300)})); });
+  const rows = []; Object.entries(ASSIGN).forEach(([ak, m]) => { const [run, key] = splitAk(ak); const e = POOL.find((x) => akey(x) === ak); if (!e) return; Object.values(m).forEach((x) => rows.push({run, key, profile: x.profile, score: x.score ?? null, score_actor: x.score != null ? (x.score_actor || "human") : null, charter_version: x.charter_version || null, source: x.source || "manual", note: x.note || null, updated_at: x.updated_at, title: e?.title, category: e?.category, venue: e?.venue, neighborhood: e?.neighborhood, price_text: e?.price_text, starts_at: e?.starts_at, ends_at: e?.ends_at || null, all_day: !!e?.all_day, highlight: !!e?.highlight, url: e?.url, source_excerpt: (e?.source_excerpt || "").slice(0, 300)})); });
   const unsorted = POOL.filter((e) => !isSorted(e)).map((e) => ({run: e.run, key: e.key, title: e.title, category: e.category}));
   copyText(JSON.stringify({session: new Date().toISOString().slice(0, 10), scale: SCORE_WORDS, profiles: PROFILES.map((p) => ({slug: p.slug, name: p.name, persona: p.persona, charter_version: CHARTER_META[p.slug]?.charter_version || null})), assignments: rows, unsorted_count: unsorted.length}, null, 1), "Session copied; paste it to Claude to update the charters");
 }

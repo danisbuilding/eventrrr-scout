@@ -182,6 +182,7 @@ textarea.input { width: 100%; min-height: 64px; resize: vertical; margin-top: 8p
 .pchip.none.on { background: var(--nv-neutral); border-color: var(--nv-neutral); }
 .pchip.sugg { border-style: dashed; }
 .pchip .n { font-weight: 500; font-variant-numeric: tabular-nums; }
+.th-link { margin-left: 10px; font-weight: 400; letter-spacing: 0; text-transform: none; }
 .pchip .n.legacy { opacity: .7; }
 /* 1–5 score strip: one per profile in the detail pane; inline in a row it takes the chip's place until a number is picked */
 .pstrips { display: flex; flex-direction: column; gap: 8px; }

@@ -24,6 +24,8 @@ How to use it
 - Can't tell: you looked, the listing doesn't say enough. Not a judgment on the event; it tells us what the extractor missed.
 - Duplicate: same event as another row. Removes this row from the pool; its scores stay recorded.
 
-What the curated calendar does with it (planned)
-- 5s always show. 4s go in a collapsed "N more". 3s and 2s fill a day that has nothing higher. 1s never export.
+What the curated calendar does with it (DP, 2026-11-03)
+- The score exists to settle competition for the slots: 3 to 4 events per day, 4 to 5 ongoing events per week. Highest scores take the slots; the rest of the 2s to 5s go in the collapsed "N more".
+- 1 is the only score that excludes. A 1 never reaches a curated calendar; it's not something the brand should be associated with.
+- Everything from 2 up is for the reader to judge. A 2 on a quiet day is on the calendar.
 - Ongoing events sit at the top of each week (weeks start Monday), ordered by closing date.

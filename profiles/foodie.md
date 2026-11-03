@@ -3,7 +3,7 @@ slug: foodie
 name: Food & Drink
 handle:            # Eventrrr @handle this profile exports to
 status: learning   # learning → assisted → auto
-charter_version: 3
+charter_version: 4
 sessions: 3
 ---
 
@@ -19,7 +19,7 @@ Producers and traditional cooks outrank chef dinners. The expensive one-night re
 - **3 — good.** Real producers or traditional cooks at a fair price: Mega Ofrenda "Entre Flores y Agaves" at ArsTelier (mezcal, Guerrero producers, $650); Fónico's cenas con cocineras tradicionales ($1,450; was None in session 1, now a 3).
 - **2 — fine.** Named-chef restaurant dinners at the top of the price range: Taberna del León ($2,250), Marta ($1,600).
 - **1 — mediocre.** A running seasonal menu (Madero Restaurante).
-- **No score yet.** Festival Cacao para todos at Anahuacalli (60 producers, traditional drinks) has a foodie row from session 1 and no score; it is a 4 on cultural and on kids.
+- **2–3 — Cacao para todos** (DP, 2026-11-03): walks the line. A chocolate-themed farmers' market more than a food experience; a few high-end chocolate makers, but no curation bar and not chefs. Include, never a 4 or 5. Rule: a producers' market scores above 3 only when someone curated the producers.
 
 ## Would never feature
 - A chain or multi-location promo, in season or not.
@@ -40,5 +40,5 @@ Producers and traditional cooks outrank chef dinners. The expensive one-night re
 
 ## Surprises
 - Resolved: Zócalo and Sendero were mis-taps.
-- Cacao para todos is the most foodie event in the run and has no foodie score. 4? 5?
+- Resolved: Cacao para todos is a 2–3 (market without a curation bar).
 - With Fónico now a 3, what separates it from Madero's 1? My guess: cooks you can name vs a restaurant's seasonal promo. Confirm?

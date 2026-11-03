@@ -310,15 +310,29 @@ function rfDates() {
   if (!$("#rf-from").value) $("#rf-from").value = iso(from);
   $("#rf-to").value = iso(new Date(new Date($("#rf-from").value).getTime() + weeks * 7 * 86400000));
 }
+let ghLast = 0;
 async function fetchStatus() {
-  try { const r = await fetch(`${(window.SCOUT_CONFIG.eventsBase || "").replace(/\/$/, "")}/runs/status.json?t=${Date.now()}`, {cache: "no-store"}); statusCache = r.ok ? await r.json() : null; } catch { statusCache = null; }
-  try { const r = await fetch(`${GH}/actions/workflows/pipeline.yml/runs?per_page=5`, {headers: {Accept: "application/vnd.github+json"}}); if (r.ok) { const j = await r.json(); statusCache = Object.assign({}, statusCache || {}, {gh: (j.workflow_runs || []).map((w) => ({id: w.id, status: w.status, conclusion: w.conclusion, created_at: w.created_at, url: w.html_url}))}); } } catch {}
+  try { const r = await fetch(`${(window.SCOUT_CONFIG.eventsBase || "").replace(/\/$/, "")}/runs/status.json?t=${Date.now()}`, {cache: "no-store"}); statusCache = Object.assign({}, statusCache || {}, r.ok ? await r.json() : {}); } catch {}
+  // GitHub's unauthenticated API allows 60 calls/hour, so ask it at most every 3 minutes (only for the failed-runs list and ids)
+  if (Date.now() - ghLast > 180000) {
+    ghLast = Date.now();
+    try { const r = await fetch(`${GH}/actions/workflows/pipeline.yml/runs?per_page=5`, {headers: {Accept: "application/vnd.github+json"}}); if (r.ok) { const j = await r.json(); statusCache = Object.assign({}, statusCache || {}, {gh: (j.workflow_runs || []).map((w) => ({id: w.id, status: w.status, conclusion: w.conclusion, created_at: w.created_at, url: w.html_url}))}); } } catch {}
+  }
   return statusCache;
+}
+function liveRun(st) {
+  const gh = (st && st.gh || []).find((w) => w.status !== "completed");
+  if (gh) return gh;
+  // status.json says running and it started less than 2 hours ago (the pipeline has a 90-minute cap)
+  if (st && st.state === "running" && st.started_at && Date.now() - new Date(st.started_at).getTime() < 7200000) {
+    return {id: st.workflow_run, created_at: st.started_at, url: `https://github.com/danisbuilding/eventrrr-scout/actions/runs/${st.workflow_run}`, status: "in_progress"};
+  }
+  return null;
 }
 async function renderRuns() {
   rfDates();
   const st = await fetchStatus();
-  const live = (st && st.gh || []).find((w) => w.status !== "completed");
+  const live = liveRun(st);
   const rs = $("#rf-status");
   if (live) {
     rs.innerHTML = `<span class="pill run">Running</span> started ${esc(new Date(live.created_at).toLocaleTimeString("en-US", {hour: "numeric", minute: "2-digit"}))} · <a href="${esc(live.url)}" target="_blank" rel="noopener">log</a> <button class="btn btn-secondary" id="rf-stop" style="min-height:32px;padding:6px 12px;margin-left:8px">Stop sweep</button>`;
@@ -342,7 +356,7 @@ async function stopSweep(runId) {
     const r = await fetch(`${window.SCOUT_CONFIG.supabaseUrl}/functions/v1/scout-trigger`, {method: "POST", headers: {"Content-Type": "application/json", Authorization: "Bearer " + session.access_token, apikey: window.SCOUT_CONFIG.supabaseAnonKey}, body: JSON.stringify({action: "cancel", run_id: String(runId)})});
     const j = await r.json().catch(() => ({}));
     if (!r.ok) throw new Error(j.error || j.message || ("HTTP " + r.status));
-    toast("Sweep stopped"); $("#rf-status").dataset.msg = ""; setTimeout(renderRuns, 5000);
+    toast("Sweep stopped"); $("#rf-status").dataset.msg = ""; ghLast = 0; if (statusCache) statusCache.state = "stopped"; setTimeout(renderRuns, 5000);
   } catch (e) { toast("Couldn't stop: " + (e.message || e), 6000); b.disabled = false; b.textContent = "Stop sweep"; }
 }
 async function startSweep(sb) {
@@ -357,7 +371,7 @@ async function startSweep(sb) {
     const j = await r.json().catch(() => ({}));
     if (!r.ok) throw new Error(j.error || j.message || ("HTTP " + r.status));
     rs.textContent = `Sweep started (${j.run || "run"}). Usually 10–25 minutes; this page updates itself.`;
-    toast("Sweep started");
+    toast("Sweep started"); ghLast = 0;
     setTimeout(renderRuns, 8000);
   } catch (e) { rs.textContent = "Couldn't start: " + (e.message || e); $("#rf-start").disabled = false; }
 }

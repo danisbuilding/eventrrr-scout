@@ -105,6 +105,82 @@ function supabaseProvider(sb, user, cfg) {
     },
   };
 }
+// Scout IQ (DP's own Supabase project, supabase/scout_iq*.sql). Same interface as supabaseProvider, different tables:
+// scores are append-only `assignments` rows keyed by occurrence × profile (the app resolves an event key to its
+// `run` occurrence through app_event_keys); None / Can't tell / Duplicate / Keep-Skip are `reviews` rows; the
+// per-profile export bookkeeping is `export_ledger`. Nothing is ever updated or deleted except export undo.
+function iqProvider(sb, user, cfg) {
+  const base = (cfg.eventsBase || "").replace(/\/$/, "");
+  const get = async (path) => { const r = await fetch(`${base}/${path}?t=${Math.floor(Date.now() / 60000)}`, {cache: "no-store"}); if (!r.ok) throw new Error(`${path}: HTTP ${r.status}`); return r.json(); };
+  const q = async (p) => { const {data, error} = await p; if (error) throw new Error(error.message + (error.hint ? ` (${error.hint})` : "")); return data; };
+  let KEYS = null, REVIEWER = null, PROFS = {}, lastReview = {};
+  const keys = async (force) => { if (!KEYS || force) { KEYS = {}; (await q(sb.from("app_event_keys").select("key,event_id,occurrence_id,run").limit(20000))).forEach((k) => { KEYS[k.key] = k; }); } return KEYS; };
+  const keyOf = async (key) => { let k = (await keys())[key]; if (!k) k = (await keys(true))[key]; if (!k) throw new Error(`Not in Scout IQ yet: ${key}. The pipeline writes it after the sweep; run the iq-backfill workflow for older runs.`); return k; };
+  const reviewerId = async () => { if (!REVIEWER) REVIEWER = await q(sb.rpc("scout_reviewer_id")); if (!REVIEWER) throw new Error("Your email is not on the reviewer list"); return REVIEWER; };
+  const profileId = async (slug) => { if (!PROFS[slug]) await this_profiles(); if (!PROFS[slug]) throw new Error(`Unknown calendar ${slug}`); return PROFS[slug]; };
+  const this_profiles = async () => { const rows = await q(sb.from("profiles").select("*").order("sort_order")); PROFS = {}; rows.forEach((r) => { PROFS[r.slug] = r.id; }); return rows.map((r) => Object.assign({}, r, {name: r.display_name})); };
+  const review = async (run, key, fields) => {
+    const k = await keyOf(key); const sig = JSON.stringify(fields);
+    if (lastReview[key] === sig) return; lastReview[key] = sig;
+    await q(sb.from("reviews").insert(Object.assign({event_id: k.event_id, reviewer_id: await reviewerId(), reviewed_at: new Date().toISOString()}, fields)));
+  };
+  const reviewRows = async () => await q(sb.from("app_reviews").select("run,key,decision,skip_reason,note,reviewed_at").limit(20000));
+  return {
+    name: "supabase", user,
+    async runs() { const idx = await get("runs/index.json"); return (idx.runs || []).filter((r) => !r.hidden); },
+    async load(run) {
+      const idx = await get("runs/index.json"); const r = (idx.runs || []).find((x) => x.run === run) || {run};
+      EVENTS = await get(`runs/${run}/events.json`);
+      META = {run, umbrella: r.umbrella, window: r.window || "", categories: window.SCOUT_CATEGORIES || [...new Set(EVENTS.map((e) => e.category))]};
+      const d = {}; (await reviewRows()).forEach((x) => { if (x.run === run && (x.decision || x.note)) d[x.key] = {decision: x.decision, note: x.note, at: x.reviewed_at}; });
+      return d;
+    },
+    async save(run, key, row) {
+      decisions[key] = row; setSync("Saving…");
+      try { await review(run, key, {decision: row.decision || null, skip_reason: row.decision === "skip" ? "skip" : null, note: row.note || null}); setSync("Saved"); }
+      catch (e) { setSync("Save failed: " + (e.message || e)); }
+    },
+    async decide(run, key, row) {
+      const dup = /^duplicate/i.test(row.note || "");
+      await review(run, key, {decision: row.decision || null, skip_reason: dup ? "duplicate" : (row.decision === "skip" ? "skip" : null), note: row.note || null});
+      if (run === META.run) decisions[key] = row;
+    },
+    async allDecisions() { const out = {}; (await reviewRows()).forEach((x) => { if (x.decision || x.note) out[x.run + "|" + x.key] = {decision: x.decision, note: x.note}; }); return out; },
+    profiles: this_profiles,
+    async saveProfile(p, isNew) {
+      const row = {slug: p.slug, display_name: p.name, persona: p.persona || null, handle: p.handle || null, kind: p.kind || "ongoing", ends_on: p.ends_on || null,
+        active: p.active !== false, sort_order: p.sort_order ?? 100, charter_path: `profiles/${p.slug}.md`, updated_at: new Date().toISOString()};
+      await q(isNew ? sb.from("profiles").insert(row) : sb.from("profiles").update(row).eq("slug", p.slug));
+    },
+    async assignments() {
+      const rows = (await q(sb.from("app_assignments").select("run,key,profile,score,score_actor,charter_version,source,note,updated_at,legacy,sorter_score").limit(20000))).map((x) => Object.assign({}, x, {score_actor: x.score == null ? null : x.score_actor}));
+      (await reviewRows()).forEach((x) => { if (x.skip_reason === "none" || x.skip_reason === "unclear") rows.push({run: x.run, key: x.key, profile: x.skip_reason, source: "manual", updated_at: x.reviewed_at}); });
+      return rows;
+    },
+    // row = {score, score_actor, charter_version, source, note} to set; null to take the profile off this event
+    async assign(run, key, profile, row) {
+      if (profile === "none" || profile === "unclear") { await review(run, key, {skip_reason: row ? profile : null}); return; }
+      const k = await keyOf(key);
+      await q(sb.from("assignments").insert({occurrence_id: k.occurrence_id, profile_id: await profileId(profile), score: row ? row.score ?? null : null, actor: "human",
+        actor_id: await reviewerId(), charter_version: row ? row.charter_version || null : null, legacy: !!row && row.score == null, withdrawn: !row,
+        source: (row && row.source) || "manual", note: (row && row.note) || null}));
+    },
+    async exports() { return (await q(sb.from("app_exports").select("profile,run,key,batch").limit(20000))); },
+    async markExported(rows) {
+      const ins = [];
+      for (const r of rows) ins.push({profile_id: await profileId(r.profile), occurrence_id: (await keyOf(r.key)).occurrence_id, batch: r.batch, exported_by: user.email});
+      await q(sb.from("export_ledger").upsert(ins, {onConflict: "profile_id,occurrence_id", ignoreDuplicates: true}));
+    },
+    async undoExport(profile, batch) { await q(sb.from("export_ledger").delete().match({profile_id: await profileId(profile), batch})); },
+    async allEvents() {
+      const idx = await get("runs/index.json"); const out = [];
+      for (const r of (idx.runs || []).filter((x) => !x.hidden && !x.run.startsWith("sample"))) {
+        try { (await get(`runs/${r.run}/events.json`)).forEach((e) => out.push(Object.assign({run: r.run}, e))); } catch {}
+      }
+      return out;
+    },
+  };
+}
 
 // ---------- helpers
 const decisionOf = (e) => decisions[e.key]?.decision || null;
@@ -685,13 +761,14 @@ async function boot() {
   if (!session) { gateSignIn(); sb.auth.onAuthStateChange((_, s) => { if (s) location.reload(); }); return; }
   const user = session.user;
   stage("Checking access for " + user.email + "…");
-  const {data: rev, error: revErr} = await withTimeout(sb.from("scout_reviewers").select("email").limit(1), 15000, "Access check").catch((e) => ({data: null, error: e}));
+  const iq = cfg.schema === "iq"; // Scout IQ project (supabase/scout_iq*.sql) vs the old scout_* tables in Eventrrr's project
+  const {data: rev, error: revErr} = await withTimeout(sb.from(iq ? "reviewers" : "scout_reviewers").select("email").limit(1), 15000, "Access check").catch((e) => ({data: null, error: e}));
   if (revErr) { showGate(`<div class="gate-card"><h2 class="title">Access check failed</h2><p>${esc(revErr.message)}</p><button class="btn btn-secondary" id="retry">Retry</button></div>`); $("#retry").onclick = () => location.reload(); return; }
   if (!rev || !rev.length) {
     showGate(`<div class="gate-card"><h2 class="title">Not on the list</h2><p>${esc(user.email)} isn't a reviewer for this scout.</p><button class="btn btn-secondary" id="signout">Sign out</button></div>`);
     $("#signout").onclick = async () => { await sb.auth.signOut(); location.reload(); }; return;
   }
-  provider = supabaseProvider(sb, user, cfg);
+  provider = iq ? iqProvider(sb, user, cfg) : supabaseProvider(sb, user, cfg);
   sbRef = sb; $("#rf-start").onclick = () => startSweep(sb);
   $("#as-add").onclick = () => addSource(sb, false); $("#as-force").onclick = () => addSource(sb, true);
   const acct = $("#account");

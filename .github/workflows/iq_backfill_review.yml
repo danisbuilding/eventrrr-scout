@@ -1,0 +1,20 @@
+name: iq-backfill-review
+# One-time: migrate the review side (profiles, assignments, reviews, exports, reviewers) from the snapshot of the
+# old scout_* tables into Scout IQ. Run after scout_iq_review.sql and after iq-backfill wrote every run.
+on:
+  workflow_dispatch:
+    inputs:
+      snapshot: {description: "Path of the snapshot JSON in the repo", required: true, default: "profiles/sessions/2026-11-03-migration.json"}
+
+jobs:
+  write:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      SCOUT_IQ_DB_URL: "${{ secrets.SCOUT_IQ_DB_URL }}"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install "psycopg[binary]"
+      - run: python scout/iq_backfill_review.py "${{ inputs.snapshot }}"

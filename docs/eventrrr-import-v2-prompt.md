@@ -1,6 +1,6 @@
 # Bolt prompt: Scout export v2 on the Paste text tab, and the curated-calendar view
 
-Status: not yet run in Bolt. Follows `eventrrr-import-prompt.md` (v1, ran 2026-10-28). The Scout now sends v2
+Status: Prompts A and B ran in Bolt on 2026-11-04 and were verified in the live app (see the Scout Build Handover). Follows `eventrrr-import-prompt.md` (v1, ran 2026-10-28). The Scout now sends v2
 payloads; until this prompt runs, v1 import still works because every v1 field name is unchanged and unknown keys are
 ignored (the Scout-side builder is `exportJson` in `site/app.js`).
 
@@ -109,5 +109,5 @@ Add a per-calendar boolean `show_overflow` (default false) in the calendar's set
 
 - Paste Eventrrr's reply block into the Scout's profile panel ("Record Eventrrr's reply") so `calendars.eventrrr_calendar_id`
   and `exports.eventrrr_event_ids` fill in. That closes the loop the Scout IQ spec asks for.
-- The v1 `tags` and the `slug` / `name` / `eventrrr_name` keys inside `calendar` can be dropped from `exportJson` once
-  Prompt A is live; they are there so the current Paste tab keeps accepting the batches.
+- The v1 `tags` and the `slug` / `name` / `eventrrr_name` keys inside `calendar` were dropped from `exportJson` on
+  2026-11-04, after Prompt A went live.

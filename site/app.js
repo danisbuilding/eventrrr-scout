@@ -361,16 +361,14 @@ function computeTiers(slug) {
 }
 function exportJson(list, cal, tiers, exportId) {
   const base = {eventrrr_import: 1, scout_export: "v2", source: "eventrrr-scout", run: cal ? "calendar:" + cal.slug : META.run};
-  const calendar = cal ? {calendar: {profile: cal.slug, profile_name: cal.name, city: CITY.name, city_slug: CITY.slug, handle_slug: `${cal.slug}-${CITY.slug}`,
-    // v1 names, still read by the current Paste tab
-    slug: cal.slug, name: cal.name, eventrrr_name: cal.handle || null}, export_id: exportId || null} : {};
+  const calendar = cal ? {calendar: {profile: cal.slug, profile_name: cal.name, city: CITY.name, city_slug: CITY.slug, handle_slug: `${cal.slug}-${CITY.slug}`}, export_id: exportId || null} : {};
   return JSON.stringify(Object.assign(base, calendar, {events: list.map((e) => Object.assign({
     title: e.title, starts_at: e.starts_at, ends_at: e.ends_at || null, all_day: !!e.all_day, timezone: e.timezone || TZ,
     venue: e.venue || null, address: e.address || null, neighborhood: e.neighborhood || null,
     price_text: e.price_text || (e.price_min === 0 ? "Free" : null), price_min: e.price_min ?? null, currency: e.currency || "MXN",
     url: e.url && /^https?:\/\//.test(e.url) ? e.url : null, category: e.category, description: e.description || null,
     public_note: (decisions[e.key]?.note || "").slice(0, 140) || null,
-  }, cal ? {tags: [cal.slug], tier: (tiers && tiers[akey(e)]) || "main"} : {}))}), null, 1);
+  }, cal ? {tier: (tiers && tiers[akey(e)]) || "main"} : {}))}), null, 1);
 }
 function copyText(t, ok) {
   return navigator.clipboard.writeText(t).then(() => { toast(ok); return true; }, () => { const r = document.createElement("textarea"); r.value = t; document.body.appendChild(r); r.select(); let done = false; try { done = document.execCommand("copy"); toast(done ? ok : "Copy failed"); } catch { toast("Copy failed"); } r.remove(); return done; });

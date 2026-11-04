@@ -4,8 +4,8 @@
 -- exports), the views, and RLS for the app (anon key + Google sign-in, same model as before).
 --
 -- Paste into the SQL editor and run once; safe to re-run. No placeholders. Then: Authentication → Providers →
--- Google (see docs/scout-iq-cutover.md), and add your sign-in emails to `reviewers` if they differ from the two
--- seeded below.
+-- Google (see docs/scout-iq-cutover.md). The reviewer allow-list is the two emails seeded below; anything else is
+-- deactivated.
 
 set client_min_messages = warning;
 
@@ -20,8 +20,9 @@ create table if not exists reviewers (
   active      boolean not null default true,
   created_at  timestamptz not null default now()
 );
-insert into reviewers (email) values ('accounts@danielstringer.com'), ('daniel.stringer@gmail.com')
+insert into reviewers (email) values ('daniel.stringer@gmail.com'), ('dib@dib.works')
 on conflict (email) do nothing;
+update reviewers set active = false where email not in ('daniel.stringer@gmail.com', 'dib@dib.works');
 
 create table if not exists profiles (
   id               uuid primary key default gen_random_uuid(),

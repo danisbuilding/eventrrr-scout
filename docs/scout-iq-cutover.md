@@ -6,7 +6,7 @@ here touches Eventrrr's project or the old `scout_*` tables, which keep working 
 
 | # | Who | What | Check |
 |---|---|---|---|
-| 1 | DP | SQL editor → paste and run `supabase/scout_iq_review.sql` (no placeholders) | "Success. No rows returned"; Table Editor shows `profiles`, `assignments`, `reviews`, `reviewers`, `export_ledger` |
+| 1 | DP | SQL editor → paste and run `supabase/scout_iq_review.sql` (no placeholders). Reviewer allow-list = daniel.stringer@gmail.com and dib@dib.works; the script deactivates any other row | "Success. No rows returned"; Table Editor shows `profiles`, `assignments`, `reviews`, `reviewers`, `export_ledger` |
 | 2 | DP | Authentication → Sign In / Providers → Google: enable, paste a Google OAuth client id + secret (Google Cloud Console → APIs & Services → Credentials → OAuth client, type Web; authorized redirect URI `https://tlwyhxvytmhpcgrismsz.supabase.co/auth/v1/callback`). Authentication → URL Configuration: Site URL `https://scout.eventrrr.com`, add `https://scout.eventrrr.com/**` to Redirect URLs | Provider shows Enabled |
 | 3 | DP | Edge Functions → Deploy a new function via the editor, name `scout-trigger`, paste `supabase/functions/scout-trigger/index.ts`; Edge Functions → Secrets → add `GITHUB_SCOUT_TOKEN` (same value as in Eventrrr's project) | Function listed; without it the Runs and Sources tabs return "Sign in first" after the cutover |
 | 4 | Claude | Pull the live `scout_*` rows from the signed-in app into `profiles/sessions/2026-11-03-migration.json`, commit | File in the repo |

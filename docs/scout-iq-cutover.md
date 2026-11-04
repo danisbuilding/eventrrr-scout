@@ -27,7 +27,18 @@ Rollback: set `SCOUT_IQ_LIVE` to `false` and re-run `pages`; the site returns to
 - supabase-js 2.45.4 → 2.112.0 for the publishable-key format.
 - The edge function is unchanged; it just needs to exist in the new project (step 3).
 
-## Later (not in this step)
+## Step 5 (export v2) — after step 4 is live
 
-- Step 5: `calendars`, `exports`, export v2; `export_ledger` goes away.
+| # | Who | What | Check |
+|---|---|---|---|
+| 1 | DP | SQL editor → run `supabase/scout_iq_export.sql` (creates `calendars`, `exports`; retires `export_ledger`) | Table Editor shows `calendars`, `exports`; no `export_ledger` |
+| 2 | — | Site already exports v2: payload carries `scout_export: "v2"`, `export_id`, a `calendar` block and `tier` per event; the Export button says "N new: M main, K overflow"; 2s without a slot wait in the pool | Export once; Table Editor → `exports` has the batch with `tier_by_occurrence` |
+| 3 | DP | Bolt: run Prompt A from `docs/eventrrr-import-v2-prompt.md` (calendar match + tiers + reply block), later Prompt B (week bands, overflow) | Prompt's own tests |
+| 4 | DP | After an import, paste Eventrrr's reply into the profile panel ("Record Eventrrr's reply") | `calendars.eventrrr_calendar_id`, `exports.eventrrr_event_ids` filled |
+
+Until step 1 runs, exporting from the site fails to record (the copy still works) with "relation exports does not exist".
+
+## Later
+
+- Step 6: raw text to Supabase Storage; nightly session dump replacing Copy session.
 - Step 7: drop the old `scout_*` tables from Eventrrr via Bolt once this has run clean for a week.

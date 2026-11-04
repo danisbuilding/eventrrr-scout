@@ -46,7 +46,7 @@ function inlineProvider(inline) {
     async assign(run, key, profile, row) { let as = await this.assignments(); as = as.filter((x) => !(x.run === run && x.key === key && x.profile === profile)); if (row) as.push(Object.assign({run, key, profile, source: "manual", updated_at: new Date().toISOString()}, row)); try { localStorage.setItem("scout-assignments", JSON.stringify(as)); } catch {} },
     async allEvents() { return (inline.events || []).map((e) => Object.assign({run: inline.meta.run}, e)); },
     async exports() { try { return JSON.parse(localStorage.getItem("scout-exports") || "[]"); } catch { return []; } },
-    async markExported(rows) { const ex = (await this.exports()).concat(rows); try { localStorage.setItem("scout-exports", JSON.stringify(ex)); } catch {} },
+    async recordExport({profile, events}) { const batch = new Date().toISOString(); const ex = (await this.exports()).concat(events.map((e) => ({profile: profile.slug, run: e.run, key: e.key, batch, tier: e.tier}))); try { localStorage.setItem("scout-exports", JSON.stringify(ex)); } catch {} return batch; },
     async undoExport(profile, batch) { const ex = (await this.exports()).filter((x) => !(x.profile === profile && x.batch === batch)); try { localStorage.setItem("scout-exports", JSON.stringify(ex)); } catch {} },
   };
 }
@@ -94,7 +94,7 @@ function supabaseProvider(sb, user, cfg) {
       else { const {error} = await sb.from("scout_assignments").delete().match({run, key, profile}); if (error) throw error; }
     },
     async exports() { const {data, error} = await sb.from("scout_exports").select("profile,run,key,batch").limit(10000); if (error) throw error; return data || []; },
-    async markExported(rows) { const {error} = await sb.from("scout_exports").upsert(rows.map((r) => Object.assign({exported_by: user.email}, r)), {onConflict: "profile,run,key"}); if (error) throw error; },
+    async recordExport({profile, events}) { const batch = new Date().toISOString(); const {error} = await sb.from("scout_exports").upsert(events.map((e) => ({profile: profile.slug, run: e.run, key: e.key, batch, exported_by: user.email})), {onConflict: "profile,run,key"}); if (error) throw error; return batch; },
     async undoExport(profile, batch) { const {error} = await sb.from("scout_exports").delete().match({profile, batch}); if (error) throw error; },
     async allEvents() {
       const idx = await get("runs/index.json"); const out = [];
@@ -165,13 +165,28 @@ function iqProvider(sb, user, cfg) {
         actor_id: await reviewerId(), charter_version: row ? row.charter_version || null : null, legacy: !!row && row.score == null, withdrawn: !row,
         source: (row && row.source) || "manual", note: (row && row.note) || null}));
     },
-    async exports() { return (await q(sb.from("app_exports").select("profile,run,key,batch").limit(20000))); },
-    async markExported(rows) {
-      const ins = [];
-      for (const r of rows) ins.push({profile_id: await profileId(r.profile), occurrence_id: (await keyOf(r.key)).occurrence_id, batch: r.batch, exported_by: user.email});
-      await q(sb.from("export_ledger").upsert(ins, {onConflict: "profile_id,occurrence_id", ignoreDuplicates: true}));
+    async exports() { return (await q(sb.from("app_exports").select("profile,run,key,batch,tier").limit(20000))); },
+    // One export = one profile × one city → a `calendars` row (first time) and an `exports` row with the tiers.
+    async calendarFor(p) {
+      const account = p.handle || p.slug;
+      const found = await q(sb.from("app_calendars").select("id,eventrrr_calendar_id").eq("profile", p.slug).eq("city_slug", CITY.slug).eq("eventrrr_account", account));
+      if (found.length) return found[0];
+      const city = await q(sb.from("cities").select("id").eq("slug", CITY.slug).single());
+      const rows = await q(sb.from("calendars").insert({profile_id: await profileId(p.slug), city_id: city.id, eventrrr_account: account, handle_slug: `${p.slug}-${CITY.slug}`}).select("id,eventrrr_calendar_id"));
+      return rows[0];
     },
-    async undoExport(profile, batch) { await q(sb.from("export_ledger").delete().match({profile_id: await profileId(profile), batch})); },
+    async recordExport({id, profile, events}) {
+      const cal = await this.calendarFor(profile);
+      const occ = [], tiers = {};
+      for (const e of events) { const o = (await keyOf(e.key)).occurrence_id; occ.push(o); tiers[o] = e.tier; }
+      await q(sb.from("exports").insert({id, calendar_id: cal.id, exported_by: user.email, occurrence_ids: occ, tier_by_occurrence: tiers}));
+      return id;
+    },
+    async undoExport(profile, batch) { await q(sb.from("exports").update({undone_at: new Date().toISOString()}).eq("id", batch)); },
+    async recordEventrrrIds(profile, exportId, calendarId, eventIds) {
+      if (calendarId) { const cal = await this.calendarFor(profile); await q(sb.from("calendars").update({eventrrr_calendar_id: String(calendarId)}).eq("id", cal.id)); }
+      if (eventIds && exportId) await q(sb.from("exports").update({eventrrr_event_ids: eventIds}).eq("id", exportId));
+    },
     async allEvents() {
       const idx = await get("runs/index.json"); const out = [];
       for (const r of (idx.runs || []).filter((x) => !x.hidden && !x.run.startsWith("sample"))) {
@@ -291,14 +306,71 @@ function renderInspector() {
 }
 
 // ---------- export (contract: docs/eventrrr-import-prompt.md)
-function exportJson(list, cal) {
-  return JSON.stringify(Object.assign({eventrrr_import: 1, source: "eventrrr-scout", run: cal ? "calendar:" + cal.slug : META.run}, cal ? {calendar: {slug: cal.slug, name: cal.name, eventrrr_name: cal.handle || null}} : {}, {events: list.map((e) => Object.assign({
+// ---------- export v2: tiers and payload
+// One export = one profile × one city. Until `cities` has a second row everything is Mexico City.
+const CITY = {name: "Mexico City", slug: "cdmx"};
+// Slot rule (DP, 2026-11-03): per day the top DAY_SLOTS dated events by score are `main`; per Monday-start week band
+// the top WEEK_SLOTS ongoing events are `main`; the rest with score ≥ 3 are `overflow`, at most OVERFLOW_MAX per
+// day or band; a 2 fills a free slot or stays in the pool (never overflow); a 1 is never exported. Legacy fit-only
+// rows (no score yet) count as a 2. Ties: rankWithinScore.
+const DAY_SLOTS = 3, WEEK_SLOTS = 4, OVERFLOW_MAX = 6, TIER_WEEKS = 8;
+const dayOf = (iso) => new Date(iso).toLocaleDateString("en-CA", {timeZone: TZ});
+const isOngoing = (e) => !!e.ends_at && dayOf(e.ends_at) > dayOf(e.starts_at);
+const mondayOf = (day) => { const d = new Date(day + "T12:00:00Z"); d.setUTCDate(d.getUTCDate() - ((d.getUTCDay() + 6) % 7)); return d.toISOString().slice(0, 10); };
+const addDays = (day, n) => { const d = new Date(day + "T12:00:00Z"); d.setUTCDate(d.getUTCDate() + n); return d.toISOString().slice(0, 10); };
+const effScore = (a) => (a && a.score != null) ? a.score : 2;
+// Orders events that tie on the human score: the sorter's score (decimal once sort.py emits one), then the pipeline's
+// rubric score, then the signals that mark a real pick (one-off, named organizer, well-rated venue), then earliest
+// updated_at. DP's override is to raise the human score.
+function rankWithinScore(ea, aa, eb, ab) {
+  const sa = aa?.sorter_score ?? -1, sb = ab?.sorter_score ?? -1; if (sa !== sb) return sb - sa;
+  const ra = ea.score ?? 0, rb = eb.score ?? 0; if (ra !== rb) return rb - ra;
+  const sig = (e) => ["one_off", "credible_organizer", "venue_rated"].filter((k) => e.signals && e.signals[k]).length;
+  if (sig(ea) !== sig(eb)) return sig(eb) - sig(ea);
+  return (aa?.updated_at || "").localeCompare(ab?.updated_at || "");
+}
+// Tier for every live event assigned to the profile (exported or not: earlier exports hold their slots).
+// Returns {akey: "main" | "overflow"}; events without an entry are not exported.
+function computeTiers(slug) {
+  const live = POOL.filter((e) => exportable((ASSIGN[akey(e)] || {})[slug]) && !isPast(e));
+  const a = (e) => (ASSIGN[akey(e)] || {})[slug];
+  const cmp = (x, y) => (effScore(a(y)) - effScore(a(x))) || rankWithinScore(x, a(x), y, a(y));
+  const tiers = {};
+  const award = (group, slots) => {
+    group.sort(cmp);
+    let overflow = 0;
+    group.forEach((e, i) => {
+      const k = akey(e), s = effScore(a(e));
+      if (i < slots) { tiers[k] = "main"; return; }
+      if (s >= 3 && overflow < OVERFLOW_MAX && tiers[k] !== "main") { tiers[k] = tiers[k] || "overflow"; overflow++; }
+    });
+  };
+  const byDay = {};
+  live.filter((e) => !isOngoing(e)).forEach((e) => (byDay[dayOf(e.starts_at)] ||= []).push(e));
+  Object.values(byDay).forEach((g) => award(g, DAY_SLOTS));
+  const ongoing = live.filter(isOngoing);
+  if (ongoing.length) {
+    const first = mondayOf(todayLocal());
+    for (let w = 0; w < TIER_WEEKS; w++) {
+      const bandStart = addDays(first, 7 * w), bandEnd = addDays(bandStart, 6);
+      const g = ongoing.filter((e) => dayOf(e.starts_at) <= bandEnd && dayOf(e.ends_at) >= bandStart);
+      if (g.length) award(g, WEEK_SLOTS);
+    }
+  }
+  return tiers;
+}
+function exportJson(list, cal, tiers, exportId) {
+  const base = {eventrrr_import: 1, scout_export: "v2", source: "eventrrr-scout", run: cal ? "calendar:" + cal.slug : META.run};
+  const calendar = cal ? {calendar: {profile: cal.slug, profile_name: cal.name, city: CITY.name, city_slug: CITY.slug, handle_slug: `${cal.slug}-${CITY.slug}`,
+    // v1 names, still read by the current Paste tab
+    slug: cal.slug, name: cal.name, eventrrr_name: cal.handle || null}, export_id: exportId || null} : {};
+  return JSON.stringify(Object.assign(base, calendar, {events: list.map((e) => Object.assign({
     title: e.title, starts_at: e.starts_at, ends_at: e.ends_at || null, all_day: !!e.all_day, timezone: e.timezone || TZ,
     venue: e.venue || null, address: e.address || null, neighborhood: e.neighborhood || null,
     price_text: e.price_text || (e.price_min === 0 ? "Free" : null), price_min: e.price_min ?? null, currency: e.currency || "MXN",
     url: e.url && /^https?:\/\//.test(e.url) ? e.url : null, category: e.category, description: e.description || null,
     public_note: (decisions[e.key]?.note || "").slice(0, 140) || null,
-  }, cal ? {tags: [cal.slug]} : {}))}), null, 1);
+  }, cal ? {tags: [cal.slug], tier: (tiers && tiers[akey(e)]) || "main"} : {}))}), null, 1);
 }
 function copyText(t, ok) {
   return navigator.clipboard.writeText(t).then(() => { toast(ok); return true; }, () => { const r = document.createElement("textarea"); r.value = t; document.body.appendChild(r); r.select(); let done = false; try { done = document.execCommand("copy"); toast(done ? ok : "Copy failed"); } catch { toast("Copy failed"); } r.remove(); return done; });
@@ -474,7 +546,11 @@ const exportable = (a) => a && (a.score == null || a.score >= 2); // legacy (uns
 const isDup = (e) => { const d = DECIDED[akey(e)]; return !!d && d.decision === "skip" && /^duplicate/i.test(d.note || ""); };
 let DECIDED = {};
 // events on a calendar that are upcoming and not yet exported to it
-const pending = (p) => POOL.filter((e) => exportable((ASSIGN[akey(e)] || {})[p.slug]) && !isPast(e) && !EXPORTED[expKey(p.slug, e)]);
+let TIERS = {}; // profile slug → {akey: tier}, recomputed by renderProfiles
+const tiersFor = (p) => (TIERS[p.slug] ||= computeTiers(p.slug));
+// Not yet exported and holding a slot (main) or an overflow place; 2s that lost the slot race wait in the pool.
+const pending = (p) => POOL.filter((e) => exportable((ASSIGN[akey(e)] || {})[p.slug]) && !isPast(e) && !EXPORTED[expKey(p.slug, e)] && tiersFor(p)[akey(e)]);
+const heldBack = (p) => POOL.filter((e) => exportable((ASSIGN[akey(e)] || {})[p.slug]) && !isPast(e) && !EXPORTED[expKey(p.slug, e)] && !tiersFor(p)[akey(e)]);
 const akey = (e) => e.run + "|" + e.key;
 const splitAk = (ak) => { const i = ak.indexOf("|"); return [ak.slice(0, i), ak.slice(i + 1)]; }; // key itself contains "|date"
 const profilesOf = (e) => Object.keys(ASSIGN[akey(e)] || {});
@@ -636,6 +712,7 @@ function renderSortDetails(el, e) {
   $("#sd-close").onclick = () => { scur = null; if (window.innerWidth < 1280) el.hidden = true; renderSort(); renderProfiles(); };
 }
 async function renderProfiles() {
+  TIERS = {};
   const el = $("#pinsp"); if (el.dataset.inited !== "1") { el.dataset.inited = "1"; el.hidden = window.innerWidth < 1280; }
   if (scur) { const e = POOL.find((x) => akey(x) === scur); if (e) { renderSortDetails(el, e); return; } scur = null; }
   const counts = {}; Object.values(ASSIGN).forEach((m) => Object.keys(m).forEach((p) => counts[p] = (counts[p] || 0) + 1));
@@ -650,10 +727,12 @@ async function renderProfiles() {
     detail = `<div class="sec"><div class="charter">${esc(g || "profiles/SCORING.md is missing.")}</div><div class="sub" style="margin-top:12px"><a href="https://github.com/danisbuilding/eventrrr-scout/blob/main/profiles/SCORING.md" target="_blank" rel="noopener">Edit on GitHub</a></div></div>`;
   } else if (p) {
     const ch = await charterFor(p.slug);
-    const newN = pending(p).length, allN = POOL.filter((e) => (ASSIGN[akey(e)] || {})[p.slug] && !isPast(e)).length;
+    const pend = pending(p), newN = pend.length, heldN = heldBack(p).length, allN = POOL.filter((e) => (ASSIGN[akey(e)] || {})[p.slug] && !isPast(e)).length;
+    const tiers = tiersFor(p), mainN = pend.filter((e) => tiers[akey(e)] === "main").length;
     const lastBatch = Object.entries(EXPORTED).filter(([k]) => k.startsWith(p.slug + "|")).map(([, b]) => b).sort().pop();
-    detail = `<div class="sec"><h2 class="ev-title" style="font-size:22px;line-height:28px">${esc(p.name)}</h2><div class="sub">${esc(p.handle ? "Eventrrr: " + p.handle : "Eventrrr calendar not set")} · ${counts[p.slug] || 0} events · ${allN} upcoming · ${newN} not yet exported</div>
-      <div class="actions" style="margin-top:16px"><button class="btn btn-primary" id="pp-export" style="flex:0 0 auto" ${newN ? "" : "disabled"}>Export to Eventrrr (${newN} new)</button>${allN > newN ? `<button class="link-btn" id="pp-export-all">Re-export all ${allN}</button>` : ""}${lastBatch ? `<button class="link-btn" id="pp-undo">Undo last export</button>` : ""}</div>
+    detail = `<div class="sec"><h2 class="ev-title" style="font-size:22px;line-height:28px">${esc(p.name)}</h2><div class="sub">${esc(p.handle ? "Eventrrr: " + p.handle : "Eventrrr calendar not set")} · ${CITY.name} · ${counts[p.slug] || 0} events · ${allN} upcoming · ${newN} not yet exported${heldN ? ` · ${heldN} waiting (2s without a slot)` : ""}</div>
+      <div class="actions" style="margin-top:16px"><button class="btn btn-primary" id="pp-export" style="flex:0 0 auto" ${newN ? "" : "disabled"}>Export to Eventrrr (${newN} new: ${mainN} main, ${newN - mainN} overflow)</button>${allN > newN ? `<button class="link-btn" id="pp-export-all">Re-export all ${allN}</button>` : ""}${lastBatch ? `<button class="link-btn" id="pp-undo">Undo last export</button>` : ""}</div>
+      ${lastBatch && provider.recordEventrrrIds ? `<details style="margin-top:10px"><summary class="sub">Record Eventrrr's reply (calendar id, event ids)</summary><textarea class="input" id="pp-ids-text" rows="3" placeholder='{"calendar_id": "…", "event_ids": ["…"]}'></textarea><div class="actions" style="margin-top:8px"><button class="btn btn-secondary" id="pp-ids" style="flex:0 0 auto">Save ids</button></div></details>` : ""}
       <div class="pform">
         <label>Persona<textarea class="input" id="pp-persona" rows="4">${esc(p.persona || "")}</textarea></label>
         <label>Eventrrr calendar <span class="sub">(its name in Eventrrr)</span><input class="input" id="pp-handle" value="${esc(p.handle || "")}" placeholder="Food & Drink"></label>
@@ -682,11 +761,21 @@ async function renderProfiles() {
   const doExport = async (list) => {
     if (!list.length) return toast("Nothing to export");
     if (list.length > 100) return toast("Eventrrr imports up to 100 at a time; narrow with the run filter");
-    const ok = await copyText(exportJson(list, p), `${list.length} events copied, tagged ${p.slug}. Paste into Eventrrr → Paste text.`);
+    const tiers = tiersFor(p), exportId = (crypto.randomUUID ? crypto.randomUUID() : String(Date.now()));
+    const nMain = list.filter((e) => tiers[akey(e)] === "main").length;
+    const ok = await copyText(exportJson(list, p, tiers, exportId), `${list.length} events copied (${nMain} main, ${list.length - nMain} overflow), calendar ${p.slug} · ${CITY.name}. Paste into Eventrrr → Paste text.`);
     if (!ok) return;
-    const batch = new Date().toISOString();
-    try { await provider.markExported(list.map((e) => ({profile: p.slug, run: e.run, key: e.key, batch}))); list.forEach((e) => { EXPORTED[expKey(p.slug, e)] = batch; }); renderProfiles(); }
-    catch (e) { toast("Copied, but couldn't record the export: " + (e.message || e), 8000); }
+    try {
+      const batch = await provider.recordExport({id: exportId, profile: p, events: list.map((e) => ({run: e.run, key: e.key, tier: tiers[akey(e)] || "main"}))});
+      list.forEach((e) => { EXPORTED[expKey(p.slug, e)] = batch; }); renderProfiles();
+    } catch (e) { toast("Copied, but couldn't record the export: " + (e.message || e), 8000); }
+  };
+  const ids = $("#pp-ids"); if (ids) ids.onclick = async () => {
+    const raw = $("#pp-ids-text").value.trim(); if (!raw) return;
+    let parsed; try { parsed = JSON.parse(raw); } catch { return toast("Paste Eventrrr's JSON reply: {\"calendar_id\": …, \"event_ids\": […]}"); }
+    const lastBatch = Object.entries(EXPORTED).filter(([k]) => k.startsWith(p.slug + "|")).map(([, b]) => b).sort().pop();
+    try { await provider.recordEventrrrIds(p, parsed.export_id || lastBatch, parsed.calendar_id || null, parsed.event_ids || null); toast("Eventrrr ids recorded"); $("#pp-ids-text").value = ""; }
+    catch (e) { toast("Couldn't record: " + (e.message || e), 8000); }
   };
   const exp = $("#pp-export"); if (exp) exp.onclick = () => doExport(pending(p));
   const expAll = $("#pp-export-all"); if (expAll) expAll.onclick = () => doExport(POOL.filter((e) => (ASSIGN[akey(e)] || {})[p.slug] && !isPast(e)));

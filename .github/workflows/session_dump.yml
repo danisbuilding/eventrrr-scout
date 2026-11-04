@@ -1,0 +1,32 @@
+name: session-dump
+# Nightly: current assignments from Scout IQ → profiles/sessions/<date>.json (the Copy session shape), committed when
+# something changed, so the sorting chat reads the repo. Replaces Copy session.
+on:
+  schedule:
+    - cron: "23 6 * * *"   # 06:23 UTC = 00:23 Mexico City
+  workflow_dispatch:
+    inputs:
+      force: {description: "Write even if nothing changed", required: false, default: "false"}
+
+permissions:
+  contents: write
+
+concurrency: {group: pipeline, cancel-in-progress: false}
+
+jobs:
+  dump:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      SCOUT_IQ_DB_URL: "${{ secrets.SCOUT_IQ_DB_URL }}"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install "psycopg[binary]"
+      - run: python scout/iq_session_dump.py ${{ inputs.force == 'true' && '--force' || '' }}
+      - run: |
+          git config user.name "eventrrr-scout bot"; git config user.email "bot@users.noreply.github.com"
+          git add profiles/sessions/
+          git diff --cached --quiet || git commit -m "sessions: nightly dump $(date -u +%F)"
+          for i in 1 2 3; do git pull --rebase origin main && git push && break; sleep $((i * 5)); done

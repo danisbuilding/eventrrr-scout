@@ -11,6 +11,9 @@ jobs:
     timeout-minutes: 15
     env:
       SCOUT_IQ_DB_URL: "${{ secrets.SCOUT_IQ_DB_URL }}"
+      SCOUT_IQ_S3_ACCESS_KEY: "${{ secrets.SCOUT_IQ_S3_ACCESS_KEY }}"
+      SCOUT_IQ_S3_SECRET_KEY: "${{ secrets.SCOUT_IQ_S3_SECRET_KEY }}"
+      SCOUT_IQ_S3_REGION: "${{ vars.SCOUT_IQ_S3_REGION }}"
       OPENAI_EXTRACT_MODEL: "${{ vars.OPENAI_EXTRACT_MODEL }}"
     steps:
       - uses: actions/checkout@v4

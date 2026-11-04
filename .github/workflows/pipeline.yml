@@ -30,6 +30,9 @@ jobs:
       GEMINI_API_KEY: "${{ secrets.GEMINI_API_KEY }}"
       GOOGLE_PLACES_API_KEY: "${{ secrets.GOOGLE_PLACES_API_KEY }}"
       SCOUT_IQ_DB_URL: "${{ secrets.SCOUT_IQ_DB_URL }}"
+      SCOUT_IQ_S3_ACCESS_KEY: "${{ secrets.SCOUT_IQ_S3_ACCESS_KEY }}"
+      SCOUT_IQ_S3_SECRET_KEY: "${{ secrets.SCOUT_IQ_S3_SECRET_KEY }}"
+      SCOUT_IQ_S3_REGION: "${{ vars.SCOUT_IQ_S3_REGION }}"
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5

@@ -12,6 +12,11 @@ Idempotent: observation ids are uuid5 of run|file|index, events upsert on `key`,
 starts_at), venues on google_place_id or (city, name), sources on (kind, handle); running it twice changes nothing.
 Without SCOUT_IQ_DB_URL it prints the counts and exits 0, so the pipeline never fails on it.
 
+Raw text (step 6): with SCOUT_IQ_S3_ACCESS_KEY / SCOUT_IQ_S3_SECRET_KEY (Supabase Storage S3 access keys, scoped to
+Storage only) each raw inbox item is uploaded once to the private `raw` bucket at <run>/<item id>.txt and
+`observations.raw_text_ref` points at it; without the keys raw_text_ref stays null and the 300-char excerpt is all
+there is. Endpoint: https://<project ref>.storage.supabase.co/storage/v1/s3 (SCOUT_IQ_S3_REGION, default us-east-1).
+
 Mapping (Scout IQ: Database Spec v1):
   one extracted record            → one observation (+ one live event_merges row)
   one events.json record          → one event (key = normalize.py key) + its `run` occurrence
@@ -36,6 +41,7 @@ NS = uuid.UUID("6b0a8d3e-5c1e-4b7a-9a1e-7c2d1f0e9a55")  # namespace for determin
 CITY_SLUG = "cdmx"
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from venues import venue_query, fold  # noqa: E402
+import normalize as N  # noqa: E402
 
 
 def uid(*parts) -> uuid.UUID:
@@ -80,6 +86,62 @@ def source_of(rec: dict) -> tuple[str, str] | None:
             kind, name = parts[0], parts[1]
             return ({"web": "website", "ig": "instagram"}.get(kind, kind), name)
     return None
+
+
+RAW_BUCKET = "raw"
+
+
+def storage_client():
+    """boto3 client for Supabase Storage's S3 endpoint, or None when the keys are not set."""
+    key, secret = os.environ.get("SCOUT_IQ_S3_ACCESS_KEY", "").strip(), os.environ.get("SCOUT_IQ_S3_SECRET_KEY", "").strip()
+    if not key or not secret:
+        return None
+    m = re.search(r"//([a-z0-9]+)\.", os.environ.get("SCOUT_IQ_PROJECT_URL") or "")
+    ref = os.environ.get("SCOUT_IQ_PROJECT_REF") or (m.group(1) if m else None)
+    if not ref:
+        url = os.environ.get("SCOUT_IQ_DB_URL", "")
+        m = re.search(r"scout_pipeline\.([a-z0-9]+):", url)
+        ref = m.group(1) if m else None
+    if not ref:
+        print("storage: cannot work out the project ref (set SCOUT_IQ_PROJECT_REF)", file=sys.stderr)
+        return None
+    import boto3
+    return boto3.client("s3", endpoint_url=f"https://{ref}.storage.supabase.co/storage/v1/s3",
+                        aws_access_key_id=key, aws_secret_access_key=secret,
+                        region_name=os.environ.get("SCOUT_IQ_S3_REGION") or "us-east-1")
+
+
+def raw_path(run: str, item_id: str) -> str:
+    return f"{run}/{re.sub(r'[^A-Za-z0-9_.:-]+', '-', item_id)}.txt"
+
+
+def upload_raw(s3, run: str, inbox: dict, wanted: set[str]) -> dict[str, str]:
+    """Upload each wanted raw item once (skips objects that already exist). Returns item id → path."""
+    refs = {}
+    existing = set()
+    token = None
+    while True:
+        kw = {"Bucket": RAW_BUCKET, "Prefix": run + "/"}
+        if token:
+            kw["ContinuationToken"] = token
+        r = s3.list_objects_v2(**kw)
+        existing.update(o["Key"] for o in r.get("Contents", []))
+        token = r.get("NextContinuationToken")
+        if not token:
+            break
+    n_up = 0
+    for item_id in sorted(wanted):
+        it = inbox.get(item_id)
+        if not it or not it.get("text"):
+            continue
+        path = raw_path(run, item_id)
+        if path not in existing:
+            body = it["text"] if not it.get("ocr_text") else it["text"] + "\n\n[ocr]\n" + it["ocr_text"]
+            s3.put_object(Bucket=RAW_BUCKET, Key=path, Body=body.encode("utf-8"), ContentType="text/plain; charset=utf-8")
+            n_up += 1
+        refs[item_id] = path
+    print(f"storage: {n_up} raw items uploaded, {len(refs) - n_up} already there, {len(wanted) - len(refs)} without text")
+    return refs
 
 
 def main() -> None:
@@ -219,6 +281,16 @@ def main() -> None:
                            on conflict (event_id, kind, starts_at) do update set ends_at = excluded.ends_at""",
                         (eid, e["starts_at"], e.get("ends_at") or None))
 
+        # raw text to Storage (step 6), one object per raw inbox item the observations came from
+        raw_refs = {}
+        s3 = storage_client()
+        if s3:
+            wanted = {sid for _, _, rec in ex for sid in (rec.get("sources") or []) if sid in inbox}
+            try:
+                raw_refs = upload_raw(s3, a.run, inbox, wanted)
+            except Exception as e:  # Storage trouble must not block the rows
+                print(f"storage: upload failed, raw_text_ref left null: {e}", file=sys.stderr)
+
         # observations: one per extracted record, merged into the event it ended up in
         by_title_date = {}
         for e in events:
@@ -227,36 +299,50 @@ def main() -> None:
         for d in dropped:
             if d.get("reason") == "seen_in":
                 dropped_to[(d.get("title"), (d.get("starts_at") or "")[:10])] = d.get("key")
-        n_obs = n_merged = n_orphan = 0
+        n_obs = n_merged = n_orphan = n_remerged = 0
         for fname, i, rec in ex:
             oid_ = uid("obs", a.run, fname, i)
             so = source_of(rec)
             raw = inbox.get((rec.get("sources") or [None])[0]) or {}
             link = next((l.get("url") for l in rec.get("source_links") or [] if l.get("url")), None)
-            cur.execute("""insert into observations (id, run_id, source_id, source_url, observed_at, raw_excerpt, extraction, extractor_model)
-                           values (%s, %s, %s, %s, %s, %s, %s, %s)
-                           on conflict (id) do update set extraction = excluded.extraction, raw_excerpt = excluded.raw_excerpt""",
+            first_src = (rec.get("sources") or [None])[0]
+            cur.execute("""insert into observations (id, run_id, source_id, source_url, observed_at, raw_text_ref, raw_excerpt, extraction, extractor_model)
+                           values (%s, %s, %s, %s, %s, %s, %s, %s, %s)
+                           on conflict (id) do update set extraction = excluded.extraction, raw_excerpt = excluded.raw_excerpt,
+                             raw_text_ref = coalesce(excluded.raw_text_ref, observations.raw_text_ref)""",
                         (oid_, run_id, source_ids.get(so) if so else None, raw.get("source_url") or link,
-                         raw.get("fetched_at") or meta.get("published_at"), (rec.get("source_excerpt") or "")[:300], Jsonb(rec), extractor_model))
+                         raw.get("fetched_at") or meta.get("published_at"), raw_refs.get(first_src), (rec.get("source_excerpt") or "")[:300], Jsonb(rec), extractor_model))
             n_obs += 1
-            # which event? the merged record whose sources include this one; else by title+day; else a dropped seen_in
-            key = None
-            for e in events:
-                if any(s in (e.get("sources") or []) for s in rec.get("sources") or []):
-                    key = e["key"]; break
+            # which event? same title and day first (a raw page yields many records, so a shared source id alone says
+            # little); else the event normalize.py would merge it into (same rules, same day); else a seen_in drop.
+            day = (rec.get("starts_at") or "")[:10]
+            key = by_title_date.get((rec.get("title"), day))
             if not key:
-                key = by_title_date.get((rec.get("title"), (rec.get("starts_at") or "")[:10])) or dropped_to.get((rec.get("title"), (rec.get("starts_at") or "")[:10]))
+                for e in events:
+                    if N.dates_touch(rec, e) and N.similar(rec, e):
+                        key = e["key"]; break
+            if not key:
+                key = dropped_to.get((rec.get("title"), day))
+            if not key:
+                shared = [e["key"] for e in events if (e.get("starts_at") or "")[:10] == day and any(s in (e.get("sources") or []) for s in rec.get("sources") or [])]
+                key = shared[0] if len(shared) == 1 else None
             eid = event_ids.get(key) or (event_id_by_key(key) if key else None)
             if not eid:
                 n_orphan += 1
                 continue
-            cur.execute("""insert into event_merges (observation_id, event_id, merged_by, dedupe_version)
-                           select %s, %s, 'model', %s where not exists
-                             (select 1 from event_merges where observation_id = %s and unmerged_at is null)""",
-                        (oid_, eid, dedupe_version, oid_))
+            # Reversible: a live merge that points elsewhere is closed (unmerged_at) and a new row written.
+            cur.execute("select id, event_id from event_merges where observation_id = %s and unmerged_at is null", (oid_,))
+            live = cur.fetchone()
+            if live and live[1] != eid:
+                cur.execute("update event_merges set unmerged_at = now() where id = %s", (live[0],))
+                live = None
+                n_remerged += 1
+            if not live:
+                cur.execute("insert into event_merges (observation_id, event_id, merged_by, dedupe_version) values (%s, %s, 'model', %s)",
+                            (oid_, eid, dedupe_version))
             n_merged += 1
         conn.commit()
-    print(f"written: {n_new} events ({n_cont} folded into earlier events), {n_obs} observations, {n_merged} merges, {n_orphan} observations without an event (past/dateless)")
+    print(f"written: {n_new} events ({n_cont} folded into earlier events), {n_obs} observations, {n_merged} merges ({n_remerged} re-pointed), {n_orphan} observations without an event (past/dateless)")
 
 
 if __name__ == "__main__":

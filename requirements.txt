@@ -2,6 +2,7 @@ pyyaml>=6
 requests>=2.31
 pillow>=10
 psycopg[binary]>=3.2   # Scout IQ dual-write (scout/iq_write.py)
+boto3>=1.34            # raw text to Supabase Storage (S3 keys), scout/iq_write.py
 # LLM scouts (GitHub Actions or local):
 openai>=1.50
 google-genai>=1.0

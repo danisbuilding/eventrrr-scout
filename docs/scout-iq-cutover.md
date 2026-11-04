@@ -38,7 +38,19 @@ Rollback: set `SCOUT_IQ_LIVE` to `false` and re-run `pages`; the site returns to
 
 Until step 1 runs, exporting from the site fails to record (the copy still works) with "relation exports does not exist".
 
+## Step 6 (raw text to Storage, nightly session dump)
+
+| # | Who | What | Check |
+|---|---|---|---|
+| 1 | DP | Supabase → Storage → New bucket: name `raw`, **private** | Bucket listed |
+| 2 | DP | Storage → Settings (or S3 Connection) → **S3 access keys** → New access key, description "github actions scout" → copy the Access key ID and Secret access key once; note the Region shown there | — |
+| 3 | DP | GitHub → Settings → Secrets and variables → Actions: secrets `SCOUT_IQ_S3_ACCESS_KEY`, `SCOUT_IQ_S3_SECRET_KEY`; variable `SCOUT_IQ_S3_REGION` = the region from step 2 (e.g. `us-east-1`) | — |
+| 4 | Claude | Run `iq-backfill` once more: uploads every raw inbox item of both runs to `raw/<run>/<item id>.txt` and sets `observations.raw_text_ref` | Log: "storage: N raw items uploaded"; bucket has two folders |
+| 5 | — | `session-dump` runs nightly at 00:23 Mexico City and commits `profiles/sessions/<date>.json` only when assignments or reviews changed; run it by hand from the Actions tab to get one now | A new file under `profiles/sessions/` the morning after a sorting session |
+
+Without the S3 keys the pipeline keeps writing everything else and leaves `raw_text_ref` null. The S3 keys reach Storage only (they cannot read tables), which is why they are allowed in Actions while the service key is not.
+
 ## Later
 
-- Step 6: raw text to Supabase Storage; nightly session dump replacing Copy session.
 - Step 7: drop the old `scout_*` tables from Eventrrr via Bolt once this has run clean for a week.
+- Auto-sort (sort.py writing sorter rows) once the charters have worked examples.

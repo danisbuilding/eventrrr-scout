@@ -45,10 +45,10 @@ sites_tier2:
 - {name: Jazzatlán Capital, url: 'https://boletera.jazzatlan.club/', tier: 2, enabled: true, notes: Music; jazz/world club in Roma Norte; added 2026-11-10}
 - {name: Teatro Helénico cartelera, url: 'https://helenico.gob.mx/cartelera', tier: 2, enabled: true, notes: Film & Performance; added 2026-11-10}
 - {name: Cartelera de Teatro CDMX, url: 'https://carteleradeteatro.mx/', tier: 2, enabled: true, notes: independent theater/cabaret guide; added 2026-11-10}
-- {name: INBAL prensa, url: 'https://inba.gob.mx/prensa', tier: 2, enabled: true, notes: Bellas Artes/INBAL announcements (bellasartes site is bot-blocked); added 2026-11-10}
+- {name: INBAL prensa, url: 'https://inba.gob.mx/prensa', tier: 2, enabled: false, notes: Bellas Artes/INBAL announcements (bellasartes site is bot-blocked); added 2026-11-10}
 - {name: PIAC agenda, url: 'https://www.piac.org.mx/event-schedule/', tier: 2, enabled: true, notes: German-Mexican cultural program; added 2026-11-10}
 - {name: CDMX Secreta (web), url: 'https://cdmxsecreta.com/', tier: 2, enabled: true, notes: monthly what-to-do roundups; IG already swept; added 2026-11-10}
-- {name: Milenio conciertos, url: 'https://www.milenio.com/espectaculos/musica', tier: 2, enabled: true, notes: Music; monthly concert agendas; added 2026-11-10}
+- {name: Milenio conciertos, url: 'https://www.milenio.com/espectaculos/musica', tier: 2, enabled: false, notes: Music; monthly concert agendas; added 2026-11-10}
 instagram:
 - {handle: cdmxsavauge, tier: 1, enabled: true}
 - {handle: cdmxsecreta, tier: 1, enabled: true}

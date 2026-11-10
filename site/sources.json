@@ -213,7 +213,7 @@
    "name": "INBAL prensa",
    "url": "https://inba.gob.mx/prensa",
    "tier": 2,
-   "enabled": true,
+   "enabled": false,
    "notes": "Bellas Artes/INBAL announcements (bellasartes site is bot-blocked); added 2026-11-10"
   },
   {
@@ -234,7 +234,7 @@
    "name": "Milenio conciertos",
    "url": "https://www.milenio.com/espectaculos/musica",
    "tier": 2,
-   "enabled": true,
+   "enabled": false,
    "notes": "Music; monthly concert agendas; added 2026-11-10"
   }
  ],

@@ -1,6 +1,15 @@
 {
  "runs": [
   {
+   "run": "2026-11-10",
+   "window": "2026-11-10 → 2026-11-24",
+   "umbrella": null,
+   "event_count": 76,
+   "highlights": 34,
+   "published_at": "2026-11-10T19:53:21.267324+00:00",
+   "hidden": false
+  },
+  {
    "run": "2026-11-03",
    "window": "2026-11-03 → 2026-11-17",
    "umbrella": "Día de Muertos 2026",

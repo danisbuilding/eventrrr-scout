@@ -1,0 +1,157 @@
+[
+ {
+  "title": "18.º Desfile de Alebrijes Monumentales",
+  "starts_at": "2026-10-17T12:00:00-06:00",
+  "reason": "past"
+ },
+ {
+  "title": "“El Camino” — experiencia lumínica en Paseo de la Reforma",
+  "starts_at": "2026-10-23T19:00:00-06:00",
+  "reason": "past"
+ },
+ {
+  "title": "Paseo Nocturno / Rodada temática de Día de Muertos",
+  "starts_at": "2026-10-24T19:00:00-06:00",
+  "reason": "past"
+ },
+ {
+  "title": "Mega Procesión de las Catrinas",
+  "starts_at": "2026-10-25T18:00:00-06:00",
+  "reason": "past"
+ },
+ {
+  "title": "Ofrenda Monumental del Zócalo",
+  "starts_at": "2026-10-29T00:00:00-06:00",
+  "reason": "past"
+ },
+ {
+  "title": "El Sendero del Cempasúchil — Bosque de Chapultepec",
+  "starts_at": "2026-10-30T14:00:00-06:00",
+  "reason": "past"
+ },
+ {
+  "title": "Gran Desfile de Día de Muertos 2026",
+  "starts_at": "2026-10-31T14:00:00-06:00",
+  "reason": "past"
+ },
+ {
+  "title": "Megaofrenda UNAM / Megaofrenda 2026 (UNIVERSUM)",
+  "starts_at": "2026-10-31T11:00:00-06:00",
+  "reason": "past"
+ },
+ {
+  "title": "Turibus del Terror (recorridos seleccionados)",
+  "starts_at": "2026-10-03T19:00:00-06:00",
+  "reason": "past"
+ },
+ {
+  "title": "Festival Flores de Cempasúchil (expo-venta)",
+  "starts_at": "2026-10-18T00:00:00-06:00",
+  "reason": "past"
+ },
+ {
+  "title": "Encuentro Interdisciplinario Ciudad de México: Ciudad Creativa del Diseño",
+  "starts_at": "2026-11-11T10:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-11-03",
+  "key": "creativa-diseno|2026-11-11"
+ },
+ {
+  "title": "CURSOS Y TALLERES – PERÍODO 2 | 2026",
+  "starts_at": "2026-08-25T00:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-11-03",
+  "key": "cursos-periodo-talleres|2026-08-25"
+ },
+ {
+  "title": "Time Warp México",
+  "starts_at": "2026-11-20T00:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-10-28-dia-de-muertos",
+  "key": "dia-time-warp|2026-11-20"
+ },
+ {
+  "title": "ORIGINAL 2026: encuentro dedicado al arte textil, decorativo y utilitario",
+  "starts_at": "2026-11-12T10:30:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-11-03",
+  "key": "arte-decorativo-encuentro-original-textil-utilitario|2026-11-12"
+ },
+ {
+  "title": "Opeth",
+  "starts_at": "2026-11-11T20:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-11-03",
+  "key": "arena-opeth|2026-11-11"
+ },
+ {
+  "title": "Karol G: Viajando por el mundo",
+  "starts_at": "2026-11-13T20:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-11-03",
+  "key": "estadio-gnp-karol-mundo-viajando|2026-11-13"
+ },
+ {
+  "title": "Garbage (concierto, entrada libre)",
+  "starts_at": "2026-11-14T20:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-11-03",
+  "key": "capitalino-garbage-zocalo|2026-11-14"
+ },
+ {
+  "title": "PRECIOS: Opeth llegará a la Arena CDMX",
+  "starts_at": "2026-11-11T00:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-11-03",
+  "key": "arena-llegara-opeth|2026-11-11"
+ },
+ {
+  "title": "PRECIOS: ZZ Top llegará al Auditorio Nacional",
+  "starts_at": "2026-11-11T00:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-11-03",
+  "key": "al-auditorio-llegara-nacional-top-zz|2026-11-11"
+ },
+ {
+  "title": "MINI DOMINGO: DESTINOS IMPOSIBLES",
+  "starts_at": "2026-11-15T13:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-11-03",
+  "key": "destinos-domingo-imposibles-mini|2026-11-15"
+ },
+ {
+  "title": "MINI DOMINGO: HACIENDO MI PROPIO INTERNET",
+  "starts_at": "2026-11-15T13:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-11-03",
+  "key": "domingo-haciendo-internet-mi-mini-propio|2026-11-15"
+ },
+ {
+  "title": "Inauguración | 36ª Bienal de São Paulo",
+  "starts_at": "2026-11-14T19:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-11-03",
+  "key": "36a-bienal-exposicion-inauguracion-paulo-sao|2026-11-14"
+ },
+ {
+  "title": "Bestiario fantástico (Taller abierto)",
+  "starts_at": "2026-11-15T12:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-11-03",
+  "key": "bestiario-fantastico|2026-11-15"
+ },
+ {
+  "title": "Exposición — Museo Tamayo: (25 de septiembre de 2026 al 3 de enero de 2027)",
+  "starts_at": "2026-09-25T00:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-11-03",
+  "key": "arquitectura-cosmotecnica-museo-tamayo|2026-07-23"
+ },
+ {
+  "title": "Algodón de azúcar",
+  "starts_at": "2026-11-09T00:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-11-03",
+  "key": "algodon-azucar-obra-teatro|2026-11-09"
+ }
+]

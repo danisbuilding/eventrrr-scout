@@ -1,0 +1,53 @@
+name: accuracy
+# Nightly check of upcoming events against their source pages (scout/accuracy.py → search_flags in Scout IQ).
+# Also runs after every pipeline sweep. Posts the open flags to one rolling issue ("Accuracy check"); a comment
+# (which notifies) only when something new got moved to "Show more".
+on:
+  schedule:
+    - cron: "41 11 * * *"   # 05:41 Mexico City
+  workflow_run:
+    workflows: [pipeline]
+    types: [completed]
+  push:
+    branches: [main]
+    paths: ["scout/accuracy.py", ".github/workflows/accuracy.yml"]
+  workflow_dispatch:
+    inputs:
+      days: {description: "Days ahead to check", required: false, default: "21"}
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency: {group: accuracy, cancel-in-progress: false}
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      SCOUT_IQ_DB_URL: "${{ secrets.SCOUT_IQ_DB_URL }}"
+      OPENAI_API_KEY: "${{ secrets.OPENAI_API_KEY }}"
+      ACCURACY_MODEL: "${{ vars.ACCURACY_MODEL }}"
+      GH_TOKEN: "${{ github.token }}"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install requests trafilatura beautifulsoup4 "psycopg[binary]" openai
+      - run: python scout/test_accuracy.py
+      - run: python scout/accuracy.py --days "${{ inputs.days || '21' }}" --report report.md
+      - name: Post to the "Accuracy check" issue
+        run: |
+          cat report.md >> "$GITHUB_STEP_SUMMARY"
+          n=$(gh issue list --state open --search 'in:title "Accuracy check"' --json number -q '.[0].number')
+          { echo "_Updated $(TZ=America/Mexico_City date '+%a %d %b %H:%M') Mexico City · [run](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})_"; echo; cat report.md; } > body.md
+          if [ -z "$n" ]; then
+            gh issue create --title "Accuracy check" --body-file body.md
+          else
+            gh issue edit "$n" --body-file body.md
+            new=$(cat report.md.new)
+            if [ "$new" != "0" ]; then
+              gh issue comment "$n" --body "$new event(s) newly moved to “Show more” because the source page disagrees with Scout's date. Details in the issue description."
+            fi
+          fi

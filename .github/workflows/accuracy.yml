@@ -1,4 +1,5 @@
 name: accuracy
+# Nightly: tag + embed new/changed events for Search (scout/enrich.py → event_tags), then the accuracy check.
 # Nightly check of upcoming events against their source pages (scout/accuracy.py → search_flags in Scout IQ).
 # Also runs after every pipeline sweep. Posts the open flags to one rolling issue ("Accuracy check"); a comment
 # (which notifies) only when something new got moved to "Show more".
@@ -10,7 +11,7 @@ on:
     types: [completed]
   push:
     branches: [main]
-    paths: ["scout/accuracy.py", ".github/workflows/accuracy.yml"]
+    paths: ["scout/accuracy.py", "scout/enrich.py", ".github/workflows/accuracy.yml"]
   workflow_dispatch:
     inputs:
       days: {description: "Days ahead to check", required: false, default: "21"}
@@ -24,7 +25,7 @@ concurrency: {group: accuracy, cancel-in-progress: false}
 jobs:
   check:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     env:
       SCOUT_IQ_DB_URL: "${{ secrets.SCOUT_IQ_DB_URL }}"
       OPENAI_API_KEY: "${{ secrets.OPENAI_API_KEY }}"
@@ -36,6 +37,9 @@ jobs:
         with: {python-version: "3.12"}
       - run: pip install requests trafilatura beautifulsoup4 "psycopg[binary]" openai
       - run: python scout/test_accuracy.py
+      - name: Tag and embed events for Search
+        continue-on-error: true   # never blocks the accuracy check
+        run: python scout/enrich.py --days 60
       - run: python scout/accuracy.py --days "${{ inputs.days || '21' }}" --report report.md
       - name: Post to the "Accuracy check" issue
         run: |

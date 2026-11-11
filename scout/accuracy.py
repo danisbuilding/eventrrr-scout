@@ -208,7 +208,11 @@ with u as (
          search_fold(e.title) ft, split_part(e.url, '/', 3) host
   from events e join cities c on c.id = e.city_id
   where c.slug = 'cdmx' and e.status in ('live', 'moved') and not e.is_ongoing
-    and e.starts_at between now() - interval '6 hours' and now() + make_interval(days => %(days)s))
+    and e.starts_at between now() - interval '6 hours' and now() + make_interval(days => %(days)s)
+    and not exists (
+      select 1 from events e2 join runs r2 on r2.id = e2.last_seen_run_id join runs r1 on r1.id = e.last_seen_run_id
+      where e2.id <> e.id and e2.url = e.url and split_part(e2.key, '|', 1) = split_part(e.key, '|', 1)
+        and r2.created_at > r1.created_at))
 select 'cross_source' check_name, a.id, jsonb_build_object('other_title', b.title, 'other_url', b.url,
          'other_date', b.l::date, 'stored', a.l::date) detail
 from u a join u b on a.id <> b.id and a.host <> b.host
@@ -256,6 +260,8 @@ def main():
             return ev, [("source_gone", "info", {"http": p["status"]}, None)], None
         if not p["text"]:
             return ev, [], f"unreadable ({p.get('status')}{' ' + p['error'] if p.get('error') else ''})"
+        if len(p["text"]) < 600:
+            return ev, [], "page has almost no text without JavaScript"
         try:
             ans = ask(client, model, ev, focus_text(p["text"], ev["title"]), today)
         except Exception as e:  # one bad call never stops the run

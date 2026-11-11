@@ -45,9 +45,10 @@ SCHEMA = {
 
 SYSTEM = (
     "You tag event listings from Mexico City (mostly in Spanish) for a search engine. Judge from the listing only.\n"
-    "kid_friendly: true if it's aimed at children or families, or clearly fine to bring kids (daytime museum visits, "
-    "family workshops, parks, markets, puppet shows, 'todo público'); false if it's adults-only, a club/bar night, late "
-    "night, or clearly not for kids; null if you can't tell.\n"
+    "kid_friendly: true ONLY if it's made for children or families: kids' or family workshops, children's theater or "
+    "puppets, family days, 'para niños', 'infantil', 'en familia', 'todo público' activities, kids' book fairs, festivals "
+    "billed as family-friendly. A general museum exhibition, talk, concert or tasting that a child could technically "
+    "attend is NOT kid_friendly (use null). false for adults-only, bars, clubs, late-night shows. null when unclear.\n"
     "outdoor: true if it mostly happens outside (park, street, plaza, open-air stage, rooftop, walking tour, outdoor "
     "market); false if indoors; null if you can't tell.\n"
     "venue_type: the kind of place. museum = museums (Museo …), gallery = art galleries, park = parks/gardens/forests, "
@@ -127,7 +128,7 @@ def main():
         rows = conn.execute(QUERY, {"days": a.days}).fetchall()
     todo = []
     for e in rows:
-        sh = h(source_text(e) + "|" + model + "|v1")
+        sh = h(source_text(e) + "|" + model + "|v2")
         if a.all or e["source_hash"] != sh:
             e["new_hash"] = sh
             todo.append(e)

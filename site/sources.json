@@ -236,6 +236,41 @@
    "tier": 2,
    "enabled": false,
    "notes": "Music; monthly concert agendas; added 2026-11-10"
+  },
+  {
+   "name": "Ticket Fairy CDMX",
+   "url": "https://www.ticketfairy.com/events-in-mexico-city?city=mexico-city--ciudad-de-mexico--mx&type=upcoming",
+   "tier": 2,
+   "enabled": true,
+   "notes": "Clubs & Parties; LooLoo, Dinsmoor, Tonal club nights; plain-text listings; added 2026-11-11"
+  },
+  {
+   "name": "La Titería",
+   "url": "https://www.latiteria.mx/",
+   "tier": 2,
+   "enabled": true,
+   "notes": "Families (babies + kids); puppet and baby theater, dated listings; added 2026-11-11"
+  },
+  {
+   "name": "Zinco Jazz Club",
+   "url": "https://www.zincojazz.com/",
+   "tier": 2,
+   "enabled": true,
+   "notes": "Music, Date Night; Proximamente list with dates; added 2026-11-11"
+  },
+  {
+   "name": "Bajo Circuito",
+   "url": "https://bajocircuito.com/",
+   "tier": 2,
+   "enabled": true,
+   "notes": "Music; mid-size venue, dated listings; added 2026-11-11"
+  },
+  {
+   "name": "kurimanzutto",
+   "url": "https://www.kurimanzutto.com/exhibitions",
+   "tier": 2,
+   "enabled": true,
+   "notes": "Arts & Culture; openings, upcoming shows dated; added 2026-11-11"
   }
  ],
  "instagram": [
@@ -333,6 +368,78 @@
    "handle": "turismo_cdmx_",
    "tier": 2,
    "enabled": false
+  },
+  {
+   "handle": "blaq.planet",
+   "tier": 2,
+   "enabled": true,
+   "notes": "Diaspora, Nightlife; Black + Afrolatinx club nights, run by @jenetorade; added 2026-11-11"
+  },
+  {
+   "handle": "nochenegra.mx",
+   "tier": 2,
+   "enabled": true,
+   "notes": "Nightlife, Diaspora; vinyl-only Latin/Caribbean party since 2017; added 2026-11-11"
+  },
+  {
+   "handle": "diaspora_cdmx",
+   "tier": 2,
+   "enabled": true,
+   "notes": "Diaspora, Nightlife; hip hop, R&B, afrobeats, amapiano since 2021; added 2026-11-11"
+  },
+  {
+   "handle": "anahuacalli",
+   "tier": 2,
+   "enabled": true,
+   "notes": "Arts, Date Night, Family; dances, talleres, infancias; added 2026-11-11"
+  },
+  {
+   "handle": "cc_lospinos",
+   "tier": 2,
+   "enabled": true,
+   "notes": "Food, Diaspora, Family; festivals and producer markets (site blocks bots); added 2026-11-11"
+  },
+  {
+   "handle": "semovicdmx",
+   "tier": 2,
+   "enabled": true,
+   "notes": "Active; posts Muévete en Bici paseos nocturnos (no own IG); mostly transit noise; added 2026-11-11"
+  },
+  {
+   "handle": "gamamx.art",
+   "tier": 2,
+   "enabled": true,
+   "notes": "Arts & Culture; gallery association, openings and routes; added 2026-11-11"
+  },
+  {
+   "handle": "clubcolima",
+   "tier": 2,
+   "enabled": true,
+   "notes": "Nightlife, Music; small club, analog sound, guest DJs; added 2026-11-11"
+  },
+  {
+   "handle": "mumedi_oficial",
+   "tier": 2,
+   "enabled": true,
+   "notes": "Date Night, Arts; Noches MUMEDI Fri-Sat; added 2026-11-11"
+  },
+  {
+   "handle": "cinetonala",
+   "tier": 2,
+   "enabled": true,
+   "notes": "Date Night, Film; indie cinema, stand-up, Q&As; added 2026-11-11"
+  },
+  {
+   "handle": "airelibre.run",
+   "tier": 2,
+   "enabled": true,
+   "notes": "Active; hikes and runs, many paid trips; added 2026-11-11"
+  },
+  {
+   "handle": "midnightrunnersmexicocity",
+   "tier": 2,
+   "enabled": true,
+   "notes": "Active; weekly Thursday 7pm social run; added 2026-11-11"
   }
  ],
  "umbrellas": [

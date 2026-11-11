@@ -318,6 +318,9 @@ def main():
                    or (check_name = 'source_gone' and event_id = any (%s))
                    or (check_name in ('cross_source', 'odd_time') and event_id = any (%s)))
         """, (keep, confirmed, loaded, db_checked_ids))
+        # events no longer checked (superseded by a later read, retired, or past the window) drop their open flags
+        cur.execute("""update search_flags set status = 'resolved'
+                       where status = 'open' and not (event_id = any (%s))""", (db_checked_ids,))
         # past events drop out of the report
         cur.execute("""update search_flags f set status = 'resolved' from events e
                        where e.id = f.event_id and f.status = 'open' and coalesce(e.ends_at, e.starts_at) < now() - interval '1 day'""")
@@ -351,7 +354,9 @@ def write_report(url, path, n_events, n_web, n_pages, skipped, model):
                 says = f"[{d.get('other_title', 'other source')[:40]}]({d['other_url']}): {d.get('other_date')}"
             ev = (d.get("evidence") or "").replace("|", "/").replace("\n", " ")[:120]
             mark = ("🆕 " if r["new"] else "") + ("⬇️" if r["severity"] == "demote" else "ℹ️")
-            lines.append(f"| {mark} | {r['check_name']} | [{r['title'][:60]}]({r['url']}) | {stored} | {says} | {ev} |")
+            title = " ".join(r["title"].split()).replace("|", "/").replace("[", "(").replace("]", ")")[:60]
+            says = says.replace("|", "/").replace("\n", " ")
+            lines.append(f"| {mark} | {r['check_name']} | [{title}]({r['url']}) | {stored} | {says} | {ev} |")
     if skipped:
         lines += ["", f"<details><summary>{len(skipped)} couldn't be checked</summary>", ""]
         lines += [f"- {t[:70]}: {why}" for _, t, why in skipped[:40]]

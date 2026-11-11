@@ -257,33 +257,38 @@ def main():
     def check(ev):
         p = pages[ev["url"]]
         if p["status"] in (404, 410):
-            return ev, [("source_gone", "info", {"http": p["status"]}, None)], None
+            return ev, [("source_gone", "info", {"http": p["status"]}, None)], False, None
         if not p["text"]:
-            return ev, [], f"unreadable ({p.get('status')}{' ' + p['error'] if p.get('error') else ''})"
+            return ev, [], False, f"unreadable ({p.get('status')}{' ' + p['error'] if p.get('error') else ''})"
         if len(p["text"]) < 600:
-            return ev, [], "page has almost no text without JavaScript"
+            return ev, [], False, "page has almost no text without JavaScript"
         try:
             ans = ask(client, model, ev, focus_text(p["text"], ev["title"]), today)
         except Exception as e:  # one bad call never stops the run
-            return ev, [], f"model error: {str(e)[:120]}"
+            return ev, [], False, f"model error: {str(e)[:120]}"
         if not ans.get("found") and ans.get("confidence") != "low":
-            return ev, [("not_on_page", "info", {"evidence": ans.get("evidence", "")[:240]}, None)], None
-        return ev, compare(ev, ans), None
+            return ev, [("not_on_page", "info", {"evidence": ans.get("evidence", "")[:240]}, None)], False, None
+        confident = bool(ans.get("found")) and ans.get("confidence") in ("high", "medium") and bool(ans.get("date"))
+        return ev, compare(ev, ans), confident, None
 
     with ThreadPoolExecutor(6) as pool:
         results = list(pool.map(check, web))
 
     found = {}  # (event_id, check) -> (severity, detail, suggested)
     skipped = []
-    for ev, flags, err in results:
+    confirmed = []  # events with a confident answer tonight: their old date/time flags can be resolved
+    loaded = []     # events whose page loaded: their old source_gone / not_on_page flags can be resolved
+    for ev, flags, confident, err in results:
+        if confident:
+            confirmed.append(ev["id"])
+        if not err and not any(f[0] == "source_gone" for f in flags):
+            loaded.append(ev["id"])
         if err:
             skipped.append((ev["id"], ev["title"], err))
         for name, sev, detail, sug in flags:
             found[(ev["id"], name)] = (sev, detail, sug)
     for f in db_flags:
         found[(f["id"], f["check_name"])] = ("info", f["detail"], None)
-    skipped_ids = {s[0] for s in skipped}
-    checked_ids = [e["id"] for e in web if e["id"] not in skipped_ids]
     db_checked_ids = [e["id"] for e in evs]
 
     print(f"flags: {len(found)}  skipped: {len(skipped)}")
@@ -305,14 +310,14 @@ def main():
                   first_seen = case when search_flags.status = 'resolved' then now() else search_flags.first_seen end
             """, (eid, name, sev, Jsonb(detail), sug))
         # resolve: web checks for events re-read tonight, db checks for every candidate
-        web_checks = ["date_mismatch", "time_found", "time_mismatch", "source_gone", "not_on_page"]
         keep = [f"{eid}|{name}" for (eid, name) in found]
         cur.execute("""
             update search_flags set status = 'resolved'
             where status = 'open' and not ((event_id::text || '|' || check_name) = any (%s))
-              and ((check_name = any (%s) and event_id = any (%s))
+              and ((check_name in ('date_mismatch', 'time_found', 'time_mismatch', 'not_on_page') and event_id = any (%s))
+                   or (check_name = 'source_gone' and event_id = any (%s))
                    or (check_name in ('cross_source', 'odd_time') and event_id = any (%s)))
-        """, (keep, web_checks, checked_ids, db_checked_ids))
+        """, (keep, confirmed, loaded, db_checked_ids))
         # past events drop out of the report
         cur.execute("""update search_flags f set status = 'resolved' from events e
                        where e.id = f.event_id and f.status = 'open' and coalesce(e.ends_at, e.starts_at) < now() - interval '1 day'""")

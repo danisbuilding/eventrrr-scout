@@ -1,6 +1,6 @@
 name: pipeline
 # Full autonomous run: Instagram + LLM scouts + web sweep → LLM extraction → normalize → score → publish.
-# Triggered from the site's "Start sweep" button (repository_dispatch via the scout-trigger edge
+# Runs weekly on a schedule, or from the site's "Start sweep" button (repository_dispatch via the scout-trigger edge
 # function) or by hand (workflow_dispatch / Claude).
 on:
   workflow_dispatch:
@@ -14,6 +14,9 @@ on:
       reuse_inbox: {description: "Skip gathering; re-extract the committed inbox/<run>", required: false, default: "false"}
   repository_dispatch:
     types: [sweep]
+  # Weekly sweep with the defaults: today → today + 14 days, all Instagram handles, no LLM scouts.
+  schedule:
+    - cron: "37 3 * * 1"   # Mondays 03:37 UTC = Sundays 21:37 Mexico City
 
 permissions:
   contents: write

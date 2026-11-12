@@ -12,8 +12,9 @@ def ev(local, all_day=False):
     return {"starts_at": dt.datetime.fromisoformat(local).replace(tzinfo=TZ), "all_day": all_day}
 
 
-def ans(date, time=None, conf="high", found=True, others=()):
-    return {"found": found, "date": date, "start_time": time, "other_dates": list(others), "evidence": "x", "confidence": conf}
+def ans(date, time=None, conf="high", found=True, others=(), free=None, pmin=None):
+    return {"found": found, "date": date, "start_time": time, "other_dates": list(others), "evidence": "x", "confidence": conf,
+            "page_free": free, "page_price_min": pmin}
 
 
 def names(flags):
@@ -43,4 +44,15 @@ assert compare(e, ans("2026-11-14", "20:00")) == []
 page = ("relleno " * 3000) + "Sábado 14 de noviembre: Garbage en el Zócalo, 20:00 h. " + ("más relleno " * 3000)
 out = focus_text(page, "Garbage se presentará en el Zócalo de la CDMX", limit=6000)
 assert "Garbage en el Zócalo, 20:00" in out and len(out) <= 6100, len(out)
+# prices: "PRECIOS: ver enlace" stored as free, page lists MX$450 → mismatch; unknown + page free → found
+pe = {**ev("2026-11-11 20:00"), "price_text": "PRECIOS: ver enlace", "price_min": 0}
+f = compare(pe, ans("2026-11-11", "20:00", free=False, pmin=450))
+assert names(f) == ["price_found"] and f[0][2]["page_price_min"] == 450, f
+pe = {**ev("2026-11-11 20:00"), "price_text": "Entrada libre", "price_min": 0}
+assert names(compare(pe, ans("2026-11-11", "20:00", free=False, pmin=450))) == ["price_mismatch"]
+pe = {**ev("2026-11-11 18:00"), "price_text": None, "price_min": None}
+f = compare(pe, ans("2026-11-11", "18:00", free=True))
+assert names(f) == ["price_found"] and f[0][2]["page_free"] is True, f
+pe = {**ev("2026-11-11 20:00"), "price_text": "$450", "price_min": 450}
+assert compare(pe, ans("2026-11-11", "20:00", free=False, pmin=460)) == []
 print("accuracy tests passed")

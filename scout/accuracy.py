@@ -40,13 +40,15 @@ SCHEMA = {
     "name": "event_on_page", "strict": True,
     "schema": {
         "type": "object", "additionalProperties": False,
-        "required": ["found", "date", "start_time", "other_dates", "evidence", "confidence"],
+        "required": ["found", "date", "start_time", "other_dates", "page_free", "page_price_min", "evidence", "confidence"],
         "properties": {
             "found": {"type": "boolean"},
             "date": {"type": ["string", "null"], "description": "YYYY-MM-DD"},
             "start_time": {"type": ["string", "null"], "description": "HH:MM 24h, null if the page gives no time"},
             "other_dates": {"type": "array", "items": {"type": "string"}, "description": "other YYYY-MM-DD dates the page gives for this same event"},
-            "evidence": {"type": "string", "description": "the words on the page that give the date/time, max 25 words"},
+            "page_free": {"type": ["boolean", "null"], "description": "true if the page says entry is free (gratis, entrada libre); false if it lists ticket prices; null if it doesn't say"},
+            "page_price_min": {"type": ["number", "null"], "description": "lowest ticket price on the page in MXN, null if none"},
+            "evidence": {"type": "string", "description": "the words on the page that give the date/time (and price, if any), max 30 words"},
             "confidence": {"type": "string", "enum": ["high", "medium", "low"]},
         },
     },
@@ -129,16 +131,54 @@ def compare(ev, ans):
         h, m = map(int, ans["start_time"].split(":"))
         if 0 <= h < 24 and 0 <= m < 60:
             t = dt.time(h, m)
+    out = price_flags(ev, ans)
     if page_day != stored_day and stored_day not in others:
         sug = dt.datetime.combine(page_day, t or dt.time(0, 0), TZ) if page_day else None
-        return [("date_mismatch", "demote", detail, sug)]
+        return [("date_mismatch", "demote", detail, sug)] + out
     if t is None:
-        return []
+        return out
     page_start = dt.datetime.combine(stored_day, t, TZ)
     if ev["all_day"]:
-        return [("time_found", "info", detail, page_start)]
+        return [("time_found", "info", detail, page_start)] + out
     if abs((page_start - start).total_seconds()) > 30 * 60:
-        return [("time_mismatch", "info", detail, page_start)]
+        return [("time_mismatch", "info", detail, page_start)] + out
+    return out
+
+
+FREE_RE = re.compile(r"(gratis|gratuit|libre|free|sin costo|sin cargo)")
+NOT_FREE_RE = re.compile(r"(barra libre|con costo|cover)")
+
+
+def stored_price(ev):
+    """(free, lowest price) as Search reads them: free only when the price text says so."""
+    txt = fold(ev.get("price_text"))
+    free = bool(FREE_RE.search(txt)) and not NOT_FREE_RE.search(txt)
+    pm = ev.get("price_min")
+    pm = float(pm) if pm is not None and float(pm) > 0 else None
+    return free, pm
+
+
+def price_flags(ev, ans):
+    """price_found: Scout has no usable price and the page gives one. price_mismatch: they disagree.
+    Search uses the page's price for both (detail.page_free / detail.page_price_min)."""
+    if "price_text" not in ev:
+        return []
+    pf, pp = ans.get("page_free"), ans.get("page_price_min")
+    if pp is not None and pp <= 0:
+        pp, pf = None, True if pf is None else pf
+    if pf is None and pp is None:
+        return []
+    free, pm = stored_price(ev)
+    d = {"page_free": bool(pf) if pf is not None else (False if pp else None), "page_price_min": pp,
+         "stored": ev.get("price_text") or "", "evidence": (ans.get("evidence") or "")[:240]}
+    if pf and not free:
+        return [("price_mismatch" if pm else "price_found", "info", d, None)]
+    if pp and free:
+        return [("price_mismatch", "info", d, None)]
+    if pp and pm is None:
+        return [("price_found", "info", d, None)]
+    if pp and pm and abs(pp - pm) / max(pp, pm) > 0.2:
+        return [("price_mismatch", "info", d, None)]
     return []
 
 
@@ -172,6 +212,9 @@ def ask(client, model, ev, text, today):
         "today. Dates in Spanish (e.g. 'sábado 14 de noviembre') must be converted carefully; check that the weekday "
         "and the day number agree, and if they don't, trust the day number and say so in evidence. A time like "
         "'20 h' or '8 pm' is 20:00; 'puertas' (doors) is not the start time if a show time is also given. "
+        "Also report the price the page gives for THIS event: page_free=true only if it says free entry (gratis, entrada "
+        "libre, gratuito); page_free=false and page_price_min = the lowest ticket price in MXN when it lists prices "
+        "(ignore fees and 'from' wording); both null when the page doesn't say. 'SOLD OUT' or 'see link' is not free. "
         "found=false if this event isn't on the page. confidence=low if you are unsure it's the same event.")
     user = f"Event: {ev['title']}\nScout recorded: {stored}\nVenue: {ev.get('venue') or 'unknown'}\n\nPage text:\n{text}"
     kw = dict(model=model, messages=[{"role": "system", "content": system}, {"role": "user", "content": user}],
@@ -186,7 +229,7 @@ def ask(client, model, ev, text, today):
 
 
 CANDIDATES = """
-select e.id, e.title, e.url, e.all_day, e.timezone, coalesce(v.name, e.venue_text) venue,
+select e.id, e.title, e.url, e.all_day, e.timezone, coalesce(v.name, e.venue_text) venue, e.price_text, e.price_min,
        coalesce(o.starts_at, e.starts_at) starts_at, coalesce(o.ends_at, e.ends_at) ends_at
 from events e
 join cities c on c.id = e.city_id
@@ -314,7 +357,7 @@ def main():
         cur.execute("""
             update search_flags set status = 'resolved'
             where status = 'open' and not ((event_id::text || '|' || check_name) = any (%s))
-              and ((check_name in ('date_mismatch', 'time_found', 'time_mismatch', 'not_on_page') and event_id = any (%s))
+              and ((check_name in ('date_mismatch', 'time_found', 'time_mismatch', 'not_on_page', 'price_found', 'price_mismatch') and event_id = any (%s))
                    or (check_name = 'source_gone' and event_id = any (%s))
                    or (check_name in ('cross_source', 'odd_time') and event_id = any (%s)))
         """, (keep, confirmed, loaded, db_checked_ids))
@@ -348,7 +391,8 @@ def write_report(url, path, n_events, n_web, n_pages, skipped, model):
         for r in rows:
             d = r["detail"] or {}
             stored = d.get("stored") or local(r["starts_at"]).strftime("%Y-%m-%d %H:%M")
-            says = " ".join(x for x in [d.get("page_date") or str(d.get("other_date") or ""), d.get("page_time") or ""] if x) \
+            price = "free" if d.get("page_free") else (f"from MX${d['page_price_min']:g}" if d.get("page_price_min") else "")
+            says = " ".join(x for x in [d.get("page_date") or str(d.get("other_date") or ""), d.get("page_time") or "", price] if x) \
                 or d.get("why") or (f"HTTP {d['http']}" if d.get("http") else "")
             if r["check_name"] == "cross_source" and d.get("other_url"):
                 says = f"[{d.get('other_title', 'other source')[:40]}]({d['other_url']}): {d.get('other_date')}"

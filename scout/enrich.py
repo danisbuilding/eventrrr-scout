@@ -12,6 +12,7 @@ For each live event that's on now or starts within --days, and whose text change
   venue_type    one of VENUE_TYPES
   activity      one of ACTIVITIES
   in_metro      true/false/null   in the city's metro area (Search hides false: a León festival in a CDMX search)
+  title_en, description_en, price_en   English versions Search shows (proper names kept; originals stay in events)
   summary_en    one plain English sentence (helps English questions find Spanish listings)
 Then one embedding per event (title, venue, category, tags, summary, description) for meaning-based search.
 Search filters on the tags and ranks by embedding similarity; the vocabularies must match lib/parse.js there.
@@ -35,7 +36,7 @@ SCHEMA = {
     "name": "event_tags", "strict": True,
     "schema": {
         "type": "object", "additionalProperties": False,
-        "required": ["kid_friendly", "outdoor", "venue_type", "activity", "in_metro", "summary_en"],
+        "required": ["kid_friendly", "outdoor", "venue_type", "activity", "in_metro", "summary_en", "title_en", "description_en", "price_en"],
         "properties": {
             "kid_friendly": {"type": ["boolean", "null"]},
             "outdoor": {"type": ["boolean", "null"]},
@@ -43,6 +44,9 @@ SCHEMA = {
             "activity": {"type": "string", "enum": ACTIVITIES},
             "in_metro": {"type": ["boolean", "null"]},
             "summary_en": {"type": "string"},
+            "title_en": {"type": "string"},
+            "description_en": {"type": ["string", "null"]},
+            "price_en": {"type": ["string", "null"]},
         },
     },
 }
@@ -68,7 +72,15 @@ SYSTEM = (
     "are in Mexico City (Foro Puebla, Teatro Metropólitan, Estadio GNP, Palacio de los Deportes). A tour that also visits "
     "other cities is still in Mexico City when this listing is for the CDMX date. true when the address is in CDMX or its "
     "metro area (Naucalpan, Huixquilucan, Tlalnepantla, Ecatepec, Nezahualcóyotl…); null otherwise.\n"
-    "summary_en: one short plain English sentence saying what it is, where, and who it's for. No dates."
+    "summary_en: one short plain English sentence saying what it is, where, and who it's for. No dates.\n"
+    "title_en: the title in natural English for an English-speaking visitor. Keep proper names exactly as written: artists, "
+    "bands, people, venues, exhibitions, festivals, works and brand names ('Mini Domingo', 'FILIJ', 'Bestiario fantástico' "
+    "stay). Translate only the descriptive words ('Taller de Pan de Muerto' → 'Pan de Muerto workshop'; 'Garbage se "
+    "presentará en el Zócalo de la CDMX' → 'Garbage live at the Zócalo'). Drop ticket-site prefixes like 'PRECIOS:' or "
+    "'SOLD OUT:'. Already English: copy it.\n"
+    "description_en: the description in English, faithful, 1-3 sentences, nothing added; null if there's no description.\n"
+    "price_en: the price text in English ('Entrada libre' → 'Free entry', 'Actividad con costo' → 'Paid activity', "
+    "'PRECIOS: ver enlace' → 'See the listing for prices', amounts and currency unchanged); null if there is no price text."
 )
 
 
@@ -98,6 +110,7 @@ def h(s):
 
 def tag(client, model, e):
     user = (f"Title: {e['title']}\nVenue: {e.get('venue') or 'unknown'}\nAddress: {e.get('address') or 'unknown'}\n"
+            f"Price text: {e.get('price_text') or ''}\n"
             f"Category: {e.get('category') or ''}\n"
             f"Starts: {e['starts_local']}{' (ongoing run)' if e['is_ongoing'] else ''}\nPrice: {e.get('price_text') or ''}\n"
             f"Description: {(e.get('description') or '')[:1500]}")
@@ -153,7 +166,7 @@ def main():
         rows = conn.execute(QUERY, {"days": a.days}).fetchall()
     todo = []
     for e in rows:
-        sh = h(source_text(e) + "|" + model + "|v5")
+        sh = h(source_text(e) + "|" + model + "|v6")
         if a.all or e["source_hash"] != sh:
             e["new_hash"] = sh
             todo.append(e)
@@ -186,18 +199,21 @@ def main():
     away = [e["title"][:50] for e, t in ok if t["in_metro"] is False]
     print(f"tagged {len(ok)}: {kids} kid-friendly, {outs} outdoor, {len(away)} outside the metro area: {away}")
     for e, t in ok[:12]:
-        print(f"  {e['title'][:55]:55} kid={t['kid_friendly']} out={t['outdoor']} {t['venue_type']}/{t['activity']}")
+        print(f"  {e['title'][:45]:45} → {t['title_en'][:45]:45} kid={t['kid_friendly']} out={t['outdoor']} {t['venue_type']}/{t['activity']}")
     if a.dry_run:
         return
     with psycopg.connect(url) as conn, conn.cursor() as cur:
         for (e, t), v in zip(ok, vecs):
             cur.execute("""
-                insert into event_tags (event_id, kid_friendly, outdoor, venue_type, activity, in_metro, summary_en, embedding, source_hash, model, updated_at)
-                values (%s, %s, %s, %s, %s, %s, %s, %s::extensions.vector, %s, %s, now())
+                insert into event_tags (event_id, kid_friendly, outdoor, venue_type, activity, in_metro, summary_en, title_en,
+                                        description_en, price_en, embedding, source_hash, model, updated_at)
+                values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s::extensions.vector, %s, %s, now())
                 on conflict (event_id) do update set kid_friendly = excluded.kid_friendly, outdoor = excluded.outdoor, in_metro = excluded.in_metro,
+                  title_en = excluded.title_en, description_en = excluded.description_en, price_en = excluded.price_en,
                   venue_type = excluded.venue_type, activity = excluded.activity, summary_en = excluded.summary_en,
                   embedding = excluded.embedding, source_hash = excluded.source_hash, model = excluded.model, updated_at = now()
             """, (e["id"], t["kid_friendly"], t["outdoor"], t["venue_type"], t["activity"], t["in_metro"], t["summary_en"][:300],
+                  (t["title_en"] or e["title"])[:300], (t["description_en"] or None) and t["description_en"][:1200], t["price_en"],
                   "[" + ",".join(f"{x:.6f}" for x in v) + "]", e["new_hash"], model))
     print("written")
 

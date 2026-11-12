@@ -25,3 +25,8 @@ create policy pipeline_update on event_tags for update to scout_pipeline using (
 
 -- in_metro: true = in the city or its metro area; false = another city (Search hides it); null = unclear
 alter table event_tags add column if not exists in_metro boolean;
+
+-- English versions for Search (proper names kept; originals stay in events)
+alter table event_tags add column if not exists title_en text;
+alter table event_tags add column if not exists description_en text;
+alter table event_tags add column if not exists price_en text;

@@ -61,9 +61,11 @@ SYSTEM = (
     "visit/walk; concert = live music; dj_party = DJ, club night, party; performance = theater, dance, comedy, opera; "
     "film = screenings; talk = talks, readings, panels; market = fairs, bazaars, markets; festival = multi-act "
     "festivals; sport_wellness = runs, yoga, sports; food_drink = tastings, dinners, pop-ups.\n"
-    "in_metro: true if it takes place in Mexico City or its metro area (CDMX alcaldías and neighboring Estado de México "
-    "municipalities such as Naucalpan, Huixquilucan, Tlalnepantla, Ecatepec, Nezahualcóyotl); false if it's in another city "
-    "(León, Guadalajara, Puebla, Querétaro, Monterrey, Toluca, Cuernavaca…); null if the listing doesn't say where.\n"
+    "in_metro: false ONLY when the address or text explicitly places THIS event in another city or state (\"León, "
+    "Guanajuato\", \"en Guadalajara\", an address outside CDMX and its metro area). Venue names that sound like other places "
+    "are in Mexico City (Foro Puebla, Teatro Metropólitan, Estadio GNP, Palacio de los Deportes). A tour that also visits "
+    "other cities is still in Mexico City when this listing is for the CDMX date. true when the address is in CDMX or its "
+    "metro area (Naucalpan, Huixquilucan, Tlalnepantla, Ecatepec, Nezahualcóyotl…); null otherwise.\n"
     "summary_en: one short plain English sentence saying what it is, where, and who it's for. No dates."
 )
 
@@ -78,7 +80,8 @@ def h(s):
 
 
 def tag(client, model, e):
-    user = (f"Title: {e['title']}\nVenue: {e.get('venue') or 'unknown'}\nCategory: {e.get('category') or ''}\n"
+    user = (f"Title: {e['title']}\nVenue: {e.get('venue') or 'unknown'}\nAddress: {e.get('address') or 'unknown'}\n"
+            f"Category: {e.get('category') or ''}\n"
             f"Starts: {e['starts_local']}{' (ongoing run)' if e['is_ongoing'] else ''}\nPrice: {e.get('price_text') or ''}\n"
             f"Description: {(e.get('description') or '')[:1500]}")
     kw = dict(model=model, messages=[{"role": "system", "content": SYSTEM}, {"role": "user", "content": user}],
@@ -133,7 +136,7 @@ def main():
         rows = conn.execute(QUERY, {"days": a.days}).fetchall()
     todo = []
     for e in rows:
-        sh = h(source_text(e) + "|" + model + "|v3")
+        sh = h(source_text(e) + "|" + model + "|v4")
         if a.all or e["source_hash"] != sh:
             e["new_hash"] = sh
             todo.append(e)

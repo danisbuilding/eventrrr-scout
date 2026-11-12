@@ -15,6 +15,8 @@ What it does, per upcoming one-off event in CDMX (not Instagram, not superseded 
   3. Database checks: look-alike events from other sources within 3 days on a different date (cross_source), and
      timed events starting 03:00–06:59 or ending before they start (odd_time).
 Flags found again stay open; open flags not found again are resolved; dismissed flags are left alone.
+Confident start times (time_found) and prices (price_found / price_mismatch) are also written back into events and
+their run occurrence, so every Scout IQ reader gets them; date_mismatch is never written back.
 Low-confidence model answers never create a flag. The report lists open flags, newest first.
 """
 import argparse
@@ -152,7 +154,7 @@ NOT_FREE_RE = re.compile(r"(barra libre|con costo|cover)")
 def stored_price(ev):
     """(free, lowest price) as Search reads them: free only when the price text says so."""
     txt = fold(ev.get("price_text"))
-    free = bool(FREE_RE.search(txt)) and not NOT_FREE_RE.search(txt)
+    free = ev["is_free"] if ev.get("is_free") is not None else (bool(FREE_RE.search(txt)) and not NOT_FREE_RE.search(txt))
     pm = ev.get("price_min")
     pm = float(pm) if pm is not None and float(pm) > 0 else None
     return free, pm
@@ -229,13 +231,13 @@ def ask(client, model, ev, text, today):
 
 
 CANDIDATES = """
-select e.id, e.title, e.url, e.all_day, e.timezone, coalesce(v.name, e.venue_text) venue, e.price_text, e.price_min,
+select e.id, e.title, e.url, e.all_day, e.timezone, coalesce(v.name, e.venue_text) venue, e.price_text, e.price_min, e.is_free,
        coalesce(o.starts_at, e.starts_at) starts_at, coalesce(o.ends_at, e.ends_at) ends_at
 from events e
 join cities c on c.id = e.city_id
 left join venues v on v.id = e.venue_id
 left join lateral (select starts_at, ends_at from occurrences where event_id = e.id order by starts_at limit 1) o on true
-where c.slug = 'cdmx' and e.status in ('live', 'moved') and not e.is_ongoing
+where c.slug = 'cdmx' and e.status in ('live', 'moved') and not e.is_ongoing and e.superseded_by is null
   and coalesce(o.starts_at, e.starts_at) between now() - interval '6 hours' and now() + make_interval(days => %(days)s)
   and not exists (
     select 1 from events e2 join runs r2 on r2.id = e2.last_seen_run_id join runs r1 on r1.id = e.last_seen_run_id
@@ -245,12 +247,38 @@ order by starts_at
 limit %(limit)s
 """
 
+# Confident corrections go back into events (the flag then resolves on the next run, when stored = page).
+# Only flags from tonight's confident re-reads, never dismissed ones; date_mismatch is left for a person.
+WRITE_BACK_TIME = """
+update events e set starts_at = f.suggested_starts_at, all_day = false,
+       ends_at = case when e.ends_at <= f.suggested_starts_at then null else e.ends_at end, updated_at = now()
+from search_flags f
+where f.event_id = e.id and f.status = 'open' and f.check_name = 'time_found' and f.suggested_starts_at is not null
+  and e.all_day and not e.is_ongoing and e.id = any (%s)
+"""
+WRITE_BACK_OCC = """
+update occurrences o set starts_at = e.starts_at, ends_at = e.ends_at
+from events e
+where o.event_id = e.id and o.kind = 'run' and e.id = any (%s) and not e.all_day and o.starts_at <> e.starts_at
+  and o.id = (select id from occurrences where event_id = e.id and kind = 'run' order by created_at limit 1)
+"""
+WRITE_BACK_PRICE = """
+update events e set
+       is_free = coalesce((f.detail->>'page_free')::boolean, (f.detail->>'page_price_min') is not null),
+       price_min = case when (f.detail->>'page_free')::boolean then 0
+                        else coalesce(nullif((f.detail->>'page_price_min')::numeric, 0), e.price_min) end,
+       updated_at = now()
+from search_flags f
+where f.event_id = e.id and f.status = 'open' and f.check_name in ('price_found', 'price_mismatch') and e.id = any (%s)
+  and ((f.detail->>'page_free') is not null or (f.detail->>'page_price_min') is not null)
+"""
+
 DB_CHECKS = """
 with u as (
   select e.id, e.title, e.url, e.all_day, (e.starts_at at time zone e.timezone) l, e.starts_at, e.ends_at,
          search_fold(e.title) ft, split_part(e.url, '/', 3) host
   from events e join cities c on c.id = e.city_id
-  where c.slug = 'cdmx' and e.status in ('live', 'moved') and not e.is_ongoing
+  where c.slug = 'cdmx' and e.status in ('live', 'moved') and not e.is_ongoing and e.superseded_by is null
     and e.starts_at between now() - interval '6 hours' and now() + make_interval(days => %(days)s)
     and not exists (
       select 1 from events e2 join runs r2 on r2.id = e2.last_seen_run_id join runs r1 on r1.id = e.last_seen_run_id
@@ -364,6 +392,12 @@ def main():
         # events no longer checked (superseded by a later read, retired, or past the window) drop their open flags
         cur.execute("""update search_flags set status = 'resolved'
                        where status = 'open' and not (event_id = any (%s))""", (db_checked_ids,))
+        # after resolving, so only flags found again tonight count: write confident corrections back to Scout IQ, so the Eventrrr app gets them too (dates stay for review)
+        cur.execute(WRITE_BACK_TIME, (confirmed,))
+        n_time = cur.rowcount
+        cur.execute(WRITE_BACK_OCC, (confirmed,))
+        cur.execute(WRITE_BACK_PRICE, (confirmed,))
+        print(f"written back: {n_time} start times, {cur.rowcount} prices")
         # past events drop out of the report
         cur.execute("""update search_flags f set status = 'resolved' from events e
                        where e.id = f.event_id and f.status = 'open' and coalesce(e.ends_at, e.starts_at) < now() - interval '1 day'""")

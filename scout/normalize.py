@@ -203,6 +203,35 @@ def dates_touch(a: dict, b: dict) -> bool:
     return both_multi and 0 < gap <= MULTIDAY_GAP_DAYS
 
 
+FREE_RE = re.compile(r"(gratis|gratuit|libre|free|sin costo|sin cargo)")
+NOT_FREE_RE = re.compile(r"(barra libre|con costo|cover)")
+
+
+def fold_text(s) -> str:
+    s = unicodedata.normalize("NFKD", str(s or "")).encode("ascii", "ignore").decode().lower()
+    return re.sub(r"\s+", " ", s)
+
+
+def says_free(price_text) -> bool:
+    """Free only when the price text says so ('Entrada libre', 'gratis'); 'barra libre' and 'con costo' are not."""
+    t = fold_text(price_text)
+    return bool(FREE_RE.search(t)) and not NOT_FREE_RE.search(t)
+
+
+def price_fields(price_text, price_min) -> tuple:
+    """(price_min, is_free) as stored. A 0 price without free text is unknown, not free: 'PRECIOS: ver enlace',
+    'SOLD OUT' and box-office listings were coming through as 0."""
+    if says_free(price_text):
+        return 0, True
+    try:
+        pm = float(price_min) if price_min is not None else None
+    except (TypeError, ValueError):
+        pm = None
+    if pm is not None and pm > 0:
+        return pm, False
+    return None, None
+
+
 def event_key(ev: dict) -> str:
     return f"{title_key(ev.get('title', ''))}|{span(ev)[0]}"
 

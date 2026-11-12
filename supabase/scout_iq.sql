@@ -234,3 +234,7 @@ create or replace view neighborhood_density as
 select e.city_id, e.neighborhood, date_trunc('week', e.starts_at)::date as week, e.eventrrr_category, count(*) as events
 from events e
 group by 1, 2, 3, 4;
+
+-- A misread superseded by a later read of the same page and title under a new date (set by iq_write.py). Readers skip it.
+alter table events add column if not exists superseded_by uuid references events(id);
+create index if not exists events_superseded_idx on events (superseded_by) where superseded_by is not null;

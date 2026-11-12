@@ -104,6 +104,19 @@ def test_name_tokens():
     assert N.name_tokens("Expo: Anteparaíso de Carlos Amorales") == set()  # only a generic word before the colon
 
 
+# price: free only from the text; a 0 without free text is unknown
+assert N.price_fields("Entrada libre", 0) == (0, True)
+assert N.price_fields("Entrada libre", None) == (0, True)
+assert N.price_fields("PRECIOS: ver enlace", 0) == (None, None)
+assert N.price_fields("SOLD OUT", 0) == (None, None)
+assert N.price_fields("Barra libre $650", 650) == (650, False)
+assert N.price_fields("Actividad con costo", 0) == (None, None)
+assert N.price_fields("$450", 450) == (450, False)
+assert N.price_fields(None, None) == (None, None)
+assert N.price_fields("Gratuito", None) == (0, True)
+print("price ok")
+
+
 if __name__ == "__main__":
     failed = 0
     for name, fn in sorted(globals().items()):
@@ -119,3 +132,4 @@ if __name__ == "__main__":
     for label, a, b in NON_PAIRS:
         print(f"  {'apart' if not is_dup(a, b) else 'MERGED'} {label}")
     sys.exit(1 if failed else 0)
+

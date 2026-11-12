@@ -56,3 +56,8 @@ assert names(f) == ["price_found"] and f[0][2]["page_free"] is True, f
 pe = {**ev("2026-11-11 20:00"), "price_text": "$450", "price_min": 450}
 assert compare(pe, ans("2026-11-11", "20:00", free=False, pmin=460)) == []
 print("accuracy tests passed")
+
+# Scout's own is_free wins over the text once set (after a write-back)
+pe = {**ev("2026-11-11 20:00"), "price_text": "PRECIOS: ver enlace", "price_min": 450, "is_free": False}
+assert compare(pe, ans("2026-11-11", "20:00", free=False, pmin=450)) == []
+print("write-back price ok")

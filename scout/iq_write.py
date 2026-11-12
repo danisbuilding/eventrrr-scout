@@ -255,31 +255,55 @@ def main() -> None:
             vid = venue_for(e.get("venue"))
             oid = organizer_for(e.get("organizer"))
             sig = e.get("signals") or {}
-            is_free = (e.get("price_min") == 0) if e.get("price_min") is not None else (bool(re.search(r"\b(gratis|libre|free)\b", str(e.get("price_text") or ""), re.I)) or None)
+            price_min, is_free = N.price_fields(e.get("price_text"), e.get("price_min"))
             cur.execute("""insert into events (key, city_id, title, description, starts_at, ends_at, all_day, timezone, venue_id,
                              venue_text, organizer_id, neighborhood, address, price_min, price_currency, price_text, is_free, url,
                              eventrrr_category, is_ongoing, rubric_score, signals, first_seen_run_id, last_seen_run_id)
                            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
                            on conflict (key) do update set title = excluded.title, description = excluded.description,
-                             starts_at = excluded.starts_at, ends_at = excluded.ends_at, all_day = excluded.all_day,
+                             -- a time the accuracy check found on the page survives a re-read that only gives the day
+                             starts_at = case when excluded.all_day and not events.all_day and (excluded.starts_at at time zone events.timezone)::date
+                                                = (events.starts_at at time zone events.timezone)::date then events.starts_at else excluded.starts_at end,
+                             ends_at = excluded.ends_at,
+                             all_day = excluded.all_day and (events.all_day or (excluded.starts_at at time zone events.timezone)::date
+                                                <> (events.starts_at at time zone events.timezone)::date),
                              venue_id = coalesce(excluded.venue_id, events.venue_id), venue_text = excluded.venue_text,
                              organizer_id = coalesce(excluded.organizer_id, events.organizer_id), neighborhood = excluded.neighborhood,
-                             address = excluded.address, price_min = excluded.price_min, price_text = excluded.price_text,
-                             is_free = excluded.is_free, url = excluded.url, eventrrr_category = excluded.eventrrr_category,
+                             address = excluded.address, price_text = excluded.price_text,
+                             -- an unknown price on a re-read keeps the one already known (e.g. from the accuracy check)
+                             price_min = case when excluded.is_free is null then events.price_min else excluded.price_min end,
+                             is_free = coalesce(excluded.is_free, events.is_free), url = excluded.url, eventrrr_category = excluded.eventrrr_category,
                              rubric_score = excluded.rubric_score, signals = excluded.signals, last_seen_run_id = excluded.last_seen_run_id,
                              updated_at = now()
-                           returning id""",
+                           returning id, starts_at, ends_at""",
                         (e["key"], city_id, e["title"], e.get("description"), e["starts_at"], e.get("ends_at") or None, bool(e.get("all_day")),
                          e.get("timezone") or "America/Mexico_City", vid, e.get("venue") if isinstance(e.get("venue"), str) else None, oid,
-                         e.get("neighborhood"), e.get("address"), e.get("price_min"), e.get("currency"), e.get("price_text"), is_free,
+                         e.get("neighborhood"), e.get("address"), price_min, e.get("currency"), e.get("price_text"), is_free,
                          e.get("url"), e.get("category"), bool(e.get("ends_at") and e["ends_at"][:10] > e["starts_at"][:10]),
                          e.get("score"), Jsonb(sig), run_id, run_id))
-            eid = cur.fetchone()[0]
+            eid, st, en = cur.fetchone()
             event_ids[e["key"]] = eid
             n_new += 1
-            cur.execute("""insert into occurrences (event_id, starts_at, ends_at, kind) values (%s, %s, %s, 'run')
-                           on conflict (event_id, kind, starts_at) do update set ends_at = excluded.ends_at""",
-                        (eid, e["starts_at"], e.get("ends_at") or None))
+            # the run occurrence follows the event (which may keep a time the accuracy check found)
+            cur.execute("""update occurrences set starts_at = %s, ends_at = %s
+                           where id = (select id from occurrences where event_id = %s and kind = 'run' order by created_at limit 1)""",
+                        (st, en, eid))
+            if not cur.rowcount:
+                cur.execute("insert into occurrences (event_id, starts_at, ends_at, kind) values (%s, %s, %s, 'run')", (eid, st, en))
+
+        # superseded re-reads: an older row for the same page and title whose date this run no longer finds, though the
+        # date falls inside this run's window, was a misread (its key carries the old date, so it's never updated)
+        if wf and wt:
+            cur.execute("""update events old set superseded_by = new.id, updated_at = now()
+                           from events new
+                           where new.last_seen_run_id = %s and old.last_seen_run_id <> %s and old.id <> new.id
+                             and old.superseded_by is null and old.city_id = new.city_id and old.url = new.url
+                             and split_part(old.key, '|', 1) = split_part(new.key, '|', 1)
+                             and old.starts_at >= %s::timestamptz and old.starts_at < %s::timestamptz + interval '1 day'""",
+                        (run_id, run_id, wf, wt))
+            print(f"superseded re-reads: {cur.rowcount}")
+        # a row seen again un-retires
+        cur.execute("update events set superseded_by = null where last_seen_run_id = %s and superseded_by is not null", (run_id,))
 
         # raw text to Storage (step 6), one object per raw inbox item the observations came from
         raw_refs = {}

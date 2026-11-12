@@ -10,14 +10,25 @@ distinct, dated, real-world event you find, emit one event object. Rules:
 
 1. **Only dated events.** No "coming soon", no generic venue promos, no past events.
    Run window: {{window_from}} to {{window_to}}. Keep events inside it, plus anything
-   that is part of the umbrella "{{umbrella}}" even if a day outside.
+   that is part of the umbrella "{{umbrella}}" even if a day outside. Drop events held
+   in another city or state (a León or Puebla festival posted by a CDMX account).
 2. **Title as published.** Spanish stays Spanish. Strip emoji and ALL CAPS shouting.
 3. **Dates.** Resolve relative dates ("este sábado") from `posted_at`. Timezone
-   America/Mexico_City. If no time is given, `all_day: true`. If the date cannot be
-   resolved, drop the event.
+   America/Mexico_City. If the date cannot be resolved, drop the event.
+   - The date is when the event happens, never a registration, application, ticket-sale
+     or "convocatoria" deadline.
+   - When the text gives a weekday and a day number ("sábado 14"), they must agree for
+     the year you pick; if they don't, trust the one repeated or closest to the event
+     details and lower `confidence`.
+   - Set the start time whenever one is stated anywhere for this event (flyer text, "a
+     partir de las 20:00", "8 pm", "show 21 h"). Doors vs show: use the show/start time.
+     Only with no time at all, `all_day: true`.
 4. **Neighborhood.** Use the printed colonia. Otherwise infer from the venue name or
    address if you are confident; else null.
-5. **Price.** `price_text` verbatim; `price_min` 0 for free / "entrada libre".
+5. **Price.** `price_text` verbatim. `price_min` 0 only when the text says it's free
+   ("entrada libre", "gratis", "sin costo"); "barra libre" is not free entry. When no
+   amount is given ("PRECIOS: ver enlace", "SOLD OUT", "taquilla", "con costo"),
+   `price_min` null. Otherwise the lowest listed price.
 6. **Link.** Prefer tickets > organizer page > the source post itself. Never null if
    a `source_url` exists.
 7. **Category.** Exactly one from the list in `taxonomy.yaml`, using its definitions.

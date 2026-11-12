@@ -19,6 +19,8 @@ Search filters on the tags and ranks by embedding similarity; the vocabularies m
 import argparse
 import hashlib
 import json
+import re
+import unicodedata
 import os
 import sys
 from concurrent.futures import ThreadPoolExecutor
@@ -68,6 +70,21 @@ SYSTEM = (
     "metro area (Naucalpan, Huixquilucan, Tlalnepantla, Ecatepec, Nezahualcóyotl…); null otherwise.\n"
     "summary_en: one short plain English sentence saying what it is, where, and who it's for. No dates."
 )
+
+
+# "Outside the metro area" sticks only when the listing names another city (the model alone over-flags tours and
+# venues like Foro Puebla). Puebla counts only as "en Puebla" / "Puebla, Pue." since Roma has a Calle Puebla.
+OTHER_CITY = re.compile(r"\b(leon|guadalajara|zapopan|monterrey|queretaro|toluca|cuernavaca|oaxaca|merida|tijuana|cancun|"
+                        r"san miguel de allende|guanajuato|aguascalientes|morelia|pachuca|tlaxcala|veracruz|acapulco|"
+                        r"en puebla|puebla, pue)\b")
+
+
+def fold(s):
+    return unicodedata.normalize("NFKD", str(s or "")).encode("ascii", "ignore").decode().lower()
+
+
+def names_other_city(e):
+    return bool(OTHER_CITY.search(fold(" ".join(str(e.get(k) or "") for k in ("title", "venue", "address", "description")))))
 
 
 def source_text(e):
@@ -136,7 +153,7 @@ def main():
         rows = conn.execute(QUERY, {"days": a.days}).fetchall()
     todo = []
     for e in rows:
-        sh = h(source_text(e) + "|" + model + "|v4")
+        sh = h(source_text(e) + "|" + model + "|v5")
         if a.all or e["source_hash"] != sh:
             e["new_hash"] = sh
             todo.append(e)
@@ -152,6 +169,9 @@ def main():
     with ThreadPoolExecutor(6) as pool:
         tagged = list(pool.map(work, todo))
     ok = [(e, t) for e, t, err in tagged if t]
+    for e, t in ok:
+        if t["in_metro"] is False and not names_other_city(e):
+            t["in_metro"] = None
     for e, _, err in tagged:
         if err:
             print(f"  ! {e['title'][:60]}: {err}")

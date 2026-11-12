@@ -26,6 +26,40 @@ const todayLocal = () => new Date().toLocaleDateString("en-CA", {timeZone: TZ});
 const isPast = (e) => !!e.starts_at && (e.ends_at || e.starts_at).slice(0, 10) < todayLocal();
 const startedBefore = (e, days) => { if (!e.starts_at) return false; const d = new Date(todayLocal()); d.setDate(d.getDate() - days); return e.starts_at.slice(0, 10) < d.toISOString().slice(0, 10); };
 
+// ---------- English + Scout IQ corrections
+// events.json keeps titles as published. Scout IQ holds the English versions (enrich.py) and the corrections the
+// accuracy check made (prices, start times); a row a later read replaced is a misread and leaves the lists.
+// The original title stays on the event as title_original (shown small under the title, sent to Eventrrr).
+let IQ = null;
+const localIso = (iso) => { const d = new Date(iso); return isNaN(d) ? iso : new Date(d.getTime() - 6 * 3600e3).toISOString().slice(0, 19) + "-06:00"; };
+async function iqMap() {
+  if (IQ) return IQ;
+  const c = window.SCOUT_CONFIG || {}; IQ = {};
+  if (!c.iqUrl || !c.iqKey) return IQ;
+  try {
+    const r = await fetch(`${c.iqUrl.replace(/\/$/, "")}/rest/v1/rpc/scout_english`, {method: "POST",
+      headers: {apikey: c.iqKey, Authorization: `Bearer ${c.iqKey}`, "content-type": "application/json"}, body: "{}"});
+    if (r.ok) (await r.json()).forEach((x) => { IQ[x.key] = x; });
+  } catch {}
+  return IQ;
+}
+function iqApply(e) {
+  const x = IQ && IQ[e.key];
+  if (!x || e._iq) return e;
+  e._iq = true;
+  if (x.superseded) e._superseded = true;
+  if (x.title_en && x.title_en !== e.title) { e.title_original = e.title; e.title = x.title_en; }
+  if (x.description_en) { e.description_original = e.description; e.description = x.description_en; }
+  if (x.is_free === true) { e.price_min = 0; e.price_text = x.price_en || "Free"; }
+  else { e.price_min = x.price_min != null && Number(x.price_min) > 0 ? Number(x.price_min) : null; if (x.price_en) e.price_text = x.price_en; }
+  // a start time the accuracy check found on the page (same day)
+  if (e.all_day && x.all_day === false && x.starts_at && localIso(x.starts_at).slice(0, 10) === (e.starts_at || "").slice(0, 10)) {
+    e.starts_at = localIso(x.starts_at); e.all_day = false; if (x.ends_at) e.ends_at = localIso(x.ends_at);
+  }
+  return e;
+}
+const englishList = async (list) => { await iqMap(); return list.map(iqApply).filter((e) => !e._superseded); };
+
 // ---------- state
 let META = {run: "", categories: []}, EVENTS = [], byKey = {}, decisions = {}, selected = new Set(), current = null, provider = null;
 
@@ -63,7 +97,7 @@ function supabaseProvider(sb, user, cfg) {
     async runs() { const idx = await get("runs/index.json"); return (idx.runs || []).filter((r) => !r.hidden); },
     async load(run) {
       const idx = await get("runs/index.json"); const r = (idx.runs || []).find((x) => x.run === run) || {run};
-      EVENTS = await get(`runs/${run}/events.json`);
+      EVENTS = await englishList(await get(`runs/${run}/events.json`));
       META = {run, umbrella: r.umbrella, window: r.window || "", categories: window.SCOUT_CATEGORIES || [...new Set(EVENTS.map((e) => e.category))]};
       const {data: ds, error} = await sb.from("scout_decisions").select("*").eq("run", run); if (error) throw error;
       const d = {}; (ds || []).forEach((x) => { d[x.key] = {decision: x.decision, note: x.note, at: x.updated_at}; });
@@ -101,7 +135,7 @@ function supabaseProvider(sb, user, cfg) {
       for (const r of (idx.runs || []).filter((x) => !x.hidden && !x.run.startsWith("sample"))) {
         try { (await get(`runs/${r.run}/events.json`)).forEach((e) => out.push(Object.assign({run: r.run}, e))); } catch {}
       }
-      return out;
+      return englishList(out);
     },
   };
 }
@@ -130,7 +164,7 @@ function iqProvider(sb, user, cfg) {
     async runs() { const idx = await get("runs/index.json"); return (idx.runs || []).filter((r) => !r.hidden); },
     async load(run) {
       const idx = await get("runs/index.json"); const r = (idx.runs || []).find((x) => x.run === run) || {run};
-      EVENTS = await get(`runs/${run}/events.json`);
+      EVENTS = await englishList(await get(`runs/${run}/events.json`));
       META = {run, umbrella: r.umbrella, window: r.window || "", categories: window.SCOUT_CATEGORIES || [...new Set(EVENTS.map((e) => e.category))]};
       const d = {}; (await reviewRows()).forEach((x) => { if (x.run === run && (x.decision || x.note)) d[x.key] = {decision: x.decision, note: x.note, at: x.reviewed_at}; });
       return d;
@@ -192,7 +226,7 @@ function iqProvider(sb, user, cfg) {
       for (const r of (idx.runs || []).filter((x) => !x.hidden && !x.run.startsWith("sample"))) {
         try { (await get(`runs/${r.run}/events.json`)).forEach((e) => out.push(Object.assign({run: r.run}, e))); } catch {}
       }
-      return out;
+      return englishList(out);
     },
   };
 }
@@ -213,7 +247,7 @@ function visible() {
     (!$("#hi").checked || e.highlight) && (!$("#fam").checked || e.family_friendly) &&
     (!$("#hideskip").checked || decisionOf(e) !== "skip") &&
     (!$("#hidepast").checked || !isPast(e)) && (!$("#hideold").checked || !startedBefore(e, 7)) &&
-    (!q || `${e.title} ${e.venue} ${e.neighborhood} ${e.organizer}`.toLowerCase().includes(q))
+    (!q || `${e.title} ${e.title_original || ""} ${e.venue} ${e.neighborhood} ${e.organizer}`.toLowerCase().includes(q))
   ).sort((a, b) => (a.starts_at || "").localeCompare(b.starts_at || ""));
 }
 function saveDecision(key, patch) {
@@ -289,6 +323,7 @@ function renderInspector() {
   el.innerHTML = `
     <div class="insp-head"><span class="label">Event details</span><button class="icon-btn btn btn-secondary close" id="closeinsp" aria-label="Close details"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13"/></svg></button></div>
     <h2 class="ev-title">${esc(e.title)}</h2>
+    ${e.title_original ? `<div class="orig" lang="es">${esc(e.title_original)}</div>` : ""}
     <span class="status"><span class="dot ${s.cls}"></span>${s.text}${e.highlight ? " · Highlight" : ""}</span>
     ${detailFields(e)}
     <div class="sec">
@@ -363,7 +398,7 @@ function exportJson(list, cal, tiers, exportId) {
   const base = {eventrrr_import: 1, scout_export: "v2", source: "eventrrr-scout", run: cal ? "calendar:" + cal.slug : META.run};
   const calendar = cal ? {calendar: {profile: cal.slug, profile_name: cal.name, city: CITY.name, city_slug: CITY.slug, handle_slug: `${cal.slug}-${CITY.slug}`}, export_id: exportId || null} : {};
   return JSON.stringify(Object.assign(base, calendar, {events: list.map((e) => Object.assign({
-    title: e.title, starts_at: e.starts_at, ends_at: e.ends_at || null, all_day: !!e.all_day, timezone: e.timezone || TZ,
+    title: e.title, title_original: e.title_original || null, starts_at: e.starts_at, ends_at: e.ends_at || null, all_day: !!e.all_day, timezone: e.timezone || TZ,
     venue: e.venue || null, address: e.address || null, neighborhood: e.neighborhood || null,
     price_text: e.price_text || (e.price_min === 0 ? "Free" : null), price_min: e.price_min ?? null, currency: e.currency || "MXN",
     url: e.url && /^https?:\/\//.test(e.url) ? e.url : null, category: e.category, description: e.description || null,
@@ -703,6 +738,7 @@ function renderSortDetails(el, e) {
     `<div class="pchips" style="margin-top:8px"><button class="pchip none ${on.none ? "on" : ""}" data-pa="none">None of these</button><button class="pchip none ${on.unclear ? "on" : ""}" data-pa="unclear" title="The listing doesn't say enough to score it">Can't tell</button><button class="pchip none" id="sd-dup" title="Same event as another row; removes this one from the pool">Duplicate</button></div>`;
   el.innerHTML = `<div class="insp-head"><span class="label">Event details</span><button class="icon-btn btn btn-secondary" id="sd-close" aria-label="Back to profiles"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13"/></svg></button></div>
     <h2 class="ev-title">${esc(e.title)}</h2>
+    ${e.title_original ? `<div class="orig" lang="es">${esc(e.title_original)}</div>` : ""}
     <div class="sub">${esc(e.run)}${(e.seen_in || []).length ? " · also in " + esc(e.seen_in.map((s) => s.run).join(", ")) : ""}${e.highlight ? " · Highlight" : ""}</div>
     <div class="sec" style="margin-top:16px"><div style="margin-bottom:10px">Score per calendar (1 – 5) · <a href="#guide" data-guide>Ratings guide</a></div><div class="pstrips" data-ak="${esc(akey(e))}">${strips}</div></div>
     ${detailFields(e)}

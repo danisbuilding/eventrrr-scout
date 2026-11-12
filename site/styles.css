@@ -235,3 +235,6 @@ textarea.input { width: 100%; min-height: 64px; resize: vertical; margin-top: 8p
 .selbar { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; padding: 10px 12px; margin-bottom: 8px; background: linear-gradient(90deg, var(--nv-selected-start), var(--nv-selected-end)); border-radius: var(--nv-radius); box-shadow: inset 2px 0 0 var(--nv-green); }
 .selbar .btn { min-height: 36px; padding: 6px 14px; flex: 0 0 auto; }
 .selbar span { color: var(--nv-ink); margin-right: 4px; font-variant-numeric: tabular-nums; }
+
+/* original-language title under the English one */
+.orig { margin: 4px 0 8px; font-size: 12px; line-height: 16px; color: var(--nv-muted, #6b7280); }

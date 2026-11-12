@@ -8,4 +8,7 @@ window.SCOUT_CONFIG = {
   schema: "legacy",  // "legacy" = scout_* tables in Eventrrr's project; "iq" = Scout IQ (supabase/scout_iq*.sql)
   // where runs/index.json and runs/<run>/events.json are read from (public repo)
   eventsBase: "https://raw.githubusercontent.com/danisbuilding/eventrrr-scout/main",
+  // Scout IQ: English text and cleaned prices/times overlaid on events.json (rpc scout_english, read-only, public)
+  iqUrl: "https://tlwyhxvytmhpcgrismsz.supabase.co",
+  iqKey: "sb_publishable_RZxA5l9DQg3K2at5NYNVJg_Viti1yBS",
 };

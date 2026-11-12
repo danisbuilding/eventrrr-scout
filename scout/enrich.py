@@ -11,6 +11,7 @@ For each live event that's on now or starts within --days, and whose text change
   outdoor       true/false/null   happens mostly outdoors
   venue_type    one of VENUE_TYPES
   activity      one of ACTIVITIES
+  in_metro      true/false/null   in the city's metro area (Search hides false: a León festival in a CDMX search)
   summary_en    one plain English sentence (helps English questions find Spanish listings)
 Then one embedding per event (title, venue, category, tags, summary, description) for meaning-based search.
 Search filters on the tags and ranks by embedding similarity; the vocabularies must match lib/parse.js there.
@@ -32,12 +33,13 @@ SCHEMA = {
     "name": "event_tags", "strict": True,
     "schema": {
         "type": "object", "additionalProperties": False,
-        "required": ["kid_friendly", "outdoor", "venue_type", "activity", "summary_en"],
+        "required": ["kid_friendly", "outdoor", "venue_type", "activity", "in_metro", "summary_en"],
         "properties": {
             "kid_friendly": {"type": ["boolean", "null"]},
             "outdoor": {"type": ["boolean", "null"]},
             "venue_type": {"type": "string", "enum": VENUE_TYPES},
             "activity": {"type": "string", "enum": ACTIVITIES},
+            "in_metro": {"type": ["boolean", "null"]},
             "summary_en": {"type": "string"},
         },
     },
@@ -59,6 +61,9 @@ SYSTEM = (
     "visit/walk; concert = live music; dj_party = DJ, club night, party; performance = theater, dance, comedy, opera; "
     "film = screenings; talk = talks, readings, panels; market = fairs, bazaars, markets; festival = multi-act "
     "festivals; sport_wellness = runs, yoga, sports; food_drink = tastings, dinners, pop-ups.\n"
+    "in_metro: true if it takes place in Mexico City or its metro area (CDMX alcaldías and neighboring Estado de México "
+    "municipalities such as Naucalpan, Huixquilucan, Tlalnepantla, Ecatepec, Nezahualcóyotl); false if it's in another city "
+    "(León, Guadalajara, Puebla, Querétaro, Monterrey, Toluca, Cuernavaca…); null if the listing doesn't say where.\n"
     "summary_en: one short plain English sentence saying what it is, where, and who it's for. No dates."
 )
 
@@ -128,7 +133,7 @@ def main():
         rows = conn.execute(QUERY, {"days": a.days}).fetchall()
     todo = []
     for e in rows:
-        sh = h(source_text(e) + "|" + model + "|v2")
+        sh = h(source_text(e) + "|" + model + "|v3")
         if a.all or e["source_hash"] != sh:
             e["new_hash"] = sh
             todo.append(e)
@@ -155,7 +160,8 @@ def main():
         vecs += [d.embedding for d in r.data]
 
     kids = sum(1 for _, t in ok if t["kid_friendly"]); outs = sum(1 for _, t in ok if t["outdoor"])
-    print(f"tagged {len(ok)}: {kids} kid-friendly, {outs} outdoor")
+    away = [e["title"][:50] for e, t in ok if t["in_metro"] is False]
+    print(f"tagged {len(ok)}: {kids} kid-friendly, {outs} outdoor, {len(away)} outside the metro area: {away}")
     for e, t in ok[:12]:
         print(f"  {e['title'][:55]:55} kid={t['kid_friendly']} out={t['outdoor']} {t['venue_type']}/{t['activity']}")
     if a.dry_run:
@@ -163,12 +169,12 @@ def main():
     with psycopg.connect(url) as conn, conn.cursor() as cur:
         for (e, t), v in zip(ok, vecs):
             cur.execute("""
-                insert into event_tags (event_id, kid_friendly, outdoor, venue_type, activity, summary_en, embedding, source_hash, model, updated_at)
-                values (%s, %s, %s, %s, %s, %s, %s::extensions.vector, %s, %s, now())
-                on conflict (event_id) do update set kid_friendly = excluded.kid_friendly, outdoor = excluded.outdoor,
+                insert into event_tags (event_id, kid_friendly, outdoor, venue_type, activity, in_metro, summary_en, embedding, source_hash, model, updated_at)
+                values (%s, %s, %s, %s, %s, %s, %s, %s::extensions.vector, %s, %s, now())
+                on conflict (event_id) do update set kid_friendly = excluded.kid_friendly, outdoor = excluded.outdoor, in_metro = excluded.in_metro,
                   venue_type = excluded.venue_type, activity = excluded.activity, summary_en = excluded.summary_en,
                   embedding = excluded.embedding, source_hash = excluded.source_hash, model = excluded.model, updated_at = now()
-            """, (e["id"], t["kid_friendly"], t["outdoor"], t["venue_type"], t["activity"], t["summary_en"][:300],
+            """, (e["id"], t["kid_friendly"], t["outdoor"], t["venue_type"], t["activity"], t["in_metro"], t["summary_en"][:300],
                   "[" + ",".join(f"{x:.6f}" for x in v) + "]", e["new_hash"], model))
     print("written")
 

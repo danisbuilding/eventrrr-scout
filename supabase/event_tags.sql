@@ -22,3 +22,6 @@ drop policy if exists pipeline_update on event_tags;
 create policy pipeline_read   on event_tags for select to scout_pipeline using (true);
 create policy pipeline_insert on event_tags for insert to scout_pipeline with check (true);
 create policy pipeline_update on event_tags for update to scout_pipeline using (true) with check (true);
+
+-- in_metro: true = in the city or its metro area; false = another city (Search hides it); null = unclear
+alter table event_tags add column if not exists in_metro boolean;

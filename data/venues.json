@@ -119,6 +119,51 @@
   "lat": 19.4055604,
   "lng": -99.09254039999999
  },
+ "bajo circuito multiforo urbano": {
+  "query": "Bajo Circuito Multiforo Urbano",
+  "looked_up_at": "2026-11-16T12:06:33+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJbYCgKVv_0YURLJV2rImsWOU",
+  "name": "Bajo Circuito Multiforo Urbano",
+  "address": "Bajo Puente de, Cto. Interior S/N, Colonia Condesa, Cuauhtémoc, 06140 Ciudad de México, CDMX",
+  "primary_type": "cultural_center",
+  "rating": 4.3,
+  "reviews": 3211,
+  "maps_url": "https://maps.google.com/?cid=16526148539939984684&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.416109799999997,
+  "lng": -99.17932929999999
+ },
+ "barba azul cabaret": {
+  "query": "Barba Azul Cabaret",
+  "looked_up_at": "2026-11-16T12:06:34+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJn357T9n-0YURFz89BfWkURY",
+  "name": "Barba Azul",
+  "address": "Simón Bolívar 291, Obrera, Cuauhtémoc, 06800 Ciudad de México, CDMX",
+  "primary_type": "night_club",
+  "rating": 4,
+  "reviews": 750,
+  "maps_url": "https://maps.google.com/?cid=1608247914209820439&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.4159056,
+  "lng": -99.1411542
+ },
+ "bazar fusion": {
+  "query": "Bazar Fusión",
+  "looked_up_at": "2026-11-16T12:06:30+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJ31VFtTP_0YURX1aksqG80yg",
+  "name": "Bazar Fusion",
+  "address": "Londres 37, Juárez, Cuauhtémoc, 06600 Ciudad de México, CDMX",
+  "primary_type": "clothing_store",
+  "rating": 4.5,
+  "reviews": 2193,
+  "maps_url": "https://maps.google.com/?cid=2941902384275936863&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.4279646,
+  "lng": -99.1595005
+ },
  "calle francisco santiago borraz, colonia santa cecilia": {
   "query": "Calle Francisco Santiago Borraz, Colonia Santa Cecilia",
   "looked_up_at": "2026-11-03T22:33:15+00:00",
@@ -134,6 +179,21 @@
   "lat": 19.2794739,
   "lng": -99.0104207
  },
+ "canal cultural de mexico": {
+  "query": "Canal Cultural de México",
+  "looked_up_at": "2026-11-16T12:06:33+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJLbG7vDP-0YURBjO5tMsoV7k",
+  "name": "Canal 22",
+  "address": "edificio Pedro infante, C. Atletas 2, Country Club Churubusco, Coyoacán, 04220 Ciudad de México, CDMX",
+  "primary_type": "television_studio",
+  "rating": 4.8,
+  "reviews": 107,
+  "maps_url": "https://maps.google.com/?cid=13355188075366003462&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.3557625,
+  "lng": -99.1399477
+ },
  "casa de tabasco en mexico carlos pellicer": {
   "query": "Casa de Tabasco en México “Carlos Pellicer”",
   "looked_up_at": "2026-11-03T22:33:19+00:00",
@@ -148,6 +208,21 @@
   "maps_url": "https://maps.google.com/?cid=4634711334955379052&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
   "lat": 19.4267855,
   "lng": -99.15686439999999
+ },
+ "casa del lago": {
+  "query": "Casa del Lago",
+  "looked_up_at": "2026-11-16T12:06:32+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJFXjQ5uEB0oURq_9OSpyeMoo",
+  "name": "Casa del Lago Juan José Arreola",
+  "address": "Bosque de Chapultepec Primera Seccion S/N, San Miguel Chapultepec I Sección, Miguel Hidalgo, 11850 Ciudad de México, CDMX",
+  "primary_type": "cultural_center",
+  "rating": 4.6,
+  "reviews": 4758,
+  "maps_url": "https://maps.google.com/?cid=9958196120168365995&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.4225718,
+  "lng": -99.1864074
  },
  "casa del lago unam": {
   "query": "Casa del Lago UNAM",
@@ -178,6 +253,21 @@
   "maps_url": "https://maps.google.com/?cid=1394030042245805446&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
   "lat": 19.3496246,
   "lng": -99.19737239999999
+ },
+ "casa miguel aleman": {
+  "query": "Casa Miguel Alemán",
+  "looked_up_at": "2026-11-16T12:06:31+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJd6KEfYoB0oURCb-F0H9Ii5c",
+  "name": "Casa Miguel Alemán",
+  "address": "Residencia Oficial de los Pinos, Molino del Rey 1, San Miguel Chapultepec I Sección, Miguel Hidalgo, 11580 Ciudad de México, CDMX",
+  "primary_type": "museum",
+  "rating": 4.6,
+  "reviews": 337,
+  "maps_url": "https://maps.google.com/?cid=10919901435286372105&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.415615199999998,
+  "lng": -99.19123359999999
  },
  "casa refugio de la memoria": {
   "query": "Casa Refugio de la Memoria",
@@ -238,6 +328,21 @@
   "maps_url": "https://maps.google.com/?cid=665777400961189260&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
   "lat": 19.356533199999998,
   "lng": -99.1411509
+ },
+ "centro banamex": {
+  "query": "Centro Banamex",
+  "looked_up_at": "2026-11-16T12:06:36+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJ55yU5i8C0oURhS-pVwG7Ql0",
+  "name": "Centro Banamex",
+  "address": "Av. del Conscripto 311, Lomas de Sotelo, Hipódromo de las Américas, Miguel Hidalgo, 11610 Ciudad de México, CDMX",
+  "primary_type": "convention_center",
+  "rating": 4.5,
+  "reviews": 31463,
+  "maps_url": "https://maps.google.com/?cid=6720139208430268293&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.4404945,
+  "lng": -99.22389220000001
  },
  "centro cultural el rule": {
   "query": "Centro Cultural El Rule",
@@ -314,6 +419,36 @@
   "lat": 19.3554985,
   "lng": -99.135488
  },
+ "cine tonala": {
+  "query": "Cine Tonalá",
+  "looked_up_at": "2026-11-16T12:06:33+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJzbWbjj3_0YURrt6mE5VJJLE",
+  "name": "Cine Tonalá",
+  "address": "Tonalá 261, Roma Sur, Cuauhtémoc, 06760 Ciudad de México, CDMX",
+  "primary_type": "movie_theater",
+  "rating": 4.5,
+  "reviews": 4827,
+  "maps_url": "https://maps.google.com/?cid=12764408148503486126&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.4089285,
+  "lng": -99.1605118
+ },
+ "cine victor manuel mendoza": {
+  "query": "Cine Víctor Manuel Mendoza",
+  "looked_up_at": "2026-11-16T12:06:32+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJl9vFDwz_zYURA4JyabdjTH0",
+  "name": "Cine Víctor Manuel M.",
+  "address": "Fortín 5, Barranca Seca, La Magdalena Contreras, 10580 Ciudad de México, CDMX",
+  "primary_type": "movie_theater",
+  "rating": 4.7,
+  "reviews": 60,
+  "maps_url": "https://maps.google.com/?cid=9028700992370278915&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.3051393,
+  "lng": -99.2403901
+ },
  "cinepolis forum buenavista": {
   "query": "Cinépolis Fórum Buenavista",
   "looked_up_at": "2026-11-03T22:33:17+00:00",
@@ -389,6 +524,21 @@
   "lat": 19.427129900000004,
   "lng": -99.211064
  },
+ "colegio de san ildefonso, 1": {
+  "query": "Colegio de San Ildefonso, 1",
+  "looked_up_at": "2026-11-16T12:06:29+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJL7EfCzP50YURNvzmA7gabIU",
+  "name": "Colegio de San Ildefonso",
+  "address": "Justo Sierra 16, Centro Histórico de la Cdad. de México, Centro, Cuauhtémoc, 06020 Ciudad de México, CDMX",
+  "primary_type": "museum",
+  "rating": 4.7,
+  "reviews": 14668,
+  "maps_url": "https://maps.google.com/?cid=9614088682170940470&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.435655399999998,
+  "lng": -99.1309261
+ },
  "colegio de san ildefonso, sala jose clemente orozco": {
   "query": "Colegio de San Ildefonso, Sala José Clemente Orozco",
   "looked_up_at": "2026-11-10T19:53:00+00:00",
@@ -419,6 +569,21 @@
   "lat": 19.415590899999998,
   "lng": -99.19128189999999
  },
+ "embarcadero de cuemanco": {
+  "query": "Embarcadero de Cuemanco",
+  "looked_up_at": "2026-11-16T12:06:34+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJGz3Epb0BzoUR1LJ8CfCO6TY",
+  "name": "Trajineras Xochimilco - Embarcadero Cuemanco",
+  "address": "Periférico sur Adolfo Ruíz Cortines, Xochimilco, 16034, Cuidad de mexico CDMX Embarcadero, Cuemanco, Xochimilco, 16034 Ciudad de México, CDMX",
+  "primary_type": "tourist_attraction",
+  "rating": 4.4,
+  "reviews": 7448,
+  "maps_url": "https://maps.google.com/?cid=3956850909224153812&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.2868829,
+  "lng": -99.1021725
+ },
  "embarcadero de cuemanco y otros embarcaderos, xochimilco": {
   "query": "Embarcadero de Cuemanco y otros embarcaderos, Xochimilco",
   "looked_up_at": "2026-11-10T19:52:58+00:00",
@@ -433,6 +598,21 @@
   "maps_url": "https://maps.google.com/?cid=3956850909224153812&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
   "lat": 19.2868829,
   "lng": -99.1021725
+ },
+ "estadio fray nano": {
+  "query": "Estadio Fray Nano",
+  "looked_up_at": "2026-11-16T12:06:35+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJ-VOrkpj-0YURixXUrTZIKpk",
+  "name": "Estadio de Béisbol Fray Nano",
+  "address": "Fernando Iglesias Calderón S/N, Jardín Balbuena, Venustiano Carranza, 15900 Ciudad de México, CDMX",
+  "primary_type": "athletic_field",
+  "rating": 4.5,
+  "reviews": 7902,
+  "maps_url": "https://maps.google.com/?cid=11036713236506613131&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.4101191,
+  "lng": -99.1088396
  },
  "estadio gnp": {
   "query": "Estadio GNP",
@@ -734,6 +914,21 @@
   "lat": 19.436840699999998,
   "lng": -99.1536113
  },
+ "galeria divergente, 4to piso, centro cultural el rule": {
+  "query": "Galería Divergente, 4to Piso, Centro Cultural El Rule",
+  "looked_up_at": "2026-11-16T12:06:31+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJLWooTiv50YURQiETwuQon70",
+  "name": "Centro Cultural El Rule",
+  "address": "Eje Central Lázaro Cárdenas 6-primer piso, Centro Histórico de la Cdad. de México, Centro, Cuauhtémoc, 06000 Ciudad de México, CDMX",
+  "primary_type": "art_gallery",
+  "rating": 4.6,
+  "reviews": 1298,
+  "maps_url": "https://maps.google.com/?cid=13663684757439062338&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.4336059,
+  "lng": -99.1407839
+ },
  "galeria mascota": {
   "query": "Galería Mascota",
   "looked_up_at": "2026-11-03T22:33:15+00:00",
@@ -749,6 +944,21 @@
   "lat": 19.4209389,
   "lng": -99.16859459999999
  },
+ "gran carpa santa fe": {
+  "query": "Gran Carpa Santa Fe",
+  "looked_up_at": "2026-11-16T12:06:30+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJu49nyeMA0oURp90w4NME3Ak",
+  "name": "Gran Carpa Santa Fe",
+  "address": "Vasco de Quiroga, Santa Fe, Lomas de Santa Fe, Álvaro Obregón, 01376 Ciudad de México, CDMX",
+  "primary_type": "event_venue",
+  "rating": 4.5,
+  "reviews": 3514,
+  "maps_url": "https://maps.google.com/?cid=710448149263605159&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.3775232,
+  "lng": -99.2508884
+ },
  "gran salon mexico": {
   "query": "Gran Salón México",
   "looked_up_at": "2026-11-03T22:33:22+00:00",
@@ -763,6 +973,21 @@
   "maps_url": "https://maps.google.com/?cid=1839408242909797282&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
   "lat": 19.4555854,
   "lng": -99.13998409999999
+ },
+ "hookah lounge condesa": {
+  "query": "Hookah Lounge Condesa",
+  "looked_up_at": "2026-11-16T12:06:33+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJCTaL00H_0YURJMA0Zjw82zY",
+  "name": "Hookah Lounge",
+  "address": "Campeche 284, Hipódromo Condesa, Cuauhtémoc, 06100 Ciudad de México, CDMX",
+  "primary_type": "bar",
+  "rating": 4.3,
+  "reviews": 1537,
+  "maps_url": "https://maps.google.com/?cid=3952819328058179620&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.408330199999998,
+  "lng": -99.1707656
  },
  "house of vans": {
   "query": "House Of Vans",
@@ -809,6 +1034,21 @@
   "lat": 19.345529000000003,
   "lng": -99.1936094
  },
+ "la cana marisqueria": {
+  "query": "La Caña Marisquería",
+  "looked_up_at": "2026-11-16T12:06:36+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJmVT9137_0YURSEcN1Z1gAWc",
+  "name": "La Caña",
+  "address": "C. Dr. Erazo 26, Doctores, Cuauhtémoc, 06720 Ciudad de México, CDMX",
+  "primary_type": "restaurant",
+  "rating": 4.4,
+  "reviews": 546,
+  "maps_url": "https://maps.google.com/?cid=7422319891883837256&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.4177347,
+  "lng": -99.14503719999999
+ },
  "la maraka": {
   "query": "La Maraka",
   "looked_up_at": "2026-11-03T22:33:30+00:00",
@@ -823,6 +1063,21 @@
   "maps_url": "https://maps.google.com/?cid=14163051210962842720&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
   "lat": 19.3845497,
   "lng": -99.15042679999999
+ },
+ "la titeria": {
+  "query": "La Titería",
+  "looked_up_at": "2026-11-16T12:06:31+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJ67-yZRX_0YURfsa5PgFBzZ4",
+  "name": "Centro cultural La Titería de Marionetas de la esquina)",
+  "address": "Vicente Guerrero 7, Del Carmen, Coyoacán, 04100 Ciudad de México, CDMX",
+  "primary_type": "performing_arts_theater",
+  "rating": 4.7,
+  "reviews": 593,
+  "maps_url": "https://maps.google.com/?cid=11442873701821433470&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.3521887,
+  "lng": -99.1648457
  },
  "laguna": {
   "query": "Laguna",
@@ -899,6 +1154,36 @@
   "lat": 19.3147846,
   "lng": -99.1854369
  },
+ "muac, sala 7. planta alta": {
+  "query": "MUAC, Sala 7. Planta Alta",
+  "looked_up_at": "2026-11-16T12:06:30+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJvUeFagsAzoURBMV2ubEDduI",
+  "name": "Museo Universitario Arte Contemporáneo (MUAC)",
+  "address": "Av. Insurgentes Sur 3000, C.U., Coyoacán, 04510 Ciudad de México, CDMX",
+  "primary_type": "art_museum",
+  "rating": 4.7,
+  "reviews": 16617,
+  "maps_url": "https://maps.google.com/?cid=16318234361679234308&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.3147846,
+  "lng": -99.1854369
+ },
+ "mumedi": {
+  "query": "Mumedi",
+  "looked_up_at": "2026-11-16T12:06:35+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJP7h8VS350YUR2YwWHaUnQ6s",
+  "name": "Museo Mexicano del Diseño, MUMEDI",
+  "address": "Avenida Bucareli 35-4 (entrada sobre, Donato Guerra, Juárez, Cuauhtémoc, 06600 Ciudad de México, CDMX",
+  "primary_type": "museum",
+  "rating": 4.5,
+  "reviews": 8111,
+  "maps_url": "https://maps.google.com/?cid=12340750994036395225&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.4333527,
+  "lng": -99.1513554
+ },
  "museo archivo de la fotografia": {
   "query": "Museo Archivo de la Fotografía",
   "looked_up_at": "2026-11-03T22:33:17+00:00",
@@ -973,6 +1258,21 @@
   "maps_url": "https://maps.google.com/?cid=12974487677946326327&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
   "lat": 19.437704399999998,
   "lng": -99.1470622
+ },
+ "museo diego rivera anahuacalli": {
+  "query": "Museo Diego Rivera Anahuacalli",
+  "looked_up_at": "2026-11-16T12:06:32+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJE-z088wBzoURBQC1jpv8UXc",
+  "name": "Museo Anahuacalli",
+  "address": "Museo 150, San Pablo Tepetlapa, Coyoacán, 04620 Ciudad de México, CDMX",
+  "primary_type": "museum",
+  "rating": 4.7,
+  "reviews": 11442,
+  "maps_url": "https://maps.google.com/?cid=8597930908671344645&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.3231754,
+  "lng": -99.1439285
  },
  "museo jumex": {
   "query": "Museo Jumex",
@@ -1049,6 +1349,21 @@
   "lat": 19.42572,
   "lng": -99.181716
  },
+ "museo unam hoy": {
+  "query": "Museo UNAM Hoy",
+  "looked_up_at": "2026-11-16T12:06:31+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJ9waAKjP50YURzOgkwgs15fc",
+  "name": "Museo UNAM Hoy",
+  "address": "Moneda 2, Centro Histórico de la Cdad. de México, Centro, Cuauhtémoc, 06060 Ciudad de México, CDMX",
+  "primary_type": "museum",
+  "rating": 4.6,
+  "reviews": 282,
+  "maps_url": "https://maps.google.com/?cid=17862741821653051596&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.4336768,
+  "lng": -99.1317777
+ },
  "museo universitario arte contemporaneo": {
   "query": "Museo Universitario Arte Contemporáneo",
   "looked_up_at": "2026-11-10T19:52:58+00:00",
@@ -1078,6 +1393,21 @@
   "maps_url": "https://maps.google.com/?cid=11433448697409856819&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
   "lat": 19.4419932,
   "lng": -99.15671789999999
+ },
+ "museo vivo del muralismo": {
+  "query": "Museo Vivo del Muralismo",
+  "looked_up_at": "2026-11-16T12:06:36+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJH6lAZwD50YURP5b4Y-Kl-5o",
+  "name": "Museo Vivo del Muralismo",
+  "address": "República de Argentina 28, Centro Histórico de la Cdad. de México, Centro, Cuauhtémoc, 06020 Ciudad de México, CDMX",
+  "primary_type": "museum",
+  "rating": 4.9,
+  "reviews": 883,
+  "maps_url": "https://maps.google.com/?cid=11167702092753704511&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.436959599999998,
+  "lng": -99.1316748
  },
  "museo yancuic": {
   "query": "Museo Yancuic",
@@ -1109,6 +1439,21 @@
   "lat": 19.4047563,
   "lng": -99.18207729999999
  },
+ "orbe.rocks": {
+  "query": "Orbe.rocks",
+  "looked_up_at": "2026-11-16T12:06:35+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJzyceTgD_0YURdrxsz8xSyEA",
+  "name": "Orbe",
+  "address": "Río San Angel 89, San Ángel, Álvaro Obregón, 01020 Ciudad de México, CDMX",
+  "primary_type": "auditorium",
+  "rating": 2.3,
+  "reviews": 89,
+  "maps_url": "https://maps.google.com/?cid=4668072053376334966&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.3510226,
+  "lng": -99.18779339999999
+ },
  "pabellon oeste, palacio de los deportes": {
   "query": "Pabellón Oeste, Palacio de los Deportes",
   "looked_up_at": "2026-11-10T19:53:08+00:00",
@@ -1123,6 +1468,21 @@
   "maps_url": "https://maps.google.com/?cid=2272786200530150403&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
   "lat": 19.4041041,
   "lng": -99.10042639999999
+ },
+ "palacio de bellas artes": {
+  "query": "Palacio de Bellas Artes",
+  "looked_up_at": "2026-11-16T12:06:34+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJTQGqdSv50YURz-imDdIQ2Bc",
+  "name": "Palacio de Bellas Artes",
+  "address": "Av. Juárez S/N, Centro Histórico de la Cdad. de México, Centro, Cuauhtémoc, 06050 Ciudad de México, CDMX",
+  "primary_type": "cultural_center",
+  "rating": 4.8,
+  "reviews": 196839,
+  "maps_url": "https://maps.google.com/?cid=1718141752200063183&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.4352,
+  "lng": -99.1412
  },
  "palacio de los deportes": {
   "query": "Palacio de los Deportes",
@@ -1379,6 +1739,21 @@
   "lat": 19.4168913,
   "lng": -99.16834109999999
  },
+ "six flags mexico": {
+  "query": "Six Flags México",
+  "looked_up_at": "2026-11-16T12:06:35+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJGZTVlcn_zYURRZxrmu06Qto",
+  "name": "Six Flags México",
+  "address": "Carr. Picacho-Ajusco Km 1.5, Jardines del Ajusco, Tlalpan, 14219 Ciudad de México, CDMX",
+  "primary_type": "amusement_park",
+  "rating": 4.6,
+  "reviews": 173672,
+  "maps_url": "https://maps.google.com/?cid=15727197640903597125&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.295576200000003,
+  "lng": -99.2107673
+ },
  "teatro benito juarez": {
   "query": "Teatro Benito Juárez",
   "looked_up_at": "2026-11-10T19:53:00+00:00",
@@ -1498,6 +1873,36 @@
   "maps_url": "https://maps.google.com/?cid=8819237960918886489&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
   "lat": 19.4176491,
   "lng": -99.1619405
+ },
+ "utopia mexico tenochtitlan": {
+  "query": "Utopía México Tenochtitlan",
+  "looked_up_at": "2026-11-16T12:06:34+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJGxpVdQD50YURQwAQ0MZp83Q",
+  "name": "UTOPÍA MÉXICO - TENOCHTITLÁN",
+  "address": "Calz México-Tacuba, Un Hogar Para Nosotros, Miguel Hidalgo, 11330 Ciudad de México, CDMX",
+  "primary_type": "playground",
+  "rating": 4.4,
+  "reviews": 35,
+  "maps_url": "https://maps.google.com/?cid=8427195630355480643&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.4494161,
+  "lng": -99.1717718
+ },
+ "zinco jazz club": {
+  "query": "Zinco Jazz Club",
+  "looked_up_at": "2026-11-16T12:06:32+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJr5ALKC350YUR-4SQmgr-4Sg",
+  "name": "Zinco Jazz Club",
+  "address": "Calle de Motolinia 20, Centro Histórico de la Cdad. de México, Centro, Cuauhtémoc, 06050 Ciudad de México, CDMX",
+  "primary_type": "bar",
+  "rating": 4.6,
+  "reviews": 2916,
+  "maps_url": "https://maps.google.com/?cid=2945914952773305595&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.4340762,
+  "lng": -99.1371101
  },
  "zocalo": {
   "query": "Zócalo",

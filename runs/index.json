@@ -1,6 +1,15 @@
 {
  "runs": [
   {
+   "run": "2026-11-16",
+   "window": "2026-11-16 → 2026-11-30",
+   "umbrella": null,
+   "event_count": 67,
+   "highlights": 14,
+   "published_at": "2026-11-16T12:06:53.795876+00:00",
+   "hidden": false
+  },
+  {
    "run": "2026-11-10",
    "window": "2026-11-10 → 2026-11-24",
    "umbrella": null,

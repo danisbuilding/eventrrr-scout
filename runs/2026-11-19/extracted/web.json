@@ -1,0 +1,3068 @@
+[
+ {
+  "title": "Bienal de São Paulo en el Tamayo",
+  "description": "Síntesis de la edición 36 de la Bienal de São Paulo, curada por Anna Roberta Goetz; obras textiles y piezas que abordan la abstracción y reflexiones sobre la tierra y el agua. Con 26 artistas internacionales en sala.",
+  "starts_at": "2026-11-01T00:00:00-06:00",
+  "ends_at": "2026-11-30T23:59:59-06:00",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Museo Tamayo",
+  "address": "Av. Paseo de la Reforma 51, Bosque de Chapultepec I Secc",
+  "neighborhood": "Bosque de Chapultepec I Secc",
+  "price_text": "$95 MXN (entrada libre los domingos)",
+  "price_min": 95,
+  "currency": "MXN",
+  "url": "https://foodandtravel.mx/viajes/que-hacer-en-cdmx-los-mejores-planes-y-eventos-de-esta-semana/",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Museo Tamayo",
+  "recurring": false,
+  "sources": [
+   "web:food-and-travel-mx:13a5987abd8f"
+  ],
+  "source_links": [
+   {
+    "name": "Food and Travel MX",
+    "url": "https://foodandtravel.mx/viajes/que-hacer-en-cdmx-los-mejores-planes-y-eventos-de-esta-semana/"
+   }
+  ],
+  "source_excerpt": "Bienal de São Paulo en el Tamayo\nPor primera vez en su historia, la segunda bienal de arte más antigua del mundo llega a México para dialogar con nuestro vibrante contexto histórico. Bajo la curaduría de Anna Roberta Goetz, esta síntesis de la edición 36 de la Bienal de São Paulo presenta obras textiles, piezas que abordan la abstracción como conocimiento situado y reflexiones sobre la tierra y el agua como territorios vivos. Con 26 artistas internacionales en sala, esta muestra es, sin duda, uno de los eventos en CDMX indispensables cuando piensas en qué hacer en CDMX relacionado con el arte contemporáneo global. Dónde: Museo Tamayo (Av. Paseo de la Reforma 51, Bosque de Chapultepec I Secc). Cuándo: Todo noviembre. Costo: $95 MXN (entrada libre los domingos). IG: eneltamayo",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Importante muestra internacional (Bienal de São Paulo) en un museo reconocido; imprescindible para quienes siguen el arte contemporáneo."
+ },
+ {
+  "title": "El sabor a Japón (Frontón Bucareli)",
+  "description": "Evento gastronómico dedicado a la cultura japonesa con 15 restaurantes, barras especializadas, ronqueo de atún en vivo, talleres de nigiri y sushi, catas de sake, clases de bonsái y demostraciones de gyotaku.",
+  "starts_at": "2026-11-20T00:00:00-06:00",
+  "ends_at": "2026-11-22T23:59:59-06:00",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Frontón Bucareli",
+  "address": "Bucareli 118, Centro",
+  "neighborhood": "Centro",
+  "price_text": "$300 MXN (acceso general)",
+  "price_min": 300,
+  "currency": "MXN",
+  "url": "https://foodandtravel.mx/viajes/que-hacer-en-cdmx-los-mejores-planes-y-eventos-de-esta-semana/",
+  "category": "Food & Drink",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Frontón Bucareli / organizadores del evento",
+  "recurring": false,
+  "sources": [
+   "web:food-and-travel-mx:13a5987abd8f"
+  ],
+  "source_links": [
+   {
+    "name": "Food and Travel MX",
+    "url": "https://foodandtravel.mx/viajes/que-hacer-en-cdmx-los-mejores-planes-y-eventos-de-esta-semana/"
+   }
+  ],
+  "source_excerpt": "El sabor a Japón\nSi buscas qué hacer en CDMX con un enfoque cien por ciento gastronómico y artesanal, el Frontón Bucareli abre sus puertas durante tres días que estarán dedicados a la cultura japonesa. Este recinto reunirá 15 restaurantes, tres barras especializadas y zonas de postres para probar distintas facetas de la gastronomía nipona. Además de comer bien, la programación incluye un ronqueo de atún en vivo, talleres de nigiri y sushi, seminarios y catas de sake, clases de bonsái y demostraciones de gyotaku (impresión tradicional de peces). Dónde: Frontón Bucareli. Bucareli 118, Centro. Cuándo: Del 20 al 22 de noviembre. Costo: $300 MXN (acceso general). IG: elsaborajapon",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Tres días con amplia oferta gastronómica japonesa y actividades prácticas (talleres y catas) en un recinto conocido."
+ },
+ {
+  "title": "Goya Taller en Casita Solosé",
+  "description": "Pop-up gastronómico de Goya Taller (chef Mauricio Vega) en Casita Solosé con menú especial para desayuno/brunch y productos de pan recién horneado.",
+  "starts_at": "2026-11-20T00:00:00-06:00",
+  "ends_at": "2026-11-22T23:59:59-06:00",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Casita Solosé",
+  "address": "Altata 310, Hipódromo Condesa",
+  "neighborhood": "Hipódromo Condesa",
+  "price_text": "Desde $90 MXN",
+  "price_min": 90,
+  "currency": "MXN",
+  "url": "https://foodandtravel.mx/viajes/que-hacer-en-cdmx-los-mejores-planes-y-eventos-de-esta-semana/",
+  "category": "Food & Drink",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Goya Taller / Casita Solosé",
+  "recurring": false,
+  "sources": [
+   "web:food-and-travel-mx:13a5987abd8f"
+  ],
+  "source_links": [
+   {
+    "name": "Food and Travel MX",
+    "url": "https://foodandtravel.mx/viajes/que-hacer-en-cdmx-los-mejores-planes-y-eventos-de-esta-semana/"
+   }
+  ],
+  "source_excerpt": "Goya Taller en Casita Solosé\nSiguiendo con la lista de qué hacer en CDMX, la propuesta informal y creativa de Goya Taller —el proyecto de cocina mexicana contemporánea liderado por el chef Mauricio Vega— toma la cocina de Casita Solosé durante el fin de semana. Este pop-up es el pretexto perfecto para desayunar, brunchear o comer sin prisa en un espacio relajado que combina buen café, comunidad y una nueva vitrina de pan recién horneado. Dónde: Altata 310, Hipódromo Condesa. Cuándo: Del 20 al 22 de noviembre. Costo: desde $90 MXN. IG: goya.taller",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Pop-up de cocina contemporánea con menú accesible y pan recién horneado; buena opción para brunch en Condesa."
+ },
+ {
+  "title": "Carrera nocturna en Parque La Mexicana",
+  "description": "Carrera nocturna de 5 km para celebrar los nueve años del parque, con maquillaje neón gratuito, kit con playera, buff y rifa conmemorativa.",
+  "starts_at": "2026-11-20T20:00:00-06:00",
+  "ends_at": null,
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Parque La Mexicana",
+  "address": "Av. Luis Barragán 505, Santa Fe",
+  "neighborhood": "Santa Fe",
+  "price_text": "$361 MXN (requiere registro previo)",
+  "price_min": 361,
+  "currency": "MXN",
+  "url": "https://foodandtravel.mx/viajes/que-hacer-en-cdmx-los-mejores-planes-y-eventos-de-esta-semana/",
+  "category": "Wellness & Sport",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Parque La Mexicana",
+  "recurring": false,
+  "sources": [
+   "web:food-and-travel-mx:13a5987abd8f"
+  ],
+  "source_links": [
+   {
+    "name": "Food and Travel MX",
+    "url": "https://foodandtravel.mx/viajes/que-hacer-en-cdmx-los-mejores-planes-y-eventos-de-esta-semana/"
+   }
+  ],
+  "source_excerpt": "Carrera nocturna en Parque La Mexicana\nPara celebrar sus primeros nueve años, este parque en Santa Fe reunirá a la comunidad corredora para iluminar cada uno de sus senderos en una ruta de 5 kilómetros. La experiencia inicia con maquillaje neón gratuito antes del arranque nocturno, la idea es que todos puedan correr en un ambiente relajado donde la convivencia pesa más que el cronómetro. Al cruzar la meta, todos los corredores participan en una rifa conmemorativa y reciben su kit de hidratación, recuperación, playera y buff. Dónde: Parque La Mexicana (cita a un costado de la fuente caracol). Av. Luis Barragán 505, Santa Fe. Cuándo: 20 de noviembre. Costo: $361 MXN (requiere registro previo). IG: parquelamexicana_oficial",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Carrera comunitaria nocturna con ambientación y kit incluido, ideal para quienes buscan un plan deportivo distinto en Santa Fe."
+ },
+ {
+  "title": "Corona Capital",
+  "description": "Festival musical en el Autódromo Hermanos Rodríguez con cartel encabezado por Gorillaz, Twenty One Pilots y The Strokes; tres días con escenarios de indie y alternativa.",
+  "starts_at": "2026-11-20T12:00:00-06:00",
+  "ends_at": "2026-11-22T23:00:00-06:00",
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Autódromo Hermanos Rodríguez",
+  "address": "Viaducto Río de la Piedad s/n, Granjas México",
+  "neighborhood": "Granjas México",
+  "price_text": "Desde $3,500 MXN",
+  "price_min": 3500,
+  "currency": "MXN",
+  "url": "https://foodandtravel.mx/viajes/que-hacer-en-cdmx-los-mejores-planes-y-eventos-de-esta-semana/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Corona Capital / OCESA",
+  "recurring": false,
+  "sources": [
+   "web:food-and-travel-mx:13a5987abd8f"
+  ],
+  "source_links": [
+   {
+    "name": "Food and Travel MX",
+    "url": "https://foodandtravel.mx/viajes/que-hacer-en-cdmx-los-mejores-planes-y-eventos-de-esta-semana/"
+   }
+  ],
+  "source_excerpt": "Corona Capital\n¿Qué hacer en CDMX relacionado con la música? La cita es en el Autódromo Hermanos Rodríguez, el festival Corona Capital regresa con un cartel encabezado por Gorillaz, Twenty One Pilots y The Strokes. Durante tres días, los escenarios de la Curva 4 reunirán lo mejor de la escena alternativa e indie internacional, complementados por una oferta de food trucks y zonas de descanso para recargar energía entre conciertos. Si aún estás definiendo qué hacer en CDMX este fin de semana, este festival sigue siendo el referente principal de la música en la ciudad. Dónde: Autódromo Hermanos Rodríguez (Viaducto Río de la Piedad s/n, Granjas México). Cuándo: Del 20 al 22 de noviembre. Costo: desde $3,500 MXN. IG: coronacapital",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Festival masivo con cabeza de cartel internacional en un recinto conocido; principal referencia musical de la semana."
+ },
+ {
+  "title": "Paint & Sound",
+  "description": "Sesión que combina un baño de sonido (sound bath) con pintura en acuarela: meditaciones guiadas y vibraciones acústicas para bajar el ritmo mental y trasladar ideas al papel.",
+  "starts_at": "2026-11-21T18:30:00-06:00",
+  "ends_at": null,
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Power House by CC",
+  "address": "Marsella 82, Col. Juárez, Cuauhtémoc",
+  "neighborhood": "Juárez",
+  "price_text": "$550 MXN",
+  "price_min": 550,
+  "currency": "MXN",
+  "url": "https://foodandtravel.mx/viajes/que-hacer-en-cdmx-los-mejores-planes-y-eventos-de-esta-semana/",
+  "category": "Creativity & Crafts",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Luna Studio / Artístico",
+  "recurring": false,
+  "sources": [
+   "web:food-and-travel-mx:13a5987abd8f"
+  ],
+  "source_links": [
+   {
+    "name": "Food and Travel MX",
+    "url": "https://foodandtravel.mx/viajes/que-hacer-en-cdmx-los-mejores-planes-y-eventos-de-esta-semana/"
+   }
+  ],
+  "source_excerpt": "Paint & Sound\nPara hacer una pausa en medio del ritmo de la ciudad, Luna Studio y Artístico proponen una sesión que combina un baño de sonido (sound bath) con pintura en acuarela. Mediante meditaciones guiadas y vibraciones acústicas, la experiencia busca bajar el ritmo mental para trasladar ideas al papel a través del agua y el pigmento. Es uno de esos eventos CDMX íntimos que apuestan por el descanso y la creatividad. Dónde: Power House by CC. Marsella 82, Col. Juárez, Cuauhtémoc. Cuándo: 21 de noviembre. Costo: $550 MXN. IG: luna_studio82",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Taller íntimo que mezcla sound bath y pintura para desconectar; buen plan para quienes buscan creatividad y relajación."
+ },
+ {
+  "title": "Sabores de Francia y México en Festival ¡Qué Gusto!",
+  "description": "Festival que celebra el intercambio gastronómico entre Francia y México con demostraciones, recorridos y una cena a ocho manos; arranca en las chinampas de Xochimilco y reúne a chefs franceses y mexicanos.",
+  "starts_at": "2026-11-23T00:00:00-06:00",
+  "ends_at": "2026-11-29T23:59:59-06:00",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Chinampas de Xochimilco (arranque)",
+  "address": "Chinampas de Xochimilco, Xochimilco",
+  "neighborhood": "Xochimilco",
+  "price_text": "Eventos con reservación",
+  "price_min": null,
+  "currency": "MXN",
+  "url": "https://foodandtravel.mx/viajes/que-hacer-en-cdmx-los-mejores-planes-y-eventos-de-esta-semana/",
+  "category": "Food & Drink",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Festival ¡Qué Gusto!",
+  "recurring": false,
+  "sources": [
+   "web:food-and-travel-mx:13a5987abd8f"
+  ],
+  "source_links": [
+   {
+    "name": "Food and Travel MX",
+    "url": "https://foodandtravel.mx/viajes/que-hacer-en-cdmx-los-mejores-planes-y-eventos-de-esta-semana/"
+   }
+  ],
+  "source_excerpt": "Sabores de Francia y México en Festival ¡Qué Gusto!\nTras diez años promoviendo la cocina mexicana en París, el festival ¡Qué Gusto! llega por primera vez a la capital en el marco del Bicentenario de las Relaciones Diplomáticas entre Francia y México. El programa arranca el 23 de noviembre en las chinampas de Xochimilco y reúne a la chef Chloé Charles, la repostera parisina Manon Gouin y a Michèle Guérin, cocinera francesa encargada de compartir recetas tradicionales caseras de su país. La semana incluye demostraciones, recorridos y una cena a ocho manos. Dónde: arranca en las chinampas de Xochimilco. Cuándo: del 23 al 29 de noviembre. Costo: eventos con reservación. IG: festivalquegusto",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Interesante intercambio culinario internacional con programación en las chinampas; relevante para aficionados a la gastronomía y experiencias culturales."
+ },
+ {
+  "title": "The Centellas y Perro Agradecido",
+  "description": "Concierto dentro del 24 aniversario del Centro Cultural de España en México. The Centellas y Perro Agradecido se presentan en la jornada del viernes 20 de noviembre a partir de las 19:00 h.",
+  "starts_at": "2026-11-20T19:00:00-06:00",
+  "ends_at": "2026-11-20T21:30:00-06:00",
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Centro Cultural de España en México (CCEMx)",
+  "address": "República de Guatemala 18, Centro Histórico, Ciudad de México",
+  "neighborhood": "Centro Histórico",
+  "price_text": null,
+  "price_min": null,
+  "currency": null,
+  "url": "https://ccemx.short.gy/1KG4YU",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Centro Cultural de España en México",
+  "recurring": false,
+  "sources": [
+   "web:m-xico-es-cultura:73ce74547228"
+  ],
+  "source_links": [
+   {
+    "name": "México es Cultura",
+    "url": "https://mexicoescultura.com/actividad/340912/24-aniversario-del-ccemx.html"
+   }
+  ],
+  "source_excerpt": "El Centro Cultural de España en México (CCEMx) celebrará su 24 aniversario con dos jornadas musicales que reunirán a The Centellas, Perro Agradecido, Hidrogenesse y Perritos Genéricos, cuatro propuestas que exploran distintos lenguajes sonoros, desde el surf urbano y la cumbia psicodélica hasta la electrónica y el pop contemporáneo.\nLos conciertos tendrán lugar el viernes 20 y sábado 21 de noviembre, a partir de las 19:00 h, como parte de una celebración que invita al público a compartir 24 años de trabajo dedicado a impulsar la creación artística, el intercambio cultural y la colaboración entre México y España.\nPROGRAMA DE ANIVERSARIO\n* Viernes 20 de noviembre | 19:00 h\nThe Centellas y Perro Agradecido\n* Sábado 21 de noviembre | 19:00 h\nHidrogenesse (España) y Perritos Genéricos (México)\nSede: Centro Cultural de España en México (CCEMx) | República de Guatemala 18, Centro Histórico, Ciudad de México\nMás información: https://ccemx.short.gy/1KG4YU\nviernes, 19:00 a 21:30 hrs.\n21 de noviembre de 2026\nsábado, 19:00 a 21:30 hrs.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Concierto dentro de la fiesta de aniversario del CCEMx con bandas reconocidas en la escena alternativa; buena opción para quienes siguen surf urbano y cumbia psicodélica."
+ },
+ {
+  "title": "Hidrogenesse (España) y Perritos Genéricos",
+  "description": "Concierto dentro del 24 aniversario del Centro Cultural de España en México. Hidrogenesse (España) y Perritos Genéricos (México) se presentan el sábado 21 de noviembre a las 19:00 h.",
+  "starts_at": "2026-11-21T19:00:00-06:00",
+  "ends_at": "2026-11-21T21:30:00-06:00",
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Centro Cultural de España en México (CCEMx)",
+  "address": "República de Guatemala 18, Centro Histórico, Ciudad de México",
+  "neighborhood": "Centro Histórico",
+  "price_text": null,
+  "price_min": null,
+  "currency": null,
+  "url": "https://ccemx.short.gy/1KG4YU",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Centro Cultural de España en México",
+  "recurring": false,
+  "sources": [
+   "web:m-xico-es-cultura:73ce74547228"
+  ],
+  "source_links": [
+   {
+    "name": "México es Cultura",
+    "url": "https://mexicoescultura.com/actividad/340912/24-aniversario-del-ccemx.html"
+   }
+  ],
+  "source_excerpt": "El Centro Cultural de España en México (CCEMx) celebrará su 24 aniversario con dos jornadas musicales que reunirán a The Centellas, Perro Agradecido, Hidrogenesse y Perritos Genéricos, cuatro propuestas que exploran distintos lenguajes sonoros, desde el surf urbano y la cumbia psicodélica hasta la electrónica y el pop contemporáneo.\nLos conciertos tendrán lugar el viernes 20 y sábado 21 de noviembre, a partir de las 19:00 h, como parte de una celebración que invita al público a compartir 24 años de trabajo dedicado a impulsar la creación artística, el intercambio cultural y la colaboración entre México y España.\nPROGRAMA DE ANIVERSARIO\n* Viernes 20 de noviembre | 19:00 h\nThe Centellas y Perro Agradecido\n* Sábado 21 de noviembre | 19:00 h\nHidrogenesse (España) y Perritos Genéricos (México)\nSede: Centro Cultural de España en México (CCEMx) | República de Guatemala 18, Centro Histórico, Ciudad de México\nMás información: https://ccemx.short.gy/1KG4YU\nviernes, 19:00 a 21:30 hrs.\n21 de noviembre de 2026\nsábado, 19:00 a 21:30 hrs.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Noche con proyecto electrónico español Hidrogenesse y la escena local; buena propuesta para quienes buscan pop y electrónica en un espacio cultural céntrico."
+ },
+ {
+  "title": "Voz en Punto",
+  "description": "Concierto-conferencia \"Voz en Punto\" dentro de la programación de Fomento a Proyectos y Coinversiones Culturales. Entrada libre.",
+  "starts_at": "2026-11-22T12:00:00-06:00",
+  "ends_at": "2026-11-22T13:00:00-06:00",
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": null,
+  "address": null,
+  "neighborhood": null,
+  "price_text": "Entrada libre",
+  "price_min": 0,
+  "currency": "MXN",
+  "url": "https://mexicoescultura.com/actividad/340910/voz-en-punto-canta-cri-cri.html",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Voz en Punto",
+  "recurring": false,
+  "sources": [
+   "web:m-xico-es-cultura:f73fa51f6c6a"
+  ],
+  "source_links": [
+   {
+    "name": "México es Cultura",
+    "url": "https://mexicoescultura.com/actividad/340910/voz-en-punto-canta-cri-cri.html"
+   }
+  ],
+  "source_excerpt": "Voz en Punto\nFomento a Proyectos \ny Coinversiones Culturales\nAUTOR\nVoz en Punto\n                        22 de noviembre de 2026\ndomingo, 12:00 a 13:00 hrs.\nEntrada libre",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": false,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Evento gratuito y de corta duración ideal para una salida familiar o educativa al mediodía (canta Cri-Crí)."
+ },
+ {
+  "title": "La culta dama",
+  "description": "Proyección de la película dirigida por Rogelio A. González sobre una mujer embarazada que busca ayuda para dar a luz; aborda desigualdad social y solidaridad entre mujeres.",
+  "starts_at": "2026-11-22T19:00:00-06:00",
+  "ends_at": "2026-11-22T20:30:00-06:00",
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": null,
+  "address": null,
+  "neighborhood": null,
+  "price_text": null,
+  "price_min": null,
+  "currency": null,
+  "url": "https://mexicoescultura.com/actividad/340905/la-culta-dama.html",
+  "category": "Film & Performance",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": null,
+  "recurring": false,
+  "sources": [
+   "web:m-xico-es-cultura:b2aefe3f3706"
+  ],
+  "source_links": [
+   {
+    "name": "México es Cultura",
+    "url": "https://mexicoescultura.com/actividad/340905/la-culta-dama.html"
+   }
+  ],
+  "source_excerpt": "La trama gira en torno a una mujer embarazada y de bajos recursos que, al no tener dónde dar a luz, busca ayuda en una dama de la alta sociedad. La película aborda temas como la desigualdad social y la solidaridad entre mujeres de diferentes clases sociales.\nDIRECTOR\nRogelio A. González\n                        22 de noviembre de 2026\ndomingo, 19:00 a 20:30 hrs.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": false,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Proyección temática sobre desigualdad y solidaridad dirigida por Rogelio A. González; interés para quienes siguen cine clásico/social."
+ },
+ {
+  "title": "Programa del octeto del coro sinfónico comunitario: Lorca",
+  "description": "Concierto del octeto del coro sinfónico comunitario con programa de piezas de Manuel Oltra, Leo Brower, Mario Castelnuovo-Tedesco y más. Entrada libre.",
+  "starts_at": "2026-11-29T16:00:00-06:00",
+  "ends_at": "2026-11-29T17:30:00-06:00",
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Complejo Cultural Los Pinos",
+  "address": null,
+  "neighborhood": null,
+  "price_text": "Entrada Libre",
+  "price_min": 0,
+  "currency": "MXN",
+  "url": "https://mexicoescultura.com/actividad/340919/programa-del-octeto-del-coro-sinfonico-comunitario-lorca-complejo-cultural-los-pinos.html",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Sistema Nacional de Fomento Musical",
+  "recurring": false,
+  "sources": [
+   "web:m-xico-es-cultura:7a211183f1f0"
+  ],
+  "source_links": [
+   {
+    "name": "México es Cultura",
+    "url": "https://mexicoescultura.com/actividad/340919/programa-del-octeto-del-coro-sinfonico-comunitario-lorca-complejo-cultural-los-pinos.html"
+   }
+  ],
+  "source_excerpt": "Programa del octeto del coro sinfónico comunitario: Lorca | Complejo Cultural Los Pinos \nProgramación\nAlejandro León Islas, director\nManuel Oltra\nTres andaluzas\nI. Canción del jinete\nII. Es verdad\nIII. Arbolé, arbolé\nLeo Brower\nBalada de un día de julio\n... \n                        29 de noviembre de 2026\ndomingo, 16:00 a 17:30 hrs.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Concierto gratuito de música clásica en el Complejo Cultural Los Pinos con programa dedicado a Lorca; buena opción para público interesado en coros y repertorio clásico."
+ },
+ {
+  "title": "Orquesta Ensueño y parejas de charros y charras (Noche de Museos)",
+  "description": "Concierto de Orquesta Ensueño y parejas de charros y charras como parte del 17º Aniversario de la Noche de Museos; entrada libre.",
+  "starts_at": "2026-11-25T19:00:00-06:00",
+  "ends_at": "2026-11-25T20:00:00-06:00",
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": null,
+  "address": null,
+  "neighborhood": null,
+  "price_text": "Entrada libre",
+  "price_min": 0,
+  "currency": "MXN",
+  "url": "https://mexicoescultura.com/actividad/340909/orquesta-ensueno-y-parejas-de-charros-y-charras.html",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": null,
+  "recurring": false,
+  "sources": [
+   "web:m-xico-es-cultura:3113f4c8a149"
+  ],
+  "source_links": [
+   {
+    "name": "México es Cultura",
+    "url": "https://mexicoescultura.com/actividad/340909/orquesta-ensueno-y-parejas-de-charros-y-charras.html"
+   }
+  ],
+  "source_excerpt": "Asiste al concierto de la Orquesta Ensueño y las parejas de charros y charras en el 17º Aniversario\nde la Noche de Museos\nComo parte de las actividades de la exposición \"Entretejiéndonos con hilos dorados. De carnaval en Chimalhuacán\", disfruta de una velada que une la música tradicional con la elegancia y destreza de la charrería, oficios y tradiciones que dan identidad a nuestras comunidades.\n                        25 de noviembre de 2026\nmiércoles, 19:00 a 20:00 hrs.\nEntrada libre",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": false,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Evento gratuito que mezcla música tradicional y charrería dentro de la Noche de Museos; atractivo para quienes buscan actividades culturales nocturnas."
+ },
+ {
+  "title": "Time Warp México",
+  "description": "Festival especializado de música techno con 23 actos y 29 artistas incluyendo Sven Väth, Reinier Zonneveld, Zombies In Miami, Maceo Plex, DJ Tennis, Anfisa Letyago, DVS1, Helena Hauff y más; dos días de programación en Expo Santa Fe.",
+  "starts_at": "2026-11-20T00:00:00-06:00",
+  "ends_at": "2026-11-21T23:59:59-06:00",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Expo Santa Fe",
+  "address": null,
+  "neighborhood": "Santa Fe",
+  "price_text": "Por día — General $1,250; Banamex Stage VIP $2,390. Abono — General $1,820; Banamex Stage VIP $2,390",
+  "price_min": 1250,
+  "currency": "MXN",
+  "url": "https://www.mehaceruido.com/2026/09/time-warp-el-festival-aleman-llega-a-mexico/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": null,
+  "recurring": false,
+  "sources": [
+   "web:me-hace-ruido:a375cba7ec1e"
+  ],
+  "source_links": [
+   {
+    "name": "Me Hace Ruido",
+    "url": "https://www.mehaceruido.com/2026/09/time-warp-el-festival-aleman-llega-a-mexico/"
+   }
+  ],
+  "source_excerpt": "Fundado en Manheim, Alemania en 1994, el especializado festival de música Techno Time Warp por fin llega a México luego de tres décadas tras haber plantado ediciones en distintas ciudades como Nueva York, Miami, São Paulo y Madrid.\nMéxico es un país fértil para la electrónica... llegará Time Warp México el próximo mes de noviembre.\n¿Qué podemos esperar? 23 actos y 29 artistas, dos presentaciones en vivo y seis sesiones B2B... Esta es la lista de todos los DJs y artistas que estarán en Time Warp México 2026:\nViernes 20 de noviembre\nAlarico B2B Ben Klock\nAndy Martin\nAnfisa Letyago\nThe Blessed Madonna\nChlär B2B Dax J\nDJ Stingray 313 B2B Helena Hauff\nDVS1\nMaceo Plex\nOgazón\nSven Väth\nZombies In Miami Live\nSábado 21 de noviembre\nBeltran\n... ¿Cuándo? Viernes 20 y sábado 21 de noviembre\n¿Dónde? Expo Santa Fe\nBoletos\nPor día\nGeneral $1,250\nBanamex Stage VIP $2,390\nAbono\nGeneral $1,820\nBanamex Stage VIP $2,390\nCómpralos aquí",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Time Warp es un internationally established techno festival making its first Mexico edition with a high-profile lineup at Expo Santa Fe — a major draw for electronic-music fans."
+ },
+ {
+  "title": "PRECIOS: Lisa Maria se presentará en TONAL",
+  "description": "Lisa Maria, proyecto artístico de Lisa Cerati, presenta su álbum debut en Tonal, Ciudad de México. Boletos a través de Passline; PREVENTA FASE 1 $400.00 MXN.",
+  "starts_at": "2026-11-19T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "TONAL",
+  "address": null,
+  "neighborhood": null,
+  "price_text": "PREVENTA FASE 1 $400.00 MXN",
+  "price_min": 400,
+  "currency": "MXN",
+  "url": "https://www.indierocks.mx/agenda/precios-lisa-maria-se-presentara-en-tonal/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": null,
+  "recurring": false,
+  "sources": [
+   "web:indie-rocks-agenda:bd409121dc11"
+  ],
+  "source_links": [
+   {
+    "name": "Indie Rocks agenda",
+    "url": "https://www.indierocks.mx/agenda/precios-lisa-maria-se-presentara-en-tonal/"
+   }
+  ],
+  "source_excerpt": "Fecha\n19 Noviembre 2026\nLugar\nTONAL\nMexico City, Mexico\nPrecio\nPREVENTA FASE 1 $400.00 MXN\nArtista(s)\nLisa Maria, proyecto artístico de Lisa Cerati, anunció su primera gira por Latinoamérica para presentar su álbum debut homónimo, editado por Hora Cero Records. Tras pasar por Santiago de Chile, Buenos Aires y Lima, el tour finalizará el jueves 19 de noviembre en Tonal, Ciudad de México.\nLos boletos estarán disponibles a través de Passline. Estos son los precios:",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": false,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Cierra la primera gira latinoamericana de la artista y tiene venta anticipada con precio publicado, útil para quien busca conciertos íntimos en CDMX."
+ },
+ {
+  "title": "Conversatorio Cobertura Cultural: cómo contar...",
+  "description": "Conversatorio dentro de la programación de Cultura UNAM. Sede: Colegio de San Ildefonso, Sala José Clemente Orozco.",
+  "starts_at": "2026-11-21T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Colegio de San Ildefonso, Sala José Clemente Orozco",
+  "address": null,
+  "neighborhood": "Centro",
+  "price_text": null,
+  "price_min": null,
+  "currency": "MXN",
+  "url": "https://cultura.unam.mx/actividades/Conferencias-y-presentaciones",
+  "category": "Talks & Learning",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Cultura UNAM",
+  "recurring": false,
+  "sources": [
+   "web:cultura-unam:3f4cd3ad0c1b"
+  ],
+  "source_links": [
+   {
+    "name": "Cultura UNAM",
+    "url": "https://cultura.unam.mx/actividades/Conferencias-y-presentaciones"
+   }
+  ],
+  "source_excerpt": "Conversatorio Cobertura Cultural: cómo contar...\nColegio de San Ildefonso, Sala José Clemente Orozco\n21\nnoviembre\n2026\nConferencias y presentaciones",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Evento cultural organizado por Cultura UNAM en un recinto emblemático (Colegio de San Ildefonso), relevante para público interesado en periodismo y gestión cultural."
+ },
+ {
+  "title": "PRECIOS: LP dará un show en el Auditorio Nacional",
+  "description": "Presentación de LP en el Auditorio Nacional, Ciudad de México (entrada y precios según venta oficial).",
+  "starts_at": "2026-11-22T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Auditorio Nacional",
+  "address": null,
+  "neighborhood": "Polanco / Paseo de la Reforma",
+  "price_text": null,
+  "price_min": null,
+  "currency": "MXN",
+  "url": "https://www.indierocks.mx/agenda/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": null,
+  "recurring": false,
+  "sources": [
+   "web:indie-rocks-agenda:da445999d467"
+  ],
+  "source_links": [
+   {
+    "name": "Indie Rocks agenda",
+    "url": "https://www.indierocks.mx/agenda/"
+   }
+  ],
+  "source_excerpt": "Noviembre\n22\nPRECIOS: LP dará un show en el Auditorio Nacional\nAuditorio Nacional\nCDMX",
+  "image_url": null,
+  "confidence": 0.6,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Concierto de una artista internacional en el principal recinto de conciertos de la ciudad; interesa a público masivo aunque el anuncio en la lista carece de enlace directo a boletos."
+ },
+ {
+  "title": "Doyle dará un show en el Circo Volador",
+  "description": "Concierto anunciado en la agenda de Indie Rocks: Doyle en Circo Volador, Ciudad de México.",
+  "starts_at": "2026-11-22T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Circo Volador",
+  "address": null,
+  "neighborhood": "Ciudad de los Deportes / Benito Juárez",
+  "price_text": null,
+  "price_min": null,
+  "currency": "MXN",
+  "url": "https://www.indierocks.mx/agenda/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": null,
+  "recurring": false,
+  "sources": [
+   "web:indie-rocks-agenda:da445999d467"
+  ],
+  "source_links": [
+   {
+    "name": "Indie Rocks agenda",
+    "url": "https://www.indierocks.mx/agenda/"
+   }
+  ],
+  "source_excerpt": "Noviembre\n22\nDoyle dará un show en el Circo Volador\nCirco Volador\nCDMX",
+  "image_url": null,
+  "confidence": 0.6,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Entrada para un concierto en Circo Volador, buena opción para fans del circuito de rock/alternativo; la ficha listada carece de detalles de precio y hora."
+ },
+ {
+  "title": "Cursos y talleres – Período 2 | 2026",
+  "description": "Oferta cuatrimestral presencial o virtual de Casa del Lago UNAM dirigida a adolescentes mayores de 16 años, adultos y adultos mayores. Del 25 de agosto al 5 de diciembre de 2026; la oferta incluye 45 propuestas (28 presenciales y 17 virtuales) en disciplinas como artes visuales, cine, danza, fotografía, humanidades, literatura, música, cultura digital y actividades complementarias. Inscripciones en línea en las fechas publicadas; cada curso tiene cupo máximo de 15 y mínimo de 8 participantes. Modalidades presencial y virtual; en caso de restricciones sanitarias las clases presenciales podrían trasladarse a formato virtual.",
+  "starts_at": "2026-08-25T00:00:00-06:00",
+  "ends_at": "2026-12-05T23:59:59-06:00",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Casa del Lago UNAM",
+  "address": "Bosque de Chapultepec, Primera Sección S/N, San Miguel Chapultepec, 11850, Ciudad de México",
+  "neighborhood": "San Miguel Chapultepec",
+  "price_text": null,
+  "price_min": null,
+  "currency": null,
+  "url": "https://casadellago.unam.mx/nuevo/cursos-y-talleres/cursos-y-talleres",
+  "category": "Talks & Learning",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": "none",
+  "organizer": "Casa del Lago UNAM",
+  "recurring": false,
+  "sources": [
+   "web:casa-del-lago-unam:11463be12e19"
+  ],
+  "source_links": [
+   {
+    "name": "Casa del Lago UNAM",
+    "url": "https://casadellago.unam.mx/nuevo/cursos-y-talleres/cursos-y-talleres"
+   }
+  ],
+  "source_excerpt": "CURSOS Y TALLERES – PERÍODO 2 | 2026\nCUATRIMESTRAL PRESENCIAL O VIRTUAL\nDEL 25 DE AGOSTO AL 5 DE DICIEMBRE 2026\nCASA DEL LAGO UNAM\nLos Cursos y Talleres de Casa del Lago UNAM, adscritos a la Red de Educación Continua de la UNAM, son dirigidos específicamente a adolescentes mayores de 16 años, adultos y adultos mayores.\nLa plantilla ofertada abarca cursos y talleres de iniciación artística en las siguientes disciplinas: artes visuales, cine, danza, fotografía, humanidades, literatura, música y arte con medios electrónicos. Asimismo, se ofertan cursos y talleres complementarios y recreativos sobre medioambiente, yoga, entre otros. Esta oferta cuatrimestral se llevará a cabo en las modalidades presencial o virtual.\nINSCRIPCIONES EN LÍNEA\nIMPORTANTE: No se puede inscribir a menores de 16 años; ...\nIMPORTANTE: Cada curso o taller tiene un cupo máximo de 15 y un cupo mínimo de 8 personas usuarias para su apertura en cualquiera de los dos formatos (presencial o virtual).",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": true,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Es la convocatoria cuatrimestral de cursos y talleres de Casa del Lago UNAM (oferta presencial y virtual) — buena oportunidad para inscribirse en talleres con cupo limitado y descuentos para estudiantes y adultos mayores."
+ },
+ {
+  "title": "Music",
+  "description": "Listado en la agenda del PIAC: evento categorizado como Music con fecha indicada el 27 de noviembre de 2026 (detalle y enlace en la programación del PIAC).",
+  "starts_at": "2026-11-27T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": null,
+  "address": null,
+  "neighborhood": null,
+  "price_text": null,
+  "price_min": null,
+  "currency": "MXN",
+  "url": "https://www.piac.org.mx/event-schedule/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "PIAC (Patronato de la Industria Alemana para la Cultura)",
+  "recurring": false,
+  "sources": [
+   "web:piac-agenda:e94d95e7f51a"
+  ],
+  "source_links": [
+   {
+    "name": "PIAC agenda",
+    "url": "https://www.piac.org.mx/event-schedule/"
+   }
+  ],
+  "source_excerpt": "Music\n27 de noviembre de 2026\n29 de noviembre de 2026\n12:15 hrs\n5 de diciembre de 2026\nInstituto Goethe Mexico\n14:00 hrs - 23:00 hrs\n© 2026 PIAC | Patronato de la Industria Alemana para la Cultura es una Asociación Civil.",
+  "image_url": null,
+  "confidence": 0.6,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Programa listado por el PIAC, organizador cultural conocido; podría interesar a públicos de música internacional pero la ficha en la fuente es incompleta (sin sede ni precio)."
+ },
+ {
+  "title": "Music",
+  "description": "Listado en la agenda del PIAC: evento categorizado como Music con fecha indicada el 29 de noviembre de 2026 a las 12:15 hrs (detalle y enlace en la programación del PIAC).",
+  "starts_at": "2026-11-29T12:15:00-06:00",
+  "ends_at": null,
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": null,
+  "address": null,
+  "neighborhood": null,
+  "price_text": null,
+  "price_min": null,
+  "currency": "MXN",
+  "url": "https://www.piac.org.mx/event-schedule/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "PIAC (Patronato de la Industria Alemana para la Cultura)",
+  "recurring": false,
+  "sources": [
+   "web:piac-agenda:e94d95e7f51a"
+  ],
+  "source_links": [
+   {
+    "name": "PIAC agenda",
+    "url": "https://www.piac.org.mx/event-schedule/"
+   }
+  ],
+  "source_excerpt": "Music\n27 de noviembre de 2026\n29 de noviembre de 2026\n12:15 hrs\n5 de diciembre de 2026\nInstituto Goethe Mexico\n14:00 hrs - 23:00 hrs\n© 2026 PIAC | Patronato de la Industria Alemana para la Cultura es una Asociación Civil.",
+  "image_url": null,
+  "confidence": 0.6,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Registro de fechas en la programación del PIAC que apunta a funciones musicales; es relevante para quienes siguen la programación cultural alemana en CDMX, pero la publicación carece de detalles de sede y costos."
+ },
+ {
+  "title": "Querida Sveta",
+  "description": "¿Puede el arte juzgarse como un crimen? Querida Sveta entrelaza teatro documental, testimonio y poesía para reflexionar sobre la libertad de expresión, la manipulación afectiva y los límites entre la representación artística y el poder político. Duración: 80 minutos. Público: +12. Compañía: Es porque sobreviviste. Músico en escena: Alejandro Albarrán. Dirección: Rebeca Trejo. Elenco: Alejandra Reyes, Pilar Campo y Gibrán Portela.",
+  "starts_at": "2026-11-07T20:00:00-06:00",
+  "ends_at": "2026-11-29T20:00:00-06:00",
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Centro Cultural Helénico - Foro Alternativo",
+  "address": "Avenida Revolución 1500, Esquina con Manuel M. Ponce, Ciudad de México",
+  "neighborhood": "Guadalupe Inn",
+  "price_text": "$302.00",
+  "price_min": 302,
+  "currency": "MXN",
+  "url": "https://helenico.gob.mx/cartelera/detalle/340629/querida-sveta",
+  "category": "Film & Performance",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": null,
+  "recurring": false,
+  "sources": [
+   "web:teatro-hel-nico-cartelera:657067e51ed3"
+  ],
+  "source_links": [
+   {
+    "name": "Teatro Helénico cartelera",
+    "url": "https://helenico.gob.mx/cartelera/detalle/340629/querida-sveta"
+   }
+  ],
+  "source_excerpt": "Querida Sveta\n¿Puede el arte juzgarse como un crimen?\nSobre la obra\nSinopsis\nCompañía: Es porque sobreviviste\nMúsico en escena: Alejandro Albarrán\n¿Qué ocurre cuando una obra de teatro deja de ser ficción para convertirse en evidencia judicial? Querida Sveta responde a esta pregunta desde un poderoso dispositivo escénico que entrelaza teatro documental, testimonio y poesía para reflexionar sobre la libertad de expresión, la manipulación afectiva y los límites entre la representación artística y el poder político.\nDuración: 80 minutos\nPúblico: +12\nGénero: drama documental\nAutor\nAlejandra Reyes y Gibrán Portela, a partir de la obra de Svetlana Petriichuk\nDirección\nRebeca Trejo\nElenco\nAlejandra Reyes, Pilar Campo y Gibrán Portela\nMás información\nHorarios y precios\ndel 07 al 29 de noviembre de 2026\nsábado y domingo, 20:00 a 21:20 hrs.\nSábado 28 de noviembre, la función será a las 21 h\n$302.00\nAdolescentes y adultos\nEspacio\nCentro Cultural Helénico - Foro Alternativo\nDirección\nAvenida Revolución 1500 , Esquina con Manuel M. Ponce\nMéxico, Ciudad de México\n(55) 4155 0900, (55) 4155 0901, (55) 4155 0919",
+  "image_url": null,
+  "confidence": 0.93,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Interesante propuesta de teatro documental en el Foro Alternativo del Helénico que explora libertad de expresión y límites entre arte y poder, con funciones los sábados y domingos durante noviembre."
+ },
+ {
+  "title": "carlos amorales: anteparaíso",
+  "description": "Exhibition at kurimanzutto, Mexico City.",
+  "starts_at": "2026-11-05T00:00:00-06:00",
+  "ends_at": "2026-12-16T23:59:59-06:00",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "kurimanzutto",
+  "address": null,
+  "neighborhood": null,
+  "price_text": null,
+  "price_min": null,
+  "currency": null,
+  "url": "https://www.kurimanzutto.com/exhibitions",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "kurimanzutto",
+  "recurring": false,
+  "sources": [
+   "web:kurimanzutto:b26e9f8405a8",
+   "web:kurimanzutto:18aafe62e901"
+  ],
+  "source_links": [
+   {
+    "name": "kurimanzutto",
+    "url": "https://www.kurimanzutto.com/exhibitions"
+   },
+   {
+    "name": "kurimanzutto",
+    "url": "https://www.kurimanzutto.com/es/exposiciones"
+   }
+  ],
+  "source_excerpt": "carlos amorales: anteparaíso\nkurimanzutto | mexico city\nnovember 5 – december 16, 2026",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Major gallery exhibition by a notable artist at the established kurimanzutto gallery in Mexico City; good for art audiences during its multi-week run."
+ },
+ {
+  "title": "Corona Capital 2026",
+  "description": "Festival con tres jornadas en Autódromo Hermanos Rodríguez con artistas como Gorillaz, The Strokes, Twenty One Pilots, The xx, James Blake, The Kooks, y más.",
+  "starts_at": "2026-11-20T12:00:00-06:00",
+  "ends_at": "2026-11-22T23:59:00-06:00",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Autódromo Hermanos Rodríguez",
+  "address": null,
+  "neighborhood": null,
+  "price_text": "Detalles en la nota",
+  "price_min": null,
+  "currency": "MXN",
+  "url": "https://www.indierocks.mx/agenda/corona-capital-2026-lineup-boletos-horarios-y-mas/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": "none",
+  "organizer": null,
+  "recurring": false,
+  "sources": [
+   "web:indie-rocks-agenda:f79047448bc8",
+   "web:me-hace-ruido:34c3043c7e5f"
+  ],
+  "source_links": [
+   {
+    "name": "Indie Rocks agenda",
+    "url": "https://www.indierocks.mx/agenda/corona-capital-2026-lineup-boletos-horarios-y-mas/"
+   },
+   {
+    "name": "Me Hace Ruido calendario",
+    "url": "https://www.mehaceruido.com/calendario-de-conciertos/"
+   }
+  ],
+  "source_excerpt": "El Corona Capital 2026 se celebrará el 20, 21 y 22 de noviembre en el Autódromo Hermanos Rodríguez. ... El Corona Capital 2026 promete una experiencia que es un fiel reflejo de las vibraciones musicales contemporáneas, mezclando propuestas emergentes indie y alternativas con la presencia imponente de leyendas de la música.",
+  "image_url": null,
+  "confidence": 0.95,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": true,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Corona Capital es el gran festival de noviembre en CDMX con un cartel internacional y fechas y sede explícitas."
+ },
+ {
+  "title": "Mitú",
+  "description": "Concierto de Mitú en la Sala (B) del Foro Indie Rocks! presentando su show que mezcla ritmos ancestrales con electrónica.",
+  "starts_at": "2026-11-20T21:00:00-06:00",
+  "ends_at": null,
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Foro Indie Rocks!",
+  "address": "Zacatecas 43",
+  "neighborhood": "Roma Norte",
+  "price_text": "Preventa - General $600.00 MXN Balcón $800.00 MXN Meet&Greet + Balcón $1,500.00 MXN",
+  "price_min": 600,
+  "currency": "MXN",
+  "url": "https://www.indierocks.mx/agenda/precios-mitu-se-presentara-en-el-foro-indie-rocks/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": null,
+  "recurring": false,
+  "sources": [
+   "web:indie-rocks-agenda:81c38d220090",
+   "web:me-hace-ruido:34c3043c7e5f"
+  ],
+  "source_links": [
+   {
+    "name": "Indie Rocks agenda",
+    "url": "https://www.indierocks.mx/agenda/precios-mitu-se-presentara-en-el-foro-indie-rocks/"
+   },
+   {
+    "name": "Me Hace Ruido calendario",
+    "url": "https://www.mehaceruido.com/calendario-de-conciertos/"
+   }
+  ],
+  "source_excerpt": "El próximo 20 de noviembre, Mitú regresará a territorio mexicano para ofrecer una experiencia sonora inigualable en la Sala (B) del Foro Indie Rocks!... Los boletos ya están disponibles a través de Fever y en taquillas: Tienda Foro Indie Rocks!, ubicada en Zacatecas 43, Roma Norte.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": true,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Concierto en Foro Indie Rocks! con información de precios y venta de boletos clara; buen interés para seguidores de electrónica latinoamericana."
+ },
+ {
+  "title": "Time Warp México",
+  "description": "Festival de house y techno en Expo Santa Fe con lineup internacional en dos jornadas (20 y 21 de noviembre).",
+  "starts_at": "2026-11-20T16:00:00-06:00",
+  "ends_at": "2026-11-21T23:00:00-06:00",
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Expo Santa Fe",
+  "address": null,
+  "neighborhood": null,
+  "price_text": "Individual VIP: $2,963.50 MXN Individual General: $1,550.00 - $1,698.75 MXN Abono VIP: $4,030.00 MXN Abono General: $2,256.75 - $3,000.75 MXN",
+  "price_min": 1550,
+  "currency": "MXN",
+  "url": "https://www.indierocks.mx/agenda/precios-time-warp-mexico-city-anuncia-lineup-por-dia/",
+  "category": "Clubs & Parties",
+  "category_alt": "Music",
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": null,
+  "recurring": false,
+  "sources": [
+   "web:indie-rocks-agenda:98a275dd4985",
+   "web:me-hace-ruido:34c3043c7e5f"
+  ],
+  "source_links": [
+   {
+    "name": "Indie Rocks agenda",
+    "url": "https://www.indierocks.mx/agenda/precios-time-warp-mexico-city-anuncia-lineup-por-dia/"
+   },
+   {
+    "name": "Me Hace Ruido calendario",
+    "url": "https://www.mehaceruido.com/calendario-de-conciertos/"
+   }
+  ],
+  "source_excerpt": "La Ciudad de México recibirá por primera vez al legendario festival Time Warp los próximos 20 y 21 de noviembre. Expo Santa Fe se convertirá en la sede de este nuevo capítulo, ofreciendo dos jornadas totalmente dedicadas a la esencia pura del house y el techno.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": true,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Debut de Time Warp en CDMX con lineup y precios publicados; importante para la escena electrónica local."
+ },
+ {
+  "title": "Malcriada",
+  "description": "Concierto de la banda Malcriada en el Pabellón Oeste del Palacio de los Deportes.",
+  "starts_at": "2026-11-21T20:00:00-06:00",
+  "ends_at": null,
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Pabellón Oeste, Palacio de los Deportes",
+  "address": null,
+  "neighborhood": null,
+  "price_text": "$806.00 MXN, $1,240.00 MXN, $1,488.00 MXN",
+  "price_min": 806,
+  "currency": "MXN",
+  "url": "https://www.indierocks.mx/agenda/precios-malcriada-dara-un-show-en-el-pabellon-oeste/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": null,
+  "recurring": false,
+  "sources": [
+   "web:indie-rocks-agenda:1cdbddc175cc",
+   "web:me-hace-ruido:34c3043c7e5f"
+  ],
+  "source_links": [
+   {
+    "name": "Indie Rocks agenda",
+    "url": "https://www.indierocks.mx/agenda/precios-malcriada-dara-un-show-en-el-pabellon-oeste/"
+   },
+   {
+    "name": "Me Hace Ruido calendario",
+    "url": "https://www.mehaceruido.com/calendario-de-conciertos/"
+   }
+  ],
+  "source_excerpt": "Malcriada, la banda mexicana, anunció un concierto en el Pabellón Oeste del Palacio de los Deportes el 21 de noviembre. ... Los boletos estarán disponibles a través de Ticketmaster y en las taquillas del inmueble.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": true,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Malcriada en un recinto de gran capacidad en CDMX; entrada y precios publicados."
+ },
+ {
+  "title": "God Save The Queen",
+  "description": "Concierto tributo en Arena CDMX.",
+  "starts_at": "2026-11-19T20:00:00-06:00",
+  "ends_at": null,
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Arena CDMX",
+  "address": null,
+  "neighborhood": null,
+  "price_text": "$440 a $1,632",
+  "price_min": 440,
+  "currency": "MXN",
+  "url": "https://www.mehaceruido.com/calendario-de-conciertos/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": null,
+  "recurring": false,
+  "sources": [
+   "web:me-hace-ruido:34c3043c7e5f"
+  ],
+  "source_links": [
+   {
+    "name": "Me Hace Ruido calendario",
+    "url": "https://www.mehaceruido.com/calendario-de-conciertos/"
+   }
+  ],
+  "source_excerpt": "Noviembre 19\nGod Save The Queen /// Arena CDMX /// $440 a $1,632",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Tributo en Arena CDMX con precios publicados; útil para quienes buscan conciertos del fin de semana del 19 de noviembre."
+ },
+ {
+  "title": "Los Cafres + Los Estrambóticos",
+  "description": "Presentación conjunta en el Auditorio Nacional.",
+  "starts_at": "2026-11-19T20:00:00-06:00",
+  "ends_at": null,
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Auditorio Nacional",
+  "address": null,
+  "neighborhood": null,
+  "price_text": "$450 a $1,100",
+  "price_min": 450,
+  "currency": "MXN",
+  "url": "https://www.mehaceruido.com/calendario-de-conciertos/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": null,
+  "recurring": false,
+  "sources": [
+   "web:me-hace-ruido:34c3043c7e5f"
+  ],
+  "source_links": [
+   {
+    "name": "Me Hace Ruido calendario",
+    "url": "https://www.mehaceruido.com/calendario-de-conciertos/"
+   }
+  ],
+  "source_excerpt": "Noviembre 19\nLos Cafres + Los Estrambóticos /// Auditorio Nacional /// $450 a $1,100",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Dúo de bandas ska/reggae en Auditorio Nacional; entradas y rango de precios indicados."
+ },
+ {
+  "title": "Dimash Qudaibergen",
+  "description": "Concierto en el Palacio de los Deportes.",
+  "starts_at": "2026-11-19T20:00:00-06:00",
+  "ends_at": null,
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Palacio de los Deportes",
+  "address": null,
+  "neighborhood": null,
+  "price_text": "$990 a $3,680",
+  "price_min": 990,
+  "currency": "MXN",
+  "url": "https://www.mehaceruido.com/calendario-de-conciertos/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": null,
+  "recurring": false,
+  "sources": [
+   "web:me-hace-ruido:34c3043c7e5f"
+  ],
+  "source_links": [
+   {
+    "name": "Me Hace Ruido calendario",
+    "url": "https://www.mehaceruido.com/calendario-de-conciertos/"
+   }
+  ],
+  "source_excerpt": "Noviembre 19\nDimash Qudaibergen /// Palacio de los Deportes /// $990 a $3,680",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Concierto internacional en el Palacio de los Deportes con rango de precios publicado."
+ },
+ {
+  "title": "LP",
+  "description": "Concierto de LP en el Auditorio Nacional.",
+  "starts_at": "2026-11-22T20:00:00-06:00",
+  "ends_at": null,
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Auditorio Nacional",
+  "address": null,
+  "neighborhood": null,
+  "price_text": "$880 a $6,300",
+  "price_min": 880,
+  "currency": "MXN",
+  "url": "https://www.mehaceruido.com/calendario-de-conciertos/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": null,
+  "recurring": false,
+  "sources": [
+   "web:me-hace-ruido:34c3043c7e5f"
+  ],
+  "source_links": [
+   {
+    "name": "Me Hace Ruido calendario",
+    "url": "https://www.mehaceruido.com/calendario-de-conciertos/"
+   }
+  ],
+  "source_excerpt": "Noviembre 22\nLP /// Auditorio Nacional /// $880 a $6,300",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Artista internacional en Auditorio Nacional; relevante para público pop/indie."
+ },
+ {
+  "title": "Doyle",
+  "description": "Concierto de Doyle en Circo Volador Ciudad.",
+  "starts_at": "2026-11-22T20:00:00-06:00",
+  "ends_at": null,
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Circo Volador Ciudad",
+  "address": null,
+  "neighborhood": null,
+  "price_text": "$900",
+  "price_min": 900,
+  "currency": "MXN",
+  "url": "https://www.mehaceruido.com/calendario-de-conciertos/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": null,
+  "recurring": false,
+  "sources": [
+   "web:me-hace-ruido:34c3043c7e5f"
+  ],
+  "source_links": [
+   {
+    "name": "Me Hace Ruido calendario",
+    "url": "https://www.mehaceruido.com/calendario-de-conciertos/"
+   }
+  ],
+  "source_excerpt": "Noviembre 22\nDoyle /// Circo Volador /// $900",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Show de rock en Circo Volador con precio único indicado."
+ },
+ {
+  "title": "Soda Stereo: Ecos",
+  "description": "Concierto en el Palacio de los Deportes.",
+  "starts_at": "2026-11-23T20:00:00-06:00",
+  "ends_at": null,
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Palacio de los Deportes",
+  "address": null,
+  "neighborhood": null,
+  "price_text": "$1,100 a $1,900",
+  "price_min": 1100,
+  "currency": "MXN",
+  "url": "https://www.mehaceruido.com/calendario-de-conciertos/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": null,
+  "recurring": false,
+  "sources": [
+   "web:me-hace-ruido:34c3043c7e5f"
+  ],
+  "source_links": [
+   {
+    "name": "Me Hace Ruido calendario",
+    "url": "https://www.mehaceruido.com/calendario-de-conciertos/"
+   }
+  ],
+  "source_excerpt": "Noviembre 23\nSoda Stereo: Ecos /// Palacio de los Deportes /// $1,100 a $1,900",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Fecha en Palacio de los Deportes para un show con alta demanda; precios publicados."
+ },
+ {
+  "title": "Bruno Mars: The Romantic Tour",
+  "description": "Concierto en Estadio GNP.",
+  "starts_at": "2026-12-03T20:00:00-06:00",
+  "ends_at": null,
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Estadio GNP",
+  "address": null,
+  "neighborhood": null,
+  "price_text": "$1,473 a $9,700",
+  "price_min": 1473,
+  "currency": "MXN",
+  "url": "https://www.mehaceruido.com/calendario-de-conciertos/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": null,
+  "recurring": false,
+  "sources": [
+   "web:me-hace-ruido:34c3043c7e5f"
+  ],
+  "source_links": [
+   {
+    "name": "Me Hace Ruido calendario",
+    "url": "https://www.mehaceruido.com/calendario-de-conciertos/"
+   }
+  ],
+  "source_excerpt": "Diciembre 3\nBruno Mars: The Romantic Tour /// Estadio GNP /// $1,473 a $9,700",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Concierto masivo de artista internacional con rangos de precio amplios y fecha concreta."
+ },
+ {
+  "title": "El Apocalipsis: Dimmu Borgir + Kreator",
+  "description": "Concierto de metal en el Velódromo Olímpico.",
+  "starts_at": "2026-12-03T19:00:00-06:00",
+  "ends_at": null,
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Velódromo Olímpico",
+  "address": null,
+  "neighborhood": null,
+  "price_text": "$1,980 a $2,880",
+  "price_min": 1980,
+  "currency": "MXN",
+  "url": "https://www.mehaceruido.com/calendario-de-conciertos/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": null,
+  "recurring": false,
+  "sources": [
+   "web:me-hace-ruido:34c3043c7e5f"
+  ],
+  "source_links": [
+   {
+    "name": "Me Hace Ruido calendario",
+    "url": "https://www.mehaceruido.com/calendario-de-conciertos/"
+   }
+  ],
+  "source_excerpt": "Diciembre 3\nEl Apocalipsis: Dimmu Borgir + Kreator /// Velódromo Olímpico /// $1,980 a $2,880",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Concierto de metal con dos bandas internacionales anunciado con fecha y rango de precios."
+ },
+ {
+  "title": "HUMBE: DUEÑO DEL CIELO TOUR",
+  "description": "Concierto en Arena CDMX como parte de la gira 'DUEÑO DEL CIELO'.",
+  "starts_at": "2026-12-03T20:00:00-06:00",
+  "ends_at": null,
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Arena CDMX",
+  "address": null,
+  "neighborhood": null,
+  "price_text": "$1,004 a $6,820",
+  "price_min": 1004,
+  "currency": "MXN",
+  "url": "https://www.mehaceruido.com/calendario-de-conciertos/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": null,
+  "recurring": false,
+  "sources": [
+   "web:me-hace-ruido:34c3043c7e5f"
+  ],
+  "source_links": [
+   {
+    "name": "Me Hace Ruido calendario",
+    "url": "https://www.mehaceruido.com/calendario-de-conciertos/"
+   }
+  ],
+  "source_excerpt": "Diciembre 3\nHUMBE: DUEÑO DEL CIELO TOUR /// Arena CDMX /// $1,004 a $6,820",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Fecha de gira en Arena CDMX con precios publicados; importante para seguidores del artista."
+ },
+ {
+  "title": "Recursos compartidos: Secuencias Electromagnéticas",
+  "description": "Seminario del Centro de Investigación del Museo Tamayo, a cargo de Arturo Lugo y Santiago Blaum. Cinco sesiones presenciales del 23 al 27 de noviembre (14:00–17:30) en la Sala Educativa y una presentación pública el 28 de noviembre (11:00–13:00). Cupo limitado a 12 participantes. Aplicación mediante formulario; resultados publicados 19 de noviembre de 2026.",
+  "starts_at": "2026-11-23T14:00:00-06:00",
+  "ends_at": "2026-11-28T13:00:00-06:00",
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Museo Tamayo (Sala Educativa)",
+  "address": null,
+  "neighborhood": "Bosque de Chapultepec",
+  "price_text": null,
+  "price_min": null,
+  "currency": null,
+  "url": "https://www.museotamayo.org/agenda/recursos-compartidos-secuencias-electromagneticas",
+  "category": "Talks & Learning",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Museo Tamayo",
+  "recurring": false,
+  "sources": [
+   "web:museo-tamayo:b964a83e84a9"
+  ],
+  "source_links": [
+   {
+    "name": "Museo Tamayo — Recursos compartidos: Secuencias Electromagnéticas",
+    "url": "https://www.museotamayo.org/agenda/recursos-compartidos-secuencias-electromagneticas"
+   }
+  ],
+  "source_excerpt": "Recursos compartidos: Secuencias Electromagnéticas\nSala pública\nConvocatoria\n... Sesiones presenciales del 23 al 27 de noviembre, de 14 a 17:30 h\n- Sede: Sala Educativa del Museo Tamayo\n- Cupo limitado a 12 participantes\n- Presentación pública: 28 de noviembre, de 11 a 13 h\nPara ser parte del grupo de estudio de esta edición de Sala Pública revisa que cumplas con los requisitos de participación y llena el formulario: https://forms.gle/DFczhbAX3VgBTSqP7\nFecha límite para aplicar: 17 de noviembre de 2026.\nLos resultados serán publicados el 19 de noviembre de 2026.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": true,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Es un seminario público de investigación y creación con cupo muy limitado (12), interesante para artistas e investigadores de prácticas híbridas."
+ },
+ {
+  "title": "Bestiario fantástico — taller abierto (domingo 22 de noviembre de 2026)",
+  "description": "Taller abierto dirigido a niñas y niños: a partir de obras de la exposición Tamayo, Nieto, Toledo. Los participantes inventarán animales y otros seres mediante ejercicios de dibujo y técnicas pictóricas; forma parte del programa Taller abierto del Museo Tamayo.",
+  "starts_at": "2026-11-22T12:00:00-06:00",
+  "ends_at": "2026-11-22T15:00:00-06:00",
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Museo Tamayo (Sala Educativa)",
+  "address": null,
+  "neighborhood": "Bosque de Chapultepec",
+  "price_text": null,
+  "price_min": null,
+  "currency": null,
+  "url": "https://www.museotamayo.org/agenda/bestiario-fantastico",
+  "category": "Creativity & Crafts",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": null,
+  "organizer": "Museo Tamayo",
+  "recurring": false,
+  "sources": [
+   "web:museo-tamayo:d31f27bdc8d6"
+  ],
+  "source_links": [
+   {
+    "name": "Museo Tamayo — Bestiario fantástico",
+    "url": "https://www.museotamayo.org/agenda/bestiario-fantastico"
+   }
+  ],
+  "source_excerpt": "Bestiario fantástico\nTaller abierto\nDomingos 15, 22 y 29 de noviembre | 12 – 15 h\nSala educativa\nEl Museo Tamayo invita a niñas y niños a inventar animales y otros seres inspirados en las obras de la exposición Tamayo, Nieto, Toledo. Los años en París. Los participantes realizarán diversos ejercicios de dibujo y técnicas pictóricas, trabajarán con materiales para probar combinaciones inesperadas de animales y formarán un gran bestiario colectivo.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": false,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Actividad familiar y práctica dentro de la programación didáctica del museo, buena opción para niñas y niños interesados en dibujo y creación colectiva."
+ },
+ {
+  "title": "Bestiario fantástico — taller abierto (domingo 29 de noviembre de 2026)",
+  "description": "Taller abierto dirigido a niñas y niños: a partir de obras de la exposición Tamayo, Nieto, Toledo. Los participantes inventarán animales y otros seres mediante ejercicios de dibujo y técnicas pictóricas; forma parte del programa Taller abierto del Museo Tamayo.",
+  "starts_at": "2026-11-29T12:00:00-06:00",
+  "ends_at": "2026-11-29T15:00:00-06:00",
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Museo Tamayo (Sala Educativa)",
+  "address": null,
+  "neighborhood": "Bosque de Chapultepec",
+  "price_text": null,
+  "price_min": null,
+  "currency": null,
+  "url": "https://www.museotamayo.org/agenda/bestiario-fantastico",
+  "category": "Creativity & Crafts",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": null,
+  "organizer": "Museo Tamayo",
+  "recurring": false,
+  "sources": [
+   "web:museo-tamayo:d31f27bdc8d6"
+  ],
+  "source_links": [
+   {
+    "name": "Museo Tamayo — Bestiario fantástico",
+    "url": "https://www.museotamayo.org/agenda/bestiario-fantastico"
+   }
+  ],
+  "source_excerpt": "Bestiario fantástico\nTaller abierto\nDomingos 15, 22 y 29 de noviembre | 12 – 15 h\nSala educativa\nEl Museo Tamayo invita a niñas y niños a inventar animales y otros seres inspirados en las obras de la exposición Tamayo, Nieto, Toledo. Los años en París. Los participantes realizarán diversos ejercicios de dibujo y técnicas pictóricas, trabajarán con materiales para probar combinaciones inesperadas de animales y formarán un gran bestiario colectivo.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": false,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Última sesión del taller colectivo de creación para niños: una manera lúdica de acercarse a la muestra textil del museo."
+ },
+ {
+  "title": "Noches de jazz presenta: Hans Ávila Cuarteto",
+  "description": "Concierto de jazz con el Hans Ávila Cuarteto, presentando composiciones originales de sonoridad moderna; parte de la programación Noches de Jazz del Museo Tamayo.",
+  "starts_at": "2026-11-25T21:00:00-06:00",
+  "ends_at": null,
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Museo Tamayo",
+  "address": null,
+  "neighborhood": "Bosque de Chapultepec",
+  "price_text": "Boleto: $250 pesos",
+  "price_min": 250,
+  "currency": "MXN",
+  "url": "https://www.museotamayo.org/agenda",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Museo Tamayo",
+  "recurring": false,
+  "sources": [
+   "web:museo-tamayo:5b5d253a087c"
+  ],
+  "source_links": [
+   {
+    "name": "Museo Tamayo — Agenda",
+    "url": "https://www.museotamayo.org/agenda"
+   }
+  ],
+  "source_excerpt": "Noches de Jazz\n21:00\nNoches de jazz presenta: Hans Ávila Cuarteto\nHans Ávila Cuarteto presenta composiciones originales, de sonoridad moderna y fresca, realizadas a partir de la mezcla de distintas corrientes del jazz.\nBoleto: $250 pesos",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Concierto nocturno de jazz con entrada pagada en un museo de referencia; recomendable para público interesado en jazz contemporáneo."
+ },
+ {
+  "title": "Richard Prince: Cuéntamelo todo",
+  "description": "Exposición individual del artista Richard Prince que reúne más de 140 obras de distintas series de su trayectoria, desde la década de 1970 hasta la actualidad.",
+  "starts_at": "2026-09-26T00:00:00-06:00",
+  "ends_at": "2027-02-07T23:59:59-06:00",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Museo Jumex",
+  "address": "Miguel de Cervantes Saavedra 303, Colonia Granada, 11520 Ciudad de México",
+  "neighborhood": "Granada",
+  "price_text": null,
+  "price_min": null,
+  "currency": "MXN",
+  "url": "https://www.fundacionjumex.org/es/exposiciones/789-richard-prince-cuentamelo-todo",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Fundación Jumex / Museo Jumex",
+  "recurring": false,
+  "sources": [
+   "web:museo-jumex:8b7b82d30320"
+  ],
+  "source_links": [
+   {
+    "name": "Fundación Jumex",
+    "url": "https://www.fundacionjumex.org/es/exposiciones/789-richard-prince-cuentamelo-todo"
+   }
+  ],
+  "source_excerpt": "26.SEP.2026 - 07.FEB.2027\nRichard Prince: Cuéntamelo todo\nLa primera gran exposición del artista en Latinoamérica, Richard Prince: Cuéntamelo todo se articula en torno a un análisis en profundidad de las series más emblemáticas del artista —Cowboys [Vaqueros], Girlfriends [Novias], Jokes [Chistes] y Cartoons [Dibujos animados]—, que han estado presentes a lo largo de los más de 40 años de carrera de Prince. Estas líneas principales se contextualizan en el marco más amplio de la obra del artista con piezas seleccionadas de sus primeras refotografías; sus exploraciones de la pintura en los lienzos de Nurses [Enfermeras], de Kooning y High Times; así como su serie Hoods [Capós] y otras esculturas.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Gran muestra de un artista internacional relevante y de larga trayectoria; buena opción para quienes siguen la escena del arte contemporáneo."
+ },
+ {
+  "title": "ÁLVARO URBANO: HELEN",
+  "description": "Exposición Helen del artista Álvaro Urbano, un trabajo que dialoga con la Casa Cueva y la diversidad botánica del altiplano central de México.",
+  "starts_at": "2026-10-16T00:00:00-06:00",
+  "ends_at": "2027-02-07T23:59:59-06:00",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Museo Jumex",
+  "address": "Miguel de Cervantes Saavedra 303, Colonia Granada, 11520 Ciudad de México",
+  "neighborhood": "Granada",
+  "price_text": null,
+  "price_min": null,
+  "currency": "MXN",
+  "url": "https://www.fundacionjumex.org/es/exposiciones/822-alvaro-urbano-helen",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Fundación Jumex / Museo Jumex",
+  "recurring": false,
+  "sources": [
+   "web:museo-jumex:a25179d776a4"
+  ],
+  "source_links": [
+   {
+    "name": "Fundación Jumex",
+    "url": "https://www.fundacionjumex.org/es/exposiciones/822-alvaro-urbano-helen"
+   }
+  ],
+  "source_excerpt": "16.OCT.2026 - 07.FEB.2027\nÁLVARO URBANO: HELEN\nLa exposición Helen del artista Álvaro Urbano (Madrid,1983) es un homenaje al trabajo y la práctica de Helen Fowler O'Gorman, que destaca su sensibilidad y fascinación por la diversidad botánica del altiplano central de México... Miguel de Cervantes Saavedra 303  Colonia Granada 11520 Ciudad de México",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Exposición temporal en un museo reconocido; atractiva para quienes exploran cruces entre paisaje, memoria y arte contemporáneo."
+ },
+ {
+  "title": "RAÚL SILVA: GATEWAY",
+  "description": "Primera exposición individual en México del artista Raúl Silva, que explora las dimensiones materiales e inmateriales de las telecomunicaciones y su relación con el turismo en el Caribe mexicano.",
+  "starts_at": "2026-10-16T00:00:00-06:00",
+  "ends_at": "2027-02-07T23:59:59-06:00",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Museo Jumex",
+  "address": "Miguel de Cervantes Saavedra 303, Colonia Granada, 11520 Ciudad de México",
+  "neighborhood": "Granada",
+  "price_text": null,
+  "price_min": null,
+  "currency": "MXN",
+  "url": "https://www.fundacionjumex.org/es/exposiciones/756-raul-silva-gateway",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Fundación Jumex / Museo Jumex",
+  "recurring": false,
+  "sources": [
+   "web:museo-jumex:e75714fc6b6c"
+  ],
+  "source_links": [
+   {
+    "name": "Fundación Jumex",
+    "url": "https://www.fundacionjumex.org/es/exposiciones/756-raul-silva-gateway"
+   }
+  ],
+  "source_excerpt": "16.OCT.2026 - 07.FEB.2027\nRAÚL SILVA: GATEWAY\nEl artista Raúl Silva (Lima, 1991) presenta su primera exposición individual en México, una continuación de su investigación en torno a las dimensiones materiales e inmateriales de las telecomunicaciones, concebida como una suerte de arqueología de los medios... Miguel de Cervantes Saavedra 303  Colonia Granada 11520 Ciudad de México",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Interesante muestra de investigación escultórica y de medios en un museo con programación contemporánea destacada."
+ },
+ {
+  "title": "El don de lenguas",
+  "description": "Exposición colectiva organizada por Museo Jumex presentada en el Museo de la Ciudad de Mérida que reúne obras de la Colección Jumex y proyectos recientes, explorando la comunicación más allá de las palabras.",
+  "starts_at": "2026-11-27T00:00:00-06:00",
+  "ends_at": "2027-02-28T23:59:59-06:00",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Museo Jumex (fuera del museo / exhibición en Mérida)",
+  "address": "Miguel de Cervantes Saavedra 303, Colonia Granada, 11520 Ciudad de México",
+  "neighborhood": "Granada",
+  "price_text": null,
+  "price_min": null,
+  "currency": "MXN",
+  "url": "https://www.fundacionjumex.org/es/exposiciones/855-el-don-de-lenguas",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Fundación Jumex / Museo Jumex",
+  "recurring": false,
+  "sources": [
+   "web:museo-jumex:f75f6194c3cd"
+  ],
+  "source_links": [
+   {
+    "name": "Fundación Jumex",
+    "url": "https://www.fundacionjumex.org/es/exposiciones/855-el-don-de-lenguas"
+   }
+  ],
+  "source_excerpt": "27.NOV.2026 - 28.FEB.2027\nEl don de lenguas\nEl don de lenguas es una muestra colectiva organizada por el Museo Jumex en el Museo de la Ciudad de Mérida. La exposición se presenta de manera paralela a la Bienal de Yucatán y reúne obras de la Colección Jumex y proyectos realizados por artistas para el Museo Jumex en años recientes.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Interesante proyecto curatorial que conecta la colección Jumex con una muestra offsite en Mérida; relevante para público interesado en diálogos curatoriales."
+ },
+ {
+  "title": "Mini Domingo (programa familiar) — 22.NOV.2026 13:00",
+  "description": "Mini Domingo: en este Mini Domingo, los participantes se convertirán en creadores de nuevos anuncios; a través de técnicas de apropiación intervendrán imágenes publicitarias y crearán propuestas desde su perspectiva. Actividad gratuita con registro previo.",
+  "starts_at": "2026-11-22T13:00:00-06:00",
+  "ends_at": null,
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Museo Jumex",
+  "address": "Miguel de Cervantes Saavedra 303, Colonia Granada, 11520 Ciudad de México",
+  "neighborhood": "Granada",
+  "price_text": "Actividad gratuita con registro previo",
+  "price_min": 0,
+  "currency": "MXN",
+  "url": "https://www.fundacionjumex.org/es/programa/4620-mini-domingo-telaranas-de-pixel",
+  "category": "Creativity & Crafts",
+  "category_alt": "Art & Exhibitions",
+  "family_friendly": true,
+  "umbrella": null,
+  "organizer": "Fundación Jumex / Museo Jumex",
+  "recurring": false,
+  "sources": [
+   "web:museo-jumex:9af5bfc07566"
+  ],
+  "source_links": [
+   {
+    "name": "Fundación Jumex programa",
+    "url": "https://www.fundacionjumex.org/es/programa/4620-mini-domingo-telaranas-de-pixel"
+   }
+  ],
+  "source_excerpt": "Actividad gratuita con registro previo\n01.NOV.2026 | 1PM\n22.NOV.2026 | 1PM\n06.DIC.2026 | 1PM\nTaller , Niñas y niños\nEn este Mini Domingo, los participantes se convertirán en creadores de nuevos anuncios. A través de distintas técnicas de apropiación, intervendrán imágenes publicitarias: quitarán, cubrirán o transformarán aquello que el anuncio originalmente buscaba vender y lo van a sustituir por algo que, desde su perspectiva, el mundo necesita más.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Actividad familiar gratuita y práctica dentro del museo, ideal para familias con niños interesados en creatividad y apropiación de imágenes."
+ },
+ {
+  "title": "Noches en el Museo Jumex — 25.NOV.2026",
+  "description": "Evento Noches en el Museo Jumex listado en el programa; actividad gratuita indicada para la fecha 25 de noviembre de 2026 (horario: hasta las 20:00).",
+  "starts_at": "2026-11-25T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Museo Jumex",
+  "address": "Miguel de Cervantes Saavedra 303, Colonia Granada, 11520 Ciudad de México",
+  "neighborhood": "Granada",
+  "price_text": "Actividad gratuita",
+  "price_min": 0,
+  "currency": "MXN",
+  "url": "https://www.fundacionjumex.org/es/programa?date=2026-11-26&timeframe=week",
+  "category": "Art & Exhibitions",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": null,
+  "organizer": "Fundación Jumex / Museo Jumex",
+  "recurring": false,
+  "sources": [
+   "web:museo-jumex:9af5bfc07566",
+   "web:museo-jumex:9b71aba58ba6"
+  ],
+  "source_links": [
+   {
+    "name": "Fundación Jumex programa",
+    "url": "https://www.fundacionjumex.org/es/programa?date=2026-11-26&timeframe=week"
+   },
+   {
+    "name": "Fundación Jumex exposiciones",
+    "url": "https://www.fundacionjumex.org/es/exposiciones"
+   }
+  ],
+  "source_excerpt": "Actividad gratuita  \n25.NOV.2026 | HASTA 8PM\n...NOCHES EN EL MUSEO JUMEX\n25.NOV.2026\nA través de sus exposiciones y programas públicos, el Museo Jumex aspira a posicionarse como institución relevante en el campo del arte... Miguel de Cervantes Saavedra 303  Colonia Granada 11520 Ciudad de México",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": true,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Evento nocturno gratuito del museo que permite recorrer exposiciones fuera del horario habitual; buena opción para público general y familias."
+ },
+ {
+  "title": "El Cascanueces de la Filarmónica de las Artes",
+  "description": "Funciones de El Cascanueces presentadas por la Filarmónica de las Artes en el Centro Universitario Cultural.",
+  "starts_at": "2026-12-03T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Centro Universitario Cultural",
+  "address": null,
+  "neighborhood": null,
+  "price_text": null,
+  "price_min": null,
+  "currency": "MXN",
+  "url": "https://cdmxsecreta.com/que-hacer/",
+  "category": "Film & Performance",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": null,
+  "recurring": false,
+  "sources": [
+   "web:cdmx-secreta-web:1e69bacf82ec"
+  ],
+  "source_links": [
+   {
+    "name": "CDMX Secreta (web)",
+    "url": "https://cdmxsecreta.com/que-hacer/"
+   }
+  ],
+  "source_excerpt": "¡La temporada navideña ya está aquí! El próximo 3 de diciembre comenzarán las funciones de El Cascanueces de la Filarmónica de las Artes en el Centro Universitario Cultural. Durante el espectáculo...",
+  "image_url": null,
+  "confidence": 0.6,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Clásico navideño con orquesta en un recinto cultural; buena opción para quienes buscan espectáculos familiares durante la temporada."
+ },
+ {
+  "title": "Remate de libros: Librero en Andanzas — todos los libros a $50 (Roma Sur)",
+  "description": "Promoción: todos los libros en la sucursal de Librero en Andanzas en la colonia Roma Sur tienen un precio de $50 durante todo noviembre de 2026.",
+  "starts_at": "2026-11-01T00:00:00-06:00",
+  "ends_at": "2026-11-30T23:59:00-06:00",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Librero en Andanzas (sucursal Roma Sur)",
+  "address": "Bajío 156, Roma Sur, CDMX",
+  "neighborhood": "Roma Sur",
+  "price_text": "$50 por libro",
+  "price_min": 50,
+  "currency": "MXN",
+  "url": "https://cdmxsecreta.com/gran-remate-de-libros-usados-librero-en-andanzas/",
+  "category": "Markets & Design",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": null,
+  "organizer": "Librero en Andanzas",
+  "recurring": false,
+  "sources": [
+   "web:cdmx-secreta-web:72366fbdec80"
+  ],
+  "source_links": [
+   {
+    "name": "CDMX Secreta (web)",
+    "url": "https://cdmxsecreta.com/gran-remate-de-libros-usados-librero-en-andanzas/"
+   }
+  ],
+  "source_excerpt": "¿Buscas libros baratos en CDMX? ¡Hay una promoción que podría interesarte! Librero en Andanzas tiene todos sus libros a $50 durante noviembre de 2026 en su sucursal de la colonia Roma Sur.\n\nLa librería se encuentra en Bajío 156, colonia Roma Sur, CDMX. La oferta estará vigente durante todo noviembre de 2026, por lo que el último día anunciado es el lunes 30 de noviembre.",
+  "image_url": null,
+  "confidence": 0.6,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Oportunidad económica para renovar lecturas: todos los títulos a $50 en una librería de la Roma Sur durante todo noviembre."
+ },
+ {
+  "title": "Concierto Candlelight: Tributo a Rawayana (Capilla Gótica, Centro Cultural Helénico)",
+  "description": "Concierto tributo a Rawayana interpretado por un cuarteto de cuerdas y a la luz de velas en la Capilla Gótica del Instituto Cultural Helénico.",
+  "starts_at": "2026-11-28T19:00:00-06:00",
+  "ends_at": null,
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Capilla Gótica del Instituto Cultural Helénico",
+  "address": "Av. Revolución s/n, (Centro Cultural Helénico), CDMX",
+  "neighborhood": null,
+  "price_text": "Boletos desde los $690",
+  "price_min": 690,
+  "currency": "MXN",
+  "url": "https://cdmxsecreta.com/concierto-candlelight-rawayana-capilla-gotica-centro-cultural-helenico-cdmx/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Centro Cultural Helénico / Candlelight",
+  "recurring": false,
+  "sources": [
+   "web:cdmx-secreta-web:735224f45d31"
+  ],
+  "source_links": [
+   {
+    "name": "CDMX Secreta (web)",
+    "url": "https://cdmxsecreta.com/concierto-candlelight-rawayana-capilla-gotica-centro-cultural-helenico-cdmx/"
+   }
+  ],
+  "source_excerpt": "Y ahora, este 28 de noviembre de 2026 su música sonará en vivo en una antigua capilla gótica del siglo XIV.\n\nSerá en un concierto tributo interpretado por un cuarteto de cuerda, ¡y a la luz de miles de velas!\n\n28 Nov 2026 19:00 + más fechas disponibles\nCapilla Gótica del Instituto Cultural Helénico\n\nHay boletos disponibles desde los $690, pero todo depende de la zona que elijas (¡hay lugares para los que ya no quedan boletos!).\n\nLas plazas son limitadas así que recomendamos reservar con antelación...",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": true,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Concierto íntimo y atmosférico en una capilla histórica con cupo limitado; recomendable reservar por anticipado para conseguir lugar."
+ },
+ {
+  "title": "Aki Matsuri — festival de cultura japonesa (Asociación México Japonesa, Las Águilas)",
+  "description": "Festival Aki Matsuri con mercadito cultural, gastronomía japonesa, presentaciones de tambores taiko, exhibiciones de artes marciales, ceremonia del té y artistas invitados.",
+  "starts_at": "2026-11-21T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Asociación México Japonesa",
+  "address": "Fujiyama 144, Las Águilas, CDMX",
+  "neighborhood": "Las Águilas",
+  "price_text": null,
+  "price_min": null,
+  "currency": "MXN",
+  "url": "https://cdmxsecreta.com/que-hacer-cdmx-fin-de-semana/",
+  "category": "Markets & Design",
+  "category_alt": "Food & Drink",
+  "family_friendly": true,
+  "umbrella": null,
+  "organizer": "Asociación México Japonesa",
+  "recurring": false,
+  "sources": [
+   "web:cdmx-secreta-web:e99a177ed073"
+  ],
+  "source_links": [
+   {
+    "name": "CDMX Secreta (web)",
+    "url": "https://cdmxsecreta.com/que-hacer-cdmx-fin-de-semana/"
+   }
+  ],
+  "source_excerpt": "Si buscas un plan diferente para hoy o el fin de semana, lánzate a esta celebración otoñal con gastronomía japonesa, mercado cultural, tambores Taiko, artes marciales y artistas invitados, que se realizará el 21 de noviembre de 2026 en la Asociación México Japonesa (Fujiyama 144, Las Águilas).",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Mercado cultural y festival gastronómico con actividades familiares y presentaciones en vivo; ideal para quienes buscan cultura japonesa en la ciudad."
+ },
+ {
+  "title": "Flower Shop pop-up: Cj Hendry (Roma Norte)",
+  "description": "Pop-up temporal de la artista Cj Hendry con flores de peluche coleccionables; abierto del 21 al 29 de noviembre de 2026, de 10:00 a 18:00.",
+  "starts_at": "2026-11-21T10:00:00-06:00",
+  "ends_at": "2026-11-29T18:00:00-06:00",
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Pop-up Flower Shop (Roma Norte)",
+  "address": null,
+  "neighborhood": "Roma Norte",
+  "price_text": "Precios desde $150 por flor",
+  "price_min": 150,
+  "currency": "MXN",
+  "url": "https://cdmxsecreta.com/que-hacer-cdmx-fin-de-semana/",
+  "category": "Markets & Design",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Cj Hendry (pop-up)",
+  "recurring": false,
+  "sources": [
+   "web:cdmx-secreta-web:e99a177ed073"
+  ],
+  "source_links": [
+   {
+    "name": "CDMX Secreta (web)",
+    "url": "https://cdmxsecreta.com/que-hacer-cdmx-fin-de-semana/"
+   }
+  ],
+  "source_excerpt": "Si buscas un plan diferente para hoy o el fin de semana, lánzate a la tienda temporal Flower Shop: la artista australiana Cj Hendry abrirá este pop-up en Roma Norte con flores de peluche coleccionables. Estará disponible del 21 al 29 de noviembre de 2026, todos los días de 10:00 a 18:00, con precios desde $150 por flor.",
+  "image_url": null,
+  "confidence": 0.6,
+  "signals": {
+   "credible_organizer": false,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Pop-up de artista con objetos coleccionables y precios accesibles, buen plan para compras navideñas y regalos originales."
+ },
+ {
+  "title": "Carrera nocturna en Chapultepec (a favor de la rehabilitación del Orquideario)",
+  "description": "Carrera nocturna en Chapultepec con distancias de 6 y 11 km; se realizará el sábado 21 de noviembre de 2026. Inscripciones desde el 2 de octubre; costo con causa: $750.",
+  "starts_at": "2026-11-21T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Bosque de Chapultepec",
+  "address": null,
+  "neighborhood": "Miguel Hidalgo / Chapultepec",
+  "price_text": "Costo $750 (con causa)",
+  "price_min": 750,
+  "currency": "MXN",
+  "url": "https://cdmxsecreta.com/que-hacer-cdmx-fin-de-semana/",
+  "category": "Wellness & Sport",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": null,
+  "recurring": false,
+  "sources": [
+   "web:cdmx-secreta-web:e99a177ed073"
+  ],
+  "source_links": [
+   {
+    "name": "CDMX Secreta (web)",
+    "url": "https://cdmxsecreta.com/que-hacer-cdmx-fin-de-semana/"
+   }
+  ],
+  "source_excerpt": "Este plan combina deporte y buena causa: corre bajo las estrellas en Chapultepec y ayuda a la rehabilitación del Orquideario. Se realizará el sábado 21 de noviembre de 2026 con distancias de 6 y 11 km; las inscripciones inician el 2 de octubre y el costo es de $750 con causa para el Orquideario.",
+  "image_url": null,
+  "confidence": 0.6,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Carrera nocturna solidaria en Chapultepec: un plan deportivo con causa para quienes quieren apoyar la rehabilitación del Orquideario."
+ },
+ {
+  "title": "Mercado navideño 2026 en El Palacio de Hierro Perisur",
+  "description": "Mercado navideño 2026 en la sede de El Palacio de Hierro Perisur, con ambiente festivo, música y espacios temáticos; disponible del 12 de noviembre al 24 de diciembre de 2026. Incluye productos navideños, regalos y gastronomía (marcas por confirmar).",
+  "starts_at": "2026-11-12T00:00:00-06:00",
+  "ends_at": "2026-12-24T23:59:59-06:00",
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "El Palacio de Hierro Perisur",
+  "address": null,
+  "neighborhood": null,
+  "price_text": null,
+  "price_min": null,
+  "currency": "MXN",
+  "url": "https://cdmxsecreta.com/mercado-navideno-palacio-hierro-2026-perisur/",
+  "category": "Markets & Design",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": null,
+  "organizer": "El Palacio de Hierro",
+  "recurring": false,
+  "sources": [
+   "web:cdmx-secreta-web:e863990145f9"
+  ],
+  "source_links": [
+   {
+    "name": "CDMX Secreta (web)",
+    "url": "https://cdmxsecreta.com/mercado-navideno-palacio-hierro-2026-perisur/"
+   }
+  ],
+  "source_excerpt": "Si tu espíritu decembrino ya pide a gritos planes festivos, aparta el calendario porque ya está confirmada la llegada del mercado navideño 2026 en El Palacio de Hierro de Perisur. La temporada de celebraciones toma forma en el sur de la capital con una propuesta pensada para disfrutar en familia, en pareja o con amigos rodeados de un ambiente completamente festivo.\nEsta parada clásica del fin de año forma parte de una amplia cartelera que reúne música, momentos familiares y espacios temáticos. La sede elegida en esta zona de la ciudad es El Palacio de Hierro Perisur, donde el público podrá acudir del 12 de noviembre al 24 de diciembre.\nAunque aún no se ha revelado las marcas que participarán en esta edición, en años anteriores nos hemos encontrado con adornos de Navidad, regalos y gastronomía que se disfrutan en un ambiente nostálgico e iluminado.",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Un mercado navideño grande y estacional en una sucursal conocida de El Palacio de Hierro, apto para compras y plan familiar durante noviembre-diciembre."
+ },
+ {
+  "title": "Bazar de Navidad en Polanco",
+  "description": "Bazar de Navidad organizado por Mexico Accueil en la Alianza Francesa Centro Polanco. Artesanías, joyería, moda, comida, librería y tómbola. Fechas y horarios: sábado 5 de diciembre de 2026 de 09:00 a 18:00; domingo 6 de diciembre de 2026 de 10:00 a 16:00. Acceso $50 por persona.",
+  "starts_at": "2026-12-05T09:00:00-06:00",
+  "ends_at": "2026-12-06T16:00:00-06:00",
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Alianza Francesa Centro Polanco",
+  "address": "Calle Sócrates 156, Polanco",
+  "neighborhood": "Polanco",
+  "price_text": "$50 por persona",
+  "price_min": 50,
+  "currency": "MXN",
+  "url": "https://cdmxsecreta.com/bazar-navidad-2026-polanco-cdmx/",
+  "category": "Markets & Design",
+  "category_alt": null,
+  "family_friendly": true,
+  "umbrella": null,
+  "organizer": "Mexico Accueil",
+  "recurring": false,
+  "sources": [
+   "web:cdmx-secreta-web:0237ebd2b569"
+  ],
+  "source_links": [
+   {
+    "name": "CDMX Secreta (web)",
+    "url": "https://cdmxsecreta.com/bazar-navidad-2026-polanco-cdmx/"
+   }
+  ],
+  "source_excerpt": "Si estás buscando el plan perfecto para contagiarte del espíritu festivo y resolver todas tus compras en un solo lugar, tenemos una excelente noticia. El Bazar de Navidad en Polanco está de regreso para salvar la temporada, convirtiéndose en el punto de encuentro para quienes buscan artesanías, joyería y moda junto a un ambiente mágico.\n¿Cuándo y dónde?\n- Ubicación : La cita es en las instalaciones de la Alianza Francesa Centro Polanco, ubicada en la Calle Sócrates 156, en Polanco.\n- Fechas: Marca en tu agenda los días 5 y 6 de diciembre de 2026.\n- Horarios: Podrás visitarlo el sábado 5 de 9:00 a 18:00, y el domingo 6 de 10:00 a 16:00 horas.\n- Costo: el acceso tiene un precio de $50 por persona",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Un bazar navideño de fin de semana con toque francés y actividades familiares en Polanco, con costo accesible y horarios publicados."
+ },
+ {
+  "title": "BRAVO BRUBECK POR PABLO PRIETO",
+  "description": "Concierto en Zinco Jazz Club: Bravo Brubeck por Pablo Prieto.",
+  "starts_at": "2026-11-19T21:00:00-06:00",
+  "ends_at": null,
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Zinco Jazz Club",
+  "address": "Calle de Motolinia 20, Centro Histórico, Cuauhtémoc, CDMX",
+  "neighborhood": "Centro",
+  "price_text": null,
+  "price_min": null,
+  "currency": "MXN",
+  "url": "https://www.zincojazz.com/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Zinco Jazz Club",
+  "recurring": false,
+  "sources": [
+   "web:zinco-jazz-club:135882f27a12"
+  ],
+  "source_links": [
+   {
+    "name": "Zinco Jazz Club",
+    "url": "https://www.zincojazz.com/"
+   }
+  ],
+  "source_excerpt": "Próximamente\nMié 18/11/2026LAS SWING SISTERS9PM - 9PM\nJue 19/11/2026BRAVO BRUBECK POR PABLO PRIETO9PM - 9PM\nVie 20/11/2026ALEXA TORRES QUARTET9PM - 9PM\nSáb 21/11/2026BILL CUNLIFFE9PM - 9PM\nMié 25/11/2026CATNIP!9PM - 9PM\nJue 26/11/2026JAZZ 4 ALL TRIBUTO A HORACE SILVER Y DUKE ELLINGTON9PM - 9PM",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Presentación de jazz en un club reconocido de la Ciudad de México con horario publicado; buena opción para música en vivo nocturna."
+ },
+ {
+  "title": "ALEXA TORRES QUARTET",
+  "description": "Concierto en Zinco Jazz Club: Alexa Torres Quartet.",
+  "starts_at": "2026-11-20T21:00:00-06:00",
+  "ends_at": null,
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Zinco Jazz Club",
+  "address": "Calle de Motolinia 20, Centro Histórico, Cuauhtémoc, CDMX",
+  "neighborhood": "Centro",
+  "price_text": null,
+  "price_min": null,
+  "currency": "MXN",
+  "url": "https://www.zincojazz.com/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Zinco Jazz Club",
+  "recurring": false,
+  "sources": [
+   "web:zinco-jazz-club:135882f27a12"
+  ],
+  "source_links": [
+   {
+    "name": "Zinco Jazz Club",
+    "url": "https://www.zincojazz.com/"
+   }
+  ],
+  "source_excerpt": "Próximamente\nMié 18/11/2026LAS SWING SISTERS9PM - 9PM\nJue 19/11/2026BRAVO BRUBECK POR PABLO PRIETO9PM - 9PM\nVie 20/11/2026ALEXA TORRES QUARTET9PM - 9PM\nSáb 21/11/2026BILL CUNLIFFE9PM - 9PM\nMié 25/11/2026CATNIP!9PM - 9PM\nJue 26/11/2026JAZZ 4 ALL TRIBUTO A HORACE SILVER Y DUKE ELLINGTON9PM - 9PM",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Concierto de jazz nocturno en Zinco, con horario publicado y programación reciente."
+ },
+ {
+  "title": "BILL CUNLIFFE",
+  "description": "Concierto en Zinco Jazz Club: Bill Cunliffe.",
+  "starts_at": "2026-11-21T21:00:00-06:00",
+  "ends_at": null,
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Zinco Jazz Club",
+  "address": "Calle de Motolinia 20, Centro Histórico, Cuauhtémoc, CDMX",
+  "neighborhood": "Centro",
+  "price_text": null,
+  "price_min": null,
+  "currency": "MXN",
+  "url": "https://www.zincojazz.com/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Zinco Jazz Club",
+  "recurring": false,
+  "sources": [
+   "web:zinco-jazz-club:135882f27a12"
+  ],
+  "source_links": [
+   {
+    "name": "Zinco Jazz Club",
+    "url": "https://www.zincojazz.com/"
+   }
+  ],
+  "source_excerpt": "Próximamente\nMié 18/11/2026LAS SWING SISTERS9PM - 9PM\nJue 19/11/2026BRAVO BRUBECK POR PABLO PRIETO9PM - 9PM\nVie 20/11/2026ALEXA TORRES QUARTET9PM - 9PM\nSáb 21/11/2026BILL CUNLIFFE9PM - 9PM\nMié 25/11/2026CATNIP!9PM - 9PM\nJue 26/11/2026JAZZ 4 ALL TRIBUTO A HORACE SILVER Y DUKE ELLINGTON9PM - 9PM",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Invitado internacional en un club de jazz céntrico; atractivo para seguidores del género."
+ },
+ {
+  "title": "CATNIP!",
+  "description": "Concierto en Zinco Jazz Club: CATNIP!",
+  "starts_at": "2026-11-25T21:00:00-06:00",
+  "ends_at": null,
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Zinco Jazz Club",
+  "address": "Calle de Motolinia 20, Centro Histórico, Cuauhtémoc, CDMX",
+  "neighborhood": "Centro",
+  "price_text": null,
+  "price_min": null,
+  "currency": "MXN",
+  "url": "https://www.zincojazz.com/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Zinco Jazz Club",
+  "recurring": false,
+  "sources": [
+   "web:zinco-jazz-club:135882f27a12"
+  ],
+  "source_links": [
+   {
+    "name": "Zinco Jazz Club",
+    "url": "https://www.zincojazz.com/"
+   }
+  ],
+  "source_excerpt": "Próximamente\nMié 18/11/2026LAS SWING SISTERS9PM - 9PM\nJue 19/11/2026BRAVO BRUBECK POR PABLO PRIETO9PM - 9PM\nVie 20/11/2026ALEXA TORRES QUARTET9PM - 9PM\nSáb 21/11/2026BILL CUNLIFFE9PM - 9PM\nMié 25/11/2026CATNIP!9PM - 9PM\nJue 26/11/2026JAZZ 4 ALL TRIBUTO A HORACE SILVER Y DUKE ELLINGTON9PM - 9PM",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Noche de jazz con agrupación anunciada en la cartelera del club; ideal para público nocturno."
+ },
+ {
+  "title": "JAZZ 4 ALL TRIBUTO A HORACE SILVER Y DUKE ELLINGTON",
+  "description": "Concierto en Zinco Jazz Club: Jazz 4 All, tributo a Horace Silver y Duke Ellington.",
+  "starts_at": "2026-11-26T21:00:00-06:00",
+  "ends_at": null,
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Zinco Jazz Club",
+  "address": "Calle de Motolinia 20, Centro Histórico, Cuauhtémoc, CDMX",
+  "neighborhood": "Centro",
+  "price_text": null,
+  "price_min": null,
+  "currency": "MXN",
+  "url": "https://www.zincojazz.com/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Zinco Jazz Club",
+  "recurring": false,
+  "sources": [
+   "web:zinco-jazz-club:135882f27a12"
+  ],
+  "source_links": [
+   {
+    "name": "Zinco Jazz Club",
+    "url": "https://www.zincojazz.com/"
+   }
+  ],
+  "source_excerpt": "Próximamente\nMié 18/11/2026LAS SWING SISTERS9PM - 9PM\nJue 19/11/2026BRAVO BRUBECK POR PABLO PRIETO9PM - 9PM\nVie 20/11/2026ALEXA TORRES QUARTET9PM - 9PM\nSáb 21/11/2026BILL CUNLIFFE9PM - 9PM\nMié 25/11/2026CATNIP!9PM - 9PM\nJue 26/11/2026JAZZ 4 ALL TRIBUTO A HORACE SILVER Y DUKE ELLINGTON9PM - 9PM",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Tributo en un club de jazz con horario nocturno, buena opción para aficionados al jazz clásico."
+ },
+ {
+  "title": "Pedro Pereyra | Ciclo",
+  "description": "Concierto en Bajo Circuito Multiforo Urbano: Pedro Pereyra | Ciclo.",
+  "starts_at": "2026-11-20T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Bajo Circuito Multiforo Urbano",
+  "address": "Bajo Puente de Cto Interior s/n, Condesa, 06140, CDMX",
+  "neighborhood": "Condesa",
+  "price_text": null,
+  "price_min": null,
+  "currency": "MXN",
+  "url": "https://bajocircuito.com/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Bajo Circuito",
+  "recurring": false,
+  "sources": [
+   "web:bajo-circuito:e196f6e1a675"
+  ],
+  "source_links": [
+   {
+    "name": "Bajo Circuito",
+    "url": "https://bajocircuito.com/"
+   }
+  ],
+  "source_excerpt": "PRÓXIMOS EVENTOS\nPedro Pereyra | Ciclo\nvie 20 de nov\nBajo Circuito Multiforo Urbano\nLeer más\nCompra tus entradas\nMayte Meyer 3:33 Tour - Ciudad de México\nsáb 21 de nov\nBajo Circuito Multiforo Urbano\nLeer más\nCompra tus entradas\nVeintiuno - Mitologia Tour 2026 (+18)\njue 26 de nov\nBajo Circuito Multiforo Urbano",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Concierto en un foro independiente de la Condesa con venta de entradas disponible en la cartelera del espacio."
+ },
+ {
+  "title": "Mayte Meyer 3:33 Tour - Ciudad de México",
+  "description": "Concierto en Bajo Circuito Multiforo Urbano: Mayte Meyer 3:33 Tour.",
+  "starts_at": "2026-11-21T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Bajo Circuito Multiforo Urbano",
+  "address": "Bajo Puente de Cto Interior s/n, Condesa, 06140, CDMX",
+  "neighborhood": "Condesa",
+  "price_text": null,
+  "price_min": null,
+  "currency": "MXN",
+  "url": "https://bajocircuito.com/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Bajo Circuito",
+  "recurring": false,
+  "sources": [
+   "web:bajo-circuito:e196f6e1a675"
+  ],
+  "source_links": [
+   {
+    "name": "Bajo Circuito",
+    "url": "https://bajocircuito.com/"
+   }
+  ],
+  "source_excerpt": "PRÓXIMOS EVENTOS\nPedro Pereyra | Ciclo\nvie 20 de nov\nBajo Circuito Multiforo Urbano\nLeer más\nCompra tus entradas\nMayte Meyer 3:33 Tour - Ciudad de México\nsáb 21 de nov\nBajo Circuito Multiforo Urbano\nLeer más\nCompra tus entradas",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Fecha de tour anunciada en la cartelera del foro independiente; opción para música en vivo en Condesa."
+ },
+ {
+  "title": "Veintiuno - Mitologia Tour 2026",
+  "description": "Concierto en Bajo Circuito Multiforo Urbano: Veintiuno - Mitologia Tour 2026. Evento con restricción de edad (+18).",
+  "starts_at": "2026-11-26T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Bajo Circuito Multiforo Urbano",
+  "address": "Bajo Puente de Cto Interior s/n, Condesa, 06140, CDMX",
+  "neighborhood": "Condesa",
+  "price_text": null,
+  "price_min": null,
+  "currency": "MXN",
+  "url": "https://bajocircuito.com/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Bajo Circuito",
+  "recurring": false,
+  "sources": [
+   "web:bajo-circuito:e196f6e1a675"
+  ],
+  "source_links": [
+   {
+    "name": "Bajo Circuito",
+    "url": "https://bajocircuito.com/"
+   }
+  ],
+  "source_excerpt": "PRÓXIMOS EVENTOS\nVeintiuno - Mitologia Tour 2026 (+18)\njue 26 de nov\nBajo Circuito Multiforo Urbano\nLeer más\nCompra tus entradas",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Fecha anunciada en la cartelera del foro; evento para adultos (+18) dentro de la programación del espacio."
+ },
+ {
+  "title": "Armando Navárrez",
+  "description": "Concierto en Bajo Circuito Multiforo Urbano: Armando Navárrez (+18).",
+  "starts_at": "2026-11-27T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Bajo Circuito Multiforo Urbano",
+  "address": "Bajo Puente de Cto Interior s/n, Condesa, 06140, CDMX",
+  "neighborhood": "Condesa",
+  "price_text": null,
+  "price_min": null,
+  "currency": "MXN",
+  "url": "https://bajocircuito.com/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Bajo Circuito",
+  "recurring": false,
+  "sources": [
+   "web:bajo-circuito:e196f6e1a675"
+  ],
+  "source_links": [
+   {
+    "name": "Bajo Circuito",
+    "url": "https://bajocircuito.com/"
+   }
+  ],
+  "source_excerpt": "PRÓXIMOS EVENTOS\nArmando Navárrez (+18)\nvie 27 de nov\nBajo Circuito Multiforo Urbano\nLeer más\nCompra tus entradas",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Concierto de artista independiente anunciado en la cartelera del foro, con indicación de +18."
+ },
+ {
+  "title": "ALDANA - EL CUARTO QUE GIRA TOUR",
+  "description": "Concierto en Bajo Circuito Multiforo Urbano: ALDANA - EL CUARTO QUE GIRA TOUR (+18).",
+  "starts_at": "2026-11-28T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Bajo Circuito Multiforo Urbano",
+  "address": "Bajo Puente de Cto Interior s/n, Condesa, 06140, CDMX",
+  "neighborhood": "Condesa",
+  "price_text": null,
+  "price_min": null,
+  "currency": "MXN",
+  "url": "https://bajocircuito.com/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Bajo Circuito",
+  "recurring": false,
+  "sources": [
+   "web:bajo-circuito:e196f6e1a675"
+  ],
+  "source_links": [
+   {
+    "name": "Bajo Circuito",
+    "url": "https://bajocircuito.com/"
+   }
+  ],
+  "source_excerpt": "PRÓXIMOS EVENTOS\nALDANA - EL CUARTO QUE GIRA TOUR (+18)\nsáb 28 de nov\nBajo Circuito Multiforo Urbano\nLeer más\nCompra tus entradas",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Fecha de tour anunciada en la cartelera del foro independiente; evento para público adulto."
+ },
+ {
+  "title": "BAYONNE — Debut en CDMX",
+  "description": "Concierto en Bajo Circuito Multiforo Urbano: BAYONNE — Debut en CDMX (+18).",
+  "starts_at": "2026-11-29T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Bajo Circuito Multiforo Urbano",
+  "address": "Bajo Puente de Cto Interior s/n, Condesa, 06140, CDMX",
+  "neighborhood": "Condesa",
+  "price_text": null,
+  "price_min": null,
+  "currency": "MXN",
+  "url": "https://bajocircuito.com/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Bajo Circuito",
+  "recurring": false,
+  "sources": [
+   "web:bajo-circuito:e196f6e1a675"
+  ],
+  "source_links": [
+   {
+    "name": "Bajo Circuito",
+    "url": "https://bajocircuito.com/"
+   }
+  ],
+  "source_excerpt": "PRÓXIMOS EVENTOS\nBAYONNE — Debut en CDMX\ndom 29 de nov\nBajo Circuito Multiforo Urbano\nLeer más\nCompra tus entradas",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Debut en CDMX anunciado en la cartelera del foro; relevante para seguidores del artista."
+ },
+ {
+  "title": "Funk the System",
+  "description": "Concierto en Bajo Circuito Multiforo Urbano: Funk the System (fecha en cartelera: jue 03 de dic).",
+  "starts_at": "2026-12-03T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Bajo Circuito Multiforo Urbano",
+  "address": "Bajo Puente de Cto Interior s/n, Condesa, 06140, CDMX",
+  "neighborhood": "Condesa",
+  "price_text": null,
+  "price_min": null,
+  "currency": "MXN",
+  "url": "https://bajocircuito.com/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Bajo Circuito",
+  "recurring": false,
+  "sources": [
+   "web:bajo-circuito:e196f6e1a675"
+  ],
+  "source_links": [
+   {
+    "name": "Bajo Circuito",
+    "url": "https://bajocircuito.com/"
+   }
+  ],
+  "source_excerpt": "PRÓXIMOS EVENTOS\nFunk the System\njue 03 de dic\nBajo Circuito Multiforo Urbano\nLeer más\nCompra tus entradas",
+  "image_url": null,
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Evento listado en la cartelera del foro para la primera semana de diciembre; opción para público de funk/soul en Condesa."
+ }
+]

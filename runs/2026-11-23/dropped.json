@@ -1,0 +1,288 @@
+[
+ {
+  "title": "El Camino / Camino a la Luz (instalación lumínica en Reforma)",
+  "starts_at": "2026-10-23T19:00:00-06:00",
+  "reason": "past"
+ },
+ {
+  "title": "Paseo Nocturno / Rodada de Día de Muertos (Paseo en bici)",
+  "starts_at": "2026-10-24T19:00:00-06:00",
+  "reason": "past"
+ },
+ {
+  "title": "Mega Procesión de Catrinas",
+  "starts_at": "2026-10-25T18:00:00-06:00",
+  "reason": "past"
+ },
+ {
+  "title": "Gran Desfile de Día de Muertos 2026",
+  "starts_at": "2026-10-31T14:00:00-06:00",
+  "reason": "past"
+ },
+ {
+  "title": "Ofrenda Monumental en el Zócalo (incluye Catrina monumental)",
+  "starts_at": "2026-10-29T00:00:00-06:00",
+  "reason": "past"
+ },
+ {
+  "title": "Sendero del Cempasúchil (Bosque de Chapultepec)",
+  "starts_at": "2026-10-30T14:00:00-06:00",
+  "reason": "past"
+ },
+ {
+  "title": "Megaofrenda de la UNAM (explanada del Museo Universum)",
+  "starts_at": "2026-10-31T11:00:00-06:00",
+  "reason": "past"
+ },
+ {
+  "title": "Festival Flores de Cempasúchil",
+  "starts_at": "2026-10-18T00:00:00-06:00",
+  "reason": "past"
+ },
+ {
+  "title": "18° Desfile de Alebrijes Monumentales",
+  "starts_at": "2026-10-17T00:00:00-06:00",
+  "reason": "past"
+ },
+ {
+  "title": "“El Camino” Iluminación en Reforma",
+  "starts_at": "2026-10-23T00:00:00-06:00",
+  "reason": "past"
+ },
+ {
+  "title": "Rodada Ciclista por el Día de Muertos",
+  "starts_at": "2026-10-24T19:00:00-06:00",
+  "reason": "past"
+ },
+ {
+  "title": "Mega Procesión de las Catrinas",
+  "starts_at": "2026-10-25T00:00:00-06:00",
+  "reason": "past"
+ },
+ {
+  "title": "Ofrenda Monumental en el Zócalo",
+  "starts_at": "2026-10-29T00:00:00-06:00",
+  "reason": "past"
+ },
+ {
+  "title": "Ofrendas Comunitarias",
+  "starts_at": "2026-10-29T00:00:00-06:00",
+  "reason": "past"
+ },
+ {
+  "title": "Iluminación del Zócalo",
+  "starts_at": "2026-10-29T00:00:00-06:00",
+  "reason": "past"
+ },
+ {
+  "title": "Festival de Día de Muertos en Chapultepec: “La Puerta entre dos mundos”",
+  "starts_at": "2026-10-29T00:00:00-06:00",
+  "reason": "past"
+ },
+ {
+  "title": "Gran Desfile de Día de Muertos",
+  "starts_at": "2026-10-31T14:00:00-06:00",
+  "reason": "past"
+ },
+ {
+  "title": "Mixquic (San Andrés Mixquic) — Celebración de Día de Muertos",
+  "starts_at": "2026-10-31T00:00:00-06:00",
+  "reason": "past"
+ },
+ {
+  "title": "Kakkmaddafakka",
+  "starts_at": "2026-12-01T00:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-11-19",
+  "key": "kakkmaddafakka-orbe|2026-12-01"
+ },
+ {
+  "title": "Conferencia magistral de Jokha Alharthi",
+  "starts_at": "2026-11-25T17:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-11-19",
+  "key": "alharthi-arabe-conferencia-deseo-jokha-lugar|2026-11-25"
+ },
+ {
+  "title": "Las Ligas Menores en CDMX",
+  "starts_at": "2026-11-27T00:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-11-19",
+  "key": "foro-indie-ligas-menores-regreso-rocks|2026-11-27"
+ },
+ {
+  "title": "Brown Sugar — REVO Rooftop",
+  "starts_at": "2026-11-27T22:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-11-19",
+  "key": "brown-sugar|2026-11-27"
+ },
+ {
+  "title": "XOCHIMILCO ALL INCLUSIVE BOAT PARTY",
+  "starts_at": "2026-11-28T11:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-11-19",
+  "key": "all-boat-inclusive-party-xochimilco|2026-11-28"
+ },
+ {
+  "title": "Sabores de Francia y México en Festival ¡Qué Gusto!",
+  "starts_at": "2026-11-23T00:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-11-19",
+  "key": "festival-francia-gusto-que-sabores|2026-11-23"
+ },
+ {
+  "title": "Programa del octeto del coro sinfónico comunitario: Lorca | Complejo Cultural Los Pinos",
+  "starts_at": "2026-11-29T16:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-11-19",
+  "key": "comunitario-coro-lorca-octeto-programa-sinfonico|2026-11-29"
+ },
+ {
+  "title": "CURSOS Y TALLERES – PERÍODO 2 | 2026",
+  "starts_at": "2026-08-25T00:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-11-03",
+  "key": "cursos-periodo-talleres|2026-08-25"
+ },
+ {
+  "title": "Manifesto, videoinstalación de Julian Rosefeldt",
+  "starts_at": "2026-09-06T00:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-10-28-dia-de-muertos",
+  "key": "exhibicion-julian-manifesto-muac-rosefeldt|2026-09-05"
+ },
+ {
+  "title": "Presenta el MUAC exposición de Olivier Marboeuf",
+  "starts_at": "2026-11-10T00:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-11-16",
+  "key": "exposicion-marboeuf-muac-olivier-presenta|2026-11-10"
+ },
+ {
+  "title": "Exhibición: En el taller del filósofo - Georges Didi-Huberman",
+  "starts_at": "2026-10-29T00:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-11-03",
+  "key": "exposicion-filosofo-taller|2026-10-30"
+ },
+ {
+  "title": "Dimmu Borgir, Kreator y Kataklysm invadirán el Velódromo Olímpico",
+  "starts_at": "2026-12-03T00:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-11-19",
+  "key": "apocalipsis-borgir-dimmu-kreator|2026-12-03"
+ },
+ {
+  "title": "“amiga date cuenta” (obra de teatro)",
+  "starts_at": "2026-11-24T19:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-11-19",
+  "key": "amiga-cuenta-date-obra-teatro|2026-11-24"
+ },
+ {
+  "title": "Lágrimas de agua dulce",
+  "starts_at": "2026-11-07T00:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-11-10",
+  "key": "agua-dulce-lagrimas|2026-11-07"
+ },
+ {
+  "title": "Las dos Cassandras",
+  "starts_at": "2026-11-16T00:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-11-10",
+  "key": "cassandras-dos|2026-11-16"
+ },
+ {
+  "title": "AGOSTO. CONDADO DE OSAGE",
+  "starts_at": "2026-11-28T00:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-11-16",
+  "key": "agosto-condado-osage|2026-11-28"
+ },
+ {
+  "title": "Querida Sveta",
+  "starts_at": "2026-11-07T20:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-11-10",
+  "key": "querida-sveta|2026-11-07"
+ },
+ {
+  "title": "carlos amorales: anteparaíso",
+  "starts_at": "2026-11-05T00:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-10-28-dia-de-muertos",
+  "key": "amorales-anteparaiso-carlos-kurimanzutto|2026-11-05"
+ },
+ {
+  "title": "Bestiario fantástico",
+  "starts_at": "2026-11-29T12:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-11-16",
+  "key": "bestiario-fantastico|2026-11-29"
+ },
+ {
+  "title": "Algodón de azúcar",
+  "starts_at": "2026-11-09T00:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-11-03",
+  "key": "algodon-azucar-obra-teatro|2026-11-09"
+ },
+ {
+  "title": "Nunca he estado en Dublín",
+  "starts_at": "2026-11-28T00:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-11-16",
+  "key": "dublin-estado-he-nunca|2026-11-28"
+ },
+ {
+  "title": "Duelo de brujos o de cómo un día pierdes la creatividad",
+  "starts_at": "2026-10-31T00:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-11-10",
+  "key": "brujos-como-creatividad-dia-duelo-pierdes|2026-10-31"
+ },
+ {
+  "title": "Funk the System",
+  "starts_at": "2026-12-03T00:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-11-19",
+  "key": "funk-system|2026-12-03"
+ },
+ {
+  "title": "Soda Stereo: Ecos",
+  "starts_at": "2026-11-23T00:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-11-19",
+  "key": "ecos-soda-stereo|2026-11-23"
+ },
+ {
+  "title": "Love Of Lesbian",
+  "starts_at": "2026-11-24T00:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-11-10",
+  "key": "fecha-lesbian-love-metropolitan-nueva-presentara|2026-11-24"
+ },
+ {
+  "title": "A Perfect Circle + Puscifer",
+  "starts_at": "2026-11-25T00:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-11-16",
+  "key": "circle-dogstar-estadio-fray-nano-perfect|2026-11-25"
+ },
+ {
+  "title": "Bruno Mars: The Romantic Tour — Día 1",
+  "starts_at": "2026-12-03T00:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-11-19",
+  "key": "bruno-mars-romantic-tour|2026-12-03"
+ },
+ {
+  "title": "HUMBE: DUEÑO DEL CIELO TOUR",
+  "starts_at": "2026-12-03T00:00:00-06:00",
+  "reason": "seen_in",
+  "run": "2026-11-19",
+  "key": "cielo-dueno-humbe-tour|2026-12-03"
+ }
+]

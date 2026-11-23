@@ -1,0 +1,763 @@
+[
+ {
+  "title": "Kakkmaddafakka",
+  "description": "Concierto de la banda noruega Kakkmaddafakka en ORBE (Foro Indie Rocks!). Boletos disponibles en el enlace de la bio y taquilla del Foro Indie Rocks!.",
+  "starts_at": "2026-12-01T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "ORBE / Foro Indie Rocks! (taquilla de venta)",
+  "address": "Zacatecas 39-A, Roma Norte, Ciudad de México",
+  "neighborhood": "Roma Norte",
+  "price_text": "Boletos en el link de la bio y sin cargos en taquilla del Foro Indie Rocks!",
+  "price_min": null,
+  "currency": "MXN",
+  "url": "https://www.instagram.com/p/Df2lH2fowVP/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Foro Indie Rocks! / ORBE",
+  "recurring": false,
+  "sources": [
+   "instagram:foroindierocks:Df2lH2fowVP",
+   "instagram:foroindierocks:Df3PXaOo8tF",
+   "instagram:foroindierocks:DfnwgWsI-8j"
+  ],
+  "source_links": [
+   {
+    "name": "foroindierocks",
+    "url": "https://www.instagram.com/p/Df2lH2fowVP/"
+   },
+   {
+    "name": "foroindierocks",
+    "url": "https://www.instagram.com/p/Df3PXaOo8tF/"
+   },
+   {
+    "name": "foroindierocks",
+    "url": "https://www.instagram.com/p/DfnwgWsI-8j/"
+   }
+  ],
+  "source_excerpt": "No importa en qué escenario del mundo se paren: cuando @kakkmaddafakkaofficial empieza a tocar, el fiestón está garantizado. 🐴🤝\\n\\nSaltos, sudor, coros y una entrega total en el escenario. Esta es la energía exacta que va a invadir @orbe.rocks este próximo 01 de diciembre. 🔥\\n\\n🎫 Boletos en el link de la bio y sin cargos en taquilla del Foro Indie Rocks!, Zacatecas 39-A, Roma Norte.\\n\\n🕒 Lunes a domingo, de 1:00 PM a 9:00 PM",
+  "image_url": "https://instagram.fsyd10-2.fna.fbcdn.net/v/t51.82787-15/913393651_18642515434023490_5230506546237808823_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&_nc_map=urlgen_bucketless&oh=00_AQQeq37adV6B7cGoKkWS17WE5chDkntIlnQ4zgEzJf47nw&oe=6B0A2381",
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": true,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Banda internacional anunciada para el 1 de diciembre en ORBE/Foro Indie Rocks! — un concierto de club/rock en la Roma Norte con venta en taquilla y entradas online, buen plan para quien busque un show en CDMX."
+ },
+ {
+  "title": "La Garra Transgresora",
+  "description": "Encuentro de arte, moda y upcycling con propuestas independientes, charlas, talleres, pasarela y salón de belleza. Para quienes exploran otras formas de vestir, crear y expresar su identidad.",
+  "starts_at": "2026-12-05T12:00:00-06:00",
+  "ends_at": "2026-12-06T18:00:00-06:00",
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Ágora MUAC",
+  "address": null,
+  "neighborhood": null,
+  "price_text": null,
+  "price_min": null,
+  "currency": "MXN",
+  "url": "https://www.instagram.com/p/Df7mIt8lOTb/",
+  "category": "Markets & Design",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "MUAC / UNAM",
+  "recurring": false,
+  "sources": [
+   "instagram:muac_unam:Df7mIt8lOTb"
+  ],
+  "source_links": [
+   {
+    "name": "IG @muac_unam",
+    "url": "https://www.instagram.com/p/Df7mIt8lOTb/"
+   }
+  ],
+  "source_excerpt": "🔥 ¡Regresa La Garra Transgresora al MUAC!\n\nLa moda se sale de la norma, el arte toma otras formas y la creatividad no tiene límites. Este 5 y 6 de diciembre llega la cuarta edición de La Garra Transgresora: un encuentro de arte, moda y upcycling para quienes exploran otras formas de vestir, crear y expresar su identidad.\n\nDos días para descubrir propuestas independientes, experimentar con el DIY y celebrar las estéticas disidentes a través de charlas, talleres, pasarela y salón de belleza. ✂️💄\n\n📍 Ágora MUAC\n📅 5 y 6 de diciembre\n🕛 12:00 a 18:00 h\n\nInformes: publicosycomunidades@muac.unam.mx",
+  "image_url": "https://instagram.fmem1-2.fna.fbcdn.net/v/t51.82787-15/914879784_18660315523000146_8518381971225245514_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMzk4NTQxNjUxMDkzNzI1MQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&_nc_aid=0&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMzI3Ni5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=JEc_pmM_igEQ7kNvwEan78Q&_nc_oc=Adqcr6N_FaiKJlhC83DKA9Vx7i75a7xLCHtbJ-jlCUT9JOxdWjTW0XH98-fFYfJZmTNMS1-r4gqgW1JqRN10rpIO&_nc_zt=23&_nc_ht=instagram.fmem1-2.fna&_nc_gid=nqAv3G1U38ZR6YcDpbiHjQ&_nc_ss=70580&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQTSkCRKVLLq-CIEpV0-zmXOfhGAPECwkqPEOCiPrrJe2g&oe=6B09F9E7",
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Evento curado por el MUAC que combina moda, upcycling y actividades (talleres, pasarela) en dos días; interesante para quien busca diseño independiente y prácticas sostenibles."
+ },
+ {
+  "title": "Kakkmaddafakka en ORBE",
+  "description": "Concierto de Kakkmaddafakka en ORBE (parte de la programación del recinto). Boletos disponibles en el enlace de la bio y en taquilla del Foro Indie Rocks! según la publicación del organizador.",
+  "starts_at": "2026-12-01T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "ORBE",
+  "address": null,
+  "neighborhood": null,
+  "price_text": null,
+  "price_min": null,
+  "currency": "MXN",
+  "url": "https://www.instagram.com/p/Df-qIugoyfZ/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Foro Indie Rocks! / ORBE",
+  "recurring": false,
+  "sources": [
+   "instagram:foroindierocks:Df-qIugoyfZ",
+   "instagram:foroindierocks:DfsaBerIwNm"
+  ],
+  "source_links": [
+   {
+    "name": "IG @foroindierocks",
+    "url": "https://www.instagram.com/p/Df-qIugoyfZ/"
+   },
+   {
+    "name": "IG @foroindierocks",
+    "url": "https://www.instagram.com/p/DfsaBerIwNm/"
+   }
+  ],
+  "source_excerpt": "¡A menos de dos semanas de que ORBE se convierta en una auténtica fiesta noruega! 🇳🇴⚡\n\nAsí se desata la locura cuando @kakkmaddafakkaofficial sube al escenario. ¿Están listos?\n...\n\nEste carrusel es la prueba de que cuando @kakkmaddafakkaofficial pisa un escenario mexa, la fiesta es garantía total. Este 1 de diciembre la historia continúa en @orbe.rocks\n\n🎫 Boletos en el link de la bio y sin cargos en taquilla del Foro Indie Rocks!, Zacatecas 39-A, Roma Norte.",
+  "image_url": "https://scontent-fco2-1.cdninstagram.com/v/t51.82787-15/915584343_18643391182023490_3215092076551362392_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=110&_nc_map=urlgen_bucketless&ig_cache_key=NDAzNDg0NzUzODU4MjYxNjUyNA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci52aWRlb19maXJzdF9mcmFtZV90aHVtYm5haWwuQzMifQ%3D%3D&_nc_ohc=VjBVX154KtcQ7kNvwGh1-Kn&_nc_oc=AdrubavBxNKBGpBNjUPE1trRUOV5LhneUbaJUFcj23sAnj4rnyu0dh3lWFXQmt_9iww&_nc_zt=23&_nc_ht=scontent-fco2-1.cdninstagram.com&_nc_gid=YmjahvgVbAER2_WEenIRyg&_nc_ss=70a8c&_nc_ct=RQosPBUIFQolBAAAAA&oh=00_AQRtkMFO-agA6pA2PWfidUIY96XSLa_-mW7mnVnqr9mjJg&oe=6B0A2981",
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": true,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Concierto internacional confirmado por el organizador (Foro Indie Rocks!/ORBE) para el 1 de diciembre; buen plan para quienes siguen indie/rock en vivo."
+ },
+ {
+  "title": "KAKKMADDAFAKKA LATAM TOUR 2026 — CDMX, ORBE",
+  "description": "KAKKMADDAFAKKA LATAM TOUR 2026 — fecha en Ciudad de México en ORBE. Consulta compra de boletos en canales oficiales.",
+  "starts_at": "2026-12-01T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "ORBE",
+  "address": null,
+  "neighborhood": null,
+  "price_text": null,
+  "price_min": null,
+  "currency": "MXN",
+  "url": "https://www.instagram.com/p/DfnGlN8jMEi/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": null,
+  "recurring": false,
+  "sources": [
+   "instagram:kakkmaddafakkaofficial:DfnGlN8jMEi"
+  ],
+  "source_links": [
+   {
+    "name": "instagram:kakkmaddafakkaofficial",
+    "url": "https://www.instagram.com/p/DfnGlN8jMEi/"
+   }
+  ],
+  "source_excerpt": "LATAM TOUR STARTS IN 1 WEEK FROM TODAY! WE ARE SO EXCITED 😳🫶💞💞💞 🇦🇷🇨🇱🇵🇪🇨🇴🇲🇽 💞💞💞\n\nKAKKMADDAFAKKA LATAM TOUR 2026\n18.11 - AR - Buenos Aires, Niceto 🇦🇷\n19.11 - CL - Santiago, Club Chocolate 🇨🇱\n21.11 - PE - Lima, Vichama Conciertos 🇵🇪\n24.11 - CO - Bogotá, Teatro Libre 🇨🇴\n27.11 - MX - Monterrey, Foro Corona 🇲🇽\n28.11 - MX - Puebla, T. Comuna 🇲🇽\n29.11 - MX - Guadalajara, Día De Campo 🇲🇽\n01.12 - MX - CDMX, ORBE 🇲🇽\n02.12 - MX - Querétaro, Foro Arpa 🇲🇽\n03.12 - MX - Tijuana, BlackBox 🇲🇽\n\n📷 @stianwerme",
+  "image_url": "https://scontent-mxp1-1.cdninstagram.com/v/t51.82787-15/903828554_18649637674048756_2121407977677679105_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&_nc_map=urlgen_bucketless&ig_cache_key=NDAyODIxNjc5NTUzNjExOTM1Nw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMzI5NC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=Qv6MfAONz78Q7kNvwFV894H&_nc_oc=AdqwyqFIa2i0PsHFZHiHhITTOXiwHq1gipOSfi1YP_cfGcQ4EX6MqCixwxWc5rfK4Fs&_nc_zt=23&_nc_ht=scontent-mxp1-1.cdninstagram.com&_nc_gid=KkbyCHP5jUyHOn4IFbOVpQ&_nc_ss=70580&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQRAvd_0fO_hZuTiBpnNvkpygRwzyxiJkdWMHoN30UtU1A&oe=6B0A1A27",
+  "confidence": 0.6,
+  "signals": {
+   "credible_organizer": false,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "International indie band playing a one-off Mexico City date (01/12) — of interest to local concert-goers and fans."
+ },
+ {
+  "title": "TRST en ORBE",
+  "description": "Concierto de TRST en Ciudad de México, presentado en ORBE. Boletos disponibles en bio o taquilla según indicaciones del organizador.",
+  "starts_at": "2026-12-05T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "ORBE",
+  "address": null,
+  "neighborhood": null,
+  "price_text": "Boletos en el link de la bio y sin cargos en taquilla del Foro Indie Rocks!",
+  "price_min": null,
+  "currency": "MXN",
+  "url": "https://www.instagram.com/p/Df5OzfgI-Gr/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Foro Indie Rocks!",
+  "recurring": false,
+  "sources": [
+   "instagram:foroindierocks:Df5OzfgI-Gr"
+  ],
+  "source_links": [
+   {
+    "name": "instagram:foroindierocks",
+    "url": "https://www.instagram.com/p/Df5OzfgI-Gr/"
+   }
+  ],
+  "source_excerpt": "Luces estroboscópicas, sintetizadores oscuros y una atmósfera hipnótica que te atrapa 🖤⚡\n\nAsí se vive @trstonline sobre el escenario, y exactamente esta intensidad es la que va a tomar la CDMX este 05 de diciembre en @orbe.rocks.\n\n🎫 Boletos en el link de la bio y sin cargos en taquilla del Foro Indie Rocks!, Zacatecas 39-A, Roma Norte.\n\n🕒 Lunes a domingo, de 1:00 PM a 9:00 PM",
+  "image_url": "https://instagram.ftij1-3.fna.fbcdn.net/v/t51.82787-15/917134438_18642803701023490_1989049464495995250_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMzMxOTk2NTMxMDMxMTMxNw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTc5LnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=S1rGHqVCBtgQ7kNvwG0Jc3L&_nc_oc=Adq3M4F_BmkBMl_zt6Bjgokm5p4kDl4OWllRcZP7YLFrsy-s6n4txj4FlOVNDNWdxvM&_nc_zt=23&_nc_ht=instagram.ftij1-3.fna&_nc_gid=PKCS6ABm9uhvH5KQRfeJYA&_nc_ss=70a8c&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQEOvnaNu4DZz0FLnya4SYI5nDfRnTqG5b-Ddv8XRQluw&oe=6B09FA4A",
+  "confidence": 0.6,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Dark synth/industrial live show by TRST at ORBE on 05/12 — a notable club/scene date likely to interest fans of electronic and post‑punk sounds."
+ },
+ {
+  "title": "Tejiendo caminos. Arte más allá de la reconciliación: Ideas y creaciones de Sápmi y Abya Yala",
+  "description": "Jornada de conversaciones y presentaciones con artistas, escritoras, poetas e investigadoras de los pueblos p’urhépecha, mixe y sámi que exploran prácticas artísticas y saberes para imaginar formas de organización y creación colectiva. Incluye conversaciones con Bethel Cuecué, Alain Silva, Joyce Rivas, Tajëëw Díaz-Robles, Rosa Chávez, Eva Maria Fjellheim y Yásnaya Elena Aguilar Gil; intervención grabada de Daniela Catrileo y acción de clausura de Kumantuk Xuxpë.",
+  "starts_at": "2026-11-26T12:00:00-06:00",
+  "ends_at": "2026-11-26T19:00:00-06:00",
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Auditorio MUAC",
+  "address": null,
+  "neighborhood": null,
+  "price_text": "Entrada libre",
+  "price_min": 0,
+  "currency": "MXN",
+  "url": "https://www.instagram.com/p/Df-80mFFB9I/",
+  "category": "Talks & Learning",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "MUAC / Office for Contemporary Art Norway (OCA)",
+  "recurring": false,
+  "sources": [
+   "instagram:muac_unam:Df-80mFFB9I"
+  ],
+  "source_links": [
+   {
+    "name": "IG @muac_unam",
+    "url": "https://www.instagram.com/p/Df-80mFFB9I/"
+   }
+  ],
+  "source_excerpt": "El MUAC y la Office for Contemporary Art Norway (OCA) invitan a la jornada Tejiendo caminos. Arte más allá de la reconciliación: Ideas y creaciones de Sápmi y Abya Yala, un encuentro que reúne a artistas, escritoras, poetas e investigadoras de los pueblos p’urhépecha, mixe y sámi para explorar otras maneras de relacionarnos, organizarnos y crear colectivamente.\n\nEl programa incluye conversaciones con Bethel Cuecué, Alain Silva, Joyce Rivas, Tajëëw Díaz-Robles, Rosa Chávez, Eva Maria Fjellheim y Yásnaya Elena Aguilar Gil, además de una intervención grabada de Daniela Catrileo y una acción de clausura a cargo de Kumantuk Xuxpë, con Menp Këtäkp. Futurismo Ayuujk.\n\n📅 Jueves 26 de noviembre\n🕛 12:00 a 19:00 h\n📍 Auditorio MUAC\n🎟️ Entrada libre",
+  "image_url": "https://instagram.frtm1-1.fna.fbcdn.net/v/t51.82787-15/921632935_18660726952000146_8896560252234955893_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ig_cache_key=NDAzNDkyOTc0OTA5OTY2NTIzMg%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&_nc_aid=0&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMjI1MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=CothEFQGgxwQ7kNvwGMLqxS&_nc_oc=AdoyJOIsfZw7ikYpU-Wln_bHrpuZ7WynCtFEOqHgh053ImXFeF8HnYDjL-W6zhZfkK0&_nc_zt=23&_nc_ht=instagram.frtm1-1.fna&_nc_gid=ef73RpTA68uSkpVWX7_fQQ&_nc_ss=70689&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQShYcBVURgFVLdzZwOzjmuJFdnaebAmiy3g_s3HeokTbw&oe=6B09F84B",
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Una jornada de diálogo público en el MUAC que reúne a artistas e investigadoras de tres tradiciones para pensar formas colectivas de creación; entrada libre."
+ },
+ {
+  "title": "Conferencia magistral de Jokha Alharthi",
+  "description": "Conferencia magistral de la escritora omaní Jokha Alharthi sobre las representaciones del cuerpo y el deseo en la poesía árabe clásica; la actividad incluye traducción simultánea al español a cargo de Shadi Rohana. Sin registro previo / Entrada libre.",
+  "starts_at": "2026-11-25T17:00:00-06:00",
+  "ends_at": null,
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Sala de Conferencias, MUAC",
+  "address": null,
+  "neighborhood": null,
+  "price_text": "Sin registro previo / Entrada libre",
+  "price_min": 0,
+  "currency": "MXN",
+  "url": "https://www.instagram.com/p/Df29NGbPdTP/",
+  "category": "Talks & Learning",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "MUAC (actividad en colaboración con CEAA-COLMEX)",
+  "recurring": false,
+  "sources": [
+   "instagram:muac_unam:Df29NGbPdTP"
+  ],
+  "source_links": [
+   {
+    "name": "IG @muac_unam",
+    "url": "https://www.instagram.com/p/Df29NGbPdTP/"
+   }
+  ],
+  "source_excerpt": "En el marco de su visita a México ... la escritora omaní Jokha Alharthi llega al MUAC para impartir una conferencia magistral ...\n\n📅 25 de noviembre\n🕔 17 h\n📍 Sala de Conferencias, MUAC\nSin registro previo / Entrada libre\n\nActividad realizada en colaboración con la Cátedra José S. Helú de Lengua y Cultura Árabes, del Centro de Estudios de Asia y África de El Colegio de México (CEAA-COLMEX).",
+  "image_url": "https://scontent-nrt6-1.cdninstagram.com/v/t51.82787-15/909651546_18659797945000146_4024967997436544986_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMjY3OTY5NzQ0NjcyMDcxOQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&_nc_aid=0&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMzI4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=Vhaqzzp6LZQQ7kNvwGZ-z88&_nc_oc=AdrPTB_SEFlCrSDTjfe3PjrcSh4CK_RolXzWRQSSTQCrKjhxosuaOGNBd03CXBnT7xw&_nc_zt=23&_nc_ht=scontent-nrt6-1.cdninstagram.com&_nc_gid=4BoHT4EK_-dQ3PQKuepLxQ&_nc_ss=70580&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQTUzhOWpli_ep5uTkfzZ1Vobacv8oqS8HUtL87K5YQgw&oe=6B09F868",
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": true,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Conferencia pública y gratuita con una autora premiada que aporta un marco académico y literario raro de ver en la ciudad."
+ },
+ {
+  "title": "Cecilia Toussaint en Cancioneras indóciles. Músicas en el Chopo",
+  "description": "Presentación de Cecilia Toussaint dentro del ciclo 'Cancioneras indóciles' en conmemoración del Día Internacional de la Eliminación de la Violencia contra las Mujeres.",
+  "starts_at": "2026-11-25T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Foro del Dinosaurio, Museo Universitario del Chopo",
+  "address": null,
+  "neighborhood": null,
+  "price_text": "Boletos en el link de nuestras stories.",
+  "price_min": null,
+  "currency": "MXN",
+  "url": "https://www.instagram.com/p/Df57mjis6VJ/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Cultura UNAM / Museo Universitario del Chopo",
+  "recurring": false,
+  "sources": [
+   "instagram:culturaunam:Df57mjis6VJ"
+  ],
+  "source_links": [
+   {
+    "name": "IG @culturaunam",
+    "url": "https://www.instagram.com/p/Df57mjis6VJ/"
+   }
+  ],
+  "source_excerpt": "🤘🎤 ¡Una leyenda del rock mexicano llega al @museodelchopo! \n\n🔥 ¡Bienvenida, @cecitoussaint! Pionera del rock en México ...\n\nEste #25N, su voz se hará escuchar en el ciclo Cancioneras indóciles. Músicas en el Chopo, como parte de la conmemoración del Día Internacional de la Eliminación de la Violencia contra las Mujeres. 🧡\n\n📅 25 de noviembre\n📍 Foro del Dinosaurio, Museo Universitario del Chopo\nBoletos en el link de nuestras stories.",
+  "image_url": "https://instagram.fcwb5-1.fna.fbcdn.net/v/t51.71878-15/915819851_1895148171898909_1829116684615365062_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=111&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMzUxNzA3NTUzNDQyMzM2OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjY0MC5zZHIudmlkZW9fZmlyc3RfZnJhbWVfdGh1bWJuYWlsLkMzIn0%3D&_nc_ohc=IL-Ipx_XoxIQ7kNvwFgaGIr&_nc_oc=Adof_oViNk_9hz0G1C6P6nNVA-LFNPdM7z6TKKTOY4GJpXXsJ9crU4T9nLM52uRIvO8&_nc_zt=23&_nc_ht=instagram.fcwb5-1.fna&_nc_gid=A_gfxhRYEIqSWNJN0KbGBQ&_nc_ss=70980&_nc_ct=RQosPBUIFQolBAAAAA&oh=00_AQS3a5U77ll9MzP1l5y-O0QIr_Rv1iTXYn0HgWW2PJmfKQ&oe=6B0A016A",
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Concierto de una figura histórica del rock mexicano en el Museo del Chopo como parte de las actividades del 25N; entrada mediante boletos (link)."
+ },
+ {
+  "title": "UNKLE SOUNDS North America Tour 2026",
+  "description": "James Lavelle llega a la CDMX para regalarnos una sesión hipnótica en ORBE.",
+  "starts_at": "2026-11-26T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "ORBE",
+  "address": null,
+  "neighborhood": "Roma Norte",
+  "price_text": "Boletos en el link de la bio",
+  "price_min": null,
+  "currency": "MXN",
+  "url": "https://www.instagram.com/foroindierocks/p/Df-QXICTfzw/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "foroindierocks",
+  "recurring": false,
+  "sources": [
+   "instagram:foroindierocks:Df-QXICTfzw"
+  ],
+  "source_links": [
+   {
+    "name": "foroindierocks",
+    "url": "https://www.instagram.com/p/Df-QXICTfzw/"
+   }
+  ],
+  "source_excerpt": "@unkleofficial presenta: UNKLE SOUNDS North America Tour 2026 🖤\n\nJames Lavelle llega a la CDMX para regalarnos una sesión hipnótica este 26 de noviembre en @orbe.rocks. 🎛️\n\n🎫 Boletos en el link de la bio",
+  "image_url": "https://scontent-muc2-1.cdninstagram.com/v/t51.82787-15/916196965_1517871090158134_4590240151202537786_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=102&_nc_map=urlgen_bucketless&ig_cache_key=NDAzNDczNDI3NDA5MTI4NTc0NDE1MTc4NzEwODY4MjQ4MDE%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjQ4MC5zZHIudmlkZW9fdXNlcl91cGxvYWRlZF90aHVtYm5haWwuQzMifQ%3D%3D&_nc_ohc=uJooDu1ukowQ7kNvwFLK6X6&_nc_oc=AdoKbkh8zQezBFx0UjLVkY1DLIVSKPDXa9wXJcaz9jyfvLu4qFH2Yl6yU5ZHnlUNpbI&_nc_zt=23&_nc_ht=scontent-muc2-1.cdninstagram.com&_nc_gid=UbB58YphUehpS6tKgb2c4A&_nc_ss=70980&_nc_ct=RQosPBUIFQwlBAAAAA&oh=00_AQQn-T7AkVcNRXMUkxvvts0t7t4i1vlFF6-T3PpkycKruQ&oe=6B0A2750",
+  "confidence": 0.6,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "James Lavelle (UNKLE) toca en ORBE el 26 de noviembre; buen cartel para fans de sesiones electrónicas y trip-hop."
+ },
+ {
+  "title": "Las Ligas Menores en CDMX",
+  "description": "Las Ligas Menores regresan a la Ciudad de México para un concierto en el Foro Indie Rocks!",
+  "starts_at": "2026-11-27T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "Foro Indie Rocks!",
+  "address": "Zacatecas 39-A",
+  "neighborhood": "Roma Norte",
+  "price_text": "Boletos en el link de la bio y sin cargos en taquilla del Foro Indie Rocks!",
+  "price_min": null,
+  "currency": "MXN",
+  "url": "https://www.instagram.com/p/Df5KvspTpcy/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Foro Indie Rocks!",
+  "recurring": false,
+  "sources": [
+   "instagram:foroindierocks:Df5KvspTpcy"
+  ],
+  "source_links": [
+   {
+    "name": "foroindierocks",
+    "url": "https://www.instagram.com/p/Df5KvspTpcy/"
+   }
+  ],
+  "source_excerpt": "¡Ya estamos a nada de que @lasligasmenores regresen a la CDMX!. \n\n¿Cuál es esa canción que sí o sí te urge escuchar este 27 de noviembre? Te leemos abajo. 👇 \n\n🎫 Boletos en el link de la bio y sin cargos en taquilla del Foro Indie Rocks!, Zacatecas 39-A, Roma Norte.\n\n🕒 Lunes a domingo, de 1:00 PM a 9:00 PM",
+  "image_url": "https://instagram.fper15-1.fna.fbcdn.net/v/t51.82787-15/912124711_18642794905023490_8324865419462638531_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMzMwMjE5OTUwNTE2NDA4MjE4NjQyNzk0ODk5MDIzNDkw.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjEyODQuc2RyLnZpZGVvX3VzZXJfc2VsZWN0ZWRfdGh1bWJuYWlsLkMzIn0%3D&_nc_ohc=kD3VbMT3xSMQ7kNvwE_9Y26&_nc_oc=Adot9gu5R04zPksID0j3LZ_u6u3ZZi12u6ra9LFQfuS1wS0F4pbDRZgunjLYjLctEfc&_nc_zt=23&_nc_ht=instagram.fper15-1.fna&_nc_gid=9RoNQPS4zNofqX2Y3uihLA&_nc_ss=70689&_nc_ct=RQosPBUIFQ4lBAAAAA&oh=00_AQSTFjU2N4_BD66_v-uIP-QEYnjv1F_0dawZEkLw1iYw_A&oe=6B0A2C35",
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Banda nacional con fecha confirmada en el Foro Indie Rocks! (Zacatecas 39-A, Roma Norte) el 27 de noviembre."
+ },
+ {
+  "title": "Kakkmaddafakka — ORBE",
+  "description": "Kakkmaddafakka presenta su show en CDMX: Axel y la banda en ORBE.",
+  "starts_at": "2026-12-01T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "ORBE",
+  "address": null,
+  "neighborhood": "Roma Norte",
+  "price_text": "Boletos en el link de la bio y sin cargos en taquilla del Foro Indie Rocks!",
+  "price_min": null,
+  "currency": "MXN",
+  "url": "https://www.instagram.com/p/Df5pij3z0Ol/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "foroindierocks / ORBE",
+  "recurring": false,
+  "sources": [
+   "instagram:foroindierocks:Df5pij3z0Ol",
+   "instagram:foroindierocks:DfVxU9czXsO"
+  ],
+  "source_links": [
+   {
+    "name": "foroindierocks",
+    "url": "https://www.instagram.com/p/Df5pij3z0Ol/"
+   },
+   {
+    "name": "foroindierocks",
+    "url": "https://www.instagram.com/p/DfVxU9czXsO/"
+   }
+  ],
+  "source_excerpt": "Lentes con sombrerito, bigote postizo y el Jarabe Tapatío a todo lo que da: Axel ya tiene el mood mexa más que puesto. 🇲🇽🕶️🎶\n\nLa CDMX es una de sus ciudades favoritas en el mundo y @kakkmaddafakkaofficial está listo para demostrarlo sobre el escenario este 01 de diciembre en ORBE. Si Axel te invita así de directo, ya no hay pretexto para quedarte fuera.🤝\n\n🎫 Boletos en el link de la bio y sin cargos en taquilla del Foro Indie Rocks!, Zacatecas 39-A, Roma Norte.\n\n🕒 Lunes a domingo, de 1:00 PM a 9:00 PM",
+  "image_url": "https://instagram.fktw1-1.fna.fbcdn.net/v/t51.82787-15/910870736_18642851665023490_675274065289514052_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMzQzNzYzNjE3MzQ0ODEwMTE4NjQyODUxNjYyMDIzNDkw.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjcyMC5zZHIudmlkZW9fdXNlcl9zZWxlY3RlZF90aHVtYm5haWwuQzMifQ%3D%3D&_nc_ohc=42LngMZ9uXMQ7kNvwEjA8MT&_nc_oc=AdpLyFlUCmXPTikAmAmsdm2yCbS3ElAZQNhFQne0JcMYXOLMcktqknXmRS_OBCe-Uqc&_nc_zt=23&_nc_ht=instagram.fktw1-1.fna&_nc_gid=U7RmWuw0TCoCro2Qwi3WfQ&_nc_ss=70980&_nc_ct=RQosPBUIFQ4lBAAAAA&oh=00_AQSA5uOE9hTBgsW69ket7jP0ZJsL_64dELYC5rad9ir1Hg&oe=6B09FD1C",
+  "confidence": 0.6,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": true,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Kakkmaddafakka tiene fecha confirmada el 1 de diciembre en ORBE; atractivo para seguidores del indie/rock internacional."
+ },
+ {
+  "title": "Robert Alfons en ORBE",
+  "description": "Presentación en vivo de Robert Alfons (proyecto de música electrónica/sintetizadores) en ORBE.",
+  "starts_at": "2026-12-05T00:00:00-06:00",
+  "ends_at": null,
+  "all_day": true,
+  "timezone": "America/Mexico_City",
+  "venue": "ORBE",
+  "address": null,
+  "neighborhood": "Roma Norte",
+  "price_text": "Boletos en el link de la bio",
+  "price_min": null,
+  "currency": "MXN",
+  "url": "https://www.instagram.com/p/Df-xPkxzcbe/",
+  "category": "Music",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "foroindierocks / ORBE",
+  "recurring": false,
+  "sources": [
+   "instagram:foroindierocks:Df-xPkxzcbe"
+  ],
+  "source_links": [
+   {
+    "name": "foroindierocks",
+    "url": "https://www.instagram.com/p/Df-xPkxzcbe/"
+   }
+  ],
+  "source_excerpt": "La presencia magnética de Robert Alfons sobre el escenario es hipnótica de principio a fin. 🖤⚡\n\nLuces estroboscópicas, bajos profundos y pura catarsis entre sintetizadores oscuros. Si así se siente a través de la pantalla, prepárate para vivir esta tormenta sonora en carne propia este 05 de diciembre en @orbe.rocks 🌑🔊\n\n🎫 Boletos en el link de la bio",
+  "image_url": "https://instagram.fsyd13-1.fna.fbcdn.net/v/t51.82787-15/917727141_18643405444023490_6320833837026997300_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=104&_nc_map=urlgen_bucketless&ig_cache_key=NDAzNDg3ODg5MDczMjAxMzI3ODE4NjQzNDA1NDQxMDIzNDkw.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjcyMC5zZHIudmlkZW9fdXNlcl9zZWxlY3RlZF90aHVtYm5haWwuQzMifQ%3D%3D&_nc_ohc=GSw-RK3RiDUQ7kNvwFrN-GP&_nc_oc=Adq8QJ5kcWFLO1U5tVmy31Nq7xMOGsgzySNpNTFFqEdaFdFXfsI97BT82ujKFL-WYxo&_nc_zt=23&_nc_ht=instagram.fsyd13-1.fna&_nc_gid=Q4POy6Yz9_jnSVKDqeMIgw&_nc_ss=70980&_nc_ct=RQosPBUIFQ4lBAAAAA&oh=00_AQSoFbF9oieP3UffrMF9DZRSOXDBDO7o0WiIynOrCz85Lg&oe=6B0A18E7",
+  "confidence": 0.6,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Actuación solista de Robert Alfons confirmada en ORBE el 5 de diciembre; recomendable para públicos de música electrónica y dark synth."
+ },
+ {
+  "title": "MasterClass Trazo y expresión — Mumedi",
+  "description": "MasterClass de caligrafía y trazo a cargo de LAMY México y Mauricio Burgos: transforma letras y trazos en pequeñas piezas de arte.",
+  "starts_at": "2026-12-05T11:30:00-06:00",
+  "ends_at": "2026-12-05T13:00:00-06:00",
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Mumedi",
+  "address": "Av. Bucareli 35, Local 4 (esquina con Donato Guerra), Col. Juárez, Alcaldía Cuauhtémoc, CDMX",
+  "neighborhood": "Juárez",
+  "price_text": "$600 MXN | Incluye una bebida, uso de materiales y plumas, además de $200 MXN canjeables por productos LAMY.",
+  "price_min": 600,
+  "currency": "MXN",
+  "url": "https://www.instagram.com/p/Df-SGxtze2A/",
+  "category": "Creativity & Crafts",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "Mumedi",
+  "recurring": false,
+  "sources": [
+   "instagram:mumedi_oficial:Df-SGxtze2A"
+  ],
+  "source_links": [
+   {
+    "name": "mumedi_oficial",
+    "url": "https://www.instagram.com/p/Df-SGxtze2A/"
+   }
+  ],
+  "source_excerpt": "Te invitamos a compartir una mañana diferente en Mumedi, junto a @lamymexico y Mauricio Burgos (@mobur), en donde aprenderemos a transformar letras y trazos en pequeñas piezas de arte.\n\nEn nuestra #MasterClass Trazo y expresión podrás experimentar con distintas plumas, conocer técnicas de caligrafía y crear tu propia etiqueta personalizada.\n\n📅 Sábado 5 de diciembre\n🕦 11:30 a 13:00 h\n🎟️ $600 MXN | Incluye una bebida, uso de materiales y plumas, además de $200 MXN canjeables por productos LAMY.",
+  "image_url": "https://instagram.fbhx1-2.fna.fbcdn.net/v/t51.82787-15/914572209_18344031418279810_4988808190816291588_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ig_cache_key=NDAzNDc0MTk0NjcwNjQyMzE2OA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTA4OC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=KMiWntvvdd8Q7kNvwHxANvc&_nc_oc=Adqa78WTqJTKgpVFWJuCxzl6WdT5HHjfAgO3k7EnJ0zQJzez52-Q1NgLT5CuaTGmPgw&_nc_zt=23&_nc_ht=instagram.fbhx1-2.fna&_nc_gid=hyADRZjiDSYQUE1CoPTgLQ&_nc_ss=70980&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQSIO0UjW0OaNcTFj78zlOM3963COmOV5vT0oVEXuVZ8tg&oe=6B0A2C3A",
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Taller práctico y pagado en Mumedi el 5 de diciembre, ideal para quien quiera aprender técnicas de caligrafía con materiales incluidos."
+ },
+ {
+  "title": "Sesión de contemplación sonora — Museo Anahuacalli",
+  "description": "Práctica grupal de contemplación guiada por cuencos e instrumentos, para aquietar la mente y conectar con el presente a través del sonido.",
+  "starts_at": "2026-12-01T11:00:00-06:00",
+  "ends_at": "2026-12-01T12:00:00-06:00",
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Museo Anahuacalli",
+  "address": null,
+  "neighborhood": null,
+  "price_text": "$200 mxn",
+  "price_min": 200,
+  "currency": "MXN",
+  "url": "https://www.instagram.com/p/DgBJaxfFBpp/",
+  "category": "Wellness & Sport",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "talleres_anahuacalli",
+  "recurring": false,
+  "sources": [
+   "instagram:talleres_anahuacalli:DgBJaxfFBpp"
+  ],
+  "source_links": [
+   {
+    "name": "talleres_anahuacalli",
+    "url": "https://www.instagram.com/p/DgBJaxfFBpp/"
+   }
+  ],
+  "source_excerpt": "🧘🏻‍♀️Sesión única de una práctica grupal de contemploción que combina respiración, atención y escucha consciente, guiada por cuencos y otros instrumentos. Acompáñonos y hagamos una pausa para aquietar la mente y conectar con el presente a través del sonido.\n\n📅 Martes 1 de diciembre\n🕣 11:00 a 12:00 h\n💲 $200 mxn\n\nRegístrate en nuestro sitio web.",
+  "image_url": "https://instagram.fntr1-1.fna.fbcdn.net/v/t51.82787-15/903005697_18100982027655238_5956592307135260282_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ig_cache_key=NDAzNTU0NTA1MTkwMjA4NjkyNA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=x231LsmakV4Q7kNvwFyhT1F&_nc_oc=Adokt6QB74HSPeOSM3JNJbPvBcXCUX24JcX_w7kohhI85ydn2Rp_ig8m_Gk_FuKcGVc&_nc_zt=23&_nc_ht=instagram.fntr1-1.fna&_nc_gid=NCHiM8N8pSHbVY16wTujrw&_nc_ss=70580&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQRfjDW-Hb0OMqTNyWqFJ7BQNOeNDQ9oVbUl53-OxvVXbA&oe=6B0A0805",
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Sesión guiada de contemplación sonora en Museo Anahuacalli el 1 de diciembre, buena opción para una pausa mindful en la semana."
+ },
+ {
+  "title": "Brown Sugar — REVO Rooftop",
+  "description": "Noche de throwback hip hop, R&B, dancehall y afrobeats en la azotea REVO Rooftop con DJs invitados.",
+  "starts_at": "2026-11-27T22:00:00-06:00",
+  "ends_at": "2026-11-28T03:00:00-06:00",
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "REVO Rooftop",
+  "address": "C. Valentín Gómez Farías 2",
+  "neighborhood": null,
+  "price_text": "Presale $100 (until Nov. 20), link in bio",
+  "price_min": 100,
+  "currency": "MXN",
+  "url": "https://www.instagram.com/p/Df3AAxLGBsE/",
+  "category": "Clubs & Parties",
+  "category_alt": null,
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "brownsugarcdmx",
+  "recurring": false,
+  "sources": [
+   "instagram:brownsugarcdmx:Df3AAxLGBsE",
+   "instagram:brownsugarcdmx:Df5QBJUyh-Y"
+  ],
+  "source_links": [
+   {
+    "name": "brownsugarcdmx",
+    "url": "https://www.instagram.com/p/Df3AAxLGBsE/"
+   },
+   {
+    "name": "brownsugarcdmx",
+    "url": "https://www.instagram.com/p/Df5QBJUyh-Y/"
+   }
+  ],
+  "source_excerpt": "Brown Sugar: Coming Nov. 27th 🤎💛\n\nThrowback hip hop, R&B, dancehall, and afrobeats on a rooftop, with a lineup that’ll make Sunday the best day of your week.\n\nStarring:\nJilli P @jillianlogan \nBradley Way @thebradleyway \nWizah @djwizah \nDizam @djdizam \n\nFriday, Nov 27, 10PM to 3AM\nREVO Rooftop, C. Valentín Gómez Farías 2\n@revo.rooftop \nPresale $100 (until Nov. 20), link in bio",
+  "image_url": "https://scontent-icn2-1.cdninstagram.com/v/t51.82787-15/913840206_18116422298190558_3759223064089499297_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=102&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMjY5MDE1NjI4ODM1NTcwMw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=Wof5U7963O8Q7kNvwHLeO7d&_nc_oc=Adrk0HxICQV6wRXlLAts7zE3u6jVEMeucw6Mw62owfoZU_tFsmrP1GHaPtXWGaJdFhc&_nc_zt=23&_nc_ht=scontent-icn2-1.cdninstagram.com&_nc_gid=5N1_thH52djtfM1kTHAUlQ&_nc_ss=70580&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQ2tbc1EdT3vVUvfAvZsRVPux9EQZK92o3wrwaBCgtPIw&oe=6B0A0FC2",
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": false,
+   "corroborated": true,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Fiesta en azotea con DJs locales; entrada en presale económica ($100 MXN) y horario confirmado (22:00–03:00)."
+ },
+ {
+  "title": "XOCHIMILCO ALL INCLUSIVE BOAT PARTY",
+  "description": "Boat party por los canales de Xochimilco con transporte redondo desde Roma Norte, DJs en vivo, dos bebidas incluidas y experiencia en trajinera.",
+  "starts_at": "2026-11-28T11:00:00-06:00",
+  "ends_at": "2026-11-28T16:00:00-06:00",
+  "all_day": false,
+  "timezone": "America/Mexico_City",
+  "venue": "Canales de Xochimilco (partida y regreso desde Roma Norte)",
+  "address": null,
+  "neighborhood": "Xochimilco",
+  "price_text": "$55 usd. Presale tickets are required; limited capacity.",
+  "price_min": 55,
+  "currency": "USD",
+  "url": "https://www.instagram.com/p/Df5M2qfn_9Z/",
+  "category": "Clubs & Parties",
+  "category_alt": "Social & Networking",
+  "family_friendly": false,
+  "umbrella": null,
+  "organizer": "blaxican_cdmx",
+  "recurring": false,
+  "sources": [
+   "instagram:blaxican_cdmx:Df5M2qfn_9Z"
+  ],
+  "source_links": [
+   {
+    "name": "blaxican_cdmx",
+    "url": "https://www.instagram.com/p/Df5M2qfn_9Z/"
+   }
+  ],
+  "source_excerpt": "Sat Nov 28th - XOCHIMILCO ALL INCLUSIVE BOAT PARTY \n\nGood Music. Good Drinks. Great Vibes.\nJoin us for an unforgettable boat party in Xochimilco, one of Mexico City's most iconic destinations, where colorful boats, great music, drinks, and good company come together for an afternoon on the water.\n\n🎉 YOUR TICKET INCLUDES:\n* 🚐 Round-trip transportation to and from Xochimilco (starting point in Roma Norte)\n* 🍹 Two complimentary drinks.\n* 🎧 Live DJ playing the best in hip hop, R&B and Afrobeat\n* 🚤 A boat party experience through the famous canals of Xochimilco.\n* 🥳 An opportunity to meet new people and make unforgettable memories.\n\n🎟️ LIMITED CAPACITY\nSpaces are limited, presale tickets are required!\n\n*DETAILS*\n\n📅 Saturday Nov 28 11a-4p\n🎟️ $55 usd",
+  "image_url": "https://scontent-ham3-1.cdninstagram.com/v/t51.82787-15/910557237_17975277033174235_7493604970503381716_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMzMwNTI4MDMyODk0MjgyMA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTEyMi5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=tIpeYvMgP7QQ7kNvwFJn5ed&_nc_oc=AdolnBeG-uDDOx_fdoO7bn2KEuKw4PUrPjPKPxL0u_brU1wY06pCUFXGNb5xlxsAa7UdTtFCBxNHfMoEbx9Byyfm&_nc_zt=23&_nc_ht=scontent-ham3-1.cdninstagram.com&_nc_gid=nQkVpyEeCllxoHf7_aVqwg&_nc_ss=70580&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQSNpF_OQ9iL-2jM2L_-uAhBBtsZH5gOTraXm2K_jCc8TQ&oe=6B0A196A",
+  "confidence": 0.9,
+  "signals": {
+   "credible_organizer": true,
+   "one_off": true,
+   "scarcity": true,
+   "corroborated": false,
+   "low_friction": false,
+   "umbrella_anchor": false,
+   "recurring_weekly": false,
+   "tourist_trap": false,
+   "sold_out_or_private": false,
+   "vague": false
+  },
+  "highlight_why": "Experiencia todo incluido por los canales de Xochimilco el 28 de noviembre; cupo limitado y traslado incluido, ideal para grupos que buscan una salida diferente."
+ }
+]

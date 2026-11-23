@@ -89,6 +89,21 @@
   "lat": 19.3628474,
   "lng": -99.20198719999999
  },
+ "auditorio bb": {
+  "query": "Auditorio BB",
+  "looked_up_at": "2026-11-23T13:41:53+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJNddWx2r_0YURbR8P5Ln_TL8",
+  "name": "Auditorio BB",
+  "address": "Tlaxcala 160, Hipódromo Condesa, Cuauhtémoc, 06170 Ciudad de México, CDMX",
+  "primary_type": "auditorium",
+  "rating": 4.4,
+  "reviews": 9940,
+  "maps_url": "https://maps.google.com/?cid=13784673733334474605&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.4068316,
+  "lng": -99.1687091
+ },
  "auditorio blackberry": {
   "query": "Auditorio Blackberry",
   "looked_up_at": "2026-11-03T22:33:21+00:00",
@@ -239,6 +254,21 @@
   "lat": 19.3557625,
   "lng": -99.1399477
  },
+ "canal veintidos": {
+  "query": "Canal Veintidós",
+  "looked_up_at": "2026-11-23T13:41:53+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJLbG7vDP-0YURBjO5tMsoV7k",
+  "name": "Canal 22",
+  "address": "edificio Pedro infante, C. Atletas 2, Country Club Churubusco, Coyoacán, 04220 Ciudad de México, CDMX",
+  "primary_type": "television_studio",
+  "rating": 4.8,
+  "reviews": 107,
+  "maps_url": "https://maps.google.com/?cid=13355188075366003462&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.3557625,
+  "lng": -99.1399477
+ },
  "capilla gotica del instituto cultural helenico": {
   "query": "Capilla Gótica del Instituto Cultural Helénico",
   "looked_up_at": "2026-11-19T01:36:40+00:00",
@@ -358,6 +388,21 @@
   "maps_url": "https://maps.google.com/?cid=9538780488017664867&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
   "lat": 19.4047575,
   "lng": -99.1732052
+ },
+ "ccu, sala julio bracho": {
+  "query": "CCU, Sala Julio Bracho",
+  "looked_up_at": "2026-11-23T13:41:50+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJuY_1RQsAzoURZxj6O6WPzrU",
+  "name": "Unidad de Cines: José Revueltas, Julio Bracho y Carlos Monsiváis",
+  "address": "Av. Insurgentes Sur 3000, C.U., Coyoacán, 04000 Ciudad de México, CDMX",
+  "primary_type": "movie_theater",
+  "rating": 4.7,
+  "reviews": 651,
+  "maps_url": "https://maps.google.com/?cid=13100566305905973351&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.313730200000002,
+  "lng": -99.18536379999999
  },
  "ccu, sala nezahualcoyotl": {
   "query": "CCU, Sala Nezahualcóyotl",
@@ -538,6 +583,21 @@
   "maps_url": "https://maps.google.com/?cid=14205717644316205950&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
   "lat": 19.4334736,
   "lng": -99.1611887
+ },
+ "centro cultural xavier villaurrutia": {
+  "query": "Centro Cultural Xavier Villaurrutia",
+  "looked_up_at": "2026-11-23T13:41:53+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJWQGd-7__0YUR97XGoukqsmo",
+  "name": "Centro Cultural Xavier Villaurrutia",
+  "address": "Av de los insurgentes centro glorieta del metro insurgentes locales 11 y 12, Insurgentes Centro, Centro Urbano Pdte. Juárez, Juárez, Cuauhtémoc, 06600 Ciudad de México, CDMX",
+  "primary_type": "cultural_center",
+  "rating": 4.5,
+  "reviews": 310,
+  "maps_url": "https://maps.google.com/?cid=7688254696821536247&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.423448,
+  "lng": -99.16245409999999
  },
  "centro nacional de las artes": {
   "query": "Centro Nacional de las Artes",
@@ -763,6 +823,21 @@
   "maps_url": "https://maps.google.com/?cid=16767444529966089007&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
   "lat": 19.415590899999998,
   "lng": -99.19128189999999
+ },
+ "el cantoral": {
+  "query": "El Cantoral",
+  "looked_up_at": "2026-11-23T13:41:55+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJyW117b__0YURmwZTYR-CiyQ",
+  "name": "El Cantoral",
+  "address": "Puente Xoco s/n-Puerta A, Xoco, Benito Juárez, 03330 Ciudad de México, CDMX",
+  "primary_type": "live_music_venue",
+  "rating": 4.8,
+  "reviews": 12766,
+  "maps_url": "https://maps.google.com/?cid=2633341478416615067&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.3619788,
+  "lng": -99.1662956
  },
  "el palacio de hierro perisur": {
   "query": "El Palacio de Hierro Perisur",
@@ -1019,6 +1094,21 @@
   "lat": 19.4150123,
   "lng": -99.1790091
  },
+ "foro alicia": {
+  "query": "Foro Alicia",
+  "looked_up_at": "2026-11-23T13:41:54+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJwZSInC__0YURYS7gANYwYdk",
+  "name": "Multiforo Alicia",
+  "address": "C. Eligio Ancona 145, Sta María la Ribera, Cuauhtémoc, 06400 Ciudad de México, CDMX",
+  "primary_type": "cultural_center",
+  "rating": 4.6,
+  "reviews": 3547,
+  "maps_url": "https://maps.google.com/?cid=15663854674667122273&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.452792799999997,
+  "lng": -99.1577308
+ },
  "foro alternativo": {
   "query": "Foro Alternativo",
   "looked_up_at": "2026-11-10T19:52:59+00:00",
@@ -1033,6 +1123,21 @@
   "maps_url": "https://maps.google.com/?cid=7968194653566451221&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
   "lat": 19.4178289,
   "lng": -99.16332949999999
+ },
+ "foro del dinosaurio, museo universitario del chopo": {
+  "query": "Foro del Dinosaurio, Museo Universitario del Chopo",
+  "looked_up_at": "2026-11-23T13:41:51+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJWbZn1c_40YURM2XEZgPFq54",
+  "name": "Museo Universitario del Chopo",
+  "address": "C. Dr. Enrique González Martínez 10, Sta María la Ribera, Cuauhtémoc, 06400 Ciudad de México, CDMX",
+  "primary_type": "museum",
+  "rating": 4.5,
+  "reviews": 5707,
+  "maps_url": "https://maps.google.com/?cid=11433448697409856819&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.4419932,
+  "lng": -99.15671789999999
  },
  "foro indie rocks": {
   "query": "Foro Indie Rocks",
@@ -1078,6 +1183,21 @@
   "maps_url": "https://maps.google.com/?cid=9829872535761390036&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
   "lat": 19.352985699999998,
   "lng": -99.19001540000001
+ },
+ "foro la paz": {
+  "query": "Foro La Paz",
+  "looked_up_at": "2026-11-23T13:41:50+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJi2xgP6H_0YURSXc9EPfaioI",
+  "name": "Foro La Paz",
+  "address": "Av. de la Paz 57-Piso 1, San Ángel, Álvaro Obregón, 01000 Ciudad de México, CDMX",
+  "primary_type": "event_venue",
+  "rating": 4.4,
+  "reviews": 671,
+  "maps_url": "https://maps.google.com/?cid=9406571526380943177&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.3463058,
+  "lng": -99.18919369999999
  },
  "foro polanco": {
   "query": "Foro Polanco",
@@ -1154,6 +1274,21 @@
   "lat": 19.436840699999998,
   "lng": -99.1536113
  },
+ "fvck off room": {
+  "query": "Fvck Off Room",
+  "looked_up_at": "2026-11-23T13:41:55+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJsQTxfwD_0YURDD7byBIFnow",
+  "name": "FVCK OFF ROOM",
+  "address": "Diagonal Patriotismo 6, Hipódromo Condesa, Cuauhtémoc, 06170 Ciudad de México, CDMX",
+  "primary_type": "bar",
+  "rating": 4.5,
+  "reviews": 236,
+  "maps_url": "https://maps.google.com/?cid=10132541789867556364&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.4075813,
+  "lng": -99.1787219
+ },
  "galeria divergente, 4to piso, centro cultural el rule": {
   "query": "Galería Divergente, 4to Piso, Centro Cultural El Rule",
   "looked_up_at": "2026-11-16T12:06:31+00:00",
@@ -1183,6 +1318,21 @@
   "maps_url": "https://maps.google.com/?cid=11793409123308629148&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
   "lat": 19.4209389,
   "lng": -99.16859459999999
+ },
+ "goethe-institut mexiko": {
+  "query": "Goethe-Institut Mexiko",
+  "looked_up_at": "2026-11-23T13:41:55+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJHUMfYOcc0oURuFX9NTqV42U",
+  "name": "Goethe-Institut Mexiko",
+  "address": "Tonalá 43, Cuauhtémoc, Roma Nte., Cuauhtémoc, 06700 Ciudad de México, CDMX",
+  "primary_type": "educational_institution",
+  "rating": 4.5,
+  "reviews": 374,
+  "maps_url": "https://maps.google.com/?cid=7341875894790477240&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.4198774,
+  "lng": -99.1633543
  },
  "gran carpa santa fe": {
   "query": "Gran Carpa Santa Fe",
@@ -1244,6 +1394,21 @@
   "lat": 19.3788834,
   "lng": -99.1869656
  },
+ "instituto goethe mexico": {
+  "query": "Instituto Goethe Mexico",
+  "looked_up_at": "2026-11-23T13:41:55+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJHUMfYOcc0oURuFX9NTqV42U",
+  "name": "Goethe-Institut Mexiko",
+  "address": "Tonalá 43, Cuauhtémoc, Roma Nte., Cuauhtémoc, 06700 Ciudad de México, CDMX",
+  "primary_type": "educational_institution",
+  "rating": 4.5,
+  "reviews": 374,
+  "maps_url": "https://maps.google.com/?cid=7341875894790477240&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.4198774,
+  "lng": -99.1633543
+ },
  "islas cu": {
   "query": "Islas CU",
   "looked_up_at": "2026-11-10T19:53:05+00:00",
@@ -1303,6 +1468,21 @@
   "maps_url": "https://maps.google.com/?cid=14163051210962842720&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
   "lat": 19.3845497,
   "lng": -99.15042679999999
+ },
+ "la nana, laboratorio urbano de arte comprometido": {
+  "query": "La Nana, Laboratorio Urbano de Arte Comprometido",
+  "looked_up_at": "2026-11-23T13:41:51+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJlVlpLSr50YURvb4lZ1VlcGQ",
+  "name": "La Nana - ConArte",
+  "address": "Segundo Callejón San Juan de Dios 25, Centro Histórico de la Cdad. de México, Guerrero, Cuauhtémoc, 06300 Ciudad de México, CDMX",
+  "primary_type": null,
+  "rating": 4.7,
+  "reviews": 533,
+  "maps_url": "https://maps.google.com/?cid=7237396018661539517&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.438164099999998,
+  "lng": -99.14297189999999
  },
  "la titeria": {
   "query": "La Titería",
@@ -1439,6 +1619,21 @@
   "lat": 19.4333527,
   "lng": -99.1513554
  },
+ "museo anahuacalli": {
+  "query": "Museo Anahuacalli",
+  "looked_up_at": "2026-11-23T13:41:54+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJE-z088wBzoURBQC1jpv8UXc",
+  "name": "Museo Anahuacalli",
+  "address": "Museo 150, San Pablo Tepetlapa, Coyoacán, 04620 Ciudad de México, CDMX",
+  "primary_type": "museum",
+  "rating": 4.7,
+  "reviews": 11481,
+  "maps_url": "https://maps.google.com/?cid=8597930908671344645&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.3231754,
+  "lng": -99.1439285
+ },
  "museo archivo de la fotografia": {
   "query": "Museo Archivo de la Fotografía",
   "looked_up_at": "2026-11-03T22:33:17+00:00",
@@ -1468,6 +1663,51 @@
   "maps_url": "https://maps.google.com/?cid=2135336805215155084&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
   "lat": 19.433735199999997,
   "lng": -99.1462978
+ },
+ "museo de historia de tlalpan": {
+  "query": "Museo de Historia de Tlalpan",
+  "looked_up_at": "2026-11-23T13:41:52+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJ4W5PJPUAzoUROIpsdTFgeqI",
+  "name": "Museo de Historia de Tlalpan",
+  "address": "Plaza de la Constitución No. 10, Tlalpan Centro I, Tlalpan, 14000 Ciudad de México, CDMX",
+  "primary_type": "museum",
+  "rating": 4.4,
+  "reviews": 372,
+  "maps_url": "https://maps.google.com/?cid=11707775946842737208&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.2878814,
+  "lng": -99.16677539999999
+ },
+ "museo de historia natural y cultura ambiental": {
+  "query": "Museo de Historia Natural y Cultura Ambiental",
+  "looked_up_at": "2026-11-23T13:41:53+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJAQAAMLMB0oURD_4FLwX5JUs",
+  "name": "Museo de Historia Natural y Cultura Ambiental",
+  "address": "Av. de los Compositores, Bosque de Chapultepec II Secc, Miguel Hidalgo, 11100 Ciudad de México, CDMX",
+  "primary_type": "museum",
+  "rating": 4.7,
+  "reviews": 21129,
+  "maps_url": "https://maps.google.com/?cid=5415007927641964047&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.409833,
+  "lng": -99.20151899999999
+ },
+ "museo de la caricatura": {
+  "query": "Museo de la Caricatura",
+  "looked_up_at": "2026-11-23T13:41:52+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJ7WCy8TL50YURs8r52Z_Lm3k",
+  "name": "Museo de la Caricatura",
+  "address": "Donceles 99, Centro Histórico de la Cdad. de México, Centro, Cuauhtémoc, 06020 Ciudad de México, CDMX",
+  "primary_type": "art_museum",
+  "rating": 4.2,
+  "reviews": 2618,
+  "maps_url": "https://maps.google.com/?cid=8762821387396696755&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.435717099999998,
+  "lng": -99.1326562
  },
  "museo de la ciudad de mexico": {
   "query": "Museo de la Ciudad de México",
@@ -1529,6 +1769,21 @@
   "lat": 19.3231754,
   "lng": -99.1439285
  },
+ "museo franz mayer": {
+  "query": "Museo Franz Mayer",
+  "looked_up_at": "2026-11-23T13:41:51+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJ9dC2SSr50YURbY8j7GyISTc",
+  "name": "Museo Franz Mayer",
+  "address": "Av. Hidalgo 45, Centro Histórico de la Cdad. de México, Guerrero, Cuauhtémoc, 06300 Ciudad de México, CDMX",
+  "primary_type": "museum",
+  "rating": 4.7,
+  "reviews": 19972,
+  "maps_url": "https://maps.google.com/?cid=3983865346785513325&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.436865299999997,
+  "lng": -99.1431855
+ },
  "museo jumex": {
   "query": "Museo Jumex",
   "looked_up_at": "2026-11-03T22:33:25+00:00",
@@ -1543,6 +1798,21 @@
   "maps_url": "https://maps.google.com/?cid=5739969253624477121&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
   "lat": 19.4404054,
   "lng": -99.2038782
+ },
+ "museo legislativo sentimientos de la nacion": {
+  "query": "Museo Legislativo Sentimientos de la Nación",
+  "looked_up_at": "2026-11-23T13:41:52+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJjZrXkGb_0YURtF6la-dRGVA",
+  "name": "Museo Legislativo Los Sentimientos de la Nación",
+  "address": "H.Congreso de la Unión 66, Colonia, Venustiano Carranza, 15960 Ciudad de México, CDMX",
+  "primary_type": "museum",
+  "rating": 4.6,
+  "reviews": 177,
+  "maps_url": "https://maps.google.com/?cid=5771734451837296308&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.4297748,
+  "lng": -99.1173019
  },
  "museo nacional de antropologia": {
   "query": "Museo Nacional de Antropología",
@@ -1645,6 +1915,21 @@
   "primary_type": "museum",
   "rating": 4.5,
   "reviews": 5684,
+  "maps_url": "https://maps.google.com/?cid=11433448697409856819&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.4419932,
+  "lng": -99.15671789999999
+ },
+ "museo universitario del chopo, cinematografo del chopo": {
+  "query": "Museo Universitario del Chopo, Cinematógrafo del Chopo",
+  "looked_up_at": "2026-11-23T13:41:49+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJWbZn1c_40YURM2XEZgPFq54",
+  "name": "Museo Universitario del Chopo",
+  "address": "C. Dr. Enrique González Martínez 10, Sta María la Ribera, Cuauhtémoc, 06400 Ciudad de México, CDMX",
+  "primary_type": "museum",
+  "rating": 4.5,
+  "reviews": 5707,
   "maps_url": "https://maps.google.com/?cid=11433448697409856819&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
   "lat": 19.4419932,
   "lng": -99.15671789999999
@@ -1768,6 +2053,21 @@
   "maps_url": "https://maps.google.com/?cid=15177581833408048338&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
   "lat": 19.4053359,
   "lng": -99.09986459999999
+ },
+ "palacio nacional": {
+  "query": "Palacio Nacional",
+  "looked_up_at": "2026-11-23T13:41:50+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJ8ZWV2cz-0YUR_dZtPvUaOPc",
+  "name": "Palacio Nacional",
+  "address": "Pl. de la Constitución S/N, Centro Histórico de la Cdad. de México, Centro, Cuauhtémoc, 06066 Ciudad de México, CDMX",
+  "primary_type": "government_office",
+  "rating": 4.5,
+  "reviews": 2371,
+  "maps_url": "https://maps.google.com/?cid=17814017966680692477&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.4328868,
+  "lng": -99.1313531
  },
  "papalote museo del nino": {
   "query": "Papalote Museo del Niño",
@@ -2114,6 +2414,21 @@
   "lat": 19.4168913,
   "lng": -99.16834109999999
  },
+ "simicasa": {
+  "query": "SimiCasa",
+  "looked_up_at": "2026-11-23T13:41:52+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJkcZEPgD_0YUR1R9URs12MLM",
+  "name": "SIMI CASA",
+  "address": "Río Neva 17, Cuauhtémoc, 06500 Cuauhtémoc, CDMX",
+  "primary_type": "museum",
+  "rating": 4.6,
+  "reviews": 1277,
+  "maps_url": "https://maps.google.com/?cid=12911950755691503573&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.431801,
+  "lng": -99.1630129
+ },
  "six flags mexico": {
   "query": "Six Flags México",
   "looked_up_at": "2026-11-16T12:06:35+00:00",
@@ -2233,6 +2548,21 @@
   "maps_url": "https://maps.google.com/?cid=430353154150442169&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
   "lat": 19.4334897,
   "lng": -99.146788
+ },
+ "teatro raul flores c": {
+  "query": "Teatro Raúl Flores C",
+  "looked_up_at": "2026-11-23T13:41:54+00:00",
+  "status": 200,
+  "matched": true,
+  "place_id": "ChIJ1wrS8DP-0YURBC9dB_DMn_w",
+  "name": "Teatro Raul Flores Canelo",
+  "address": "Country Club Churubusco, Coyoacán, 04210 Ciudad de México, CDMX",
+  "primary_type": "performing_arts_theater",
+  "rating": 4.7,
+  "reviews": 135,
+  "maps_url": "https://maps.google.com/?cid=18203493550142598916&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "lat": 19.3560282,
+  "lng": -99.1408781
  },
  "teatro sergio magana": {
   "query": "Teatro Sergio Magaña",
